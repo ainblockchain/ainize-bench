@@ -352,6 +352,13 @@ async function main() {
         const results = [];
         for (const q of chunk) {
           for (let rep = 0; rep < repeats; rep++) {
+            // Sample the engine BETWEEN items, when nothing of ours is in flight. Between-CHUNK sampling was
+            // too coarse: a contaminating process that appears and dies inside one chunk is invisible to it,
+            // and that is exactly what happened at 12:40 today — the runner's own samples read clean on both
+            // sides of a window in which another client held sockets. Per-item sampling narrows the blind
+            // window from ten minutes to one item, and latency is a headline result (§6), so the resolution
+            // has to match the claim.
+            const before = await serverLoad(vllm.base);
             const t0 = Date.now();
             let payload;
             if (tools) {
@@ -366,6 +373,18 @@ async function main() {
               // — an absent flag and a false one are the same to `if (e.context_exhausted)` but not to a
               // table that counts them, and arms A and C would silently drop out of the channel totals.
               payload = { arm, repeat: rep, question: q, system, final: r.error ? null : r.content, error: r.error ?? null, latency_ms: Date.now() - t0, model_ms: r.ms, turns: r.error ? [] : [{ turn: 0, request: r.request, response: r.response, ms: r.ms, usage: r.usage, finish_reason: r.finishReason }], evidence: { tool_calls: 0, tool_bytes_in: 0, retries, context_truncated: false, context_exhausted: false, context_evictions: 0, prompt_tokens_peak: r.usage?.prompt_tokens ?? 0, budget_exhausted: false, forced_final: false, tool_errors: 0, tool_targets: [], tool_results: [], model_ms: r.ms, offline } };
+            }
+            const after = await serverLoad(vllm.base);
+            // Growth in a monotone counter across an item is OUR generation plus anyone else's. It cannot
+            // attribute, but a waiting gauge above zero while we hold exactly one request is unambiguous:
+            // at --max-num-seqs 1 that is somebody else queued behind us.
+            if (before && after) {
+              payload.engine = {
+                waiting_before: before.waiting, waiting_after: after.waiting,
+                running_before: before.running, running_after: after.running,
+                contended: before.waiting > 0 || after.waiting > 0 || before.running > 0,
+              };
+              if (payload.engine.contended) competing.push({ arm, item: q.id, repeat: rep, ...payload.engine });
             }
             results.push({ q, rep, payload });
           }
