@@ -687,13 +687,32 @@ export function summarize({ units, transcripts, provenance, pricing, pricingPath
 
   // The pre-registered ordering, checked cell by cell.
   const ordering = (() => {
-    const v = (arm) => perArm[arm]?.headline_E1_E2?.stable_subset?.accuracy ?? null;
-    const steps = [['A', 'B', '≪'], ['B', 'C', '<'], ['C', 'D', '<']].map(([x, y, op]) => ({
-      step: `${x} ${op} ${y}`, x: v(x), y: v(y),
-      holds: v(x) == null || v(y) == null ? null : (op === '≪' ? v(y) - v(x) >= 0.05 : v(y) > v(x)),
-      mcnemar: comparisons[`${x}_vs_${y}`]?.headline_E1_E2 ?? null,
-    }));
-    return { claim: 'A ≪ B < C < D', measured_on: 'E1+E2, stable subset', steps, holds: steps.every((s) => s.holds === true) };
+    // E1 ALONE, not E1+E2. §1's size table names E1 (120) "headline accuracy" and E2 (40) "cross-lingual
+    // transfer", and the power analysis is sized for E1. Folding Korean in makes the pre-registered ordering a
+    // blend of compiled-memory generalisation and cross-lingual generalisation — different claims with
+    // different failure modes, and a patch can transfer to one and not the other. E1+E2 is still printed.
+    //
+    // Each step is decided by EXACT McNEMAR on the discordant pairs, not by a margin. §1 says no difference is
+    // called a difference without its p-value, and at n=120 a 5-point margin sits inside the Wilson width — a
+    // margin rule would call differences this study cannot resolve. The margin is reported, never a criterion.
+    const v = (arm) => perArm[arm]?.buckets?.headline?.stable_subset?.accuracy ?? null;
+    const ALPHA = 0.05;
+    const steps = [['A', 'B'], ['B', 'C'], ['C', 'D']].map(([x, y]) => {
+      const m = comparisons[`${x}_vs_${y}`]?.headline ?? null;
+      const dir = v(x) == null || v(y) == null ? null : v(y) > v(x);
+      const sig = m == null || m.p == null ? null : m.p < ALPHA;
+      return {
+        step: `${x} < ${y}`, x: v(x), y: v(y),
+        margin: v(x) == null || v(y) == null ? null : v(y) - v(x),
+        mcnemar: m,
+        holds: dir == null || sig == null ? null : (dir && sig),
+        why: dir == null || sig == null ? 'not evaluable' : dir && sig ? 'ordered and significant'
+          : dir && !sig ? `ordered but not resolvable at alpha ${ALPHA}` : 'wrong direction',
+      };
+    });
+    return { claim: 'A < B < C < D', measured_on: 'E1 (headline bucket) alone, stable subset',
+      decided_by: `exact McNemar on discordant pairs, alpha ${ALPHA}; margin reported, not a criterion`,
+      steps, holds: steps.every((s) => s.holds === true) };
   })();
 
   // §6's break-even, in the form §6 actually asks for: "N* is a curve in the number of buyers, not a
@@ -799,7 +818,7 @@ export function summarize({ units, transcripts, provenance, pricing, pricingPath
     leakage,
     ordering,
     falsifiers,
-    unit_note: 'The unit of every accuracy, interval and paired test is the ITEM (§1 sizes the Wilson interval at n = 120 items). An item counts as a hit only if every non-error repeat of it was a hit. `unit_accuracy_all_repeats` and `split_items` are the (item, repeat)-level view beside it. The miss decomposition is (item, repeat)-level and says so in its own block.',
+    unit_note: 'The unit of every accuracy, interval and paired test is the ITEM (§1 sizes the Wilson interval at n = 120 items), and §2 governs which items count: an item whose two answers disagree in arm A is UNSTABLE, the headline is the stable subset, and an all-items sensitivity row is printed beneath with the unstable count quoted. An earlier draft added a third rule — a hit only if every non-error repeat was a hit — which is stricter than §2 and interacts badly with what arm A measured: all seven of its disagreements were abstain flips, so the strict rule would turn every hit-then-abstain item into a miss and move the headline by pure instrument noise. `unit_accuracy_all_repeats` and `split_items` are the (item, repeat)-level view beside it. The miss decomposition is (item, repeat)-level and says so in its own block.',
     fact_coherence_note: 'The headline (E1), Korean (E2) and ceiling (P) buckets ask about the SAME 120 facts. Those three buckets are within-fact comparisons of PHRASING, not three independent fact sets — the P-to-E1 gap is the generalisation cost on one fact set, and reading it as a comparison across fact sets is wrong.',
     counts: {
       transcripts: transcripts.length, units: units.length, items: items.size, arms, by_bucket: bucketCounts,
@@ -872,7 +891,7 @@ export function renderMarkdown(s) {
   p();
   p(table(['Step', 'left', 'right', 'holds', 'exact McNemar (items)'], s.ordering.steps.map((x) => [x.step, fmtPct(x.x), fmtPct(x.y), x.holds == null ? '—' : x.holds ? 'yes' : '**no**', fmtP(x.mcnemar)])));
   p();
-  p('`A ≪ B` is read as a margin of at least 5 points; the other two steps are strict inequalities. A difference is never called a difference without its p-value and both intervals (below).');
+  p('Every step is decided by exact McNemar on the discordant pairs at alpha 0.05, measured on E1 alone — §1 sizes its power analysis for E1 = 120, while E2 is cross-lingual transfer, a different claim. The margin is reported beside the p-value and decides nothing: at n = 120 a 5-point margin sits inside the Wilson width, so a margin rule would call differences this study cannot resolve.');
   p();
 
   p('## 0.5 What retrieval cost — the result §6 asks to be reported first');
