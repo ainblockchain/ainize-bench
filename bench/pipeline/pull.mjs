@@ -114,6 +114,25 @@ export async function pull({ runid, block = null, fresh = false, log = console.l
   }
 
   fs.writeFileSync(path.join(outDir, 'manifest.json'), JSON.stringify(manifest, null, 2) + '\n');
+
+  // The health table, written back onto sources.json so every consumer keys off a FIELD rather than a list
+  // someone pasted. run.mjs fills {{DEPLOYMENTS}} from `live`, so arm B-assisted is handed the deployments that
+  // actually answered at B* — offering it ids that return `bad indexers` would be a wrong_subgraph source we
+  // manufactured ourselves, and would make the "generous configuration" less generous than we claim.
+  const health = new Map(probe.map((h) => [h.deployment_id, h]));
+  const answered = new Set(manifest.responses.map((r) => r.deployment_id));
+  const withHealth = sources.map((s) => {
+    const h = health.get(s.deployment_id);
+    const dropped_reason = h?.dropped ?? (h?.error ? `probe failed: ${h.error}` : answered.has(s.deployment_id) ? null : 'no rows at B*: every entity query failed or returned empty');
+    const { live: _was, dropped_reason: _wasWhy, head_at_pull: _wasHead, checked_at: _wasWhen, ...rest } = s;
+    return { ...rest, live: !dropped_reason, ...(dropped_reason ? { dropped_reason } : {}), head_at_pull: h?.head ?? null, checked_at: manifest.pulled_at };
+  });
+  const sourcesPath = path.join(HERE, 'sources.json');
+  fs.writeFileSync(sourcesPath, JSON.stringify(withHealth, null, 2) + '\n');
+  const liveCount = withHealth.filter((s) => s.live).length;
+  log(`\nhealth written to ${path.relative(process.cwd(), sourcesPath)}: ${liveCount}/${withHealth.length} live at B* = ${pin}`);
+  for (const s of withHealth.filter((x) => !x.live)) log(`  dropped  ${String(s.protocol).padEnd(20)} ${s.dropped_reason}`);
+
   log(`\n${manifest.responses.length} raw responses committed under data/${runid}/${fresh ? 'pull-fresh' : 'pull'}/ at block ${pin}`);
   return manifest;
 }
