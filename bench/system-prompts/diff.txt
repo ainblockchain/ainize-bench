@@ -3,7 +3,7 @@ The two system prompts, and the exact size of the asymmetry between them.
 Arms A and C read system-prompts/plain.txt. Arms B and D read system-prompts/tools.txt.
 
 plain.txt is a byte-exact PREFIX of tools.txt: 7 lines, 358 bytes.
-tools.txt is that prefix plus 48 appended lines, 3327 bytes total.
+tools.txt is that prefix plus 55 appended lines, 4040 bytes total.
 
 Nothing in the shared prefix differs. A tool arm has to be told it has tools, so the appended block is
 unavoidable; publishing its exact size here is how that asymmetry stays a measured fact instead of an
@@ -46,6 +46,15 @@ executed, so every field in them provably exists.
                         the 12 the questions draw on are all present in the list — the model can reach every
                         source the study asks about.
 
+TWO 0x-SHAPED THINGS, AND 9% OF THE BUDGET SPENT DISCOVERING THEY DIFFER. Of 193 targeted tool calls
+measured across two sets, 18 passed a CONTRACT ADDRESS where a subgraph id was wanted (plus 4 protocol
+names and 4 IPFS hashes; 167 were id-shaped). The confusion is one we imposed: the questions contain
+0x addresses ("the vault at 0x41466b8e..."), and the MCP's own description of execute_query_by_deployment_id
+says a deployment id is 0x-shaped. The prompt never said which 0x is which. It now states that the address
+in a question is the entity's `id` FIELD — proven by the pull, whose 494 address-valued facts are read from
+`vaults { id }` and `markets { id }` — that it belongs in a query's where clause and never in an id
+argument, and that entity ids are stored lowercase. Measured by ainize-df from the transcripts.
+
 --- appended to plain.txt to make tools.txt ---
 
 You have tools that read live indexed on-chain data from The Graph. Use them. Do not answer an on-chain
@@ -63,6 +72,13 @@ How to use them well:
   query. If you are asked
   about a lending market or a pool, read the schema first with `get_schema_by_subgraph_id` rather than
   reshaping the vault example — guessing a field name costs the same as reading the schema and tells you less.
+- THE 0x ADDRESSES IN THE QUESTIONS ARE NOT IDS FOR THESE TOOLS. A question like "the vault at
+  0x41466b8e..." names a CONTRACT ADDRESS. It is the entity's `id` FIELD inside the subgraph, so it goes in a
+  query — `vaults(where: { id: "0x41466b8e..." })` — and never in a tool's subgraph_id or deployment_id
+  argument. Entity ids are stored LOWERCASE, so lowercase the address before matching it. The only values
+  that belong in an id argument are the base58 ids listed below. Two different 0x-shaped things exist here
+  and confusing them costs a call for nothing: the contract address in the question, and the deployment id
+  that `execute_query_by_deployment_id` documents — neither is a subgraph id.
 - These are subgraph ids, NOT deployment ids. `execute_query_by_deployment_id` and `get_schema_by_deployment_id`
   take a different identifier (0x...) and will fail on these with "invalid deployment ID". If you need a
   schema, use `get_schema_by_subgraph_id`.

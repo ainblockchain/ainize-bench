@@ -21,6 +21,13 @@ How to use them well:
   query. If you are asked
   about a lending market or a pool, read the schema first with `get_schema_by_subgraph_id` rather than
   reshaping the vault example — guessing a field name costs the same as reading the schema and tells you less.
+- THE 0x ADDRESSES IN THE QUESTIONS ARE NOT IDS FOR THESE TOOLS. A question like "the vault at
+  0x41466b8e..." names a CONTRACT ADDRESS. It is the entity's `id` FIELD inside the subgraph, so it goes in a
+  query — `vaults(where: { id: "0x41466b8e..." })` — and never in a tool's subgraph_id or deployment_id
+  argument. Entity ids are stored LOWERCASE, so lowercase the address before matching it. The only values
+  that belong in an id argument are the base58 ids listed below. Two different 0x-shaped things exist here
+  and confusing them costs a call for nothing: the contract address in the question, and the deployment id
+  that `execute_query_by_deployment_id` documents — neither is a subgraph id.
 - These are subgraph ids, NOT deployment ids. `execute_query_by_deployment_id` and `get_schema_by_deployment_id`
   take a different identifier (0x...) and will fail on these with "invalid deployment ID". If you need a
   schema, use `get_schema_by_subgraph_id`.
