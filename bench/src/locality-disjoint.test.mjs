@@ -166,7 +166,14 @@ test('the trainer contrast set is disjoint from the shipped publish gate', { ski
 const questions = rd(join(BENCH, 'data', 'r1', 'questions.jsonl'));
 const factById = new Map(facts.map((f) => [f.fact_id, f]));
 const studyUniverse = [...new Set(questions.flatMap((x) => x.fact_ids ?? []))];
-const pairKey = (f) => [N(f.subject), N(f.object)].sort().join(' | ');
+/**
+ * UNORDERED key: {subject, object} as a set, so a fact and its inverse collapse to one key. The `.sort()` is
+ * the whole mechanism and it is easy to read past, so state what it buys - the ORDERED count is 186 (every
+ * fact its own key) and the UNORDERED count is 184, and the difference between them IS the quantity being
+ * reported. Both numbers are correct about different questions; §1 must say which one it means, because the
+ * notation "(subject, object)" reads as ordered while the number quoted there is unordered.
+ */
+const unorderedPairKey = (f) => [N(f.subject), N(f.object)].sort().join(' | ');
 const bucketOf = (x) => (x.hop === 2 ? 'multihop' : !x.taught ? 'tripwire' : x.form === 'E1' ? 'headline' : x.form === 'E2' ? 'korean' : 'ceiling');
 
 test('every fact the study references resolves, so the pair check cannot pass vacuously', () => {
@@ -176,7 +183,7 @@ test('every fact the study references resolves, so the pair check cannot pass va
 
 test('no TRIPWIRE item can be answered by reversing a fact the study teaches', () => {
   const byPair = new Map();
-  for (const id of studyUniverse) { const f = factById.get(id); const k = pairKey(f); if (!byPair.has(k)) byPair.set(k, []); byPair.get(k).push(f); }
+  for (const id of studyUniverse) { const f = factById.get(id); const k = unorderedPairKey(f); if (!byPair.has(k)) byPair.set(k, []); byPair.get(k).push(f); }
   const bidirectional = new Set([...byPair.values()].filter((v) => v.length > 1).flatMap((v) => v.map((f) => f.fact_id)));
   const tripwireHits = questions.filter((x) => bucketOf(x) === 'tripwire' && (x.fact_ids ?? []).some((fid) => bidirectional.has(fid)));
   assert.deepEqual(tripwireHits.map((x) => x.id), [], 'a held-out item answerable by reversal makes the void condition unreadable: a void would look like leakage and leakage like a pass');
@@ -184,9 +191,11 @@ test('no TRIPWIRE item can be answered by reversing a fact the study teaches', (
 
 test('the declared bidirectional pair count still matches the data', () => {
   const byPair = new Map();
-  for (const id of studyUniverse) { const f = factById.get(id); const k = pairKey(f); if (!byPair.has(k)) byPair.set(k, []); byPair.get(k).push(f); }
+  for (const id of studyUniverse) { const f = factById.get(id); const k = unorderedPairKey(f); if (!byPair.has(k)) byPair.set(k, []); byPair.get(k).push(f); }
   // A Map keyed by pair would OVERWRITE here, blinding the detector to the thing it detects. List per pair.
   const bidirectional = [...byPair.values()].filter((v) => v.length > 1);
   assert.equal(bidirectional.length, 2, 'the number of both-direction pairs changed - update §1 rather than this assertion');
-  assert.equal(byPair.size, studyUniverse.length - 2, 'distinct pairs should be the fact count less one per bidirectional pair');
+  // UNORDERED count. If §1 is ever "corrected" to the ordered count (186), this fails - and the fix is §1,
+  // not this line. Ordered keying gives every fact its own key and can never show a collapse.
+  assert.equal(byPair.size, studyUniverse.length - bidirectional.length, `unordered pairs should be ${studyUniverse.length} facts less one per bidirectional pair`);
 });
