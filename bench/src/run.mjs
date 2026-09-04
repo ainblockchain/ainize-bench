@@ -293,7 +293,11 @@ async function main() {
     if (!patchId) die('--patch <knowledge-id> is required for arms C and D');
     node = new NodeClient();
     await node.login();
-    provenancePatch = await node.provenance(patchId);
+    provenancePatch = await node.provenance(patchId, {
+      recipePath: argv.recipe ? (argv.recipe.startsWith('/') ? argv.recipe : join(BENCH, '..', argv.recipe)) : null,
+      trainsetPath: join(BENCH, 'data', runId, 'trainset.jsonl'),
+    });
+    if (!provenancePatch.real_training) for (const w of provenancePatch.why) console.error(`  !! provenance: ${w}`);
   }
 
   let mcp = null;
