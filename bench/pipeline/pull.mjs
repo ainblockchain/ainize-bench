@@ -121,17 +121,24 @@ export async function pull({ runid, block = null, fresh = false, log = console.l
   // manufactured ourselves, and would make the "generous configuration" less generous than we claim.
   const health = new Map(probe.map((h) => [h.deployment_id, h]));
   const answered = new Set(manifest.responses.map((r) => r.deployment_id));
-  const withHealth = sources.map((s) => {
+  const withHealth = sources.sources.map((s) => {
     const h = health.get(s.deployment_id);
     const dropped_reason = h?.dropped ?? (h?.error ? `probe failed: ${h.error}` : answered.has(s.deployment_id) ? null : 'no rows at B*: every entity query failed or returned empty');
     const { live: _was, dropped_reason: _wasWhy, head_at_pull: _wasHead, checked_at: _wasWhen, ...rest } = s;
     return { ...rest, live: !dropped_reason, ...(dropped_reason ? { dropped_reason } : {}), head_at_pull: h?.head ?? null, checked_at: manifest.pulled_at };
   });
+  // sources.json is a DOCUMENT, not an array: it also carries registry, generated_at, network, identity_query
+  // and the identity note, and every consumer reads `.sources` (run.mjs does `JSON.parse(...).sources ?? []`).
+  // Writing the bare array here would leave that consumer seeing zero deployments and arm B told about none.
   const sourcesPath = path.join(HERE, 'sources.json');
-  fs.writeFileSync(sourcesPath, JSON.stringify(withHealth, null, 2) + '\n');
-  const liveCount = withHealth.filter((s) => s.live).length;
+  const next = { ...sources, sources: withHealth };
+  if (!Array.isArray(next.sources) || next.sources.length !== sources.sources.length) {
+    throw new Error(`refusing to write sources.json: expected ${sources.sources.length} entries under .sources, got ${Array.isArray(next.sources) ? next.sources.length : typeof next.sources}`);
+  }
+  fs.writeFileSync(sourcesPath, JSON.stringify(next, null, 2) + '\n');
+  const liveCount = withHealth.filter((x) => x.live).length;
   log(`\nhealth written to ${path.relative(process.cwd(), sourcesPath)}: ${liveCount}/${withHealth.length} live at B* = ${pin}`);
-  for (const s of withHealth.filter((x) => !x.live)) log(`  dropped  ${String(s.protocol).padEnd(20)} ${s.dropped_reason}`);
+  for (const x of withHealth.filter((y) => !y.live)) log(`  dropped  ${String(x.protocol).padEnd(20)} ${x.dropped_reason}`);
 
   log(`\n${manifest.responses.length} raw responses committed under data/${runid}/${fresh ? 'pull-fresh' : 'pull'}/ at block ${pin}`);
   return manifest;
