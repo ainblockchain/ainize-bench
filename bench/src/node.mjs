@@ -46,24 +46,29 @@ export class NodeClient {
   }
 
   /**
-   * Was this patch produced by a real gradient run on THIS study's corpus?
+   * Was this patch produced by a real, FINISHED gradient run on THIS study's corpus?
    *
-   * The first version of this read `backend: "gradient"` off the node. That check was theatre and had to go.
-   * `teach.backend` is a NODE CONFIG field (core/config-schema.ts:44) saying which backend that node's
-   * TeachWorker would use — it is not a property of any patch. A patch published from a node configured
-   * `gradient` reads as gradient however it was actually made, and arm C's patch is trained by invoking
-   * train/teach.py directly, so no node trained it and no teach job exists. A flag that passes for a file
-   * someone dropped in, and fails for a real gradient run, is worse than no flag: it looks like evidence.
+   * The first version read `backend: "gradient"` off the node. That was theatre: `teach.backend` is a NODE
+   * CONFIG field (core/config-schema.ts:44) naming which backend that node's TeachWorker would use, not a
+   * property of any patch. It passes for a file dropped into a gradient-configured node and fails for arm C,
+   * which is a real gradient run invoked directly with no node involved. A check satisfied by the fake and
+   * refused by the genuine article is worse than none, because §9 promises a mechanical guarantee here.
    *
-   * What replaces it is the trainer's own recipe.json, BOUND to the two things it must not be separable from:
-   *   patch_sha256   the recipe describes the artefact the run is about to apply, not some other one
-   *   trainset       the sha256 of data/<run>/trainset.jsonl, so the patch was trained on the study's own
-   *                  120 rows rather than on a corpus that merely resembles them
-   * Plus the fields only a real run produces — steps taken, rows touched, hyper-parameters, model identity,
-   * and the kernel provenance recorded from inside the training process.
+   * The evidence is recipe.json, and the binding is a CANONICAL CORPUS HASH rather than a file hash. The
+   * recipe EMBEDS the facts it trained on, so the corpus is included rather than referenced: hashing the
+   * sorted `prompt\tanswer` lines of `recipe.facts` and of `data/<run>/trainset.jsonl` gives two independent
+   * comparisons — "this patch was trained on these rows" is checkable from the recipe alone, and "these are
+   * the study's rows" against the trainset. A raw file hash would have failed on JSON key order, whitespace
+   * and .jsonl-versus-array, none of which change the corpus, so a correct patch would have been refused for
+   * cosmetic reasons.
    *
-   * Anything missing means `real_training: false` and the runner writes results-DRYRUN. The rule stays
-   * mechanical; only its evidence changed, from a flag anyone can set to a document bound to the artefact.
+   * And it refuses a MID-RUN CHECKPOINT. teach.py writes an interim record with `status: "training"` and no
+   * `converged` key, and the final record carries `converged`. A checkpoint from an interrupted run was read
+   * as a converged baseline earlier today and nearly became a numerics finding; requiring the key turns that
+   * discovery into a guard.
+   *
+   * Field names below are the ACTUAL keys recipe.json writes. The previous version guessed with `??` chains
+   * across several spellings, which is the same optimistic guessing the rule exists to prevent.
    */
   async provenance(id, { recipePath = null, trainsetPath = null } = {}) {
     const p = await this.patch(id).catch(() => null);
@@ -77,37 +82,50 @@ export class NodeClient {
     let r;
     try { r = JSON.parse(readFileSync(recipePath, 'utf8')); } catch (e) { out.why.push(`recipe is not JSON: ${e.message}`); return out; }
 
-    const recipeSha = r.patch_sha256 ?? r.patch?.sha256 ?? null;
-    if (!recipeSha) out.why.push('recipe carries no patch_sha256 — it cannot be bound to an artefact');
-    else if (anchorSha && recipeSha.toLowerCase() !== String(anchorSha).toLowerCase())
-      out.why.push(`recipe describes ${String(recipeSha).slice(0, 12)} but the anchor is ${String(anchorSha).slice(0, 12)} — a recipe for a different patch`);
+    // A finished run, not a checkpoint.
+    if (!('converged' in r)) out.why.push('recipe has no `converged` key — this is a mid-run checkpoint, not a finished run');
 
-    if (trainsetPath) {
-      if (!existsSync(trainsetPath)) out.why.push(`trainset not found at ${trainsetPath}`);
-      else {
-        const local = createHash('sha256').update(readFileSync(trainsetPath)).digest('hex');
-        const claimed = r.trainset_sha256 ?? r.dataset_sha256 ?? r.trainset?.sha256 ?? null;
-        if (!claimed) out.why.push('recipe names no trainset hash — it cannot be shown to be this study\'s corpus');
-        else if (claimed.toLowerCase() !== local.toLowerCase())
-          out.why.push(`recipe trained on ${String(claimed).slice(0, 12)}, this study's trainset is ${local.slice(0, 12)}`);
+    for (const k of ['facts', 'hyper_params', 'model', 'kernel', 'rows', 'step', 'npz', 'trainer'])
+      if (r[k] === undefined || r[k] === null) out.why.push(`recipe has no \`${k}\``);
+
+    // The artefact: the npz the recipe names must hash to what the anchor says the patch is.
+    if (r.npz) {
+      if (!existsSync(r.npz)) out.why.push(`recipe names an npz that is not readable here (${r.npz}) — the artefact binding cannot be checked`);
+      else if (anchorSha) {
+        const npzSha = createHash('sha256').update(readFileSync(r.npz)).digest('hex');
+        if (npzSha.toLowerCase() !== String(anchorSha).toLowerCase())
+          out.why.push(`the npz the recipe names hashes to ${npzSha.slice(0, 12)}, the anchor says ${String(anchorSha).slice(0, 12)}`);
       }
     }
 
-    // Fields only a real run produces. Absence is not proof of a stub, but their presence is what the
-    // DRYRUN rule is allowed to rely on, and the rule must never guess optimistically.
-    for (const [field, val] of [
-      ['steps', r.steps ?? r.step ?? r.hyper_params?.max_steps],
-      ['rows_touched', r.rows ?? r.rows_touched],
-      ['hyper_params', r.hyper_params],
-      ['model identity', r.model?.id_M ?? r.model_id],
-      ['kernel_provenance', r.kernel_provenance ?? r.kernel],
-    ]) if (val === undefined || val === null) out.why.push(`recipe has no ${field}`);
+    // The corpus: canonical hash of the embedded facts against the study's trainset.
+    if (Array.isArray(r.facts) && trainsetPath) {
+      if (!existsSync(trainsetPath)) out.why.push(`trainset not found at ${trainsetPath}`);
+      else {
+        const fromRecipe = NodeClient.corpusHash(r.facts);
+        const fromStudy = NodeClient.corpusHash(readFileSync(trainsetPath, 'utf8').split('\n').filter(Boolean).map((l) => JSON.parse(l)));
+        out.corpus_hash = fromRecipe;
+        if (fromRecipe !== fromStudy)
+          out.why.push(`recipe trained on corpus ${fromRecipe.slice(0, 12)}, this study's trainset is ${fromStudy.slice(0, 12)}`);
+      }
+    }
 
     out.backend = out.why.length ? 'unproven' : 'gradient';
     out.real_training = out.why.length === 0;
     out.recipe_summary = out.real_training
-      ? { steps: r.steps ?? r.hyper_params?.max_steps, rows: r.rows ?? r.rows_touched, model: r.model?.id_M ?? r.model_id, kernel: r.kernel_provenance ?? r.kernel }
+      ? { step: r.step, rows: r.rows, converged: r.converged, model: r.model?.id_M ?? r.model, kernel: r.kernel, trainer: r.trainer }
       : null;
     return out;
+  }
+
+  /**
+   * Canonical corpus hash: sha256 over sorted `prompt\tanswer` lines. Survives key order, whitespace and
+   * jsonl-versus-array, none of which change what was trained; a raw file hash survives none of them.
+   */
+  static corpusHash(rows) {
+    const lines = rows
+      .map((f) => `${String(f.prompt ?? '').trim()}\t${String(f.answer ?? f.expect ?? '').trim()}`)
+      .sort();
+    return createHash('sha256').update(lines.join('\n')).digest('hex');
   }
 }
