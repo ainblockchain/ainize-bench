@@ -172,12 +172,20 @@ its p-value and both intervals beside it.
   of the asymmetry is on the record instead of being asserted to be small.
 - Item order is shuffled once with a fixed seed and the **same order is used for every arm**, so drift in the
   host over the run window hits all arms in the same places.
-- **Sampling is uniform and the degeneracy guard is off for scoring.** The node's chat path normally applies
-  stop sequences and a repetition guard (`DEFAULT_CHAT_SAMPLING` in `packages/node/src/runtime.ts`). The
-  benchmark passes `sampling: null` — the same exemption `Runtime.verify()` takes and for the same reason: a
-  stop sequence can only shorten an answer, so leaving it on would silently penalise whichever arm happens to
-  produce longer answers (arm B, which narrates its tool use). The guard's verdicts are recorded per turn and
-  reported as a diagnostic column; they never move a ✓/✗.
+- **Sampling is uniform, and that is why every arm goes through `src/vllm.mjs` rather than the node.** The
+  node's chat path applies stop sequences and a repetition guard (`DEFAULT_CHAT_SAMPLING`,
+  `packages/node/src/runtime.ts:54`) and **cannot be told not to**: `Market.chatInner` builds
+  `{ maxTokens, thinking }` and never forwards `sampling` (`packages/node/src/market.ts:955`), so `POST
+  /api/chat` has no way to express the `sampling: null` this section used to claim it passed. Arms B and D
+  need a raw tool loop and would not be stopped or guarded; running A and C through the node would therefore
+  have compared a stopped arm against an unstopped one — the exact asymmetry this section forbids. So the
+  runner drives `:8002` directly for all four arms with one body: `temperature 0`, `top_p 1`,
+  `max_tokens 256`, no stop sequences, no penalties, `chat_template_kwargs.enable_thinking: false`.
+- **Thinking must be explicitly off, and this is not cosmetic.** Measured 2026-09-04: with thinking at its
+  default, a tool-armed request on this deployment spent all 200 completion tokens on reasoning
+  (`reasoning_tokens: 200`), returned empty content and `finish_reason: "length"` — **no tool call at all**.
+  The same request with `enable_thinking: false` emitted the tool call in 79 tokens. An arm B run without the
+  flag would have produced "the model does not use its tools", a strawman manufactured by our own request body.
 - **Two repeats.** `temperature 0` is not bit-deterministic under vLLM continuous batching, and this repo
   already knows it — the teach-mode locality check asks each prompt twice for exactly this reason
   (`packages/node/src/teach.ts`, "not repeatable on this model"). Every item is run twice per arm. An item whose
@@ -205,6 +213,15 @@ whole thesis dies if a judge can say "you strawmanned The Graph".
   binding constraint and the summary states that.
 - **Retries.** One retry on a transport error (5xx, timeout, connection reset). Never a retry because the
   answer was wrong. Retries are counted.
+- **Running out of window is a MISS, never an `error`.** Measured while building the runner: three tool calls
+  against a Messari schema overflow 8 192 tokens, and vLLM answers `400 … maximum context length`. Recording
+  that as a transport error would have been catastrophic for the study, because §5 excludes errors from the
+  accuracy denominator — arm B's most characteristic failure would have been *deleted from the measurement*,
+  and the arm would have looked better the more often it overflowed. So the loop measures the request before
+  every turn and evicts the OLDEST tool results first (each replaced by `… evicted, N tokens …`, which the
+  model can read), and if it still does not fit, withdraws the tool schemas and forces one final answering
+  turn. Either path sets `context_exhausted`, which is a miss channel above. A 400 is never retried — it would
+  fail identically and spend 90 s doing it. The eviction count and the peak prompt size are recorded per item.
 - **The 8 192-token window is a real constraint, declared not exploited.** Subgraph JSON is large. Tool results
   are passed through verbatim up to 4 000 tokens; beyond that they are truncated at a JSON array boundary with
   an explicit `… truncated, N of M rows` marker, and the turn is flagged `context_truncated`. The truncation
@@ -218,22 +235,27 @@ whole thesis dies if a judge can say "you strawmanned The Graph".
 
 Arms C and D are executed against the running node, not against a script that re-implements patching.
 
-- **Arms A + C are run as one paired call**: `POST /api/chat` on node-u (`http://localhost:3422`) with
-  `mode: "compare"` and `patch_ids: [K]`. `Market.chat()` (`packages/node/src/market.ts:911`) takes the shared
-  runtime lock once, removes the patch → asks the base model → applies the patch → asks again → restores the
-  table exactly as it found it. Both answers therefore come from the same table-state transition, seconds apart,
-  under one lock. That is a materially better paired design than running arm A in the morning and arm C at
-  night, and it comes free from code the product already uses in front of users.
+- **Arms A + C are paired per CHUNK, not per call.** The original design ran them as one `POST /api/chat`
+  with `mode: "compare"`, which pairs them perfectly under a single lock — but that route cannot carry the
+  uniform sampling §2 requires (see above), so the pairing is reconstructed in the runner instead: for each
+  chunk of 8 items the table is put into one state, the chunk is asked, the table is moved to the other state,
+  and the same chunk is asked again. The gap between an item's two arms is minutes, which is what the paired
+  design was defending against; the overnight A-in-the-morning / C-at-night design it replaces is still ruled
+  out. The state is asserted against the node before and after every chunk, so "the patch was resident" is a
+  checked fact per chunk rather than an assumption over the whole run.
 - **Arm D needs a multi-turn tool loop with the patch resident**, which `chat()` cannot express (it takes no
   tools). The runner therefore pins the patch with the operator route `POST /api/patches/:id/apply`
   (`api.ts:418`), runs the tool loop directly against `:8002`, and unpins with
   `POST /api/patches/:id/remove` — with `scripts/patch.py status` asserted before and after the block. No
   change to `packages/*` is required.
 - **Restart detection.** A vLLM restart silently reverts the PLE table; `Runtime.verify()` already re-checks
-  `isApplied()` between chunks of 8 and re-applies. The runner does the same: after every 8 items in a patched
-  block it asserts the patch is still applied, re-applies and re-runs the chunk if not, and records
-  `restarts_detected` in `provenance.json`. **Any run with `restarts_detected > 0` publishes the count in the
-  summary header**; a run that could not re-establish the table is void.
+  `isApplied()` between chunks of 8 and re-applies. The runner does the same: after every chunk it asserts the
+  state it asked for still holds, and if it does not, **the chunk's results are discarded unwritten** and the
+  chunk is re-run against a re-established table. Nothing from a chunk whose table state was lost can reach
+  the transcripts, because we cannot know which of its items were answered before the revert. Recorded as
+  `restarts_detected` and `chunks_rerun` in `provenance.json`. **Any run with `restarts_detected > 0`
+  publishes the count in the summary header**; a run that could not re-establish the table twice in a row is
+  void and the runner exits.
 
 ## 5. Scoring
 
@@ -302,6 +324,7 @@ Derived, in the summary:
   | `truncated` | a tool result was cut at the context wall on the turn that carried the answer |
   | `budget_exhausted` | the 8-call / 10-turn / 90 s cap was hit before an answer |
   | `ignored_result` | the answer's key token appears in **no** tool result — the data arrived and was not used |
+  | `context_exhausted` | the window filled with tool output: an evicted result, or vLLM's own 400, before an answer |
   | `had_it_and_still_wrong` | the truth string *is* in a tool result and the final answer differs |
   The last two are the interesting ones: they are the cases where The Graph delivered and the loop lost it, and
   they are what a compiled memory table removes. A C > B gap that does not show up in this table is not a
