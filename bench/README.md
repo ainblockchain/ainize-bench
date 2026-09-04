@@ -410,6 +410,13 @@ present. Verified the same day against the live services:
 - gateway — `POST https://gateway.thegraph.com/api/subgraphs/id/<id>` with `Authorization: Bearer $KEY`
   returned `_meta.block.number` 25902862 (the `/api/<key>/subgraphs/id/<id>` path form also works; the header
   form is what `pull.mjs` uses, so the key never appears in a URL or a log line).
+- MCP — **the hosted MCP does not require the key at all.** A keyless session completed the full handshake
+  and a `tools/call` (`execute_query_by_subgraph_id` → block 25902896) on 2026-09-04. This corrects the earlier
+  entry below, which recorded that the endpoint "sends nothing without a key" — that observation was an SSE
+  read that gave up before the first event, not an auth refusal. Arm B is still run **with** the key, so the
+  traffic is attributable to our own quota and matches what a real integration ships, and `provenance.json`
+  records `mcp_authenticated: true`; but `SubgraphMCP` no longer throws without one, because a reviewer
+  reproducing arm B will not have our key and must still be able to run it.
 - MCP — `GET https://subgraphs.mcp.thegraph.com/sse` with the same header opens a session
   (`subgraph-mcp` 0.1.1, protocol `2024-11-05`, legacy HTTP+SSE transport: the stream emits
   `event: endpoint → /messages?sessionId=…` and JSON-RPC is POSTed there; `/mcp` streamable-HTTP is 404, so the
@@ -422,8 +429,8 @@ present. Verified the same day against the live services:
   the gateway (`https://gateway.thegraph.com/api/subgraphs/id/<deployment>`, `Authorization: Bearer $KEY`) and
   the hosted Subgraph MCP server (`https://subgraphs.mcp.thegraph.com/sse`, same header). Verified 2026-09-04:
   the gateway answers `auth error: missing authorization header` with no key and `auth error: API key not found`
-  with a bogus one; the MCP endpoint accepts an SSE connection and then sends nothing without a key. There is no
-  keyless path to live subgraph data, and `api.studio.thegraph.com` serves only deployments you own.
+  with a bogus one, and `api.studio.thegraph.com` serves only deployments you own — so **the gateway half of the
+  pull genuinely needs the key**. The MCP half does not: see the correction above.
 - **`SUBSTREAMS_API_TOKEN`** — only if the Substreams half of the track work is pursued (The Graph Market).
 
 Both are read from the environment; neither is ever written to a file in this repo.
