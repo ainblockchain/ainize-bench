@@ -206,7 +206,10 @@ function systemPrompts() {
   if (!live.length) die(`no live deployments (basis: ${basis}) — arm B has nothing to be told about`);
   // The count and the pin are stated so a reviewer can check the curation against the committed manifest
   // instead of taking it on trust.
-  const header = `The following ${live.length} subgraph deployments were live${block ? ` at block ${block}` : ''} when this run started.`;
+  // "subgraph ids", not "deployments". The whole arm-B failure was this word: sources.json's field is named
+  // deployment_id but holds a subgraph id, the prompt inherited the name, and the model correctly called
+  // execute_query_by_deployment_id with it and failed on every call. The list header says what these are.
+  const header = `The following ${live.length} subgraph ids were live${block ? ` at block ${block}` : ''} when this run started.`;
   const listText = `${header}\n` + live.map((s) => `- ${s.protocol} (${s.schema}, ${s.network}): ${s.deployment_id}`).join('\n');
   // B-assisted (headline, §3): the deployment ids and the worked example a competent engineer would ship.
   const assisted = toolsTemplate.replace('{{DEPLOYMENTS}}', listText);
