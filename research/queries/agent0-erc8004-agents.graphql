@@ -1,0 +1,13 @@
+query AgentIdentity($skip: Int!) {
+  agents(first: 1000, skip: $skip, orderBy: agentId, orderDirection: asc) {
+    id
+    chainId
+    agentId
+    agentURI
+    owner
+    agentWallet
+    totalFeedback
+    registrationFile { name description }
+  }
+  _meta { block { number } deployment }
+}

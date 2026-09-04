@@ -1,0 +1,15 @@
+query VaultIdentity($skip: Int!) {
+  vaults(first: 1000, skip: $skip, orderBy: totalValueLockedUSD, orderDirection: desc) {
+    id
+    name
+    symbol
+    inputToken  { id symbol name decimals }
+    outputToken { id symbol name decimals }
+    fees { feeType feePercentage }
+    depositLimit
+    totalValueLockedUSD
+    pricePerShare
+    protocol { name slug network type schemaVersion }
+  }
+  _meta { block { number } deployment }
+}

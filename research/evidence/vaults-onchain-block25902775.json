@@ -1,0 +1,276 @@
+{
+  "block": 25902775,
+  "chain": "ethereum-mainnet",
+  "verified": [
+    {
+      "address": "0x55555815a5595991C3A0Ff119B59AEF6C8B55555",
+      "symbol": "adpUSDC",
+      "name": "Adpend USDC",
+      "asset": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "assetSymbol": "USDC",
+      "totalAssets": "226544934095867",
+      "apiAgrees": true
+    },
+    {
+      "address": "0x94643e86aa5E38DDAc6c7791C1297f4E40cD96c1",
+      "symbol": "1337USDC",
+      "name": "1337 USDC",
+      "asset": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "assetSymbol": "USDC",
+      "totalAssets": "120773198023676",
+      "apiAgrees": true
+    },
+    {
+      "address": "0xbEef047a543E45807105E51A8BBEFCc5950fcfBa",
+      "symbol": "steakUSDT",
+      "name": "Steakhouse USDT",
+      "asset": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "assetSymbol": "USDT",
+      "totalAssets": "89043649930409",
+      "apiAgrees": true
+    },
+    {
+      "address": "0xBEEF01735c132Ada46AA9aA4c54623cAA92A64CB",
+      "symbol": "steakUSDC",
+      "name": "Steakhouse USDC",
+      "asset": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "assetSymbol": "USDC",
+      "totalAssets": "69289635003323",
+      "apiAgrees": true
+    },
+    {
+      "address": "0xBEEf050ecd6a16c4e7bfFbB52Ebba7846C4b8cD4",
+      "symbol": "steakETH",
+      "name": "Steakhouse ETH",
+      "asset": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "assetSymbol": "WETH",
+      "totalAssets": "11892504182256779659175",
+      "apiAgrees": true
+    },
+    {
+      "address": "0x812B2C6Ab3f4471c0E43D4BB61098a9211017427",
+      "symbol": "vbgtWBTC",
+      "name": "Vault Bridge WBTC",
+      "asset": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "assetSymbol": "WBTC",
+      "totalAssets": "35588404111",
+      "apiAgrees": true
+    },
+    {
+      "address": "0xdd0f28e19C1780eb6396170735D45153D261490d",
+      "symbol": "gtUSDC",
+      "name": "Gauntlet USDC Prime",
+      "asset": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "assetSymbol": "USDC",
+      "totalAssets": "28318535543638",
+      "apiAgrees": true
+    },
+    {
+      "address": "0xA0804346780b4c2e3bE118ac957D1DB82F9d7484",
+      "symbol": "bbqUSDT",
+      "name": "Smokehouse USDT",
+      "asset": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "assetSymbol": "USDT",
+      "totalAssets": "23271947089702",
+      "apiAgrees": true
+    },
+    {
+      "address": "0x974c8FBf4fd795F66B85B73ebC988A51F1A040a9",
+      "symbol": "hUSDC",
+      "name": "Hakutora USDC",
+      "asset": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "assetSymbol": "USDC",
+      "totalAssets": "19913039458824",
+      "apiAgrees": true
+    },
+    {
+      "address": "0xBEeFFF209270748ddd194831b3fa287a5386f5bC",
+      "symbol": "bbqUSDC",
+      "name": "Smokehouse USDC",
+      "asset": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "assetSymbol": "USDC",
+      "totalAssets": "13501725238762",
+      "apiAgrees": true
+    },
+    {
+      "address": "0x31A5684983EeE865d943A696AAC155363bA024f9",
+      "symbol": "vbgtWETH",
+      "name": "Vault Bridge WETH",
+      "asset": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "assetSymbol": "WETH",
+      "totalAssets": "5114781983218011923803",
+      "apiAgrees": true
+    },
+    {
+      "address": "0xBEefb9f61CC44895d8AEc381373555a64191A9c4",
+      "symbol": "vbshUSDC",
+      "name": "Vault Bridge USDC",
+      "asset": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "assetSymbol": "USDC",
+      "totalAssets": "12194651566896",
+      "apiAgrees": true
+    },
+    {
+      "address": "0xA8875aaeBc4f830524e35d57F9772FfAcbdD6C45",
+      "symbol": "gtusdcrwa",
+      "name": "Gauntlet USDC RWA",
+      "asset": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "assetSymbol": "USDC",
+      "totalAssets": "11206954153438",
+      "apiAgrees": true
+    },
+    {
+      "address": "0xF9bdDd4A9b3A45f980e11fDDE96e16364dDBEc49",
+      "symbol": "ymvOG-USDC",
+      "name": "Yearn OG USDC",
+      "asset": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "assetSymbol": "USDC",
+      "totalAssets": "10231216846920",
+      "apiAgrees": true
+    },
+    {
+      "address": "0x4Ff4186188f8406917293A9e01A1ca16d3cf9E59",
+      "symbol": "sbMorphoUSDC",
+      "name": "SwissBorg Morpho USDC",
+      "asset": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "assetSymbol": "USDC",
+      "totalAssets": "10142143903858",
+      "apiAgrees": true
+    },
+    {
+      "address": "0x6859B34a9379122d25A9FA46f0882d434fee36c3",
+      "symbol": "gtmsUSDc",
+      "name": "Metronome msUSD Vault",
+      "asset": "0xab5eb14c09d416f0ac63661e57edb7aecdb9befa",
+      "assetSymbol": "msUSD",
+      "totalAssets": "21144995425633474369828808",
+      "apiAgrees": true
+    },
+    {
+      "address": "0x2371e134e3455e0593363cBF89d3b6cf53740618",
+      "symbol": "gtWETH",
+      "name": "Gauntlet WETH Prime",
+      "asset": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "assetSymbol": "WETH",
+      "totalAssets": "3355439144931980015646",
+      "apiAgrees": true
+    },
+    {
+      "address": "0x79FD640000F8563A866322483524a4b48f1Ed702",
+      "symbol": "gtusdtf",
+      "name": "Gauntlet USDT Frontier",
+      "asset": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "assetSymbol": "USDT",
+      "totalAssets": "7912883621437",
+      "apiAgrees": true
+    },
+    {
+      "address": "0x68Aea7b82Df6CcdF76235D46445Ed83f85F845A3",
+      "symbol": "oevUSDC",
+      "name": "Yearn USDC",
+      "asset": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "assetSymbol": "USDC",
+      "totalAssets": "7298174965827",
+      "apiAgrees": true
+    },
+    {
+      "address": "0x8CB3649114051cA5119141a34C200D65dc0Faa73",
+      "symbol": "gtUSDT",
+      "name": "Gauntlet USDT Prime",
+      "asset": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "assetSymbol": "USDT",
+      "totalAssets": "6409897550283",
+      "apiAgrees": true
+    },
+    {
+      "address": "0xa71D08A159258553a5Ac190d60Fa919425Ff02EA",
+      "symbol": "hUSDT",
+      "name": "Hakutora USDT",
+      "asset": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "assetSymbol": "USDT",
+      "totalAssets": "6275841983204",
+      "apiAgrees": true
+    },
+    {
+      "address": "0x8eB67A509616cd6A7c1B3c8C21D48FF57df3d458",
+      "symbol": "gtUSDCcore",
+      "name": "Gauntlet USDC Core",
+      "asset": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "assetSymbol": "USDC",
+      "totalAssets": "5490561566162",
+      "apiAgrees": true
+    },
+    {
+      "address": "0x9a8bC3B04b7f3D87cfC09ba407dCED575f2d61D8",
+      "symbol": "MCwETH",
+      "name": "MEV Capital wETH",
+      "asset": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "assetSymbol": "WETH",
+      "totalAssets": "1872988509047223286309",
+      "apiAgrees": true
+    },
+    {
+      "address": "0x3Dfe70B05657949A5dB340754aD664810ac63b21",
+      "symbol": "WETH-ARM",
+      "name": "WETH ARM Vault",
+      "asset": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "assetSymbol": "WETH",
+      "totalAssets": "1776135844427183669391",
+      "apiAgrees": true
+    },
+    {
+      "address": "0xbEeFCe6c76C7D7A8066562Fe9FF0e343a52dD92F",
+      "symbol": "safe-steakUSDC",
+      "name": "Safe x Steakhouse USDC",
+      "asset": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "assetSymbol": "USDC",
+      "totalAssets": "4120923591302",
+      "apiAgrees": true
+    },
+    {
+      "address": "0x2bB005127069A0F0325Fb7370967E8A2b64FB77E",
+      "symbol": "ymv-WBTC",
+      "name": "Yearn WBTC",
+      "asset": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "assetSymbol": "WBTC",
+      "totalAssets": "4750581502",
+      "apiAgrees": true
+    },
+    {
+      "address": "0xc54b4E08C1Dcc199fdd35c6b5Ab589ffD3428a8d",
+      "symbol": "vbgtUSDT",
+      "name": "Vault Bridge USDT",
+      "asset": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "assetSymbol": "USDT",
+      "totalAssets": "3107242873947",
+      "apiAgrees": true
+    },
+    {
+      "address": "0x9B5E92fd227876b4C07a8c02367E2CB23c639DfA",
+      "symbol": "CSYUSDC",
+      "name": "Clearstar Yield USDC",
+      "asset": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "assetSymbol": "USDC",
+      "totalAssets": "3104255133219",
+      "apiAgrees": true
+    },
+    {
+      "address": "0xBEeF47b9F76C9672B967A7b88d0afFf245Be13ad",
+      "symbol": "safe-steakUSDT",
+      "name": "Safe x Steakhouse USDT",
+      "asset": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "assetSymbol": "USDT",
+      "totalAssets": "3091469224593",
+      "apiAgrees": true
+    },
+    {
+      "address": "0x5B8b9FA8e4145eE06025F642cAdB1B47e5F39F04",
+      "symbol": "OUSD-V1",
+      "name": "OUSD Vault V1",
+      "asset": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "assetSymbol": "USDC",
+      "totalAssets": "3016126891700",
+      "apiAgrees": true
+    }
+  ]
+}

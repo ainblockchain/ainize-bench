@@ -1,0 +1,22 @@
+query AinizeIdentityFacts($skip: Int!) {
+  protocolMeta: protocols(first: 1) {
+    id
+    name
+    slug
+    network
+    type
+    schemaVersion
+    totalValueLockedUSD
+  }
+  tokens(first: 1000, skip: $skip, orderBy: id, orderDirection: asc) {
+    id
+    name
+    symbol
+    decimals
+    lastPriceUSD
+  }
+  _meta {
+    block { number timestamp }
+    deployment
+  }
+}

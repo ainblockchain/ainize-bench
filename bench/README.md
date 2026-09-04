@@ -1,22 +1,62 @@
 # The four-arm benchmark — protocol
 
-*Status: protocol frozen, runner not yet written. No numbers exist in this directory yet. When they do, every
+*Status: protocol and the pre-registered ordering (§"The claim under test") frozen, runner not yet written. No numbers exist in this directory yet. When they do, every
 table will carry the provenance block described in §9, including whether the patch came from a real gradient
 run or from the teach stub.*
 
 ## The claim under test
 
-The Graph indexes chain data. Ainize compiles indexed data into model memory. The interesting question is not
-"can a model answer chain questions" — with a subgraph and a tool loop, obviously it can. The question is what
-you give up by answering that way, and whether compiling the same facts into the model's memory table buys back
-anything a buyer would pay for.
+The Graph indexes chain data. Ainize compiles indexed data into model memory. The question is not "can a model
+answer chain questions" — with a subgraph and a tool loop, obviously it can. The question is how much of the
+indexed truth actually survives the trip through the tool loop into the final answer, and what that trip costs.
 
-So the benchmark is not "Ainize beats The Graph". It is: **at equal accuracy, what do retrieval and compiled
-memory cost, and which one survives when the tool is not there?** The Graph is the source of truth in every arm
-— including arm C, whose knowledge is *made of* Graph data. A result where arm C wins on accuracy alone would
-be uninteresting and, given how the questions are generated, unfair. The result we expect and intend to publish
-is: comparable accuracy, order-of-magnitude differences in latency, tokens and cost, and a large gap in
-robustness when the tool is unavailable.
+**The claim is an ordering, and it is pre-registered here before any number exists:**
+
+> **A ≪ B < C < D**
+>
+> base model · base + Subgraph MCP · **Ainize knowledge alone** · **Ainize knowledge + Subgraph MCP**
+
+Two things are being asserted, and they are different claims that need different evidence:
+
+1. **C > B — compiled memory beats live retrieval on the facts it holds, and it works with no network at all.**
+   Not because arm C knows anything arm B cannot fetch: the knowledge is *made of* Graph data, so B has access
+   to every fact C holds, at query time, from the source. C wins where it wins because a tool loop is a lossy
+   channel — the model picks the wrong subgraph, skips the call, reads a result and answers something else,
+   truncates the JSON at the context wall, or needs three queries and budgets one. Those are not hypotheticals
+   we assert; each one is a counter this protocol already collects (§6), and each is a row in the table that
+   explains the gap. **If arm B loses, the summary must show which channel it lost through.** A gap we cannot
+   decompose that way is not a result, it is a bug in arm B, and §3 exists to keep us from shipping one.
+2. **D > C — the tool is not the competitor, it is the tail.** The patch holds the hot path resident at zero
+   marginal context; the MCP covers what was never compiled: facts newer than the patch, facts deliberately
+   held out, anything outside the trained domain. D should be the best arm in the study, and that is the
+   product story: **compile the hot path, keep The Graph for the tail.** This is a stronger claim for The Graph
+   than "comparable accuracy" would be — it says the integration is worth building, not merely survivable.
+
+**And C works offline.** Arm C makes zero network calls by construction — no gateway, no MCP, no egress at all.
+That is not a robustness footnote, it is a capability arm B cannot have at any budget: the knowledge runs on an
+air-gapped host, on a laptop, behind a corporate egress policy, and during a provider outage. §6's
+tools-unavailable run measures it rather than claiming it.
+
+### What would falsify this, stated in advance
+
+Pre-registering the ordering only counts if the disconfirming outcomes are named with it. Any of these lands in
+the summary as written, ahead of the tables:
+
+- **B ≥ C on the headline bucket** ⇒ the compiled-memory claim fails on this domain and the write-up says so.
+  It is not rescued by re-weighting buckets after the fact.
+- **B < C but the loss channels do not account for it** ⇒ treated as a defect in arm B's configuration, fixed,
+  and re-run before anything is quoted.
+- **D ≤ C** ⇒ the "hot path + tail" story is wrong; report that adding the tool bought nothing here.
+- **C ≥ B on held-out facts** ⇒ leakage. The run is void (§1).
+
+### The one thing that would make this circular, and how it is prevented
+
+The questions are generated from Graph data and the patch is trained on facts from the same pull. Left alone,
+that hands arm C a coverage advantage that proves nothing. Three devices in §1 take it away — held-out
+phrasings, held-out facts, multi-hop — and one of them cuts specifically against us: **on the 30 held-out facts,
+arm B is expected to beat arm C outright**, because those facts are in the subgraph and not in the patch. That
+bucket is reported at full weight next to the headline. An ordering that only holds because a bucket was hidden
+is not the ordering we are claiming.
 
 ## The four arms
 
@@ -25,16 +65,19 @@ One model server for all of them: `http://localhost:8002`, `Qwen3.8-Flash-Next`,
 is a native capability of this deployment, not something we bolted on for the benchmark — arm B is run on the
 same server that arm A is, with the same weights.
 
-| Arm | Memory table | Tools |
-|-----|--------------|-------|
-| **A** | base | none |
-| **B** | base | The Graph Subgraph MCP |
-| **C** | Ainize knowledge patch applied | none |
-| **D** | Ainize knowledge patch applied | The Graph Subgraph MCP |
+| Arm | Memory table | Tools | Network | Pre-registered expectation |
+|-----|--------------|-------|---------|----------------------------|
+| **A** | base | none | none | floor — measures what the questions are worth without either party |
+| **B** | base | The Graph Subgraph MCP | gateway + MCP every item | beats A; wins the held-out-fact bucket |
+| **C** | Ainize knowledge patch applied | none | **none at all** | beats B overall and on the headline bucket; must fail held-out facts |
+| **D** | patch applied | The Graph Subgraph MCP | gateway + MCP when it chooses | best arm: C's headline plus B's tail |
 
-Arm D exists because the honest question a buyer asks is not "instead of?" but "as well as?". If D ≈ C on cost
-and ≈ B on coverage, the product story is *compile the hot path, keep the tool for the tail* — which is a better
-story than "replace The Graph" and is the one the numbers will most likely support.
+Arm D is where the buyer's real question is answered — not "instead of?" but "as well as?". Arm A is the floor
+that keeps the other three honest: if A is already close to B, the questions are too easy and the item set is
+regenerated before anything is quoted.
+
+Everything except the two table cells above is held identical: same weights, same sampling (`temperature 0`,
+`top_p 1`, `max_tokens 256`, thinking off), same question string, same scorer, same host, same run window.
 
 Everything except the two table cells above is held identical: same weights, same sampling (`temperature 0`,
 `top_p 1`, `max_tokens 256`, thinking off), same question string, same scorer, same host, same run window.
@@ -71,7 +114,10 @@ being circular:
   more convincing than pretending it is zero.
 - **Held-out facts.** 20% of facts are deliberately excluded from the training set. Arm C **must fail these**.
   If it does not, something is wrong with the experiment (leakage, or an uplift that has nothing to do with the
-  patch) and the run is void. This is the benchmark's own tripwire.
+  patch) and the run is void. This is the benchmark's own tripwire — and it is also **the bucket arm B is
+  expected to win outright**, since those facts are live in the subgraph and absent from the patch. It is
+  reported at full weight beside the headline, never folded into it and never quietly dropped. The arm that
+  wins it *and* the headline is D, which is the point.
 - **Multi-hop items** (§6) whose answers are computed by the generator from two facts, never stated as a single
   row in the training set.
 
@@ -82,9 +128,24 @@ being circular:
 | Held-out phrasing, taught facts (`E1`) | 120 | **headline accuracy** |
 | Held-out phrasing, taught facts (`E2`, Korean) | 40 | cross-lingual transfer |
 | Trained phrasing (`P`) | 40 | memorisation ceiling |
-| Held-out facts (never taught) | 30 | tripwire: arm C must fail |
+| Held-out facts (never taught) | 30 | tripwire: arm C must fail, arm B should win |
 | Multi-hop | 20 | reasoning over two facts |
 | **Total** | **250** | |
+
+Every bucket is scored and printed separately with its own McNemar, and the pre-registered per-bucket
+expectation is printed in the same table so the reader compares prediction to result cell by cell:
+
+| Bucket | A | B | C | D |
+|---|---|---|---|---|
+| Held-out phrasing, taught facts (headline) | floor | mid — loses through §6's channels | **high** | **high** |
+| Held-out phrasing, Korean (`E2`) | floor | mid | high, some transfer loss | high |
+| Trained phrasing (`P`) | floor | mid | ceiling | ceiling |
+| Held-out facts | floor | **high — B's bucket** | ≈ floor, by construction | **high** |
+| Multi-hop | floor | low — needs several queries in one budget | mid | **high** |
+| Offline (§6) | floor | **0 — cannot run** | **unchanged** | degrades to C |
+
+The overall ordering B < C < D is an aggregate over this mix. The mix is declared here, before the run, so
+nobody has to take on trust that it was not tuned afterwards to produce the ordering.
 
 Two repeats per item per arm ⇒ 2 000 model sessions. Cost estimate on this host: a short greedy completion
 measured at ≈ 4.25 s, so arms A and C are ≈ 35 min each; arm B/D tool loops at 3–6 model calls plus gateway
@@ -229,14 +290,32 @@ Derived, in the summary:
   questions after which buying the knowledge once is cheaper than querying every time. Plotted as cumulative
   cost vs. question count, two lines, crossing at `N*`. For a marketplace this is the single most persuasive
   chart available, and it falls straight out of numbers already collected.
-- **Tool-skip and hallucination.** For arms B and D: `skipped` = items with **zero** tool calls;
-  `skip_and_wrong` = of those, how many were wrong. Plus `tool_called_but_ignored` — the final answer's key
-  token appears in **no** tool result (a deterministic substring check over the recorded tool outputs). This is
-  the failure mode a tool-calling agent cannot design away and it is measured, not asserted.
-- **Tools-unavailable robustness.** Arms B and D are re-run in a declared fault-injection mode where the MCP
-  transport returns `503` for every call. Nothing is fabricated — no fake rows, no synthetic subgraph; only an
-  injected outage, which is a thing that happens. Arm C is unaffected *by construction*, and the outage run
-  measures that instead of claiming it. Reported as a separate four-cell table.
+- **Where arm B's answers are lost — the decomposition that carries the C > B claim.** Every arm-B miss is
+  assigned to exactly one channel, by deterministic checks over the recorded transcript, and the channels are
+  printed as a table that sums to the miss count. Nothing here is an opinion about tool calling; each cell is a
+  counter with a rule:
+  | Channel | Rule over the transcript |
+  |---|---|
+  | `skipped` | zero tool calls made |
+  | `wrong_subgraph` | every executed query targeted a deployment id that is not the fact's `source.deployment_id` |
+  | `query_error` | the tool returned a GraphQL error or empty `data` on every attempt |
+  | `truncated` | a tool result was cut at the context wall on the turn that carried the answer |
+  | `budget_exhausted` | the 8-call / 10-turn / 90 s cap was hit before an answer |
+  | `ignored_result` | the answer's key token appears in **no** tool result — the data arrived and was not used |
+  | `had_it_and_still_wrong` | the truth string *is* in a tool result and the final answer differs |
+  The last two are the interesting ones: they are the cases where The Graph delivered and the loop lost it, and
+  they are what a compiled memory table removes. A C > B gap that does not show up in this table is not a
+  finding — see §"What would falsify this". The same decomposition is run for D, where it should be far smaller
+  because D only reaches for the tool on the tail.
+- **Offline — the capability, not a footnote.** Arm C issues no network request of any kind; the runner asserts
+  this rather than trusting it, by running the whole arm with egress blocked at the process level and recording
+  that the block was in force in `provenance.json`. Arms B and D are then re-run under a declared
+  fault-injection mode where the MCP transport returns `503` for every call — nothing fabricated, no fake rows,
+  no synthetic subgraph, only an injected outage, which is a thing that happens. The four-cell table is the
+  headline of this section: **B goes to the floor, C does not move, D degrades exactly to C.** That last cell
+  is the one a buyer cares about — adding the tool costs nothing when the tool is gone. Reported with the
+  accuracy table, not in an appendix, because "runs air-gapped" is a product property and not a robustness
+  caveat.
 - **Multi-hop.** The 20 join items, reported separately with their own McNemar. Truth is computed by the
   generator from two facts; no model is involved in producing it.
 
@@ -261,9 +340,14 @@ sceptical judge will accept.
 
 ## 7. Threats to validity (printed in the summary, not buried here)
 
-1. **The patch is trained on facts pulled from these very subgraphs**, so arm C's coverage advantage is by
-   construction. Mitigations: held-out phrasings, held-out facts, multi-hop. The claim is *cost, latency and
-   robustness at comparable accuracy* — not "the model got smarter".
+1. **The patch is trained on facts pulled from these very subgraphs.** This is the study's central threat and
+   it is stated first for that reason. Mitigations: held-out phrasings (the headline bucket is never a trained
+   string), held-out facts (arm C must fail them and arm B should win them), multi-hop (truth computed by the
+   generator, never a training row), and the miss decomposition above, which requires any C > B gap to be
+   explained by a named loss channel rather than by coverage. The claim is **not** that training made the model
+   smarter about chains in general — it is that the same facts, once compiled, are retrieved without the tool
+   loop's losses, at zero marginal context, with no network. A reader who rejects the mitigations should read
+   the held-out-fact bucket and the arm-D column, neither of which the ordering can hide behind.
 2. **8 192-token context** is this deployment's limit and it constrains arm B more than the others. Tokens are
    reported next to accuracy precisely so the reader can re-judge on a larger host.
 3. **One model, one domain, one host, one run window.** The two-repeat disagreement rate is the noise floor and

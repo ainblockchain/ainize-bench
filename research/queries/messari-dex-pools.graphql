@@ -1,0 +1,13 @@
+query PoolIdentity($skip: Int!) {
+  liquidityPools(first: 1000, skip: $skip, orderBy: totalValueLockedUSD, orderDirection: desc) {
+    id
+    name
+    symbol
+    inputTokens { id symbol name decimals }
+    outputToken { id symbol name decimals }
+    fees { feeType feePercentage }
+    totalValueLockedUSD
+    protocol { name slug network type schemaVersion }
+  }
+  _meta { block { number } deployment }
+}

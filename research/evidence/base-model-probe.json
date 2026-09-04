@@ -1,0 +1,408 @@
+{
+  "block": 25902775,
+  "generatedAt": "2026-09-04T08:34:21.928Z",
+  "model": "Qwen3.8-Flash-Next",
+  "thinking": false,
+  "families": [
+    {
+      "id": "F1",
+      "family": "vault ADDRESS -> vault symbol (no leak)",
+      "leakyControl": false,
+      "n": 12,
+      "correct": 0,
+      "accuracy": 0,
+      "refused": 0,
+      "confidentlyWrong": 12,
+      "confidentlyWrongPct": 100,
+      "medianMs": 483,
+      "meanInputTokens": 84,
+      "meanOutputTokens": 3,
+      "records": [
+        {
+          "truth": "adpUSDC",
+          "answer": "5555",
+          "correct": false,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "1337USDC",
+          "answer": "N/A",
+          "correct": false,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "steakUSDT",
+          "answer": "ETH",
+          "correct": false,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "steakUSDC",
+          "answer": "steaKFL",
+          "correct": false,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "steakETH",
+          "answer": "cDAI",
+          "correct": false,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "vbgtWBTC",
+          "answer": "SUSD",
+          "correct": false,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "gtUSDC",
+          "answer": "USDC",
+          "correct": false,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "bbqUSDT",
+          "answer": "ETH",
+          "correct": false,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "hUSDC",
+          "answer": "BPT",
+          "correct": false,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "bbqUSDC",
+          "answer": "wstETH",
+          "correct": false,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "vbgtWETH",
+          "answer": "SUSD",
+          "correct": false,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "vbshUSDC",
+          "answer": "sETH2",
+          "correct": false,
+          "refused": false,
+          "said0x": false
+        }
+      ]
+    },
+    {
+      "id": "F2",
+      "family": "vault ADDRESS -> underlying asset symbol (no leak)",
+      "leakyControl": false,
+      "n": 12,
+      "correct": 7,
+      "accuracy": 58.3,
+      "refused": 0,
+      "confidentlyWrong": 5,
+      "confidentlyWrongPct": 41.7,
+      "medianMs": 483,
+      "meanInputTokens": 90,
+      "meanOutputTokens": 3,
+      "records": [
+        {
+          "truth": "USDC",
+          "answer": "USDC",
+          "correct": true,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "USDC",
+          "answer": "USDC",
+          "correct": true,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "USDT",
+          "answer": "USDC",
+          "correct": false,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "USDC",
+          "answer": "USDC",
+          "correct": true,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "WETH",
+          "answer": "USDC",
+          "correct": false,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "WBTC",
+          "answer": "USDC",
+          "correct": false,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "USDC",
+          "answer": "USDC",
+          "correct": true,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "USDT",
+          "answer": "USDC",
+          "correct": false,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "USDC",
+          "answer": "USDC",
+          "correct": true,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "USDC",
+          "answer": "USDC",
+          "correct": true,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "WETH",
+          "answer": "USDC",
+          "correct": false,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "USDC",
+          "answer": "USDC",
+          "correct": true,
+          "refused": false,
+          "said0x": false
+        }
+      ]
+    },
+    {
+      "id": "F3",
+      "family": "vault NAME -> vault contract address (no leak)",
+      "leakyControl": false,
+      "n": 12,
+      "correct": 0,
+      "accuracy": 0,
+      "refused": 0,
+      "confidentlyWrong": 12,
+      "confidentlyWrongPct": 100,
+      "medianMs": 1172,
+      "meanInputTokens": 48,
+      "meanOutputTokens": 42,
+      "records": [
+        {
+          "truth": "0x55555815a5595991C3A0Ff119B59AEF6C8B55555",
+          "answer": "0x0000000000000000000000000000000000000000",
+          "correct": false,
+          "refused": false,
+          "said0x": true
+        },
+        {
+          "truth": "0x94643e86aa5E38DDAc6c7791C1297f4E40cD96c1",
+          "answer": "0x0000000000000000000000000000000000001337",
+          "correct": false,
+          "refused": false,
+          "said0x": true
+        },
+        {
+          "truth": "0xbEef047a543E45807105E51A8BBEFCc5950fcfBa",
+          "answer": "0x97887b6c9365eaa34eac77f6b6e3b472ab5fb5b3",
+          "correct": false,
+          "refused": false,
+          "said0x": true
+        },
+        {
+          "truth": "0xBEEF01735c132Ada46AA9aA4c54623cAA92A64CB",
+          "answer": "0x598467258519079bE86a740e9c396c043159e52",
+          "correct": false,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "0xBEEf050ecd6a16c4e7bfFbB52Ebba7846C4b8cD4",
+          "answer": "0x9a02E8b93F154Fb485cbf175B36cbE2f8f4b4bB0",
+          "correct": false,
+          "refused": false,
+          "said0x": true
+        },
+        {
+          "truth": "0x812B2C6Ab3f4471c0E43D4BB61098a9211017427",
+          "answer": "0x0000000000000000000000000000000000000000",
+          "correct": false,
+          "refused": false,
+          "said0x": true
+        },
+        {
+          "truth": "0xdd0f28e19C1780eb6396170735D45153D261490d",
+          "answer": "0x0510b10a1917151285086e86c41bad449e8aa87f",
+          "correct": false,
+          "refused": false,
+          "said0x": true
+        },
+        {
+          "truth": "0xA0804346780b4c2e3bE118ac957D1DB82F9d7484",
+          "answer": "0x0000000000000000000000000000000000000000",
+          "correct": false,
+          "refused": false,
+          "said0x": true
+        },
+        {
+          "truth": "0x974c8FBf4fd795F66B85B73ebC988A51F1A040a9",
+          "answer": "0x0000000000000000000000000000000000000000",
+          "correct": false,
+          "refused": false,
+          "said0x": true
+        },
+        {
+          "truth": "0xBEeFFF209270748ddd194831b3fa287a5386f5bC",
+          "answer": "0x0000000000000000000000000000000000000000",
+          "correct": false,
+          "refused": false,
+          "said0x": true
+        },
+        {
+          "truth": "0x31A5684983EeE865d943A696AAC155363bA024f9",
+          "answer": "0x0000000000000000000000000000000000000000",
+          "correct": false,
+          "refused": false,
+          "said0x": true
+        },
+        {
+          "truth": "0xBEefb9f61CC44895d8AEc381373555a64191A9c4",
+          "answer": "0x0000000000000000000000000000000000000000",
+          "correct": false,
+          "refused": false,
+          "said0x": true
+        }
+      ]
+    },
+    {
+      "id": "F4",
+      "family": "vault NAME -> underlying asset symbol (LEAKY control)",
+      "leakyControl": true,
+      "n": 12,
+      "correct": 11,
+      "accuracy": 91.7,
+      "refused": 0,
+      "confidentlyWrong": 1,
+      "confidentlyWrongPct": 8.3,
+      "medianMs": 473,
+      "meanInputTokens": 50,
+      "meanOutputTokens": 3,
+      "records": [
+        {
+          "truth": "USDC",
+          "answer": "USDC",
+          "correct": true,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "USDC",
+          "answer": "USDC",
+          "correct": true,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "USDT",
+          "answer": "USDT",
+          "correct": true,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "USDC",
+          "answer": "USDC",
+          "correct": true,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "WETH",
+          "answer": "stETH",
+          "correct": false,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "WBTC",
+          "answer": "WBTC",
+          "correct": true,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "USDC",
+          "answer": "USDC",
+          "correct": true,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "USDT",
+          "answer": "USDT",
+          "correct": true,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "USDC",
+          "answer": "USDC",
+          "correct": true,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "USDC",
+          "answer": "USDC",
+          "correct": true,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "WETH",
+          "answer": "WETH",
+          "correct": true,
+          "refused": false,
+          "said0x": false
+        },
+        {
+          "truth": "USDC",
+          "answer": "USDC",
+          "correct": true,
+          "refused": false,
+          "said0x": false
+        }
+      ]
+    }
+  ]
+}

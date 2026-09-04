@@ -1,0 +1,16 @@
+query MarketIdentity($skip: Int!) {
+  markets(first: 1000, skip: $skip, orderBy: totalValueLockedUSD, orderDirection: desc) {
+    id
+    name
+    isActive
+    canBorrowFrom
+    maximumLTV
+    liquidationThreshold
+    inputToken  { id symbol name decimals }
+    outputToken { id symbol name decimals }
+    rates { id }
+    totalValueLockedUSD
+    protocol { name slug network type schemaVersion }
+  }
+  _meta { block { number } deployment }
+}
