@@ -33,6 +33,30 @@ const HERE = dirname(fileURLToPath(import.meta.url));
 const BENCH = join(HERE, '..');
 const CHUNK = 8;
 
+/**
+ * What is actually serving :8002, read from the host rather than from anyone's intent.
+ *
+ * Today's failure mode was not an engine crash: a container kept its name while its flags changed under it
+ * (8192 → 32768, --max-num-seqs 8 → 1), and a message describing a configuration did not match the process
+ * that was running. So the run records the Cmd string and the restart counter at the start and re-reads both
+ * at the end. An INCREMENT means it was restarted in place with the same flags — the engine died and came
+ * back. A RESET TO 0 means the container was recreated and the flags may have changed mid-run. A Cmd DIFF
+ * catches the case where both counters look innocent. Best-effort: a host without docker records nulls
+ * rather than failing the run.
+ */
+function engineSnapshot(apiBase) {
+  const port = (() => { try { return new URL(apiBase).port || '80'; } catch { return null; } })();
+  const sh = (cmd) => { try { return execSync(cmd, { stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim() || null; } catch { return null; } };
+  const name = port && sh(`docker ps --filter publish=${port} --format '{{.Names}}' | head -1`);
+  if (!name) return { container: null, cmd: null, restart_count: null, started_at: null };
+  return {
+    container: name,
+    cmd: sh(`docker inspect ${name} --format '{{join .Config.Cmd " "}}'`),
+    restart_count: Number(sh(`docker inspect ${name} --format '{{.RestartCount}}'`) ?? NaN),
+    started_at: sh(`docker inspect ${name} --format '{{.State.StartedAt}}'`),
+  };
+}
+
 const argv = (() => {
   const a = {}; const v = process.argv.slice(2);
   for (let i = 0; i < v.length; i++) {
@@ -162,6 +186,7 @@ async function main() {
     deployments_offered: { count: prompts.live.length, basis: prompts.basis, ids: prompts.live.map((s) => s.deployment_id) },
     git_commit: (() => { try { return execSync('git rev-parse HEAD', { cwd: BENCH }).toString().trim(); } catch { return null; } })(),
     restarts_detected: 0, chunks_rerun: 0,
+    engine_at_start: engineSnapshot(vllm.base), engine_at_end: null, engine_changed: null,
   };
 
   const write = (arm, q, rep, payload) => {
@@ -217,6 +242,16 @@ async function main() {
 
   await mcp?.close?.();
   provenance.finished_at = new Date().toISOString();
+  provenance.engine_at_end = engineSnapshot(vllm.base);
+  {
+    const a = provenance.engine_at_start, b = provenance.engine_at_end;
+    const changed = [];
+    if (a.cmd !== b.cmd) changed.push('cmd');
+    if (a.started_at !== b.started_at) changed.push('recreated_or_restarted');
+    if (a.restart_count !== b.restart_count) changed.push(`restart_count ${a.restart_count}→${b.restart_count}`);
+    provenance.engine_changed = changed.length ? changed : false;
+    if (changed.length) console.error(`\n!! the serving engine changed under this run: ${changed.join(', ')} — the summary must say so`);
+  }
 
   // §9, the stub rule, mechanically: a patch that is not positively identified as a real gradient run cannot
   // produce a file named results-final.*. The scorer stamps the header; the runner refuses the filename.
