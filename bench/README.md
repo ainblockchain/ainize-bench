@@ -109,7 +109,10 @@ being circular:
 
 - **Held-out phrasing.** Each fact gets ≥ 3 surface forms. Form `P` (canonical, terse — the form that becomes a
   `{prompt, answer}` training row) and forms `E1`, `E2` (different wording, one of them in Korean) which are
-  **never trained on**. The headline accuracy is measured on `E1`/`E2` only. `P` is measured too and reported as
+  **never trained on**. **The headline accuracy is `E1` alone — 120 items, which is the n the power analysis
+  below is sized for.** `E2` is Korean and is reported beside it as cross-lingual transfer, never folded into
+  the headline: mixing it in would make the ordering claim a blend of compiled-memory generalisation and
+  cross-lingual generalisation, which are different claims with different failure modes. `P` is measured too and reported as
   the *memorisation ceiling* — the gap between `P` and `E1` is the generalisation cost, and reporting it is
   more convincing than pretending it is zero.
 - **Held-out facts, and a skew in them that must be quoted with any tripwire result.** Measured
@@ -371,7 +374,11 @@ Five verdicts, and the distinction between the last three is the point:
 - `abstain` — the model declined (narrow regex; a hedge that still commits to a value is not an abstention).
   **Never counted as wrong.** Accuracy is `hit / (all non-error items)`, and a second table splits `wrong` from
   `abstain`, because the difference between them *is* the hallucination metric.
-- `error` — transport/timeout/empty. Excluded from accuracy denominators; its rate is reported separately.
+- `error` — **no answering turn ever completed**: a transport failure, a timeout, an HTTP error. Excluded from
+  accuracy denominators; its rate is reported separately. An EMPTY final after a turn that did complete is a
+  **miss**, not an error — `context_exhausted` where that flag is set, `empty_final` otherwise. §3 requires
+  this and it is the rule the study cannot bend: excluding empty answers would pay an arm for running out of
+  room, and the arm that runs out of room is the one we claim to beat.
 
 **No LLM judge in any headline number.** An LLM-judge column may be added afterwards as a sanity check, using a
 different model, with its prompt committed — and if it ever disagrees with the deterministic scorer, the
@@ -387,7 +394,11 @@ Per `(arm, item, repeat)`, written to the transcript:
   gap is just The Graph's servers being far away.
 - `prompt_tokens`, `completion_tokens` — **summed over all turns**, from vLLM's `usage` on each call. This is
   the number that separates the arms most sharply and it is host-independent.
-- `tool_calls`, `tool_bytes_in`, `context_truncated`, `retries`, `guard_verdict`
+- `tool_calls`, `tool_bytes_in`, `context_truncated`, `context_exhausted`, `context_evictions`,
+  `prompt_tokens_peak`, `budget_exhausted`, `forced_final`, `retries`, `tool_errors`
+  (**`guard_verdict` is gone**: it belonged to the design where arms ran through the node's chat path. The
+  runner drives `:8002` directly with `guard: false` and no stop sequences — §2 — so no guard verdict exists
+  to record. A field listed here that no transcript carries is a claim the scorer cannot honour.)
 - `cost_usd` — `prompt_tokens × P_in + completion_tokens × P_out + gateway_queries × P_query`, with every
   price read from `pricing.json` (list prices with source URLs; nothing here was billed to us and the file says
   so). Change a price, re-run the scorer, every cost cell changes. No cost number is ever typed into a table.
