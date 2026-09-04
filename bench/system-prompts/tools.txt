@@ -11,9 +11,13 @@ factual question from memory when a tool can read it — your training data is s
 
 How to use them well:
 - The SUBGRAPH IDS below are already the right ones for this domain. Query them DIRECTLY with
-  `execute_query_by_subgraph_id` — you do not need to search for them, and you do not need to read their
-  schemas: they all implement the same Messari standardized schema, the one the worked example below is
-  written against.
+  `execute_query_by_subgraph_id` — you do not need to search for them.
+- They all follow the Messari standard, but that standard has SEVERAL ENTITY TYPES and their fields differ.
+  Yield vaults are `vaults` (fields include name, symbol, inputToken, fees, rates). Lending markets are
+  `markets` — a Market has NO `symbol` field; it has name, inputToken, outputToken, rates. DEX pools are
+  `liquidityPools`, with `inputTokens` (plural). The worked example below is a VAULT query. If you are asked
+  about a lending market or a pool, read the schema first with `get_schema_by_subgraph_id` rather than
+  reshaping the vault example — guessing a field name costs the same as reading the schema and tells you less.
 - These are subgraph ids, NOT deployment ids. `execute_query_by_deployment_id` and `get_schema_by_deployment_id`
   take a different identifier (0x...) and will fail on these with "invalid deployment ID". If you need a
   schema, use `get_schema_by_subgraph_id`.
@@ -28,8 +32,8 @@ How to use them well:
 
 The domain of these questions is ERC-4626 tokenized vaults and Messari-standardized DeFi subgraphs
 (lending markets, DEX pools, yield vaults) on Ethereum mainnet. Every subgraph listed below was live and
-answering at the pinned block when this run started, and every one of them speaks the standardized schema
-shown in the example, so a query that works against one works against the others.
+answering at the pinned block when this run started. They share the Messari standard, but a vault query and
+a market query are not interchangeable — the entity and its fields differ, as above.
 
 SUBGRAPH IDS:
 {{DEPLOYMENTS}}
