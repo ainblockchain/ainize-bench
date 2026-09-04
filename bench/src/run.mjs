@@ -234,7 +234,17 @@ function systemPrompts() {
   const coldCut = toolsTemplate.indexOf('The domain of these questions');
   if (coldCut < 0) die('system-prompts/tools.txt no longer contains the domain paragraph B-cold is cut at');
   const cold = toolsTemplate.slice(0, coldCut).trimEnd() + '\n';
-  return { plain, assisted, cold, live, basis };
+  // The prompt a run used has to be pinned, not remembered. Twice today a measurement was attributed to a
+  // prompt it did not use, because the file changed within a minute of the run starting and timing cannot
+  // distinguish that. Transcripts already store the system prompt verbatim, which is how both were caught;
+  // this makes it a precondition instead of a post-mortem. `--prompt-sha <hex>` refuses to start unless the
+  // rendered B-assisted prompt hashes to the declared value — the same binding as the bridge snapshot.
+  const sha = createHash('sha256').update(assisted).digest('hex');
+  if (argv['prompt-sha'] && !sha.startsWith(String(argv['prompt-sha']))) {
+    die(`the rendered tools prompt hashes to ${sha.slice(0, 16)}, not the declared ${argv['prompt-sha']} — ` +
+        `the prompt changed under this run. Re-declare it deliberately or fix the file; do not measure a prompt nobody will run.`);
+  }
+  return { plain, assisted, cold, live, basis, tools_prompt_sha256: sha };
 }
 
 const armUsesTools = (arm) => arm === 'B' || arm === 'D';
@@ -262,7 +272,7 @@ async function main() {
     console.error(`bridge control: ${questions.length} items, stratified ${JSON.stringify(bridge.allocation)}, seed ${bridge.seed}`);
   }
   const prompts = systemPrompts();
-  console.error(`arm B-assisted is handed ${prompts.live.length} live deployments (basis: ${prompts.basis})`);
+  console.error(`arm B-assisted is handed ${prompts.live.length} live deployments (basis: ${prompts.basis}); tools prompt sha ${prompts.tools_prompt_sha256.slice(0, 16)}`);
 
   const vllm = new VLLM();
   const { model, maxModelLen } = await vllm.ready();
@@ -305,6 +315,7 @@ async function main() {
     mcp: offline ? { mode: 'fault-injection 503' } : { server: mcp?.serverInfo ?? null, protocol: mcp?.protocolVersion ?? null, authenticated: mcp?.authenticated ?? null, tools: mcp?.toolSchemas?.map((t) => t.function.name) ?? [] },
     graph_api_key_present: !!process.env.GRAPH_API_KEY,
     deployments_offered: { count: prompts.live.length, basis: prompts.basis, ids: prompts.live.map((s) => s.deployment_id) },
+    tools_prompt_sha256: prompts.tools_prompt_sha256,
     git_commit: (() => { try { return execSync('git rev-parse HEAD', { cwd: BENCH }).toString().trim(); } catch { return null; } })(),
     restarts_detected: 0, chunks_rerun: 0,
     engine_at_start: engineSnapshot(vllm.base), engine_at_end: null, engine_changed: null,
