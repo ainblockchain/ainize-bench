@@ -99,6 +99,60 @@
       },
       "minItems": 1,
       "description": "Every deployment a fair query could have targeted for this item. hop 1: the fact's own deployment. hop 2: the deployments of ALL operand facts — reaching for either side of a join or a comparison is legitimate work, so `wrong_subgraph` is 'no executed query targeted ANY of these', never a comparison against `source.deployment_id` alone."
+    },
+    "ood_tier": {
+      "enum": [
+        "fresh_new",
+        "unseen_entity",
+        "unseen_deployment",
+        "unseen_relation"
+      ],
+      "description": "Set ONLY on rows of data/<runid>/questions-fresh.jsonl (pipeline/ood.mjs). Names how far the item sits from the 120 facts the patch was baked from. Absent on every row of questions.jsonl."
+    },
+    "ood_stability": {
+      "type": "object",
+      "description": "Whether this item's truth was re-read identically from the SECOND committed pull. Arm B queries the live head, so a truth that moves would score arm B wrong for being right about now."
+    },
+    "answer_atom_in_trainset": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Truth atoms that also appear as a trainset answer (e.g. WETH). Recorded, never filtered: removing them would delete exactly the items arm C might get right by accident, which flatters our own thesis."
+    },
+    "moved": {
+      "enum": [
+        "new",
+        "changed"
+      ],
+      "description": "fresh tier only: whether the fact did not exist at B*, or existed and changed beyond the scorer's tolerance."
+    },
+    "was": {
+      "description": "fresh tier only: the value at B*, or null for a fact that did not exist then."
+    },
+    "subject_is_trained_entity": {
+      "type": "boolean",
+      "description": "unseen_relation tier only: the entity IS one the patch saw, so the only unseen thing is the relation."
+    },
+    "trained_sibling_relation": {
+      "type": "string",
+      "description": "unseen_relation tier only: the relation the patch DOES hold for this same entity."
+    },
+    "fresh": {
+      "type": "boolean",
+      "description": "legacy marker written by pipeline/questions.mjs's fresh path."
+    },
+    "n_candidates": {
+      "type": "integer",
+      "description": "vault_top_by_tvl only: how many vaults the generator ranked."
+    },
+    "fresh_supersedes_trained_fact": {
+      "type": "boolean",
+      "description": "fresh tier only: this fact IS one of the 120 the patch was trained on, and its value has since moved. The patch now holds a stale answer — the most informative item in the bucket, and the reason the fresh tier is exempt from the coverage checks D1-D3."
+    },
+    "fresh_supersedes_study_item": {
+      "type": "boolean",
+      "description": "fresh tier only: the 250-item study asks about this same fact at B*. The two items share a question string and carry different truths, by design; they live in different runs and different files."
     }
   }
 }

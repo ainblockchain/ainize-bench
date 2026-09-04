@@ -1,0 +1,94 @@
+{
+  "generated_at": "2026-09-04T11:07:46.753Z",
+  "seed": "ainize-graph-bench-ood-v1",
+  "form": "E1",
+  "block_star": 25902936,
+  "fresh_block": 25903086,
+  "fresh_verdict": "1 fresh fact between block 25902936 and block 25903086: 0 changed value beyond the scorer's ±1%, 1 did not exist at B*.",
+  "tier_sizes_declared": {
+    "fresh_new": null,
+    "unseen_entity": 20,
+    "unseen_deployment": 20,
+    "unseen_relation": 20
+  },
+  "tier_sizes_achieved": {
+    "fresh_new": 1,
+    "unseen_entity": 20,
+    "unseen_deployment": 20,
+    "unseen_relation": 20
+  },
+  "tier_candidates_before_validation": {
+    "fresh_new": 1,
+    "unseen_entity": 12098,
+    "unseen_deployment": 46,
+    "unseen_relation": 42
+  },
+  "shortfalls": [],
+  "items": 61,
+  "by_tier": {
+    "unseen_deployment": 20,
+    "unseen_relation": 20,
+    "unseen_entity": 20,
+    "fresh_new": 1
+  },
+  "by_relation": {
+    "market_asset_symbol": 13,
+    "pool_token_addresses": 9,
+    "vault_name": 2,
+    "market_address": 13,
+    "market_asset_address": 11,
+    "vault_address": 2,
+    "vault_fee_pct": 2,
+    "vault_symbol": 2,
+    "vault_asset_symbol": 2,
+    "vault_asset": 2,
+    "pool_tokens": 3
+  },
+  "by_answer_type": {
+    "symbol": 19,
+    "list<address>": 9,
+    "address": 28,
+    "decimal": 2,
+    "list<symbol>": 3
+  },
+  "by_deployment": {
+    "41ooPWnDYKwckqyG1mvg7ZEndy5zMemXinx6uQxscrBS": 20,
+    "77jZ9KWeyi3CJ96zkkj5s1CojKPHt6XJKjLFzsDCd8Fd": 4,
+    "ANz3TpZdY2syZGQvGA85ANNG7KiSWdPmv55kP4H4sRPJ": 4,
+    "3onEbd9MLfXTTWAfP91yqsKr7C68VCT2ZiF7EoQiQAFj": 7,
+    "95nyAWFFaiz6gykko3HtBCyhRuP5vZzuKYsZiLxHxLhr": 6,
+    "43NeT7UTACLUkohKBaG7auvkhsj4Kwux9kNTJr6sFdNe": 4,
+    "GnroBYmeLLtKuHNyTNS38hzKki5n4CWaHeaMRqZpU4cr": 3,
+    "4TbqVA8p2DoBd5qDbPMwmDZv3CsJjWtxo8nVSqF2tA9a": 3,
+    "BchjnXAXXV5coiCBMQH4A8yCHXEFX9S88JFF6G3mfem4": 5,
+    "GRwpFCPYyQPdz84sCnKemzrNvgFPuKkFLcRLR6jsRxHr": 1,
+    "6PaB6tKFqrL6YoAELEhFGU6Gc39cEynLbo6ETZMF3sCy": 3,
+    "3fy93eAT56UJsRCEht8iFhfi6wjHWXtZ9dnnbQmvFopF": 1
+  },
+  "items_whose_truth_shares_an_atom_with_the_trainset": 14,
+  "fresh_items_superseding_a_trained_fact": 0,
+  "fresh_items_superseding_a_study_item": 0,
+  "universe": {
+    "facts_at_B_star": 13051,
+    "never_extracted_relation_facts": 11361,
+    "study_facts": 120,
+    "facts_the_250_asks": 186,
+    "trained_entities": 109,
+    "trained_deployments": 12
+  },
+  "drops": {
+    "unseen_entity:fact is in the study or the locality set": 196,
+    "unseen_entity:entity appears in the study": 267,
+    "unseen_entity:subject appears in the study or the locality set": 12,
+    "unseen_deployment:volatile field — arm B queries the live head": 23,
+    "unseen_relation:value moved between the two committed pulls": 1
+  },
+  "notes": [
+    "This bucket is an ADDITION to README §1, whose five-bucket table is untouched. It evidences the second half of the README's claim 2 (facts newer than the patch, and anything outside the trained domain); §1's tripwire evidences the middle third of that sentence.",
+    "Every item is E1 (held-out phrasing), hop 1, taught=false. E1 only, so the bucket is phrasing-matched to the headline and comparable to it item for item.",
+    "Arm C is expected to be at or near the floor across all four tiers; arm D is expected to match arm B. A tier where arm C does WELL is evidence of leakage and belongs in the summary as such.",
+    "No volatile field is used outside the fresh tier: src/run.mjs pins no block for arm B, so a truth that moves between B* and the run would score arm B wrong for being right about now.",
+    "The fresh tier is the ONE tier allowed to ask about a fact the patch was trained on: if a trained value moved, the patch now holds a stale answer and the chain holds the true one. Those items are flagged (fresh_supersedes_trained_fact) and D9 insists the new truth actually differs from the pinned one.",
+    "Truths are not filtered for sharing a token with the trainset — that would remove exactly the items arm C might get right by accident. They are flagged instead (answer_atom_in_trainset)."
+  ]
+}

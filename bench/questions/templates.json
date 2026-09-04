@@ -139,6 +139,24 @@
       "P": "What is the lender supply APY of the lending market at {subject}?",
       "E1": "Someone supplies into the market at {subject}. What annual percentage rate do they earn?",
       "E2": "{subject} 대출 마켓에 공급하는 사람이 받는 연이율은 몇 퍼센트입니까?"
+    },
+    "market_asset_address": {
+      "answer_type": "address",
+      "hop": 1,
+      "direction": "forward",
+      "_ood": "Never extracted by pipeline/facts.mjs, so no fact, no pool row, no study item and no training row holds it. It is the UNSEEN RELATION tier of pipeline/ood.mjs: the patch has a row for this market's asset SYMBOL and none anywhere for its asset ADDRESS. Static by construction — a lending market's underlying token does not change — which matters because src/run.mjs pins no block for arm B.",
+      "P": "What is the underlying asset token address of the lending market at {subject}?",
+      "E1": "The lending market at {subject} lends one token. Give that token's contract address.",
+      "E2": "{subject} 대출 마켓이 취급하는 기초 자산 토큰의 컨트랙트 주소는 무엇입니까?"
+    },
+    "pool_token_addresses": {
+      "answer_type": "list<address>",
+      "hop": 1,
+      "direction": "forward",
+      "_ood": "The address-valued sibling of pool_tokens, which facts.mjs extracts as SYMBOLS only. Same unseen-relation role as market_asset_address, and static for the same reason: a pool's pair is fixed at deployment.",
+      "P": "Which token addresses are in the liquidity pool at {subject}?",
+      "E1": "Give the contract addresses of the two assets paired in the pool deployed at {subject}.",
+      "E2": "{subject} 주소의 유동성 풀에 들어 있는 토큰들의 컨트랙트 주소는 무엇입니까?"
     }
   }
 }

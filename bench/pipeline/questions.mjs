@@ -6,9 +6,14 @@
  *
  * Writes:
  *   data/<runid>/questions.jsonl        the IN-DOMAIN set (schema.json). What the product claims.
- *   data/<runid>/fresh-questions.jsonl  the OUT-OF-DOMAIN/FRESH set: facts that MOVED after the bake.
  *   data/<runid>/trainset.jsonl         {prompt, answer} rows — form P of TAUGHT facts only. Nothing else.
  *   data/<runid>/split.json             the seeded held-out split, written before any model runs.
+ *
+ * The OUT-OF-DOMAIN bucket is `pipeline/ood.mjs`, which writes data/<runid>/questions-fresh.jsonl. It renders
+ * through `itemsForFact` below, so it is the same templates; it does three things this file does not, which is
+ * why it owns the file: it re-reads every truth out of the committed pull bytes, it proves the bucket disjoint
+ * from the trainset, the 250 and the locality set, and it carries three tiers that do not depend on the chain
+ * having moved during the thirty minutes between the two pulls.
  *
  * The three anti-circularity devices, all applied here so they are visible in one file:
  *
@@ -21,8 +26,7 @@
  *     published at full weight.
  *  3. MULTI-HOP. Joins computed here from two facts. Neither the join nor its answer is ever a training row.
  *
- * The FRESH set is generated from the same code path but from fresh.jsonl — facts whose value moved between
- * B* and a later pull. Arm C is expected to DEGRADE there and arm D to win. That result is published even
+ * Arm C is expected to DEGRADE on the out-of-domain bucket and arm D to win it. That result is published even
  * though it flatters us less, because a benchmark that cannot fail proves nothing.
  */
 import fs from 'node:fs';
@@ -63,8 +67,14 @@ function rand01(...parts) {
 
 const readJsonl = (p) => (fs.existsSync(p) ? fs.readFileSync(p, 'utf8').split('\n').filter(Boolean).map((l) => JSON.parse(l)) : []);
 
-/** Render one fact into its three forms. */
-function itemsForFact(fact, tpl, taught, extra = {}) {
+/**
+ * Render one fact into its three forms.
+ *
+ * EXPORTED so `pipeline/ood.mjs` renders the out-of-domain bucket through the SAME strings this file uses for
+ * the study. "Generated from the same templates" is then a property of the call graph rather than a claim in a
+ * comment that a copied block can quietly break.
+ */
+export function itemsForFact(fact, tpl, taught, extra = {}) {
   const fam = tpl.families[fact.relation];
   if (!fam) return [];
   return ['P', 'E1', 'E2'].map((form) => ({
@@ -309,14 +319,13 @@ export function generate(runid) {
     _note: 'Written before any model ran. The held-out set and the 250-item sample are pure functions of (seed, fact_id); re-running this file reproduces both exactly. questions.jsonl is the sample the arms run; questions-pool.jsonl is everything it was drawn from, so the sampling can be checked rather than trusted.',
   }, null, 2) + '\n');
 
-  // The fresh set, if a second pull exists. Same templates, same code, different facts.
+  // The fresh facts are rendered here so callers can see how many there are, but this file no longer WRITES
+  // them: pipeline/ood.mjs owns data/<runid>/questions-fresh.jsonl, and two files a letter apart in the same
+  // directory, one of them checked and one of them not, is a trap rather than a convenience.
   const fresh = readJsonl(path.join(dir, 'fresh.jsonl'));
   const freshItems = [];
-  if (fresh.length) {
-    for (const f of fresh) freshItems.push(...itemsForFact(f, tpl, false, { fresh: true, was: f.was, moved: f.moved }));
-    freshItems.sort((a, b) => rand01('order', a.id) - rand01('order', b.id));
-    fs.writeFileSync(path.join(dir, 'fresh-questions.jsonl'), freshItems.map((x) => JSON.stringify(x)).join('\n') + '\n');
-  }
+  for (const f of fresh) freshItems.push(...itemsForFact(f, tpl, false, { fresh: true, was: f.was, moved: f.moved }));
+  freshItems.sort((a, b) => rand01('order', a.id) - rand01('order', b.id));
 
   return { items, train, heldOut, freshItems, facts };
 }
@@ -334,6 +343,6 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   console.log(`  ceiling   P,  taught, hop1   ${count((x) => x.form === 'P' && x.taught && x.hop === 1)}`);
   console.log(`  tripwire  held-out facts     ${count((x) => !x.taught && x.hop === 1)}`);
   console.log(`  multi-hop hop2               ${count((x) => x.hop === 2)}`);
-  console.log(`FRESH items ${freshItems.length}${freshItems.length ? '' : '  (no --fresh pull yet, or nothing moved)'}`);
+  console.log(`FRESH facts rendered ${freshItems.length / 3}${freshItems.length ? '' : '  (no --fresh pull yet, or nothing moved)'} — the out-of-domain bucket is written by \`node pipeline/ood.mjs --run ${runid}\``);
   console.log(`trainset.jsonl ${train.length} rows  — form P, taught facts, hop 1, nothing else`);
 }
