@@ -76,27 +76,39 @@ async function serverLoad(apiBase) {
     const num = (k) => { const m = text.match(new RegExp(`^vllm:${k}\\{[^}]*\\}\\s+([0-9.]+)$`, 'm')); return m ? Number(m[1]) : null; };
     const running = num('num_requests_running'), waiting = num('num_requests_waiting');
     if (running === null && waiting === null) return null;
-    return { running: running ?? 0, waiting: waiting ?? 0 };
+    // The CUMULATIVE counters are what make an idle check exact. The gauges above are instantaneous and miss
+    // intermittent traffic between samples: measured today, eight consecutive gauge samples all read zero
+    // while the engine served 34 chat completions in the same minute. A monotone token counter cannot miss a
+    // request that happened between two reads — it either grew or it did not.
+    return { running: running ?? 0, waiting: waiting ?? 0, prompt_tokens_total: num('prompt_tokens_total'), generation_tokens_total: num('generation_tokens_total') };
   } catch { return null; }
 }
 
 /** Sample the engine while WE have nothing in flight: anything seen is somebody else. */
-async function requireQuiet(apiBase, { samples = 5, gapMs = 1500, allowBusy = false } = {}) {
-  const seen = [];
-  for (let i = 0; i < samples; i++) {
-    const l = await serverLoad(apiBase);
-    if (l === null) return { checked: false, note: '/metrics unavailable — competing load could not be measured' };
-    seen.push(l);
-    if (i < samples - 1) await new Promise((r) => setTimeout(r, gapMs));
-  }
-  const busy = seen.filter((l) => l.running > 0 || l.waiting > 0);
-  const result = { checked: true, samples: seen, busy_samples: busy.length };
-  if (busy.length && !allowBusy) {
-    die(`the serving engine is not idle — ${busy.length} of ${samples} samples showed other traffic (${JSON.stringify(busy[0])}). ` +
+async function requireQuiet(apiBase, { windowMs = 12_000, samples = 5, allowBusy = false } = {}) {
+  const first = await serverLoad(apiBase);
+  if (first === null) return { checked: false, note: '/metrics unavailable — competing load could not be measured' };
+  const seen = [first];
+  const gap = Math.max(500, Math.floor(windowMs / Math.max(1, samples - 1)));
+  for (let i = 1; i < samples; i++) { await new Promise((r) => setTimeout(r, gap)); seen.push(await serverLoad(apiBase)); }
+  const last = seen[seen.length - 1];
+  const gauge = seen.filter((l) => l && (l.running > 0 || l.waiting > 0)).length;
+  // Exact: over a window in which WE issued nothing, any growth in the cumulative counters is someone else.
+  const grew = (first.prompt_tokens_total !== null && last.prompt_tokens_total > first.prompt_tokens_total)
+            || (first.generation_tokens_total !== null && last.generation_tokens_total > first.generation_tokens_total);
+  const result = {
+    checked: true, window_ms: windowMs, gauge_busy_samples: gauge, counters_grew: grew,
+    prompt_tokens_delta: first.prompt_tokens_total === null ? null : last.prompt_tokens_total - first.prompt_tokens_total,
+    generation_tokens_delta: first.generation_tokens_total === null ? null : last.generation_tokens_total - first.generation_tokens_total,
+    samples: seen,
+  };
+  if ((grew || gauge) && !allowBusy) {
+    die(`the serving engine is not idle over a ${windowMs} ms window — gauge busy in ${gauge}/${samples} samples, ` +
+        `prompt tokens +${result.prompt_tokens_delta}, generation tokens +${result.generation_tokens_delta}. ` +
         `At --max-num-seqs 1 another client queues in front of every request and its wait lands inside our per-item latency. ` +
         `Stop the other clients, or pass --allow-busy to measure anyway and have it recorded as contaminated.`);
   }
-  result.contaminated_at_start = busy.length > 0;
+  result.contaminated_at_start = grew || gauge > 0;
   return result;
 }
 
@@ -251,7 +263,7 @@ async function main() {
   const vllm = new VLLM();
   const { model, maxModelLen } = await vllm.ready();
   const quiet = await requireQuiet(vllm.base, { allowBusy: !!argv['allow-busy'] });
-  console.error(quiet.checked ? `engine idle check: ${quiet.busy_samples} of ${quiet.samples.length} samples showed other traffic` : `engine idle check: ${quiet.note}`);
+  console.error(quiet.checked ? `engine idle check: gauge busy ${quiet.gauge_busy_samples}/${quiet.samples.length}, tokens +${quiet.prompt_tokens_delta}/+${quiet.generation_tokens_delta} over ${quiet.window_ms} ms` : `engine idle check: ${quiet.note}`);
   const competing = [];
 
   const patchId = argv.patch ?? null;
@@ -354,7 +366,7 @@ async function main() {
       }
       // Between chunks nothing of ours is in flight, so any load here is somebody else's.
       const l = await serverLoad(vllm.base);
-      if (l && (l.running > 0 || l.waiting > 0)) {
+      if (l && (l.running > 0 || l.waiting > 0)) {   // between chunks we have nothing in flight
         competing.push({ arm, at_item: start, ...l });
         console.error(`  !! competing traffic on the engine at ${arm}:${start} — running ${l.running}, waiting ${l.waiting}`);
       }
