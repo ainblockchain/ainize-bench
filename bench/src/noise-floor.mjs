@@ -51,7 +51,7 @@ function loadArm(runDir, arm) {
  * from. The same defect class as every other silent-failure we hit: it would print a confident number.
  */
 export function noiseFloor(byItem) {
-  let n = 0, verdictDisagree = 0, stringDisagree = 0, incomplete = 0;
+  let n = 0, verdictDisagree = 0, stringDisagree = 0, incomplete = 0, abstainFlip = 0, answerChange = 0;
   const examples = [];
   for (const [id, ts] of byItem) {
     if (ts.length !== 2) { incomplete++; continue; }
@@ -62,7 +62,18 @@ export function noiseFloor(byItem) {
     const sb = String(b.final ?? '').trim();
     n++;
     if (sa !== sb) stringDisagree++;
-    if (va !== vb) { verdictDisagree++; if (examples.length < 5) examples.push({ id, a: va, b: vb }); }
+    if (va !== vb) {
+      verdictDisagree++;
+      // Split the disagreements by WHICH SEAM they cross. Measured on arm A: 6 of 7 were abstain flips, so
+      // this engine's instability at temperature 0 is almost entirely about whether the model commits at all,
+      // not about which answer it gives. That matters because §5's hallucination metric IS the wrong/abstain
+      // split — the instrument is least stable on precisely the axis that number is measured along, and a
+      // difference smaller than this rate is not resolvable however tight the sampling interval looks.
+      // Computed PER ARM from that arm's own repeats: arm B narrates and declines differently from arm C, so
+      // importing arm A's rate would be assuming the thing worth measuring.
+      if ((va === 'abstain') !== (vb === 'abstain')) abstainFlip++; else answerChange++;
+      if (examples.length < 8) examples.push({ id, a: va, b: vb, seam: (va === 'abstain') !== (vb === 'abstain') ? 'abstain' : 'answer' });
+    }
   }
   const d = n ? verdictDisagree / n : 0;
   // wilson() returns a TUPLE [lo, hi], not an object. Reading `.hi` off it yields undefined, and
@@ -71,7 +82,13 @@ export function noiseFloor(byItem) {
   // undefined is the same species as every other silent failure this study has hit today.
   const [lo, hi] = wilson(verdictDisagree, n);
   if (!Number.isFinite(hi)) throw new Error(`wilson() gave a non-finite upper bound for ${verdictDisagree}/${n} — refusing to derive a threshold from it`);
-  return { n, incomplete, verdict_disagreements: verdictDisagree, d, wilson: { lo, hi }, string_disagreement_rate: n ? stringDisagree / n : 0, examples };
+  return {
+    n, incomplete, verdict_disagreements: verdictDisagree, d, wilson: { lo, hi },
+    string_disagreement_rate: n ? stringDisagree / n : 0,
+    abstain_flips: abstainFlip, abstain_flip_rate: n ? abstainFlip / n : 0,
+    answer_changes: answerChange, answer_change_rate: n ? answerChange / n : 0,
+    examples,
+  };
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
@@ -82,11 +99,27 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   console.log(`  verdict disagreements  ${base.verdict_disagreements}`);
   console.log(`  d                      ${base.d.toFixed(4)}`);
   console.log(`  Wilson 95%             [${base.wilson.lo.toFixed(4)}, ${base.wilson.hi.toFixed(4)}]  <- the bridge passes at or below ${base.wilson.hi.toFixed(4)}`);
+  console.log(`  abstain flips          ${base.abstain_flips}  rate ${base.abstain_flip_rate.toFixed(4)}  <- the floor under any wrong/abstain claim`);
+  console.log(`  answer changes         ${base.answer_changes}  rate ${base.answer_change_rate.toFixed(4)}`);
   console.log(`  raw-string disagreement ${base.string_disagreement_rate.toFixed(4)}  (diagnostic only — verbosity, not instability)`);
-  for (const e of base.examples) console.log(`    e.g. ${e.id}: ${e.a} vs ${e.b}`);
+  for (const e of base.examples) console.log(`    e.g. [${e.seam}] ${e.id}: ${e.a} vs ${e.b}`);
+
+  // Every arm that ran gets its own instrument floor. §5's hallucination metric is a wrong/abstain split, and
+  // each arm's stability on that seam is a property of that arm — arm B narrates its tool use and declines in
+  // its own way. Arm A's rate is the bridge threshold; it is NOT the other arms' floor.
+  out_per_arm: {
+    const perArm = {};
+    for (const arm of ['A', 'B', 'C', 'D']) {
+      if (!existsSync(join(runDir, 'transcripts', arm))) continue;
+      const r = noiseFloor(loadArm(runDir, arm));
+      perArm[arm] = { n: r.n, d: r.d, abstain_flip_rate: r.abstain_flip_rate, answer_change_rate: r.answer_change_rate };
+      console.log(`  arm ${arm}: n=${r.n} d=${r.d.toFixed(4)} abstain-flip=${r.abstain_flip_rate.toFixed(4)} answer-change=${r.answer_change_rate.toFixed(4)}`);
+    }
+    globalThis.__perArm = perArm;
+  }
 
   const bi = process.argv.indexOf('--bridge');
-  const out = { arm_a: base, threshold: base.wilson.hi, computed_at: new Date().toISOString(), bridge: null };
+  const out = { arm_a: base, per_arm: globalThis.__perArm ?? null, threshold: base.wilson.hi, computed_at: new Date().toISOString(), bridge: null };
 
   if (bi > 0 && process.argv[bi + 1]) {
     // The bridge compares the SAME items across an engine restart: pre-window arm A against post-restart arm A.
