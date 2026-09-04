@@ -364,10 +364,37 @@ Per `(arm, item, repeat)`, written to the transcript:
 
 Derived, in the summary:
 
-- **Break-even.** `N* = knowledge_price / (cost_per_question_B − cost_per_question_C)` — the number of
-  questions after which buying the knowledge once is cheaper than querying every time. Plotted as cumulative
-  cost vs. question count, two lines, crossing at `N*`. For a marketplace this is the single most persuasive
-  chart available, and it falls straight out of numbers already collected.
+**Latency and tokens are headline results, not context for accuracy.** The thesis was never "the model got
+smarter" — it is *at comparable accuracy, what does retrieval cost*. Treating time and tokens as columns
+beside accuracy inverts the study. Arm B is a five-hour arm where arm A was well under one, on the same 250
+items and the same host; arm C answers in a single forward pass with zero tool round trips and zero marginal
+context. That difference IS the measurement, it is recorded for free by every arm's own timings, and it is
+reported first.
+
+- **Break-even, and the honest version of it.** `N*` is the question count at which buying a knowledge once
+  beats querying every time. Three corrections, all of which make the number worse for us and the claim
+  harder to dismiss:
+
+  1. **The training cost is the measured one, not the step time.** Measured 2026-09-04: cold load 330.9 s,
+     plus 480 baseline generations and 24 contrast probes — about 80 minutes of fixed overhead paid ONCE PER
+     RUN regardless of `max_steps` — plus the steps themselves at roughly 6 minutes each. Neither of us had
+     budgeted a second of the generation term before measuring it. A break-even computed from step time alone
+     would be optimistic by an hour and a half of GPU. The kernel it was measured on is stated with it, since
+     `causal_conv1d` may move all of it.
+  2. **Say who the fixed cost is amortised across, because there are two different claims here and only one
+     is ours.** For a single user training their own patch, the break-even is genuinely poor and the summary
+     says so plainly: eighty minutes of GPU to answer 250 questions faster is not a trade anyone makes. For a
+     marketplace the patch is trained ONCE and applied by every node that buys it, so the fixed cost divides
+     by the number of buyers while the per-item saving does not. That is the actual thesis and the reason the
+     product is a marketplace rather than a training script. Reporting the unflattering single-user number
+     first is what makes the multi-buyer number credible rather than promotional.
+  3. **So `N*` is a curve in the number of buyers, not a scalar.** Cumulative cost against question count for
+     one buyer, ten, a hundred — with the single-buyer line shown even where it never crosses.
+
+- **Setup is separated from inference, like every other cost here.** Applying a patch takes seconds and
+  happens once per node, so arm C's apply time is recorded separately from its per-item latency. Without that
+  split a reader cannot tell whether the per-item advantage is inference or amortised setup, and every other
+  cost in this study is separated that way.
 - **Where arm B's answers are lost — the decomposition that carries the C > B claim.** Every arm-B miss is
   assigned to exactly one channel, by deterministic checks over the recorded transcript, and the channels are
   printed as a table that sums to the miss count. Nothing here is an opinion about tool calling; each cell is a

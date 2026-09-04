@@ -244,6 +244,8 @@ async function main() {
     git_commit: (() => { try { return execSync('git rev-parse HEAD', { cwd: BENCH }).toString().trim(); } catch { return null; } })(),
     restarts_detected: 0, chunks_rerun: 0,
     engine_at_start: engineSnapshot(vllm.base), engine_at_end: null, engine_changed: null,
+    /** Every apply/remove of the patch, timed. A per-node setup cost, never folded into per-item latency. */
+    patch_state_changes: [],
   };
 
   const write = (arm, q, rep, payload) => {
@@ -260,7 +262,14 @@ async function main() {
 
     for (let start = 0; start < questions.length; start += CHUNK) {
       const chunk = questions.slice(start, start + CHUNK);
-      if (node) await node.setApplied(patchId, wantApplied);
+      if (node) {
+        // Applying a patch is a per-NODE cost paid once, not a per-question cost. Timed and recorded apart
+        // from item latency so a reader can tell whether arm C's per-item advantage is inference or
+        // amortised setup — every other cost in this study is separated that way (§6).
+        const t = Date.now();
+        const r = await node.setApplied(patchId, wantApplied);
+        if (r.changed) provenance.patch_state_changes.push({ arm, at_item: start, to: wantApplied, ms: Date.now() - t });
+      }
 
       for (let attempt = 0; attempt < 2; attempt++) {
         const results = [];
