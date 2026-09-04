@@ -24,6 +24,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import { VLLM } from './vllm.mjs';
 import { NodeClient } from './node.mjs';
 import { SubgraphMCP } from './mcp.mjs';
@@ -93,6 +94,12 @@ const bucketOf = (q) => (q.hop === 2 ? 'multihop' : !q.taught ? 'tripwire' : q.f
  * SEEDED and written to disk BEFORE the run, so which forty were chosen is auditable rather than asserted.
  */
 function bridgeItems(questions, n = 40, seed = 20260904) {
+  // The selection is a pure function of the question file and the seed, which is exactly why it has to be
+  // BOUND to that file: when the generator was re-run with a relation cap, the ids selected from the previous
+  // sample still resolved to plausible-looking rows while naming items that were no longer in the study. So
+  // the snapshot carries the sha256 of the questions.jsonl it was drawn from, and a mismatch is refused
+  // rather than silently regenerated — a bridge control that compares superseded items is worse than none.
+  void 0;
   const byBucket = new Map();
   for (const q of questions) { const b = bucketOf(q); if (!byBucket.has(b)) byBucket.set(b, []); byBucket.get(b).push(q); }
   const total = questions.length;
@@ -178,6 +185,18 @@ async function main() {
   let bridge = null;
   if (argv.bridge) {
     bridge = bridgeItems(questions);
+    const qPath = join(BENCH, 'data', runId, 'questions.jsonl');
+    const qSha = createHash('sha256').update(readFileSync(qPath)).digest('hex');
+    const snapPath = join(BENCH, 'data', runId, 'bridge-items.json');
+    if (existsSync(snapPath)) {
+      const snap = JSON.parse(readFileSync(snapPath, 'utf8'));
+      if (snap.questions_sha256 !== qSha) die(`${snapPath} was drawn from a different questions.jsonl (${snap.questions_sha256.slice(0, 12)} vs ${qSha.slice(0, 12)}) — the question set was regenerated. Delete the snapshot and re-select, and commit the new forty, before running a bridge against a superseded sample.`);
+      if (JSON.stringify(snap.items) !== JSON.stringify(bridge.items.map((q) => q.id))) die(`${snapPath} does not match the selection this file produces — refusing to run a bridge whose items were not the ones committed.`);
+    } else {
+      writeFileSync(snapPath, JSON.stringify({ questions_sha256: qSha, seed: bridge.seed, allocation: bridge.allocation, items: bridge.items.map((q) => q.id) }, null, 2));
+      console.error(`wrote ${snapPath} — commit it before the run`);
+    }
+    bridge.questions_sha256 = qSha;
     questions = bridge.items;
     console.error(`bridge control: ${questions.length} items, stratified ${JSON.stringify(bridge.allocation)}, seed ${bridge.seed}`);
   }
@@ -212,7 +231,7 @@ async function main() {
   if (mcp?.toolSchemas && !offline) writeFileSync(join(outDir, 'tool-schemas.json'), JSON.stringify(mcp.toolSchemas, null, 2));
 
   const provenance = {
-    run_id: runId, offline, bridge: bridge ? { items: bridge.items.map((q) => q.id), allocation: bridge.allocation, seed: bridge.seed } : null,
+    run_id: runId, offline, bridge: bridge ? { items: bridge.items.map((q) => q.id), allocation: bridge.allocation, seed: bridge.seed, questions_sha256: bridge.questions_sha256 } : null,
     started_at: new Date().toISOString(), finished_at: null,
     model, max_model_len: maxModelLen, model_api: vllm.base,
     sampling: { temperature: 0, top_p: 1, max_tokens: vllm.maxTokens, thinking: false, stop: null, guard: false,
