@@ -222,7 +222,11 @@ function systemPrompts() {
   // deployment_id but holds a subgraph id, the prompt inherited the name, and the model correctly called
   // execute_query_by_deployment_id with it and failed on every call. The list header says what these are.
   const header = `The following ${live.length} subgraph ids were live${block ? ` at block ${block}` : ''} when this run started.`;
-  const listText = `${header}\n` + live.map((s) => `- ${s.protocol} (${s.schema}, ${s.network}): ${s.deployment_id}`).join('\n');
+  // The ID FIRST, and labelled. Measured over 193 targeted tool calls on the old format
+  // (`- arrakis-finance (yield-aggregator, ethereum): Gnro…`): the model passed a protocol NAME as the id 4
+  // times. Putting the identifier in trailing position after a human-readable label invites exactly that, and
+  // it costs a tool call each time. The label is still there; it is just no longer the salient token.
+  const listText = `${header}\n` + live.map((s) => `- ${s.deployment_id}  = ${s.protocol}, ${s.schema} schema on ${s.network}`).join('\n');
   // B-assisted (headline, §3): the deployment ids and the worked example a competent engineer would ship.
   const assisted = toolsTemplate.replace('{{DEPLOYMENTS}}', listText);
   // B-cold: the same file with the domain paragraph, the id list and the worked example removed. Derived by
