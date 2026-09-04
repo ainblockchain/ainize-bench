@@ -291,6 +291,7 @@ export function renderTable(cmp, provenance, joined = null) {
   w(`Prompt set: \`${ps.from ?? '?'}\` — ${inFile} prompts, sha256 \`${(ps.sha256 ?? '').slice(0, 12)}\` (the hash is of the whole file).`
     + (cmp.items_total !== inFile ? ` **This capture asked ${cmp.items_total} of them** (${JSON.stringify(ps.filter ?? {})}), so it is a smoke run and not the measurement.` : ''));
   w(`Scored against the base model's own answers (README §6), never against gold labels. Key: \`${provenance?.key_mode ?? 'scored'}\`.`);
+  if (provenance?.system_prompts) w(`System prompts, by cell: ${Object.entries(provenance.system_prompts).map(([k, v]) => `${k} \`${v}\``).join(', ')} — A and C must match, B and D must match, and a capture against a different tools.txt is a different cell.`);
   w(`${cmp.unstable_in_reference.length} of ${cmp.items_total} prompts were unstable in the reference cell and are excluded from every cell; the denominator is ${cmp.denominator}.`);
   w('');
   w('| | no tools | The Graph MCP declared, never needed |');
@@ -506,6 +507,10 @@ async function main() {
     cells: wanted.map((c) => c.id),
     patch: patchId ? { id: patchId, ...provenanceOfPatch, was_applied_before_run: patchWasApplied } : null,
     engine_at_start: engineStart, engine_between: [], engine_at_end: null, engine_changed: null,
+    // system-prompts/*.txt is edited as the study learns things about arm B (the subgraph-id correction, for
+    // one). A capture is only comparable to another capture that used the same strings, so the hashes are
+    // recorded here as well as per unit — a B cell captured against a different tools.txt is a different cell.
+    system_prompts: Object.fromEntries(wanted.map((c) => [c.id, createHash('sha256').update(systemFor(c, deployments)).digest('hex').slice(0, 12)])),
     mcp: needTools ? { server: mcp.serverInfo ?? null, tools: mcp.toolSchemas.map((t) => t.function.name) } : { contacted: false, why: 'no tools cell was captured, so no network call was made' },
     table_restored: null,
     stamps: [],

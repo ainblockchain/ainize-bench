@@ -203,6 +203,9 @@ const build = (keyOf) => {
   ok('the resolution limit is printed with the table, not in an appendix', md.includes('cannot see'));
   ok('the reference being the base answer and not a correct answer is stated', md.includes('not a correct answer'));
   ok('a per-stratum table is printed', md.includes('### Per stratum'));
+  const withHashes = renderTable(cmp, { ...prov, system_prompts: { A: 'aaa111', B: 'bbb222' } });
+  ok('the system-prompt hashes are printed, because tools.txt changes as arm B is fixed',
+    withHashes.includes('A `aaa111`') && withHashes.includes('B `bbb222`') && withHashes.includes('a different cell'));
   ok('an engine change is stamped across the top when it happened',
     renderTable(cmp, { ...prov, engine_changed: ['restart_count: 0 -> 1'] }).includes('CONFOUNDED WITH A RESTART'));
 }
