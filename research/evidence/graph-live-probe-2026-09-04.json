@@ -1,0 +1,183 @@
+{
+  "probedAt": "2026-09-04T08:50:32.624Z",
+  "graphApiKeyPresent": false,
+  "checks": [
+    {
+      "product": "subgraph-gateway",
+      "name": "POST /api/subgraphs/id/<ID>, no Authorization",
+      "url": "<KEY>https://gateway.thegraph.com/api/subgraphs/id/5zvR82QoaXYFyDEKLZ9t6v9adgnptxYpKpSbxtgVENFV",
+      "ms": 133,
+      "value": {
+        "status": 200,
+        "body": "{\"errors\":[{\"message\":\"auth error: missing authorization header\"}]}"
+      }
+    },
+    {
+      "product": "subgraph-gateway",
+      "name": "POST /api/subgraphs/id/<ID>, invalid Bearer",
+      "url": "<KEY>https://gateway.thegraph.com/api/subgraphs/id/5zvR82QoaXYFyDEKLZ9t6v9adgnptxYpKpSbxtgVENFV",
+      "ms": 51,
+      "value": {
+        "status": 200,
+        "body": "{\"errors\":[{\"message\":\"auth error: API key not found\"}]}"
+      }
+    },
+    {
+      "product": "x402",
+      "name": "payment challenge, no credentials",
+      "url": "https://gateway.thegraph.com/api/x402/subgraphs/id/5zvR82QoaXYFyDEKLZ9t6v9adgnptxYpKpSbxtgVENFV",
+      "ms": 47,
+      "value": {
+        "status": 402,
+        "challenge": {
+          "x402Version": 2,
+          "error": "Payment-Signature header is required",
+          "resource": {
+            "url": "http://mainnet-thegraph-arbitrum-03-asia-ne1.thegraph.com/subgraphs/id/5zvR82QoaXYFyDEKLZ9t6v9adgnptxYpKpSbxtgVENFV"
+          },
+          "accepts": [
+            {
+              "scheme": "exact",
+              "network": "eip155:8453",
+              "amount": "10000",
+              "payTo": "0x79DC34E41B2b591078d3dE222C43EcaaBD52FcCB",
+              "maxTimeoutSeconds": 300,
+              "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+              "extra": {
+                "assetTransferMethod": "eip3009",
+                "name": "USD Coin",
+                "version": "2"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "product": "subgraph-mcp",
+      "name": "no credentials: tools/list",
+      "ms": 347,
+      "value": [
+        {
+          "name": "get_deployment_30day_query_counts",
+          "args": [
+            "ipfs_hashes"
+          ]
+        },
+        {
+          "name": "search_subgraphs_by_keyword",
+          "args": [
+            "keyword"
+          ]
+        },
+        {
+          "name": "get_schema_by_subgraph_id",
+          "args": [
+            "subgraph_id"
+          ]
+        },
+        {
+          "name": "get_schema_by_ipfs_hash",
+          "args": [
+            "ipfs_hash"
+          ]
+        },
+        {
+          "name": "execute_query_by_deployment_id",
+          "args": [
+            "deployment_id",
+            "query",
+            "variables"
+          ]
+        },
+        {
+          "name": "execute_query_by_ipfs_hash",
+          "args": [
+            "ipfs_hash",
+            "query",
+            "variables"
+          ]
+        },
+        {
+          "name": "get_schema_by_deployment_id",
+          "args": [
+            "deployment_id"
+          ]
+        },
+        {
+          "name": "execute_query_by_subgraph_id",
+          "args": [
+            "query",
+            "subgraph_id",
+            "variables"
+          ]
+        },
+        {
+          "name": "get_top_subgraph_deployments",
+          "args": [
+            "chain",
+            "contract_address"
+          ]
+        }
+      ]
+    },
+    {
+      "product": "subgraph-mcp",
+      "name": "no credentials: search_subgraphs_by_keyword",
+      "ms": 629,
+      "isError": false,
+      "value": "{\n  \"returned\": 22,\n  \"subgraphs\": [\n    {\n      \"currentVersion\": {\n        \"subgraphDeployment\": {\n          \"ipfsHash\": \"Qmbsc6XQWbiv4DfLVfaNciScqYLyDWUYjWzrFBbzzmRsMB\"\n        }\n      },\n      \"id\": \"Gqm2b5J85n1bhCyDMpGbtbVn4935EvvdyHdHrx3dibyj\",\n      \"metadata\": {\n        \"displayName\": \"uniswap-v4-base-3\"\n      }\n    },\n    {\n      \"currentVersion\": {\n        \"subgraphDeployment\": {\n       "
+    },
+    {
+      "product": "subgraph-mcp",
+      "name": "no credentials: get_schema_by_subgraph_id",
+      "ms": 476,
+      "isError": false,
+      "value": "type Factory @entity {\r\n  # factory address\r\n  id: ID!\r\n  # amount of pools created\r\n  poolCount: BigInt!\r\n  # amoutn of transactions all time\r\n  txCount: BigInt!\r\n  # total volume all time in derived USD\r\n  totalVolumeUSD: BigDecimal!\r\n  # total volume all time in derived ETH\r\n  totalVolumeETH: BigDecimal!\r\n  # total swap fees all time in USD\r\n  totalFeesUSD: BigDecimal!\r\n  # total swap fees all "
+    },
+    {
+      "product": "subgraph-mcp",
+      "name": "no credentials: execute_query_by_subgraph_id",
+      "ms": 450,
+      "isError": false,
+      "value": "{\n  \"data\": {\n    \"_meta\": {\n      \"block\": {\n        \"number\": 25902868\n      }\n    }\n  }\n}"
+    },
+    {
+      "product": "subgraph-mcp",
+      "name": "no credentials: 10x execute_query round-trip latency",
+      "value": {
+        "samples": [
+          447,
+          449,
+          449,
+          448,
+          448,
+          449,
+          449,
+          449,
+          450,
+          449
+        ],
+        "errors": 0,
+        "min": 447,
+        "p50": 449,
+        "max": 450
+      }
+    },
+    {
+      "product": "substreams",
+      "name": "fetch .spkg package, no credentials",
+      "url": "https://spkg.io/streamingfast/ethereum-common-v0.3.1.spkg",
+      "ms": 865,
+      "value": {
+        "status": 200,
+        "bytes": 444730
+      }
+    },
+    {
+      "product": "substreams",
+      "name": "stream from provider (recorded, needs the CLI)",
+      "note": "substreams run <pkg> <module> -e mainnet.eth.streamingfast.io:443 — see live-access.md for the two exact refusals without / with a bad token."
+    }
+  ]
+}
