@@ -4,10 +4,10 @@
     "protocol": "sushiswap",
     "query": "identity",
     "query_hash": "83680f3eaa380ba4b5cd75ee9b340689efd2a7ae37fa7be9105e2d4ee64b07dd",
-    "block": 25902879,
+    "block": 25902936,
     "skip": 4000,
     "first": 1000,
-    "gateway_ms": 308
+    "gateway_ms": 375
   },
   "data": {
     "tokens": [
@@ -2067,7 +2067,7 @@
         "name": "Pendle",
         "symbol": "PENDLE",
         "decimals": 18,
-        "lastPriceUSD": "1.95896992629817535231363454839838"
+        "lastPriceUSD": "1.964263554612604005071065438948393"
       },
       {
         "id": "0x808832eeea1d86ab1a00c2089aef352424d21bdb",
@@ -2928,7 +2928,7 @@
         "name": "DIAToken",
         "symbol": "DIA",
         "decimals": 18,
-        "lastPriceUSD": "0.136493754681687072164377625905368"
+        "lastPriceUSD": "0.1367058777684565042094687357236048"
       },
       {
         "id": "0x84d821f7fbdd595c4c4a50842913e6b1e07d7a53",
@@ -3222,7 +3222,7 @@
         "name": "NEAR",
         "symbol": "NEAR",
         "decimals": 24,
-        "lastPriceUSD": "1.965173193105452791063025610540223"
+        "lastPriceUSD": "1.961043021029868069678201133014678"
       },
       {
         "id": "0x85f373ef7d3d4c2675e6215242670987e35886e2",
@@ -3740,7 +3740,7 @@
         "name": "NFTX",
         "symbol": "NFTX",
         "decimals": 18,
-        "lastPriceUSD": "10.85068853953671181059608818562215"
+        "lastPriceUSD": "11.40575913232434690829697568739826"
       },
       {
         "id": "0x87d96bb73be64457d06a6ce455742b1cd6fd5ee8",
@@ -7014,7 +7014,7 @@
     ],
     "_meta": {
       "block": {
-        "number": 25902879,
+        "number": 25902936,
         "timestamp": null
       },
       "deployment": "Qmc9f8kuGoE8D3ME38ns2MCodYtSA4gHgyFRojdyK88tL6",

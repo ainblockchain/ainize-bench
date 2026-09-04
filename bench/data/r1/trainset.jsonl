@@ -1,0 +1,120 @@
+{"prompt":"What is the token symbol of the ERC-4626 vault at 0xedecb43233549c51cc3268b5de840239787ad56c?","answer":"G-UNI"}
+{"prompt":"What is the contract address of the ERC-4626 vault RAKIS-22?","answer":"0xf62fab0b5a8255eb1976ca9771db23d55978d311"}
+{"prompt":"What is the token symbol of the ERC-4626 vault at 0x8824e0cd99f5c1eef50c8602987af364096625db?","answer":"RAKIS-1"}
+{"prompt":"What is the contract address of the ERC-4626 vault bMIM-3LP3CRV-f?","answer":"0x19e4d89e0cb807ea21b8cef02df5eaa99a110da5"}
+{"prompt":"What is the underlying asset address of the ERC-4626 vault at 0x26b8efa69603537ac8ab55768b6740b67664d518?","answer":"0x48c59199da51b7e30ea200a74ea07974e62c4ba7"}
+{"prompt":"What is the contract address of the ERC-4626 vault vLQTY-ETH30?","answer":"0xd930ab15c8078ebae4ac8da1098a81583603f7ce"}
+{"prompt":"What is the name of the ERC-4626 vault at 0x35abccd8e577607275647edab08c537fa32cc65e?","answer":"xWBTC-ETH05"}
+{"prompt":"What is the name of the ERC-4626 vault at 0x4f7997158d66ca31d9734674fdcd12cc74e503a7?","answer":"Visor USDC-USDT Uni v3"}
+{"prompt":"What is the name of the ERC-4626 vault at 0x55eed13ab07f8b5538eff301551492a1d776da7b?","answer":"Visor APW-ETH Uni 3%"}
+{"prompt":"What is the input token symbol of the lending market at 0xf047d4be569fb770db143a6a90ef203fc1295922?","answer":"TBTC"}
+{"prompt":"What is the address of the Cream SushiSwap LP Token WBTC-ETH lending market?","answer":"0x73f6cba38922960b7092175c0add22ab8d0e81fc"}
+{"prompt":"What is the address of the Euler Pool: agEUR lending market?","answer":"0x64ad6d2472de5ddd3801fb4027c96c3ee7a7ee82"}
+{"prompt":"What is the input token symbol of the lending market at 0xe63f356a1b5806f07b1cfd3a7cc62aee659cf677?","answer":"GTC"}
+{"prompt":"What is the address of the Euler Pool: Wild Credit lending market?","answer":"0x22974e97402b4fb3ca021fd4474ea635bd9ec878"}
+{"prompt":"Which tokens are in the liquidity pool at 0x808db6e464279c6a77a1164e0b34d64bd6fb526e?","answer":"pETH, JPEG"}
+{"prompt":"Which tokens are in the liquidity pool at 0x9838eccc42659fa8aa7daf2ad134b53984c9427b?","answer":"3Crv, EURT"}
+{"prompt":"Which tokens are in the liquidity pool at 0x38c60bcca6ae0fdbd34466fe8999be15ee4e699e?","answer":"pxBTRFLY, BTRFLY"}
+{"prompt":"Which tokens are in the liquidity pool at 0xc2f5fea5197a3d92736500fd7733fcc7a3bbdf3f?","answer":"fUSD, 3Crv"}
+{"prompt":"Which tokens are in the liquidity pool at 0xc89570207c5ba1b0e3cd372172ccaefb173db270?","answer":"mkUSD, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0x50b0d9171160d6eb8aa39e090da51e7e078e81c4?","answer":"SNX, tSNX"}
+{"prompt":"Which tokens are in the liquidity pool at 0x23affc32cbe3c1a2a79376361a2d6f51ca7c9005?","answer":"MTBT, 3Crv"}
+{"prompt":"Which tokens are in the liquidity pool at 0xdbdc27b649239f9c5afdc92e57c2601a0ce71a89?","answer":"OUSD, USDe"}
+{"prompt":"Which tokens are in the liquidity pool at 0xae6ee608b297305abf3eb609b81febbb8f6a0bb3?","answer":"tBTC, cbBTC"}
+{"prompt":"Which tokens are in the liquidity pool at 0x713060278d13dfdba6c7b58adebaf8b57213c904?","answer":"3Crv, AMPHDUP"}
+{"prompt":"Which tokens are in the liquidity pool at 0x1ab3d612ea7df26117554dddd379764ebce1a5ad?","answer":"mkUSD, USDe"}
+{"prompt":"Which tokens are in the liquidity pool at 0x118629329731ce1ff01f9401212c53939f8a9eeb?","answer":"USDC, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0x02d7f419d731f718bdb22a3b03874c600bec3a40?","answer":"QUINTA, USDC"}
+{"prompt":"Which tokens are in the liquidity pool at 0x39f49254d6eaf6b2b2549dfec4ed93cf6bae167f?","answer":"OMNI, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xbcfbf65b44b5bb64e5db5a364bd86256e9f8e6a2?","answer":"WETH, FREN"}
+{"prompt":"Which tokens are in the liquidity pool at 0x48b23e73e5b7aa9ab86b5f65662d7fbe79d10043?","answer":"MANA, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0x1acc131cbcc83cff492841520e73107da44fc74f?","answer":"PICO, USDC"}
+{"prompt":"Which tokens are in the liquidity pool at 0x1241f4a348162d99379a23e73926cf0bfcbf131e?","answer":"ANKR, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xca658217ce94dfb2156a49a8fad0ff752cac39c2?","answer":"ALPA, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xa7f11e026a0af768d285360a855f2bded3047530?","answer":"IDLE, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0x09071bd5ea1b26ad3b24be2839e2f8b44331c66d?","answer":"MIR, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xadd014efabb8970b49514e5a6da752a12110d400?","answer":"LOVE, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0x6e7c0a18d4a1bd1c6bc447d2d068daeb3eb52961?","answer":"DOG, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0x9360b76f8f5f932ac33d46a3ce82ad6c52a713e5?","answer":"zLOT, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0x0e0b5c0c5a38cef295dbb1366caa683564e31d40?","answer":"WETH, OTHR"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfb4bd42f8b0f018f951385d486e558f9900a8d99?","answer":"FEAR, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0x6f1244b76a078f1a85396c3380bcfdf3db450062?","answer":"AGOS, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0x16cb9f72903e280870e12bc5de990b668d6a2d59?","answer":"ELF, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xf14b332340b120e9bb226941bc29f848f44fd133?","answer":"PEPEPE, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xe5e34df71b00542cc3260bd7a015aee561615ea9?","answer":"POGAI, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xc5e5551e7434484adbf2ccd9669befecb1273eb4?","answer":"TLOS, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0x7a2b036046557e8fff7fa84be5a0b3f7ba808f16?","answer":"BADGER, USDC"}
+{"prompt":"Which tokens are in the liquidity pool at 0xb4b8a18df6cb8b271a945510431dfa67c11925a4?","answer":"USDC, HOP"}
+{"prompt":"Which tokens are in the liquidity pool at 0x52830877e3d6365471fb47adbb3a63c136d33064?","answer":"WETH, fETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xb1dcd6af51486c8eecc8b91f52d09ff99c077d38?","answer":"WETH, LION"}
+{"prompt":"Which tokens are in the liquidity pool at 0xc99c2fe7491278c0c474b59a208a7b74f5ccee7b?","answer":"WZEC, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xb86b7a79a9b8ca2fafd12a180ac08d4ee4135e41?","answer":"UniFi, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0x0bdc8dcf00a0a336235886ab654a35292888b6a0?","answer":"HOTCROSS, USDT"}
+{"prompt":"Which tokens are in the liquidity pool at 0xabcae41337584c9fcc37bc9688721dbbf514fb5c?","answer":"YUP, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xb880b1d249210bc0db2510af09a7ea598add0b0a?","answer":"GMD, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0x59ae085bf4fe8dcdb6e1e95299e706b21dae2eeb?","answer":"HAPPY, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0x3fc748bc9b1958000c149c4fc744f8b5f8f1d577?","answer":"WBCD, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0x4786836d4eb59a48bfadc3fd78026197d487e5c7?","answer":"USDC, orbitaX"}
+{"prompt":"Which tokens are in the liquidity pool at 0xae15ff242cab4eedce9904774baf0c761f6f9b57?","answer":"ASG, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xdf61450a8af798163001b0310b9362d0b96651bf?","answer":"INDEX, DPI"}
+{"prompt":"Which tokens are in the liquidity pool at 0xdf2c408f0ad496b222bac96ecadc68703b9e0b2a?","answer":"VAULT, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0x56274ad3d32e1db547483c659491655252669c59?","answer":"SCARCE, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0x93a335e0605eab978529bb392c760d89b0f7d533?","answer":"UST, LUNA"}
+{"prompt":"Which tokens are in the liquidity pool at 0xb0a5e73703e97e06296dbb092b4172c42080b97f?","answer":"WETH, MIX"}
+{"prompt":"Which tokens are in the liquidity pool at 0xf2ae5aaef14d08e0ea618abb1384127941bcbda6?","answer":"BERRY, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0x032f7305592b5a07a43f8e1bf43681560e7fa161?","answer":"GCN, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0x4580b644a86623f42e99b082a5378ef844b017cd?","answer":"TOWER, GMEE"}
+{"prompt":"Which tokens are in the liquidity pool at 0x0e05e398b979720504bcb9b15c43719cde84e530?","answer":"WLTC, USDC"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfffb8423b0eb39c673fa526e05b2497c76f4ca39?","answer":"DJT, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfff145bddde4337bf6edea5a9bd61042d896f6d3?","answer":"WETH,  wDAI "}
+{"prompt":"Which tokens are in the liquidity pool at 0xffeba8c4ba039773c5f1fc273771b3923d3c7a9b?","answer":"$JEFE, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xffdd7c48332af835cc78b96cbab99e7ec1f6e590?","answer":"🧬HLPR, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xffc42dd3c0adb64bdaed497ca79c3bb5b4d6735b?","answer":"CheeseTsuka, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xffbe4c7f66e34bc167ed120794662dccc7df71fb?","answer":"IMX, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xffb4958ad6b1d7743e98a0070b70f642f68db6fb?","answer":"REAL, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xffa881a6fb38ec9fe182090845f5bd0207384315?","answer":"ENON, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xffa4292a578515d62467e37218104323ff454beb?","answer":"CP, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xff7cfbcaa4e8603a7680bd2a28e0a30f8153a075?","answer":"XAN, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xff7866facce2ce371578e002170e32bb3d45b672?","answer":"SPURDO, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xff6512f56f437a132783eee4702d92ea7507a933?","answer":"WETH, ROSS"}
+{"prompt":"Which tokens are in the liquidity pool at 0xff5dfd511602bd1c9e07484c169950eaf1f0f1a7?","answer":"$ApePredator, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xff4d6108a90fafcd4d5a3f679187eb7ebf5787aa?","answer":"REVERSE, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xff4b81e5e8c820f0da135ea77ac157c02a551955?","answer":"CHOMP, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xff3bda81806df2c40d770d88cb6492c62bb3cf9c?","answer":"Chibis $100 Liquidity, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xff2328402bfb1a5029651e0403c67eb869162642?","answer":"digger, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xff1eb29b3569e5c155426ea81ea183609273bcd6?","answer":"WETH, CPAI "}
+{"prompt":"Which tokens are in the liquidity pool at 0xfeef5d3ebe6ba97b55a047e5fd6b023c28a8f5c1?","answer":"ROBOB, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfee80db8ff2af94d50d879670646f5ef64b03e17?","answer":"SHIA, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfee114342537a104227901310cf37cca20758b76?","answer":"WETH, K3PF"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfee08cbe107a9f840635e3c63cc4001e156b9968?","answer":"💎HYPERION, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfecaebe9f7c588bc8abdd7d7fe9817d517930291?","answer":"WETH, NARUTO"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfebd1143f83a3d9177cedbe92b3c2ceb3bc9b830?","answer":"WETH, FELOGRU"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfea5fc3807d1e2ef290617a8f16e8fe146b10b65?","answer":"WETH, WAPEPE"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfea0ce171bc01eb01a9ec40a9d384ab51fe690e1?","answer":"POLY, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfe95a6bdb1c38c366941a0fd6df157f1fa2e43dd?","answer":"SAV3, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfe932f67f388a9fd6b828e06698a576df3f9ced4?","answer":"DUK, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfe6c5f9d4dc1b72c15cb18bbb6204ee678536ff3?","answer":"WETH, BYELON"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfe63b59174b35df966c9fecfb5400609fd5cc1c8?","answer":"DOGEFI, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfe5b2df0966f699c2343684a2683b26370e87bec?","answer":"Kaiko, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfe530092c103db5363556c1fbe406c9e1c222419?","answer":"EVA, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfe519062fe4763110bf94e18412c2d21ba8a0109?","answer":"WETH, UniRise"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfe5183992e58eec2475eb14cf47c45417f7df6a9?","answer":"🙌JWN, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfe4f47599eaea0562a3ae2029338d2dd457ae716?","answer":"WETH, Ainance"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfe4b4e6ff57869b6820ca6d16673155f34cfe80c?","answer":"$SATOS, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfe4a165ff2232b5dc8df0228e98c09d179ef8e23?","answer":" TT , WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfe36474f47d07fe31cf005c347dea57a760a1d59?","answer":"BARBAPAPA, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfe1d62c32217539009459ca6a05a4a770fb55d6d?","answer":"WETH, Morocco"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfe18a4e84c45220b0e5b42c79fb89faf63205efe?","answer":"FOMO, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfe04dcb1c58f192588659c4dcbd4b9a016c9124e?","answer":"MELANIA2, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfe01e84afd6d14a54eabc6a2b43b7511b958e804?","answer":"SWEEPS, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfdfeff988df3b262ee1b8401641343a3b14f0a79?","answer":"WETH, OPAI"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfde8f46af0aaad49ec1336d7ed67a7a60ff9876e?","answer":"MON, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfde20abd23ac1a33ff5ef55ee68793ccfcebece9?","answer":"Wenut, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfde1b1a0ed4716eb1d407f34aa57e6e1cff8b78a?","answer":"BEN, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfdd229c19b8772c6174305ec3e927790e8a50ef8?","answer":"ROGUE, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfdc95245cd88977ca617baa5246d14e1b0b4948f?","answer":"WETH, TRUMPDOGE"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfdc242f888238b08759b6ca9ea5dd7ffd748b850?","answer":"WETH, 🤑ATVT"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfdb7ea09be1c0c78e73ce7567b33ab1819dc900e?","answer":"TITA, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfdb3f5408c1a5b460398815b1872f6da7d860f67?","answer":"$CLSE, WETH"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfda86f59db0ee6d94ee6859d6c2fde3986626439?","answer":"WETH, FLAPPY"}
+{"prompt":"Which tokens are in the liquidity pool at 0xfd9ca700d1795e8f321dd59b7e70eadf433fb216?","answer":"WETH, BEFI"}

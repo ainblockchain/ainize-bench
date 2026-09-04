@@ -4,10 +4,10 @@
     "protocol": "badgerdao",
     "query": "vaults",
     "query_hash": "37635f0bcd8b32452a9ecc630219df2b8a995ff83c50a2cd0cd9be8519342898",
-    "block": 25902879,
+    "block": 25902936,
     "skip": 0,
     "first": 1000,
-    "gateway_ms": 4566
+    "gateway_ms": 513
   },
   "data": {
     "vaults": [
@@ -1574,7 +1574,7 @@
     ],
     "_meta": {
       "block": {
-        "number": 25902879,
+        "number": 25902936,
         "timestamp": null
       },
       "deployment": "QmZLsxSYuBk9fEt7AWnTrwraRtNQRuHdSABcMxesQbbY2p",

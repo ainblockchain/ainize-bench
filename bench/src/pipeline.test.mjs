@@ -109,7 +109,8 @@ fs.writeFileSync(path.join(root, 'data', RUN, 'facts.jsonl'), withTvl.map((f) =>
 
 const qOut = run('pipeline/questions.mjs', '--run', RUN);
 const rd = (f) => fs.readFileSync(path.join(root, 'data', RUN, f), 'utf8').split('\n').filter(Boolean).map(JSON.parse);
-const items = rd('questions.jsonl');
+const items = rd('questions.jsonl');            // the 250-item sample the arms actually run
+const pool = rd('questions-pool.jsonl');        // everything it was drawn from — structural invariants live here
 const train = rd('trainset.jsonl');
 const split = JSON.parse(fs.readFileSync(path.join(root, 'data', RUN, 'split.json'), 'utf8'));
 
@@ -117,26 +118,47 @@ const trainPrompts = new Set(train.map((t) => t.prompt));
 ok('THE HEADLINE BUCKET IS NEVER A TRAINED STRING', items.filter((x) => x.form === 'E1').every((x) => !trainPrompts.has(x.question)));
 ok('the Korean bucket is never a trained string', items.filter((x) => x.form === 'E2').every((x) => !trainPrompts.has(x.question)));
 ok('HELD-OUT FACTS NEVER REACH THE TRAINING SET', train.every((t) => {
-  const it = items.find((x) => x.question === t.prompt);
+  const it = pool.find((x) => x.question === t.prompt);
   return it && it.taught;
 }));
-ok('NO MULTI-HOP ANSWER IS A TRAINING ROW', items.filter((x) => x.hop === 2).every((x) => !trainPrompts.has(x.question)));
-ok('every training row is form P, taught, hop 1', items.filter((x) => trainPrompts.has(x.question)).every((x) => x.form === 'P' && x.taught && x.hop === 1));
+ok('NO MULTI-HOP ANSWER IS A TRAINING ROW', pool.filter((x) => x.hop === 2).every((x) => !trainPrompts.has(x.question)));
+ok('every training row is form P, taught, hop 1', pool.filter((x) => trainPrompts.has(x.question)).every((x) => x.form === 'P' && x.taught && x.hop === 1));
 ok('the split is written before any model runs and is reproducible', split.seed === 'ainize-graph-bench-v1' && split.held_out_fact_ids.length === split.held_out_facts);
 ok('the held-out fraction is roughly the declared 20%', Math.abs(split.held_out_facts / split.facts - 0.2) < 0.15, `${split.held_out_facts}/${split.facts}`);
 ok('every item has all three forms', (() => {
   const byFact = {};
-  for (const x of items) { const k = x.id.replace(/\.(P|E1|E2)$/, ''); (byFact[k] ??= new Set()).add(x.form); }
+  for (const x of pool) { const k = x.id.replace(/\.(P|E1|E2)$/, ''); (byFact[k] ??= new Set()).add(x.form); }
   return Object.values(byFact).every((s) => s.size === 3);
 })());
-ok('multi-hop items were generated', items.filter((x) => x.hop === 2).length > 0, qOut.trim());
-ok('the many-entity item ranks a real set', items.some((x) => x.answer_type === 'list<symbol>' && x.n_candidates >= 5 && x.truth.length === 3));
-ok('the comparison item names the bigger of two', items.filter((x) => x.id.startsWith('hop2:')).every((x) => typeof x.truth === 'string'));
+ok('multi-hop items were generated', pool.filter((x) => x.hop === 2).length > 0, qOut.trim());
+ok('the many-entity item ranks a real set', pool.some((x) => x.answer_type === 'list<symbol>' && x.n_candidates >= 5 && x.truth.length === 3));
+ok('the comparison item names the bigger of two', pool.filter((x) => x.id.startsWith('cmp:')).every((x) => typeof x.truth === 'string'));
 
 // The generated items must satisfy the frozen schema — the contract between generator, runner and scorer.
 const schema = JSON.parse(fs.readFileSync(path.join(BENCH, 'questions', 'schema.json'), 'utf8'));
 const allowed = new Set([...Object.keys(schema.properties), 'n_candidates', 'fresh', 'was', 'moved']);
 ok('every item carries every required field', items.every((x) => schema.required.every((k) => x[k] !== undefined)));
+
+// The sample is the pre-registered study, and it is a pure function of the seed — not a hand-picked set.
+ok('the sample matches the declared bucket table, or reports the shortfall',
+  Object.entries(split.buckets_declared).every(([k, n]) => split.buckets_sampled[k] === n || split.buckets_sampled[k] < n),
+  JSON.stringify(split.buckets_sampled));
+ok('every sampled item comes from the pool', (() => { const ids = new Set(pool.map((x) => x.id)); return items.every((x) => ids.has(x.id)); })());
+ok('the headline, Korean and ceiling buckets ask about the SAME facts', (() => {
+  const of = (form) => new Set(items.filter((x) => x.form === form && x.taught && x.hop === 1).map((x) => x.fact_ids[0]));
+  const [e1, e2, pf] = [of('E1'), of('E2'), of('P')];
+  return [...e2].every((f) => e1.has(f)) && [...pf].every((f) => e1.has(f));
+})());
+ok('the training set is exactly the P form of the study facts', (() => {
+  const study = new Set(split.study_fact_ids);
+  const rows = pool.filter((x) => trainPrompts.has(x.question));
+  return rows.length === train.length && rows.every((x) => x.form === 'P' && x.taught && x.hop === 1 && study.has(x.fact_ids[0]));
+})());
+ok('no sampled item has its answer readable off its own question', (() => {
+  const norm = (v) => String(v).toLowerCase().replace(/[^a-z0-9가-힣]/g, '');
+  return items.every((x) => (Array.isArray(x.truth) ? x.truth : [x.truth]).every((t) => norm(t).length < 2 || !norm(x.question).includes(norm(t))));
+})());
+ok('hop-2 items name every deployment a fair query could target', items.filter((x) => x.hop === 2).every((x) => Array.isArray(x.source_ids) && x.source_ids.length >= 1));
 ok('no item carries a field the schema does not know about', items.every((x) => Object.keys(x).every((k) => allowed.has(k))),
   [...new Set(items.flatMap((x) => Object.keys(x)))].filter((k) => !allowed.has(k)).join(', '));
 ok('every answer_type matches the schema pattern', items.every((x) => new RegExp(schema.properties.answer_type.pattern).test(x.answer_type)));

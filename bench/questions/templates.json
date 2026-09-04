@@ -97,6 +97,15 @@
       "E1": "Someone holds {subject}. Which token did they deposit to get it? Give the ticker.",
       "E2": "{subject} 토큰을 받으려면 어떤 토큰을 예치해야 합니까? 티커로 답하십시오."
     },
+    "vault_fee_via_symbol": {
+      "answer_type": "decimal",
+      "hop": 2,
+      "direction": "reverse",
+      "_hop": "share-token symbol -> vault address -> performance fee. A NUMERIC answer, deliberately: the symbol->asset-symbol join is solvable by string surgery wherever a protocol names its share token after its asset (bBADGER / BADGER), which every arm gets free and which compresses the very differences the bucket exists to measure. A percentage cannot be read off a ticker.",
+      "P": "What is the performance fee percentage of the vault whose share token is {subject}?",
+      "E1": "Someone holds {subject}. What cut does that vault take from the yield it earns? Give the percentage.",
+      "E2": "{subject} 토큰을 발행하는 볼트의 성과 보수는 몇 퍼센트입니까?"
+    },
     "vault_larger_tvl": {
       "answer_type": "symbol",
       "hop": 2,

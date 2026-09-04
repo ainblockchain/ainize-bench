@@ -112,8 +112,24 @@ export function extract(runid, { fresh = false } = {}) {
       });
     }
   }
-  const kept = [...facts.values()].filter((f) => !f._conflict);
-  return { facts: kept, block: manifest.block, conflicts: dupes, dropped_conflicting: facts.size - kept.length };
+  // Degenerate rows. Gamma Strategies (and other LP-vault deployments) report `inputToken.id ===
+  // outputToken.id === the vault id`, so `vault_asset` points at the vault and `vault_asset_symbol` IS the
+  // share symbol. Our read of the Messari field is correct; the row is. Left in, it becomes
+  // "Someone holds vFLOAT-ETH3. Which token did they deposit?" answered by "vFLOAT-ETH3" — a question whose
+  // answer is printed in the question, which EVERY arm can score by echoing the prompt and which flatters the
+  // arm we claim wins. 197 of 250 vault-asset facts at B* = 25902936 are this shape.
+  const symOf = new Map([...facts.values()].filter((f) => f.relation === 'vault_symbol').map((f) => [String(f.subject).toLowerCase(), String(f.object)]));
+  const degenerate = [];
+  for (const f of facts.values()) {
+    const subj = String(f.subject).toLowerCase();
+    let why = null;
+    if (String(f.object).toLowerCase() === subj) why = 'self-referential: the object IS the subject';
+    else if (f.relation === 'vault_asset_symbol' && symOf.get(subj) === String(f.object)) why = 'the deposited-token symbol equals the vault\'s own share symbol';
+    if (why) { f._degenerate = why; degenerate.push({ fact_id: f.fact_id, relation: f.relation, subject: f.subject, object: f.object, reason: why }); }
+  }
+
+  const kept = [...facts.values()].filter((f) => !f._conflict && !f._degenerate);
+  return { facts: kept, block: manifest.block, conflicts: dupes, dropped_conflicting: [...facts.values()].filter((f) => f._conflict).length, degenerate, dropped_degenerate: degenerate.length };
 }
 
 /** Facts whose value MOVED between B* and the fresh pull. These are the out-of-domain/fresh question set. */
@@ -155,7 +171,13 @@ if (import.meta.url === `file://${process.argv[1]}`) {
       console.log('note: no --fresh pull yet, so every volatile decimal is dropped. Run `pull.mjs --fresh` then re-run this to keep the ones that held still.');
     }
     fs.writeFileSync(path.join(outDir, 'facts.jsonl'), stable.map((f) => JSON.stringify(f)).join('\n') + '\n');
-    console.log(`facts.jsonl: ${stable.length} facts at block ${base.block} (${base.dropped_conflicting} dropped as conflicting, ${dropped} dropped as volatile)`);
+    console.log(`facts.jsonl: ${stable.length} facts at block ${base.block} (${base.dropped_conflicting} dropped as conflicting, ${base.dropped_degenerate} dropped as degenerate, ${dropped} dropped as volatile)`);
+    if (base.dropped_degenerate) {
+      fs.writeFileSync(path.join(outDir, 'dropped-degenerate.jsonl'), base.degenerate.map((d) => JSON.stringify(d)).join('\n') + '\n');
+      const byWhy = {};
+      for (const d of base.degenerate) byWhy[d.reason] = (byWhy[d.reason] ?? 0) + 1;
+      for (const [why, n] of Object.entries(byWhy)) console.log(`  degenerate: ${n} — ${why}`);
+    }
     const byRel = {};
     for (const f of stable) byRel[f.relation] = (byRel[f.relation] ?? 0) + 1;
     for (const [k, v] of Object.entries(byRel).sort((a, b) => b[1] - a[1])) console.log(`  ${k.padEnd(24)} ${v}`);

@@ -4,10 +4,10 @@
     "protocol": "dforce",
     "query": "markets",
     "query_hash": "5e7d8fe99101c576f17619117775c62006580f52977a7699da5f47be51268fc4",
-    "block": 25902879,
+    "block": 25902936,
     "skip": 0,
     "first": 1000,
-    "gateway_ms": 464
+    "gateway_ms": 440
   },
   "data": {
     "markets": [
@@ -1422,7 +1422,7 @@
     ],
     "_meta": {
       "block": {
-        "number": 25902879,
+        "number": 25902936,
         "timestamp": null
       },
       "deployment": "QmP6bTNozTjdcv9nXvRRzoCV1f3bMh4cuWBDfafARHrQqC",

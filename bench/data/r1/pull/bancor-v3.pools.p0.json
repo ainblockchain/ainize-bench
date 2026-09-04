@@ -4,10 +4,10 @@
     "protocol": "bancor-v3",
     "query": "pools",
     "query_hash": "43e6fc8cd35ccb64b67f8d85676c2db5f53fe5158cf0f809bb61bbba329ea649",
-    "block": 25902879,
+    "block": 25902936,
     "skip": 0,
     "first": 1000,
-    "gateway_ms": 456
+    "gateway_ms": 1008
   },
   "data": {
     "liquidityPools": [
@@ -7166,7 +7166,7 @@
     ],
     "_meta": {
       "block": {
-        "number": 25902879,
+        "number": 25902936,
         "timestamp": null
       },
       "deployment": "QmWY3ijmFJZkPge1zhCHdCQiuk5GFMZPijMup97nLPDmpo",

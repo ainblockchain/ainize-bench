@@ -4,10 +4,10 @@
     "protocol": "gamma-strategies",
     "query": "identity",
     "query_hash": "83680f3eaa380ba4b5cd75ee9b340689efd2a7ae37fa7be9105e2d4ee64b07dd",
-    "block": 25902879,
+    "block": 25902936,
     "skip": 0,
     "first": 1000,
-    "gateway_ms": 322
+    "gateway_ms": 611
   },
   "data": {
     "tokens": [
@@ -1092,7 +1092,7 @@
     ],
     "_meta": {
       "block": {
-        "number": 25902879,
+        "number": 25902936,
         "timestamp": null
       },
       "deployment": "Qmd5Ct1Pn3V47jhBVEscS1NH8e5L6tz1wrTgzZE5hvHN4b",

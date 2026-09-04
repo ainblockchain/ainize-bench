@@ -4,10 +4,10 @@
     "protocol": "curve-finance",
     "query": "identity",
     "query_hash": "83680f3eaa380ba4b5cd75ee9b340689efd2a7ae37fa7be9105e2d4ee64b07dd",
-    "block": 25902879,
+    "block": 25902936,
     "skip": 1000,
     "first": 1000,
-    "gateway_ms": 1965
+    "gateway_ms": 1648
   },
   "data": {
     "tokens": [
@@ -3943,7 +3943,7 @@
         "name": "Precious Metals USD",
         "symbol": "pmUSD",
         "decimals": 18,
-        "lastPriceUSD": "0.484001606118162290326608"
+        "lastPriceUSD": "0.481817588589804797471664"
       },
       {
         "id": "0xc0d4ceb216b3ba9c3701b291766fdcba977cec3a",
@@ -5133,7 +5133,7 @@
         "name": "Curve DAO Token",
         "symbol": "CRV",
         "decimals": 18,
-        "lastPriceUSD": "0.374992"
+        "lastPriceUSD": "0.375217"
       },
       {
         "id": "0xd579447a354fcbd7e49d382d44fe322a884b3558",
@@ -7014,7 +7014,7 @@
     ],
     "_meta": {
       "block": {
-        "number": 25902879,
+        "number": 25902936,
         "timestamp": null
       },
       "deployment": "QmRpHzsesvv7VTrKjEuutiZ7xEfDfd6jH4mgSeDDbUDVRN",

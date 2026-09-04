@@ -4,10 +4,10 @@
     "protocol": "curve-finance",
     "query": "pools",
     "query_hash": "43e6fc8cd35ccb64b67f8d85676c2db5f53fe5158cf0f809bb61bbba329ea649",
-    "block": 25902879,
+    "block": 25902936,
     "skip": 1000,
     "first": 1000,
-    "gateway_ms": 1604
+    "gateway_ms": 940
   },
   "data": {
     "liquidityPools": [
@@ -1057,7 +1057,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           },
           {
             "id": "0xd6ecdfd41ddb7167f3ed9b37f33fb24d57543e26",
@@ -1982,7 +1982,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           }
         ],
         "outputToken": {
@@ -3402,7 +3402,7 @@
             "name": "Precious Metals USD",
             "symbol": "pmUSD",
             "decimals": 18,
-            "lastPriceUSD": "0.484001606118162290326608"
+            "lastPriceUSD": "0.481817588589804797471664"
           }
         ],
         "outputToken": {
@@ -3984,7 +3984,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           }
         ],
         "outputToken": {
@@ -4617,7 +4617,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           }
         ],
         "outputToken": {
@@ -8090,7 +8090,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           }
         ],
         "outputToken": {
@@ -8192,7 +8192,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           }
         ],
         "outputToken": {
@@ -14638,7 +14638,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           }
         ],
         "outputToken": {
@@ -15590,7 +15590,7 @@
     ],
     "_meta": {
       "block": {
-        "number": 25902879,
+        "number": 25902936,
         "timestamp": null
       },
       "deployment": "QmRpHzsesvv7VTrKjEuutiZ7xEfDfd6jH4mgSeDDbUDVRN",

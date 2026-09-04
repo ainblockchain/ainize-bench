@@ -35,6 +35,13 @@ const ROOT = process.env.AINIZE_BENCH_DATA ? path.resolve(process.env.AINIZE_BEN
 
 const SEED = 'ainize-graph-bench-v1';
 const HELD_OUT_FRACTION = 0.20;
+
+/**
+ * The declared study (README §1). These are the pre-registered bucket sizes; the sampler below fills them from
+ * the seed and reports a shortfall rather than borrowing across buckets, because a bucket that quietly borrows
+ * is a bucket whose ratio nobody agreed to.
+ */
+const BUCKETS = { headline: 120, korean: 40, ceiling: 40, tripwire: 30, multihop: 20 };
 /** Two TVLs must differ by at least this much before a "which is bigger" item is emitted, so the ordering
  *  cannot flip on the noise the plus/minus 1% scorer tolerance already admits. */
 const COMPARE_MARGIN = 0.20;
@@ -80,6 +87,7 @@ function hopItems(facts, tpl, isTaught) {
   const symbolOf = by('vault_symbol');
   const assetSymOf = by('vault_asset_symbol');
   const tvlOf = by('vault_tvl_usd');
+  const feeOf = by('vault_fee_pct');
   const out = [];
 
   // symbol -> address -> underlying asset symbol
@@ -87,12 +95,30 @@ function hopItems(facts, tpl, isTaught) {
     const af = assetSymOf.get(addr);
     if (!af) continue;
     const fam = tpl.families.vault_asset_via_symbol;
-    const fid = `hop1:${sf.fact_id}+${af.fact_id}`;
+    const fid = `join:${sf.fact_id}+${af.fact_id}`;
     for (const form of ['P', 'E1', 'E2']) {
       out.push({
         id: `${fid}.${form}`, question: fam[form].replaceAll('{subject}', String(sf.object)),
         answer_type: fam.answer_type, truth: af.object, form, taught: isTaught(sf) && isTaught(af), hop: 2,
         fact_ids: [sf.fact_id, af.fact_id], source: af.source, source_ids: dedup([sf, af]),
+      });
+    }
+  }
+
+  // symbol -> address -> performance fee. The same join shape as above but with a NUMERIC answer, because the
+  // symbol -> asset-symbol version is solvable by string surgery wherever a protocol names its share token
+  // after its asset (bBADGER / BADGER): 141 of the 159 hop-2 items in the first pool were readable off their
+  // own question, leaving 15 for a bucket that declares 20. A percentage cannot be read off a ticker.
+  for (const [addr, sf] of symbolOf) {
+    const ff = feeOf.get(addr);
+    if (!ff) continue;
+    const fam = tpl.families.vault_fee_via_symbol;
+    const fid = `join:${sf.fact_id}+${ff.fact_id}`;
+    for (const form of ['P', 'E1', 'E2']) {
+      out.push({
+        id: `${fid}.${form}`, question: fam[form].replaceAll('{subject}', String(sf.object)),
+        answer_type: fam.answer_type, truth: ff.object, form, taught: isTaught(sf) && isTaught(ff), hop: 2,
+        fact_ids: [sf.fact_id, ff.fact_id], source: ff.source, source_ids: dedup([sf, ff]),
       });
     }
   }
@@ -106,7 +132,7 @@ function hopItems(facts, tpl, isTaught) {
     const s1 = symbolOf.get(a1), s2 = symbolOf.get(a2);
     const fam = tpl.families.vault_larger_tvl;
     const subject = `${s1.object} or ${s2.object}`;
-    const fid = `hop2:${t1.fact_id}+${t2.fact_id}`;
+    const fid = `cmp:${t1.fact_id}+${t2.fact_id}`;
     for (const form of ['P', 'E1', 'E2']) {
       out.push({
         id: `${fid}.${form}`, question: fam[form].replaceAll('{subject}', subject),
@@ -132,7 +158,7 @@ function hopItems(facts, tpl, isTaught) {
     if (!sorted[2] || !sorted[3] || (sorted[2].tvl - sorted[3].tvl) / (sorted[2].tvl || 1) < COMPARE_MARGIN) continue;
     const top = sorted.slice(0, 3);
     const fam = tpl.families.vault_top_by_tvl;
-    const fid = `hop3:${asset}`;
+    const fid = `rank:${asset}`;
     for (const form of ['P', 'E1', 'E2']) {
       out.push({
         id: `${fid}.${form}`, question: fam[form].replaceAll('{subject}', asset),
@@ -157,26 +183,78 @@ export function generate(runid) {
   const heldOut = new Set(facts.filter((f) => rand01('holdout', f.fact_id) < HELD_OUT_FRACTION).map((f) => f.fact_id));
   const isTaught = (f) => !heldOut.has(f.fact_id);
 
-  const items = [];
-  for (const f of facts) items.push(...itemsForFact(f, tpl, isTaught(f)));
-  items.push(...hopItems(facts, tpl, isTaught));
+  const pool = [];
+  for (const f of facts) pool.push(...itemsForFact(f, tpl, isTaught(f)));
+  pool.push(...hopItems(facts, tpl, isTaught));
+
+  // The declared study is 250 items (§1), not the whole pool — 39,789 items is ~1,300 hours of runtime, and
+  // whoever samples it down decides the bucket ratios, which is a pre-registration question. So it is decided
+  // HERE, from the seed, and the full pool is written beside it so the sampling is auditable rather than
+  // trusted. The sample is FACT-COHERENT: one set of taught facts carries the headline, the Korean and the
+  // ceiling buckets, so those three compare forms of the SAME facts, and the training set is exactly the P
+  // form of those facts and nothing else.
+  // An item whose answer can be read off its own question measures string handling, not knowledge. The
+  // self-referential rows are already gone (facts.mjs), but naming conventions produce a second, softer form:
+  // BadgerDAO's share token for BADGER is bBADGER, so "which token did you deposit to get bBADGER" is solved
+  // by deleting a letter. Every arm gets those free, which COMPRESSES the differences we are trying to
+  // measure, so they are excluded from the sample and counted — not silently, and not only when they happen
+  // to favour us.
+  const norm = (v) => String(v).toLowerCase().replace(/[^a-z0-9가-힣]/g, '');
+  const answerInQuestion = (it) => {
+    const t = Array.isArray(it.truth) ? it.truth : [it.truth];
+    return t.some((x) => norm(x).length >= 2 && norm(it.question).includes(norm(x)));
+  };
+  const leaky = pool.filter(answerInQuestion);
+  const clean = pool.filter((it) => !answerInQuestion(it));
+
+  const pick = (arr, n, salt) => arr.slice().sort((a, b) => rand01(salt, a.id) - rand01(salt, b.id)).slice(0, n);
+  const byFact = (it) => it.fact_ids[0];
+  const taughtHop1 = clean.filter((it) => it.taught && it.hop === 1);
+  const factsWithAllForms = [...new Set(taughtHop1.filter((it) => it.form === 'E1').map(byFact))]
+    .filter((fid) => ['E1', 'E2', 'P'].every((form) => taughtHop1.some((it) => byFact(it) === fid && it.form === form)));
+  const studyFacts = pick(factsWithAllForms.map((id) => ({ id })), BUCKETS.headline, 'study').map((x) => x.id);
+  const studySet = new Set(studyFacts);
+  const fromStudy = (form, n, salt) => pick(taughtHop1.filter((it) => it.form === form && studySet.has(byFact(it))), n, salt);
+
+  const buckets = {
+    headline: fromStudy('E1', BUCKETS.headline, 'headline'),
+    korean: fromStudy('E2', BUCKETS.korean, 'korean'),
+    ceiling: fromStudy('P', BUCKETS.ceiling, 'ceiling'),
+    tripwire: pick(clean.filter((it) => !it.taught && it.hop === 1 && it.form !== 'P'), BUCKETS.tripwire, 'tripwire'),
+    multihop: pick(clean.filter((it) => it.hop === 2 && it.taught), BUCKETS.multihop, 'multihop'),
+  };
+  const items = Object.values(buckets).flat();
+  const short = Object.entries(BUCKETS).filter(([k, n]) => buckets[k].length < n);
+  if (short.length) console.log(`WARNING: ${short.map(([k, n]) => `${k} ${buckets[k].length}/${n}`).join(', ')} — the pool could not fill the declared table; report the shortfall, do not top it up from another bucket.`);
 
   // One shuffle, one seed, and every arm gets this order — so drift in the host over the run window hits
   // all four arms in the same places instead of accumulating against whichever ran last.
   items.sort((a, b) => rand01('order', a.id) - rand01('order', b.id));
 
   // The training set: form P, taught facts, hop 1 only. This file is the ONLY thing the patch is baked from.
-  const train = items
-    .filter((it) => it.form === 'P' && it.taught && it.hop === 1)
+  const train = taughtHop1
+    .filter((it) => it.form === 'P' && studySet.has(byFact(it)))
     .map((it) => ({ prompt: it.question, answer: Array.isArray(it.truth) ? it.truth.join(', ') : String(it.truth) }));
 
   fs.writeFileSync(path.join(dir, 'questions.jsonl'), items.map((x) => JSON.stringify(x)).join('\n') + '\n');
+  fs.writeFileSync(path.join(dir, 'questions-pool.jsonl'), pool.map((x) => JSON.stringify(x)).join('\n') + '\n');
   fs.writeFileSync(path.join(dir, 'trainset.jsonl'), train.map((x) => JSON.stringify(x)).join('\n') + '\n');
   fs.writeFileSync(path.join(dir, 'split.json'), JSON.stringify({
     seed: SEED, held_out_fraction: HELD_OUT_FRACTION, compare_margin: COMPARE_MARGIN,
     facts: facts.length, held_out_facts: heldOut.size, items: items.length, train_rows: train.length,
+    buckets_declared: BUCKETS,
+    buckets_sampled: Object.fromEntries(Object.entries(buckets).map(([k, v]) => [k, v.length])),
+    pool_size: pool.length, pool_clean: clean.length, dropped_answer_in_question: leaky.length,
+    pool_by_bucket: {
+      headline: pool.filter((it) => it.form === 'E1' && it.taught && it.hop === 1).length,
+      korean: pool.filter((it) => it.form === 'E2' && it.taught && it.hop === 1).length,
+      ceiling: pool.filter((it) => it.form === 'P' && it.taught && it.hop === 1).length,
+      tripwire: pool.filter((it) => !it.taught && it.hop === 1 && it.form !== 'P').length,
+      multihop: pool.filter((it) => it.hop === 2 && it.taught).length,
+    },
+    study_fact_ids: studyFacts.slice().sort(),
     held_out_fact_ids: [...heldOut].sort(),
-    _note: 'Written before any model ran. The held-out set is a pure function of (seed, fact_id); re-running this file reproduces it exactly.',
+    _note: 'Written before any model ran. The held-out set and the 250-item sample are pure functions of (seed, fact_id); re-running this file reproduces both exactly. questions.jsonl is the sample the arms run; questions-pool.jsonl is everything it was drawn from, so the sampling can be checked rather than trusted.',
   }, null, 2) + '\n');
 
   // The fresh set, if a second pull exists. Same templates, same code, different facts.

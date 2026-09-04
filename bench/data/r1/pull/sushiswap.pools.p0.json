@@ -4,10 +4,10 @@
     "protocol": "sushiswap",
     "query": "pools",
     "query_hash": "43e6fc8cd35ccb64b67f8d85676c2db5f53fe5158cf0f809bb61bbba329ea649",
-    "block": 25902879,
+    "block": 25902936,
     "skip": 0,
     "first": 1000,
-    "gateway_ms": 2026
+    "gateway_ms": 2138
   },
   "data": {
     "liquidityPools": [
@@ -577,7 +577,7 @@
         "name": "SushiSwap Wrapped Ether/Rail",
         "symbol": "Wrapped Ether/Rail",
         "isSingleSided": false,
-        "totalValueLockedUSD": "984524.8689280048491241595465261028",
+        "totalValueLockedUSD": "988088.5977226527809091557449891428",
         "inputTokens": [
           {
             "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
@@ -591,7 +591,7 @@
             "name": "Rail",
             "symbol": "RAIL",
             "decimals": 18,
-            "lastPriceUSD": "2.008796942716389275307679796271415"
+            "lastPriceUSD": "2.015531038544451461145160590316409"
           }
         ],
         "outputToken": {
@@ -1240,14 +1240,14 @@
         "name": "SushiSwap SushiToken/Wrapped Ether",
         "symbol": "SushiToken/Wrapped Ether",
         "isSingleSided": false,
-        "totalValueLockedUSD": "245175.6779101594247305695440281556",
+        "totalValueLockedUSD": "246779.601468784353511668142836355",
         "inputTokens": [
           {
             "id": "0x6b3595068778dd592e39a122f4f5a5cf09c90fe2",
             "name": "SushiToken",
             "symbol": "SUSHI",
             "decimals": 18,
-            "lastPriceUSD": "0.1965608587048242993761049398821955"
+            "lastPriceUSD": "0.1979675626887173929987215343186058"
           },
           {
             "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
@@ -1342,7 +1342,7 @@
         "name": "SushiSwap Tokemak/Wrapped Ether",
         "symbol": "Tokemak/Wrapped Ether",
         "isSingleSided": false,
-        "totalValueLockedUSD": "221010.3523338400121246937329376079",
+        "totalValueLockedUSD": "222108.3871084554691903283366750898",
         "inputTokens": [
           {
             "id": "0x2e9d63788249371f1dfc918a52f8d799f4a38c94",
@@ -1444,7 +1444,7 @@
         "name": "SushiSwap Dai Stablecoin/Wrapped Ether",
         "symbol": "Dai Stablecoin/Wrapped Ether",
         "isSingleSided": false,
-        "totalValueLockedUSD": "200271.0864930080118242764211093431",
+        "totalValueLockedUSD": "200271.2098571785082546582468771699",
         "inputTokens": [
           {
             "id": "0x6b175474e89094c44da98b954eedeac495271d0f",
@@ -1546,7 +1546,7 @@
         "name": "SushiSwap Dai Stablecoin/Rail",
         "symbol": "Dai Stablecoin/Rail",
         "isSingleSided": false,
-        "totalValueLockedUSD": "184555.0793967963310723446315441413",
+        "totalValueLockedUSD": "185047.660808627712811513142764566",
         "inputTokens": [
           {
             "id": "0x6b175474e89094c44da98b954eedeac495271d0f",
@@ -1560,7 +1560,7 @@
             "name": "Rail",
             "symbol": "RAIL",
             "decimals": 18,
-            "lastPriceUSD": "2.008796942716389275307679796271415"
+            "lastPriceUSD": "2.015531038544451461145160590316409"
           }
         ],
         "outputToken": {
@@ -1852,14 +1852,14 @@
         "name": "SushiSwap Tokenlon/Tether USD",
         "symbol": "Tokenlon/Tether USD",
         "isSingleSided": false,
-        "totalValueLockedUSD": "136838.0832073271034228872146151041",
+        "totalValueLockedUSD": "136946.3943274180875184637488811297",
         "inputTokens": [
           {
             "id": "0x0000000000095413afc295d19edeb1ad7b71c952",
             "name": "Tokenlon",
             "symbol": "LON",
             "decimals": 18,
-            "lastPriceUSD": "0.1986330828805945719084895191858581"
+            "lastPriceUSD": "0.1989470703959182474886167387188068"
           },
           {
             "id": "0xdac17f958d2ee523a2206206994597c13d831ec7",
@@ -1903,14 +1903,14 @@
         "name": "SushiSwap yearn.finance/Wrapped Ether",
         "symbol": "yearn.finance/Wrapped Ether",
         "isSingleSided": false,
-        "totalValueLockedUSD": "128578.7643499629301434646592424692",
+        "totalValueLockedUSD": "128506.6870402688237081418301126313",
         "inputTokens": [
           {
             "id": "0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e",
             "name": "yearn.finance",
             "symbol": "YFI",
             "decimals": 18,
-            "lastPriceUSD": "2301.002723814405961545930915311091"
+            "lastPriceUSD": "2298.299893436225589978939206915852"
           },
           {
             "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
@@ -1954,7 +1954,7 @@
         "name": "SushiSwap Wrapped Ether/Ethereum Name Service",
         "symbol": "Wrapped Ether/Ethereum Name Service",
         "isSingleSided": false,
-        "totalValueLockedUSD": "119377.4353040748703652883102586455",
+        "totalValueLockedUSD": "120135.866558208027332651550670959",
         "inputTokens": [
           {
             "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
@@ -1968,7 +1968,7 @@
             "name": "Ethereum Name Service",
             "symbol": "ENS",
             "decimals": 18,
-            "lastPriceUSD": "5.781927796817719709710507282224967"
+            "lastPriceUSD": "5.821089774561750281170501663965"
           }
         ],
         "outputToken": {
@@ -2107,14 +2107,14 @@
         "name": "SushiSwap FTT/Wrapped Ether",
         "symbol": "FTT/Wrapped Ether",
         "isSingleSided": false,
-        "totalValueLockedUSD": "108782.1449305301821307548404871539",
+        "totalValueLockedUSD": "108740.0885991534535504370391725478",
         "inputTokens": [
           {
             "id": "0x50d1c9771902476076ecfc8b2a83ad6b9355a4c9",
             "name": "FTT",
             "symbol": "FTX Token",
             "decimals": 18,
-            "lastPriceUSD": "0.2198364852936001496440903909847969"
+            "lastPriceUSD": "0.2196657554588557350830988749294472"
           },
           {
             "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
@@ -2209,7 +2209,7 @@
         "name": "SushiSwap Spell Token/Wrapped Ether",
         "symbol": "Spell Token/Wrapped Ether",
         "isSingleSided": false,
-        "totalValueLockedUSD": "91847.93029739688234963407623043307",
+        "totalValueLockedUSD": "92356.84629118242540786433333194001",
         "inputTokens": [
           {
             "id": "0x090185f2135308bad17527004364ebcc2d37e5f6",
@@ -2413,14 +2413,14 @@
         "name": "SushiSwap Pendle/Wrapped Ether",
         "symbol": "Pendle/Wrapped Ether",
         "isSingleSided": false,
-        "totalValueLockedUSD": "78558.45361345233781777842969496275",
+        "totalValueLockedUSD": "78665.20126182381967848910403796507",
         "inputTokens": [
           {
             "id": "0x808507121b80c02388fad14726482e061b8da827",
             "name": "Pendle",
             "symbol": "PENDLE",
             "decimals": 18,
-            "lastPriceUSD": "1.95896992629817535231363454839838"
+            "lastPriceUSD": "1.964263554612604005071065438948393"
           },
           {
             "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
@@ -2566,14 +2566,14 @@
         "name": "SushiSwap Rail/renBTC",
         "symbol": "Rail/renBTC",
         "isSingleSided": false,
-        "totalValueLockedUSD": "69482.04306690064519071241973090436",
+        "totalValueLockedUSD": "70306.62187425515732337099473002893",
         "inputTokens": [
           {
             "id": "0xe76c6c83af64e4c60245d8c7de953df673a7a33d",
             "name": "Rail",
             "symbol": "RAIL",
             "decimals": 18,
-            "lastPriceUSD": "2.008796942716389275307679796271415"
+            "lastPriceUSD": "2.015531038544451461145160590316409"
           },
           {
             "id": "0xeb4c2781e4eba804ce9a9803c67d0893436bb27d",
@@ -3229,14 +3229,14 @@
         "name": "SushiSwap NEAR/Wrapped Ether",
         "symbol": "NEAR/Wrapped Ether",
         "isSingleSided": false,
-        "totalValueLockedUSD": "55288.2696627674233315703805607499",
+        "totalValueLockedUSD": "55230.28755605587152468927572183406",
         "inputTokens": [
           {
             "id": "0x85f17cf997934a597031b2e18a9ab6ebd4b9f6a4",
             "name": "NEAR",
             "symbol": "NEAR",
             "decimals": 24,
-            "lastPriceUSD": "1.965173193105452791063025610540223"
+            "lastPriceUSD": "1.961043021029868069678201133014678"
           },
           {
             "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
@@ -3287,7 +3287,7 @@
             "name": "Pendle",
             "symbol": "PENDLE",
             "decimals": 18,
-            "lastPriceUSD": "1.95896992629817535231363454839838"
+            "lastPriceUSD": "1.964263554612604005071065438948393"
           },
           {
             "id": "0xbf682bd31a615123d28d611b38b0ae3d2b675c2c",
@@ -3331,14 +3331,14 @@
         "name": "SushiSwap DIAToken/USD Coin",
         "symbol": "DIAToken/USD Coin",
         "isSingleSided": false,
-        "totalValueLockedUSD": "54421.98890407675164431703098445195",
+        "totalValueLockedUSD": "54464.25412312342167783877999969775",
         "inputTokens": [
           {
             "id": "0x84ca8bc7997272c7cfb4d0cd3d55cd942b3c9419",
             "name": "DIAToken",
             "symbol": "DIA",
             "decimals": 18,
-            "lastPriceUSD": "0.136493754681687072164377625905368"
+            "lastPriceUSD": "0.1367058777684565042094687357236048"
           },
           {
             "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
@@ -3480,31 +3480,31 @@
         }
       },
       {
-        "id": "0x164fe0239d703379bddde3c80e4d4800a1cd452b",
-        "name": "SushiSwap BTC 2x Flexible Leverage Index/Wrapped BTC",
-        "symbol": "BTC 2x Flexible Leverage Index/Wrapped BTC",
+        "id": "0xd75ea151a61d06868e31f8988d28dfe5e9df57b4",
+        "name": "SushiSwap /Wrapped Ether",
+        "symbol": "/Wrapped Ether",
         "isSingleSided": false,
-        "totalValueLockedUSD": "45137.5535879589512097787367800401",
+        "totalValueLockedUSD": "45336.86656646815208181525784587062",
         "inputTokens": [
           {
-            "id": "0x0b498ff89709d3838a063f1dfa463091f9801c2b",
-            "name": "BTC 2x Flexible Leverage Index",
-            "symbol": "BTC2x-FLI",
-            "decimals": 18,
+            "id": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+            "name": "",
+            "symbol": "",
+            "decimals": 0,
             "lastPriceUSD": "0"
           },
           {
-            "id": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
-            "name": "Wrapped BTC",
-            "symbol": "WBTC",
-            "decimals": 8,
-            "lastPriceUSD": "81045.9948195227451518411049250628"
+            "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "decimals": 18,
+            "lastPriceUSD": "2523.768773038611658930621170488914"
           }
         ],
         "outputToken": {
-          "id": "0x164fe0239d703379bddde3c80e4d4800a1cd452b",
-          "name": "BTC 2x Flexible Leverage Index/Wrapped BTC LP",
-          "symbol": "BTC 2x Flexible Leverage Index/Wrapped BTC",
+          "id": "0xd75ea151a61d06868e31f8988d28dfe5e9df57b4",
+          "name": "/Wrapped Ether LP",
+          "symbol": "/Wrapped Ether",
           "decimals": 18
         },
         "fees": [
@@ -3531,31 +3531,31 @@
         }
       },
       {
-        "id": "0xd75ea151a61d06868e31f8988d28dfe5e9df57b4",
-        "name": "SushiSwap /Wrapped Ether",
-        "symbol": "/Wrapped Ether",
+        "id": "0x164fe0239d703379bddde3c80e4d4800a1cd452b",
+        "name": "SushiSwap BTC 2x Flexible Leverage Index/Wrapped BTC",
+        "symbol": "BTC 2x Flexible Leverage Index/Wrapped BTC",
         "isSingleSided": false,
-        "totalValueLockedUSD": "44994.93022684878638103966217369441",
+        "totalValueLockedUSD": "45137.5535879589512097787367800401",
         "inputTokens": [
           {
-            "id": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
-            "name": "",
-            "symbol": "",
-            "decimals": 0,
+            "id": "0x0b498ff89709d3838a063f1dfa463091f9801c2b",
+            "name": "BTC 2x Flexible Leverage Index",
+            "symbol": "BTC2x-FLI",
+            "decimals": 18,
             "lastPriceUSD": "0"
           },
           {
-            "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-            "name": "Wrapped Ether",
-            "symbol": "WETH",
-            "decimals": 18,
-            "lastPriceUSD": "2523.768773038611658930621170488914"
+            "id": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+            "name": "Wrapped BTC",
+            "symbol": "WBTC",
+            "decimals": 8,
+            "lastPriceUSD": "81045.9948195227451518411049250628"
           }
         ],
         "outputToken": {
-          "id": "0xd75ea151a61d06868e31f8988d28dfe5e9df57b4",
-          "name": "/Wrapped Ether LP",
-          "symbol": "/Wrapped Ether",
+          "id": "0x164fe0239d703379bddde3c80e4d4800a1cd452b",
+          "name": "BTC 2x Flexible Leverage Index/Wrapped BTC LP",
+          "symbol": "BTC 2x Flexible Leverage Index/Wrapped BTC",
           "decimals": 18
         },
         "fees": [
@@ -3786,6 +3786,57 @@
         }
       },
       {
+        "id": "0x31d64f9403e82243e71c2af9d8f56c7dbe10c178",
+        "name": "SushiSwap NFTX/Wrapped Ether",
+        "symbol": "NFTX/Wrapped Ether",
+        "isSingleSided": false,
+        "totalValueLockedUSD": "40732.84036701599175330354570835488",
+        "inputTokens": [
+          {
+            "id": "0x87d73e916d7057945c9bcd8cdd94e42a6f47f776",
+            "name": "NFTX",
+            "symbol": "NFTX",
+            "decimals": 18,
+            "lastPriceUSD": "11.40575913232434690829697568739826"
+          },
+          {
+            "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "decimals": 18,
+            "lastPriceUSD": "2523.768773038611658930621170488914"
+          }
+        ],
+        "outputToken": {
+          "id": "0x31d64f9403e82243e71c2af9d8f56c7dbe10c178",
+          "name": "NFTX/Wrapped Ether LP",
+          "symbol": "NFTX/Wrapped Ether",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "FIXED_LP_FEE",
+            "feePercentage": "0.25"
+          },
+          {
+            "feeType": "FIXED_PROTOCOL_FEE",
+            "feePercentage": "0.05"
+          },
+          {
+            "feeType": "FIXED_TRADING_FEE",
+            "feePercentage": "0.3"
+          }
+        ],
+        "protocol": {
+          "id": "0xc0aee478e3658e2610c5f7a4a2e1777ce9e4f2ac",
+          "name": "SushiSwap",
+          "slug": "sushiswap",
+          "network": "MAINNET",
+          "type": "EXCHANGE",
+          "schemaVersion": "1.3.2"
+        }
+      },
+      {
         "id": "0x75507bab932fc47531bf1654f243c088a3fa1f69",
         "name": "SushiSwap Ninja Squad Token/Wrapped Ether",
         "symbol": "Ninja Squad Token/Wrapped Ether",
@@ -3913,57 +3964,6 @@
           "id": "0x23a9292830fc80db7f563edb28d2fe6fb47f8624",
           "name": "Spice/Wrapped Ether LP",
           "symbol": "Spice/Wrapped Ether",
-          "decimals": 18
-        },
-        "fees": [
-          {
-            "feeType": "FIXED_LP_FEE",
-            "feePercentage": "0.25"
-          },
-          {
-            "feeType": "FIXED_PROTOCOL_FEE",
-            "feePercentage": "0.05"
-          },
-          {
-            "feeType": "FIXED_TRADING_FEE",
-            "feePercentage": "0.3"
-          }
-        ],
-        "protocol": {
-          "id": "0xc0aee478e3658e2610c5f7a4a2e1777ce9e4f2ac",
-          "name": "SushiSwap",
-          "slug": "sushiswap",
-          "network": "MAINNET",
-          "type": "EXCHANGE",
-          "schemaVersion": "1.3.2"
-        }
-      },
-      {
-        "id": "0x31d64f9403e82243e71c2af9d8f56c7dbe10c178",
-        "name": "SushiSwap NFTX/Wrapped Ether",
-        "symbol": "NFTX/Wrapped Ether",
-        "isSingleSided": false,
-        "totalValueLockedUSD": "38726.69861297778590900929425671044",
-        "inputTokens": [
-          {
-            "id": "0x87d73e916d7057945c9bcd8cdd94e42a6f47f776",
-            "name": "NFTX",
-            "symbol": "NFTX",
-            "decimals": 18,
-            "lastPriceUSD": "10.85068853953671181059608818562215"
-          },
-          {
-            "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-            "name": "Wrapped Ether",
-            "symbol": "WETH",
-            "decimals": 18,
-            "lastPriceUSD": "2523.768773038611658930621170488914"
-          }
-        ],
-        "outputToken": {
-          "id": "0x31d64f9403e82243e71c2af9d8f56c7dbe10c178",
-          "name": "NFTX/Wrapped Ether LP",
-          "symbol": "NFTX/Wrapped Ether",
           "decimals": 18
         },
         "fees": [
@@ -4398,18 +4398,18 @@
         }
       },
       {
-        "id": "0xdafd66636e2561b0284edde37e42d192f2844d40",
-        "name": "SushiSwap Uniswap/Wrapped Ether",
-        "symbol": "Uniswap/Wrapped Ether",
+        "id": "0xa1d7b2d891e3a1f9ef4bbc5be20630c2feb1c470",
+        "name": "SushiSwap Synthetix Network Token/Wrapped Ether",
+        "symbol": "Synthetix Network Token/Wrapped Ether",
         "isSingleSided": false,
-        "totalValueLockedUSD": "33161.82904164236796167751201326625",
+        "totalValueLockedUSD": "33204.10751569027612970368711993028",
         "inputTokens": [
           {
-            "id": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
-            "name": "Uniswap",
-            "symbol": "UNI",
+            "id": "0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f",
+            "name": "Synthetix Network Token",
+            "symbol": "SNX",
             "decimals": 18,
-            "lastPriceUSD": "6.358758377236017057935183051358687"
+            "lastPriceUSD": "0.2119206923529897730280750330039302"
           },
           {
             "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
@@ -4420,9 +4420,9 @@
           }
         ],
         "outputToken": {
-          "id": "0xdafd66636e2561b0284edde37e42d192f2844d40",
-          "name": "Uniswap/Wrapped Ether LP",
-          "symbol": "Uniswap/Wrapped Ether",
+          "id": "0xa1d7b2d891e3a1f9ef4bbc5be20630c2feb1c470",
+          "name": "Synthetix Network Token/Wrapped Ether LP",
+          "symbol": "Synthetix Network Token/Wrapped Ether",
           "decimals": 18
         },
         "fees": [
@@ -4449,18 +4449,18 @@
         }
       },
       {
-        "id": "0xa1d7b2d891e3a1f9ef4bbc5be20630c2feb1c470",
-        "name": "SushiSwap Synthetix Network Token/Wrapped Ether",
-        "symbol": "Synthetix Network Token/Wrapped Ether",
+        "id": "0xdafd66636e2561b0284edde37e42d192f2844d40",
+        "name": "SushiSwap Uniswap/Wrapped Ether",
+        "symbol": "Uniswap/Wrapped Ether",
         "isSingleSided": false,
-        "totalValueLockedUSD": "33103.06218530632649531888587150975",
+        "totalValueLockedUSD": "33161.82904164236796167751201326625",
         "inputTokens": [
           {
-            "id": "0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f",
-            "name": "Synthetix Network Token",
-            "symbol": "SNX",
+            "id": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+            "name": "Uniswap",
+            "symbol": "UNI",
             "decimals": 18,
-            "lastPriceUSD": "0.2116180763058732659153048892555945"
+            "lastPriceUSD": "6.358758377236017057935183051358687"
           },
           {
             "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
@@ -4471,9 +4471,9 @@
           }
         ],
         "outputToken": {
-          "id": "0xa1d7b2d891e3a1f9ef4bbc5be20630c2feb1c470",
-          "name": "Synthetix Network Token/Wrapped Ether LP",
-          "symbol": "Synthetix Network Token/Wrapped Ether",
+          "id": "0xdafd66636e2561b0284edde37e42d192f2844d40",
+          "name": "Uniswap/Wrapped Ether LP",
+          "symbol": "Uniswap/Wrapped Ether",
           "decimals": 18
         },
         "fees": [
@@ -4759,7 +4759,7 @@
         "name": "SushiSwap Wrapped Ether/Ampleforth",
         "symbol": "Wrapped Ether/Ampleforth",
         "isSingleSided": false,
-        "totalValueLockedUSD": "30234.67646518586312028782819745854",
+        "totalValueLockedUSD": "30458.4179885811552104222215407263",
         "inputTokens": [
           {
             "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
@@ -5779,7 +5779,7 @@
         "name": "SushiSwap Wrapped Ether/Graph Token",
         "symbol": "Wrapped Ether/Graph Token",
         "isSingleSided": false,
-        "totalValueLockedUSD": "20631.03551494585204604726020556291",
+        "totalValueLockedUSD": "20701.92452517361087695614675267517",
         "inputTokens": [
           {
             "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
@@ -5793,7 +5793,7 @@
             "name": "Graph Token",
             "symbol": "GRT",
             "decimals": 18,
-            "lastPriceUSD": "0.017029156314433233494242936409229"
+            "lastPriceUSD": "0.01706641012589749510240517860337904"
           }
         ],
         "outputToken": {
@@ -6136,7 +6136,7 @@
         "name": "SushiSwap Wrapped Ether/Curve DAO Token",
         "symbol": "Wrapped Ether/Curve DAO Token",
         "isSingleSided": false,
-        "totalValueLockedUSD": "18646.77649733579419667554860131368",
+        "totalValueLockedUSD": "18600.66221921933674910502529924396",
         "inputTokens": [
           {
             "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
@@ -6150,7 +6150,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.3767702019240585935063518862117189"
+            "lastPriceUSD": "0.3749111438369642916662250244063517"
           }
         ],
         "outputToken": {
@@ -8019,6 +8019,57 @@
         }
       },
       {
+        "id": "0x18a797c7c70c1bf22fdee1c09062aba709cacf04",
+        "name": "SushiSwap Wrapped Ether/Rari Governance Token",
+        "symbol": "Wrapped Ether/Rari Governance Token",
+        "isSingleSided": false,
+        "totalValueLockedUSD": "12217.1853381457281310922811229671",
+        "inputTokens": [
+          {
+            "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "decimals": 18,
+            "lastPriceUSD": "2523.768773038611658930621170488914"
+          },
+          {
+            "id": "0xd291e7a03283640fdc51b121ac401383a46cc623",
+            "name": "Rari Governance Token",
+            "symbol": "RGT",
+            "decimals": 18,
+            "lastPriceUSD": "0.03191297523451003662562473205387443"
+          }
+        ],
+        "outputToken": {
+          "id": "0x18a797c7c70c1bf22fdee1c09062aba709cacf04",
+          "name": "Wrapped Ether/Rari Governance Token LP",
+          "symbol": "Wrapped Ether/Rari Governance Token",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "FIXED_LP_FEE",
+            "feePercentage": "0.25"
+          },
+          {
+            "feeType": "FIXED_PROTOCOL_FEE",
+            "feePercentage": "0.05"
+          },
+          {
+            "feeType": "FIXED_TRADING_FEE",
+            "feePercentage": "0.3"
+          }
+        ],
+        "protocol": {
+          "id": "0xc0aee478e3658e2610c5f7a4a2e1777ce9e4f2ac",
+          "name": "SushiSwap",
+          "slug": "sushiswap",
+          "network": "MAINNET",
+          "type": "EXCHANGE",
+          "schemaVersion": "1.3.2"
+        }
+      },
+      {
         "id": "0x4f8dfe04b61a0e20ed7fd7d7bac2b856b652ab95",
         "name": "SushiSwap LacyCoin/Tether USD",
         "symbol": "LacyCoin/Tether USD",
@@ -8146,57 +8197,6 @@
           "id": "0xc92a6738d66ebffbacff9310255b949eb960c21a",
           "name": "Wrapped Ether/Lift.Kitchen ETH LP",
           "symbol": "Wrapped Ether/Lift.Kitchen ETH",
-          "decimals": 18
-        },
-        "fees": [
-          {
-            "feeType": "FIXED_LP_FEE",
-            "feePercentage": "0.25"
-          },
-          {
-            "feeType": "FIXED_PROTOCOL_FEE",
-            "feePercentage": "0.05"
-          },
-          {
-            "feeType": "FIXED_TRADING_FEE",
-            "feePercentage": "0.3"
-          }
-        ],
-        "protocol": {
-          "id": "0xc0aee478e3658e2610c5f7a4a2e1777ce9e4f2ac",
-          "name": "SushiSwap",
-          "slug": "sushiswap",
-          "network": "MAINNET",
-          "type": "EXCHANGE",
-          "schemaVersion": "1.3.2"
-        }
-      },
-      {
-        "id": "0x18a797c7c70c1bf22fdee1c09062aba709cacf04",
-        "name": "SushiSwap Wrapped Ether/Rari Governance Token",
-        "symbol": "Wrapped Ether/Rari Governance Token",
-        "isSingleSided": false,
-        "totalValueLockedUSD": "11901.92067879393325789484167827941",
-        "inputTokens": [
-          {
-            "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-            "name": "Wrapped Ether",
-            "symbol": "WETH",
-            "decimals": 18,
-            "lastPriceUSD": "2523.768773038611658930621170488914"
-          },
-          {
-            "id": "0xd291e7a03283640fdc51b121ac401383a46cc623",
-            "name": "Rari Governance Token",
-            "symbol": "RGT",
-            "decimals": 18,
-            "lastPriceUSD": "0.03110491143487929464757331777520872"
-          }
-        ],
-        "outputToken": {
-          "id": "0x18a797c7c70c1bf22fdee1c09062aba709cacf04",
-          "name": "Wrapped Ether/Rari Governance Token LP",
-          "symbol": "Wrapped Ether/Rari Governance Token",
           "decimals": 18
         },
         "fees": [
@@ -8489,7 +8489,7 @@
             "name": "SushiToken",
             "symbol": "SUSHI",
             "decimals": 18,
-            "lastPriceUSD": "0.1965608587048242993761049398821955"
+            "lastPriceUSD": "0.1979675626887173929987215343186058"
           },
           {
             "id": "0x853d955acef822db058eb8505911ed77f175b99e",
@@ -10325,7 +10325,7 @@
             "name": "yearn.finance",
             "symbol": "YFI",
             "decimals": 18,
-            "lastPriceUSD": "2301.002723814405961545930915311091"
+            "lastPriceUSD": "2298.299893436225589978939206915852"
           },
           {
             "id": "0x948a9bb69d1d1202c160d26804aefff0634a492e",
@@ -10675,7 +10675,7 @@
         "name": "SushiSwap Fantom Token/Wrapped Ether",
         "symbol": "Fantom Token/Wrapped Ether",
         "isSingleSided": false,
-        "totalValueLockedUSD": "4606.882260717929510215888148517857",
+        "totalValueLockedUSD": "4669.85452207533070384317205521283",
         "inputTokens": [
           {
             "id": "0x4e15361fd6b4bb609fa63c81a2be19d873717870",
@@ -10696,57 +10696,6 @@
           "id": "0x0e26a21013f2f8c0362cfae608b4e69a249d5efc",
           "name": "Fantom Token/Wrapped Ether LP",
           "symbol": "Fantom Token/Wrapped Ether",
-          "decimals": 18
-        },
-        "fees": [
-          {
-            "feeType": "FIXED_LP_FEE",
-            "feePercentage": "0.25"
-          },
-          {
-            "feeType": "FIXED_PROTOCOL_FEE",
-            "feePercentage": "0.05"
-          },
-          {
-            "feeType": "FIXED_TRADING_FEE",
-            "feePercentage": "0.3"
-          }
-        ],
-        "protocol": {
-          "id": "0xc0aee478e3658e2610c5f7a4a2e1777ce9e4f2ac",
-          "name": "SushiSwap",
-          "slug": "sushiswap",
-          "network": "MAINNET",
-          "type": "EXCHANGE",
-          "schemaVersion": "1.3.2"
-        }
-      },
-      {
-        "id": "0x295685c8fe08d8192981d21ea1fe856a07443920",
-        "name": "SushiSwap Wrapped Ether/Gods Unchained",
-        "symbol": "Wrapped Ether/Gods Unchained",
-        "isSingleSided": false,
-        "totalValueLockedUSD": "4568.844572344936388309195904144339",
-        "inputTokens": [
-          {
-            "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-            "name": "Wrapped Ether",
-            "symbol": "WETH",
-            "decimals": 18,
-            "lastPriceUSD": "2523.768773038611658930621170488914"
-          },
-          {
-            "id": "0xccc8cb5229b0ac8069c51fd58367fd1e622afd97",
-            "name": "Gods Unchained",
-            "symbol": "GODS",
-            "decimals": 18,
-            "lastPriceUSD": "0"
-          }
-        ],
-        "outputToken": {
-          "id": "0x295685c8fe08d8192981d21ea1fe856a07443920",
-          "name": "Wrapped Ether/Gods Unchained LP",
-          "symbol": "Wrapped Ether/Gods Unchained",
           "decimals": 18
         },
         "fees": [
@@ -10926,6 +10875,57 @@
         }
       },
       {
+        "id": "0x295685c8fe08d8192981d21ea1fe856a07443920",
+        "name": "SushiSwap Wrapped Ether/Gods Unchained",
+        "symbol": "Wrapped Ether/Gods Unchained",
+        "isSingleSided": false,
+        "totalValueLockedUSD": "4501.365157784085206777031895299159",
+        "inputTokens": [
+          {
+            "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "decimals": 18,
+            "lastPriceUSD": "2523.768773038611658930621170488914"
+          },
+          {
+            "id": "0xccc8cb5229b0ac8069c51fd58367fd1e622afd97",
+            "name": "Gods Unchained",
+            "symbol": "GODS",
+            "decimals": 18,
+            "lastPriceUSD": "0"
+          }
+        ],
+        "outputToken": {
+          "id": "0x295685c8fe08d8192981d21ea1fe856a07443920",
+          "name": "Wrapped Ether/Gods Unchained LP",
+          "symbol": "Wrapped Ether/Gods Unchained",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "FIXED_LP_FEE",
+            "feePercentage": "0.25"
+          },
+          {
+            "feeType": "FIXED_PROTOCOL_FEE",
+            "feePercentage": "0.05"
+          },
+          {
+            "feeType": "FIXED_TRADING_FEE",
+            "feePercentage": "0.3"
+          }
+        ],
+        "protocol": {
+          "id": "0xc0aee478e3658e2610c5f7a4a2e1777ce9e4f2ac",
+          "name": "SushiSwap",
+          "slug": "sushiswap",
+          "network": "MAINNET",
+          "type": "EXCHANGE",
+          "schemaVersion": "1.3.2"
+        }
+      },
+      {
         "id": "0xe44d8c3ac358f5bff7e3e16ac0432faae6819a51",
         "name": "SushiSwap Wrapped Ether/canna",
         "symbol": "Wrapped Ether/canna",
@@ -11039,7 +11039,7 @@
             "name": "yearn.finance",
             "symbol": "YFI",
             "decimals": 18,
-            "lastPriceUSD": "2301.002723814405961545930915311091"
+            "lastPriceUSD": "2298.299893436225589978939206915852"
           },
           {
             "id": "0xbcda9e0658f4eecf56a0bd099e6dbc0c91f6a8c2",
@@ -12525,7 +12525,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.3767702019240585935063518862117189"
+            "lastPriceUSD": "0.3749111438369642916662250244063517"
           }
         ],
         "outputToken": {
@@ -14041,7 +14041,7 @@
         "name": "SushiSwap USD Coin/Sake",
         "symbol": "USD Coin/Sake",
         "isSingleSided": false,
-        "totalValueLockedUSD": "2622.765882",
+        "totalValueLockedUSD": "2629.519844",
         "inputTokens": [
           {
             "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
@@ -16230,31 +16230,31 @@
         }
       },
       {
-        "id": "0xb12aa722a3a4566645f079b6f10c89a3205b6c2c",
-        "name": "SushiSwap DefiDollar DAO/Wrapped Ether",
-        "symbol": "DefiDollar DAO/Wrapped Ether",
+        "id": "0xfed8e81bd0fba2664e9bd9abfaffb77828f959b7",
+        "name": "SushiSwap Wrapped Ether/Sake",
+        "symbol": "Wrapped Ether/Sake",
         "isSingleSided": false,
-        "totalValueLockedUSD": "1920.194842689541212285770133963581",
+        "totalValueLockedUSD": "1932.857384200030921536908671856949",
         "inputTokens": [
-          {
-            "id": "0x20c36f062a31865bed8a5b1e512d9a1a20aa333a",
-            "name": "DefiDollar DAO",
-            "symbol": "DFD",
-            "decimals": 18,
-            "lastPriceUSD": "0"
-          },
           {
             "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
             "name": "Wrapped Ether",
             "symbol": "WETH",
             "decimals": 18,
             "lastPriceUSD": "2523.768773038611658930621170488914"
+          },
+          {
+            "id": "0xe9f84de264e91529af07fa2c746e934397810334",
+            "name": "Sake",
+            "symbol": "SAK3",
+            "decimals": 18,
+            "lastPriceUSD": "0"
           }
         ],
         "outputToken": {
-          "id": "0xb12aa722a3a4566645f079b6f10c89a3205b6c2c",
-          "name": "DefiDollar DAO/Wrapped Ether LP",
-          "symbol": "DefiDollar DAO/Wrapped Ether",
+          "id": "0xfed8e81bd0fba2664e9bd9abfaffb77828f959b7",
+          "name": "Wrapped Ether/Sake LP",
+          "symbol": "Wrapped Ether/Sake",
           "decimals": 18
         },
         "fees": [
@@ -16281,31 +16281,31 @@
         }
       },
       {
-        "id": "0xfed8e81bd0fba2664e9bd9abfaffb77828f959b7",
-        "name": "SushiSwap Wrapped Ether/Sake",
-        "symbol": "Wrapped Ether/Sake",
+        "id": "0xb12aa722a3a4566645f079b6f10c89a3205b6c2c",
+        "name": "SushiSwap DefiDollar DAO/Wrapped Ether",
+        "symbol": "DefiDollar DAO/Wrapped Ether",
         "isSingleSided": false,
-        "totalValueLockedUSD": "1918.20491069894441133044595831627",
+        "totalValueLockedUSD": "1920.194842689541212285770133963581",
         "inputTokens": [
+          {
+            "id": "0x20c36f062a31865bed8a5b1e512d9a1a20aa333a",
+            "name": "DefiDollar DAO",
+            "symbol": "DFD",
+            "decimals": 18,
+            "lastPriceUSD": "0"
+          },
           {
             "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
             "name": "Wrapped Ether",
             "symbol": "WETH",
             "decimals": 18,
             "lastPriceUSD": "2523.768773038611658930621170488914"
-          },
-          {
-            "id": "0xe9f84de264e91529af07fa2c746e934397810334",
-            "name": "Sake",
-            "symbol": "SAK3",
-            "decimals": 18,
-            "lastPriceUSD": "0"
           }
         ],
         "outputToken": {
-          "id": "0xfed8e81bd0fba2664e9bd9abfaffb77828f959b7",
-          "name": "Wrapped Ether/Sake LP",
-          "symbol": "Wrapped Ether/Sake",
+          "id": "0xb12aa722a3a4566645f079b6f10c89a3205b6c2c",
+          "name": "DefiDollar DAO/Wrapped Ether LP",
+          "symbol": "DefiDollar DAO/Wrapped Ether",
           "decimals": 18
         },
         "fees": [
@@ -16809,7 +16809,7 @@
             "name": "yearn.finance",
             "symbol": "YFI",
             "decimals": 18,
-            "lastPriceUSD": "2301.002723814405961545930915311091"
+            "lastPriceUSD": "2298.299893436225589978939206915852"
           }
         ],
         "outputToken": {
@@ -20168,7 +20168,7 @@
             "name": "Tokenlon",
             "symbol": "LON",
             "decimals": 18,
-            "lastPriceUSD": "0.1986330828805945719084895191858581"
+            "lastPriceUSD": "0.1989470703959182474886167387188068"
           },
           {
             "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
@@ -21086,7 +21086,7 @@
             "name": "SushiToken",
             "symbol": "SUSHI",
             "decimals": 18,
-            "lastPriceUSD": "0.1965608587048242993761049398821955"
+            "lastPriceUSD": "0.1979675626887173929987215343186058"
           },
           {
             "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
@@ -27563,7 +27563,7 @@
             "name": "SushiToken",
             "symbol": "SUSHI",
             "decimals": 18,
-            "lastPriceUSD": "0.1965608587048242993761049398821955"
+            "lastPriceUSD": "0.1979675626887173929987215343186058"
           },
           {
             "id": "0xdac17f958d2ee523a2206206994597c13d831ec7",
@@ -27723,7 +27723,7 @@
             "name": "SushiToken",
             "symbol": "SUSHI",
             "decimals": 18,
-            "lastPriceUSD": "0.1965608587048242993761049398821955"
+            "lastPriceUSD": "0.1979675626887173929987215343186058"
           }
         ],
         "outputToken": {
@@ -28430,7 +28430,7 @@
             "name": "SushiToken",
             "symbol": "SUSHI",
             "decimals": 18,
-            "lastPriceUSD": "0.1965608587048242993761049398821955"
+            "lastPriceUSD": "0.1979675626887173929987215343186058"
           },
           {
             "id": "0x8798249c2e607446efb7ad49ec89dd1865ff4272",
@@ -29304,7 +29304,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.3767702019240585935063518862117189"
+            "lastPriceUSD": "0.3749111438369642916662250244063517"
           }
         ],
         "outputToken": {
@@ -31650,7 +31650,7 @@
             "name": "Synthetix Network Token",
             "symbol": "SNX",
             "decimals": 18,
-            "lastPriceUSD": "0.2116180763058732659153048892555945"
+            "lastPriceUSD": "0.2119206923529897730280750330039302"
           }
         ],
         "outputToken": {
@@ -33887,7 +33887,7 @@
             "name": "SushiToken",
             "symbol": "SUSHI",
             "decimals": 18,
-            "lastPriceUSD": "0.1965608587048242993761049398821955"
+            "lastPriceUSD": "0.1979675626887173929987215343186058"
           },
           {
             "id": "0x81eb1e0acfd705c34e975397de7545b6a9f0be39",
@@ -37158,7 +37158,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.3767702019240585935063518862117189"
+            "lastPriceUSD": "0.3749111438369642916662250244063517"
           }
         ],
         "outputToken": {
@@ -39089,7 +39089,7 @@
             "name": "SushiToken",
             "symbol": "SUSHI",
             "decimals": 18,
-            "lastPriceUSD": "0.1965608587048242993761049398821955"
+            "lastPriceUSD": "0.1979675626887173929987215343186058"
           },
           {
             "id": "0x75de9fa3e18071eab22823d6c2bcecde759250ca",
@@ -39242,7 +39242,7 @@
             "name": "yearn.finance",
             "symbol": "YFI",
             "decimals": 18,
-            "lastPriceUSD": "2301.002723814405961545930915311091"
+            "lastPriceUSD": "2298.299893436225589978939206915852"
           },
           {
             "id": "0xd0660cd418a64a1d44e9214ad8e459324d8157f1",
@@ -39861,7 +39861,7 @@
             "name": "SushiToken",
             "symbol": "SUSHI",
             "decimals": 18,
-            "lastPriceUSD": "0.1965608587048242993761049398821955"
+            "lastPriceUSD": "0.1979675626887173929987215343186058"
           }
         ],
         "outputToken": {
@@ -41588,7 +41588,7 @@
             "name": "SushiToken",
             "symbol": "SUSHI",
             "decimals": 18,
-            "lastPriceUSD": "0.1965608587048242993761049398821955"
+            "lastPriceUSD": "0.1979675626887173929987215343186058"
           },
           {
             "id": "0x749b964f3dd571b177fc6e415a07f62b05047da4",
@@ -42207,7 +42207,7 @@
             "name": "SushiToken",
             "symbol": "SUSHI",
             "decimals": 18,
-            "lastPriceUSD": "0.1965608587048242993761049398821955"
+            "lastPriceUSD": "0.1979675626887173929987215343186058"
           }
         ],
         "outputToken": {
@@ -42666,7 +42666,7 @@
             "name": "NFTX",
             "symbol": "NFTX",
             "decimals": 18,
-            "lastPriceUSD": "10.85068853953671181059608818562215"
+            "lastPriceUSD": "11.40575913232434690829697568739826"
           }
         ],
         "outputToken": {
@@ -51014,7 +51014,7 @@
     ],
     "_meta": {
       "block": {
-        "number": 25902879,
+        "number": 25902936,
         "timestamp": null
       },
       "deployment": "Qmc9f8kuGoE8D3ME38ns2MCodYtSA4gHgyFRojdyK88tL6",

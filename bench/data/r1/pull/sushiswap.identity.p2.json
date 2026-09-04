@@ -4,10 +4,10 @@
     "protocol": "sushiswap",
     "query": "identity",
     "query_hash": "83680f3eaa380ba4b5cd75ee9b340689efd2a7ae37fa7be9105e2d4ee64b07dd",
-    "block": 25902879,
+    "block": 25902936,
     "skip": 2000,
     "first": 1000,
-    "gateway_ms": 311
+    "gateway_ms": 368
   },
   "data": {
     "tokens": [
@@ -4706,7 +4706,7 @@
         "name": "FTT",
         "symbol": "FTX Token",
         "decimals": 18,
-        "lastPriceUSD": "0.2198364852936001496440903909847969"
+        "lastPriceUSD": "0.2196657554588557350830988749294472"
       },
       {
         "id": "0x50daa111945c21d69802e5e466ce6a5176a63006",
@@ -7014,7 +7014,7 @@
     ],
     "_meta": {
       "block": {
-        "number": 25902879,
+        "number": 25902936,
         "timestamp": null
       },
       "deployment": "Qmc9f8kuGoE8D3ME38ns2MCodYtSA4gHgyFRojdyK88tL6",

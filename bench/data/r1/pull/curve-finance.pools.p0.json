@@ -4,10 +4,10 @@
     "protocol": "curve-finance",
     "query": "pools",
     "query_hash": "43e6fc8cd35ccb64b67f8d85676c2db5f53fe5158cf0f809bb61bbba329ea649",
-    "block": 25902879,
+    "block": 25902936,
     "skip": 0,
     "first": 1000,
-    "gateway_ms": 2501
+    "gateway_ms": 2485
   },
   "data": {
     "liquidityPools": [
@@ -132,7 +132,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           }
         ],
         "outputToken": {
@@ -828,15 +828,15 @@
         "fees": [
           {
             "feeType": "FIXED_LP_FEE",
-            "feePercentage": "0.341230755"
+            "feePercentage": "0.34129001"
           },
           {
             "feeType": "FIXED_PROTOCOL_FEE",
-            "feePercentage": "0.341230755"
+            "feePercentage": "0.34129001"
           },
           {
             "feeType": "FIXED_TRADING_FEE",
-            "feePercentage": "0.68246151"
+            "feePercentage": "0.68258002"
           }
         ],
         "protocol": {
@@ -1002,15 +1002,15 @@
         "fees": [
           {
             "feeType": "FIXED_LP_FEE",
-            "feePercentage": "0.06237606"
+            "feePercentage": "0.061856575"
           },
           {
             "feeType": "FIXED_PROTOCOL_FEE",
-            "feePercentage": "0.06237606"
+            "feePercentage": "0.061856575"
           },
           {
             "feeType": "FIXED_TRADING_FEE",
-            "feePercentage": "0.12475212"
+            "feePercentage": "0.12371315"
           }
         ],
         "protocol": {
@@ -1201,7 +1201,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           }
         ],
         "outputToken": {
@@ -1449,7 +1449,7 @@
             "name": "Precious Metals USD",
             "symbol": "pmUSD",
             "decimals": 18,
-            "lastPriceUSD": "0.484001606118162290326608"
+            "lastPriceUSD": "0.481817588589804797471664"
           },
           {
             "id": "0xe6a60d2886b11256c24c128210159133096e5ccf",
@@ -1635,15 +1635,15 @@
         "fees": [
           {
             "feeType": "FIXED_LP_FEE",
-            "feePercentage": "0.05522888"
+            "feePercentage": "0.054661685"
           },
           {
             "feeType": "FIXED_PROTOCOL_FEE",
-            "feePercentage": "0.05522888"
+            "feePercentage": "0.054661685"
           },
           {
             "feeType": "FIXED_TRADING_FEE",
-            "feePercentage": "0.11045776"
+            "feePercentage": "0.10932337"
           }
         ],
         "protocol": {
@@ -1973,7 +1973,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           },
           {
             "id": "0xfcc5c47be19d06bf83eb04298b026f81069ff65b",
@@ -2031,7 +2031,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           },
           {
             "id": "0xf939e0a03fb07f59a73314e73794be0e57ac1b4e",
@@ -2050,15 +2050,15 @@
         "fees": [
           {
             "feeType": "FIXED_LP_FEE",
-            "feePercentage": "0.02315726"
+            "feePercentage": "0.026484275"
           },
           {
             "feeType": "FIXED_PROTOCOL_FEE",
-            "feePercentage": "0.02315726"
+            "feePercentage": "0.026484275"
           },
           {
             "feeType": "FIXED_TRADING_FEE",
-            "feePercentage": "0.04631452"
+            "feePercentage": "0.05296855"
           }
         ],
         "protocol": {
@@ -4074,7 +4074,7 @@
         "fees": [
           {
             "feeType": "FIXED_LP_FEE",
-            "feePercentage": "0.24449238"
+            "feePercentage": "0.24548859"
           },
           {
             "feeType": "FIXED_PROTOCOL_FEE",
@@ -4082,7 +4082,7 @@
           },
           {
             "feeType": "FIXED_TRADING_FEE",
-            "feePercentage": "0.24449238"
+            "feePercentage": "0.24548859"
           }
         ],
         "protocol": {
@@ -4681,7 +4681,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           }
         ],
         "outputToken": {
@@ -4936,7 +4936,7 @@
             "name": "Convertible JPY Token",
             "symbol": "CJPY",
             "decimals": 18,
-            "lastPriceUSD": "0.005155"
+            "lastPriceUSD": "0.005382"
           },
           {
             "id": "0xf939e0a03fb07f59a73314e73794be0e57ac1b4e",
@@ -4955,15 +4955,15 @@
         "fees": [
           {
             "feeType": "FIXED_LP_FEE",
-            "feePercentage": "0.107321295"
+            "feePercentage": "0.10556865"
           },
           {
             "feeType": "FIXED_PROTOCOL_FEE",
-            "feePercentage": "0.107321295"
+            "feePercentage": "0.10556865"
           },
           {
             "feeType": "FIXED_TRADING_FEE",
-            "feePercentage": "0.21464259"
+            "feePercentage": "0.2111373"
           }
         ],
         "protocol": {
@@ -4994,7 +4994,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           }
         ],
         "outputToken": {
@@ -6411,15 +6411,15 @@
         "fees": [
           {
             "feeType": "FIXED_LP_FEE",
-            "feePercentage": "0.03925929"
+            "feePercentage": "0.041494645"
           },
           {
             "feeType": "FIXED_PROTOCOL_FEE",
-            "feePercentage": "0.03925929"
+            "feePercentage": "0.041494645"
           },
           {
             "feeType": "FIXED_TRADING_FEE",
-            "feePercentage": "0.07851858"
+            "feePercentage": "0.08298929"
           }
         ],
         "protocol": {
@@ -7139,15 +7139,15 @@
         "fees": [
           {
             "feeType": "FIXED_LP_FEE",
-            "feePercentage": "0.025938455"
+            "feePercentage": "0.027770125"
           },
           {
             "feeType": "FIXED_PROTOCOL_FEE",
-            "feePercentage": "0.025938455"
+            "feePercentage": "0.027770125"
           },
           {
             "feeType": "FIXED_TRADING_FEE",
-            "feePercentage": "0.05187691"
+            "feePercentage": "0.05554025"
           }
         ],
         "protocol": {
@@ -8001,7 +8001,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           },
           {
             "id": "0xfcc5c47be19d06bf83eb04298b026f81069ff65b",
@@ -9181,7 +9181,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           }
         ],
         "outputToken": {
@@ -9960,7 +9960,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           }
         ],
         "outputToken": {
@@ -10795,15 +10795,15 @@
         "fees": [
           {
             "feeType": "FIXED_LP_FEE",
-            "feePercentage": "0.171410105"
+            "feePercentage": "0.16922119"
           },
           {
             "feeType": "FIXED_PROTOCOL_FEE",
-            "feePercentage": "0.171410105"
+            "feePercentage": "0.16922119"
           },
           {
             "feeType": "FIXED_TRADING_FEE",
-            "feePercentage": "0.34282021"
+            "feePercentage": "0.33844238"
           }
         ],
         "protocol": {
@@ -13447,7 +13447,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           },
           {
             "id": "0xfcc5c47be19d06bf83eb04298b026f81069ff65b",
@@ -13837,15 +13837,15 @@
         "fees": [
           {
             "feeType": "FIXED_LP_FEE",
-            "feePercentage": "0.031193075"
+            "feePercentage": "0.02791368"
           },
           {
             "feeType": "FIXED_PROTOCOL_FEE",
-            "feePercentage": "0.031193075"
+            "feePercentage": "0.02791368"
           },
           {
             "feeType": "FIXED_TRADING_FEE",
-            "feePercentage": "0.06238615"
+            "feePercentage": "0.05582736"
           }
         ],
         "protocol": {
@@ -14857,15 +14857,15 @@
         "fees": [
           {
             "feeType": "FIXED_LP_FEE",
-            "feePercentage": "0.167786575"
+            "feePercentage": "0.181553185"
           },
           {
             "feeType": "FIXED_PROTOCOL_FEE",
-            "feePercentage": "0.167786575"
+            "feePercentage": "0.181553185"
           },
           {
             "feeType": "FIXED_TRADING_FEE",
-            "feePercentage": "0.33557315"
+            "feePercentage": "0.36310637"
           }
         ],
         "protocol": {
@@ -14908,15 +14908,15 @@
         "fees": [
           {
             "feeType": "FIXED_LP_FEE",
-            "feePercentage": "0.169652485"
+            "feePercentage": "0.172017345"
           },
           {
             "feeType": "FIXED_PROTOCOL_FEE",
-            "feePercentage": "0.169652485"
+            "feePercentage": "0.172017345"
           },
           {
             "feeType": "FIXED_TRADING_FEE",
-            "feePercentage": "0.33930497"
+            "feePercentage": "0.34403469"
           }
         ],
         "protocol": {
@@ -15578,15 +15578,15 @@
         "fees": [
           {
             "feeType": "FIXED_LP_FEE",
-            "feePercentage": "0.21708161"
+            "feePercentage": "0.21778183"
           },
           {
             "feeType": "FIXED_PROTOCOL_FEE",
-            "feePercentage": "0.21708161"
+            "feePercentage": "0.21778183"
           },
           {
             "feeType": "FIXED_TRADING_FEE",
-            "feePercentage": "0.43416322"
+            "feePercentage": "0.43556366"
           }
         ],
         "protocol": {
@@ -16396,7 +16396,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           }
         ],
         "outputToken": {
@@ -16600,7 +16600,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           },
           {
             "id": "0xf939e0a03fb07f59a73314e73794be0e57ac1b4e",
@@ -16619,15 +16619,15 @@
         "fees": [
           {
             "feeType": "FIXED_LP_FEE",
-            "feePercentage": "0.087260715"
+            "feePercentage": "0.091300585"
           },
           {
             "feeType": "FIXED_PROTOCOL_FEE",
-            "feePercentage": "0.087260715"
+            "feePercentage": "0.091300585"
           },
           {
             "feeType": "FIXED_TRADING_FEE",
-            "feePercentage": "0.17452143"
+            "feePercentage": "0.18260117"
           }
         ],
         "protocol": {
@@ -16670,15 +16670,15 @@
         "fees": [
           {
             "feeType": "FIXED_LP_FEE",
-            "feePercentage": "0.224490115"
+            "feePercentage": "0.22449384"
           },
           {
             "feeType": "FIXED_PROTOCOL_FEE",
-            "feePercentage": "0.224490115"
+            "feePercentage": "0.22449384"
           },
           {
             "feeType": "FIXED_TRADING_FEE",
-            "feePercentage": "0.44898023"
+            "feePercentage": "0.44898768"
           }
         ],
         "protocol": {
@@ -16983,15 +16983,15 @@
         "fees": [
           {
             "feeType": "FIXED_LP_FEE",
-            "feePercentage": "0.189946695"
+            "feePercentage": "0.190300635"
           },
           {
             "feeType": "FIXED_PROTOCOL_FEE",
-            "feePercentage": "0.189946695"
+            "feePercentage": "0.190300635"
           },
           {
             "feeType": "FIXED_TRADING_FEE",
-            "feePercentage": "0.37989339"
+            "feePercentage": "0.38060127"
           }
         ],
         "protocol": {
@@ -17219,7 +17219,7 @@
             "name": "Convertible JPY Token",
             "symbol": "CJPY",
             "decimals": 18,
-            "lastPriceUSD": "0.005155"
+            "lastPriceUSD": "0.005382"
           },
           {
             "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
@@ -17238,15 +17238,15 @@
         "fees": [
           {
             "feeType": "FIXED_LP_FEE",
-            "feePercentage": "0.21274021"
+            "feePercentage": "0.213263085"
           },
           {
             "feeType": "FIXED_PROTOCOL_FEE",
-            "feePercentage": "0.21274021"
+            "feePercentage": "0.213263085"
           },
           {
             "feeType": "FIXED_TRADING_FEE",
-            "feePercentage": "0.42548042"
+            "feePercentage": "0.42652617"
           }
         ],
         "protocol": {
@@ -17889,7 +17889,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           }
         ],
         "outputToken": {
@@ -20008,7 +20008,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           }
         ],
         "outputToken": {
@@ -20977,7 +20977,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           }
         ],
         "outputToken": {
@@ -23163,7 +23163,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           },
           {
             "id": "0xfcc5c47be19d06bf83eb04298b026f81069ff65b",
@@ -23622,7 +23622,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           },
           {
             "id": "0xfcc5c47be19d06bf83eb04298b026f81069ff65b",
@@ -23826,7 +23826,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           },
           {
             "id": "0xfcc5c47be19d06bf83eb04298b026f81069ff65b",
@@ -25669,7 +25669,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           }
         ],
         "outputToken": {
@@ -25713,7 +25713,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           },
           {
             "id": "0xdbdb4d16eda451d0503b854cf79d55697f90c8df",
@@ -26536,7 +26536,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           }
         ],
         "outputToken": {
@@ -28181,7 +28181,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           }
         ],
         "outputToken": {
@@ -30293,7 +30293,7 @@
             "name": "Precious Metals USD",
             "symbol": "pmUSD",
             "decimals": 18,
-            "lastPriceUSD": "0.484001606118162290326608"
+            "lastPriceUSD": "0.481817588589804797471664"
           },
           {
             "id": "0xf939e0a03fb07f59a73314e73794be0e57ac1b4e",
@@ -37297,7 +37297,7 @@
             "name": "Precious Metals USD",
             "symbol": "pmUSD",
             "decimals": 18,
-            "lastPriceUSD": "0.484001606118162290326608"
+            "lastPriceUSD": "0.481817588589804797471664"
           },
           {
             "id": "0xcacd6fd266af91b8aed52accc382b4e165586e29",
@@ -43495,7 +43495,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           }
         ],
         "outputToken": {
@@ -43597,7 +43597,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           }
         ],
         "outputToken": {
@@ -47535,7 +47535,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           }
         ],
         "outputToken": {
@@ -47637,7 +47637,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           }
         ],
         "outputToken": {
@@ -47688,7 +47688,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           }
         ],
         "outputToken": {
@@ -49647,7 +49647,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           }
         ],
         "outputToken": {
@@ -50514,7 +50514,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.374992"
+            "lastPriceUSD": "0.375217"
           }
         ],
         "outputToken": {
@@ -51015,7 +51015,7 @@
     ],
     "_meta": {
       "block": {
-        "number": 25902879,
+        "number": 25902936,
         "timestamp": null
       },
       "deployment": "QmRpHzsesvv7VTrKjEuutiZ7xEfDfd6jH4mgSeDDbUDVRN",

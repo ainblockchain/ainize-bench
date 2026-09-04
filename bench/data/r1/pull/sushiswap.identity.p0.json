@@ -4,10 +4,10 @@
     "protocol": "sushiswap",
     "query": "identity",
     "query_hash": "83680f3eaa380ba4b5cd75ee9b340689efd2a7ae37fa7be9105e2d4ee64b07dd",
-    "block": 25902879,
+    "block": 25902936,
     "skip": 0,
     "first": 1000,
-    "gateway_ms": 316
+    "gateway_ms": 1068
   },
   "data": {
     "tokens": [
@@ -30,7 +30,7 @@
         "name": "Tokenlon",
         "symbol": "LON",
         "decimals": 18,
-        "lastPriceUSD": "0.1986330828805945719084895191858581"
+        "lastPriceUSD": "0.1989470703959182474886167387188068"
       },
       {
         "id": "0x00000006e55a9364b657e3b91cd0411b4fd11ac2",
@@ -3026,7 +3026,7 @@
         "name": "yearn.finance",
         "symbol": "YFI",
         "decimals": 18,
-        "lastPriceUSD": "2301.002723814405961545930915311091"
+        "lastPriceUSD": "2298.299893436225589978939206915852"
       },
       {
         "id": "0x0bc5ae46c32d99c434b7383183aca16dd6e9bdc8",
@@ -7014,7 +7014,7 @@
     ],
     "_meta": {
       "block": {
-        "number": 25902879,
+        "number": 25902936,
         "timestamp": null
       },
       "deployment": "Qmc9f8kuGoE8D3ME38ns2MCodYtSA4gHgyFRojdyK88tL6",

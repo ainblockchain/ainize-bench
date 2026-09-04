@@ -4,64 +4,13 @@
     "protocol": "sushiswap",
     "query": "pools",
     "query_hash": "43e6fc8cd35ccb64b67f8d85676c2db5f53fe5158cf0f809bb61bbba329ea649",
-    "block": 25902879,
+    "block": 25902936,
     "skip": 3000,
     "first": 1000,
-    "gateway_ms": 755
+    "gateway_ms": 2144
   },
   "data": {
     "liquidityPools": [
-      {
-        "id": "0x71c0628d7d569ca8c8d7ff4002388e949b19ea55",
-        "name": "SushiSwap Espresso Systems/Wrapped Ether",
-        "symbol": "Espresso Systems/Wrapped Ether",
-        "isSingleSided": false,
-        "totalValueLockedUSD": "0.02362554247542903031216830117937457",
-        "inputTokens": [
-          {
-            "id": "0x162945a333cfc1048bbd7180bf50203588f48d7c",
-            "name": "Espresso Systems",
-            "symbol": "ESSO",
-            "decimals": 18,
-            "lastPriceUSD": "0"
-          },
-          {
-            "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-            "name": "Wrapped Ether",
-            "symbol": "WETH",
-            "decimals": 18,
-            "lastPriceUSD": "2523.768773038611658930621170488914"
-          }
-        ],
-        "outputToken": {
-          "id": "0x71c0628d7d569ca8c8d7ff4002388e949b19ea55",
-          "name": "Espresso Systems/Wrapped Ether LP",
-          "symbol": "Espresso Systems/Wrapped Ether",
-          "decimals": 18
-        },
-        "fees": [
-          {
-            "feeType": "FIXED_LP_FEE",
-            "feePercentage": "0.25"
-          },
-          {
-            "feeType": "FIXED_PROTOCOL_FEE",
-            "feePercentage": "0.05"
-          },
-          {
-            "feeType": "FIXED_TRADING_FEE",
-            "feePercentage": "0.3"
-          }
-        ],
-        "protocol": {
-          "id": "0xc0aee478e3658e2610c5f7a4a2e1777ce9e4f2ac",
-          "name": "SushiSwap",
-          "slug": "sushiswap",
-          "network": "MAINNET",
-          "type": "EXCHANGE",
-          "schemaVersion": "1.3.2"
-        }
-      },
       {
         "id": "0xedad92188448433a5e0102907d9bbf925ae62178",
         "name": "SushiSwap Along Came a Dragon/Wrapped Ether",
@@ -241,6 +190,57 @@
           "id": "0xecfccde752ec944065cda87566e90cd6ab66b46d",
           "name": "DumbWaysToDie/Wrapped Ether LP",
           "symbol": "DumbWaysToDie/Wrapped Ether",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "FIXED_LP_FEE",
+            "feePercentage": "0.25"
+          },
+          {
+            "feeType": "FIXED_PROTOCOL_FEE",
+            "feePercentage": "0.05"
+          },
+          {
+            "feeType": "FIXED_TRADING_FEE",
+            "feePercentage": "0.3"
+          }
+        ],
+        "protocol": {
+          "id": "0xc0aee478e3658e2610c5f7a4a2e1777ce9e4f2ac",
+          "name": "SushiSwap",
+          "slug": "sushiswap",
+          "network": "MAINNET",
+          "type": "EXCHANGE",
+          "schemaVersion": "1.3.2"
+        }
+      },
+      {
+        "id": "0x76b1f13d686e1c90c35044cd0897bbc7fd26b6b5",
+        "name": "SushiSwap Wrapped Ether/DashZ",
+        "symbol": "Wrapped Ether/DashZ",
+        "isSingleSided": false,
+        "totalValueLockedUSD": "0.02314000828575982947223754044781543",
+        "inputTokens": [
+          {
+            "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "decimals": 18,
+            "lastPriceUSD": "2523.768773038611658930621170488914"
+          },
+          {
+            "id": "0xc71dc15db034b88264df792e8c3121e860900ed8",
+            "name": "DashZ",
+            "symbol": "DASHZ",
+            "decimals": 18,
+            "lastPriceUSD": "0"
+          }
+        ],
+        "outputToken": {
+          "id": "0x76b1f13d686e1c90c35044cd0897bbc7fd26b6b5",
+          "name": "Wrapped Ether/DashZ LP",
+          "symbol": "Wrapped Ether/DashZ",
           "decimals": 18
         },
         "fees": [
@@ -4314,7 +4314,7 @@
             "name": "SushiToken",
             "symbol": "SUSHI",
             "decimals": 18,
-            "lastPriceUSD": "0.1965608587048242993761049398821955"
+            "lastPriceUSD": "0.1979675626887173929987215343186058"
           }
         ],
         "outputToken": {
@@ -8547,7 +8547,7 @@
             "name": "Graph Token",
             "symbol": "GRT",
             "decimals": 18,
-            "lastPriceUSD": "0.017029156314433233494242936409229"
+            "lastPriceUSD": "0.01706641012589749510240517860337904"
           }
         ],
         "outputToken": {
@@ -8948,7 +8948,7 @@
             "name": "NEAR",
             "symbol": "NEAR",
             "decimals": 24,
-            "lastPriceUSD": "1.965173193105452791063025610540223"
+            "lastPriceUSD": "1.961043021029868069678201133014678"
           },
           {
             "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
@@ -9516,7 +9516,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.3767702019240585935063518862117189"
+            "lastPriceUSD": "0.3749111438369642916662250244063517"
           }
         ],
         "outputToken": {
@@ -11855,7 +11855,7 @@
             "name": "SushiToken",
             "symbol": "SUSHI",
             "decimals": 18,
-            "lastPriceUSD": "0.1965608587048242993761049398821955"
+            "lastPriceUSD": "0.1979675626887173929987215343186058"
           },
           {
             "id": "0x8a727d058761f021ea100a1c7b92536ac27b762a",
@@ -14871,7 +14871,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.3767702019240585935063518862117189"
+            "lastPriceUSD": "0.3749111438369642916662250244063517"
           }
         ],
         "outputToken": {
@@ -16343,7 +16343,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.3767702019240585935063518862117189"
+            "lastPriceUSD": "0.3749111438369642916662250244063517"
           },
           {
             "id": "0xf3504e1ac58e333f013f1595c435c9ebefd47ede",
@@ -17319,7 +17319,7 @@
             "name": "SushiToken",
             "symbol": "SUSHI",
             "decimals": 18,
-            "lastPriceUSD": "0.1965608587048242993761049398821955"
+            "lastPriceUSD": "0.1979675626887173929987215343186058"
           }
         ],
         "outputToken": {
@@ -20226,7 +20226,7 @@
             "name": "SushiToken",
             "symbol": "SUSHI",
             "decimals": 18,
-            "lastPriceUSD": "0.1965608587048242993761049398821955"
+            "lastPriceUSD": "0.1979675626887173929987215343186058"
           }
         ],
         "outputToken": {
@@ -20525,7 +20525,7 @@
             "name": "SushiToken",
             "symbol": "SUSHI",
             "decimals": 18,
-            "lastPriceUSD": "0.1965608587048242993761049398821955"
+            "lastPriceUSD": "0.1979675626887173929987215343186058"
           },
           {
             "id": "0x9e32b13ce7f2e80a01932b42553652e053d6ed8e",
@@ -22164,7 +22164,7 @@
             "name": "Curve DAO Token",
             "symbol": "CRV",
             "decimals": 18,
-            "lastPriceUSD": "0.3767702019240585935063518862117189"
+            "lastPriceUSD": "0.3749111438369642916662250244063517"
           }
         ],
         "outputToken": {
@@ -23694,7 +23694,7 @@
             "name": "SushiToken",
             "symbol": "SUSHI",
             "decimals": 18,
-            "lastPriceUSD": "0.1965608587048242993761049398821955"
+            "lastPriceUSD": "0.1979675626887173929987215343186058"
           }
         ],
         "outputToken": {
@@ -24969,7 +24969,7 @@
             "name": "SushiToken",
             "symbol": "SUSHI",
             "decimals": 18,
-            "lastPriceUSD": "0.1965608587048242993761049398821955"
+            "lastPriceUSD": "0.1979675626887173929987215343186058"
           }
         ],
         "outputToken": {
@@ -25785,7 +25785,7 @@
             "name": "Graph Token",
             "symbol": "GRT",
             "decimals": 18,
-            "lastPriceUSD": "0.017029156314433233494242936409229"
+            "lastPriceUSD": "0.01706641012589749510240517860337904"
           }
         ],
         "outputToken": {
@@ -27971,7 +27971,7 @@
             "name": "SushiToken",
             "symbol": "SUSHI",
             "decimals": 18,
-            "lastPriceUSD": "0.1965608587048242993761049398821955"
+            "lastPriceUSD": "0.1979675626887173929987215343186058"
           },
           {
             "id": "0xe90ab0c4d0c3d971513c7852e5f67ec413e747c4",
@@ -31694,7 +31694,7 @@
             "name": "yearn.finance",
             "symbol": "YFI",
             "decimals": 18,
-            "lastPriceUSD": "2301.002723814405961545930915311091"
+            "lastPriceUSD": "2298.299893436225589978939206915852"
           },
           {
             "id": "0xe0839f9b9688a77924208ad509e29952dc660261",
@@ -36794,7 +36794,7 @@
             "name": "SushiToken",
             "symbol": "SUSHI",
             "decimals": 18,
-            "lastPriceUSD": "0.1965608587048242993761049398821955"
+            "lastPriceUSD": "0.1979675626887173929987215343186058"
           },
           {
             "id": "0xfdf888ccd94fc4a3971ff3c5ebaa47cff00445d0",
@@ -41697,7 +41697,7 @@
             "name": "SushiToken",
             "symbol": "SUSHI",
             "decimals": 18,
-            "lastPriceUSD": "0.1965608587048242993761049398821955"
+            "lastPriceUSD": "0.1979675626887173929987215343186058"
           }
         ],
         "outputToken": {
@@ -42622,57 +42622,6 @@
           "id": "0x3425b19bf4231f08bf8bef1b7f6d564af705a396",
           "name": "Wrapped Ether/Genesis Chaos Coin LP",
           "symbol": "Wrapped Ether/Genesis Chaos Coin",
-          "decimals": 18
-        },
-        "fees": [
-          {
-            "feeType": "FIXED_LP_FEE",
-            "feePercentage": "0.25"
-          },
-          {
-            "feeType": "FIXED_PROTOCOL_FEE",
-            "feePercentage": "0.05"
-          },
-          {
-            "feeType": "FIXED_TRADING_FEE",
-            "feePercentage": "0.3"
-          }
-        ],
-        "protocol": {
-          "id": "0xc0aee478e3658e2610c5f7a4a2e1777ce9e4f2ac",
-          "name": "SushiSwap",
-          "slug": "sushiswap",
-          "network": "MAINNET",
-          "type": "EXCHANGE",
-          "schemaVersion": "1.3.2"
-        }
-      },
-      {
-        "id": "0x2570a9a2a4553fa55a6949c22f23f601a3a70f9d",
-        "name": "SushiSwap ETH/Wrapped Ether",
-        "symbol": "ETH/Wrapped Ether",
-        "isSingleSided": false,
-        "totalValueLockedUSD": "0.000003478878378969756293849018575699535",
-        "inputTokens": [
-          {
-            "id": "0x18e9fa6b7bbdaba4ddbada8e6759d2f5a77c12cf",
-            "name": "ETH",
-            "symbol": "ETH",
-            "decimals": 18,
-            "lastPriceUSD": "0"
-          },
-          {
-            "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-            "name": "Wrapped Ether",
-            "symbol": "WETH",
-            "decimals": 18,
-            "lastPriceUSD": "2523.768773038611658930621170488914"
-          }
-        ],
-        "outputToken": {
-          "id": "0x2570a9a2a4553fa55a6949c22f23f601a3a70f9d",
-          "name": "ETH/Wrapped Ether LP",
-          "symbol": "ETH/Wrapped Ether",
           "decimals": 18
         },
         "fees": [
@@ -43730,7 +43679,7 @@
             "name": "Synthetix Network Token",
             "symbol": "SNX",
             "decimals": 18,
-            "lastPriceUSD": "0.2116180763058732659153048892555945"
+            "lastPriceUSD": "0.2119206923529897730280750330039302"
           },
           {
             "id": "0xe0839f9b9688a77924208ad509e29952dc660261",
@@ -47697,6 +47646,57 @@
         }
       },
       {
+        "id": "0x2570a9a2a4553fa55a6949c22f23f601a3a70f9d",
+        "name": "SushiSwap ETH/Wrapped Ether",
+        "symbol": "ETH/Wrapped Ether",
+        "isSingleSided": false,
+        "totalValueLockedUSD": "0.0000004762968332385864454774825256689378",
+        "inputTokens": [
+          {
+            "id": "0x18e9fa6b7bbdaba4ddbada8e6759d2f5a77c12cf",
+            "name": "ETH",
+            "symbol": "ETH",
+            "decimals": 18,
+            "lastPriceUSD": "0"
+          },
+          {
+            "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "decimals": 18,
+            "lastPriceUSD": "2523.768773038611658930621170488914"
+          }
+        ],
+        "outputToken": {
+          "id": "0x2570a9a2a4553fa55a6949c22f23f601a3a70f9d",
+          "name": "ETH/Wrapped Ether LP",
+          "symbol": "ETH/Wrapped Ether",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "FIXED_LP_FEE",
+            "feePercentage": "0.25"
+          },
+          {
+            "feeType": "FIXED_PROTOCOL_FEE",
+            "feePercentage": "0.05"
+          },
+          {
+            "feeType": "FIXED_TRADING_FEE",
+            "feePercentage": "0.3"
+          }
+        ],
+        "protocol": {
+          "id": "0xc0aee478e3658e2610c5f7a4a2e1777ce9e4f2ac",
+          "name": "SushiSwap",
+          "slug": "sushiswap",
+          "network": "MAINNET",
+          "type": "EXCHANGE",
+          "schemaVersion": "1.3.2"
+        }
+      },
+      {
         "id": "0x13f7a0f54cc896306551165e078b7e30cfc18fcf",
         "name": "SushiSwap ROTOR-new token/Wrapped Ether",
         "symbol": "ROTOR-new token/Wrapped Ether",
@@ -49442,7 +49442,7 @@
             "name": "yearn.finance",
             "symbol": "YFI",
             "decimals": 18,
-            "lastPriceUSD": "2301.002723814405961545930915311091"
+            "lastPriceUSD": "2298.299893436225589978939206915852"
           },
           {
             "id": "0x71b6296174c5f07d37cafd6e9b72ab5bb3f14fac",
@@ -50003,7 +50003,7 @@
             "name": "SushiToken",
             "symbol": "SUSHI",
             "decimals": 18,
-            "lastPriceUSD": "0.1965608587048242993761049398821955"
+            "lastPriceUSD": "0.1979675626887173929987215343186058"
           },
           {
             "id": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
@@ -50163,7 +50163,7 @@
             "name": "Synthetix Network Token",
             "symbol": "SNX",
             "decimals": 18,
-            "lastPriceUSD": "0.2116180763058732659153048892555945"
+            "lastPriceUSD": "0.2119206923529897730280750330039302"
           }
         ],
         "outputToken": {
@@ -51014,7 +51014,7 @@
     ],
     "_meta": {
       "block": {
-        "number": 25902879,
+        "number": 25902936,
         "timestamp": null
       },
       "deployment": "Qmc9f8kuGoE8D3ME38ns2MCodYtSA4gHgyFRojdyK88tL6",
