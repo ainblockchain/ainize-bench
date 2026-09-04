@@ -2,18 +2,30 @@
   "arm_a": {
     "n": 250,
     "incomplete": 0,
-    "verdict_disagreements": 7,
-    "d": 0.028,
+    "verdict_disagreements": 9,
+    "d": 0.036,
     "wilson": {
-      "lo": 0.013627884857773494,
-      "hi": 0.056658466945870976
+      "lo": 0.019053062687361857,
+      "hi": 0.06699114756028864
     },
-    "string_disagreement_rate": 0.136,
-    "abstain_flips": 7,
-    "abstain_flip_rate": 0.028,
+    "string_disagreement_rate": 0.164,
+    "abstain_flips": 9,
+    "abstain_flip_rate": 0.036,
     "answer_changes": 0,
     "answer_change_rate": 0,
     "examples": [
+      {
+        "id": "market_address:079e8dc63676.E1",
+        "a": "wrong",
+        "b": "abstain",
+        "seam": "abstain"
+      },
+      {
+        "id": "pool_tokens:897dd2b92f5b.E1",
+        "a": "wrong",
+        "b": "abstain",
+        "seam": "abstain"
+      },
       {
         "id": "pool_tokens:c0119e2d81a3.E1",
         "a": "abstain",
@@ -21,21 +33,9 @@
         "seam": "abstain"
       },
       {
-        "id": "vault_address:be9b65eabc8f.P",
+        "id": "vault_fee_pct:1580713be3f5.E1",
         "a": "wrong",
         "b": "abstain",
-        "seam": "abstain"
-      },
-      {
-        "id": "vault_asset:407420492426.E1",
-        "a": "wrong",
-        "b": "abstain",
-        "seam": "abstain"
-      },
-      {
-        "id": "vault_fee_pct:33454ce9bbe7.E1",
-        "a": "abstain",
-        "b": "hit",
         "seam": "abstain"
       },
       {
@@ -45,15 +45,21 @@
         "seam": "abstain"
       },
       {
-        "id": "vault_fee_pct:77bfb79e9fca.E1",
+        "id": "vault_fee_pct:68264a8f3117.E1",
         "a": "wrong",
         "b": "abstain",
         "seam": "abstain"
       },
       {
-        "id": "vault_fee_pct:c5218250c139.E1",
-        "a": "wrong",
-        "b": "abstain",
+        "id": "vault_fee_pct:77bfb79e9fca.E1",
+        "a": "abstain",
+        "b": "wrong",
+        "seam": "abstain"
+      },
+      {
+        "id": "vault_fee_pct:ab05eada7e65.E1",
+        "a": "abstain",
+        "b": "hit",
         "seam": "abstain"
       }
     ]
@@ -61,12 +67,18 @@
   "per_arm": {
     "A": {
       "n": 250,
-      "d": 0.028,
-      "abstain_flip_rate": 0.028,
+      "d": 0.036,
+      "abstain_flip_rate": 0.036,
       "answer_change_rate": 0
+    },
+    "B": {
+      "n": 250,
+      "d": 0.248,
+      "abstain_flip_rate": 0.188,
+      "answer_change_rate": 0.06
     }
   },
-  "threshold": 0.056658466945870976,
-  "computed_at": "2026-09-04T11:12:14.954Z",
+  "threshold": 0.06699114756028864,
+  "computed_at": "2026-09-04T16:38:23.305Z",
   "bridge": null
 }
