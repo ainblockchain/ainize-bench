@@ -3,7 +3,7 @@ The two system prompts, and the exact size of the asymmetry between them.
 Arms A and C read system-prompts/plain.txt. Arms B and D read system-prompts/tools.txt.
 
 plain.txt is a byte-exact PREFIX of tools.txt: 7 lines, 358 bytes.
-tools.txt is that prefix plus 45 appended lines, 3095 bytes total.
+tools.txt is that prefix plus 48 appended lines, 3327 bytes total.
 
 Nothing in the shared prefix differs. A tool arm has to be told it has tools, so the appended block is
 unavoidable; publishing its exact size here is how that asymmetry stays a measured fact instead of an
@@ -31,6 +31,21 @@ symbol` — 13 of 16 items in the first fixed chunk carried that signature. Corr
 distinguishing fields are named, and the model is told to read the schema when the question is not about a
 vault. Measured cost of the error was budget, not accuracy: the model was cut off mid-investigation.
 
+AUDITED LINE BY LINE, 2026-09-04, every sentence treated as a claim needing evidence rather than as
+instruction. Ground truth is pipeline/queries/{vaults,markets,pools}.graphql — the queries the pull actually
+executed, so every field in them provably exists.
+
+  worked example        asked for `rates { rate side type }` on a VAULT. The pull requests `fees` from vaults
+                        and `rates` from markets; `rates` was never requested from a vault. The example is the
+                        first thing the model copies, so an invalid field there costs a tool call on the very
+                        first query of a vault item — 117 of the 250. Corrected to `fees { feeType feePercentage }`.
+  entity field lists    now enumerated from those queries: vaults have fees, markets have rates, pools take
+                        inputTokens (plural). Fees and rates are not interchangeable and the prompt says so.
+  field-name check      every identifier the prompt names is one the proven queries ran. Verified mechanically.
+  subgraph ids          23 in sources.json, all live at the pinned block, all base58 subgraph-id shaped, and
+                        the 12 the questions draw on are all present in the list — the model can reach every
+                        source the study asks about.
+
 --- appended to plain.txt to make tools.txt ---
 
 You have tools that read live indexed on-chain data from The Graph. Use them. Do not answer an on-chain
@@ -40,9 +55,12 @@ How to use them well:
 - The SUBGRAPH IDS below are already the right ones for this domain. Query them DIRECTLY with
   `execute_query_by_subgraph_id` — you do not need to search for them.
 - They all follow the Messari standard, but that standard has SEVERAL ENTITY TYPES and their fields differ.
-  Yield vaults are `vaults` (fields include name, symbol, inputToken, fees, rates). Lending markets are
-  `markets` — a Market has NO `symbol` field; it has name, inputToken, outputToken, rates. DEX pools are
-  `liquidityPools`, with `inputTokens` (plural). The worked example below is a VAULT query. If you are asked
+  Yield vaults are `vaults`: id, name, symbol, inputToken, outputToken, `fees { feeType feePercentage }`,
+  totalValueLockedUSD, pricePerShare. Lending markets are `markets`: id, name, inputToken, outputToken,
+  `rates { rate side type }`, maximumLTV — a Market has NO `symbol` and NO `fees`. DEX pools are
+  `liquidityPools`: id, name, symbol, `inputTokens` (PLURAL), outputToken, fees. Note that fees live on
+  vaults and pools while rates live on markets; they are not interchangeable. The example below is a VAULT
+  query. If you are asked
   about a lending market or a pool, read the schema first with `get_schema_by_subgraph_id` rather than
   reshaping the vault example — guessing a field name costs the same as reading the schema and tells you less.
 - These are subgraph ids, NOT deployment ids. `execute_query_by_deployment_id` and `get_schema_by_deployment_id`
@@ -74,6 +92,6 @@ A worked example against the standardized yield-vault schema — the shape a goo
       symbol
       inputToken { id symbol decimals }
       totalValueLockedUSD
-      rates { rate side type }
+      fees { feeType feePercentage }
     }
   }

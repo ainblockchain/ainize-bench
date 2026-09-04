@@ -13,9 +13,12 @@ How to use them well:
 - The SUBGRAPH IDS below are already the right ones for this domain. Query them DIRECTLY with
   `execute_query_by_subgraph_id` — you do not need to search for them.
 - They all follow the Messari standard, but that standard has SEVERAL ENTITY TYPES and their fields differ.
-  Yield vaults are `vaults` (fields include name, symbol, inputToken, fees, rates). Lending markets are
-  `markets` — a Market has NO `symbol` field; it has name, inputToken, outputToken, rates. DEX pools are
-  `liquidityPools`, with `inputTokens` (plural). The worked example below is a VAULT query. If you are asked
+  Yield vaults are `vaults`: id, name, symbol, inputToken, outputToken, `fees { feeType feePercentage }`,
+  totalValueLockedUSD, pricePerShare. Lending markets are `markets`: id, name, inputToken, outputToken,
+  `rates { rate side type }`, maximumLTV — a Market has NO `symbol` and NO `fees`. DEX pools are
+  `liquidityPools`: id, name, symbol, `inputTokens` (PLURAL), outputToken, fees. Note that fees live on
+  vaults and pools while rates live on markets; they are not interchangeable. The example below is a VAULT
+  query. If you are asked
   about a lending market or a pool, read the schema first with `get_schema_by_subgraph_id` rather than
   reshaping the vault example — guessing a field name costs the same as reading the schema and tells you less.
 - These are subgraph ids, NOT deployment ids. `execute_query_by_deployment_id` and `get_schema_by_deployment_id`
@@ -47,6 +50,6 @@ A worked example against the standardized yield-vault schema — the shape a goo
       symbol
       inputToken { id symbol decimals }
       totalValueLockedUSD
-      rates { rate side type }
+      fees { feeType feePercentage }
     }
   }
