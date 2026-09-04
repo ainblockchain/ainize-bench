@@ -1,0 +1,41 @@
+{
+  "arm": "B",
+  "computed_at": "2026-09-04T16:38:44.969Z",
+  "n": 250,
+  "incomplete": 0,
+  "table": {
+    "failed_flip": 45,
+    "failed_clean": 145,
+    "ok_flip": 2,
+    "ok_clean": 58
+  },
+  "p_flip_given_tool_failed": {
+    "hits": 45,
+    "n": 190,
+    "rate": 0.23684210526315788,
+    "wilson": {
+      "lo": 0.18197993293256504,
+      "hi": 0.3021349319880711
+    }
+  },
+  "p_flip_given_tool_clean": {
+    "hits": 2,
+    "n": 60,
+    "rate": 0.03333333333333333,
+    "wilson": {
+      "lo": 0.009189126490150246,
+      "hi": 0.11363987528925378
+    }
+  },
+  "verdict": "UNDERPOWERED_TO_ATTRIBUTE",
+  "underpowered": true,
+  "separated": true,
+  "min_flips_per_row": 10,
+  "any_flip_secondary": 62,
+  "ambiguity": {
+    "ambiguous": 1,
+    "flipped": 47,
+    "joint": 1,
+    "interpretable": false
+  }
+}
