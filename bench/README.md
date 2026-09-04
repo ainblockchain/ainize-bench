@@ -291,6 +291,23 @@ whole thesis dies if a judge can say "you strawmanned The Graph".
      than 25% of items. Both, so neither statistic can be chosen for reading well.
   4. **Arm D takes the same budget.** D carries the tools too, and raising only B would confound the D-vs-B
      comparison with a parameter difference.
+
+  **RESULT, 500 completions at 20 calls / 25 turns / 240 s.** The not-binding test fails, so the summary
+  reports *arm B is budget-limited at 20 calls* as a finding and the budget is not raised again:
+
+  | | |
+  |---|---|
+  | tool calls | median **7**, mean 9.4 — median PASSES (≤ 12) |
+  | forced final | **149/500 = 30%** — FAILS (< 25% required) |
+  | turns | median 6, mean 9.1; no item near the turn cap that was not also at the call cap |
+  | context exhausted | 0/500 |
+
+  **The distribution is bimodal, and that is the result.** 172 of 500 completions finish in two calls or
+  fewer; 149 sit exactly at the cap; between 12 and 20 there is almost nothing. The tool loop is not
+  uniformly expensive — it is cheap on most items and hits a wall on 30% that more budget does not climb.
+  That is a claim about tool loops rather than about our parameter, it is what the two-call items at n=16
+  predicted, and it is more informative than either "8 was too few" or "20 was enough". Raising the budget
+  further would move the 149 nowhere: they are not running out of calls, they are failing to converge.
 - **Retries.** One retry on a transport error (5xx, timeout, connection reset). Never a retry because the
   answer was wrong. Retries are counted.
 - **Running out of window is a MISS, never an `error`.** Measured while building the runner: three tool calls
@@ -516,7 +533,31 @@ sceptical judge will accept.
 3. **One model, one domain, one host, one run window.** The two-repeat disagreement rate is the noise floor and
    is quoted.
 4. **Modelled costs, not invoices.** Every price is a published list price with a URL in `pricing.json`.
-5. **Whoever ran it wanted a particular answer.** The counter is not a promise; it is that the pinned block,
+5. **Arm B is seven times less stable than arm A, and only arm B changes its answer.** Measured, 500
+   completions each: arm A d = 0.0360 with abstain-flip 0.0360 and answer-change **0.0000**; arm B d = 0.2480
+   with abstain-flip 0.1880 and answer-change **0.0600**. Across two independent arm A runs — 1 000
+   completions — the model has never once changed WHICH answer it gives at temperature 0, only whether it
+   commits. Arm B changes the value itself on 6% of items. Every comparison involving arm B therefore carries
+   a wider instrument floor than one involving A or C, and it is arm B's own floor: using arm A's rate as a
+   shared floor would have understated arm B's instability sevenfold and built the error bars for a tool arm
+   out of an arm with no tools.
+
+6. **A pre-registered rule can be wrong in a way you can see and still must not be edited.** The attribution
+   analysis separates cleanly — P(flip | tool path failed) 0.2368 [0.1820, 0.3021] against P(flip | tool path
+   clean) 0.0333 [0.0092, 0.1136], intervals not overlapping — and the pre-registered verdict is
+   `UNDERPOWERED_TO_ATTRIBUTE`, because the clean row holds 2 flipped items against a declared floor of 10 and
+   the rule gives the floor precedence. The floor's stated rationale was about false NEGATIVES: single-digit
+   cells overlap regardless of the truth, so non-separation would be a statement about sample size wearing
+   the clothes of a statement about tool paths. That rationale does not apply to a positive result, so a
+   **one-sided** floor would have been the better design.
+
+   It was not changed. Rewriting a rule after watching it block a finding we would like to report is the same
+   move as choosing a threshold after seeing the delta, and being able to see exactly why the rule is wrong is
+   not a licence — it is what makes the temptation legible. The counts, the non-overlap and the
+   pre-registered verdict are all published; a reader weighs them. The design lesson is recorded here for the
+   next study rather than applied to this one.
+
+7. **Whoever ran it wanted a particular answer.** The counter is not a promise; it is that the pinned block,
    the raw responses, the transcripts and a scorer with a passing self-test are all committed, so re-scoring is
    cheaper than trusting us.
 
