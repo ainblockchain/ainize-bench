@@ -97,6 +97,26 @@ export function sumTokens(turns) {
   return { prompt_tokens: prompt, completion_tokens: completion, turns_with_usage: withUsage, turns: (turns ?? []).length };
 }
 
+/**
+ * The parts an item's wall clock is made of, for the latency picture src/chart.mjs draws (§6 asks for
+ * latency "including every tool round trip" beside model_ms "so model time and network time are separable").
+ * Three bands are recorded quantities and the fourth is the residual:
+ *
+ *   first_turn_ms   the FIRST model turn's wall time. The runner does not stream, so no time-to-first-token
+ *                   exists anywhere in the transcripts; this is the closest quantity that WAS measured, and
+ *                   the chart labels it as what it is (prefill + the first generation), never as TTFT.
+ *   tool_ms         the MCP round trips the loop actually waited on, summed from evidence.tool_results[].ms.
+ *   model_ms        already on the transcript; generation after the first turn is model_ms - first_turn_ms.
+ *   the residual    latency_ms - model_ms - tool_ms: scheduling, JSON, the loop's own overhead. The chart
+ *                   clamps it at zero and says so on the face of the chart rather than hiding the clamp.
+ */
+export function timingParts(t) {
+  const ev = t.evidence ?? {};
+  const first = (t.turns ?? []).find((x) => typeof x?.ms === 'number');
+  const tool_ms = (ev.tool_results ?? []).reduce((a, r) => a + (Number(r?.ms) || 0), 0);
+  return { first_turn_ms: first ? first.ms : null, tool_ms };
+}
+
 /** A tool call that costs a gateway query. pricing.json: "the MCP server issues one per executeQuery". */
 export const isExecutedQuery = (name) => /^execute_query/i.test(String(name ?? ''));
 
@@ -324,6 +344,7 @@ export function scoreUnits(transcripts, pricing) {
     const v = verdictFor(t);
     const tok = sumTokens(t.turns);
     const gateway_queries = (ev.tool_results ?? []).filter((r) => isExecutedQuery(r.name)).length;
+    const timing = timingParts(t);
     const { cost_usd, reason: cost_reason } = costOf({ ...tok, gateway_queries }, pricing);
     const miss = isMiss(v.verdict);
     const ch = miss && TOOL_ARMS.has(t.arm) ? missChannel(t) : { channel: null, note: null };
@@ -335,6 +356,7 @@ export function scoreUnits(transcripts, pricing) {
       final: t.final ?? null, truth: item.truth,
       answer_key: `${v.verdict}|${JSON.stringify(v.got ?? null)}`,
       latency_ms: t.latency_ms ?? null, model_ms: t.model_ms ?? ev.model_ms ?? null,
+      first_turn_ms: timing.first_turn_ms, tool_ms: timing.tool_ms,
       prompt_tokens: tok.prompt_tokens, completion_tokens: tok.completion_tokens,
       turns: tok.turns, turns_with_usage: tok.turns_with_usage,
       tool_calls: ev.tool_calls ?? 0, gateway_queries, tool_bytes_in: ev.tool_bytes_in ?? 0,
@@ -410,6 +432,22 @@ export function checkIntegrity(transcripts, runId) {
     if (JSON.stringify(w.truth) !== JSON.stringify(q.truth) || w.answer_type !== q.answer_type || w.question !== q.question) mismatches.push({ id: q.id, file: t._file });
   }
   return { checked: true, questions_file: qf, mismatches, unknown_ids: [...new Set(unknown)], ok: !mismatches.length && !unknown.length };
+}
+
+/**
+ * §9's stamps, which have to travel further than summary.md: "the scorer stamps SIMULATED PATCH — NOT A
+ * TRAINED MODEL into the summary header AND EVERY CHART SUBTITLE". src/chart.mjs calls this rather than
+ * re-deriving the rule, so a chart can never be less honest than the summary about what produced it. The
+ * VOID and integrity stamps are added by summarize() on top of these, because they need the scored numbers.
+ */
+export function provenanceStamps(provenance) {
+  const out = [];
+  if (provenance?.fixture) out.push('FIXTURE — SYNTHETIC TRANSCRIPTS, NOT A RUN');
+  if (provenance && provenance.patch && provenance.patch.real_training !== true && provenance.patch.backend !== 'none') out.push(`SIMULATED PATCH — NOT A TRAINED MODEL (backend: ${provenance.patch.backend})`);
+  if (!provenance) out.push('NO provenance.json — model, patch and block are unrecorded for this scoring');
+  if (provenance?.offline) out.push('OFFLINE RUN — the MCP transport was fault-injected to 503 for every call (§6)');
+  if (provenance?.restarts_detected > 0) out.push(`${provenance.restarts_detected} vLLM restart(s) detected during the run; ${provenance.chunks_rerun ?? 0} chunk(s) re-run (§4)`);
+  return out;
 }
 
 export function summarize({ units, transcripts, provenance, pricing, pricingPath, runDir, runId }) {
@@ -602,12 +640,7 @@ export function summarize({ units, transcripts, provenance, pricing, pricingPath
     return { ...base, delta_usd_per_question: delta, n_star: kprice / delta, reason: null };
   })();
 
-  const stamps = [];
-  if (provenance?.fixture) stamps.push('FIXTURE — SYNTHETIC TRANSCRIPTS, NOT A RUN');
-  if (provenance && provenance.patch && provenance.patch.real_training !== true && provenance.patch.backend !== 'none') stamps.push(`SIMULATED PATCH — NOT A TRAINED MODEL (backend: ${provenance.patch.backend})`);
-  if (!provenance) stamps.push('NO provenance.json — model, patch and block are unrecorded for this scoring');
-  if (provenance?.offline) stamps.push('OFFLINE RUN — the MCP transport was fault-injected to 503 for every call (§6)');
-  if (provenance?.restarts_detected > 0) stamps.push(`${provenance.restarts_detected} vLLM restart(s) detected during the run; ${provenance.chunks_rerun ?? 0} chunk(s) re-run (§4)`);
+  const stamps = provenanceStamps(provenance);
   const integrity = checkIntegrity(transcripts, runId);
   if (integrity.checked && !integrity.ok) stamps.push(`INTEGRITY: ${integrity.mismatches.length} transcript(s) carry a question row that does not match data/${runId}/questions.jsonl, and ${integrity.unknown_ids.length} id(s) are not in it`);
   if (VOID) stamps.unshift('RUN VOID — see the leakage tripwire');
@@ -824,6 +857,8 @@ export function renderMarkdown(s) {
   p(`Prices used: input ${s.pricing.model?.usd_per_1m_input_tokens ?? '—'} / 1M, output ${s.pricing.model?.usd_per_1m_output_tokens ?? '—'} / 1M, gateway ${s.pricing.graph?.usd_per_query ?? '—'} per query. ${s.pricing.model?.source ?? ''}`);
   p();
 
+  p('The same numbers are drawn by `node src/chart.mjs runs/<id>` into `runs/<id>/charts/`: the break-even crossing, the latency decomposition and the cumulative latency including arm C\'s one-time knowledge load, accuracy by arm × bucket with the tripwire held apart, and the miss decomposition above. Those charts read `results.json`, cross-check themselves against this file, and stamp any disagreement on their own face.');
+  p();
   p('## 6. Noise floor and run integrity');
   p();
   p(table(['', 'value'], [
@@ -861,7 +896,7 @@ export function renderMarkdown(s) {
 
 export function renderCsv(units) {
   const cols = ['arm', 'id', 'repeat', 'bucket', 'form', 'taught', 'hop', 'answer_type', 'verdict', 'partial', 'hit', 'scored',
-    'latency_ms', 'model_ms', 'prompt_tokens', 'completion_tokens', 'turns', 'tool_calls', 'gateway_queries', 'tool_bytes_in',
+    'latency_ms', 'model_ms', 'first_turn_ms', 'tool_ms', 'prompt_tokens', 'completion_tokens', 'turns', 'tool_calls', 'gateway_queries', 'tool_bytes_in',
     'tool_errors', 'retries', 'context_truncated', 'context_exhausted', 'context_evictions', 'prompt_tokens_peak',
     'budget_exhausted', 'forced_final', 'cost_usd', 'miss_channel', 'verdict_reason', 'final', 'truth'];
   const esc = (v) => {
