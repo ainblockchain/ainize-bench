@@ -58,6 +58,48 @@ function engineSnapshot(apiBase) {
   };
 }
 
+/**
+ * Is anything else using the serving engine right now?
+ *
+ * vLLM exposes `vllm:num_requests_running` and `vllm:num_requests_waiting` on /metrics. With
+ * --max-num-seqs 1 the engine serves ONE sequence at a time, so a second client does not slow us a little —
+ * it queues in front of us, and the wait lands inside our own per-item latency where it is indistinguishable
+ * from the model being slow. A run that cannot tell it was sharing the machine is the same class of defect
+ * this study has caught all day: a confident number measured under conditions that did not hold. Latency is
+ * a headline result here (§6), so this is not hygiene, it is the measurement's precondition.
+ */
+async function serverLoad(apiBase) {
+  try {
+    const r = await fetch(`${apiBase}/metrics`, { signal: AbortSignal.timeout(8000) });
+    if (!r.ok) return null;
+    const text = await r.text();
+    const num = (k) => { const m = text.match(new RegExp(`^vllm:${k}\\{[^}]*\\}\\s+([0-9.]+)$`, 'm')); return m ? Number(m[1]) : null; };
+    const running = num('num_requests_running'), waiting = num('num_requests_waiting');
+    if (running === null && waiting === null) return null;
+    return { running: running ?? 0, waiting: waiting ?? 0 };
+  } catch { return null; }
+}
+
+/** Sample the engine while WE have nothing in flight: anything seen is somebody else. */
+async function requireQuiet(apiBase, { samples = 5, gapMs = 1500, allowBusy = false } = {}) {
+  const seen = [];
+  for (let i = 0; i < samples; i++) {
+    const l = await serverLoad(apiBase);
+    if (l === null) return { checked: false, note: '/metrics unavailable — competing load could not be measured' };
+    seen.push(l);
+    if (i < samples - 1) await new Promise((r) => setTimeout(r, gapMs));
+  }
+  const busy = seen.filter((l) => l.running > 0 || l.waiting > 0);
+  const result = { checked: true, samples: seen, busy_samples: busy.length };
+  if (busy.length && !allowBusy) {
+    die(`the serving engine is not idle — ${busy.length} of ${samples} samples showed other traffic (${JSON.stringify(busy[0])}). ` +
+        `At --max-num-seqs 1 another client queues in front of every request and its wait lands inside our per-item latency. ` +
+        `Stop the other clients, or pass --allow-busy to measure anyway and have it recorded as contaminated.`);
+  }
+  result.contaminated_at_start = busy.length > 0;
+  return result;
+}
+
 const argv = (() => {
   const a = {}; const v = process.argv.slice(2);
   for (let i = 0; i < v.length; i++) {
@@ -205,6 +247,9 @@ async function main() {
 
   const vllm = new VLLM();
   const { model, maxModelLen } = await vllm.ready();
+  const quiet = await requireQuiet(vllm.base, { allowBusy: !!argv['allow-busy'] });
+  console.error(quiet.checked ? `engine idle check: ${quiet.busy_samples} of ${quiet.samples.length} samples showed other traffic` : `engine idle check: ${quiet.note}`);
+  const competing = [];
 
   const patchId = argv.patch ?? null;
   const needPatch = arms.some(armUsesPatch);
@@ -246,6 +291,8 @@ async function main() {
     engine_at_start: engineSnapshot(vllm.base), engine_at_end: null, engine_changed: null,
     /** Every apply/remove of the patch, timed. A per-node setup cost, never folded into per-item latency. */
     patch_state_changes: [],
+    /** Was the engine ours alone? Sampled before the run and after every chunk. */
+    engine_idle_check: quiet, competing_load: competing,
   };
 
   const write = (arm, q, rep, payload) => {
@@ -301,6 +348,12 @@ async function main() {
         console.error(`  !! table state lost during items ${start}..${start + chunk.length - 1} — re-applying and re-running the chunk`);
         await node.setApplied(patchId, wantApplied);
         if (attempt === 1) die('the table state could not be re-established twice in a row — this run is void (§4)');
+      }
+      // Between chunks nothing of ours is in flight, so any load here is somebody else's.
+      const l = await serverLoad(vllm.base);
+      if (l && (l.running > 0 || l.waiting > 0)) {
+        competing.push({ arm, at_item: start, ...l });
+        console.error(`  !! competing traffic on the engine at ${arm}:${start} — running ${l.running}, waiting ${l.waiting}`);
       }
       console.error(`  ${arm}: ${Math.min(start + CHUNK, questions.length)}/${questions.length}`);
     }
