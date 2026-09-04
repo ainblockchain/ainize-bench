@@ -1,0 +1,20 @@
+{
+  "_comment": "List prices used to MODEL cost per question. Nothing here was billed to us; every number is a published list price with its source URL. Change a price, re-run `node src/score.mjs`, and every cost column changes — no cost number is ever hand-written into a table.",
+  "model": {
+    "id": "Qwen3.8-Flash-Next",
+    "_note": "Served locally on :8002, so our marginal cost is electricity. For a comparable-cost table we price it at a public hosted rate for an open model of this size. Whoever re-runs may substitute their own provider; the ratio between arms is unaffected because all arms use the same model.",
+    "usd_per_1m_input_tokens": 0.20,
+    "usd_per_1m_output_tokens": 0.60,
+    "source": "PLACEHOLDER — set to the list price of the hosted provider you cite, and put the URL here before publishing."
+  },
+  "graph": {
+    "_note": "The Graph gateway bills per query against a query budget. Record the ACTUAL number of gateway queries the arm made (the MCP server issues one per executeQuery) and multiply.",
+    "usd_per_query": 0.00004,
+    "source": "PLACEHOLDER — set from thegraph.com pricing before publishing; the runner records the query count either way."
+  },
+  "knowledge": {
+    "_note": "What arm C's knowledge costs once, from the anchor being tested. Filled in by the runner from the catalog entry (anchor.price + anchor.currency); a CREDIT price must be converted at a declared rate or the break-even chart is drawn in CREDIT.",
+    "price": null,
+    "currency": null
+  }
+}
