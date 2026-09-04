@@ -65,8 +65,13 @@ export function noiseFloor(byItem) {
     if (va !== vb) { verdictDisagree++; if (examples.length < 5) examples.push({ id, a: va, b: vb }); }
   }
   const d = n ? verdictDisagree / n : 0;
-  const ci = wilson(verdictDisagree, n);
-  return { n, incomplete, verdict_disagreements: verdictDisagree, d, wilson: ci, string_disagreement_rate: n ? stringDisagree / n : 0, examples };
+  // wilson() returns a TUPLE [lo, hi], not an object. Reading `.hi` off it yields undefined, and
+  // `rate <= undefined` is false — so the bridge would have reported a confident FAIL against a threshold
+  // that did not exist. Destructured here, and asserted finite below, because a threshold that is silently
+  // undefined is the same species as every other silent failure this study has hit today.
+  const [lo, hi] = wilson(verdictDisagree, n);
+  if (!Number.isFinite(hi)) throw new Error(`wilson() gave a non-finite upper bound for ${verdictDisagree}/${n} — refusing to derive a threshold from it`);
+  return { n, incomplete, verdict_disagreements: verdictDisagree, d, wilson: { lo, hi }, string_disagreement_rate: n ? stringDisagree / n : 0, examples };
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
