@@ -112,6 +112,14 @@ being circular:
   **never trained on**. The headline accuracy is measured on `E1`/`E2` only. `P` is measured too and reported as
   the *memorisation ceiling* — the gap between `P` and `E1` is the generalisation cost, and reporting it is
   more convincing than pretending it is zero.
+- **Held-out facts, and a skew in them that must be quoted with any tripwire result.** Measured
+  2026-09-04: the 30 held-out items are **24 `pool_tokens`, 80% of the bucket** — the relation cap was applied
+  to the 120 taught facts and not to the held-out pool, which is not relation-stratified. Two consequences,
+  and neither is repaired by the cap that fixed the headline. "Arm C fails the held-out facts" — the study's
+  own validity condition — is therefore a claim about one relation rather than about held-out facts in
+  general. And this is the bucket arm B is expected to win outright, so arm B's strongest showing is measured
+  on a single question shape. The bucket is still reported at full weight; it is reported with this sentence
+  attached.
 - **Held-out facts.** 20% of facts are deliberately excluded from the training set. Arm C **must fail these**.
   If it does not, something is wrong with the experiment (leakage, or an uplift that has nothing to do with the
   patch) and the run is void. This is the benchmark's own tripwire — and it is also **the bucket arm B is
@@ -249,22 +257,27 @@ whole thesis dies if a judge can say "you strawmanned The Graph".
   model can read), and if it still does not fit, withdraws the tool schemas and forces one final answering
   turn. Either path sets `context_exhausted`, which is a miss channel above. A 400 is never retried — it would
   fail identically and spend 90 s doing it. The eviction count and the peak prompt size are recorded per item.
-- **MEASURED 2026-09-04, and it is currently a blocker, not a caveat: at `--max-model-len 8192` arm B runs
-  out of context on 100% of items.** Four smoke items, all four `context_exhausted`, all four missed. The
-  arithmetic is not subtle: the tool schemas are ~1 184 tokens and the B-assisted system prompt ~912, so the
-  first request already costs ~2 800 and the usable budget for tool output across the whole item is roughly
-  5 000 tokens — while a single Messari pool response measured 13 600–22 100 characters (~3 400–5 500
-  tokens). One generous query fills the window. Observed peaks were 6 400–7 700 tokens against a 7 680
-  ceiling.
+- **RESOLVED 2026-09-04, and the arithmetic is kept because the fix is the interesting part.** At
+  `--max-model-len 8192` arm B ran out of context on 4 of 4 smoke items and missed all four. The tool schemas
+  cost ~1 184 tokens and the B-assisted system prompt ~912, so the first request was already ~2 800 and the
+  usable budget for tool output across a whole item was roughly 5 000 — while a single Messari pool response
+  measured 13 600–22 100 characters (~3 400–5 500 tokens). One generous query filled the window. Observed
+  peaks were 6 400–7 700 against a 7 680 ceiling. That is not a constraint to write up, it is a strawman: an
+  arm that exhausted its context on 100% of items measures our launch flag, not whether tool loops lose facts.
 
-  This has to be fixed before the headline run, not written up. §3 exists to stop us shipping a strawman arm
-  B, and "it ran out of room on every single item" is a strawman whoever caused it: a reviewer would say the
-  comparison was against a hobbled tool arm, and they would be right. The fix is a larger window on the
-  serving deployment — this model supports far more than 8 192; the flag was chosen for KV-cache memory, not
-  by the model — which means relaunching `:8002`, which is shared with the live cluster and belongs to the
-  same GPU window as arm C's real training. **The headline run is therefore blocked on that window.** Both
-  numbers get published either way: the window the run used, and arm B's peak context per item, so a reader
-  can see how much room the arm actually had.
+  What fixed it was not the flag we were arguing about. 8 192 was not a choice, it was the cache — the engine
+  reported "Available KV cache memory: 0.2 GiB → GPU KV cache size: 8,192 tokens, Maximum concurrency for
+  8,192 tokens per request: 1.00x". The lever turned out to be `--max-num-seqs`, which was 8: the engine
+  reserves activation and CUDA-graph memory per concurrent sequence, so capping it at 1 left 0.59 GiB for KV
+  instead of 0.2. The deployment now serves **32 768 tokens at fp16**, engine-reported cache **39 321 tokens**,
+  "Maximum concurrency for 32,768 tokens per request: 1.20x". A quantised KV cache was proposed and proved
+  unnecessary; numerics are unchanged, which is why the demo cluster's fp16 attestations remain comparable and
+  why the patch path could be re-verified rather than re-argued (krx-all-2761 reproduced its attested 26/26).
+
+  A cap of 1 concurrent sequence costs this study nothing: every arm asks one question at a time under a lock.
+  Arm B now has room for roughly four full Messari responses instead of one, so residual context exhaustion is
+  a finding about the tool loop rather than an artefact of the host. Both numbers are published either way —
+  the window the run used, and arm B's peak context per item.
 - **The 8 192-token window is a real constraint, declared not exploited.** Subgraph JSON is large. Tool results
   are passed through verbatim up to 4 000 tokens; beyond that they are truncated at a JSON array boundary with
   an explicit `… truncated, N of M rows` marker, and the turn is flagged `context_truncated`. The truncation
@@ -414,8 +427,12 @@ sceptical judge will accept.
    smarter about chains in general — it is that the same facts, once compiled, are retrieved without the tool
    loop's losses, at zero marginal context, with no network. A reader who rejects the mitigations should read
    the held-out-fact bucket and the arm-D column, neither of which the ordering can hide behind.
-2. **8 192-token context** is this deployment's limit and it constrains arm B more than the others. Tokens are
-   reported next to accuracy precisely so the reader can re-judge on a larger host.
+2. **Context is 32 768 tokens, and it was 8 192 until the day of the run.** The honest form of this threat is
+   not "we ran on a small host" but "the host held exactly one 8 192-token request until we found that
+   `--max-num-seqs 8` was reserving the cache, and at 1 the same card yields 39 321 tokens". Arm B is the arm
+   a window constrains, so the study's own history is the reason to report tokens next to accuracy: a reader
+   on a larger host can re-judge, and a reader on a smaller one can see what our earlier configuration did to
+   the tool arm.
 3. **One model, one domain, one host, one run window.** The two-repeat disagreement rate is the noise floor and
    is quoted.
 4. **Modelled costs, not invoices.** Every price is a published list price with a URL in `pricing.json`.
