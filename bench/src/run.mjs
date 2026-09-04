@@ -72,7 +72,38 @@ const runId = argv.run ?? die('--run <id> is required');
 const arms = String(argv.arms ?? 'A,B,C,D').split(',').map((s) => s.trim().toUpperCase()).filter(Boolean);
 const repeats = Number(argv.repeats ?? 2);
 const offline = !!argv.offline;
-const outDir = join(BENCH, 'runs', offline ? `${runId}-offline` : runId);
+const outDir = join(BENCH, 'runs', `${runId}${argv.bridge ? '-bridge' : ''}${offline ? '-offline' : ''}`);
+
+/**
+ * Which of §1's five buckets an item belongs to. Derived from the row, never stored, so it cannot drift from
+ * the generator's own definition.
+ */
+const bucketOf = (q) => (q.hop === 2 ? 'multihop' : !q.taught ? 'tripwire' : q.form === 'E1' ? 'headline' : q.form === 'E2' ? 'korean' : 'ceiling');
+
+/**
+ * The BRIDGE CONTROL (§2): the 40 items re-run after an engine restart to test whether arm A reproduces
+ * across it. Two properties are pre-registered here rather than chosen when the delta is known.
+ *
+ * STRATIFIED, not the first forty of the file. Taking the head of a shuffled file would have loaded the
+ * bridge with headline items — 120 of the 250 — and told us nothing about the tripwires, which are where a
+ * restart would show up first if it showed up anywhere: an arm-C tripwire is supposed to FAIL, so a restart
+ * that quietly changed behaviour there would be invisible in the bucket we looked at. Allocation is by
+ * largest remainder over the declared bucket sizes: headline 19, korean 7, ceiling 6, tripwire 5, multihop 3.
+ *
+ * SEEDED and written to disk BEFORE the run, so which forty were chosen is auditable rather than asserted.
+ */
+function bridgeItems(questions, n = 40, seed = 20260904) {
+  const byBucket = new Map();
+  for (const q of questions) { const b = bucketOf(q); if (!byBucket.has(b)) byBucket.set(b, []); byBucket.get(b).push(q); }
+  const total = questions.length;
+  const alloc = [...byBucket.entries()].map(([b, items]) => ({ b, items, exact: (items.length * n) / total }));
+  alloc.forEach((a) => { a.take = Math.floor(a.exact); a.rem = a.exact - a.take; });
+  let left = n - alloc.reduce((s, a) => s + a.take, 0);
+  [...alloc].sort((x, y) => y.rem - x.rem || x.b.localeCompare(y.b)).forEach((a) => { if (left-- > 0) a.take++; });
+  const picked = [];
+  for (const a of alloc) picked.push(...shuffle(a.items, seed).slice(0, a.take));
+  return { items: picked, allocation: Object.fromEntries(alloc.map((a) => [a.b, a.take])), seed };
+}
 
 /** A seeded shuffle, so "the same order in every arm" is a property of the code and not of the operator. */
 function shuffle(items, seed = 20260904) {
@@ -143,7 +174,13 @@ const armUsesPatch = (arm) => arm === 'C' || arm === 'D';
 
 async function main() {
   mkdirSync(outDir, { recursive: true });
-  const questions = shuffle(loadQuestions()).slice(0, argv.limit ? Number(argv.limit) : undefined);
+  let questions = shuffle(loadQuestions()).slice(0, argv.limit ? Number(argv.limit) : undefined);
+  let bridge = null;
+  if (argv.bridge) {
+    bridge = bridgeItems(questions);
+    questions = bridge.items;
+    console.error(`bridge control: ${questions.length} items, stratified ${JSON.stringify(bridge.allocation)}, seed ${bridge.seed}`);
+  }
   const prompts = systemPrompts();
   console.error(`arm B-assisted is handed ${prompts.live.length} live deployments (basis: ${prompts.basis})`);
 
@@ -175,7 +212,8 @@ async function main() {
   if (mcp?.toolSchemas && !offline) writeFileSync(join(outDir, 'tool-schemas.json'), JSON.stringify(mcp.toolSchemas, null, 2));
 
   const provenance = {
-    run_id: runId, offline, started_at: new Date().toISOString(), finished_at: null,
+    run_id: runId, offline, bridge: bridge ? { items: bridge.items.map((q) => q.id), allocation: bridge.allocation, seed: bridge.seed } : null,
+    started_at: new Date().toISOString(), finished_at: null,
     model, max_model_len: maxModelLen, model_api: vllm.base,
     sampling: { temperature: 0, top_p: 1, max_tokens: vllm.maxTokens, thinking: false, stop: null, guard: false,
       note: 'uniform in every arm; run.mjs drives the model directly because POST /api/chat cannot forward sampling' },

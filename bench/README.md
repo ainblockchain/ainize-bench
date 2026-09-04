@@ -186,6 +186,33 @@ its p-value and both intervals beside it.
   (`reasoning_tokens: 200`), returned empty content and `finish_reason: "length"` — **no tool call at all**.
   The same request with `enable_thinking: false` emitted the tool call in 79 tokens. An arm B run without the
   flag would have produced "the model does not use its tools", a strawman manufactured by our own request body.
+- **The arms are not all contemporaneous, and the bridge control is what makes that legitimate.** Arms A and B
+  need no patch, so they run before the training window; arms C and D need one, so they run after it. That
+  puts at least one engine restart between an item's arm-A and arm-C answers — the "arm A in the morning, arm
+  C at night" design the paired chunks were written to rule out. Rather than assert the restart is harmless,
+  it is measured: after the engine comes back, **40 items of arm A are re-run and compared to their
+  pre-window answers.**
+
+  Both parameters are fixed here, before any delta is known, because a threshold chosen after seeing the
+  result is not a threshold:
+
+  - **Which 40.** Stratified by largest remainder across the five buckets — headline 19, ceiling 7, korean 6,
+    tripwire 5, multihop 3 — seeded, and written into `provenance.bridge` before the run. Taking the head of
+    the shuffled file would have filled the bridge with headline items and told us nothing about the
+    tripwires, which is where a behavioural change would surface first: a tripwire item is *supposed* to fail,
+    so a restart that altered it would be invisible in any bucket we happened to look at.
+  - **The threshold.** Arm A's own two repeats, run on ONE engine instance, give the disagreement rate `d` —
+    the noise floor of asking the same question twice under identical conditions. The bridge passes if its
+    pre-versus-post disagreement rate falls at or below the **upper bound of the Wilson 95% interval on `d`**
+    at the same n (`wilson()`, `src/normalize.mjs`). `d` is computed from arm A alone and **committed to this
+    repository before the bridge is executed**, which the running order guarantees: arm A finishes hours
+    before the window opens. If the bridge fails, arm A is re-run in full beside C and D and only the 40 items
+    are lost.
+
+  The probe run that measures the training step adds a second restart before the window's, so there are two
+  independent restart deltas rather than one. If they agree, the engine's restart noise is characterised and
+  §7's threat 3 can quote it instead of hedging. The offline re-run of arms B and D stays on the SAME engine
+  instance as C and D, for the same reason the bridge exists at all.
 - **Two repeats.** `temperature 0` is not bit-deterministic under vLLM continuous batching, and this repo
   already knows it — the teach-mode locality check asks each prompt twice for exactly this reason
   (`packages/node/src/teach.ts`, "not repeatable on this model"). Every item is run twice per arm. An item whose
