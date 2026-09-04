@@ -402,6 +402,22 @@ therefore never be mistaken for a trained one by accident, in this repo or in th
 Nothing in this directory can produce a headline number without a key, and no fixture will be invented to work
 around that — a fabricated row disqualifies the submission and is worse than an incomplete one.
 
+**Status: `GRAPH_API_KEY` was provided by the owner on 2026-09-04 and both endpoints answer.** It lives in
+`.env` at the repo root (gitignored, mode 600) and is read into the environment with `set -a; . ./.env; set +a`.
+It is never written into `graph/bench/**`, never committed, and `provenance.json` records only *that* a key was
+present. Verified the same day against the live services:
+
+- gateway — `POST https://gateway.thegraph.com/api/subgraphs/id/<id>` with `Authorization: Bearer $KEY`
+  returned `_meta.block.number` 25902862 (the `/api/<key>/subgraphs/id/<id>` path form also works; the header
+  form is what `pull.mjs` uses, so the key never appears in a URL or a log line).
+- MCP — `GET https://subgraphs.mcp.thegraph.com/sse` with the same header opens a session
+  (`subgraph-mcp` 0.1.1, protocol `2024-11-05`, legacy HTTP+SSE transport: the stream emits
+  `event: endpoint → /messages?sessionId=…` and JSON-RPC is POSTed there; `/mcp` streamable-HTTP is 404, so the
+  client must negotiate down). Nine tools, which are the ones arm B gets and the ones §3's loss channels are
+  defined over: `search_subgraphs_by_keyword`, `get_top_subgraph_deployments`,
+  `get_deployment_30day_query_counts`, `get_schema_by_{subgraph_id,deployment_id,ipfs_hash}`,
+  `execute_query_by_{subgraph_id,deployment_id,ipfs_hash}`.
+
 - **`GRAPH_API_KEY`** — from Subgraph Studio (thegraph.com/studio → your account → API Keys). Needed for both
   the gateway (`https://gateway.thegraph.com/api/subgraphs/id/<deployment>`, `Authorization: Bearer $KEY`) and
   the hosted Subgraph MCP server (`https://subgraphs.mcp.thegraph.com/sse`, same header). Verified 2026-09-04:
