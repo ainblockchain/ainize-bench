@@ -1,0 +1,5222 @@
+{
+  "_ainize": {
+    "deployment_id": "95nyAWFFaiz6gykko3HtBCyhRuP5vZzuKYsZiLxHxLhr",
+    "protocol": "euler-finance",
+    "query": "markets",
+    "query_hash": "5e7d8fe99101c576f17619117775c62006580f52977a7699da5f47be51268fc4",
+    "block": 25903086,
+    "skip": 0,
+    "first": 1000,
+    "gateway_ms": 1250
+  },
+  "data": {
+    "markets": [
+      {
+        "id": "0x1b808f49add4b8c6b5117d9681cf7312fcf0dc1d",
+        "name": "Euler Pool: Wrapped Ether",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0.88",
+        "liquidationThreshold": "0.91",
+        "totalValueLockedUSD": "53157732.87030915617984461626430443",
+        "totalDepositBalanceUSD": "53157732.87030915617984461626430443",
+        "totalBorrowBalanceUSD": "53156134.37723305540113944303800032",
+        "inputToken": {
+          "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+          "name": "Wrapped Ether",
+          "symbol": "WETH",
+          "decimals": 18,
+          "lastPriceUSD": "1629.26873065418174459347072777589"
+        },
+        "outputToken": {
+          "id": "0x1b808f49add4b8c6b5117d9681cf7312fcf0dc1d",
+          "name": "Euler Pool: Wrapped Ether",
+          "symbol": "eWETH",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "4.3793887595305595981359490326647",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "2.7518937097983420793821342172799",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xeb91861f8a4e1c12333f42dce8fb0ecdc28da716",
+        "name": "Euler Pool: USD Coin",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0.9",
+        "liquidationThreshold": "0.94",
+        "totalValueLockedUSD": "43126682.912784",
+        "totalDepositBalanceUSD": "43126682.912784",
+        "totalBorrowBalanceUSD": "43126472.750492",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": "1"
+        },
+        "outputToken": {
+          "id": "0xeb91861f8a4e1c12333f42dce8fb0ecdc28da716",
+          "name": "Euler Pool: USD Coin",
+          "symbol": "eUSDC",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "2.762382733813450601260497615037",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "1.2074145650582277319572037098332",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xbd1bd5c956684f7eb79da40f582cbe1373a1d593",
+        "name": "Euler Pool: Wrapped liquid staked Ether 2.0",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0.85",
+        "liquidationThreshold": "0.89",
+        "totalValueLockedUSD": "39077954.12769852839189903472002905",
+        "totalDepositBalanceUSD": "39077954.12769852839189903472002905",
+        "totalBorrowBalanceUSD": "39077943.81268320135842719318398106",
+        "inputToken": {
+          "id": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
+          "name": "Wrapped liquid staked Ether 2.0",
+          "symbol": "wstETH",
+          "decimals": 18,
+          "lastPriceUSD": "1807.952961302127137314679871642298"
+        },
+        "outputToken": {
+          "id": "0xbd1bd5c956684f7eb79da40f582cbe1373a1d593",
+          "name": "Euler Pool: Wrapped liquid staked Ether 2.0",
+          "symbol": "ewstETH",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "2.3925546007434086808940017888417",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0.5307357883241515213249267097009",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x4d19f33948b99800b6113ff3e83bec9b537c85d2",
+        "name": "Euler Pool: Tether USD",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0.9",
+        "liquidationThreshold": "0.94",
+        "totalValueLockedUSD": "19311223.76627650704697765138628381",
+        "totalDepositBalanceUSD": "19311223.76627650704697765138628381",
+        "totalBorrowBalanceUSD": "19311223.75964171998849154450132827",
+        "inputToken": {
+          "id": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+          "name": "Tether USD",
+          "symbol": "USDT",
+          "decimals": 6,
+          "lastPriceUSD": "1.016825602833119829111960392616646"
+        },
+        "outputToken": {
+          "id": "0x4d19f33948b99800b6113ff3e83bec9b537c85d2",
+          "name": "Euler Pool: Tether USD",
+          "symbol": "eUSDT",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "80.9847023050041593284700794140352",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "69.397811922705358456480075967383",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x04e47b672a68d6ad4f7989bd169d3755ae1cae1b",
+        "name": "Euler Pool: Coinbase Wrapped Staked ETH",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0.7",
+        "liquidationThreshold": "0.8",
+        "totalValueLockedUSD": "5602697.005263192780412328464555185",
+        "totalDepositBalanceUSD": "5602697.005263192780412328464555185",
+        "totalBorrowBalanceUSD": "5578304.92218435193165505815374157",
+        "inputToken": {
+          "id": "0xbe9895146f7af43049ca1c1ae358b0541ea49704",
+          "name": "Coinbase Wrapped Staked ETH",
+          "symbol": "cbETH",
+          "decimals": 18,
+          "lastPriceUSD": "1649.207967394258726691304198429853"
+        },
+        "outputToken": {
+          "id": "0x04e47b672a68d6ad4f7989bd169d3755ae1cae1b",
+          "name": "Euler Pool: Coinbase Wrapped Staked ETH",
+          "symbol": "ecbETH",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "1.2335507042418509679717763786872",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0.1489672378288919987944918962855",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xbdbf53c76d7b63f316e013350041f20640c9a253",
+        "name": "Euler Pool: Compound",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0.7",
+        "totalValueLockedUSD": "5338400.237469248742945679927518506",
+        "totalDepositBalanceUSD": "5338400.237469248742945679927518506",
+        "totalBorrowBalanceUSD": "1033929.188341143657719150955576639",
+        "inputToken": {
+          "id": "0xc00e94cb662c3520282e6f5717214004a7f26888",
+          "name": "Compound",
+          "symbol": "COMP",
+          "decimals": 18,
+          "lastPriceUSD": "43.43976117255890414795083388700528"
+        },
+        "outputToken": {
+          "id": "0xbdbf53c76d7b63f316e013350041f20640c9a253",
+          "name": "Euler Pool: Compound",
+          "symbol": "eCOMP",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "3.1593461401464607282164101247282",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0.3363697947390802740967297607173",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xf1300d5c07a08162731c5e8188636699dfb74f78",
+        "name": "Euler Pool: Lido DAO Token",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0.7",
+        "totalValueLockedUSD": "3293516.035452818431611889598749829",
+        "totalDepositBalanceUSD": "3293516.035452818431611889598749829",
+        "totalBorrowBalanceUSD": "983075.5235179717406061182809561112",
+        "inputToken": {
+          "id": "0x5a98fcbea516cf06857215779fd812ca3bef1b32",
+          "name": "Lido DAO Token",
+          "symbol": "LDO",
+          "decimals": 18,
+          "lastPriceUSD": "2.632721339347177390067195856805576"
+        },
+        "outputToken": {
+          "id": "0xf1300d5c07a08162731c5e8188636699dfb74f78",
+          "name": "Euler Pool: Lido DAO Token",
+          "symbol": "eLDO",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "7.2833824071899502803044526298734",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "1.7110445079508772535106079248948",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x0275b156cd77c5ed82d44bcc5f9e93eecff20138",
+        "name": "Euler Pool: Wrapped BTC",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0.88",
+        "liquidationThreshold": "0.91",
+        "totalValueLockedUSD": "3002302.93617382808069234210035567",
+        "totalDepositBalanceUSD": "3002302.93617382808069234210035567",
+        "totalBorrowBalanceUSD": "3002097.910670350613699267250904667",
+        "inputToken": {
+          "id": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+          "name": "Wrapped BTC",
+          "symbol": "WBTC",
+          "decimals": 8,
+          "lastPriceUSD": "22768.06376457718780259428703768601"
+        },
+        "outputToken": {
+          "id": "0x0275b156cd77c5ed82d44bcc5f9e93eecff20138",
+          "name": "Euler Pool: Wrapped BTC",
+          "symbol": "eWBTC",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "1.3005735931778634810005781779322",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0.135494626491206096325524243658",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xe025e3ca2be02316033184551d4d3aa22024d9dc",
+        "name": "Euler Pool: Dai Stablecoin",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0.85",
+        "liquidationThreshold": "0.88",
+        "totalValueLockedUSD": "2776142.232737595152941219824591768",
+        "totalDepositBalanceUSD": "2776142.232737595152941219824591768",
+        "totalBorrowBalanceUSD": "2776142.232737595152941219824591768",
+        "inputToken": {
+          "id": "0x6b175474e89094c44da98b954eedeac495271d0f",
+          "name": "Dai Stablecoin",
+          "symbol": "DAI",
+          "decimals": 18,
+          "lastPriceUSD": "1.008132956516497957953833856325811"
+        },
+        "outputToken": {
+          "id": "0xe025e3ca2be02316033184551d4d3aa22024d9dc",
+          "name": "Euler Pool: Dai Stablecoin",
+          "symbol": "eDAI",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "1.1639727769465054926146700239357",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0.2153557618617203867522052218972",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x2725a01c09868cc6f8ded2f7404c6a31f85d8f8b",
+        "name": "Euler Pool: LUSD Stablecoin",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0.7",
+        "totalValueLockedUSD": "2497921.560875629245686809098609382",
+        "totalDepositBalanceUSD": "2497921.560875629245686809098609382",
+        "totalBorrowBalanceUSD": "2497921.059575569943935836530392251",
+        "inputToken": {
+          "id": "0x5f98805a4e8be255a32880fdec7f6728c6568ba0",
+          "name": "LUSD Stablecoin",
+          "symbol": "LUSD",
+          "decimals": 18,
+          "lastPriceUSD": "1.023836964389832010356277747932683"
+        },
+        "outputToken": {
+          "id": "0x2725a01c09868cc6f8ded2f7404c6a31f85d8f8b",
+          "name": "Euler Pool: LUSD Stablecoin",
+          "symbol": "eLUSD",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "29.9125501893957144301851480801998",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "21.5343961461541485589178800683592",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xf1f2ecb2f271ad31dd9204bfe91b8d1724e9d616",
+        "name": "Euler Pool: Uniswap",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0.76",
+        "totalValueLockedUSD": "1703401.222117851343689918762019471",
+        "totalDepositBalanceUSD": "1703401.222117851343689918762019471",
+        "totalBorrowBalanceUSD": "885630.0602094993829173092852311039",
+        "inputToken": {
+          "id": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+          "name": "Uniswap",
+          "symbol": "UNI",
+          "decimals": 18,
+          "lastPriceUSD": "6.10675988548877784781546324302048"
+        },
+        "outputToken": {
+          "id": "0xf1f2ecb2f271ad31dd9204bfe91b8d1724e9d616",
+          "name": "Euler Pool: Uniswap",
+          "symbol": "eUNI",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "10.6986267741332563743022162658275",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "3.6105261921987108014722826509777",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x198472c9e552c2afc1b096d4f1a35c08a52ff100",
+        "name": "Euler Pool: Euler",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "1259866.041523338756627045102480162",
+        "totalDepositBalanceUSD": "1259866.041523338756627045102480162",
+        "totalBorrowBalanceUSD": "50113.12692656774040471853476517431",
+        "inputToken": {
+          "id": "0xd9fcd98c322942075a5c3860693e9f4f03aae07b",
+          "name": "Euler",
+          "symbol": "EUL",
+          "decimals": 18,
+          "lastPriceUSD": "4.047636854631780543223527831597731"
+        },
+        "outputToken": {
+          "id": "0x198472c9e552c2afc1b096d4f1a35c08a52ff100",
+          "name": "Euler Pool: Euler",
+          "symbol": "eEUL",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0.7552364985635280176093274086221",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0.0240429299291741233534853316873",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xfe1ad4324334586468eec7e21044fcfd797988ff",
+        "name": "Euler Pool: Rai Reflex Index",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0.7",
+        "totalValueLockedUSD": "964465.6015399385336481209639906342",
+        "totalDepositBalanceUSD": "964465.6015399385336481209639906342",
+        "totalBorrowBalanceUSD": "735517.9632331246199817902405217104",
+        "inputToken": {
+          "id": "0x03ab458634910aad20ef5f1c8ee96f1d6ac54919",
+          "name": "Rai Reflex Index",
+          "symbol": "RAI",
+          "decimals": 18,
+          "lastPriceUSD": "2.84430608764187166412158981467945"
+        },
+        "outputToken": {
+          "id": "0xfe1ad4324334586468eec7e21044fcfd797988ff",
+          "name": "Euler Pool: Rai Reflex Index",
+          "symbol": "eRAI",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "18.1225829640706919066599977496386",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "10.1973675693273381107795691723269",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x7527ab44d17246e45dee859427749d0b3d581d79",
+        "name": "Euler Pool: Graph Token",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "825097.9020858778366705565736422364",
+        "totalDepositBalanceUSD": "825097.9020858778366705565736422364",
+        "totalBorrowBalanceUSD": "652911.1586490572263392578484213939",
+        "inputToken": {
+          "id": "0xc944e90c64b2c07662a292be6244bdf05cda44a7",
+          "name": "Graph Token",
+          "symbol": "GRT",
+          "decimals": 18,
+          "lastPriceUSD": "0.137459020714839597441171520690907"
+        },
+        "outputToken": {
+          "id": "0x7527ab44d17246e45dee859427749d0b3d581d79",
+          "name": "Euler Pool: Graph Token",
+          "symbol": "eGRT",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "23.3605901065169087845606683520036",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "9.375856099782834948890302664069",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x22784dd51676b5fb0e8362d187137f2fffb9b848",
+        "name": "Euler Pool: ChainLink Token",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0.76",
+        "totalValueLockedUSD": "557897.7690857482321263933325653985",
+        "totalDepositBalanceUSD": "557897.7690857482321263933325653985",
+        "totalBorrowBalanceUSD": "543397.0863389393469603338135727523",
+        "inputToken": {
+          "id": "0x514910771af9ca656af840dff83e8264ecf986ca",
+          "name": "ChainLink Token",
+          "symbol": "LINK",
+          "decimals": 18,
+          "lastPriceUSD": "6.715189027509344641483854128752438"
+        },
+        "outputToken": {
+          "id": "0x22784dd51676b5fb0e8362d187137f2fffb9b848",
+          "name": "Euler Pool: ChainLink Token",
+          "symbol": "eLINK",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "9.1072007922210465576274744887684",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "2.6666781204874579722000390898786",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x64ad6d2472de5ddd3801fb4027c96c3ee7a7ee82",
+        "name": "Euler Pool: agEUR",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0.5",
+        "totalValueLockedUSD": "502810.8616309014299406817904641042",
+        "totalDepositBalanceUSD": "502810.8616309014299406817904641042",
+        "totalBorrowBalanceUSD": "60383.19009554386777451151244862867",
+        "inputToken": {
+          "id": "0x1a7e4e63778b4f12a199c062f3efdd288afcbce8",
+          "name": "agEUR",
+          "symbol": "agEUR",
+          "decimals": 18,
+          "lastPriceUSD": "1.090473454363606456558795905271267"
+        },
+        "outputToken": {
+          "id": "0x64ad6d2472de5ddd3801fb4027c96c3ee7a7ee82",
+          "name": "Euler Pool: agEUR",
+          "symbol": "eagEUR",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0.0704825001385443568422695401784",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0.000787373574328861270603323277",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x570a7e6e75c8043bd75b574d47988aa305873818",
+        "name": "Euler Pool: Liquid staked Ether 2.0",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0.87",
+        "liquidationThreshold": "0.91",
+        "totalValueLockedUSD": "462171.2444228478605569066293894963",
+        "totalDepositBalanceUSD": "462171.2444228478605569066293894963",
+        "totalBorrowBalanceUSD": "462171.2444228478605552835816681544",
+        "inputToken": {
+          "id": "0xae7ab96520de3a18e5e111b5eaab095312d7fe84",
+          "name": "Liquid staked Ether 2.0",
+          "symbol": "stETH",
+          "decimals": 18,
+          "lastPriceUSD": "1623.047721341866267058893864833233"
+        },
+        "outputToken": {
+          "id": "0x570a7e6e75c8043bd75b574d47988aa305873818",
+          "name": "Euler Pool: Liquid staked Ether 2.0",
+          "symbol": "estETH",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "11.1491621936975585869060205589302",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0.6736851439521585583685692194588",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x5dc63fbf4821efe74a7bb043ad35351c1f60bc87",
+        "name": "Euler Pool: Aave Token",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0.7",
+        "totalValueLockedUSD": "419684.3520846380105646301968975227",
+        "totalDepositBalanceUSD": "419684.3520846380105646301968975227",
+        "totalBorrowBalanceUSD": "256155.6605177134269728739350208788",
+        "inputToken": {
+          "id": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+          "name": "Aave Token",
+          "symbol": "AAVE",
+          "decimals": 18,
+          "lastPriceUSD": "74.80731705249750879878540730159587"
+        },
+        "outputToken": {
+          "id": "0x5dc63fbf4821efe74a7bb043ad35351c1f60bc87",
+          "name": "Euler Pool: Aave Token",
+          "symbol": "eAAVE",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "14.0396311856699882081581520389503",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "6.1683728285076801836299553374808",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x5b37264236817b939ba176d2229bb068e87450c1",
+        "name": "Euler Pool: Rocket Pool Protocol",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "410016.0036136325846928998815149082",
+        "totalDepositBalanceUSD": "410016.0036136325846928998815149082",
+        "totalBorrowBalanceUSD": "87708.14051474421470428570228571942",
+        "inputToken": {
+          "id": "0xd33526068d116ce69f19a9ee46f0bd304f21a51f",
+          "name": "Rocket Pool Protocol",
+          "symbol": "RPL",
+          "decimals": 18,
+          "lastPriceUSD": "38.26227838659116886873882822717697"
+        },
+        "outputToken": {
+          "id": "0x5b37264236817b939ba176d2229bb068e87450c1",
+          "name": "Euler Pool: Rocket Pool Protocol",
+          "symbol": "eRPL",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "5.2244524997106690613025485049896",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "1.0630380469149475648477751848247",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x3591d83b699d867ca8d3046da51f2a3d24218941",
+        "name": "Euler Pool: LQTY",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "345386.8128087284754464321664861198",
+        "totalDepositBalanceUSD": "345386.8128087284754464321664861198",
+        "totalBorrowBalanceUSD": "123924.4772467112400710454458156256",
+        "inputToken": {
+          "id": "0x6dea81c8171d0ba574754ef6f8b412f2ed88c54d",
+          "name": "LQTY",
+          "symbol": "LQTY",
+          "decimals": 18,
+          "lastPriceUSD": "2.647426804156126224034208210469971"
+        },
+        "outputToken": {
+          "id": "0x3591d83b699d867ca8d3046da51f2a3d24218941",
+          "name": "Euler Pool: LQTY",
+          "symbol": "eLQTY",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "16.4545973064603932969346002492961",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "6.3394403612202973188822165890312",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x323aa5ff5cc6593db46c93b20ccfdd06412baf77",
+        "name": "Euler Pool: Ethereum Name Service",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0.66",
+        "totalValueLockedUSD": "345039.4988384165694713093851782227",
+        "totalDepositBalanceUSD": "345039.4988384165694713093851782227",
+        "totalBorrowBalanceUSD": "143501.4120587132127036182267774255",
+        "inputToken": {
+          "id": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+          "name": "Ethereum Name Service",
+          "symbol": "ENS",
+          "decimals": 18,
+          "lastPriceUSD": "13.29342014909002793470566299065701"
+        },
+        "outputToken": {
+          "id": "0x323aa5ff5cc6593db46c93b20ccfdd06412baf77",
+          "name": "Euler Pool: Ethereum Name Service",
+          "symbol": "eENS",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "6.6852948403759826096501384604077",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "1.4665889573669570983838823795235",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x7491989cfbc6da74141bc8cd187e480c21ece169",
+        "name": "Euler Pool: Badger",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "331744.7237681510496644861257896334",
+        "totalDepositBalanceUSD": "331744.7237681510496644861257896334",
+        "totalBorrowBalanceUSD": "88583.82971641223348269541960540557",
+        "inputToken": {
+          "id": "0x3472a5a71965499acd81997a54bba8d852c6e53d",
+          "name": "Badger",
+          "symbol": "BADGER",
+          "decimals": 18,
+          "lastPriceUSD": "2.94077063733904232228191971503471"
+        },
+        "outputToken": {
+          "id": "0x7491989cfbc6da74141bc8cd187e480c21ece169",
+          "name": "Euler Pool: Badger",
+          "symbol": "eBADGER",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "5.2182370294604283219741244301252",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "1.060216956520840060729033615249",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x5484451a88a35cd0878a1be177435ca8a0e4054e",
+        "name": "Euler Pool: Frax",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0.7",
+        "totalValueLockedUSD": "305480.9110354550370014041840556616",
+        "totalDepositBalanceUSD": "305480.9110354550370014041840556616",
+        "totalBorrowBalanceUSD": "118611.5606759543778524004742579961",
+        "inputToken": {
+          "id": "0x853d955acef822db058eb8505911ed77f175b99e",
+          "name": "Frax",
+          "symbol": "FRAX",
+          "decimals": 18,
+          "lastPriceUSD": "1.014511893439270556344881970896741"
+        },
+        "outputToken": {
+          "id": "0x5484451a88a35cd0878a1be177435ca8a0e4054e",
+          "name": "Euler Pool: Frax",
+          "symbol": "eFRAX",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "1.4008458684954204855744365565415",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0.0662954623709698581826049191403",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xc2fd2e2eb89b9eaee18ce40071c77bec2e8d3c6f",
+        "name": "Euler Pool: yearn.finance",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0.7",
+        "totalValueLockedUSD": "275881.5168618562216646072713853113",
+        "totalDepositBalanceUSD": "275881.5168618562216646072713853113",
+        "totalBorrowBalanceUSD": "108122.9980637790665297832589015389",
+        "inputToken": {
+          "id": "0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e",
+          "name": "yearn.finance",
+          "symbol": "YFI",
+          "decimals": 18,
+          "lastPriceUSD": "8584.944101731300199889813363761808"
+        },
+        "outputToken": {
+          "id": "0xc2fd2e2eb89b9eaee18ce40071c77bec2e8d3c6f",
+          "name": "Euler Pool: yearn.finance",
+          "symbol": "eYFI",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "8.0682042905255487650744283867753",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "2.0755124990344873496458393168966",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x50552ec440099672250bd5f335ef70e1202d0a42",
+        "name": "UNKNOWN",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0.66",
+        "totalValueLockedUSD": "268774.3886015206841817829995624292",
+        "totalDepositBalanceUSD": "268774.3886015206841817829995624292",
+        "totalBorrowBalanceUSD": "188864.1672162289554165296050041716",
+        "inputToken": {
+          "id": "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2",
+          "name": "Maker",
+          "symbol": "MKR",
+          "decimals": 18,
+          "lastPriceUSD": "915.5361665022183648136824507903334"
+        },
+        "outputToken": {
+          "id": "0x50552ec440099672250bd5f335ef70e1202d0a42",
+          "name": "UNKNOWN",
+          "symbol": "UNKNOWN",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "16.0072816457579294607994637615108",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "7.8566117422310179304077242027753",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xe2322f73fdf8ee688b1464a19e539b599d43d1b7",
+        "name": "Euler Pool: Opyn Squeeth",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0.56",
+        "totalValueLockedUSD": "261370.230813580600920524675225568",
+        "totalDepositBalanceUSD": "261370.230813580600920524675225568",
+        "totalBorrowBalanceUSD": "43682.32748948897123651198447624561",
+        "inputToken": {
+          "id": "0xf1b99e3e573a1a9c5e6b2ce818b617f0e664e86b",
+          "name": "Opyn Squeeth",
+          "symbol": "oSQTH",
+          "decimals": 18,
+          "lastPriceUSD": "93.40124903752196467089352819903997"
+        },
+        "outputToken": {
+          "id": "0xe2322f73fdf8ee688b1464a19e539b599d43d1b7",
+          "name": "Euler Pool: Opyn Squeeth",
+          "symbol": "eoSQTH",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "3.1827937361602906007719280218769",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0.3462861441632912334232179160864",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xca33358ee21de338c13413fde211273565d38bfb",
+        "name": "Euler Pool: 1INCH Token",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0.7",
+        "totalValueLockedUSD": "163649.4170469564493648886439649867",
+        "totalDepositBalanceUSD": "163649.4170469564493648886439649867",
+        "totalBorrowBalanceUSD": "80265.9904489730780260002825871772",
+        "inputToken": {
+          "id": "0x111111111117dc0aa78b770fa6a738034120c302",
+          "name": "1INCH Token",
+          "symbol": "1INCH",
+          "decimals": 18,
+          "lastPriceUSD": "0.4922324509637263345463563321784044"
+        },
+        "outputToken": {
+          "id": "0xca33358ee21de338c13413fde211273565d38bfb",
+          "name": "Euler Pool: 1INCH Token",
+          "symbol": "e1INCH",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "11.8185423778973679731073933522698",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "4.4074969322034624289528752727244",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x5f112c63d3bfe93f93f3e87c819c6e17c19434a2",
+        "name": "Euler Pool: OriginToken",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "150772.3605443595318641981093008359",
+        "totalDepositBalanceUSD": "150772.3605443595318641981093008359",
+        "totalBorrowBalanceUSD": "80984.72343589378867505390735352062",
+        "inputToken": {
+          "id": "0x8207c1ffc5b6804f6024322ccf34f29c3541ae26",
+          "name": "OriginToken",
+          "symbol": "OGN",
+          "decimals": 18,
+          "lastPriceUSD": "0.1177774761801339871520833574867244"
+        },
+        "outputToken": {
+          "id": "0x5f112c63d3bfe93f93f3e87c819c6e17c19434a2",
+          "name": "Euler Pool: OriginToken",
+          "symbol": "eOGN",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "9.7914148437404545151295463474882",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "3.600144801153906541124342802625",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xd440ee97523c2c29b681e096dfa01fe0333069a5",
+        "name": "Euler Pool: Wrapped NXM",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "145004.1142952933344507655287477589",
+        "totalDepositBalanceUSD": "145004.1142952933344507655287477589",
+        "totalBorrowBalanceUSD": "40495.25724323833514524482081759577",
+        "inputToken": {
+          "id": "0x0d438f3b5175bebc262bf23753c1e53d03432bde",
+          "name": "Wrapped NXM",
+          "symbol": "wNXM",
+          "decimals": 18,
+          "lastPriceUSD": "21.11244451103650874401640311017461"
+        },
+        "outputToken": {
+          "id": "0xd440ee97523c2c29b681e096dfa01fe0333069a5",
+          "name": "Euler Pool: Wrapped NXM",
+          "symbol": "ewNXM",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "5.4639685219883219461294061563115",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "1.2383662571484332591582875672654",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x4645e6e24eaa6fb18022ecc0fdd84ab76b06fa3c",
+        "name": "Euler Pool: Cryptex",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "117028.0209596965061844037224680714",
+        "totalDepositBalanceUSD": "117028.0209596965061844037224680714",
+        "totalBorrowBalanceUSD": "117013.9912757905657674560519008484",
+        "inputToken": {
+          "id": "0x321c2fe4446c7c963dc41dd58879af648838f98d",
+          "name": "Cryptex",
+          "symbol": "CTX",
+          "decimals": 18,
+          "lastPriceUSD": "2.774287673487062866091706145838895"
+        },
+        "outputToken": {
+          "id": "0x4645e6e24eaa6fb18022ecc0fdd84ab76b06fa3c",
+          "name": "Euler Pool: Cryptex",
+          "symbol": "eCTX",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "336.6829793686064165349490216568497",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "210.6279737315007053983768573031579",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x5db541f43e228fb7552d769ac9cdd554c45c3bb3",
+        "name": "Euler Pool: StargateToken",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "112256.8244642089321401303628817728",
+        "totalDepositBalanceUSD": "112256.8244642089321401303628817728",
+        "totalBorrowBalanceUSD": "14.43603940569455256819530663715865",
+        "inputToken": {
+          "id": "0xaf5191b0de278c7286d6c7cc6ab6bb8a73ba2cd6",
+          "name": "StargateToken",
+          "symbol": "STG",
+          "decimals": 18,
+          "lastPriceUSD": "0.7224878112792746914001014748777019"
+        },
+        "outputToken": {
+          "id": "0x5db541f43e228fb7552d769ac9cdd554c45c3bb3",
+          "name": "Euler Pool: StargateToken",
+          "symbol": "eSTG",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0.0019552543510134241423314721343",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0.000000169268813839483066700659",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xfa327eb9111a5283167734efb637db46c990a27b",
+        "name": "Euler Pool: Ribbon",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0.5",
+        "totalValueLockedUSD": "104313.3894251650790610077716842089",
+        "totalDepositBalanceUSD": "104313.3894251650790610077716842089",
+        "totalBorrowBalanceUSD": "38589.46867874708911353160914140107",
+        "inputToken": {
+          "id": "0x6123b0049f904d730db3c36a31167d9d4121fa6b",
+          "name": "Ribbon",
+          "symbol": "RBN",
+          "decimals": 18,
+          "lastPriceUSD": "0.2128889180952763982129066853379524"
+        },
+        "outputToken": {
+          "id": "0xfa327eb9111a5283167734efb637db46c990a27b",
+          "name": "Euler Pool: Ribbon",
+          "symbol": "eRBN",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "4.2766762894114686170342509954956",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0.6338997509501940690079223216783",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x0bb86777dcd305b250b0663793642cdf64330dd1",
+        "name": "Euler Pool: Saddle DAO",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "100501.9498804825445891275350206815",
+        "totalDepositBalanceUSD": "100501.9498804825445891275350206815",
+        "totalBorrowBalanceUSD": "0.2741795758943303820395999354152256",
+        "inputToken": {
+          "id": "0xf1dc500fde233a4055e25e5bbf516372bc4f6871",
+          "name": "Saddle DAO",
+          "symbol": "SDL",
+          "decimals": 18,
+          "lastPriceUSD": "0.01192382811520669110055182133697071"
+        },
+        "outputToken": {
+          "id": "0x0bb86777dcd305b250b0663793642cdf64330dd1",
+          "name": "Euler Pool: Saddle DAO",
+          "symbol": "eSDL",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0.0000516621470379557763250578559",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0.0000000001208277286176245610103",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x8a6622d293d5187a39f8dba7f6f1ae7fa527483b",
+        "name": "Euler Pool: Olympus",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0.5",
+        "totalValueLockedUSD": "68030.70706795672220307332895786504",
+        "totalDepositBalanceUSD": "68030.70706795672220307332895786504",
+        "totalBorrowBalanceUSD": "68026.00792472914811357763534380038",
+        "inputToken": {
+          "id": "0x64aa3364f17a4d01c6f1751fd97c2bd3d7e7f1d5",
+          "name": "Olympus",
+          "symbol": "OHM",
+          "decimals": 9,
+          "lastPriceUSD": "10.45883709381001030190453705894496"
+        },
+        "outputToken": {
+          "id": "0x8a6622d293d5187a39f8dba7f6f1ae7fa527483b",
+          "name": "Euler Pool: Olympus",
+          "symbol": "eOHM",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "8.3424489455726899346249760251886",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "1.1671582726500133314399177102254",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xf87c31936bbe178bd054ed19aaabf18a6a056214",
+        "name": "Euler Pool: Synthetix Network Token",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0.7",
+        "totalValueLockedUSD": "66380.92113601398933353166715742793",
+        "totalDepositBalanceUSD": "66380.92113601398933353166715742793",
+        "totalBorrowBalanceUSD": "59517.1720762147689277598972887671",
+        "inputToken": {
+          "id": "0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f",
+          "name": "Synthetix Network Token",
+          "symbol": "SNX",
+          "decimals": 18,
+          "lastPriceUSD": "2.952143538756948028383437134914325"
+        },
+        "outputToken": {
+          "id": "0xf87c31936bbe178bd054ed19aaabf18a6a056214",
+          "name": "Euler Pool: Synthetix Network Token",
+          "symbol": "eSNX",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "18.9699541041615556562013969081435",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "11.1471866939468755361541358448844",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xdf7faefce7987a3ca0144302d469daec1ce76410",
+        "name": "Euler Pool: Nexo",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "54227.09123874096377839434319871813",
+        "totalDepositBalanceUSD": "54227.09123874096377839434319871813",
+        "totalBorrowBalanceUSD": "10865.35775722499507228727736762415",
+        "inputToken": {
+          "id": "0xb62132e35a6c13ee1ee0f84dc5d40bad8d815206",
+          "name": "Nexo",
+          "symbol": "NEXO",
+          "decimals": 18,
+          "lastPriceUSD": "0.6248890451859012542846075882032466"
+        },
+        "outputToken": {
+          "id": "0xdf7faefce7987a3ca0144302d469daec1ce76410",
+          "name": "Euler Pool: Nexo",
+          "symbol": "eNEXO",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "3.890659637070188987959175664028",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0.6085241638912974741226354304085",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x26c70a14ce6bf73ce9dc193dbb03b62fabe1f775",
+        "name": "Euler Pool: Milady Maker",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "53201.35874020752368797746615651206",
+        "totalDepositBalanceUSD": "53201.35874020752368797746615651206",
+        "totalBorrowBalanceUSD": "5994.195714887130054623780525159753",
+        "inputToken": {
+          "id": "0x227c7df69d3ed1ae7574a1a7685fded90292eb48",
+          "name": "Milady Maker",
+          "symbol": "MILADY",
+          "decimals": 18,
+          "lastPriceUSD": "1986.674417726667388503332838102869"
+        },
+        "outputToken": {
+          "id": "0x26c70a14ce6bf73ce9dc193dbb03b62fabe1f775",
+          "name": "Euler Pool: Milady Maker",
+          "symbol": "eMILADY",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "1.4435997001904481910400775530001",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0.0831374277865843058178671963141",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xe41fa3e32f7a3148217724a9f8d096f4f1ddd182",
+        "name": "Euler Pool: Convex Token",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0.5",
+        "totalValueLockedUSD": "51003.22564859098595121869754444877",
+        "totalDepositBalanceUSD": "51003.22564859098595121869754444877",
+        "totalBorrowBalanceUSD": "30121.29597713618454077585846495699",
+        "inputToken": {
+          "id": "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b",
+          "name": "Convex Token",
+          "symbol": "CVX",
+          "decimals": 18,
+          "lastPriceUSD": "5.648459908593009352005800315486636"
+        },
+        "outputToken": {
+          "id": "0xe41fa3e32f7a3148217724a9f8d096f4f1ddd182",
+          "name": "Euler Pool: Convex Token",
+          "symbol": "eCVX",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "13.8211100622791206179780614965087",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "6.2698728294658599555248733955537",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xcf31501179eef59c8b6722e99489f7035b53f83e",
+        "name": "Euler Pool: Magic Internet Money",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0.7",
+        "totalValueLockedUSD": "47467.14899681004178697002229618531",
+        "totalDepositBalanceUSD": "47467.14899681004178697002229618531",
+        "totalBorrowBalanceUSD": "36079.80042163539882020529835870758",
+        "inputToken": {
+          "id": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3",
+          "name": "Magic Internet Money",
+          "symbol": "MIM",
+          "decimals": 18,
+          "lastPriceUSD": "1.003031011253425114299372835862246"
+        },
+        "outputToken": {
+          "id": "0xcf31501179eef59c8b6722e99489f7035b53f83e",
+          "name": "Euler Pool: Magic Internet Money",
+          "symbol": "eMIM",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "17.55424808098602059520405846805",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "9.640618297270961247369428403286",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x315bfbfbb8421fe80a83358020f169f867bb9716",
+        "name": "Euler Pool: Matic Token",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0.66",
+        "totalValueLockedUSD": "40557.54848069841743456969555506285",
+        "totalDepositBalanceUSD": "40557.54848069841743456969555506285",
+        "totalBorrowBalanceUSD": "13069.35774595717121441009040830291",
+        "inputToken": {
+          "id": "0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0",
+          "name": "Matic Token",
+          "symbol": "MATIC",
+          "decimals": 18,
+          "lastPriceUSD": "1.151846085137580806200081960295998"
+        },
+        "outputToken": {
+          "id": "0x315bfbfbb8421fe80a83358020f169f867bb9716",
+          "name": "Euler Pool: Matic Token",
+          "symbol": "eMATIC",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "7.6151268001471668469528539362654",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "1.9078493116925517301258790180604",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x898875e7766e0a64f9c71339ba2b53fb5c50c931",
+        "name": "Euler Pool: Unisocks Edition 0",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "33640.15666153169237664279510456802",
+        "totalDepositBalanceUSD": "33640.15666153169237664279510456802",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x23b608675a2b2fb1890d3abbd85c5775c51691d5",
+          "name": "Unisocks Edition 0",
+          "symbol": "SOCKS",
+          "decimals": 18,
+          "lastPriceUSD": "33544.87850577531372582140434433405"
+        },
+        "outputToken": {
+          "id": "0x898875e7766e0a64f9c71339ba2b53fb5c50c931",
+          "name": "Euler Pool: Unisocks Edition 0",
+          "symbol": "eSOCKS",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xffe5396c1efd289d207fc7133a594c5e8fef25b3",
+        "name": "Euler Pool: Binance USD",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0.7",
+        "totalValueLockedUSD": "33520.90591484195715278818602993927",
+        "totalDepositBalanceUSD": "33520.90591484195715278818602993927",
+        "totalBorrowBalanceUSD": "22885.49514753603316736751108492974",
+        "inputToken": {
+          "id": "0x4fabb145d64652a948d72533023f6e7a623c7c53",
+          "name": "Binance USD",
+          "symbol": "BUSD",
+          "decimals": 18,
+          "lastPriceUSD": "1.00950672756183181671966298178452"
+        },
+        "outputToken": {
+          "id": "0xffe5396c1efd289d207fc7133a594c5e8fef25b3",
+          "name": "Euler Pool: Binance USD",
+          "symbol": "eBUSD",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "13.7379736234003274024582772010893",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "5.8350138246753265357887798278613",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x3feb14fbf01086d057794f54ca0274ed541ec362",
+        "name": "Euler Pool: Gemini dollar",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "30781.48997963468096691415889592906",
+        "totalDepositBalanceUSD": "30781.48997963468096691415889592906",
+        "totalBorrowBalanceUSD": "20749.06932985748299700439758787905",
+        "inputToken": {
+          "id": "0x056fd409e1d7a124bd7017459dfea2f387b6d5cd",
+          "name": "Gemini dollar",
+          "symbol": "GUSD",
+          "decimals": 2,
+          "lastPriceUSD": "1.00129954386262630196516371320139"
+        },
+        "outputToken": {
+          "id": "0x3feb14fbf01086d057794f54ca0274ed541ec362",
+          "name": "Euler Pool: Gemini dollar",
+          "symbol": "eGUSD",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "35.2025311440655053418140191077746",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "14.4921753769502910567615584483632",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x4d3d280fa883ee793c084121ad6580708c927bcd",
+        "name": "Euler Pool: Quantstamp Token",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "30405.36366661779107130390773815364",
+        "totalDepositBalanceUSD": "30405.36366661779107130390773815364",
+        "totalBorrowBalanceUSD": "28754.49688298865939463792963405289",
+        "inputToken": {
+          "id": "0x99ea4db9ee77acd40b119bd1dc4e33e1c070b80d",
+          "name": "Quantstamp Token",
+          "symbol": "QSP",
+          "decimals": 18,
+          "lastPriceUSD": "0.01639716054217074571689700498692714"
+        },
+        "outputToken": {
+          "id": "0x4d3d280fa883ee793c084121ad6580708c927bcd",
+          "name": "Euler Pool: Quantstamp Token",
+          "symbol": "eQSP",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "269.2226612923838646293574724032963",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "174.2125416560967121043146173230976",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x912ed8bcb1957cb501924c3a45a6510df76b80d9",
+        "name": "Euler Pool: Axie Infinity Shard",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0.66",
+        "totalValueLockedUSD": "26950.75047650974517237369388881691",
+        "totalDepositBalanceUSD": "26950.75047650974517237369388881691",
+        "totalBorrowBalanceUSD": "26224.50368545178392400338719378099",
+        "inputToken": {
+          "id": "0xbb0e17ef65f82ab018d8edd776e8dd940327b28b",
+          "name": "Axie Infinity Shard",
+          "symbol": "AXS",
+          "decimals": 18,
+          "lastPriceUSD": "8.243890501959993885697953298217975"
+        },
+        "outputToken": {
+          "id": "0x912ed8bcb1957cb501924c3a45a6510df76b80d9",
+          "name": "Euler Pool: Axie Infinity Shard",
+          "symbol": "eAXS",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "40.9219602925939284231495863505975",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "25.9287397202914166534291209745089",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xe63f356a1b5806f07b1cfd3a7cc62aee659cf677",
+        "name": "Euler Pool: Gitcoin",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "24999.14012537061914348073374815948",
+        "totalDepositBalanceUSD": "24999.14012537061914348073374815948",
+        "totalBorrowBalanceUSD": "15516.68148934076475099758806583343",
+        "inputToken": {
+          "id": "0xde30da39c46104798bb5aa3fe8b9e0e1f348163f",
+          "name": "Gitcoin",
+          "symbol": "GTC",
+          "decimals": 18,
+          "lastPriceUSD": "1.727167755291238102215265325650344"
+        },
+        "outputToken": {
+          "id": "0xe63f356a1b5806f07b1cfd3a7cc62aee659cf677",
+          "name": "Euler Pool: Gitcoin",
+          "symbol": "eGTC",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "45.9540334999697653625481228777323",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "20.4625690461796893323553768926861",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xd99ae587346801f6038a21e870d929c4a493de3a",
+        "name": "Euler Pool: VEGA",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "23655.05856559492140985579435879139",
+        "totalDepositBalanceUSD": "23655.05856559492140985579435879139",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xcb84d72e61e383767c4dfeb2d8ff7f4fb89abc6e",
+          "name": "VEGA",
+          "symbol": "VEGA",
+          "decimals": 18,
+          "lastPriceUSD": "1.213812139356182092707502795926937"
+        },
+        "outputToken": {
+          "id": "0xd99ae587346801f6038a21e870d929c4a493de3a",
+          "name": "Euler Pool: VEGA",
+          "symbol": "eVEGA",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xf0ddc82a91be6e6020ae6bb0506f2890acece1a7",
+        "name": "Euler Pool: Keep3rV1",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "16222.21638185789324916465999485674",
+        "totalDepositBalanceUSD": "16222.21638185789324916465999485674",
+        "totalBorrowBalanceUSD": "5737.589813223476389722299406594935",
+        "inputToken": {
+          "id": "0x1ceb5cb57c4d4e2b2433641b95dd330a33185a44",
+          "name": "Keep3rV1",
+          "symbol": "KP3R",
+          "decimals": 18,
+          "lastPriceUSD": "81.94964186651092368071583863811249"
+        },
+        "outputToken": {
+          "id": "0xf0ddc82a91be6e6020ae6bb0506f2890acece1a7",
+          "name": "Euler Pool: Keep3rV1",
+          "symbol": "eKP3R",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "6.1601129966801169563157813771556",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "1.4550911020357619283449528201136",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x1600c6df6edeb80b56fa74e8590bb1439ed0de99",
+        "name": "Euler Pool: Float Bank",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "15494.35921447298706315958562025226",
+        "totalDepositBalanceUSD": "15494.35921447298706315958562025226",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x24a6a37576377f63f194caa5f518a60f45b42921",
+          "name": "Float Bank",
+          "symbol": "BANK",
+          "decimals": 18,
+          "lastPriceUSD": "1.590762814231864614746513280279047"
+        },
+        "outputToken": {
+          "id": "0x1600c6df6edeb80b56fa74e8590bb1439ed0de99",
+          "name": "Euler Pool: Float Bank",
+          "symbol": "eBANK",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x416affcca4d1e8d30516e311e893ed143c373a2c",
+        "name": "Euler Pool: Frax Share",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "14975.82230061022208773095263325416",
+        "totalDepositBalanceUSD": "14975.82230061022208773095263325416",
+        "totalBorrowBalanceUSD": "8555.20121413024367591634908304646",
+        "inputToken": {
+          "id": "0x3432b6a60d23ca0dfca7761b7ab56459d9c964d0",
+          "name": "Frax Share",
+          "symbol": "FXS",
+          "decimals": 18,
+          "lastPriceUSD": "8.84800508649721180700113392890124"
+        },
+        "outputToken": {
+          "id": "0x416affcca4d1e8d30516e311e893ed143c373a2c",
+          "name": "Euler Pool: Frax Share",
+          "symbol": "eFXS",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "9.0115545779199706009483822870916",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "3.1219221520826359796856660545363",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x2ee4adbf628c52bc396ce1344116962f4a2143e9",
+        "name": "Euler Pool: SHIBA INU",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0.5",
+        "totalValueLockedUSD": "13385.94041696203181183234374990024",
+        "totalDepositBalanceUSD": "13385.94041696203181183234374990024",
+        "totalBorrowBalanceUSD": "5952.931380753392326355083375287497",
+        "inputToken": {
+          "id": "0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce",
+          "name": "SHIBA INU",
+          "symbol": "SHIB",
+          "decimals": 18,
+          "lastPriceUSD": "0.00001097186674868599700826439712619869"
+        },
+        "outputToken": {
+          "id": "0x2ee4adbf628c52bc396ce1344116962f4a2143e9",
+          "name": "Euler Pool: SHIBA INU",
+          "symbol": "eSHIB",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "10.6591855966629714873416494269908",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "3.7443950267207746781338524959187",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x21983a4e3a81c13c10041a555ac268a6681c9e3b",
+        "name": "Euler Pool: ELITECLUB",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "13035.68778858603606569837883668372",
+        "totalDepositBalanceUSD": "13035.68778858603606569837883668372",
+        "totalBorrowBalanceUSD": "10159.40260815957338271525544385548",
+        "inputToken": {
+          "id": "0x53bccb38a174adca09d5103d561d1cb99bfe97af",
+          "name": "ELITECLUB",
+          "symbol": "ELITE",
+          "decimals": 18,
+          "lastPriceUSD": "1.428879403287294050504918017031298"
+        },
+        "outputToken": {
+          "id": "0x21983a4e3a81c13c10041a555ac268a6681c9e3b",
+          "name": "Euler Pool: ELITECLUB",
+          "symbol": "eELITE",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "128.822462825266880127403343806641",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "64.2929794490812212058185233243802",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xff3e7c90e8629576ed644fa964c5fb9476754e11",
+        "name": "Euler Pool: Quant",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "12959.3612655982251689685655832515",
+        "totalDepositBalanceUSD": "12959.3612655982251689685655832515",
+        "totalBorrowBalanceUSD": "1297.785546445220870272991701154122",
+        "inputToken": {
+          "id": "0x4a220e6096b25eadb88358cb44068a3248254675",
+          "name": "Quant",
+          "symbol": "QNT",
+          "decimals": 18,
+          "lastPriceUSD": "129.5730635949776618509719007595531"
+        },
+        "outputToken": {
+          "id": "0xff3e7c90e8629576ed644fa964c5fb9476754e11",
+          "name": "Euler Pool: Quant",
+          "symbol": "eQNT",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "1.9259685296159112909846521670051",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0.1472119156001697803562615353067",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x0a2a3b23d72959b19ae6aa18a177804c9969e1e0",
+        "name": "Euler Pool: Aragon Network Token",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "12417.0148131864532994714404675281",
+        "totalDepositBalanceUSD": "12417.0148131864532994714404675281",
+        "totalBorrowBalanceUSD": "7857.117303570802635149166022260399",
+        "inputToken": {
+          "id": "0xa117000000f279d81a1d3cc75430faa017fa5a2e",
+          "name": "Aragon Network Token",
+          "symbol": "ANT",
+          "decimals": 18,
+          "lastPriceUSD": "2.353354605677572505038299111230096"
+        },
+        "outputToken": {
+          "id": "0x0a2a3b23d72959b19ae6aa18a177804c9969e1e0",
+          "name": "Euler Pool: Aragon Network Token",
+          "symbol": "eANT",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "55.0534329135005553425023969534666",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "23.8765207046785234569333346337823",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xccb53898cf395939b5648df529b7a77a6bcc43b0",
+        "name": "Euler Pool: Curve DAO Token",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0.7",
+        "totalValueLockedUSD": "12396.71848635610191605987528310636",
+        "totalDepositBalanceUSD": "12396.71848635610191605987528310636",
+        "totalBorrowBalanceUSD": "12359.35112274388942637211534400477",
+        "inputToken": {
+          "id": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+          "name": "Curve DAO Token",
+          "symbol": "CRV",
+          "decimals": 18,
+          "lastPriceUSD": "0.9789367219559460456691699380585977"
+        },
+        "outputToken": {
+          "id": "0xccb53898cf395939b5648df529b7a77a6bcc43b0",
+          "name": "Euler Pool: Curve DAO Token",
+          "symbol": "eCRV",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "9.2885135397072537982173490970552",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "2.7156641831748351390290568789704",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x896443434959f63fa58e4d969a9afe267dcf57bf",
+        "name": "Euler Pool: Interest Protocol",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "12180.84231638141029817351283696437",
+        "totalDepositBalanceUSD": "12180.84231638141029817351283696437",
+        "totalBorrowBalanceUSD": "12180.84231638141029817351283696437",
+        "inputToken": {
+          "id": "0xd909c5862cdb164adb949d92622082f0092efc3d",
+          "name": "Interest Protocol",
+          "symbol": "IPT",
+          "decimals": 18,
+          "lastPriceUSD": "0.1646960758807101181549775610022872"
+        },
+        "outputToken": {
+          "id": "0x896443434959f63fa58e4d969a9afe267dcf57bf",
+          "name": "Euler Pool: Interest Protocol",
+          "symbol": "eIPT",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "336.6894280748034573328998744822425",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "200.7076940297737596817275835120069",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xbee7dd5c54fc997d7ae871e1d3502782b8c55520",
+        "name": "Euler Pool: Numeraire",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "10905.76270440816311761188175208374",
+        "totalDepositBalanceUSD": "10905.76270440816311761188175208374",
+        "totalBorrowBalanceUSD": "4447.70007029670651142753305611",
+        "inputToken": {
+          "id": "0x1776e1f26f98b1a5df9cd347953a26dd3cb46671",
+          "name": "Numeraire",
+          "symbol": "NMR",
+          "decimals": 18,
+          "lastPriceUSD": "17.20670706443881340465164435604117"
+        },
+        "outputToken": {
+          "id": "0xbee7dd5c54fc997d7ae871e1d3502782b8c55520",
+          "name": "Euler Pool: Numeraire",
+          "symbol": "eNMR",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "8.0786839783558386602768805014295",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "2.4711676206392330721485674153076",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xbaeb6b7aa164caea6a02deb12167744453f9f30b",
+        "name": "Euler Pool: ApeCoin",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "9676.725769694031121895790344238582",
+        "totalDepositBalanceUSD": "9676.725769694031121895790344238582",
+        "totalBorrowBalanceUSD": "8313.783964360668415354079778020486",
+        "inputToken": {
+          "id": "0x4d224452801aced8b2f0aebe155379bb5d594381",
+          "name": "ApeCoin",
+          "symbol": "APE",
+          "decimals": 18,
+          "lastPriceUSD": "4.501664182948850721850999678273486"
+        },
+        "outputToken": {
+          "id": "0xbaeb6b7aa164caea6a02deb12167744453f9f30b",
+          "name": "Euler Pool: ApeCoin",
+          "symbol": "eAPE",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "186.0367755670154893277113776379947",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "120.643779769463588382136594794594",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x1e083acfa20f3aeab39e93c504f54e31a1ab3f9d",
+        "name": "Euler Pool: Immutable X",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "9553.429179651693385896087722048971",
+        "totalDepositBalanceUSD": "9553.429179651693385896087722048971",
+        "totalBorrowBalanceUSD": "7933.593384183615849637850696783794",
+        "inputToken": {
+          "id": "0xf57e7e7c23978c3caec3c3548e3d615c346e79ff",
+          "name": "Immutable X",
+          "symbol": "IMX",
+          "decimals": 18,
+          "lastPriceUSD": "0.9726249233443675971416365071789698"
+        },
+        "outputToken": {
+          "id": "0x1e083acfa20f3aeab39e93c504f54e31a1ab3f9d",
+          "name": "Euler Pool: Immutable X",
+          "symbol": "eIMX",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "38.8638299761308578359368242160014",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "16.3378332746267221608712749865413",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xc8bb5b9df8dcd2ef92622428843d48ff092c5439",
+        "name": "Euler Pool: FTT",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "9226.579365273321139415276806716946",
+        "totalDepositBalanceUSD": "9226.579365273321139415276806716946",
+        "totalBorrowBalanceUSD": "1400.089744268437462893445274927944",
+        "inputToken": {
+          "id": "0x50d1c9771902476076ecfc8b2a83ad6b9355a4c9",
+          "name": "FTT",
+          "symbol": "FTX Token",
+          "decimals": 18,
+          "lastPriceUSD": "1.153414093069838653109732557081673"
+        },
+        "outputToken": {
+          "id": "0xc8bb5b9df8dcd2ef92622428843d48ff092c5439",
+          "name": "Euler Pool: FTT",
+          "symbol": "eFTX Token",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0.2048569534207778062540266488039",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0.0017897513337219327677188252577",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x2d3244860bc773a76751bc6cc6a1939842b3388b",
+        "name": "Euler Pool: Ethereans",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "5135.618569371672983796957218328947",
+        "totalDepositBalanceUSD": "5135.618569371672983796957218328947",
+        "totalBorrowBalanceUSD": "616.5598074461830505986156731338488",
+        "inputToken": {
+          "id": "0x6100dd79fcaa88420750dcee3f735d168abcb771",
+          "name": "Ethereans",
+          "symbol": "OS",
+          "decimals": 18,
+          "lastPriceUSD": "5.135370200444689243178214857487811"
+        },
+        "outputToken": {
+          "id": "0x2d3244860bc773a76751bc6cc6a1939842b3388b",
+          "name": "Euler Pool: Ethereans",
+          "symbol": "eOS",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "2.3133368972289398968303989339439",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0.2116462156732996970850721109893",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x3028be240465969e4c81fc07a7bc4140f42953a8",
+        "name": "Euler Pool: Balancer",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0.7",
+        "totalValueLockedUSD": "3270.085765960425882907759625019047",
+        "totalDepositBalanceUSD": "3270.085765960425882907759625019047",
+        "totalBorrowBalanceUSD": "2606.996487021372184910104725818624",
+        "inputToken": {
+          "id": "0xba100000625a3754423978a60c9317c58a424e3d",
+          "name": "Balancer",
+          "symbol": "BAL",
+          "decimals": 18,
+          "lastPriceUSD": "6.483495261468205659331842971594174"
+        },
+        "outputToken": {
+          "id": "0x3028be240465969e4c81fc07a7bc4140f42953a8",
+          "name": "Euler Pool: Balancer",
+          "symbol": "eBAL",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "19.91116140419554063069220256181",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "11.8204830645502204183346143939472",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x075c3a5678cd8b30157d541769b8d41893cb6d91",
+        "name": "Euler Pool: CAD Coin",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "2556.502300042644853352908104201359",
+        "totalDepositBalanceUSD": "2556.502300042644853352908104201359",
+        "totalBorrowBalanceUSD": "187.5917841613709348384411042044254",
+        "inputToken": {
+          "id": "0xcadc0acd4b445166f12d2c07eac6e2544fbe2eef",
+          "name": "CAD Coin",
+          "symbol": "CADC",
+          "decimals": 18,
+          "lastPriceUSD": "0.7503671366454837393537644168177015"
+        },
+        "outputToken": {
+          "id": "0x075c3a5678cd8b30157d541769b8d41893cb6d91",
+          "name": "Euler Pool: CAD Coin",
+          "symbol": "eCADC",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "1.4076260932640019648796510010815",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0.0790093202374203450820431344055",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x60208f721a76a8f272326871d1bc8fb28a694008",
+        "name": "Euler Pool: Alchemix",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "2384.24044538174793142988666844852",
+        "totalDepositBalanceUSD": "2384.24044538174793142988666844852",
+        "totalBorrowBalanceUSD": "1390.944580285895196151538707662246",
+        "inputToken": {
+          "id": "0xdbdb4d16eda451d0503b854cf79d55697f90c8df",
+          "name": "Alchemix",
+          "symbol": "ALCX",
+          "decimals": 18,
+          "lastPriceUSD": "21.29323136860970786940594231733096"
+        },
+        "outputToken": {
+          "id": "0x60208f721a76a8f272326871d1bc8fb28a694008",
+          "name": "Euler Pool: Alchemix",
+          "symbol": "eALCX",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "36.4208703611858764472481958108067",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "15.2292679976923443401056725781996",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x1d777fec5ab4f211eb371a6eb02b541311a9832c",
+        "name": "Euler Pool: Enjin Coin",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "2077.714537886719278225279703987423",
+        "totalDepositBalanceUSD": "2077.714537886719278225279703987423",
+        "totalBorrowBalanceUSD": "2077.714537886719278225279703987423",
+        "inputToken": {
+          "id": "0xf629cbd94d3791c9250152bd8dfbdf380e2a3b9c",
+          "name": "Enjin Coin",
+          "symbol": "ENJ",
+          "decimals": 18,
+          "lastPriceUSD": "0.3983241697563850438119352658229306"
+        },
+        "outputToken": {
+          "id": "0x1d777fec5ab4f211eb371a6eb02b541311a9832c",
+          "name": "Euler Pool: Enjin Coin",
+          "symbol": "eENJ",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "245.7966590145079532387002967426962",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "136.4825560525756165426052720216934",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x135ff7c49d6944f5d60aa68a17ae3b0bd9f3875d",
+        "name": "Euler Pool: LoopringCoin V2",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "2022.449299880415551750857517319862",
+        "totalDepositBalanceUSD": "2022.449299880415551750857517319862",
+        "totalBorrowBalanceUSD": "1451.785829604287206446780112079691",
+        "inputToken": {
+          "id": "0xbbbbca6a901c926f240b89eacb641d8aec7aeafd",
+          "name": "LoopringCoin V2",
+          "symbol": "LRC",
+          "decimals": 18,
+          "lastPriceUSD": "0.3232713338892135978101470093848348"
+        },
+        "outputToken": {
+          "id": "0x135ff7c49d6944f5d60aa68a17ae3b0bd9f3875d",
+          "name": "Euler Pool: LoopringCoin V2",
+          "symbol": "eLRC",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "93.868936265678375807202682215749",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "44.0457096867411599323005912012382",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x391b6f14ed4d49c9d217a819118ef379613d37dd",
+        "name": "Euler Pool: Perpetual",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0.5",
+        "totalValueLockedUSD": "1349.847213489584855507333459647651",
+        "totalDepositBalanceUSD": "1349.847213489584855507333459647651",
+        "totalBorrowBalanceUSD": "1109.57185370131413723237347333729",
+        "inputToken": {
+          "id": "0xbc396689893d065f41bc2c6ecbee5e0085233447",
+          "name": "Perpetual",
+          "symbol": "PERP",
+          "decimals": 18,
+          "lastPriceUSD": "0.853515424930625798286168856279819"
+        },
+        "outputToken": {
+          "id": "0x391b6f14ed4d49c9d217a819118ef379613d37dd",
+          "name": "Euler Pool: Perpetual",
+          "symbol": "ePERP",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "36.9856152250395379216138446612001",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "22.1926961024578292666584777080687",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xe60e6cf1252c7d39645f5f4c83a7b8be95e7812d",
+        "name": "Euler Pool: Illuvium",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "1004.481204085192204261863229919522",
+        "totalDepositBalanceUSD": "1004.481204085192204261863229919522",
+        "totalBorrowBalanceUSD": "842.409215090209954554414379673294",
+        "inputToken": {
+          "id": "0x767fe9edc9e0df98e07454847909b5e959d7ca0e",
+          "name": "Illuvium",
+          "symbol": "ILV",
+          "decimals": 18,
+          "lastPriceUSD": "69.54593510464450359330326228224169"
+        },
+        "outputToken": {
+          "id": "0xe60e6cf1252c7d39645f5f4c83a7b8be95e7812d",
+          "name": "Euler Pool: Illuvium",
+          "symbol": "eILV",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "169.8206736997253209640173940007349",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "88.6074926083006161586040894204665",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x6a8156ff97ee7e3cd56eb95835be757f5b7d5657",
+        "name": "Euler Pool: Index",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "968.5484651389678190710963684801834",
+        "totalDepositBalanceUSD": "968.5484651389678190710963684801834",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x0954906da0bf32d5479e25f46056d22f08464cab",
+          "name": "Index",
+          "symbol": "INDEX",
+          "decimals": 18,
+          "lastPriceUSD": "1.937096930277931763948332181096839"
+        },
+        "outputToken": {
+          "id": "0x6a8156ff97ee7e3cd56eb95835be757f5b7d5657",
+          "name": "Euler Pool: Index",
+          "symbol": "eINDEX",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xab4a0a6b072ae22a5ae7c1dfe4646cd3e3a13ce1",
+        "name": "Euler Pool: DeFiChain Token",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "853.6914909932617236232620013312459",
+        "totalDepositBalanceUSD": "853.6914909932617236232620013312459",
+        "totalBorrowBalanceUSD": "820.4715565956304023083266178691644",
+        "inputToken": {
+          "id": "0x8fc8f8269ebca376d046ce292dc7eac40c8d358a",
+          "name": "DeFiChain Token",
+          "symbol": "DFI",
+          "decimals": 8,
+          "lastPriceUSD": "0.5454006150061994812939867700020473"
+        },
+        "outputToken": {
+          "id": "0xab4a0a6b072ae22a5ae7c1dfe4646cd3e3a13ce1",
+          "name": "Euler Pool: DeFiChain Token",
+          "symbol": "eDFI",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "4.459770201303970588676390471678",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0.7728818926439477145407471011719",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x33c43dd27cc7b7050c1061af8eaaeffcbd09d2fd",
+        "name": "Euler Pool: dYdX",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "609.9973229305552093141766242445536",
+        "totalDepositBalanceUSD": "609.9973229305552093141766242445536",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x92d6c1e31e14520e676a687f0a93788b716beff5",
+          "name": "dYdX",
+          "symbol": "DYDX",
+          "decimals": 18,
+          "lastPriceUSD": "2.248109994411797253574572259651935"
+        },
+        "outputToken": {
+          "id": "0x33c43dd27cc7b7050c1061af8eaaeffcbd09d2fd",
+          "name": "Euler Pool: dYdX",
+          "symbol": "eDYDX",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x4f1d82b334760b174182e54714d8045afaefceed",
+        "name": "Euler Pool: Flex Ungovernance Token",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0.00000000025",
+        "totalValueLockedUSD": "418.8673040556294223521776162133253",
+        "totalDepositBalanceUSD": "418.8673040556294223521776162133253",
+        "totalBorrowBalanceUSD": "0.1137715407260935287570960756566749",
+        "inputToken": {
+          "id": "0x6243d8cea23066d098a15582d81a598b4e8391f4",
+          "name": "Flex Ungovernance Token",
+          "symbol": "FLX",
+          "decimals": 18,
+          "lastPriceUSD": "22.74667015362238131579778370216861"
+        },
+        "outputToken": {
+          "id": "0x4f1d82b334760b174182e54714d8045afaefceed",
+          "name": "Euler Pool: Flex Ungovernance Token",
+          "symbol": "eFLX",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0.0051742686388574874056844062872",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0.0000010821482033452151420181916",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x4321526980990555fb97562d719e42f0dba0eada",
+        "name": "Euler Pool: Float Protocol: FLOAT",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "409.0560550212757776583596927828378",
+        "totalDepositBalanceUSD": "409.0560550212757776583596927828378",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xb05097849bca421a3f51b249ba6cca4af4b97cb9",
+          "name": "Float Protocol: FLOAT",
+          "symbol": "FLOAT",
+          "decimals": 18,
+          "lastPriceUSD": "0.8330382371590719071857658249431027"
+        },
+        "outputToken": {
+          "id": "0x4321526980990555fb97562d719e42f0dba0eada",
+          "name": "Euler Pool: Float Protocol: FLOAT",
+          "symbol": "eFLOAT",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x36374f4e1cb1f771c11ef080fb283772a3f36020",
+        "name": "Euler Pool: Idle",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "336.7968296612996852086169811422305",
+        "totalDepositBalanceUSD": "336.7968296612996852086169811422305",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x875773784af8135ea0ef43b5a374aad105c5d39e",
+          "name": "Idle",
+          "symbol": "IDLE",
+          "decimals": 18,
+          "lastPriceUSD": "0.4851080306666565060827314377086969"
+        },
+        "outputToken": {
+          "id": "0x36374f4e1cb1f771c11ef080fb283772a3f36020",
+          "name": "Euler Pool: Idle",
+          "symbol": "eIDLE",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x2cb3229bcd6bbedca557ff9767d43ec41059e198",
+        "name": "Euler Pool: SOS",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "198.7367901548957782905840351010582",
+        "totalDepositBalanceUSD": "198.7367901548957782905840351010582",
+        "totalBorrowBalanceUSD": "36.58376016991289903135624613538251",
+        "inputToken": {
+          "id": "0x3b484b82567a09e2588a13d54d032153f0c0aee0",
+          "name": "SOS",
+          "symbol": "SOS",
+          "decimals": 18,
+          "lastPriceUSD": "0.000000142887990244527159732069407727277"
+        },
+        "outputToken": {
+          "id": "0x2cb3229bcd6bbedca557ff9767d43ec41059e198",
+          "name": "Euler Pool: SOS",
+          "symbol": "eSOS",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "3.5688457226718456404176725896906",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0.4982865444557192126446842239029",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xa04dddd0e5e83a0b16f1ead84e29f18e135a4bca",
+        "name": "Euler Pool: ETH 2x Flexible Leverage Index",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "169.6687354359138552077833659425266",
+        "totalDepositBalanceUSD": "169.6687354359138552077833659425266",
+        "totalBorrowBalanceUSD": "3.280584247990186774636899617874846",
+        "inputToken": {
+          "id": "0xaa6e8127831c9de45ae56bb1b0d4d4da6e5665bd",
+          "name": "ETH 2x Flexible Leverage Index",
+          "symbol": "ETH2x-FLI",
+          "decimals": 18,
+          "lastPriceUSD": "9.950039205519461747064886988154469"
+        },
+        "outputToken": {
+          "id": "0xa04dddd0e5e83a0b16f1ead84e29f18e135a4bca",
+          "name": "Euler Pool: ETH 2x Flexible Leverage Index",
+          "symbol": "eETH2x-FLI",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0.3690033090406148239717197332213",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0.0054919778828635929336545334342",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xebc95df6dd5278ee8c49914ec67bb42e26cd88e4",
+        "name": "Euler Pool: Maple Token",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "139.2906209050694551035232427220908",
+        "totalDepositBalanceUSD": "139.2906209050694551035232427220908",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x33349b282065b0284d756f0577fb39c158f935e6",
+          "name": "Maple Token",
+          "symbol": "MPL",
+          "decimals": 18,
+          "lastPriceUSD": "4.626485254699429922940793938227966"
+        },
+        "outputToken": {
+          "id": "0xebc95df6dd5278ee8c49914ec67bb42e26cd88e4",
+          "name": "Euler Pool: Maple Token",
+          "symbol": "eMPL",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x4dc4b210fad381c0e24ee689a689cbe956cd6b9b",
+        "name": "Euler Pool: Frax Price Index Share",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "133.484113801517190445356354352153",
+        "totalDepositBalanceUSD": "133.484113801517190445356354352153",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xc2544a32872a91f4a553b404c6950e89de901fdb",
+          "name": "Frax Price Index Share",
+          "symbol": "FPIS",
+          "decimals": 18,
+          "lastPriceUSD": "2.124769694305727587890871957274114"
+        },
+        "outputToken": {
+          "id": "0x4dc4b210fad381c0e24ee689a689cbe956cd6b9b",
+          "name": "Euler Pool: Frax Price Index Share",
+          "symbol": "eFPIS",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x65bf4f691998bd3a35f3f095fb1f62c3c7af6ad0",
+        "name": "Euler Pool: Bright",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "104.8635959386032571314422919525824",
+        "totalDepositBalanceUSD": "104.8635959386032571314422919525824",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x5dd57da40e6866c9fcc34f4b6ddc89f1ba740dfe",
+          "name": "Bright",
+          "symbol": "BRIGHT",
+          "decimals": 18,
+          "lastPriceUSD": "0.03634786687646558779326704176325635"
+        },
+        "outputToken": {
+          "id": "0x65bf4f691998bd3a35f3f095fb1f62c3c7af6ad0",
+          "name": "Euler Pool: Bright",
+          "symbol": "eBRIGHT",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x95255dac717980ea1460b732533df7982b48b444",
+        "name": "Euler Pool: Gamma",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "100.3220735033589987696847735757023",
+        "totalDepositBalanceUSD": "100.3220735033589987696847735757023",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x6bea7cfef803d1e3d5f7c0103f7ded065644e197",
+          "name": "Gamma",
+          "symbol": "GAMMA",
+          "decimals": 18,
+          "lastPriceUSD": "0.1396504301301285552471126829910773"
+        },
+        "outputToken": {
+          "id": "0x95255dac717980ea1460b732533df7982b48b444",
+          "name": "Euler Pool: Gamma",
+          "symbol": "eGAMMA",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xd08128bc62113bfb3e1d9a0dc0ee1f0ffd2e45ac",
+        "name": "Euler Pool: CryptoPunks",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "78.01340268137594376322201474749929",
+        "totalDepositBalanceUSD": "78.01340268137594376322201474749929",
+        "totalBorrowBalanceUSD": "0.00005728314078093147530175295423154162",
+        "inputToken": {
+          "id": "0x269616d549d7e8eaa82dfb17028d0b212d11232a",
+          "name": "CryptoPunks",
+          "symbol": "PUNK",
+          "decimals": 18,
+          "lastPriceUSD": "104901.8785658953052116857849622506"
+        },
+        "outputToken": {
+          "id": "0xd08128bc62113bfb3e1d9a0dc0ee1f0ffd2e45ac",
+          "name": "Euler Pool: CryptoPunks",
+          "symbol": "ePUNK",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0.0000139844367208048106224751723",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0.000000000007910841444817705369",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xaf637d698ea03cc37f6332ef9645d30e7dda2712",
+        "name": "Euler Pool: Meta",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "35.43587125787703304805420777231102",
+        "totalDepositBalanceUSD": "35.43587125787703304805420777231102",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xa3bed4e1c75d00fa6f4e5e6922db7261b5e9acd2",
+          "name": "Meta",
+          "symbol": "MTA",
+          "decimals": 18,
+          "lastPriceUSD": "0.02944453521072050357844192725108293"
+        },
+        "outputToken": {
+          "id": "0xaf637d698ea03cc37f6332ef9645d30e7dda2712",
+          "name": "Euler Pool: Meta",
+          "symbol": "eMTA",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xa5c40d4e4d8328dea1bb13931e9d4da1da506d84",
+        "name": "Euler Pool: Universal Basic Income",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "8.144736018786230303021010140697201",
+        "totalDepositBalanceUSD": "8.144736018786230303021010140697201",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xdd1ad9a21ce722c151a836373babe42c868ce9a4",
+          "name": "Universal Basic Income",
+          "symbol": "UBI",
+          "decimals": 18,
+          "lastPriceUSD": "0.002677428295714426326858388833775464"
+        },
+        "outputToken": {
+          "id": "0xa5c40d4e4d8328dea1bb13931e9d4da1da506d84",
+          "name": "Euler Pool: Universal Basic Income",
+          "symbol": "eUBI",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x3ba615b20bf18d36417198a451e82028609cf755",
+        "name": "Euler Pool: Radicle",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "4.647613505192601126935490000059741",
+        "totalDepositBalanceUSD": "4.647613505192601126935490000059741",
+        "totalBorrowBalanceUSD": "4.647613505192600317840638357193087",
+        "inputToken": {
+          "id": "0x31c8eacbffdd875c74b94b077895bd78cf1e64a3",
+          "name": "Radicle",
+          "symbol": "RAD",
+          "decimals": 18,
+          "lastPriceUSD": "0.00000000000000162926873065418174459347072777589"
+        },
+        "outputToken": {
+          "id": "0x3ba615b20bf18d36417198a451e82028609cf755",
+          "name": "Euler Pool: Radicle",
+          "symbol": "eRAD",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "336.6894277550195010387134846685716",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "1005.756680021091329743596928563667",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xb7ecf9a9eede0c8da424298c79da77204240c003",
+        "name": "Euler Pool: Compound Ether",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "1.425291116752763336877822721387056",
+        "totalDepositBalanceUSD": "1.425291116752763336877822721387056",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x4ddc2d193948926d02f9b1fe9e1daa0718270ed5",
+          "name": "Compound Ether",
+          "symbol": "cETH",
+          "decimals": 8,
+          "lastPriceUSD": "32.60864162421385382593568192791087"
+        },
+        "outputToken": {
+          "id": "0xb7ecf9a9eede0c8da424298c79da77204240c003",
+          "name": "Euler Pool: Compound Ether",
+          "symbol": "ecETH",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xe89d9c15416ffa342258ccc3e521ac515dae679c",
+        "name": "Euler Pool: Cardstack",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.003714911719284468282196886768560118",
+        "totalDepositBalanceUSD": "0.003714911719284468282196886768560118",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x954b890704693af242613edef1b603825afcd708",
+          "name": "Cardstack",
+          "symbol": "CARD",
+          "decimals": 18,
+          "lastPriceUSD": "0.001618759009376341840920375024354418"
+        },
+        "outputToken": {
+          "id": "0xe89d9c15416ffa342258ccc3e521ac515dae679c",
+          "name": "Euler Pool: Cardstack",
+          "symbol": "eCARD",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xc1bfbe05989a61da0e3c42b2fd34c35862864e02",
+        "name": "Euler Pool: XMON",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.000000003450562279647867002248854560770067",
+        "totalDepositBalanceUSD": "0.000000003450562279647867002248854560770067",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x3aada3e213abf8529606924d8d1c55cbdc70bf74",
+          "name": "XMON",
+          "symbol": "XMON",
+          "decimals": 18,
+          "lastPriceUSD": "3450.562279647867002248854560770067"
+        },
+        "outputToken": {
+          "id": "0xc1bfbe05989a61da0e3c42b2fd34c35862864e02",
+          "name": "Euler Pool: XMON",
+          "symbol": "eXMON",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xb84dc9923c1d1b98e76b1e2d35529bef828ee648",
+        "name": "Euler Pool: renDOGE",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.000000002514146932109959912806234297504215",
+        "totalDepositBalanceUSD": "0.000000002514146932109959912806234297504215",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x3832d2f059e55934220881f831be501d180671a7",
+          "name": "renDOGE",
+          "symbol": "renDOGE",
+          "decimals": 8,
+          "lastPriceUSD": "0.2514146932109959912806234297504215"
+        },
+        "outputToken": {
+          "id": "0xb84dc9923c1d1b98e76b1e2d35529bef828ee648",
+          "name": "Euler Pool: renDOGE",
+          "symbol": "erenDOGE",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xd1117863785960b8062b4421087a771ce49a4dcc",
+        "name": "Euler Pool: StakeWise Staked ETH2",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.000000001623229502429395327761455340821207",
+        "totalDepositBalanceUSD": "0.000000001623229502429395327761455340821207",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xfe2e637202056d30016725477c5da089ab0a043a",
+          "name": "StakeWise Staked ETH2",
+          "symbol": "sETH2",
+          "decimals": 18,
+          "lastPriceUSD": "1623.229502429395327761455340821207"
+        },
+        "outputToken": {
+          "id": "0xd1117863785960b8062b4421087a771ce49a4dcc",
+          "name": "Euler Pool: StakeWise Staked ETH2",
+          "symbol": "esETH2",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xf7e46739080eb6a77858a227dd769aac96ae729d",
+        "name": "Euler Pool: Dopex Governance Token",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.000000001329270964053020424818086849120054",
+        "totalDepositBalanceUSD": "0.000000001329270964053020424818086849120054",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xeec2be5c91ae7f8a338e1e5f3b5de49d07afdc81",
+          "name": "Dopex Governance Token",
+          "symbol": "DPX",
+          "decimals": 18,
+          "lastPriceUSD": "1114.215178278339784644137270419178"
+        },
+        "outputToken": {
+          "id": "0xf7e46739080eb6a77858a227dd769aac96ae729d",
+          "name": "Euler Pool: Dopex Governance Token",
+          "symbol": "eDPX",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x079be9d6f6ad0e79225bec7b88d7bd6420a0f240",
+        "name": "Euler Pool: Human Token",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.000000001155354918302567404486693285217007",
+        "totalDepositBalanceUSD": "0.000000001155354918302567404486693285217007",
+        "totalBorrowBalanceUSD": "0.000000001155353976717353379134060606180811",
+        "inputToken": {
+          "id": "0xd1ba9bac957322d6e8c07a160a3a8da11a0d2867",
+          "name": "Human Token",
+          "symbol": "HMT",
+          "decimals": 18,
+          "lastPriceUSD": "0.00000000000000162926873065418174459347072777589"
+        },
+        "outputToken": {
+          "id": "0x079be9d6f6ad0e79225bec7b88d7bd6420a0f240",
+          "name": "Euler Pool: Human Token",
+          "symbol": "eHMT",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "336.6883085128920367698769379323909",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "240.8539070635475686572600412309858",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xb19b73c79e0b80280130f08a0817490bfdb5d1b4",
+        "name": "Euler Pool: Falcon",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.0000000002213599317087566852976142718483714",
+        "totalDepositBalanceUSD": "0.0000000002213599317087566852976142718483714",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xdc5864ede28bd4405aa04d93e05a0531797d9d59",
+          "name": "Falcon",
+          "symbol": "FNT",
+          "decimals": 6,
+          "lastPriceUSD": "0.0002213599317087566852976142718483714"
+        },
+        "outputToken": {
+          "id": "0xb19b73c79e0b80280130f08a0817490bfdb5d1b4",
+          "name": "Euler Pool: Falcon",
+          "symbol": "eFNT",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xbbaf473053dfec63e05768c0fb583e829844062f",
+        "name": "Euler Pool: DefiPulse Index",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.00000000008327676774208864871145694526576335",
+        "totalDepositBalanceUSD": "0.00000000008327676774208864871145694526576335",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x1494ca1f11d487c2bbe4543e90080aeba4ba3c2b",
+          "name": "DefiPulse Index",
+          "symbol": "DPI",
+          "decimals": 18,
+          "lastPriceUSD": "83.27676774208864871145694526576335"
+        },
+        "outputToken": {
+          "id": "0xbbaf473053dfec63e05768c0fb583e829844062f",
+          "name": "Euler Pool: DefiPulse Index",
+          "symbol": "eDPI",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x6e626798496ac5ca7b18d1795e824272a06f638a",
+        "name": "Euler Pool: Bankless BED Index",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.00000000005636503401647436645241535973621485",
+        "totalDepositBalanceUSD": "0.00000000005636503401647436645241535973621485",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x2af1df3ab0ab157e1e2ad8f88a7d04fbea0c7dc6",
+          "name": "Bankless BED Index",
+          "symbol": "BED",
+          "decimals": 18,
+          "lastPriceUSD": "56.36503401647436645241535973621485"
+        },
+        "outputToken": {
+          "id": "0x6e626798496ac5ca7b18d1795e824272a06f638a",
+          "name": "Euler Pool: Bankless BED Index",
+          "symbol": "eBED",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x7c036806bb39ae466ba15b8a374469ea80dc03e0",
+        "name": "Euler Pool: SSV Token",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.00000000003894259404209108452925911309319516",
+        "totalDepositBalanceUSD": "0.00000000003894259404209108452925911309319516",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x9d65ff81a3c488d585bbfb0bfe3c7707c7917f54",
+          "name": "SSV Token",
+          "symbol": "SSV",
+          "decimals": 18,
+          "lastPriceUSD": "38.94259404209108452925911309319516"
+        },
+        "outputToken": {
+          "id": "0x7c036806bb39ae466ba15b8a374469ea80dc03e0",
+          "name": "Euler Pool: SSV Token",
+          "symbol": "eSSV",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xb0e8ea8b0dea44b2d5f722df14149c524b68c187",
+        "name": "Euler Pool: Metaverse Index",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.00000000002401209106079450616806411063462545",
+        "totalDepositBalanceUSD": "0.00000000002401209106079450616806411063462545",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x72e364f2abdc788b7e918bc238b21f109cd634d7",
+          "name": "Metaverse Index",
+          "symbol": "MVI",
+          "decimals": 18,
+          "lastPriceUSD": "24.01209106079450616806411063462545"
+        },
+        "outputToken": {
+          "id": "0xb0e8ea8b0dea44b2d5f722df14149c524b68c187",
+          "name": "Euler Pool: Metaverse Index",
+          "symbol": "eMVI",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xfdd2af9e6dc3607b10fc93f0ebe7926a94de501b",
+        "name": "Euler Pool: LUKSO Token",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.000000000009519765924979632770952949841168894",
+        "totalDepositBalanceUSD": "0.000000000009519765924979632770952949841168894",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xa8b919680258d369114910511cc87595aec0be6d",
+          "name": "LUKSO Token",
+          "symbol": "LYXe",
+          "decimals": 18,
+          "lastPriceUSD": "9.519765924979632770952949841168894"
+        },
+        "outputToken": {
+          "id": "0xfdd2af9e6dc3607b10fc93f0ebe7926a94de501b",
+          "name": "Euler Pool: LUKSO Token",
+          "symbol": "eLYXe",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x1ff9867a5db630e79ad10a81ad33227c9e19159d",
+        "name": "Euler Pool: TornadoCash",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.000000000007129140826743451493661684880657931",
+        "totalDepositBalanceUSD": "0.000000000007129140826743451493661684880657931",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x77777feddddffc19ff86db637967013e6c6a116c",
+          "name": "TornadoCash",
+          "symbol": "TORN",
+          "decimals": 18,
+          "lastPriceUSD": "7.129140826743451493661684880657931"
+        },
+        "outputToken": {
+          "id": "0x1ff9867a5db630e79ad10a81ad33227c9e19159d",
+          "name": "Euler Pool: TornadoCash",
+          "symbol": "eTORN",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xe955f59a6ed314bc52b10a783c6607dc4069b7d6",
+        "name": "Euler Pool: Wrapped Ampleforth",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.000000000006174704321920304175424297542207632",
+        "totalDepositBalanceUSD": "0.000000000006174704321920304175424297542207632",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xedb171c18ce90b633db442f2a6f72874093b49ef",
+          "name": "Wrapped Ampleforth",
+          "symbol": "WAMPL",
+          "decimals": 18,
+          "lastPriceUSD": "6.174704321920304175424297542207632"
+        },
+        "outputToken": {
+          "id": "0xe955f59a6ed314bc52b10a783c6607dc4069b7d6",
+          "name": "Euler Pool: Wrapped Ampleforth",
+          "symbol": "eWAMPL",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xdde0ac5fefd0f3fca5ea5efd3afb925ef4ed007f",
+        "name": "Euler Pool: Convex CRV",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.000000000001369858324161625345202967110188617",
+        "totalDepositBalanceUSD": "0.000000000001369858324161625345202967110188617",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x62b9c7356a2dc64a1969e19c23e4f579f9810aa7",
+          "name": "Convex CRV",
+          "symbol": "cvxCRV",
+          "decimals": 18,
+          "lastPriceUSD": "1.36849120145137542115723103638327"
+        },
+        "outputToken": {
+          "id": "0xdde0ac5fefd0f3fca5ea5efd3afb925ef4ed007f",
+          "name": "Euler Pool: Convex CRV",
+          "symbol": "ecvxCRV",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xd5df618ce59442558139ba6788fc60d49f662fbc",
+        "name": "Euler Pool: Fixed Income Asset Token",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.00000000000131424495927752316959246996649099",
+        "totalDepositBalanceUSD": "0.00000000000131424495927752316959246996649099",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x586aa273f262909eef8fa02d90ab65f5015e0516",
+          "name": "Fixed Income Asset Token",
+          "symbol": "FIAT",
+          "decimals": 18,
+          "lastPriceUSD": "1.31424495927752316959246996649099"
+        },
+        "outputToken": {
+          "id": "0xd5df618ce59442558139ba6788fc60d49f662fbc",
+          "name": "Euler Pool: Fixed Income Asset Token",
+          "symbol": "eFIAT",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xcd37d4e5ba17c2e0ea52ce7f1d6e817575855e40",
+        "name": "Euler Pool: Render Token",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.000000000001253523848470917198045451352559319",
+        "totalDepositBalanceUSD": "0.000000000001253523848470917198045451352559319",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x6de037ef9ad2725eb40118bb1702ebb27e4aeb24",
+          "name": "Render Token",
+          "symbol": "RNDR",
+          "decimals": 18,
+          "lastPriceUSD": "1.25352259494832224972320162935769"
+        },
+        "outputToken": {
+          "id": "0xcd37d4e5ba17c2e0ea52ce7f1d6e817575855e40",
+          "name": "Euler Pool: Render Token",
+          "symbol": "eRNDR",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x298b21982318adfde84968284a585dce08543eb4",
+        "name": "Euler Pool: Goldfinch",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.0000000000005985066404652969268928441610760746",
+        "totalDepositBalanceUSD": "0.0000000000005985066404652969268928441610760746",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xdab396ccf3d84cf2d07c4454e10c8a6f5b008d2b",
+          "name": "Goldfinch",
+          "symbol": "GFI",
+          "decimals": 18,
+          "lastPriceUSD": "0.5985066404652969268928441610760746"
+        },
+        "outputToken": {
+          "id": "0x298b21982318adfde84968284a585dce08543eb4",
+          "name": "Euler Pool: Goldfinch",
+          "symbol": "eGFI",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x39ab25ea28fd5012c859a861ceef0ca3d34b8c2e",
+        "name": "Euler Pool: DFX Token",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.0000000000005065794250440574806529171205809969",
+        "totalDepositBalanceUSD": "0.0000000000005065794250440574806529171205809969",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x888888435fde8e7d4c54cab67f206e4199454c60",
+          "name": "DFX Token",
+          "symbol": "DFX",
+          "decimals": 18,
+          "lastPriceUSD": "0.4277137199383458311863054457454408"
+        },
+        "outputToken": {
+          "id": "0x39ab25ea28fd5012c859a861ceef0ca3d34b8c2e",
+          "name": "Euler Pool: DFX Token",
+          "symbol": "eDFX",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xb257a84f194f0df10d5e7a05b2dee38e790c3ebd",
+        "name": "Euler Pool: Wootrade Network",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.00000000000018561555583981013758687691895459",
+        "totalDepositBalanceUSD": "0.00000000000018561555583981013758687691895459",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x4691937a7508860f876c9c0a2a617e7d9e945d4b",
+          "name": "Wootrade Network",
+          "symbol": "WOO",
+          "decimals": 18,
+          "lastPriceUSD": "0.18561555583981013758687691895459"
+        },
+        "outputToken": {
+          "id": "0xb257a84f194f0df10d5e7a05b2dee38e790c3ebd",
+          "name": "Euler Pool: Wootrade Network",
+          "symbol": "eWOO",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x1627f64662e12caa5b10142c3c49cc10987678cc",
+        "name": "Euler Pool: Hop",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.0000000000001713134390584142333522405046800529",
+        "totalDepositBalanceUSD": "0.0000000000001713134390584142333522405046800529",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xc5102fe9359fd9a28f877a67e36b0f050d81a3cc",
+          "name": "Hop",
+          "symbol": "HOP",
+          "decimals": 18,
+          "lastPriceUSD": "0.1713134390584142333522405046800529"
+        },
+        "outputToken": {
+          "id": "0x1627f64662e12caa5b10142c3c49cc10987678cc",
+          "name": "Euler Pool: Hop",
+          "symbol": "eHOP",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x1440dcf46d9fad81accfc4980c17c7a2268dfecc",
+        "name": "Euler Pool: LooksRare Token",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.0000000000001489756426741480423818493952931747",
+        "totalDepositBalanceUSD": "0.0000000000001489756426741480423818493952931747",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xf4d2888d29d722226fafa5d9b24f9164c092421e",
+          "name": "LooksRare Token",
+          "symbol": "LOOKS",
+          "decimals": 18,
+          "lastPriceUSD": "0.1489756426741480423818493952931747"
+        },
+        "outputToken": {
+          "id": "0x1440dcf46d9fad81accfc4980c17c7a2268dfecc",
+          "name": "Euler Pool: LooksRare Token",
+          "symbol": "eLOOKS",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x4d7fe1c0c1a10b23aef143ce566bc6e2b70f8c3a",
+        "name": "Euler Pool: Request Token",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.00000000000009671143292982784641641410802000805",
+        "totalDepositBalanceUSD": "0.00000000000009671143292982784641641410802000805",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x8f8221afbb33998d8584a2b05749ba73c37a938a",
+          "name": "Request Token",
+          "symbol": "REQ",
+          "decimals": 18,
+          "lastPriceUSD": "0.09671143292982784641641410802000805"
+        },
+        "outputToken": {
+          "id": "0x4d7fe1c0c1a10b23aef143ce566bc6e2b70f8c3a",
+          "name": "Euler Pool: Request Token",
+          "symbol": "eREQ",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xee7c6d8a91c49c919dccbce5847c20a20111b421",
+        "name": "Euler Pool: Strudel Finance",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.00000000000008178851314270214973024679540844795",
+        "totalDepositBalanceUSD": "0.00000000000008178851314270214973024679540844795",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x297d33e17e61c2ddd812389c2105193f8348188a",
+          "name": "Strudel Finance",
+          "symbol": "$TRDL",
+          "decimals": 18,
+          "lastPriceUSD": "0.08178851314270214973024679540844795"
+        },
+        "outputToken": {
+          "id": "0xee7c6d8a91c49c919dccbce5847c20a20111b421",
+          "name": "Euler Pool: Strudel Finance",
+          "symbol": "e$TRDL",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xe1b405a513aedea75e2be61a0e8ccea4287fac51",
+        "name": "Euler Pool: E-RADIX",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.00000000000004130796827915010360987280659445355",
+        "totalDepositBalanceUSD": "0.00000000000004130796827915010360987280659445355",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x6468e79a80c0eab0f9a2b574c8d5bc374af59414",
+          "name": "E-RADIX",
+          "symbol": "eXRD",
+          "decimals": 18,
+          "lastPriceUSD": "0.04130796827915010360987280659445355"
+        },
+        "outputToken": {
+          "id": "0xe1b405a513aedea75e2be61a0e8ccea4287fac51",
+          "name": "Euler Pool: E-RADIX",
+          "symbol": "eeXRD",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xa15287fac2c3d1b3d50097fe559ab924d984b27b",
+        "name": "Euler Pool: Tracer",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.0000000000000189321727990461952486539371161335",
+        "totalDepositBalanceUSD": "0.0000000000000189321727990461952486539371161335",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x9c4a4204b79dd291d6b6571c5be8bbcd0622f050",
+          "name": "Tracer",
+          "symbol": "TCR",
+          "decimals": 18,
+          "lastPriceUSD": "0.0189321727990461952486539371161335"
+        },
+        "outputToken": {
+          "id": "0xa15287fac2c3d1b3d50097fe559ab924d984b27b",
+          "name": "Euler Pool: Tracer",
+          "symbol": "eTCR",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x7f05d0c1d5138e5412004c37763f6384ff7c179a",
+        "name": "Euler Pool: Babylon.Finance",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.00000000000001241468886785731590827951968601742",
+        "totalDepositBalanceUSD": "0.00000000000001241468886785731590827951968601742",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xf4dc48d260c93ad6a96c5ce563e70ca578987c74",
+          "name": "Babylon.Finance",
+          "symbol": "BABL",
+          "decimals": 18,
+          "lastPriceUSD": "0.01241468886785731590827951968601742"
+        },
+        "outputToken": {
+          "id": "0x7f05d0c1d5138e5412004c37763f6384ff7c179a",
+          "name": "Euler Pool: Babylon.Finance",
+          "symbol": "eBABL",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x5c382b8774b084eaecb4380b38ace1832b9eb662",
+        "name": "Euler Pool: Impermax",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.00000000000000000000000000162926873065418174459347072777589",
+        "totalDepositBalanceUSD": "0.00000000000000000000000000162926873065418174459347072777589",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x7b35ce522cb72e4077baeb96cb923a5529764a00",
+          "name": "Impermax",
+          "symbol": "IMX",
+          "decimals": 18,
+          "lastPriceUSD": "0.00000000000000162926873065418174459347072777589"
+        },
+        "outputToken": {
+          "id": "0x5c382b8774b084eaecb4380b38ace1832b9eb662",
+          "name": "Euler Pool: Impermax",
+          "symbol": "eIMX",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xf92230094736e502c62c35a38be2b6809b7bb5ad",
+        "name": "Euler Pool: Rocket Pool ETH",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0.8",
+        "liquidationThreshold": "0.85",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xae78736cd615f374d3085123a210448e74fc6393",
+          "name": "Rocket Pool ETH",
+          "symbol": "rETH",
+          "decimals": 18,
+          "lastPriceUSD": "1737.615101242684830608936531172987"
+        },
+        "outputToken": {
+          "id": "0xf92230094736e502c62c35a38be2b6809b7bb5ad",
+          "name": "Euler Pool: Rocket Pool ETH",
+          "symbol": "erETH",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xf7631a26e75f64d71c453fc40e5b14d425791a7f",
+        "name": "Euler Pool: Synth sUSD",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x57ab1ec28d129707052df4df418d58a2d46d5f51",
+          "name": "Synth sUSD",
+          "symbol": "sUSD",
+          "decimals": 18,
+          "lastPriceUSD": "1.011138773559844753900144596007051"
+        },
+        "outputToken": {
+          "id": "0xf7631a26e75f64d71c453fc40e5b14d425791a7f",
+          "name": "Euler Pool: Synth sUSD",
+          "symbol": "esUSD",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xf5375ab059ebe8bbd3a11e7be3f3abc20be533bd",
+        "name": "Euler Pool: iEx.ec Network Token",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x607f4c5bb672230e8672085532f7e901544a7375",
+          "name": "iEx.ec Network Token",
+          "symbol": "RLC",
+          "decimals": 9,
+          "lastPriceUSD": "1.472215243279013035268108051883742"
+        },
+        "outputToken": {
+          "id": "0xf5375ab059ebe8bbd3a11e7be3f3abc20be533bd",
+          "name": "Euler Pool: iEx.ec Network Token",
+          "symbol": "eRLC",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xd9fcd98c322942075a5c3860693e9f4f03aae07b",
+        "name": null,
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xd9fcd98c322942075a5c3860693e9f4f03aae07b",
+          "name": "Euler",
+          "symbol": "EUL",
+          "decimals": 18,
+          "lastPriceUSD": "4.047636854631780543223527831597731"
+        },
+        "outputToken": null,
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xd371c1a8cb98676b014d2b0c02f605214d9f09bb",
+        "name": "Euler Pool: Wrapped TON Coin",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x582d872a1b094fc48f5de31d3b73f2d9be47def1",
+          "name": "Wrapped TON Coin",
+          "symbol": "TONCOIN",
+          "decimals": 9,
+          "lastPriceUSD": "2.437494545552781026428195632614179"
+        },
+        "outputToken": {
+          "id": "0xd371c1a8cb98676b014d2b0c02f605214d9f09bb",
+          "name": "Euler Pool: Wrapped TON Coin",
+          "symbol": "eTONCOIN",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xabcaeddc4d7bdeba94ae0c24f55f161a7d1dbfc4",
+        "name": "Euler Pool: StakeWise",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x48c3399719b582dd63eb5aadf12a40b4c3f52fa2",
+          "name": "StakeWise",
+          "symbol": "SWISE",
+          "decimals": 18,
+          "lastPriceUSD": "0.1656958120843683430415724366698262"
+        },
+        "outputToken": {
+          "id": "0xabcaeddc4d7bdeba94ae0c24f55f161a7d1dbfc4",
+          "name": "Euler Pool: StakeWise",
+          "symbol": "eSWISE",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xa5e1ea406e98f00ee2b127c7efc9948bbb6d5d84",
+        "name": "Euler Pool: Chain",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xa2cd3d43c775978a96bdbf12d733d5a1ed94fb18",
+          "name": "Chain",
+          "symbol": "XCN",
+          "decimals": 18,
+          "lastPriceUSD": "0.006418116831657257543749840392508653"
+        },
+        "outputToken": {
+          "id": "0xa5e1ea406e98f00ee2b127c7efc9948bbb6d5d84",
+          "name": "Euler Pool: Chain",
+          "symbol": "eXCN",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x8897bd696377b00aa7bb2ef52c686a4d898e1409",
+        "name": "Euler Pool: Dejitaru Tsuka",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xc5fb36dd2fb59d3b98deff88425a3f425ee469ed",
+          "name": "Dejitaru Tsuka",
+          "symbol": "TSUKA",
+          "decimals": 9,
+          "lastPriceUSD": "0.08166043447499731669067536454028851"
+        },
+        "outputToken": {
+          "id": "0x8897bd696377b00aa7bb2ef52c686a4d898e1409",
+          "name": "Euler Pool: Dejitaru Tsuka",
+          "symbol": "eTSUKA",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x61d25be1931bcbaf029827653025a3d1e2195ab4",
+        "name": "Euler Pool: Concave",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x000000007a58f5f58e697e51ab0357bc9e260a04",
+          "name": "Concave",
+          "symbol": "CNV",
+          "decimals": 18,
+          "lastPriceUSD": "6.924876403646671695913917396067278"
+        },
+        "outputToken": {
+          "id": "0x61d25be1931bcbaf029827653025a3d1e2195ab4",
+          "name": "Euler Pool: Concave",
+          "symbol": "eCNV",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x4a8424c0ef92989a493830ae97b1898522bf8c44",
+        "name": "Euler Pool: BiLira",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x2c537e5624e4af88a7ae4060c022609376c8d0eb",
+          "name": "BiLira",
+          "symbol": "TRYB",
+          "decimals": 6,
+          "lastPriceUSD": "0.04478515417601328031722310526363917"
+        },
+        "outputToken": {
+          "id": "0x4a8424c0ef92989a493830ae97b1898522bf8c44",
+          "name": "Euler Pool: BiLira",
+          "symbol": "eTRYB",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x3aeb1a8c675207438f923139c41c4f783a1fea60",
+        "name": "Euler Pool: Aura",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xc0c293ce456ff0ed870add98a0828dd4d2903dbf",
+          "name": "Aura",
+          "symbol": "AURA",
+          "decimals": 18,
+          "lastPriceUSD": "3.054159046567930739345655692137089"
+        },
+        "outputToken": {
+          "id": "0x3aeb1a8c675207438f923139c41c4f783a1fea60",
+          "name": "Euler Pool: Aura",
+          "symbol": "eAURA",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x2d4198cbb006901128fe13116b42efbcb8533fde",
+        "name": "Euler Pool: Governance OHM",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x0ab87046fbb341d058f17cbc4c1133f25a20a52f",
+          "name": "Governance OHM",
+          "symbol": "gOHM",
+          "decimals": 18,
+          "lastPriceUSD": "2758.280737653360924833758385632319"
+        },
+        "outputToken": {
+          "id": "0x2d4198cbb006901128fe13116b42efbcb8533fde",
+          "name": "Euler Pool: Governance OHM",
+          "symbol": "egOHM",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x26608f71ea9bc2c2f64de198525fb03f4aaeebfb",
+        "name": "Euler Pool: Smooth Love Potion",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xcc8fa225d80b9c7d42f96e9570156c65d6caaa25",
+          "name": "Smooth Love Potion",
+          "symbol": "SLP",
+          "decimals": 0,
+          "lastPriceUSD": "0.002697069512674643334555077123910691"
+        },
+        "outputToken": {
+          "id": "0x26608f71ea9bc2c2f64de198525fb03f4aaeebfb",
+          "name": "Euler Pool: Smooth Love Potion",
+          "symbol": "eSLP",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x22974e97402b4fb3ca021fd4474ea635bd9ec878",
+        "name": "Euler Pool: Wild Credit",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x08a75dbc7167714ceac1a8e43a8d643a4edd625a",
+          "name": "Wild Credit",
+          "symbol": "WILD",
+          "decimals": 18,
+          "lastPriceUSD": "0.2495525924108197500921628274773423"
+        },
+        "outputToken": {
+          "id": "0x22974e97402b4fb3ca021fd4474ea635bd9ec878",
+          "name": "Euler Pool: Wild Credit",
+          "symbol": "eWILD",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x21aa642b397db6de125651e6b429b640f9a4f1c9",
+        "name": "Euler Pool: Yearn Compounding veCRV yVault",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x9d409a0a012cfba9b15f6d4b36ac57a46966ab9a",
+          "name": "Yearn Compounding veCRV yVault",
+          "symbol": "yvBOOST",
+          "decimals": 18,
+          "lastPriceUSD": "2.396505161050911777935426762766404"
+        },
+        "outputToken": {
+          "id": "0x21aa642b397db6de125651e6b429b640f9a4f1c9",
+          "name": "Euler Pool: Yearn Compounding veCRV yVault",
+          "symbol": "eyvBOOST",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x0f8df8186cbfb330613efe1e189a7343a8a1b774",
+        "name": "Euler Pool: BaoUSD",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x7945b0a6674b175695e5d1d08ae1e6f13744abb0",
+          "name": "BaoUSD",
+          "symbol": "BaoUSD",
+          "decimals": 18,
+          "lastPriceUSD": "0.9955833478447363823090054347804865"
+        },
+        "outputToken": {
+          "id": "0x0f8df8186cbfb330613efe1e189a7343a8a1b774",
+          "name": "Euler Pool: BaoUSD",
+          "symbol": "eBaoUSD",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x09555a99124b499a2ed07e3939e98ee3fc863a7e",
+        "name": "Euler Pool: EULER FARMING",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x53a0340ed6ba1fd460608e2cd0424a339b56d3e2",
+          "name": "EULER FARMING",
+          "symbol": "EULF",
+          "decimals": 18,
+          "lastPriceUSD": "16514.75893049696719986929382884606"
+        },
+        "outputToken": {
+          "id": "0x09555a99124b499a2ed07e3939e98ee3fc863a7e",
+          "name": "Euler Pool: EULER FARMING",
+          "symbol": "eEULF",
+          "decimals": 18
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x27182842e098f60e3d576794a5bffb0777e025d3",
+          "name": "Euler",
+          "slug": "euler",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "1.3.0"
+        }
+      }
+    ],
+    "_meta": {
+      "block": {
+        "number": 25903086,
+        "timestamp": null
+      },
+      "deployment": "QmfTzwSoE3krDFMfYT9XTdwLcdMYBmMwyPqA1FHTMkmsVs",
+      "hasIndexingErrors": false
+    }
+  }
+}

@@ -1,120 +1,120 @@
+{"prompt":"What is the token symbol of the ERC-4626 vault at 0x50379f632ca68d36e50cfbc8f78fe16bd1499d1e?","answer":"G-UNI"}
 {"prompt":"What is the token symbol of the ERC-4626 vault at 0xedecb43233549c51cc3268b5de840239787ad56c?","answer":"G-UNI"}
+{"prompt":"What is the token symbol of the ERC-4626 vault at 0x0d2a2df39436b5c5f986552869124ba29b7df1ac?","answer":"G-UNI"}
+{"prompt":"What is the performance fee percentage of the ERC-4626 vault at 0xae666f497e3b03415503785df36f795e6d91d4b3?","answer":"2.5"}
+{"prompt":"What is the performance fee percentage of the ERC-4626 vault at 0xcf84a3dc12319531e3debd48c86e68eaeaff224a?","answer":"2.5"}
+{"prompt":"What is the performance fee percentage of the ERC-4626 vault at 0x39ae52f197e7fc9fc481ca03cfaf661a26845ec3?","answer":"2.5"}
+{"prompt":"What is the name of the ERC-4626 vault at 0xdf367477c5e596af88e8797c3cde8e28854cb79c?","answer":"Arrakis Vault V1 USDC/SPOT-0.3%"}
+{"prompt":"What is the performance fee percentage of the ERC-4626 vault at 0xd58c89181360dd9166881fce2bc7c9baae2d5f31?","answer":"2.5"}
+{"prompt":"What is the name of the ERC-4626 vault at 0x4fd9ad3758cc0a3719b066e6ff796a9ccf702ac6?","answer":"Gelato Uniswap WBTC/WETH LP-0.05%"}
+{"prompt":"What is the name of the ERC-4626 vault at 0xf3f826edbb9781151c0cf98230a5f3f035fbb377?","answer":"Arrakis Vault V1 OUSD/USDT-0.05%"}
+{"prompt":"What is the name of the ERC-4626 vault at 0xc11efd085154d8500c61fa988f72ad7c789d5c38?","answer":"Gelato Uniswap USDC/ETHV LP-1.0%"}
+{"prompt":"What is the name of the ERC-4626 vault at 0xf920baf4ff3e803244c680ffdd468677f50c07b7?","answer":"Arrakis Vault V1 USDC/CAW-1.0%"}
 {"prompt":"What is the contract address of the ERC-4626 vault RAKIS-22?","answer":"0xf62fab0b5a8255eb1976ca9771db23d55978d311"}
+{"prompt":"What is the contract address of the ERC-4626 vault RAKIS-8?","answer":"0xd14c67985f88368f66e71ad73ce97890f6636cdd"}
+{"prompt":"What is the performance fee percentage of the ERC-4626 vault at 0xbf7a1e5d4b080df199fde2f2f35003954e1e9dc0?","answer":"2.5"}
+{"prompt":"What is the token symbol of the ERC-4626 vault at 0xa4ba1d7bab167de658122fdf99f98f7b6b74b6e4?","answer":"RAKIS-20"}
 {"prompt":"What is the token symbol of the ERC-4626 vault at 0x8824e0cd99f5c1eef50c8602987af364096625db?","answer":"RAKIS-1"}
+{"prompt":"What is the token symbol of the ERC-4626 vault at 0x75f969b6ccaee82bddfc46cf6b0f894f8b3bf600?","answer":"G-UNI"}
+{"prompt":"What is the contract address of the ERC-4626 vault RAKIS-32?","answer":"0x62cedf37b209142131a55a73534875f32094c992"}
+{"prompt":"What is the contract address of the ERC-4626 vault RAKIS-13?","answer":"0x4cf66acaf7341e6fcc06ce50f2e314f82ae28ce5"}
+{"prompt":"What is the performance fee percentage of the ERC-4626 vault at 0x47ed8d441016967f8f885382e44234efe3b5893b?","answer":"2.5"}
+{"prompt":"What is the token symbol of the ERC-4626 vault at 0x18d53f4953ad14236602da05efafc0df4f5d064d?","answer":"G-UNI"}
+{"prompt":"What is the performance fee percentage of the ERC-4626 vault at 0x07baa98c5cdec970a3a4654f0fbb066404ff5fe0?","answer":"2.5"}
+{"prompt":"What is the underlying asset symbol of the ERC-4626 vault at 0x758a43ee2bff8230eeb784879cdcff4828f2544d?","answer":"SLP"}
+{"prompt":"What is the underlying asset symbol of the ERC-4626 vault at 0xd04c48a53c111300ad41190d63681ed3dad998ec?","answer":"crvRenWSBTC"}
+{"prompt":"What is the underlying asset symbol of the ERC-4626 vault at 0xb9d076fde463dbc9f915e5392f807315bf940334?","answer":"tbtc/sbtcCrv"}
+{"prompt":"What is the contract address of the ERC-4626 vault bcrv3crypto?","answer":"0x27e98fc7d05f54e544d16f58c194c2d7ba71e3b5"}
+{"prompt":"What is the underlying asset address of the ERC-4626 vault at 0x27e98fc7d05f54e544d16f58c194c2d7ba71e3b5?","answer":"0xc4ad29ba4b3c580e6d59105fff484999997675ff"}
+{"prompt":"What is the underlying asset symbol of the ERC-4626 vault at 0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28?","answer":"BADGER"}
+{"prompt":"What is the contract address of the ERC-4626 vault b20WBTC-80BADGER?","answer":"0x63ad745506bd6a3e57f764409a47ed004bec40b1"}
+{"prompt":"What is the underlying asset symbol of the ERC-4626 vault at 0x2b5455aac8d64c14786c3a29858e43b5945819c0?","answer":"cvxCRV"}
+{"prompt":"What is the underlying asset address of the ERC-4626 vault at 0x937b8e917d0f36edebba8e459c5fb16f3b315551?","answer":"0x04c90c198b2eff55716079bc06d7ccc4aa4d7512"}
+{"prompt":"What is the underlying asset symbol of the ERC-4626 vault at 0x937b8e917d0f36edebba8e459c5fb16f3b315551?","answer":"bveCVX-CVX-f"}
+{"prompt":"What is the underlying asset address of the ERC-4626 vault at 0xa484427cf91bbd945c39ef87df0a02bb8625dc97?","answer":"0x1e19cf2d73a72ef1332c882f20534b6519be0276"}
+{"prompt":"What is the underlying asset address of the ERC-4626 vault at 0xf349c0faa80fc1870306ac093f75934078e28991?","answer":"0x2fe94ea3d5d4a175184081439753de15aef9d614"}
+{"prompt":"What is the contract address of the ERC-4626 vault graviAURA?","answer":"0xba485b556399123261a5f9c95d413b4f93107407"}
+{"prompt":"What is the name of the ERC-4626 vault at 0xba485b556399123261a5f9c95d413b4f93107407?","answer":"Gravitationally Bound AURA"}
+{"prompt":"What is the underlying asset address of the ERC-4626 vault at 0x88128580acdd9c04ce47afce196875747bf2a9f6?","answer":"0x9a13867048e01c663ce8ce2fe0cdae69ff9f35e3"}
+{"prompt":"What is the token symbol of the ERC-4626 vault at 0x41466b8ec544e3192aa1aa30f65fc60fab4d52bf?","answer":"bB-stETH-STABLE"}
+{"prompt":"What is the contract address of the ERC-4626 vault bB-stETH-STABLE?","answer":"0x41466b8ec544e3192aa1aa30f65fc60fab4d52bf"}
+{"prompt":"What is the underlying asset symbol of the ERC-4626 vault at 0x41466b8ec544e3192aa1aa30f65fc60fab4d52bf?","answer":"B-stETH-STABLE"}
 {"prompt":"What is the contract address of the ERC-4626 vault bMIM-3LP3CRV-f?","answer":"0x19e4d89e0cb807ea21b8cef02df5eaa99a110da5"}
+{"prompt":"What is the underlying asset address of the ERC-4626 vault at 0x19e4d89e0cb807ea21b8cef02df5eaa99a110da5?","answer":"0x5a6a4d54456819380173272a5e8e9b9904bdf41b"}
+{"prompt":"What is the contract address of the ERC-4626 vault bcrvTricrypto?","answer":"0xbe08ef12e4a553666291e9ffc24fccfd354f2dd2"}
+{"prompt":"What is the underlying asset symbol of the ERC-4626 vault at 0x99f39d495c6a5237f43602f3ab5f49786e46c9b0?","answer":"DIGG"}
+{"prompt":"What is the underlying asset address of the ERC-4626 vault at 0x6af7377b5009d7d154f36fe9e235ae1da27aea22?","answer":"0x3472a5a71965499acd81997a54bba8d852c6e53d"}
+{"prompt":"What is the underlying asset symbol of the ERC-4626 vault at 0x608b6d82eb121f3e5c0baeed32d81007b916e83c?","answer":"DIGG"}
+{"prompt":"What is the contract address of the ERC-4626 vault bbBTC/sbtcCRV?","answer":"0x5dce29e92b1b939f8e8c60dcf15bde82a85be4a9"}
+{"prompt":"What is the underlying asset address of the ERC-4626 vault at 0x5dce29e92b1b939f8e8c60dcf15bde82a85be4a9?","answer":"0x410e3e86ef427e30b9235497143881f717d93c2a"}
+{"prompt":"What is the underlying asset symbol of the ERC-4626 vault at 0x5dce29e92b1b939f8e8c60dcf15bde82a85be4a9?","answer":"bBTC/sbtcCRV"}
 {"prompt":"What is the underlying asset address of the ERC-4626 vault at 0x26b8efa69603537ac8ab55768b6740b67664d518?","answer":"0x48c59199da51b7e30ea200a74ea07974e62c4ba7"}
+{"prompt":"What is the token symbol of the ERC-4626 vault at 0x33412fef1af035d6dba8b2f9b33b022e4c31dbb4?","answer":"GAMMA-ETH-3"}
+{"prompt":"What is the name of the ERC-4626 vault at 0xa9782a2c9c3fb83937f14cdfac9a6d23946c9255?","answer":"xUSDC-ETH05"}
+{"prompt":"What is the token symbol of the ERC-4626 vault at 0x18d3284d9eff64fc97b64ab2b871738e684aa151?","answer":"vETH-GTCV3-1"}
 {"prompt":"What is the contract address of the ERC-4626 vault vLQTY-ETH30?","answer":"0xd930ab15c8078ebae4ac8da1098a81583603f7ce"}
+{"prompt":"What is the contract address of the ERC-4626 vault vFORTH-ETHV3-1?","answer":"0x53a4512bbe5083695d8e890789fe1cf6f5686d52"}
 {"prompt":"What is the name of the ERC-4626 vault at 0x35abccd8e577607275647edab08c537fa32cc65e?","answer":"xWBTC-ETH05"}
+{"prompt":"What is the token symbol of the ERC-4626 vault at 0x3cca05926af387f1ab4cd45ce8975d31f0469927?","answer":"xWBTC-renBTC05"}
+{"prompt":"What is the name of the ERC-4626 vault at 0x4d7f0f7395dd58da2e6680453a0d0b4b19d0c832?","answer":"ETH-WRLD Uni 1%"}
+{"prompt":"What is the token symbol of the ERC-4626 vault at 0x3f805de0ec508bf7311baaa617015809be9ce953?","answer":"TRIBE-ETH3"}
 {"prompt":"What is the name of the ERC-4626 vault at 0x4f7997158d66ca31d9734674fdcd12cc74e503a7?","answer":"Visor USDC-USDT Uni v3"}
+{"prompt":"What is the performance fee percentage of the ERC-4626 vault at 0x4f7997158d66ca31d9734674fdcd12cc74e503a7?","answer":"10"}
 {"prompt":"What is the name of the ERC-4626 vault at 0x55eed13ab07f8b5538eff301551492a1d776da7b?","answer":"Visor APW-ETH Uni 3%"}
+{"prompt":"What is the performance fee percentage of the ERC-4626 vault at 0x653f134dc1b129012fca3d5825d6849ad1d81864?","answer":"10"}
+{"prompt":"What is the performance fee percentage of the ERC-4626 vault at 0x6941b1b6b29948a2f74cad0ef2866e93436a5e2d?","answer":"10"}
+{"prompt":"What is the performance fee percentage of the ERC-4626 vault at 0x5d40e4687e36628267854d0b985a9b6e26493b74?","answer":"10"}
+{"prompt":"What is the name of the ERC-4626 vault at 0x46e4ddb5b87152dda90afe75daedfddab1c16513?","answer":"rETH-ETH05"}
+{"prompt":"What is the underlying asset address of the ERC-4626 vault at 0x65a833afdc250d9d38f8cd9bc2b1e3132db13b2f?","answer":"0x2260fac5e5542a773aa44fbcfedf7c193bc2c599"}
+{"prompt":"What is the name of the ERC-4626 vault at 0x53773e034d9784153471813dacaff53dbbb78e8c?","answer":"Ribbon stETH Theta Vault"}
+{"prompt":"What is the token symbol of the ERC-4626 vault at 0x25751853eab4d0eb3652b5eb6ecb102a2789644b?","answer":"rETH-THETA"}
+{"prompt":"What is the underlying asset symbol of the ERC-4626 vault at 0x25751853eab4d0eb3652b5eb6ecb102a2789644b?","answer":"WETH"}
+{"prompt":"What is the performance fee percentage of the ERC-4626 vault at 0xce5513474e077f5336cf1b33c1347fdd8d48ae8c?","answer":"0"}
+{"prompt":"What is the underlying asset address of the ERC-4626 vault at 0xcc323557c71c0d1d20a1861dc69c06c5f3cc9624?","answer":"0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"}
+{"prompt":"What is the underlying asset address of the ERC-4626 vault at 0x8b5876f5b0bf64056a89aa7e97511644758c3e8c?","answer":"0x2260fac5e5542a773aa44fbcfedf7c193bc2c599"}
+{"prompt":"What is the performance fee percentage of the ERC-4626 vault at 0x8b5876f5b0bf64056a89aa7e97511644758c3e8c?","answer":"0"}
+{"prompt":"What is the underlying asset symbol of the ERC-4626 vault at 0x16772a7f4a3ca291c21b8ace76f9332ddffbb5ef?","answer":"USDC"}
+{"prompt":"What is the underlying asset symbol of the ERC-4626 vault at 0xc0cf10dd710aefb209d9dc67bc746510ffd98a53?","answer":"APE"}
+{"prompt":"What is the underlying asset address of the ERC-4626 vault at 0xa1da0580fa96129e753d736a5901c31df5ec5edf?","answer":"0xae78736cd615f374d3085123a210448e74fc6393"}
+{"prompt":"What is the input token symbol of the lending market at 0x70e36f6bf80a52b3b46b3af8e106cc0ed743e8e4?","answer":"COMP"}
+{"prompt":"What is the address of the Compound Fei USD lending market?","answer":"0x7713dd9ca933848f6819f38b8352d9a15ea73f67"}
 {"prompt":"What is the input token symbol of the lending market at 0xf047d4be569fb770db143a6a90ef203fc1295922?","answer":"TBTC"}
+{"prompt":"What is the address of the Cream Uniswap V2 DAI-ETH lending market?","answer":"0xcd22c4110c12ac41acefa0091c432ef44efaafa0"}
+{"prompt":"What is the address of the Cream CRV lending market?","answer":"0xc7fd8dcee4697ceef5a2fd4608a7bd6a94c77480"}
+{"prompt":"What is the input token symbol of the lending market at 0x89e42987c39f72e2ead95a8a5bc92114323d5828?","answer":"SAND"}
 {"prompt":"What is the address of the Cream SushiSwap LP Token WBTC-ETH lending market?","answer":"0x73f6cba38922960b7092175c0add22ab8d0e81fc"}
+{"prompt":"What is the input token symbol of the lending market at 0x10fdbd1e48ee2fd9336a482d746138ae19e649db?","answer":"FTX Token"}
+{"prompt":"What is the address of the Cream yETH lending market?","answer":"0x01da76dea59703578040012357b81ffe62015c2d"}
+{"prompt":"What is the input token symbol of the lending market at 0x164315ea59169d46359baa4bcc6479bb421764b6?","answer":"GOLDx"}
+{"prompt":"What is the address of the dForce LINK lending market?","answer":"0xa3068aa78611ed29d381e640bb2c02abcf3ca7de"}
+{"prompt":"What is the input token symbol of the lending market at 0x33b5edc15e05d3dac27fccad77cf550c5f3f02aa?","answer":"rETH"}
+{"prompt":"What is the input token symbol of the lending market at 0x6e6a689a5964083dff9fd7a0f788baf620ea2dbe?","answer":"TUSD"}
+{"prompt":"What is the input token symbol of the lending market at 0xfa2e831c674b61475c175b2206e81a5938b298dd?","answer":"xBTC"}
 {"prompt":"What is the address of the Euler Pool: agEUR lending market?","answer":"0x64ad6d2472de5ddd3801fb4027c96c3ee7a7ee82"}
+{"prompt":"What is the input token symbol of the lending market at 0x50552ec440099672250bd5f335ef70e1202d0a42?","answer":"MKR"}
 {"prompt":"What is the input token symbol of the lending market at 0xe63f356a1b5806f07b1cfd3a7cc62aee659cf677?","answer":"GTC"}
+{"prompt":"What is the input token symbol of the lending market at 0xff3e7c90e8629576ed644fa964c5fb9476754e11?","answer":"QNT"}
+{"prompt":"What is the input token symbol of the lending market at 0x6a8156ff97ee7e3cd56eb95835be757f5b7d5657?","answer":"INDEX"}
+{"prompt":"What is the address of the Euler Pool: Frax Price Index Share lending market?","answer":"0x4dc4b210fad381c0e24ee689a689cbe956cd6b9b"}
+{"prompt":"What is the input token symbol of the lending market at 0xf7e46739080eb6a77858a227dd769aac96ae729d?","answer":"DPX"}
+{"prompt":"What is the address of the Euler Pool: LUKSO Token lending market?","answer":"0xfdd2af9e6dc3607b10fc93f0ebe7926a94de501b"}
+{"prompt":"What is the address of the Euler Pool: Wrapped Ampleforth lending market?","answer":"0xe955f59a6ed314bc52b10a783c6607dc4069b7d6"}
+{"prompt":"What is the address of the Euler Pool: Rocket Pool ETH lending market?","answer":"0xf92230094736e502c62c35a38be2b6809b7bb5ad"}
+{"prompt":"What is the address of the Euler Pool: iEx.ec Network Token lending market?","answer":"0xf5375ab059ebe8bbd3a11e7be3f3abc20be533bd"}
+{"prompt":"What is the address of the Euler Pool: StakeWise lending market?","answer":"0xabcaeddc4d7bdeba94ae0c24f55f161a7d1dbfc4"}
 {"prompt":"What is the address of the Euler Pool: Wild Credit lending market?","answer":"0x22974e97402b4fb3ca021fd4474ea635bd9ec878"}
-{"prompt":"Which tokens are in the liquidity pool at 0x808db6e464279c6a77a1164e0b34d64bd6fb526e?","answer":"pETH, JPEG"}
-{"prompt":"Which tokens are in the liquidity pool at 0x9838eccc42659fa8aa7daf2ad134b53984c9427b?","answer":"3Crv, EURT"}
-{"prompt":"Which tokens are in the liquidity pool at 0x38c60bcca6ae0fdbd34466fe8999be15ee4e699e?","answer":"pxBTRFLY, BTRFLY"}
-{"prompt":"Which tokens are in the liquidity pool at 0xc2f5fea5197a3d92736500fd7733fcc7a3bbdf3f?","answer":"fUSD, 3Crv"}
-{"prompt":"Which tokens are in the liquidity pool at 0xc89570207c5ba1b0e3cd372172ccaefb173db270?","answer":"mkUSD, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0x50b0d9171160d6eb8aa39e090da51e7e078e81c4?","answer":"SNX, tSNX"}
+{"prompt":"What is the input token symbol of the lending market at 0x00c27fc71b159a346e179b4a1608a0865e8a7470?","answer":"USDC"}
 {"prompt":"Which tokens are in the liquidity pool at 0x23affc32cbe3c1a2a79376361a2d6f51ca7c9005?","answer":"MTBT, 3Crv"}
-{"prompt":"Which tokens are in the liquidity pool at 0xdbdc27b649239f9c5afdc92e57c2601a0ce71a89?","answer":"OUSD, USDe"}
-{"prompt":"Which tokens are in the liquidity pool at 0xae6ee608b297305abf3eb609b81febbb8f6a0bb3?","answer":"tBTC, cbBTC"}
-{"prompt":"Which tokens are in the liquidity pool at 0x713060278d13dfdba6c7b58adebaf8b57213c904?","answer":"3Crv, AMPHDUP"}
-{"prompt":"Which tokens are in the liquidity pool at 0x1ab3d612ea7df26117554dddd379764ebce1a5ad?","answer":"mkUSD, USDe"}
-{"prompt":"Which tokens are in the liquidity pool at 0x118629329731ce1ff01f9401212c53939f8a9eeb?","answer":"USDC, WETH"}
 {"prompt":"Which tokens are in the liquidity pool at 0x02d7f419d731f718bdb22a3b03874c600bec3a40?","answer":"QUINTA, USDC"}
-{"prompt":"Which tokens are in the liquidity pool at 0x39f49254d6eaf6b2b2549dfec4ed93cf6bae167f?","answer":"OMNI, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xbcfbf65b44b5bb64e5db5a364bd86256e9f8e6a2?","answer":"WETH, FREN"}
-{"prompt":"Which tokens are in the liquidity pool at 0x48b23e73e5b7aa9ab86b5f65662d7fbe79d10043?","answer":"MANA, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0x1acc131cbcc83cff492841520e73107da44fc74f?","answer":"PICO, USDC"}
-{"prompt":"Which tokens are in the liquidity pool at 0x1241f4a348162d99379a23e73926cf0bfcbf131e?","answer":"ANKR, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xca658217ce94dfb2156a49a8fad0ff752cac39c2?","answer":"ALPA, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xa7f11e026a0af768d285360a855f2bded3047530?","answer":"IDLE, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0x09071bd5ea1b26ad3b24be2839e2f8b44331c66d?","answer":"MIR, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xadd014efabb8970b49514e5a6da752a12110d400?","answer":"LOVE, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0x6e7c0a18d4a1bd1c6bc447d2d068daeb3eb52961?","answer":"DOG, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0x9360b76f8f5f932ac33d46a3ce82ad6c52a713e5?","answer":"zLOT, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0x0e0b5c0c5a38cef295dbb1366caa683564e31d40?","answer":"WETH, OTHR"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfb4bd42f8b0f018f951385d486e558f9900a8d99?","answer":"FEAR, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0x6f1244b76a078f1a85396c3380bcfdf3db450062?","answer":"AGOS, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0x16cb9f72903e280870e12bc5de990b668d6a2d59?","answer":"ELF, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xf14b332340b120e9bb226941bc29f848f44fd133?","answer":"PEPEPE, WETH"}
 {"prompt":"Which tokens are in the liquidity pool at 0xe5e34df71b00542cc3260bd7a015aee561615ea9?","answer":"POGAI, WETH"}
 {"prompt":"Which tokens are in the liquidity pool at 0xc5e5551e7434484adbf2ccd9669befecb1273eb4?","answer":"TLOS, WETH"}
 {"prompt":"Which tokens are in the liquidity pool at 0x7a2b036046557e8fff7fa84be5a0b3f7ba808f16?","answer":"BADGER, USDC"}
-{"prompt":"Which tokens are in the liquidity pool at 0xb4b8a18df6cb8b271a945510431dfa67c11925a4?","answer":"USDC, HOP"}
-{"prompt":"Which tokens are in the liquidity pool at 0x52830877e3d6365471fb47adbb3a63c136d33064?","answer":"WETH, fETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xb1dcd6af51486c8eecc8b91f52d09ff99c077d38?","answer":"WETH, LION"}
-{"prompt":"Which tokens are in the liquidity pool at 0xc99c2fe7491278c0c474b59a208a7b74f5ccee7b?","answer":"WZEC, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xb86b7a79a9b8ca2fafd12a180ac08d4ee4135e41?","answer":"UniFi, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0x0bdc8dcf00a0a336235886ab654a35292888b6a0?","answer":"HOTCROSS, USDT"}
-{"prompt":"Which tokens are in the liquidity pool at 0xabcae41337584c9fcc37bc9688721dbbf514fb5c?","answer":"YUP, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xb880b1d249210bc0db2510af09a7ea598add0b0a?","answer":"GMD, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0x59ae085bf4fe8dcdb6e1e95299e706b21dae2eeb?","answer":"HAPPY, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0x3fc748bc9b1958000c149c4fc744f8b5f8f1d577?","answer":"WBCD, WETH"}
 {"prompt":"Which tokens are in the liquidity pool at 0x4786836d4eb59a48bfadc3fd78026197d487e5c7?","answer":"USDC, orbitaX"}
-{"prompt":"Which tokens are in the liquidity pool at 0xae15ff242cab4eedce9904774baf0c761f6f9b57?","answer":"ASG, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xdf61450a8af798163001b0310b9362d0b96651bf?","answer":"INDEX, DPI"}
-{"prompt":"Which tokens are in the liquidity pool at 0xdf2c408f0ad496b222bac96ecadc68703b9e0b2a?","answer":"VAULT, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0x56274ad3d32e1db547483c659491655252669c59?","answer":"SCARCE, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0x93a335e0605eab978529bb392c760d89b0f7d533?","answer":"UST, LUNA"}
-{"prompt":"Which tokens are in the liquidity pool at 0xb0a5e73703e97e06296dbb092b4172c42080b97f?","answer":"WETH, MIX"}
-{"prompt":"Which tokens are in the liquidity pool at 0xf2ae5aaef14d08e0ea618abb1384127941bcbda6?","answer":"BERRY, WETH"}
 {"prompt":"Which tokens are in the liquidity pool at 0x032f7305592b5a07a43f8e1bf43681560e7fa161?","answer":"GCN, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0x4580b644a86623f42e99b082a5378ef844b017cd?","answer":"TOWER, GMEE"}
-{"prompt":"Which tokens are in the liquidity pool at 0x0e05e398b979720504bcb9b15c43719cde84e530?","answer":"WLTC, USDC"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfffb8423b0eb39c673fa526e05b2497c76f4ca39?","answer":"DJT, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfff145bddde4337bf6edea5a9bd61042d896f6d3?","answer":"WETH,  wDAI "}
-{"prompt":"Which tokens are in the liquidity pool at 0xffeba8c4ba039773c5f1fc273771b3923d3c7a9b?","answer":"$JEFE, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xffdd7c48332af835cc78b96cbab99e7ec1f6e590?","answer":"🧬HLPR, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xffc42dd3c0adb64bdaed497ca79c3bb5b4d6735b?","answer":"CheeseTsuka, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xffbe4c7f66e34bc167ed120794662dccc7df71fb?","answer":"IMX, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xffb4958ad6b1d7743e98a0070b70f642f68db6fb?","answer":"REAL, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xffa881a6fb38ec9fe182090845f5bd0207384315?","answer":"ENON, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xffa4292a578515d62467e37218104323ff454beb?","answer":"CP, WETH"}
 {"prompt":"Which tokens are in the liquidity pool at 0xff7cfbcaa4e8603a7680bd2a28e0a30f8153a075?","answer":"XAN, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xff7866facce2ce371578e002170e32bb3d45b672?","answer":"SPURDO, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xff6512f56f437a132783eee4702d92ea7507a933?","answer":"WETH, ROSS"}
-{"prompt":"Which tokens are in the liquidity pool at 0xff5dfd511602bd1c9e07484c169950eaf1f0f1a7?","answer":"$ApePredator, WETH"}
 {"prompt":"Which tokens are in the liquidity pool at 0xff4d6108a90fafcd4d5a3f679187eb7ebf5787aa?","answer":"REVERSE, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xff4b81e5e8c820f0da135ea77ac157c02a551955?","answer":"CHOMP, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xff3bda81806df2c40d770d88cb6492c62bb3cf9c?","answer":"Chibis $100 Liquidity, WETH"}
 {"prompt":"Which tokens are in the liquidity pool at 0xff2328402bfb1a5029651e0403c67eb869162642?","answer":"digger, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xff1eb29b3569e5c155426ea81ea183609273bcd6?","answer":"WETH, CPAI "}
-{"prompt":"Which tokens are in the liquidity pool at 0xfeef5d3ebe6ba97b55a047e5fd6b023c28a8f5c1?","answer":"ROBOB, WETH"}
 {"prompt":"Which tokens are in the liquidity pool at 0xfee80db8ff2af94d50d879670646f5ef64b03e17?","answer":"SHIA, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfee114342537a104227901310cf37cca20758b76?","answer":"WETH, K3PF"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfee08cbe107a9f840635e3c63cc4001e156b9968?","answer":"💎HYPERION, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfecaebe9f7c588bc8abdd7d7fe9817d517930291?","answer":"WETH, NARUTO"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfebd1143f83a3d9177cedbe92b3c2ceb3bc9b830?","answer":"WETH, FELOGRU"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfea5fc3807d1e2ef290617a8f16e8fe146b10b65?","answer":"WETH, WAPEPE"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfea0ce171bc01eb01a9ec40a9d384ab51fe690e1?","answer":"POLY, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfe95a6bdb1c38c366941a0fd6df157f1fa2e43dd?","answer":"SAV3, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfe932f67f388a9fd6b828e06698a576df3f9ced4?","answer":"DUK, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfe6c5f9d4dc1b72c15cb18bbb6204ee678536ff3?","answer":"WETH, BYELON"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfe63b59174b35df966c9fecfb5400609fd5cc1c8?","answer":"DOGEFI, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfe5b2df0966f699c2343684a2683b26370e87bec?","answer":"Kaiko, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfe530092c103db5363556c1fbe406c9e1c222419?","answer":"EVA, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfe519062fe4763110bf94e18412c2d21ba8a0109?","answer":"WETH, UniRise"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfe5183992e58eec2475eb14cf47c45417f7df6a9?","answer":"🙌JWN, WETH"}
 {"prompt":"Which tokens are in the liquidity pool at 0xfe4f47599eaea0562a3ae2029338d2dd457ae716?","answer":"WETH, Ainance"}
 {"prompt":"Which tokens are in the liquidity pool at 0xfe4b4e6ff57869b6820ca6d16673155f34cfe80c?","answer":"$SATOS, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfe4a165ff2232b5dc8df0228e98c09d179ef8e23?","answer":" TT , WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfe36474f47d07fe31cf005c347dea57a760a1d59?","answer":"BARBAPAPA, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfe1d62c32217539009459ca6a05a4a770fb55d6d?","answer":"WETH, Morocco"}
 {"prompt":"Which tokens are in the liquidity pool at 0xfe18a4e84c45220b0e5b42c79fb89faf63205efe?","answer":"FOMO, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfe04dcb1c58f192588659c4dcbd4b9a016c9124e?","answer":"MELANIA2, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfe01e84afd6d14a54eabc6a2b43b7511b958e804?","answer":"SWEEPS, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfdfeff988df3b262ee1b8401641343a3b14f0a79?","answer":"WETH, OPAI"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfde8f46af0aaad49ec1336d7ed67a7a60ff9876e?","answer":"MON, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfde20abd23ac1a33ff5ef55ee68793ccfcebece9?","answer":"Wenut, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfde1b1a0ed4716eb1d407f34aa57e6e1cff8b78a?","answer":"BEN, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfdd229c19b8772c6174305ec3e927790e8a50ef8?","answer":"ROGUE, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfdc95245cd88977ca617baa5246d14e1b0b4948f?","answer":"WETH, TRUMPDOGE"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfdc242f888238b08759b6ca9ea5dd7ffd748b850?","answer":"WETH, 🤑ATVT"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfdb7ea09be1c0c78e73ce7567b33ab1819dc900e?","answer":"TITA, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfdb3f5408c1a5b460398815b1872f6da7d860f67?","answer":"$CLSE, WETH"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfda86f59db0ee6d94ee6859d6c2fde3986626439?","answer":"WETH, FLAPPY"}
-{"prompt":"Which tokens are in the liquidity pool at 0xfd9ca700d1795e8f321dd59b7e70eadf433fb216?","answer":"WETH, BEFI"}

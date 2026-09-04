@@ -1,0 +1,3244 @@
+{
+  "_ainize": {
+    "deployment_id": "ANz3TpZdY2syZGQvGA85ANNG7KiSWdPmv55kP4H4sRPJ",
+    "protocol": "gamma-strategies",
+    "query": "vaults",
+    "query_hash": "37635f0bcd8b32452a9ecc630219df2b8a995ff83c50a2cd0cd9be8519342898",
+    "block": 25903086,
+    "skip": 0,
+    "first": 1000,
+    "gateway_ms": 926
+  },
+  "data": {
+    "vaults": [
+      {
+        "id": "0xd5f4877263b736625ba363385983c2d02b41f35b",
+        "name": "xLQTY-WETH3",
+        "symbol": "xLQTY-WETH3",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "438176.276055940729518903018794",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xd5f4877263b736625ba363385983c2d02b41f35b",
+          "name": "xLQTY-WETH3",
+          "symbol": "xLQTY-WETH3",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xd5f4877263b736625ba363385983c2d02b41f35b",
+          "name": "xLQTY-WETH3",
+          "symbol": "xLQTY-WETH3",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xc92ff322c8a18e38b46393dbcc8a7c5691586497",
+        "name": "Visor ETH-TRU Uni v3",
+        "symbol": "vETH-TRUV3-1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "161258.83598517595339047893681",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xc92ff322c8a18e38b46393dbcc8a7c5691586497",
+          "name": "Visor ETH-TRU Uni v3",
+          "symbol": "vETH-TRUV3-1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xc92ff322c8a18e38b46393dbcc8a7c5691586497",
+          "name": "Visor ETH-TRU Uni v3",
+          "symbol": "vETH-TRUV3-1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x33412fef1af035d6dba8b2f9b33b022e4c31dbb4",
+        "name": "GAMMA-ETH Uni .3%",
+        "symbol": "GAMMA-ETH-3",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "156071.857733675430501838054776",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x33412fef1af035d6dba8b2f9b33b022e4c31dbb4",
+          "name": "GAMMA-ETH Uni .3%",
+          "symbol": "GAMMA-ETH-3",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x33412fef1af035d6dba8b2f9b33b022e4c31dbb4",
+          "name": "GAMMA-ETH Uni .3%",
+          "symbol": "GAMMA-ETH-3",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xf0a9f5c64f80fa390a46b298791dab9e2bb29bca",
+        "name": "Visor BUMP-ETH Uni 1%",
+        "symbol": "vBUMP-ETH10",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "128887.953723963905541568364174",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xf0a9f5c64f80fa390a46b298791dab9e2bb29bca",
+          "name": "Visor BUMP-ETH Uni 1%",
+          "symbol": "vBUMP-ETH10",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xf0a9f5c64f80fa390a46b298791dab9e2bb29bca",
+          "name": "Visor BUMP-ETH Uni 1%",
+          "symbol": "vBUMP-ETH10",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x65bc5c6a2630a87c2b494f36148e338dd76c054f",
+        "name": "Visor OHM-ETH Uni v3",
+        "symbol": "vOHM-ETHV3-1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "120330.416496296970602303580178",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x65bc5c6a2630a87c2b494f36148e338dd76c054f",
+          "name": "Visor OHM-ETH Uni v3",
+          "symbol": "vOHM-ETHV3-1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x65bc5c6a2630a87c2b494f36148e338dd76c054f",
+          "name": "Visor OHM-ETH Uni v3",
+          "symbol": "vOHM-ETHV3-1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x5230371a6d5311b1d7dd30c0f5474c2ef0a24661",
+        "name": "Visor ENS-ETH Uni .3%",
+        "symbol": "vENS-ETH3",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "105133.952504803306896445224693",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x5230371a6d5311b1d7dd30c0f5474c2ef0a24661",
+          "name": "Visor ENS-ETH Uni .3%",
+          "symbol": "vENS-ETH3",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x5230371a6d5311b1d7dd30c0f5474c2ef0a24661",
+          "name": "Visor ENS-ETH Uni .3%",
+          "symbol": "vENS-ETH3",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x407e99b20d61f245426031df872966953909e9d3",
+        "name": "Visor LINK-ETH Uni v3",
+        "symbol": "vLINK-ETHV3-1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "74678.984874087916882760272185",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x407e99b20d61f245426031df872966953909e9d3",
+          "name": "Visor LINK-ETH Uni v3",
+          "symbol": "vLINK-ETHV3-1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x407e99b20d61f245426031df872966953909e9d3",
+          "name": "Visor LINK-ETH Uni v3",
+          "symbol": "vLINK-ETHV3-1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x716bd8a7f8a44b010969a1825ae5658e7a18630d",
+        "name": "Visor USDC-ETH Uni v3",
+        "symbol": "vUSDC-ETHV3-1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "52022.416651487806525137247896",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x716bd8a7f8a44b010969a1825ae5658e7a18630d",
+          "name": "Visor USDC-ETH Uni v3",
+          "symbol": "vUSDC-ETHV3-1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x716bd8a7f8a44b010969a1825ae5658e7a18630d",
+          "name": "Visor USDC-ETH Uni v3",
+          "symbol": "vUSDC-ETHV3-1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xa9782a2c9c3fb83937f14cdfac9a6d23946c9255",
+        "name": "xUSDC-ETH05",
+        "symbol": "xUSDC-ETH05",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "49559.571214112758483783015",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xa9782a2c9c3fb83937f14cdfac9a6d23946c9255",
+          "name": "xUSDC-ETH05",
+          "symbol": "xUSDC-ETH05",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xa9782a2c9c3fb83937f14cdfac9a6d23946c9255",
+          "name": "xUSDC-ETH05",
+          "symbol": "xUSDC-ETH05",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x09b8d86c6275e707155cdb5963cf611a432ccb21",
+        "name": "Visor MATIC-ETH Uni v3",
+        "symbol": "vMATIC-ETHV3-1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "48161.649010643509939276851892",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x09b8d86c6275e707155cdb5963cf611a432ccb21",
+          "name": "Visor MATIC-ETH Uni v3",
+          "symbol": "vMATIC-ETHV3-1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x09b8d86c6275e707155cdb5963cf611a432ccb21",
+          "name": "Visor MATIC-ETH Uni v3",
+          "symbol": "vMATIC-ETHV3-1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xca8759814695516c34168bbedd86290964d37ada",
+        "name": "xGAMMA-WETH3",
+        "symbol": "xGAMMA-WETH3",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "47579.544795081461977229957776",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xca8759814695516c34168bbedd86290964d37ada",
+          "name": "xGAMMA-WETH3",
+          "symbol": "xGAMMA-WETH3",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xca8759814695516c34168bbedd86290964d37ada",
+          "name": "xGAMMA-WETH3",
+          "symbol": "xGAMMA-WETH3",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x9a98bffabc0abf291d6811c034e239e916bbcec0",
+        "name": "Visor ETH-USDT Uni v3",
+        "symbol": "vETH-USDTV3-1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "32090.2168158658287540416",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x9a98bffabc0abf291d6811c034e239e916bbcec0",
+          "name": "Visor ETH-USDT Uni v3",
+          "symbol": "vETH-USDTV3-1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x9a98bffabc0abf291d6811c034e239e916bbcec0",
+          "name": "Visor ETH-USDT Uni v3",
+          "symbol": "vETH-USDTV3-1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xa8076ae31e4b6c64d07b1ed27889924a962a70d3",
+        "name": "xrETH-ETH05",
+        "symbol": "xrETH-ETH05",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "31206.233427747479018568601364",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xa8076ae31e4b6c64d07b1ed27889924a962a70d3",
+          "name": "xrETH-ETH05",
+          "symbol": "xrETH-ETH05",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xa8076ae31e4b6c64d07b1ed27889924a962a70d3",
+          "name": "xrETH-ETH05",
+          "symbol": "xrETH-ETH05",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x18d3284d9eff64fc97b64ab2b871738e684aa151",
+        "name": "Visor ETH-GTC Uni v3",
+        "symbol": "vETH-GTCV3-1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "18862.189421770283889082093251",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x18d3284d9eff64fc97b64ab2b871738e684aa151",
+          "name": "Visor ETH-GTC Uni v3",
+          "symbol": "vETH-GTCV3-1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x18d3284d9eff64fc97b64ab2b871738e684aa151",
+          "name": "Visor ETH-GTC Uni v3",
+          "symbol": "vETH-GTCV3-1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xbff4a47a0f77637f735e3a0ce10ff2bf9be12e89",
+        "name": "Visor RARE-ETH Uni v3",
+        "symbol": "vRARE-ETHV3-1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "16495.16682104430489056723018",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xbff4a47a0f77637f735e3a0ce10ff2bf9be12e89",
+          "name": "Visor RARE-ETH Uni v3",
+          "symbol": "vRARE-ETHV3-1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xbff4a47a0f77637f735e3a0ce10ff2bf9be12e89",
+          "name": "Visor RARE-ETH Uni v3",
+          "symbol": "vRARE-ETHV3-1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xd930ab15c8078ebae4ac8da1098a81583603f7ce",
+        "name": "Visor LQTY-ETH Uni .3%",
+        "symbol": "vLQTY-ETH30",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "15981.096630459891112372424289",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xd930ab15c8078ebae4ac8da1098a81583603f7ce",
+          "name": "Visor LQTY-ETH Uni .3%",
+          "symbol": "vLQTY-ETH30",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xd930ab15c8078ebae4ac8da1098a81583603f7ce",
+          "name": "Visor LQTY-ETH Uni .3%",
+          "symbol": "vLQTY-ETH30",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xd8dbdb77305898365d7ba6dd438f2663f7d4e409",
+        "name": "Visor UNI-ETH Uni v3",
+        "symbol": "vUNI-ETHV3-1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "15832.973941764898955784639681",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xd8dbdb77305898365d7ba6dd438f2663f7d4e409",
+          "name": "Visor UNI-ETH Uni v3",
+          "symbol": "vUNI-ETHV3-1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xd8dbdb77305898365d7ba6dd438f2663f7d4e409",
+          "name": "Visor UNI-ETH Uni v3",
+          "symbol": "vUNI-ETHV3-1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x467414f0312ecedba1e505c12bd97daa3609da87",
+        "name": "GAMMA INDEX-ETH Uni 1%",
+        "symbol": "xINDEX-ETH1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "13057.850010598065514118720115",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x467414f0312ecedba1e505c12bd97daa3609da87",
+          "name": "GAMMA INDEX-ETH Uni 1%",
+          "symbol": "xINDEX-ETH1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x467414f0312ecedba1e505c12bd97daa3609da87",
+          "name": "GAMMA INDEX-ETH Uni 1%",
+          "symbol": "xINDEX-ETH1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xe1ae05518a67ebe7e1e08e3b22d905d6c05b6c0f",
+        "name": "xH2O-USDC05",
+        "symbol": "xH2O-USDC05",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "12198.571996260377998017143744",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xe1ae05518a67ebe7e1e08e3b22d905d6c05b6c0f",
+          "name": "xH2O-USDC05",
+          "symbol": "xH2O-USDC05",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xe1ae05518a67ebe7e1e08e3b22d905d6c05b6c0f",
+          "name": "xH2O-USDC05",
+          "symbol": "xH2O-USDC05",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xbb9b86a75ca3115caab045e2af17b0bba483acbc",
+        "name": "Visor AAVE-ETH Uni v3",
+        "symbol": "vAAVE-ETHV3-1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "8924.304300836344150337384178",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xbb9b86a75ca3115caab045e2af17b0bba483acbc",
+          "name": "Visor AAVE-ETH Uni v3",
+          "symbol": "vAAVE-ETHV3-1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xbb9b86a75ca3115caab045e2af17b0bba483acbc",
+          "name": "Visor AAVE-ETH Uni v3",
+          "symbol": "vAAVE-ETHV3-1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x6e67bb258b6485b688cbb526c868d4428b634cf1",
+        "name": "Visor CRV-ETH Uni v3",
+        "symbol": "vCRV-ETHV3-1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "8842.700824172063193205343174",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x6e67bb258b6485b688cbb526c868d4428b634cf1",
+          "name": "Visor CRV-ETH Uni v3",
+          "symbol": "vCRV-ETHV3-1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x6e67bb258b6485b688cbb526c868d4428b634cf1",
+          "name": "Visor CRV-ETH Uni v3",
+          "symbol": "vCRV-ETHV3-1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x53a4512bbe5083695d8e890789fe1cf6f5686d52",
+        "name": "Visor FORTH-ETH Uni v3",
+        "symbol": "vFORTH-ETHV3-1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "8841.6159620073351051418331641",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x53a4512bbe5083695d8e890789fe1cf6f5686d52",
+          "name": "Visor FORTH-ETH Uni v3",
+          "symbol": "vFORTH-ETHV3-1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x53a4512bbe5083695d8e890789fe1cf6f5686d52",
+          "name": "Visor FORTH-ETH Uni v3",
+          "symbol": "vFORTH-ETHV3-1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xf19f91d7889668a533f14d076adc187be781a458",
+        "name": "Visor ETH-BABL Uni .3%",
+        "symbol": "vETH-BABL3",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "6971.608718816659545948938226",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xf19f91d7889668a533f14d076adc187be781a458",
+          "name": "Visor ETH-BABL Uni .3%",
+          "symbol": "vETH-BABL3",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xf19f91d7889668a533f14d076adc187be781a458",
+          "name": "Visor ETH-BABL Uni .3%",
+          "symbol": "vETH-BABL3",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x6c8116abe5c5f2c39553c6f4217840e71462539c",
+        "name": "Visor DAI-ETH Uni v3",
+        "symbol": "vDAI-ETHV3-1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "6217.447256387622547729313616",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x6c8116abe5c5f2c39553c6f4217840e71462539c",
+          "name": "Visor DAI-ETH Uni v3",
+          "symbol": "vDAI-ETHV3-1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x6c8116abe5c5f2c39553c6f4217840e71462539c",
+          "name": "Visor DAI-ETH Uni v3",
+          "symbol": "vDAI-ETHV3-1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x35abccd8e577607275647edab08c537fa32cc65e",
+        "name": "xWBTC-ETH05",
+        "symbol": "xWBTC-ETH05",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "6064.1299034054978770467526",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x35abccd8e577607275647edab08c537fa32cc65e",
+          "name": "xWBTC-ETH05",
+          "symbol": "xWBTC-ETH05",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x35abccd8e577607275647edab08c537fa32cc65e",
+          "name": "xWBTC-ETH05",
+          "symbol": "xWBTC-ETH05",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x1b56860eaf38f27b99d2b0d8ffac86b0f1173f1a",
+        "name": "Visor ARCX-ETH Uni 1%",
+        "symbol": "vARCX-ETH UNI1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "5962.341546922463977632839666",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x1b56860eaf38f27b99d2b0d8ffac86b0f1173f1a",
+          "name": "Visor ARCX-ETH Uni 1%",
+          "symbol": "vARCX-ETH UNI1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x1b56860eaf38f27b99d2b0d8ffac86b0f1173f1a",
+          "name": "Visor ARCX-ETH Uni 1%",
+          "symbol": "vARCX-ETH UNI1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xb542f4cb10b7913307e3ed432acd9bf2e709f5fa",
+        "name": "Visor sOHM-ETH Uni 1%",
+        "symbol": "sOHM-ETH10",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "5740.605611271920348679388887",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xb542f4cb10b7913307e3ed432acd9bf2e709f5fa",
+          "name": "Visor sOHM-ETH Uni 1%",
+          "symbol": "sOHM-ETH10",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xb542f4cb10b7913307e3ed432acd9bf2e709f5fa",
+          "name": "Visor sOHM-ETH Uni 1%",
+          "symbol": "sOHM-ETH10",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x0ec4a47065bf52e1874d2491d4deeed3c638c75f",
+        "name": "xPSDN-ETH1",
+        "symbol": "xPSDN-ETH1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "5512.12507900279478717654448",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x0ec4a47065bf52e1874d2491d4deeed3c638c75f",
+          "name": "xPSDN-ETH1",
+          "symbol": "xPSDN-ETH1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x0ec4a47065bf52e1874d2491d4deeed3c638c75f",
+          "name": "xPSDN-ETH1",
+          "symbol": "xPSDN-ETH1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x3cca05926af387f1ab4cd45ce8975d31f0469927",
+        "name": "xWBTC-renBTC05",
+        "symbol": "xWBTC-renBTC05",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "5446.91661588987099",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x3cca05926af387f1ab4cd45ce8975d31f0469927",
+          "name": "xWBTC-renBTC05",
+          "symbol": "xWBTC-renBTC05",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x3cca05926af387f1ab4cd45ce8975d31f0469927",
+          "name": "xWBTC-renBTC05",
+          "symbol": "xWBTC-renBTC05",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x8cd73cb1e1fa35628e36b8c543c5f825cd4e77f1",
+        "name": "Visor TCR-ETH Uni v3",
+        "symbol": "vTCR-ETHV3-1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "5180.461372191480997038446992",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x8cd73cb1e1fa35628e36b8c543c5f825cd4e77f1",
+          "name": "Visor TCR-ETH Uni v3",
+          "symbol": "vTCR-ETHV3-1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x8cd73cb1e1fa35628e36b8c543c5f825cd4e77f1",
+          "name": "Visor TCR-ETH Uni v3",
+          "symbol": "vTCR-ETHV3-1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x33682bfc1d94480a0e3de0a565180b182b71d485",
+        "name": "Visor PERP-ETH Uni v3",
+        "symbol": "vPERP-ETHV3-1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "4906.462348163191529966997035",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x33682bfc1d94480a0e3de0a565180b182b71d485",
+          "name": "Visor PERP-ETH Uni v3",
+          "symbol": "vPERP-ETHV3-1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x33682bfc1d94480a0e3de0a565180b182b71d485",
+          "name": "Visor PERP-ETH Uni v3",
+          "symbol": "vPERP-ETHV3-1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xe14dbb7d054ff1ff5c0cd6adac9f8f26bc7b8945",
+        "name": "xFWB-ETH03",
+        "symbol": "xFWB-ETH03",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "3688.516198527588510946657856",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xe14dbb7d054ff1ff5c0cd6adac9f8f26bc7b8945",
+          "name": "xFWB-ETH03",
+          "symbol": "xFWB-ETH03",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xe14dbb7d054ff1ff5c0cd6adac9f8f26bc7b8945",
+          "name": "xFWB-ETH03",
+          "symbol": "xFWB-ETH03",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x97491b65c9c8e8754b5c55ed208ff490b2ee6190",
+        "name": "Visor WBTC-ETH Uni v3",
+        "symbol": "vWBTC-ETHV3-1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "3296.09826022581599833122947",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x97491b65c9c8e8754b5c55ed208ff490b2ee6190",
+          "name": "Visor WBTC-ETH Uni v3",
+          "symbol": "vWBTC-ETHV3-1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x97491b65c9c8e8754b5c55ed208ff490b2ee6190",
+          "name": "Visor WBTC-ETH Uni v3",
+          "symbol": "vWBTC-ETHV3-1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x7f92463e24b2ea1f7267aceed3ad68f7a956d2d8",
+        "name": "Visor MVI-ETH Uni .3%",
+        "symbol": "vMVI-ETH3",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "2969.837745186956582349524586",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x7f92463e24b2ea1f7267aceed3ad68f7a956d2d8",
+          "name": "Visor MVI-ETH Uni .3%",
+          "symbol": "vMVI-ETH3",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x7f92463e24b2ea1f7267aceed3ad68f7a956d2d8",
+          "name": "Visor MVI-ETH Uni .3%",
+          "symbol": "vMVI-ETH3",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x23c85dca3d19b31f14aeea19beac32c2cb2ffc72",
+        "name": "Visor ETH2xFLI-ETH Uni v3",
+        "symbol": "vETH2xFLI-ETHV3-1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "2858.300215077927580562016696",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x23c85dca3d19b31f14aeea19beac32c2cb2ffc72",
+          "name": "Visor ETH2xFLI-ETH Uni v3",
+          "symbol": "vETH2xFLI-ETHV3-1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x23c85dca3d19b31f14aeea19beac32c2cb2ffc72",
+          "name": "Visor ETH2xFLI-ETH Uni v3",
+          "symbol": "vETH2xFLI-ETHV3-1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x34b95494c3c2732aa82e1e56be57074fee7a2b28",
+        "name": "Visor CVX-ETH Uni 1%",
+        "symbol": "vCVX-ETH1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "2407.5413526806952830839689",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x34b95494c3c2732aa82e1e56be57074fee7a2b28",
+          "name": "Visor CVX-ETH Uni 1%",
+          "symbol": "vCVX-ETH1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x34b95494c3c2732aa82e1e56be57074fee7a2b28",
+          "name": "Visor CVX-ETH Uni 1%",
+          "symbol": "vCVX-ETH1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xc14e7ec60699a39cfd59bae06168afc2c76f32ac",
+        "name": "Visor MTA-ETH Uni v3",
+        "symbol": "vMTA-ETHV3-1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "2188.839824699189758691577396",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xc14e7ec60699a39cfd59bae06168afc2c76f32ac",
+          "name": "Visor MTA-ETH Uni v3",
+          "symbol": "vMTA-ETHV3-1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xc14e7ec60699a39cfd59bae06168afc2c76f32ac",
+          "name": "Visor MTA-ETH Uni v3",
+          "symbol": "vMTA-ETHV3-1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x0d3fbebfdd96940952618598a5f012de7240c552",
+        "name": "Visor HEX-ETH Uni v3",
+        "symbol": "vHEX-ETHV3-1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "2092.75231294433635352128",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x0d3fbebfdd96940952618598a5f012de7240c552",
+          "name": "Visor HEX-ETH Uni v3",
+          "symbol": "vHEX-ETHV3-1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x0d3fbebfdd96940952618598a5f012de7240c552",
+          "name": "Visor HEX-ETH Uni v3",
+          "symbol": "vHEX-ETHV3-1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x4d7f0f7395dd58da2e6680453a0d0b4b19d0c832",
+        "name": "ETH-WRLD Uni 1%",
+        "symbol": "ETH-WRLD1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "1463.124047124300029447096144",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x4d7f0f7395dd58da2e6680453a0d0b4b19d0c832",
+          "name": "ETH-WRLD Uni 1%",
+          "symbol": "ETH-WRLD1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x4d7f0f7395dd58da2e6680453a0d0b4b19d0c832",
+          "name": "ETH-WRLD Uni 1%",
+          "symbol": "ETH-WRLD1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xb666bfdb553a1aff4042c1e4f39e43852ba9731d",
+        "name": "Visor MM-ETH Uni v3",
+        "symbol": "vMM-ETHV3-1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "1296.668157857206169486744674",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xb666bfdb553a1aff4042c1e4f39e43852ba9731d",
+          "name": "Visor MM-ETH Uni v3",
+          "symbol": "vMM-ETHV3-1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xb666bfdb553a1aff4042c1e4f39e43852ba9731d",
+          "name": "Visor MM-ETH Uni v3",
+          "symbol": "vMM-ETHV3-1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xc86b1e7fa86834cac1468937cdd53ba3ccbc1153",
+        "name": "Visor FLOAT-ETH Uni .3%",
+        "symbol": "vFLOAT-ETH3",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "1272.179616751587665239277522",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xc86b1e7fa86834cac1468937cdd53ba3ccbc1153",
+          "name": "Visor FLOAT-ETH Uni .3%",
+          "symbol": "vFLOAT-ETH3",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xc86b1e7fa86834cac1468937cdd53ba3ccbc1153",
+          "name": "Visor FLOAT-ETH Uni .3%",
+          "symbol": "vFLOAT-ETH3",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x85a5326f08c44ec673e4bfc666b737f7f3dc6b37",
+        "name": "Visor GRO-ETH Uni .3%",
+        "symbol": "vGRO-ETH3",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "850.574574669222476173971306",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x85a5326f08c44ec673e4bfc666b737f7f3dc6b37",
+          "name": "Visor GRO-ETH Uni .3%",
+          "symbol": "vGRO-ETH3",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x85a5326f08c44ec673e4bfc666b737f7f3dc6b37",
+          "name": "Visor GRO-ETH Uni .3%",
+          "symbol": "vGRO-ETH3",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x0624eb9691d99178d0d2bd76c72f1dbb4db05286",
+        "name": "Visor AXS-ETH Uni v3",
+        "symbol": "vAXS-ETHV3-1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "745.944265019956988408753928",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x0624eb9691d99178d0d2bd76c72f1dbb4db05286",
+          "name": "Visor AXS-ETH Uni v3",
+          "symbol": "vAXS-ETHV3-1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x0624eb9691d99178d0d2bd76c72f1dbb4db05286",
+          "name": "Visor AXS-ETH Uni v3",
+          "symbol": "vAXS-ETHV3-1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x5e6c481de496554b66657dd1ca1f70c61cf11660",
+        "name": "Visor ETH-BABL.2 Uni .3%",
+        "symbol": "vETH-BABL3.2",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "705.753756454615415542974958",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x5e6c481de496554b66657dd1ca1f70c61cf11660",
+          "name": "Visor ETH-BABL.2 Uni .3%",
+          "symbol": "vETH-BABL3.2",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x5e6c481de496554b66657dd1ca1f70c61cf11660",
+          "name": "Visor ETH-BABL.2 Uni .3%",
+          "symbol": "vETH-BABL3.2",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x92ccaa1b3dccccae7d68fff50e6e47a747233e62",
+        "name": "Visor VISR-ETH Uni 3%",
+        "symbol": "vVISR-ETH UNI3",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "702.475044620781732805436745",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x92ccaa1b3dccccae7d68fff50e6e47a747233e62",
+          "name": "Visor VISR-ETH Uni 3%",
+          "symbol": "vVISR-ETH UNI3",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x92ccaa1b3dccccae7d68fff50e6e47a747233e62",
+          "name": "Visor VISR-ETH Uni 3%",
+          "symbol": "vVISR-ETH UNI3",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x3f805de0ec508bf7311baaa617015809be9ce953",
+        "name": "Visor TRIBE-ETH Uni .3%",
+        "symbol": "TRIBE-ETH3",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "425.635674681943406192509448",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x3f805de0ec508bf7311baaa617015809be9ce953",
+          "name": "Visor TRIBE-ETH Uni .3%",
+          "symbol": "TRIBE-ETH3",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x3f805de0ec508bf7311baaa617015809be9ce953",
+          "name": "Visor TRIBE-ETH Uni .3%",
+          "symbol": "TRIBE-ETH3",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x336d7e0a0f87e2729c0080f86801e6f4becf146f",
+        "name": "GAMMA-ETH Uni .3%",
+        "symbol": "GAMMA-ETH.3",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "282.8483315341719",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x336d7e0a0f87e2729c0080f86801e6f4becf146f",
+          "name": "GAMMA-ETH Uni .3%",
+          "symbol": "GAMMA-ETH.3",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x336d7e0a0f87e2729c0080f86801e6f4becf146f",
+          "name": "GAMMA-ETH Uni .3%",
+          "symbol": "GAMMA-ETH.3",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xb60f4ac1514be672b2ec35a023f4c89373d3a4ef",
+        "name": "Visor WBTC-USDC Uni v3",
+        "symbol": "vWBTC-USDCV3-1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "253.8604921458858",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xb60f4ac1514be672b2ec35a023f4c89373d3a4ef",
+          "name": "Visor WBTC-USDC Uni v3",
+          "symbol": "vWBTC-USDCV3-1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xb60f4ac1514be672b2ec35a023f4c89373d3a4ef",
+          "name": "Visor WBTC-USDC Uni v3",
+          "symbol": "vWBTC-USDCV3-1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x7d89593e1f327f06579faef15e88aadfae51713a",
+        "name": "xH2O-OCEAN03",
+        "symbol": "xH2O-OCEAN03",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "242.455773309183042237460006",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x7d89593e1f327f06579faef15e88aadfae51713a",
+          "name": "xH2O-OCEAN03",
+          "symbol": "xH2O-OCEAN03",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x7d89593e1f327f06579faef15e88aadfae51713a",
+          "name": "xH2O-OCEAN03",
+          "symbol": "xH2O-OCEAN03",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xe065ff6a26f286ddb0e823920caaecd1fcd57ba1",
+        "name": "Visor ETH-THX Uni .3%",
+        "symbol": "vETH-THX3",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "225.872080487829395161277077",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xe065ff6a26f286ddb0e823920caaecd1fcd57ba1",
+          "name": "Visor ETH-THX Uni .3%",
+          "symbol": "vETH-THX3",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xe065ff6a26f286ddb0e823920caaecd1fcd57ba1",
+          "name": "Visor ETH-THX Uni .3%",
+          "symbol": "vETH-THX3",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x4564a37c88e3b13d3a0c08832dcf88278997e6fe",
+        "name": "Visor MKR-ETH Uni v3",
+        "symbol": "vMKR-ETHV3-1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "165.38316865616167512626678",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x4564a37c88e3b13d3a0c08832dcf88278997e6fe",
+          "name": "Visor MKR-ETH Uni v3",
+          "symbol": "vMKR-ETHV3-1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x4564a37c88e3b13d3a0c08832dcf88278997e6fe",
+          "name": "Visor MKR-ETH Uni v3",
+          "symbol": "vMKR-ETHV3-1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x85cbed523459b7f6f81c11e710df969703a8a70c",
+        "name": "Visor FLOAT-ETH Uni .3%",
+        "symbol": "vFLOAT-ETH3",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "126.356590836637809047461398",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x85cbed523459b7f6f81c11e710df969703a8a70c",
+          "name": "Visor FLOAT-ETH Uni .3%",
+          "symbol": "vFLOAT-ETH3",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x85cbed523459b7f6f81c11e710df969703a8a70c",
+          "name": "Visor FLOAT-ETH Uni .3%",
+          "symbol": "vFLOAT-ETH3",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x704ececabe7855996cede5cefa660eccd3c01dbe",
+        "name": "Visor FEI-USDC Uni .05%",
+        "symbol": "vFEI-USDC05",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "124.8870604463838121",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x704ececabe7855996cede5cefa660eccd3c01dbe",
+          "name": "Visor FEI-USDC Uni .05%",
+          "symbol": "vFEI-USDC05",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x704ececabe7855996cede5cefa660eccd3c01dbe",
+          "name": "Visor FEI-USDC Uni .05%",
+          "symbol": "vFEI-USDC05",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x705b3acaf102404cfdd5e4a60535e4e70091273c",
+        "name": "xETH-BABL0.3%",
+        "symbol": "xETH-BABL0.3%",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "119.599529422630914935211386",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x705b3acaf102404cfdd5e4a60535e4e70091273c",
+          "name": "xETH-BABL0.3%",
+          "symbol": "xETH-BABL0.3%",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x705b3acaf102404cfdd5e4a60535e4e70091273c",
+          "name": "xETH-BABL0.3%",
+          "symbol": "xETH-BABL0.3%",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x75cd1842b529ed87817b0453c00b471f5a1b381a",
+        "name": "xwTAO-WETH10",
+        "symbol": "xwTAO-WETH10",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "73.297584623856570072729608",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x75cd1842b529ed87817b0453c00b471f5a1b381a",
+          "name": "xwTAO-WETH10",
+          "symbol": "xwTAO-WETH10",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x75cd1842b529ed87817b0453c00b471f5a1b381a",
+          "name": "xwTAO-WETH10",
+          "symbol": "xwTAO-WETH10",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xf874d4957861e193aec9937223062679c14f9aca",
+        "name": "xUSDC-ETH05",
+        "symbol": "xUSDC-ETH05",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "31.136339772289498857736154",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xf874d4957861e193aec9937223062679c14f9aca",
+          "name": "xUSDC-ETH05",
+          "symbol": "xUSDC-ETH05",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xf874d4957861e193aec9937223062679c14f9aca",
+          "name": "xUSDC-ETH05",
+          "symbol": "xUSDC-ETH05",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xdbaa93e030bf2983add67c851892a9e2ee51e66a",
+        "name": "Visor LQTY-ETH Uni 1%",
+        "symbol": "vLQTY-ETH100",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "30.268446175540482144737578",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xdbaa93e030bf2983add67c851892a9e2ee51e66a",
+          "name": "Visor LQTY-ETH Uni 1%",
+          "symbol": "vLQTY-ETH100",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xdbaa93e030bf2983add67c851892a9e2ee51e66a",
+          "name": "Visor LQTY-ETH Uni 1%",
+          "symbol": "vLQTY-ETH100",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x0407c810546f1dc007f01a80e65983072d5c6dfa",
+        "name": "Visor COMP-ETH Uni v3",
+        "symbol": "vCOMP-ETHV3-1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "27.807032948130861534483175",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x0407c810546f1dc007f01a80e65983072d5c6dfa",
+          "name": "Visor COMP-ETH Uni v3",
+          "symbol": "vCOMP-ETHV3-1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x0407c810546f1dc007f01a80e65983072d5c6dfa",
+          "name": "Visor COMP-ETH Uni v3",
+          "symbol": "vCOMP-ETHV3-1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x4f7997158d66ca31d9734674fdcd12cc74e503a7",
+        "name": "Visor USDC-USDT Uni v3",
+        "symbol": "vUSDC-USDTV3-1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "20.008486217259",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x4f7997158d66ca31d9734674fdcd12cc74e503a7",
+          "name": "Visor USDC-USDT Uni v3",
+          "symbol": "vUSDC-USDTV3-1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x4f7997158d66ca31d9734674fdcd12cc74e503a7",
+          "name": "Visor USDC-USDT Uni v3",
+          "symbol": "vUSDC-USDTV3-1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xeaa629224b3ab2b42b42fddb53a1b51351acbe4f",
+        "name": "xH2O-ETH03",
+        "symbol": "xH2O-ETH03",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "18.2142082260632511470946",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xeaa629224b3ab2b42b42fddb53a1b51351acbe4f",
+          "name": "xH2O-ETH03",
+          "symbol": "xH2O-ETH03",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xeaa629224b3ab2b42b42fddb53a1b51351acbe4f",
+          "name": "xH2O-ETH03",
+          "symbol": "xH2O-ETH03",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xfe9d3a1e865b9eaea9cd1d9d9073cc520be240c5",
+        "name": "xUSDC-ETH05",
+        "symbol": "xUSDC-ETH05",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "10.3176805407913367343017",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xfe9d3a1e865b9eaea9cd1d9d9073cc520be240c5",
+          "name": "xUSDC-ETH05",
+          "symbol": "xUSDC-ETH05",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xfe9d3a1e865b9eaea9cd1d9d9073cc520be240c5",
+          "name": "xUSDC-ETH05",
+          "symbol": "xUSDC-ETH05",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x9196617815d95853945cd8f5e4e0bb88fdfe0281",
+        "name": "xOCEAN-PSDN1",
+        "symbol": "xOCEAN-PSDN1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "9.041634823553406068237461",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x9196617815d95853945cd8f5e4e0bb88fdfe0281",
+          "name": "xOCEAN-PSDN1",
+          "symbol": "xOCEAN-PSDN1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x9196617815d95853945cd8f5e4e0bb88fdfe0281",
+          "name": "xOCEAN-PSDN1",
+          "symbol": "xOCEAN-PSDN1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xf6eeca73646ea6a5c878814e6508e87facc7927c",
+        "name": "GAMMA-ETH Uni .3%",
+        "symbol": "GAMMA-ETH.3",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "7.703462047519651391374605",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xf6eeca73646ea6a5c878814e6508e87facc7927c",
+          "name": "GAMMA-ETH Uni .3%",
+          "symbol": "GAMMA-ETH.3",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xf6eeca73646ea6a5c878814e6508e87facc7927c",
+          "name": "GAMMA-ETH Uni .3%",
+          "symbol": "GAMMA-ETH.3",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xae29f871c9a4cda7ad2c8dff7193c2a0fe3d0c05",
+        "name": "xETH-BABL0.3%",
+        "symbol": "xETH-BABL0.3%",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "5.74412432763893591322",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xae29f871c9a4cda7ad2c8dff7193c2a0fe3d0c05",
+          "name": "xETH-BABL0.3%",
+          "symbol": "xETH-BABL0.3%",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xae29f871c9a4cda7ad2c8dff7193c2a0fe3d0c05",
+          "name": "xETH-BABL0.3%",
+          "symbol": "xETH-BABL0.3%",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x55eed13ab07f8b5538eff301551492a1d776da7b",
+        "name": "Visor APW-ETH Uni 3%",
+        "symbol": "vAPW-ETH3",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "4.8709516466674793792725",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x55eed13ab07f8b5538eff301551492a1d776da7b",
+          "name": "Visor APW-ETH Uni 3%",
+          "symbol": "vAPW-ETH3",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x55eed13ab07f8b5538eff301551492a1d776da7b",
+          "name": "Visor APW-ETH Uni 3%",
+          "symbol": "vAPW-ETH3",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xf56abca39c27d5c74f94c901b8c137fdf53b3e80",
+        "name": "xagEUR-USDC01",
+        "symbol": "xagEUR-USDC01",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "3.85713780368699806861764",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xf56abca39c27d5c74f94c901b8c137fdf53b3e80",
+          "name": "xagEUR-USDC01",
+          "symbol": "xagEUR-USDC01",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xf56abca39c27d5c74f94c901b8c137fdf53b3e80",
+          "name": "xagEUR-USDC01",
+          "symbol": "xagEUR-USDC01",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xd7b990543ea8e9bd0b9ae2deb9c52c4d0e660431",
+        "name": "xDAI-USDC01",
+        "symbol": "xDAI-USDC01",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "3.453349984224099625605572",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xd7b990543ea8e9bd0b9ae2deb9c52c4d0e660431",
+          "name": "xDAI-USDC01",
+          "symbol": "xDAI-USDC01",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xd7b990543ea8e9bd0b9ae2deb9c52c4d0e660431",
+          "name": "xDAI-USDC01",
+          "symbol": "xDAI-USDC01",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xe8f20fd90161de1d5b4cf7e2b5d92932ca06d5f4",
+        "name": "xagEUR-ETH05",
+        "symbol": "xagEUR-ETH05",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "1.839642606459967401081878",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xe8f20fd90161de1d5b4cf7e2b5d92932ca06d5f4",
+          "name": "xagEUR-ETH05",
+          "symbol": "xagEUR-ETH05",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xe8f20fd90161de1d5b4cf7e2b5d92932ca06d5f4",
+          "name": "xagEUR-ETH05",
+          "symbol": "xagEUR-ETH05",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x717a3276bd6f9e2f0ae447e0ffb45d0fa1c2dc57",
+        "name": "xagEUR-USDC01",
+        "symbol": "xagEUR-USDC01",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "1.515706640816718284321251",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x717a3276bd6f9e2f0ae447e0ffb45d0fa1c2dc57",
+          "name": "xagEUR-USDC01",
+          "symbol": "xagEUR-USDC01",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x717a3276bd6f9e2f0ae447e0ffb45d0fa1c2dc57",
+          "name": "xagEUR-USDC01",
+          "symbol": "xagEUR-USDC01",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x586880065937a0b1b9541723619b75739df8ef13",
+        "name": "LQTY-ETH Uni .3%",
+        "symbol": "LQTY-ETH.3",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "1.339148271509212854838172",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x586880065937a0b1b9541723619b75739df8ef13",
+          "name": "LQTY-ETH Uni .3%",
+          "symbol": "LQTY-ETH.3",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x586880065937a0b1b9541723619b75739df8ef13",
+          "name": "LQTY-ETH Uni .3%",
+          "symbol": "LQTY-ETH.3",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x93acb12ae1effb3426220c20c6d408eeaae59d72",
+        "name": "xOHM-FDT1%",
+        "symbol": "xOHM-FDT1%",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "0.720680567940169150582824",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x93acb12ae1effb3426220c20c6d408eeaae59d72",
+          "name": "xOHM-FDT1%",
+          "symbol": "xOHM-FDT1%",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x93acb12ae1effb3426220c20c6d408eeaae59d72",
+          "name": "xOHM-FDT1%",
+          "symbol": "xOHM-FDT1%",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x653f134dc1b129012fca3d5825d6849ad1d81864",
+        "name": "xezETH-WETH01",
+        "symbol": "xezETH-WETH01",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "0.34255833985964621610536",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x653f134dc1b129012fca3d5825d6849ad1d81864",
+          "name": "xezETH-WETH01",
+          "symbol": "xezETH-WETH01",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x653f134dc1b129012fca3d5825d6849ad1d81864",
+          "name": "xezETH-WETH01",
+          "symbol": "xezETH-WETH01",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x52ce16b1f37ea7be4352b29fcde3331e225380ff",
+        "name": "xETH-BABL0.3%",
+        "symbol": "xETH-BABL0.3%",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "0.30263684944953436416",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x52ce16b1f37ea7be4352b29fcde3331e225380ff",
+          "name": "xETH-BABL0.3%",
+          "symbol": "xETH-BABL0.3%",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x52ce16b1f37ea7be4352b29fcde3331e225380ff",
+          "name": "xETH-BABL0.3%",
+          "symbol": "xETH-BABL0.3%",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x7e3034e504fb7eaf638e22085911f82b60583bb2",
+        "name": "xUSDC-USDT01",
+        "symbol": "xUSDC-USDT01",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "0.213391017553",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x7e3034e504fb7eaf638e22085911f82b60583bb2",
+          "name": "xUSDC-USDT01",
+          "symbol": "xUSDC-USDT01",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x7e3034e504fb7eaf638e22085911f82b60583bb2",
+          "name": "xUSDC-USDT01",
+          "symbol": "xUSDC-USDT01",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xed354a827d99992d9cdada809449985cb73b8bb1",
+        "name": "xOHMv2-FDT",
+        "symbol": "xOHMv2-FDT",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "0.200796990358529680645386",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xed354a827d99992d9cdada809449985cb73b8bb1",
+          "name": "xOHMv2-FDT",
+          "symbol": "xOHMv2-FDT",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xed354a827d99992d9cdada809449985cb73b8bb1",
+          "name": "xOHMv2-FDT",
+          "symbol": "xOHMv2-FDT",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x388a3938fb6c9c6cb0415946dd5d026f7d98e22c",
+        "name": "OHM-FDT Uni 1%",
+        "symbol": "OHM-FDT1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "0.023929655516395",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x388a3938fb6c9c6cb0415946dd5d026f7d98e22c",
+          "name": "OHM-FDT Uni 1%",
+          "symbol": "OHM-FDT1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x388a3938fb6c9c6cb0415946dd5d026f7d98e22c",
+          "name": "OHM-FDT Uni 1%",
+          "symbol": "OHM-FDT1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x6941b1b6b29948a2f74cad0ef2866e93436a5e2d",
+        "name": "xFRAX-USDC05",
+        "symbol": "xFRAX-USDC05",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "0.01563953403151663866713",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x6941b1b6b29948a2f74cad0ef2866e93436a5e2d",
+          "name": "xFRAX-USDC05",
+          "symbol": "xFRAX-USDC05",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x6941b1b6b29948a2f74cad0ef2866e93436a5e2d",
+          "name": "xFRAX-USDC05",
+          "symbol": "xFRAX-USDC05",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x1e86a593e55215957c4755f1be19a229af3286f6",
+        "name": "xOHM-USDC3",
+        "symbol": "xOHM-USDC3",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "0.010588201805974",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x1e86a593e55215957c4755f1be19a229af3286f6",
+          "name": "xOHM-USDC3",
+          "symbol": "xOHM-USDC3",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x1e86a593e55215957c4755f1be19a229af3286f6",
+          "name": "xOHM-USDC3",
+          "symbol": "xOHM-USDC3",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xac0f71f2492daf020f459bd163052b9dae28f159",
+        "name": "xcbETH-WETH05",
+        "symbol": "xcbETH-WETH05",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "0.002530136893997469863106",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xac0f71f2492daf020f459bd163052b9dae28f159",
+          "name": "xcbETH-WETH05",
+          "symbol": "xcbETH-WETH05",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xac0f71f2492daf020f459bd163052b9dae28f159",
+          "name": "xcbETH-WETH05",
+          "symbol": "xcbETH-WETH05",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xf9443178e92d06f44765e18e907936473606920f",
+        "name": "Visor USDC-UST Uni .05%",
+        "symbol": "vUSDC-UST05",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xf9443178e92d06f44765e18e907936473606920f",
+          "name": "Visor USDC-UST Uni .05%",
+          "symbol": "vUSDC-UST05",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xf9443178e92d06f44765e18e907936473606920f",
+          "name": "Visor USDC-UST Uni .05%",
+          "symbol": "vUSDC-UST05",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xee768e132c4a836138969c883dcca6d30f0352b5",
+        "name": "Visor FEI-USDC Uni .05%",
+        "symbol": "vFEI-USDC05",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xee768e132c4a836138969c883dcca6d30f0352b5",
+          "name": "Visor FEI-USDC Uni .05%",
+          "symbol": "vFEI-USDC05",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xee768e132c4a836138969c883dcca6d30f0352b5",
+          "name": "Visor FEI-USDC Uni .05%",
+          "symbol": "vFEI-USDC05",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xe0dfd4d74a7c8064a0f5e233c753c609268d0d37",
+        "name": "xEUROC-USDC05",
+        "symbol": "xEUROC-USDC05",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xe0dfd4d74a7c8064a0f5e233c753c609268d0d37",
+          "name": "xEUROC-USDC05",
+          "symbol": "xEUROC-USDC05",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xe0dfd4d74a7c8064a0f5e233c753c609268d0d37",
+          "name": "xEUROC-USDC05",
+          "symbol": "xEUROC-USDC05",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xb917b739ef85cb81259656a0bcc6bc39f4fe109a",
+        "name": "agEUR-USDC01",
+        "symbol": "agEUR-USDC01",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xb917b739ef85cb81259656a0bcc6bc39f4fe109a",
+          "name": "agEUR-USDC01",
+          "symbol": "agEUR-USDC01",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xb917b739ef85cb81259656a0bcc6bc39f4fe109a",
+          "name": "agEUR-USDC01",
+          "symbol": "agEUR-USDC01",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xa625ea468a4c70f13f9a756ffac3d0d250a5c276",
+        "name": "Visor RAW-ETH Uni 1%",
+        "symbol": "vRAW-ETH10",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xa625ea468a4c70f13f9a756ffac3d0d250a5c276",
+          "name": "Visor RAW-ETH Uni 1%",
+          "symbol": "vRAW-ETH10",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xa625ea468a4c70f13f9a756ffac3d0d250a5c276",
+          "name": "Visor RAW-ETH Uni 1%",
+          "symbol": "vRAW-ETH10",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xa3ecb6e941e773c6568052a509a04cf455a752ae",
+        "name": "wstETH-ETH05",
+        "symbol": "wstETH-ETH05",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xa3ecb6e941e773c6568052a509a04cf455a752ae",
+          "name": "wstETH-ETH05",
+          "symbol": "wstETH-ETH05",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xa3ecb6e941e773c6568052a509a04cf455a752ae",
+          "name": "wstETH-ETH05",
+          "symbol": "wstETH-ETH05",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xa1c739fa2fdfdd7049e385d60d4921ef7226daa5",
+        "name": "Visor LUSD-UST Uni .05%",
+        "symbol": "vLUSD-UST05",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xa1c739fa2fdfdd7049e385d60d4921ef7226daa5",
+          "name": "Visor LUSD-UST Uni .05%",
+          "symbol": "vLUSD-UST05",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xa1c739fa2fdfdd7049e385d60d4921ef7226daa5",
+          "name": "Visor LUSD-UST Uni .05%",
+          "symbol": "vLUSD-UST05",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x5d40e4687e36628267854d0b985a9b6e26493b74",
+        "name": "Visor BUMP-ETH Uni 1%",
+        "symbol": "vBUMP-ETH10",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x5d40e4687e36628267854d0b985a9b6e26493b74",
+          "name": "Visor BUMP-ETH Uni 1%",
+          "symbol": "vBUMP-ETH10",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x5d40e4687e36628267854d0b985a9b6e26493b74",
+          "name": "Visor BUMP-ETH Uni 1%",
+          "symbol": "vBUMP-ETH10",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x5d0681ca89490ac59e9d1f79e331a1aba0599d56",
+        "name": "xOCEAN-PDSN1",
+        "symbol": "xOCEAN-PDSN1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x5d0681ca89490ac59e9d1f79e331a1aba0599d56",
+          "name": "xOCEAN-PDSN1",
+          "symbol": "xOCEAN-PDSN1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x5d0681ca89490ac59e9d1f79e331a1aba0599d56",
+          "name": "xOCEAN-PDSN1",
+          "symbol": "xOCEAN-PDSN1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x46e4ddb5b87152dda90afe75daedfddab1c16513",
+        "name": "rETH-ETH05",
+        "symbol": "rETH-ETH05",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x46e4ddb5b87152dda90afe75daedfddab1c16513",
+          "name": "rETH-ETH05",
+          "symbol": "rETH-ETH05",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x46e4ddb5b87152dda90afe75daedfddab1c16513",
+          "name": "rETH-ETH05",
+          "symbol": "rETH-ETH05",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x46b7602e4dad6f71dae532588110e2711682aca3",
+        "name": "Visor BPRO-ETH Uni 1%",
+        "symbol": "vBPRO-ETH10",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x46b7602e4dad6f71dae532588110e2711682aca3",
+          "name": "Visor BPRO-ETH Uni 1%",
+          "symbol": "vBPRO-ETH10",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x46b7602e4dad6f71dae532588110e2711682aca3",
+          "name": "Visor BPRO-ETH Uni 1%",
+          "symbol": "vBPRO-ETH10",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x2825b12c5e873318b318302408718b961ae74d4e",
+        "name": "agEUR-ETH05",
+        "symbol": "agEUR-ETH05",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x2825b12c5e873318b318302408718b961ae74d4e",
+          "name": "agEUR-ETH05",
+          "symbol": "agEUR-ETH05",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x2825b12c5e873318b318302408718b961ae74d4e",
+          "name": "agEUR-ETH05",
+          "symbol": "agEUR-ETH05",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x24fe0b138d9b10a7f0502e213212ee6648926ecb",
+        "name": "rETH-THETA - ETH",
+        "symbol": "rETH-THETA-E",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x24fe0b138d9b10a7f0502e213212ee6648926ecb",
+          "name": "rETH-THETA - ETH",
+          "symbol": "rETH-THETA-E",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x24fe0b138d9b10a7f0502e213212ee6648926ecb",
+          "name": "rETH-THETA - ETH",
+          "symbol": "rETH-THETA-E",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          }
+        ],
+        "protocol": {
+          "id": "0x31ccdb5bd6322483bebd0787e1dabd1bf1f14946",
+          "name": "Gamma Strategies",
+          "slug": "gamma-strategies",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      }
+    ],
+    "_meta": {
+      "block": {
+        "number": 25903086,
+        "timestamp": null
+      },
+      "deployment": "Qmd5Ct1Pn3V47jhBVEscS1NH8e5L6tz1wrTgzZE5hvHN4b",
+      "hasIndexingErrors": false
+    }
+  }
+}

@@ -1,0 +1,583 @@
+{
+  "_ainize": {
+    "deployment_id": "Crag42fFb8PrXnbTjHe1UG5KjgzoiUJbqwzJxZ1W8XNJ",
+    "protocol": "ribbon-finance",
+    "query": "vaults",
+    "query_hash": "37635f0bcd8b32452a9ecc630219df2b8a995ff83c50a2cd0cd9be8519342898",
+    "block": 25903086,
+    "skip": 0,
+    "first": 1000,
+    "gateway_ms": 338
+  },
+  "data": {
+    "vaults": [
+      {
+        "id": "0x65a833afdc250d9d38f8cd9bc2b1e3132db13b2f",
+        "name": "Ribbon BTC Theta Vault",
+        "symbol": "rBTC-THETA",
+        "depositLimit": "75000000000",
+        "totalValueLockedUSD": "1647744.6866205138156",
+        "pricePerShare": "99792306",
+        "inputToken": {
+          "id": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+          "name": "Wrapped BTC",
+          "symbol": "WBTC",
+          "decimals": 8,
+          "lastPriceUSD": "80821.752744"
+        },
+        "outputToken": {
+          "id": "0x65a833afdc250d9d38f8cd9bc2b1e3132db13b2f",
+          "name": "Ribbon BTC Theta Vault",
+          "symbol": "rBTC-THETA",
+          "decimals": 8
+        },
+        "fees": [
+          {
+            "feeType": "MANAGEMENT_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0.00038356"
+          }
+        ],
+        "protocol": {
+          "id": "0x25751853eab4d0eb3652b5eb6ecb102a2789644b",
+          "name": "Ribbon Finance",
+          "slug": "ribbon-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.1"
+        }
+      },
+      {
+        "id": "0x53773e034d9784153471813dacaff53dbbb78e8c",
+        "name": "Ribbon stETH Theta Vault",
+        "symbol": "rstETH-THETA",
+        "depositLimit": "20000000000000000000000",
+        "totalValueLockedUSD": "1537237.043982116107343938462945",
+        "pricePerShare": "1115322353281123719",
+        "inputToken": {
+          "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+          "name": "Wrapped Ether",
+          "symbol": "WETH",
+          "decimals": 18,
+          "lastPriceUSD": "2392.01"
+        },
+        "outputToken": {
+          "id": "0x53773e034d9784153471813dacaff53dbbb78e8c",
+          "name": "Ribbon stETH Theta Vault",
+          "symbol": "rstETH-THETA",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "MANAGEMENT_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0.000000000000038356"
+          }
+        ],
+        "protocol": {
+          "id": "0x25751853eab4d0eb3652b5eb6ecb102a2789644b",
+          "name": "Ribbon Finance",
+          "slug": "ribbon-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.1"
+        }
+      },
+      {
+        "id": "0x25751853eab4d0eb3652b5eb6ecb102a2789644b",
+        "name": "Ribbon ETH Theta Vault",
+        "symbol": "rETH-THETA",
+        "depositLimit": "20000000000000000000000",
+        "totalValueLockedUSD": "1350298.2259831134178011161755",
+        "pricePerShare": "868638435671741481",
+        "inputToken": {
+          "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+          "name": "Wrapped Ether",
+          "symbol": "WETH",
+          "decimals": 18,
+          "lastPriceUSD": "2392.01"
+        },
+        "outputToken": {
+          "id": "0x25751853eab4d0eb3652b5eb6ecb102a2789644b",
+          "name": "Ribbon ETH Theta Vault",
+          "symbol": "rETH-THETA",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "MANAGEMENT_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0.000000000000038356"
+          }
+        ],
+        "protocol": {
+          "id": "0x25751853eab4d0eb3652b5eb6ecb102a2789644b",
+          "name": "Ribbon Finance",
+          "slug": "ribbon-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.1"
+        }
+      },
+      {
+        "id": "0xce5513474e077f5336cf1b33c1347fdd8d48ae8c",
+        "name": "Ribbon stETH Earn Vault",
+        "symbol": "rEARN-stETH",
+        "depositLimit": "4000000000000000000000",
+        "totalValueLockedUSD": "938436.36012951715754526128858",
+        "pricePerShare": "1077007122042416977",
+        "inputToken": {
+          "id": "0xae7ab96520de3a18e5e111b5eaab095312d7fe84",
+          "name": "Liquid staked Ether 2.0",
+          "symbol": "stETH",
+          "decimals": 18,
+          "lastPriceUSD": "2522.261011"
+        },
+        "outputToken": {
+          "id": "0xce5513474e077f5336cf1b33c1347fdd8d48ae8c",
+          "name": "Ribbon stETH Earn Vault",
+          "symbol": "rEARN-stETH",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "MANAGEMENT_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0"
+          }
+        ],
+        "protocol": {
+          "id": "0x25751853eab4d0eb3652b5eb6ecb102a2789644b",
+          "name": "Ribbon Finance",
+          "slug": "ribbon-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.1"
+        }
+      },
+      {
+        "id": "0xcc323557c71c0d1d20a1861dc69c06c5f3cc9624",
+        "name": "Ribbon yvUSDC Theta Vault ETH Put",
+        "symbol": "ryvUSDC-ETH-P-THETA",
+        "depositLimit": "30000000000000",
+        "totalValueLockedUSD": "512006.184657605237",
+        "pricePerShare": "698042",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": "1.001"
+        },
+        "outputToken": {
+          "id": "0xcc323557c71c0d1d20a1861dc69c06c5f3cc9624",
+          "name": "Ribbon yvUSDC Theta Vault ETH Put",
+          "symbol": "ryvUSDC-ETH-P-THETA",
+          "decimals": 6
+        },
+        "fees": [
+          {
+            "feeType": "MANAGEMENT_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0.038356"
+          }
+        ],
+        "protocol": {
+          "id": "0x25751853eab4d0eb3652b5eb6ecb102a2789644b",
+          "name": "Ribbon Finance",
+          "slug": "ribbon-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.1"
+        }
+      },
+      {
+        "id": "0x0fabaf48bbf864a3947bdd0ba9d764791a60467a",
+        "name": "Ribbon ETH Theta Vault",
+        "symbol": "rETH-THETA",
+        "depositLimit": "25000000000000000000000",
+        "totalValueLockedUSD": "228455.49114991470096201588",
+        "pricePerShare": "1142929915156973669.541959653823702",
+        "inputToken": {
+          "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+          "name": "Wrapped Ether",
+          "symbol": "WETH",
+          "decimals": 18,
+          "lastPriceUSD": "2392.01"
+        },
+        "outputToken": {
+          "id": "0x0fabaf48bbf864a3947bdd0ba9d764791a60467a",
+          "name": "Ribbon ETH Theta Vault",
+          "symbol": "rETH-THETA",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "MANAGEMENT_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0"
+          }
+        ],
+        "protocol": {
+          "id": "0x25751853eab4d0eb3652b5eb6ecb102a2789644b",
+          "name": "Ribbon Finance",
+          "slug": "ribbon-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.1"
+        }
+      },
+      {
+        "id": "0x84c2b16fa6877a8ff4f3271db7ea837233dfd6f0",
+        "name": "Ribbon USDC Earn Vault",
+        "symbol": "rEARN",
+        "depositLimit": "10000000000000",
+        "totalValueLockedUSD": "143638.300970164",
+        "pricePerShare": "1048178",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": "1.001"
+        },
+        "outputToken": {
+          "id": "0x84c2b16fa6877a8ff4f3271db7ea837233dfd6f0",
+          "name": "Ribbon USDC Earn Vault",
+          "symbol": "rEARN",
+          "decimals": 6
+        },
+        "fees": [
+          {
+            "feeType": "MANAGEMENT_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0"
+          }
+        ],
+        "protocol": {
+          "id": "0x25751853eab4d0eb3652b5eb6ecb102a2789644b",
+          "name": "Ribbon Finance",
+          "slug": "ribbon-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.1"
+        }
+      },
+      {
+        "id": "0x8b5876f5b0bf64056a89aa7e97511644758c3e8c",
+        "name": "Ribbon BTC Theta Vault",
+        "symbol": "rBTC-THETA",
+        "depositLimit": "125000000000",
+        "totalValueLockedUSD": "127888.93398808153",
+        "pricePerShare": "101630350.756159014080557536526054",
+        "inputToken": {
+          "id": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+          "name": "Wrapped BTC",
+          "symbol": "WBTC",
+          "decimals": 8,
+          "lastPriceUSD": "80821.752744"
+        },
+        "outputToken": {
+          "id": "0x8b5876f5b0bf64056a89aa7e97511644758c3e8c",
+          "name": "Ribbon BTC Theta Vault",
+          "symbol": "rBTC-THETA",
+          "decimals": 8
+        },
+        "fees": [
+          {
+            "feeType": "MANAGEMENT_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0"
+          }
+        ],
+        "protocol": {
+          "id": "0x25751853eab4d0eb3652b5eb6ecb102a2789644b",
+          "name": "Ribbon Finance",
+          "slug": "ribbon-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.1"
+        }
+      },
+      {
+        "id": "0x8fe74471f198e426e96be65f40eed1f8ba96e54f",
+        "name": "Ribbon yvUSDC Theta Vault ETH Put",
+        "symbol": "ryvUSDC-ETH-P-THETA",
+        "depositLimit": "100000000000000",
+        "totalValueLockedUSD": "104696.3409686708",
+        "pricePerShare": "1470638.004746958038994122657227341",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": "1.001"
+        },
+        "outputToken": {
+          "id": "0x8fe74471f198e426e96be65f40eed1f8ba96e54f",
+          "name": "Ribbon yvUSDC Theta Vault ETH Put",
+          "symbol": "ryvUSDC-ETH-P-THETA",
+          "decimals": 6
+        },
+        "fees": [
+          {
+            "feeType": "MANAGEMENT_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0"
+          }
+        ],
+        "protocol": {
+          "id": "0x25751853eab4d0eb3652b5eb6ecb102a2789644b",
+          "name": "Ribbon Finance",
+          "slug": "ribbon-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.1"
+        }
+      },
+      {
+        "id": "0xe63151a0ed4e5fafdc951d877102cf0977abd365",
+        "name": "Ribbon Aave Theta Vault",
+        "symbol": "rAAVE-THETA",
+        "depositLimit": "50000000000000000000000",
+        "totalValueLockedUSD": "96417.720544954557720517913669",
+        "pricePerShare": "698188286896953661",
+        "inputToken": {
+          "id": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+          "name": "Aave Token",
+          "symbol": "AAVE",
+          "decimals": 18,
+          "lastPriceUSD": "98.128057"
+        },
+        "outputToken": {
+          "id": "0xe63151a0ed4e5fafdc951d877102cf0977abd365",
+          "name": "Ribbon Aave Theta Vault",
+          "symbol": "rAAVE-THETA",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "MANAGEMENT_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0.000000000000038356"
+          }
+        ],
+        "protocol": {
+          "id": "0x25751853eab4d0eb3652b5eb6ecb102a2789644b",
+          "name": "Ribbon Finance",
+          "slug": "ribbon-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.1"
+        }
+      },
+      {
+        "id": "0x16772a7f4a3ca291c21b8ace76f9332ddffbb5ef",
+        "name": "Ribbon USDC Theta Vault ETH Put",
+        "symbol": "rUSDC-ETH-P-THETA",
+        "depositLimit": "50000000000000",
+        "totalValueLockedUSD": "92223.91934396",
+        "pricePerShare": "1121413.81598344728139044113543249",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": "1.001"
+        },
+        "outputToken": {
+          "id": "0x16772a7f4a3ca291c21b8ace76f9332ddffbb5ef",
+          "name": "Ribbon USDC Theta Vault ETH Put",
+          "symbol": "rUSDC-ETH-P-THETA",
+          "decimals": 6
+        },
+        "fees": [
+          {
+            "feeType": "MANAGEMENT_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0"
+          }
+        ],
+        "protocol": {
+          "id": "0x25751853eab4d0eb3652b5eb6ecb102a2789644b",
+          "name": "Ribbon Finance",
+          "slug": "ribbon-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.1"
+        }
+      },
+      {
+        "id": "0xc0cf10dd710aefb209d9dc67bc746510ffd98a53",
+        "name": "Ribbon APE Theta Vault",
+        "symbol": "rAPE-THETA",
+        "depositLimit": "500000000000000000000000",
+        "totalValueLockedUSD": "26633.658326246547053354927765",
+        "pricePerShare": "977223083484161434",
+        "inputToken": {
+          "id": "0x4d224452801aced8b2f0aebe155379bb5d594381",
+          "name": "ApeCoin",
+          "symbol": "APE",
+          "decimals": 18,
+          "lastPriceUSD": "4.215341"
+        },
+        "outputToken": {
+          "id": "0xc0cf10dd710aefb209d9dc67bc746510ffd98a53",
+          "name": "Ribbon APE Theta Vault",
+          "symbol": "rAPE-THETA",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "MANAGEMENT_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0"
+          }
+        ],
+        "protocol": {
+          "id": "0x25751853eab4d0eb3652b5eb6ecb102a2789644b",
+          "name": "Ribbon Finance",
+          "slug": "ribbon-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.1"
+        }
+      },
+      {
+        "id": "0xa1da0580fa96129e753d736a5901c31df5ec5edf",
+        "name": "Ribbon rETH Theta Vault",
+        "symbol": "rrETH-THETA",
+        "depositLimit": "5000000000000000000000",
+        "totalValueLockedUSD": "25008.238068159706868139161635",
+        "pricePerShare": "851417968407611864",
+        "inputToken": {
+          "id": "0xae78736cd615f374d3085123a210448e74fc6393",
+          "name": "Rocket Pool ETH",
+          "symbol": "rETH",
+          "decimals": 18,
+          "lastPriceUSD": "2416.107745"
+        },
+        "outputToken": {
+          "id": "0xa1da0580fa96129e753d736a5901c31df5ec5edf",
+          "name": "Ribbon rETH Theta Vault",
+          "symbol": "rrETH-THETA",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "MANAGEMENT_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0.000000000000038356"
+          }
+        ],
+        "protocol": {
+          "id": "0x25751853eab4d0eb3652b5eb6ecb102a2789644b",
+          "name": "Ribbon Finance",
+          "slug": "ribbon-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.1"
+        }
+      }
+    ],
+    "_meta": {
+      "block": {
+        "number": 25903086,
+        "timestamp": null
+      },
+      "deployment": "QmegbUZ183WPwsUbCtTZ8hW43JP3FnALymD5WdnmhaHrrV",
+      "hasIndexingErrors": false
+    }
+  }
+}

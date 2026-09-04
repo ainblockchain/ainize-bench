@@ -1,0 +1,1584 @@
+{
+  "_ainize": {
+    "deployment_id": "BchjnXAXXV5coiCBMQH4A8yCHXEFX9S88JFF6G3mfem4",
+    "protocol": "badgerdao",
+    "query": "vaults",
+    "query_hash": "37635f0bcd8b32452a9ecc630219df2b8a995ff83c50a2cd0cd9be8519342898",
+    "block": 25903086,
+    "skip": 0,
+    "first": 1000,
+    "gateway_ms": 684
+  },
+  "data": {
+    "vaults": [
+      {
+        "id": "0x758a43ee2bff8230eeb784879cdcff4828f2544d",
+        "name": "Badger Sett SushiSwap LP Token",
+        "symbol": "bSLP",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "6690320.62988662532306592712617",
+        "pricePerShare": "1000000000000000000",
+        "inputToken": {
+          "id": "0xceff51756c56ceffca006cd410b03ffc46dd3a58",
+          "name": "SushiSwap LP Token",
+          "symbol": "SLP",
+          "decimals": 18,
+          "lastPriceUSD": "79767746589.125406"
+        },
+        "outputToken": {
+          "id": "0x758a43ee2bff8230eeb784879cdcff4828f2544d",
+          "name": "Badger Sett SushiSwap LP Token",
+          "symbol": "bSLP",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x6def55d2e18486b9ddfaa075bc4e4ee0b28c1545",
+        "name": "Badger Sett Curve.fi renBTC/wBTC",
+        "symbol": "bcrvRenWBTC",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "3586667.209094863267668681050052",
+        "pricePerShare": "1013925756374777849",
+        "inputToken": {
+          "id": "0x49849c98ae39fff122806c06791fa73784fb3675",
+          "name": "Curve.fi renBTC/wBTC",
+          "symbol": "crvRenWBTC",
+          "decimals": 18,
+          "lastPriceUSD": "79371.608906"
+        },
+        "outputToken": {
+          "id": "0x6def55d2e18486b9ddfaa075bc4e4ee0b28c1545",
+          "name": "Badger Sett Curve.fi renBTC/wBTC",
+          "symbol": "bcrvRenWBTC",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "20"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0.75"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xd04c48a53c111300ad41190d63681ed3dad998ec",
+        "name": "Badger Sett Curve.fi renBTC/wBTC/sBTC",
+        "symbol": "bcrvRenWSBTC",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "1240154.400475910228621762004681",
+        "pricePerShare": "1014745586208038901",
+        "inputToken": {
+          "id": "0x075b1bb99792c9e1041ba13afef80c91a1e70fb3",
+          "name": "Curve.fi renBTC/wBTC/sBTC",
+          "symbol": "crvRenWSBTC",
+          "decimals": 18,
+          "lastPriceUSD": "79118.227853"
+        },
+        "outputToken": {
+          "id": "0xd04c48a53c111300ad41190d63681ed3dad998ec",
+          "name": "Badger Sett Curve.fi renBTC/wBTC/sBTC",
+          "symbol": "bcrvRenWSBTC",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "20"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0.75"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x1862a18181346ebd9edaf800804f89190def24a5",
+        "name": "Badger Sett SushiSwap LP Token",
+        "symbol": "bSLP",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "497859.682092287460024945289512",
+        "pricePerShare": "1406083962754865242",
+        "inputToken": {
+          "id": "0x110492b31c59716ac47337e616804e3e3adc0b4a",
+          "name": "SushiSwap LP Token",
+          "symbol": "SLP",
+          "decimals": 18,
+          "lastPriceUSD": "83580153.375553"
+        },
+        "outputToken": {
+          "id": "0x1862a18181346ebd9edaf800804f89190def24a5",
+          "name": "Badger Sett SushiSwap LP Token",
+          "symbol": "bSLP",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xb9d076fde463dbc9f915e5392f807315bf940334",
+        "name": "Badger Sett Curve.fi tBTC/sbtcCrv",
+        "symbol": "btbtc/sbtcCrv",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "458888.995434990601477484701668",
+        "pricePerShare": "1028178988567488500",
+        "inputToken": {
+          "id": "0x64eda51d3ad40d56b9dfc5554e06f94e1dd786fd",
+          "name": "Curve.fi tBTC/sbtcCrv",
+          "symbol": "tbtc/sbtcCrv",
+          "decimals": 18,
+          "lastPriceUSD": "66266.191287"
+        },
+        "outputToken": {
+          "id": "0xb9d076fde463dbc9f915e5392f807315bf940334",
+          "name": "Badger Sett Curve.fi tBTC/sbtcCrv",
+          "symbol": "btbtc/sbtcCrv",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "20"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0.75"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x27e98fc7d05f54e544d16f58c194c2d7ba71e3b5",
+        "name": "Badger Sett Curve.fi USD-BTC-ETH",
+        "symbol": "bcrv3crypto",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "198239.622159969833025787138976",
+        "pricePerShare": "1024312115348427522",
+        "inputToken": {
+          "id": "0xc4ad29ba4b3c580e6d59105fff484999997675ff",
+          "name": "Curve.fi USD-BTC-ETH",
+          "symbol": "crv3crypto",
+          "decimals": 18,
+          "lastPriceUSD": "1665.425858"
+        },
+        "outputToken": {
+          "id": "0x27e98fc7d05f54e544d16f58c194c2d7ba71e3b5",
+          "name": "Badger Sett Curve.fi USD-BTC-ETH",
+          "symbol": "bcrv3crypto",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "20"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0.2"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xae96ff08771a109dc6650a1bdca62f2d558e40af",
+        "name": "Badger Sett Curve.fi Factory BTC Metapool: ibBTC",
+        "symbol": "bibbtc/sbtcCRV-f",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "196378.748105565296093535334116",
+        "pricePerShare": "1000000000000000000",
+        "inputToken": {
+          "id": "0xfbdca68601f835b27790d98bbb8ec7f05fdeaa9b",
+          "name": "Curve.fi Factory BTC Metapool: ibBTC",
+          "symbol": "ibbtc/sbtcCRV-f",
+          "decimals": 18,
+          "lastPriceUSD": "79869.584966"
+        },
+        "outputToken": {
+          "id": "0xae96ff08771a109dc6650a1bdca62f2d558e40af",
+          "name": "Badger Sett Curve.fi Factory BTC Metapool: ibBTC",
+          "symbol": "bibbtc/sbtcCRV-f",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "20"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0.1"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1",
+        "name": "Badger Sett Uniswap V2",
+        "symbol": "bUNI-V2",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "132183.39753810289652745784005",
+        "pricePerShare": "1811017418283806782",
+        "inputToken": {
+          "id": "0xcd7989894bc033581532d2cd88da5db0a4b12859",
+          "name": "Uniswap V2",
+          "symbol": "UNI-V2",
+          "decimals": 18,
+          "lastPriceUSD": "30843046.158855"
+        },
+        "outputToken": {
+          "id": "0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1",
+          "name": "Badger Sett Uniswap V2",
+          "symbol": "bUNI-V2",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xaf5a1decfa95baf63e0084a35c62592b774a2a87",
+        "name": "Badger SuperSett (Harvest) Curve.fi renBTC/wBTC",
+        "symbol": "bSupercrvRenWBTC",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "99761.556349413311569100696576",
+        "pricePerShare": "1016612311213796354",
+        "inputToken": {
+          "id": "0x49849c98ae39fff122806c06791fa73784fb3675",
+          "name": "Curve.fi renBTC/wBTC",
+          "symbol": "crvRenWBTC",
+          "decimals": 18,
+          "lastPriceUSD": "79371.608906"
+        },
+        "outputToken": {
+          "id": "0xaf5a1decfa95baf63e0084a35c62592b774a2a87",
+          "name": "Badger SuperSett (Harvest) Curve.fi renBTC/wBTC",
+          "symbol": "bSupercrvRenWBTC",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0.75"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xfd05d3c7fe2924020620a8be4961bbaa747e6305",
+        "name": "Badger Vested Escrow Convex Token",
+        "symbol": "bveCVX",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "88118.16900081227352069091732",
+        "pricePerShare": "1000000000000000000",
+        "inputToken": {
+          "id": "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b",
+          "name": "Convex Token",
+          "symbol": "CVX",
+          "decimals": 18,
+          "lastPriceUSD": "2.25796"
+        },
+        "outputToken": {
+          "id": "0xfd05d3c7fe2924020620a8be4961bbaa747e6305",
+          "name": "Badger Vested Escrow Convex Token",
+          "symbol": "bveCVX",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "20"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0.5"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+        "name": "Badger Sett Badger",
+        "symbol": "bBADGER",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "83743.989123756486632931816525",
+        "pricePerShare": "1234881688676350581",
+        "inputToken": {
+          "id": "0x3472a5a71965499acd81997a54bba8d852c6e53d",
+          "name": "Badger",
+          "symbol": "BADGER",
+          "decimals": 18,
+          "lastPriceUSD": "0.387225"
+        },
+        "outputToken": {
+          "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "name": "Badger Sett Badger",
+          "symbol": "bBADGER",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x63ad745506bd6a3e57f764409a47ed004bec40b1",
+        "name": "Badger Sett 20WBTC-80BADGER",
+        "symbol": "b20WBTC-80BADGER",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "48752.587098060844307330269735",
+        "pricePerShare": "1000000000000000000",
+        "inputToken": {
+          "id": "0xb460daa847c45f1c4a41cb05bfb3b51c92e41b36",
+          "name": "20WBTC-80BADGER",
+          "symbol": "20WBTC-80BADGER",
+          "decimals": 18,
+          "lastPriceUSD": "42.379247"
+        },
+        "outputToken": {
+          "id": "0x63ad745506bd6a3e57f764409a47ed004bec40b1",
+          "name": "Badger Sett 20WBTC-80BADGER",
+          "symbol": "b20WBTC-80BADGER",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "20"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0.1"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x2b5455aac8d64c14786c3a29858e43b5945819c0",
+        "name": "Badger Sett Convex CRV",
+        "symbol": "bcvxCRV",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "27784.49312386043856317105696",
+        "pricePerShare": "1705381882004517127",
+        "inputToken": {
+          "id": "0x62b9c7356a2dc64a1969e19c23e4f579f9810aa7",
+          "name": "Convex CRV",
+          "symbol": "cvxCRV",
+          "decimals": 18,
+          "lastPriceUSD": "0.12968"
+        },
+        "outputToken": {
+          "id": "0x2b5455aac8d64c14786c3a29858e43b5945819c0",
+          "name": "Badger Sett Convex CRV",
+          "symbol": "bcvxCRV",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x53c8e199eb2cb7c01543c137078a038937a68e40",
+        "name": "Badger Sett Convex Token",
+        "symbol": "bCVX",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "17423.07296364780376092370308",
+        "pricePerShare": "1095798859066732433",
+        "inputToken": {
+          "id": "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b",
+          "name": "Convex Token",
+          "symbol": "CVX",
+          "decimals": 18,
+          "lastPriceUSD": "2.25796"
+        },
+        "outputToken": {
+          "id": "0x53c8e199eb2cb7c01543c137078a038937a68e40",
+          "name": "Badger Sett Convex Token",
+          "symbol": "bCVX",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x937b8e917d0f36edebba8e459c5fb16f3b315551",
+        "name": "Badger Sett Curve.fi Factory Plain Pool: Badger Locked CVX",
+        "symbol": "bbveCVX-CVX-f",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "8395.294790294204213099483639",
+        "pricePerShare": "1000000000000000000",
+        "inputToken": {
+          "id": "0x04c90c198b2eff55716079bc06d7ccc4aa4d7512",
+          "name": "Curve.fi Factory Plain Pool: Badger Locked CVX",
+          "symbol": "bveCVX-CVX-f",
+          "decimals": 18,
+          "lastPriceUSD": "2.846453"
+        },
+        "outputToken": {
+          "id": "0x937b8e917d0f36edebba8e459c5fb16f3b315551",
+          "name": "Badger Sett Curve.fi Factory Plain Pool: Badger Locked CVX",
+          "symbol": "bbveCVX-CVX-f",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+        "name": "Badger Sett Digg",
+        "symbol": "bDIGG",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "7827.146034052791875906336229621164",
+        "pricePerShare": "1500226698177751642",
+        "inputToken": {
+          "id": "0x798d1be841a82a273720ce31c822c61a67a601c3",
+          "name": "Digg",
+          "symbol": "DIGG",
+          "decimals": 9,
+          "lastPriceUSD": "194.9951540932153319593711459622549"
+        },
+        "outputToken": {
+          "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "name": "Badger Sett Digg",
+          "symbol": "bDIGG",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xa484427cf91bbd945c39ef87df0a02bb8625dc97",
+        "name": "Badger Sett Balancer rETH Stable Pool",
+        "symbol": "bB-rETH-STABLE",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "1287.558837667620920117505055",
+        "pricePerShare": "1000000000000000000",
+        "inputToken": {
+          "id": "0x1e19cf2d73a72ef1332c882f20534b6519be0276",
+          "name": "Balancer rETH Stable Pool",
+          "symbol": "B-rETH-STABLE",
+          "decimals": 18,
+          "lastPriceUSD": "2512.722835"
+        },
+        "outputToken": {
+          "id": "0xa484427cf91bbd945c39ef87df0a02bb8625dc97",
+          "name": "Badger Sett Balancer rETH Stable Pool",
+          "symbol": "bB-rETH-STABLE",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0.1"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xf349c0faa80fc1870306ac093f75934078e28991",
+        "name": "Badger Sett Curve.fi oBTC/sbtcCRV",
+        "symbol": "boBTC/sbtcCRV",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "1051.61485469653810627013312",
+        "pricePerShare": "1003628041283158710",
+        "inputToken": {
+          "id": "0x2fe94ea3d5d4a175184081439753de15aef9d614",
+          "name": "Curve.fi oBTC/sbtcCRV",
+          "symbol": "oBTC/sbtcCRV",
+          "decimals": 18,
+          "lastPriceUSD": "94261.73248"
+        },
+        "outputToken": {
+          "id": "0xf349c0faa80fc1870306ac093f75934078e28991",
+          "name": "Badger Sett Curve.fi oBTC/sbtcCRV",
+          "symbol": "boBTC/sbtcCRV",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xec1c717a3b02582a4aa2275260c583095536b613",
+        "name": "Badger Sett Curve.fi Factory Crypto Pool: BADGER/WBTC",
+        "symbol": "bBADGERWBTC-f",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "594.4156293860476861510857",
+        "pricePerShare": "1000000000000000000",
+        "inputToken": {
+          "id": "0x137469b55d1f15651ba46a89d0588e97dd0b6562",
+          "name": "Curve.fi Factory Crypto Pool: BADGER/WBTC",
+          "symbol": "BADGERWBTC-f",
+          "decimals": 18,
+          "lastPriceUSD": "305.117502"
+        },
+        "outputToken": {
+          "id": "0xec1c717a3b02582a4aa2275260c583095536b613",
+          "name": "Badger Sett Curve.fi Factory Crypto Pool: BADGER/WBTC",
+          "symbol": "bBADGERWBTC-f",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "20"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0.1"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xf8f5677b6bcecdb9be94ae8f6770a05a6c53c378",
+        "name": "Badger Sett 33auraBAL-33graviAURA-33WETH",
+        "symbol": "b33auraBAL-33graviAURA-33WETH",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "575.23240060605129638041839",
+        "pricePerShare": "1000000000000000000",
+        "inputToken": {
+          "id": "0x0578292cb20a443ba1cde459c985ce14ca2bdee5",
+          "name": "33auraBAL-33graviAURA-33WETH",
+          "symbol": "33auraBAL-33graviAURA-33WETH",
+          "decimals": 18,
+          "lastPriceUSD": "33.210862"
+        },
+        "outputToken": {
+          "id": "0xf8f5677b6bcecdb9be94ae8f6770a05a6c53c378",
+          "name": "Badger Sett 33auraBAL-33graviAURA-33WETH",
+          "symbol": "b33auraBAL-33graviAURA-33WETH",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0.1"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xba485b556399123261a5f9c95d413b4f93107407",
+        "name": "Gravitationally Bound AURA",
+        "symbol": "graviAURA",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "532.809708314906736611614323",
+        "pricePerShare": "1074748154147165201",
+        "inputToken": {
+          "id": "0xc0c293ce456ff0ed870add98a0828dd4d2903dbf",
+          "name": "Aura",
+          "symbol": "AURA",
+          "decimals": 18,
+          "lastPriceUSD": "0.021051"
+        },
+        "outputToken": {
+          "id": "0xba485b556399123261a5f9c95d413b4f93107407",
+          "name": "Gravitationally Bound AURA",
+          "symbol": "graviAURA",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "3"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x88128580acdd9c04ce47afce196875747bf2a9f6",
+        "name": "Badger Sett SushiSwap LP Token",
+        "symbol": "bSLP",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "446.58204343788803649215008",
+        "pricePerShare": "1731897986031990990",
+        "inputToken": {
+          "id": "0x9a13867048e01c663ce8ce2fe0cdae69ff9f35e3",
+          "name": "SushiSwap LP Token",
+          "symbol": "SLP",
+          "decimals": 18,
+          "lastPriceUSD": "75369485946.710432"
+        },
+        "outputToken": {
+          "id": "0x88128580acdd9c04ce47afce196875747bf2a9f6",
+          "name": "Badger Sett SushiSwap LP Token",
+          "symbol": "bSLP",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x06d756861de0724fad5b5636124e0f252d3c1404",
+        "name": "Badger Sett Balancer Aave Boosted StablePool (USD)",
+        "symbol": "bbb-a-USD",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "371.565235909900168083958733",
+        "pricePerShare": "1000000000000000000",
+        "inputToken": {
+          "id": "0x7b50775383d3d6f0215a8f290f2c9e2eebbeceb2",
+          "name": "Balancer Aave Boosted StablePool (USD)",
+          "symbol": "bb-a-USD",
+          "decimals": 18,
+          "lastPriceUSD": "1.017941"
+        },
+        "outputToken": {
+          "id": "0x06d756861de0724fad5b5636124e0f252d3c1404",
+          "name": "Badger Sett Balancer Aave Boosted StablePool (USD)",
+          "symbol": "bbb-a-USD",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "20"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0.1"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x8c76970747afd5398e958bdfada4cf0b9fca16c4",
+        "name": "Badger Sett Curve.fi hBTC/wBTC",
+        "symbol": "bhCRV",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "354.363047861657699898652032",
+        "pricePerShare": "1004531209807821365",
+        "inputToken": {
+          "id": "0xb19059ebb43466c323583928285a49f558e572fd",
+          "name": "Curve.fi hBTC/wBTC",
+          "symbol": "hCRV",
+          "decimals": 18,
+          "lastPriceUSD": "17221.711536"
+        },
+        "outputToken": {
+          "id": "0x8c76970747afd5398e958bdfada4cf0b9fca16c4",
+          "name": "Badger Sett Curve.fi hBTC/wBTC",
+          "symbol": "bhCRV",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x41466b8ec544e3192aa1aa30f65fc60fab4d52bf",
+        "name": "Badger Sett Balancer stETH Stable Pool",
+        "symbol": "bB-stETH-STABLE",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "306.262206678325497928220175",
+        "pricePerShare": "1000000000000000000",
+        "inputToken": {
+          "id": "0x32296969ef14eb0c6d29669c550d4a0449130230",
+          "name": "Balancer stETH Stable Pool",
+          "symbol": "B-stETH-STABLE",
+          "decimals": 18,
+          "lastPriceUSD": "3534.516435"
+        },
+        "outputToken": {
+          "id": "0x41466b8ec544e3192aa1aa30f65fc60fab4d52bf",
+          "name": "Badger Sett Balancer stETH Stable Pool",
+          "symbol": "bB-stETH-STABLE",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0.1"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x55912d0cf83b75c492e761932abc4db4a5cb1b17",
+        "name": "Badger Sett Curve.fi pBTC/sbtcCRV",
+        "symbol": "bpBTC/sbtcCRV",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "174.050373782056368099051584",
+        "pricePerShare": "1003877228706950340",
+        "inputToken": {
+          "id": "0xde5331ac4b3630f94853ff322b66407e0d6331e8",
+          "name": "Curve.fi pBTC/sbtcCRV",
+          "symbol": "pBTC/sbtcCRV",
+          "decimals": 18,
+          "lastPriceUSD": "34938.639248"
+        },
+        "outputToken": {
+          "id": "0x55912d0cf83b75c492e761932abc4db4a5cb1b17",
+          "name": "Badger Sett Curve.fi pBTC/sbtcCRV",
+          "symbol": "bpBTC/sbtcCRV",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xc17078fdd324cc473f8175dc5290fae5f2e84714",
+        "name": "Badger Sett Uniswap V2",
+        "symbol": "bUNI-V2",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "98.328662150828769546097902",
+        "pricePerShare": "1668239132103405592",
+        "inputToken": {
+          "id": "0xe86204c4eddd2f70ee00ead6805f917671f56c52",
+          "name": "Uniswap V2",
+          "symbol": "UNI-V2",
+          "decimals": 18,
+          "lastPriceUSD": "35527378444.651354"
+        },
+        "outputToken": {
+          "id": "0xc17078fdd324cc473f8175dc5290fae5f2e84714",
+          "name": "Badger Sett Uniswap V2",
+          "symbol": "bUNI-V2",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x371b7c451858bd88eaf392b383df8bd7b8955d5a",
+        "name": "Badger Sett 40WBTC-40DIGG-20graviAURA",
+        "symbol": "b40WBTC-40DIGG-20graviAURA",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "28.26356858996161795840375",
+        "pricePerShare": "1000000000000000000",
+        "inputToken": {
+          "id": "0x8eb6c82c3081bbbd45dcac5afa631aac53478b7c",
+          "name": "40WBTC-40DIGG-20graviAURA",
+          "symbol": "40WBTC-40DIGG-20graviAURA",
+          "decimals": 18,
+          "lastPriceUSD": "859.573255"
+        },
+        "outputToken": {
+          "id": "0x371b7c451858bd88eaf392b383df8bd7b8955d5a",
+          "name": "Badger Sett 40WBTC-40DIGG-20graviAURA",
+          "symbol": "b40WBTC-40DIGG-20graviAURA",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "20"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0.1"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x19e4d89e0cb807ea21b8cef02df5eaa99a110da5",
+        "name": "Badger Sett Curve.fi Factory USD Metapool: Magic Internet Money 3Pool",
+        "symbol": "bMIM-3LP3CRV-f",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "0.767220883297137128",
+        "pricePerShare": "1000000000000000000",
+        "inputToken": {
+          "id": "0x5a6a4d54456819380173272a5e8e9b9904bdf41b",
+          "name": "Curve.fi Factory USD Metapool: Magic Internet Money 3Pool",
+          "symbol": "MIM-3LP3CRV-f",
+          "decimals": 18,
+          "lastPriceUSD": "1"
+        },
+        "outputToken": {
+          "id": "0x19e4d89e0cb807ea21b8cef02df5eaa99a110da5",
+          "name": "Badger Sett Curve.fi Factory USD Metapool: Magic Internet Money 3Pool",
+          "symbol": "bMIM-3LP3CRV-f",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "20"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0.1"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xbe08ef12e4a553666291e9ffc24fccfd354f2dd2",
+        "name": "Badger Sett Curve.fi USD-BTC-ETH",
+        "symbol": "bcrvTricrypto",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": "1068862249696443777",
+        "inputToken": {
+          "id": "0xca3d75ac011bf5ad07a98d02f18225f9bd9a6bdf",
+          "name": "Curve.fi USD-BTC-ETH",
+          "symbol": "crvTricrypto",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xbe08ef12e4a553666291e9ffc24fccfd354f2dd2",
+          "name": "Badger Sett Curve.fi USD-BTC-ETH",
+          "symbol": "bcrvTricrypto",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "20"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0.5"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x99f39d495c6a5237f43602f3ab5f49786e46c9b0",
+        "name": "remDIGG",
+        "symbol": "remDIGG",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": "0",
+        "inputToken": {
+          "id": "0x798d1be841a82a273720ce31c822c61a67a601c3",
+          "name": "Digg",
+          "symbol": "DIGG",
+          "decimals": 9,
+          "lastPriceUSD": "194.9951540932153319593711459622549"
+        },
+        "outputToken": {
+          "id": "0x99f39d495c6a5237f43602f3ab5f49786e46c9b0",
+          "name": "remDIGG",
+          "symbol": "remDIGG",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x8a8ffec8f4a0c8c9585da95d9d97e8cd6de273de",
+        "name": "Badger Sett SushiSwap LP Token",
+        "symbol": "bSLP",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": "1000000000000000000",
+        "inputToken": {
+          "id": "0x18d98d452072ac2eb7b74ce3db723374360539f1",
+          "name": "SushiSwap LP Token",
+          "symbol": "SLP",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x8a8ffec8f4a0c8c9585da95d9d97e8cd6de273de",
+          "name": "Badger Sett SushiSwap LP Token",
+          "symbol": "bSLP",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "20"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0.5"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x6af7377b5009d7d154f36fe9e235ae1da27aea22",
+        "name": "remBADGER",
+        "symbol": "remBADGER",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": "0",
+        "inputToken": {
+          "id": "0x3472a5a71965499acd81997a54bba8d852c6e53d",
+          "name": "Badger",
+          "symbol": "BADGER",
+          "decimals": 18,
+          "lastPriceUSD": "0.387225"
+        },
+        "outputToken": {
+          "id": "0x6af7377b5009d7d154f36fe9e235ae1da27aea22",
+          "name": "remBADGER",
+          "symbol": "remBADGER",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x608b6d82eb121f3e5c0baeed32d81007b916e83c",
+        "name": "Badger Sett Digg",
+        "symbol": "bDIGG",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": "0",
+        "inputToken": {
+          "id": "0x798d1be841a82a273720ce31c822c61a67a601c3",
+          "name": "Digg",
+          "symbol": "DIGG",
+          "decimals": 9,
+          "lastPriceUSD": "194.9951540932153319593711459622549"
+        },
+        "outputToken": {
+          "id": "0x608b6d82eb121f3e5c0baeed32d81007b916e83c",
+          "name": "Badger Sett Digg",
+          "symbol": "bDIGG",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0.5"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x5dce29e92b1b939f8e8c60dcf15bde82a85be4a9",
+        "name": "Badger Sett Curve.fi bBTC/sbtcCRV",
+        "symbol": "bbBTC/sbtcCRV",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": "1002949532033046360",
+        "inputToken": {
+          "id": "0x410e3e86ef427e30b9235497143881f717d93c2a",
+          "name": "Curve.fi bBTC/sbtcCRV",
+          "symbol": "bBTC/sbtcCRV",
+          "decimals": 18,
+          "lastPriceUSD": "30879.807847"
+        },
+        "outputToken": {
+          "id": "0x5dce29e92b1b939f8e8c60dcf15bde82a85be4a9",
+          "name": "Badger Sett Curve.fi bBTC/sbtcCRV",
+          "symbol": "bbBTC/sbtcCRV",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x599d92b453c010b1050d31c364f6ee17e819f193",
+        "name": "Badger Sett Interest bearing mStable BTC",
+        "symbol": "bimBTC",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": "1004690822031769798",
+        "inputToken": {
+          "id": "0x17d8cbb6bce8cee970a4027d1198f6700a7a6c24",
+          "name": "Interest bearing mStable BTC",
+          "symbol": "imBTC",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x599d92b453c010b1050d31c364f6ee17e819f193",
+          "name": "Badger Sett Interest bearing mStable BTC",
+          "symbol": "bimBTC",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0.75"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x4b92d19c11435614cd49af1b589001b7c08cd4d5",
+        "name": "Badger WBTC yVault",
+        "symbol": "byvWBTC",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": "0",
+        "inputToken": {
+          "id": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+          "name": "Wrapped BTC",
+          "symbol": "WBTC",
+          "decimals": 8,
+          "lastPriceUSD": "55469.788106"
+        },
+        "outputToken": {
+          "id": "0x4b92d19c11435614cd49af1b589001b7c08cd4d5",
+          "name": "Badger WBTC yVault",
+          "symbol": "byvWBTC",
+          "decimals": 8
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "0"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0.5"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x37d9d2c6035b744849c15f1bfee8f268a20fcbd8",
+        "name": "Badger Sett Aura BAL",
+        "symbol": "bauraBAL",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": "1205118562500240299",
+        "inputToken": {
+          "id": "0x616e8bfa43f920657b3497dbf40d6b1a02d4608d",
+          "name": "Aura BAL",
+          "symbol": "auraBAL",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x37d9d2c6035b744849c15f1bfee8f268a20fcbd8",
+          "name": "Badger Sett Aura BAL",
+          "symbol": "bauraBAL",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x26b8efa69603537ac8ab55768b6740b67664d518",
+        "name": "Badger Sett mBTC/HBTC Feeder Pool",
+        "symbol": "bfPmBTC/HBTC",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": "1011943421990519387",
+        "inputToken": {
+          "id": "0x48c59199da51b7e30ea200a74ea07974e62c4ba7",
+          "name": "mBTC/HBTC Feeder Pool",
+          "symbol": "fPmBTC/HBTC",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x26b8efa69603537ac8ab55768b6740b67664d518",
+          "name": "Badger Sett mBTC/HBTC Feeder Pool",
+          "symbol": "bfPmBTC/HBTC",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "10"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0.75"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x15cbc4ac1e81c97667780fe6dadedd04a6eeb47b",
+        "name": "Badger Sett Curve.fi Factory USD Metapool: Frax",
+        "symbol": "bFRAX3CRV-f",
+        "depositLimit": "0",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": "1000000000000000000",
+        "inputToken": {
+          "id": "0xd632f22692fac7611d2aa1c0d552930d43caed3b",
+          "name": "Curve.fi Factory USD Metapool: Frax",
+          "symbol": "FRAX3CRV-f",
+          "decimals": 18,
+          "lastPriceUSD": "1"
+        },
+        "outputToken": {
+          "id": "0x15cbc4ac1e81c97667780fe6dadedd04a6eeb47b",
+          "name": "Badger Sett Curve.fi Factory USD Metapool: Frax",
+          "symbol": "bFRAX3CRV-f",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "20"
+          },
+          {
+            "feeType": "WITHDRAWAL_FEE",
+            "feePercentage": "0.1"
+          }
+        ],
+        "protocol": {
+          "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682",
+          "name": "Badger DAO",
+          "slug": "badger-dao",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      }
+    ],
+    "_meta": {
+      "block": {
+        "number": 25903086,
+        "timestamp": null
+      },
+      "deployment": "QmZLsxSYuBk9fEt7AWnTrwraRtNQRuHdSABcMxesQbbY2p",
+      "hasIndexingErrors": false
+    }
+  }
+}

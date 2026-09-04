@@ -1,0 +1,1021 @@
+{
+  "_ainize": {
+    "deployment_id": "GRwpFCPYyQPdz84sCnKemzrNvgFPuKkFLcRLR6jsRxHr",
+    "protocol": "goldfinch",
+    "query": "markets",
+    "query_hash": "5e7d8fe99101c576f17619117775c62006580f52977a7699da5f47be51268fc4",
+    "block": 25903086,
+    "skip": 0,
+    "first": 1000,
+    "gateway_ms": 353
+  },
+  "data": {
+    "markets": [
+      {
+        "id": "0x8481a6ebaf5c7dabc3f7e09e44a89531fd31f822",
+        "name": "Senior Pool",
+        "isActive": false,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "35601089.113174",
+        "totalDepositBalanceUSD": "35601089.113174",
+        "totalBorrowBalanceUSD": "30395624.331465",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": null
+        },
+        "outputToken": {
+          "id": "0x6a445e9f40e0b97c92d0b8a3366cef1d67f700bf",
+          "name": "Fidu",
+          "symbol": "FIDU",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "6.792243583248336062531800809557147",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "5.961947680505754418486134341245946",
+            "side": "LENDER",
+            "type": "STABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xd20508e1e971b80ee172c73517905bfffcbd87f9",
+          "name": "Goldfinch",
+          "slug": "goldfinch",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x418749e294cabce5a714efccc22a8aade6f9db57",
+        "name": "TranchedPool",
+        "isActive": false,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "10001101.283882",
+        "totalDepositBalanceUSD": "10001101.283882",
+        "totalBorrowBalanceUSD": "10001101.283786",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": null
+        },
+        "outputToken": null,
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "STABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xd20508e1e971b80ee172c73517905bfffcbd87f9",
+          "name": "Goldfinch",
+          "slug": "goldfinch",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x89d7c618a4eef3065da8ad684859a547548e6169",
+        "name": "TranchedPool",
+        "isActive": false,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "9999999.893468",
+        "totalDepositBalanceUSD": "9999999.893468",
+        "totalBorrowBalanceUSD": "9999999.893454",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": null
+        },
+        "outputToken": null,
+        "rates": [
+          {
+            "rate": "11.80445151022719395752802798948067",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "10.73131955474058028501454306005075",
+            "side": "LENDER",
+            "type": "STABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xd20508e1e971b80ee172c73517905bfffcbd87f9",
+          "name": "Goldfinch",
+          "slug": "goldfinch",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xb26b42dd5771689d0a7faeea32825ff9710b9c11",
+        "name": "TranchedPool",
+        "isActive": false,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "9476063.253429",
+        "totalDepositBalanceUSD": "9476063.253429",
+        "totalBorrowBalanceUSD": "9476063.253407",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": null
+        },
+        "outputToken": null,
+        "rates": [
+          {
+            "rate": "1.933385340522747748007462480244074",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "1.640920921270561958228334088616352",
+            "side": "LENDER",
+            "type": "STABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xd20508e1e971b80ee172c73517905bfffcbd87f9",
+          "name": "Goldfinch",
+          "slug": "goldfinch",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xd09a57127bc40d680be7cb061c2a6629fe71abef",
+        "name": "TranchedPool",
+        "isActive": false,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "9261329.915251",
+        "totalDepositBalanceUSD": "9261329.915251",
+        "totalBorrowBalanceUSD": "9261326.776286",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": null
+        },
+        "outputToken": null,
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "STABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xd20508e1e971b80ee172c73517905bfffcbd87f9",
+          "name": "Goldfinch",
+          "slug": "goldfinch",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x759f097f3153f5d62ff1c2d82ba78b6350f223e3",
+        "name": "TranchedPool",
+        "isActive": false,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "8546329.688975",
+        "totalDepositBalanceUSD": "8546329.688975",
+        "totalBorrowBalanceUSD": "8546329.688035",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": null
+        },
+        "outputToken": null,
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "STABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xd20508e1e971b80ee172c73517905bfffcbd87f9",
+          "name": "Goldfinch",
+          "slug": "goldfinch",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xe6c30756136e07eb5268c3232efbfbe645c1ba5a",
+        "name": "TranchedPool",
+        "isActive": false,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "8257690.994598",
+        "totalDepositBalanceUSD": "8257690.994598",
+        "totalBorrowBalanceUSD": "8257690.99442",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": null
+        },
+        "outputToken": null,
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "STABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xd20508e1e971b80ee172c73517905bfffcbd87f9",
+          "name": "Goldfinch",
+          "slug": "goldfinch",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xc9bdd0d3b80cc6efe79a82d850f44ec9b55387ae",
+        "name": "TranchedPool",
+        "isActive": false,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "4582993.718236",
+        "totalDepositBalanceUSD": "4582993.718236",
+        "totalBorrowBalanceUSD": "4582827.969357",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": null
+        },
+        "outputToken": null,
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "STABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xd20508e1e971b80ee172c73517905bfffcbd87f9",
+          "name": "Goldfinch",
+          "slug": "goldfinch",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x1d596d28a7923a22aa013b0e7082bba23daa656b",
+        "name": "TranchedPool",
+        "isActive": false,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "4178614.383414",
+        "totalDepositBalanceUSD": "4178614.383414",
+        "totalBorrowBalanceUSD": "4178614.383137",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": null
+        },
+        "outputToken": null,
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "STABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xd20508e1e971b80ee172c73517905bfffcbd87f9",
+          "name": "Goldfinch",
+          "slug": "goldfinch",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x00c27fc71b159a346e179b4a1608a0865e8a7470",
+        "name": "TranchedPool",
+        "isActive": false,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "3990384.78221",
+        "totalDepositBalanceUSD": "3990384.78221",
+        "totalBorrowBalanceUSD": "3990347.597396",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": null
+        },
+        "outputToken": null,
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "STABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xd20508e1e971b80ee172c73517905bfffcbd87f9",
+          "name": "Goldfinch",
+          "slug": "goldfinch",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xaa2ccc5547f64c5dffd0a624eb4af2543a67ba65",
+        "name": "TranchedPool",
+        "isActive": false,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "3813860.760645",
+        "totalDepositBalanceUSD": "3813860.760645",
+        "totalBorrowBalanceUSD": "3813860.760645",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": null
+        },
+        "outputToken": null,
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "STABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xd20508e1e971b80ee172c73517905bfffcbd87f9",
+          "name": "Goldfinch",
+          "slug": "goldfinch",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x538473c3a69da2b305cf11a40cf2f3904de8db5f",
+        "name": "TranchedPool",
+        "isActive": false,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "12670.967283",
+        "totalDepositBalanceUSD": "12670.967283",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": null
+        },
+        "outputToken": null,
+        "rates": [
+          {
+            "rate": "1.471121940428022853686008985995121",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "1.326866582973910695992503846810168",
+            "side": "LENDER",
+            "type": "STABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xd20508e1e971b80ee172c73517905bfffcbd87f9",
+          "name": "Goldfinch",
+          "slug": "goldfinch",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xefeb69edf6b6999b0e3f2fa856a2acf3bdea4ab5",
+        "name": "TranchedPool",
+        "isActive": false,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "9999.999507",
+        "totalDepositBalanceUSD": "9999.999507",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": null
+        },
+        "outputToken": null,
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "79.08987593202315907709056282750518",
+            "side": "LENDER",
+            "type": "STABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xd20508e1e971b80ee172c73517905bfffcbd87f9",
+          "name": "Goldfinch",
+          "slug": "goldfinch",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x032f7299621c3b68e5d7aceabd567b65e2284da7",
+        "name": "TranchedPool",
+        "isActive": true,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "2077",
+        "totalDepositBalanceUSD": "2077",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": null
+        },
+        "outputToken": null,
+        "rates": [
+          {
+            "rate": "16.49715972124955197480615793575234",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "12.11994353981619379348198789252081",
+            "side": "LENDER",
+            "type": "STABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xd20508e1e971b80ee172c73517905bfffcbd87f9",
+          "name": "Goldfinch",
+          "slug": "goldfinch",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xd43a4f3041069c6178b99d55295b00d0db955bb5",
+        "name": "TranchedPool",
+        "isActive": false,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "664.733235",
+        "totalDepositBalanceUSD": "664.733235",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": null
+        },
+        "outputToken": null,
+        "rates": [],
+        "protocol": {
+          "id": "0xd20508e1e971b80ee172c73517905bfffcbd87f9",
+          "name": "Goldfinch",
+          "slug": "goldfinch",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xd798d527f770ad920bb50680dbc202bb0a1dafd6",
+        "name": "TranchedPool",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.983326",
+        "totalDepositBalanceUSD": "0.983326",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": null
+        },
+        "outputToken": null,
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "STABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xd20508e1e971b80ee172c73517905bfffcbd87f9",
+          "name": "Goldfinch",
+          "slug": "goldfinch",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x2107ade0e536b8b0b85cca5e0c0c3f66e58c053c",
+        "name": "TranchedPool",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.392535",
+        "totalDepositBalanceUSD": "0.392535",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": null
+        },
+        "outputToken": null,
+        "rates": [
+          {
+            "rate": "76.25710043243931958637233709283824",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "STABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xd20508e1e971b80ee172c73517905bfffcbd87f9",
+          "name": "Goldfinch",
+          "slug": "goldfinch",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x3634855ec1beaf6f9be0f7d2f67fc9cb5f4eeea4",
+        "name": "TranchedPool",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.015971",
+        "totalDepositBalanceUSD": "0.015971",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": null
+        },
+        "outputToken": null,
+        "rates": [
+          {
+            "rate": "2693.956601378682016103618590449077",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "STABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xd20508e1e971b80ee172c73517905bfffcbd87f9",
+          "name": "Goldfinch",
+          "slug": "goldfinch",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x1cc90f7bb292dab6fa4398f3763681cfe497db97",
+        "name": "TranchedPool",
+        "isActive": false,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.00579",
+        "totalDepositBalanceUSD": "0.00579",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": null
+        },
+        "outputToken": null,
+        "rates": [
+          {
+            "rate": "0.000796227848541821780843643024741193",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "798.5901191455610684951885630924424",
+            "side": "LENDER",
+            "type": "STABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xd20508e1e971b80ee172c73517905bfffcbd87f9",
+          "name": "Goldfinch",
+          "slug": "goldfinch",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x67df471eacd82c3dbc95604618ff2a1f6b14b8a1",
+        "name": "TranchedPool",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.002958",
+        "totalDepositBalanceUSD": "0.002958",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": null
+        },
+        "outputToken": null,
+        "rates": [
+          {
+            "rate": "28.34976389091240400609363529890029",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "15.18282056902298411812984002868961",
+            "side": "LENDER",
+            "type": "STABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xd20508e1e971b80ee172c73517905bfffcbd87f9",
+          "name": "Goldfinch",
+          "slug": "goldfinch",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xc13465ce9ae3aa184eb536f04fdc3f54d2def277",
+        "name": "TranchedPool",
+        "isActive": false,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.000001",
+        "totalDepositBalanceUSD": "0.000001",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": null
+        },
+        "outputToken": null,
+        "rates": [
+          {
+            "rate": "12.44696986705811896463940765787014",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "10.07320562277711068477931713987528",
+            "side": "LENDER",
+            "type": "STABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xd20508e1e971b80ee172c73517905bfffcbd87f9",
+          "name": "Goldfinch",
+          "slug": "goldfinch",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x9e8b9182abba7b4c188c979bc8f4c79f7f4c90d3",
+        "name": "TranchedPool",
+        "isActive": false,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.000001",
+        "totalDepositBalanceUSD": "0.000001",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": null
+        },
+        "outputToken": null,
+        "rates": [
+          {
+            "rate": "3.576250126016312247588461613609343",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "3.251136478174973253065165645606618",
+            "side": "LENDER",
+            "type": "STABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xd20508e1e971b80ee172c73517905bfffcbd87f9",
+          "name": "Goldfinch",
+          "slug": "goldfinch",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xf74ea34ac88862b7ff419e60e476be2651433e68",
+        "name": "TranchedPool",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": null
+        },
+        "outputToken": null,
+        "rates": [
+          {
+            "rate": "15.63824272968120474387699756231287",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "14.53249627550984840623883425630257",
+            "side": "LENDER",
+            "type": "STABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xd20508e1e971b80ee172c73517905bfffcbd87f9",
+          "name": "Goldfinch",
+          "slug": "goldfinch",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xe32c22e4d95cae1fb805c60c9e0026ed57971bcf",
+        "name": "TranchedPool",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": null
+        },
+        "outputToken": null,
+        "rates": [
+          {
+            "rate": "21.90606564241819325844460946405819",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "14.74972694978957726137522401583856",
+            "side": "LENDER",
+            "type": "STABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xd20508e1e971b80ee172c73517905bfffcbd87f9",
+          "name": "Goldfinch",
+          "slug": "goldfinch",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x8bbd80f88e662e56b918c353da635e210ece93c6",
+        "name": "TranchedPool",
+        "isActive": false,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": null
+        },
+        "outputToken": null,
+        "rates": [
+          {
+            "rate": "9.883241970233222770089723835904805",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "11.59080324899736101550025346305615",
+            "side": "LENDER",
+            "type": "STABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xd20508e1e971b80ee172c73517905bfffcbd87f9",
+          "name": "Goldfinch",
+          "slug": "goldfinch",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x1e73b5c1a3570b362d46ae9bf429b25c05e514a7",
+        "name": "TranchedPool",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": null
+        },
+        "outputToken": null,
+        "rates": [],
+        "protocol": {
+          "id": "0xd20508e1e971b80ee172c73517905bfffcbd87f9",
+          "name": "Goldfinch",
+          "slug": "goldfinch",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      }
+    ],
+    "_meta": {
+      "block": {
+        "number": 25903086,
+        "timestamp": null
+      },
+      "deployment": "Qma4UYCL7S7cLq3yqGNWzWWDHjZM49mtiTMT1TzMMPMJo2",
+      "hasIndexingErrors": false
+    }
+  }
+}

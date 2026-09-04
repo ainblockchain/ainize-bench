@@ -1,0 +1,3225 @@
+{
+  "_ainize": {
+    "deployment_id": "43NeT7UTACLUkohKBaG7auvkhsj4Kwux9kNTJr6sFdNe",
+    "protocol": "cream-finance",
+    "query": "markets",
+    "query_hash": "5e7d8fe99101c576f17619117775c62006580f52977a7699da5f47be51268fc4",
+    "block": 25903086,
+    "skip": 0,
+    "first": 1000,
+    "gateway_ms": 399
+  },
+  "data": {
+    "markets": [
+      {
+        "id": "0xfd609a03b393f1a1cfcacedabf068cad09a924e2",
+        "name": "Cream Cream ETH 2",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "60",
+        "liquidationThreshold": "60",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xcbc1065255cbc3ab41a6868c22d1f1c573ab89fd",
+          "name": "Cream ETH 2",
+          "symbol": "CRETH2",
+          "decimals": 18,
+          "lastPriceUSD": "3343.689708645654071012"
+        },
+        "outputToken": {
+          "id": "0xfd609a03b393f1a1cfcacedabf068cad09a924e2",
+          "name": "Cream Cream ETH 2",
+          "symbol": "crCRETH2",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xf8445c529d363ce114148662387eba5e62016e20",
+        "name": "Cream Rai Reflex Index",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "45",
+        "liquidationThreshold": "45",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x03ab458634910aad20ef5f1c8ee96f1d6ac54919",
+          "name": "Rai Reflex Index",
+          "symbol": "RAI",
+          "decimals": 18,
+          "lastPriceUSD": "3.01822548093548184"
+        },
+        "outputToken": {
+          "id": "0xf8445c529d363ce114148662387eba5e62016e20",
+          "name": "Cream Rai Reflex Index",
+          "symbol": "crRAI",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xf7c5314806bb349744cf5e721f4d3395259b8531",
+        "name": "Cream Curve Iron Bank Pool yVault",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x27b7b1ad7288079a66d12350c828d3c00a6f07d7",
+          "name": "Curve Iron Bank Pool yVault",
+          "symbol": "yvCurve-IronBank",
+          "decimals": 18,
+          "lastPriceUSD": "1.106555251863712286"
+        },
+        "outputToken": {
+          "id": "0xf7c5314806bb349744cf5e721f4d3395259b8531",
+          "name": "Cream Curve Iron Bank Pool yVault",
+          "symbol": "crYVCurve-IB",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xf55bbe0255f7f4e70f63837ff72a577fbddbe924",
+        "name": "Cream BarnBridge Governance Token",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "45",
+        "liquidationThreshold": "45",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x0391d2021f89dc339f60fff84546ea23e337750f",
+          "name": "BarnBridge Governance Token",
+          "symbol": "BOND",
+          "decimals": 18,
+          "lastPriceUSD": "29.255373962426256163"
+        },
+        "outputToken": {
+          "id": "0xf55bbe0255f7f4e70f63837ff72a577fbddbe924",
+          "name": "Cream BarnBridge Governance Token",
+          "symbol": "crBOND",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xf04ce2e71d32d789a259428ddcd02d3c9f97fb4e",
+        "name": "Cream Axie Infinity Shard",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "45",
+        "liquidationThreshold": "45",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xbb0e17ef65f82ab018d8edd776e8dd940327b28b",
+          "name": "Axie Infinity Shard",
+          "symbol": "AXS",
+          "decimals": 18,
+          "lastPriceUSD": "133.338482229936774096"
+        },
+        "outputToken": {
+          "id": "0xf04ce2e71d32d789a259428ddcd02d3c9f97fb4e",
+          "name": "Cream Axie Infinity Shard",
+          "symbol": "crAXS",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xf047d4be569fb770db143a6a90ef203fc1295922",
+        "name": "Cream tBTC",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x8daebade922df735c38c80c7ebd708af50815faa",
+          "name": "tBTC",
+          "symbol": "TBTC",
+          "decimals": 18,
+          "lastPriceUSD": "55514.315306813827730197"
+        },
+        "outputToken": {
+          "id": "0xf047d4be569fb770db143a6a90ef203fc1295922",
+          "name": "Cream tBTC",
+          "symbol": "crTBTC",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xeff039c3c1d668f408d09dd7b63008622a77532c",
+        "name": "Cream Wrapped NXM",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "50",
+        "liquidationThreshold": "50",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x0d438f3b5175bebc262bf23753c1e53d03432bde",
+          "name": "Wrapped NXM",
+          "symbol": "wNXM",
+          "decimals": 18,
+          "lastPriceUSD": "55.294542382779327"
+        },
+        "outputToken": {
+          "id": "0xeff039c3c1d668f408d09dd7b63008622a77532c",
+          "name": "Cream Wrapped NXM",
+          "symbol": "crWNXM",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xef58b2d5a1b8d3cde67b8ab054dc5c831e9bc025",
+        "name": "Cream Serum",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "50",
+        "liquidationThreshold": "50",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x476c5e26a75bd202a9683ffd34359c0cc15be0ff",
+          "name": "Serum",
+          "symbol": "SRM",
+          "decimals": 6,
+          "lastPriceUSD": "7.669195449888"
+        },
+        "outputToken": {
+          "id": "0xef58b2d5a1b8d3cde67b8ab054dc5c831e9bc025",
+          "name": "Cream Serum",
+          "symbol": "crSRM",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xe89a6d0509faf730bd707bf868d9a2a744a363c7",
+        "name": "Cream Uniswap",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "65",
+        "liquidationThreshold": "65",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+          "name": "Uniswap",
+          "symbol": "UNI",
+          "decimals": 18,
+          "lastPriceUSD": "26.44720465335206288"
+        },
+        "outputToken": {
+          "id": "0xe89a6d0509faf730bd707bf868d9a2a744a363c7",
+          "name": "Cream Uniswap",
+          "symbol": "crUNI",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xe6c3120f38f56deb38b69b65cc7dcaf916373963",
+        "name": "Cream Uniswap V2 ETH-USDT",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "70",
+        "liquidationThreshold": "70",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x0d4a11d5eeaac28ec3f61d100daf4d40471f1852",
+          "name": "Uniswap V2",
+          "symbol": "UNI-V2",
+          "decimals": 18,
+          "lastPriceUSD": "208414120.182830181396314457"
+        },
+        "outputToken": {
+          "id": "0xe6c3120f38f56deb38b69b65cc7dcaf916373963",
+          "name": "Cream Uniswap V2 ETH-USDT",
+          "symbol": "crUNI-V2-ETH-USDT",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xe585c76573d7593abf21537b607091f76c996e73",
+        "name": "Cream Wootrade Network",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "25",
+        "liquidationThreshold": "25",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x4691937a7508860f876c9c0a2a617e7d9e945d4b",
+          "name": "Wootrade Network",
+          "symbol": "WOO",
+          "decimals": 18,
+          "lastPriceUSD": "1.080709506409732318"
+        },
+        "outputToken": {
+          "id": "0xe585c76573d7593abf21537b607091f76c996e73",
+          "name": "Cream Wootrade Network",
+          "symbol": "crWOO",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xdfff11dfe6436e42a17b86e7f419ac8292990393",
+        "name": "Cream Armor NXM",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x1337def18c680af1f9f45cbcab6309562975b1dd",
+          "name": "Armor NXM",
+          "symbol": "arNXM",
+          "decimals": 18,
+          "lastPriceUSD": "60.477727057640454362"
+        },
+        "outputToken": {
+          "id": "0xdfff11dfe6436e42a17b86e7f419ac8292990393",
+          "name": "Cream Armor NXM",
+          "symbol": "crARNXM",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xdbb5e3081def4b6cdd8864ac2aeda4cbf778fecf",
+        "name": "Cream Melon Token",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "25",
+        "liquidationThreshold": "25",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xec67005c4e498ec7f55e092bd1d35cbc47c91892",
+          "name": "Melon Token",
+          "symbol": "MLN",
+          "decimals": 18,
+          "lastPriceUSD": "140.265695397639042467"
+        },
+        "outputToken": {
+          "id": "0xdbb5e3081def4b6cdd8864ac2aeda4cbf778fecf",
+          "name": "Cream Melon Token",
+          "symbol": "crMLN",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xd7394428536f63d5659cc869ef69d10f9e66314b",
+        "name": "Cream Paxos Standard",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "75",
+        "liquidationThreshold": "75",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x8e870d67f660d95d5be530380d0ec0bd388289e1",
+          "name": "Paxos Standard",
+          "symbol": "PAX",
+          "decimals": 18,
+          "lastPriceUSD": "0.998377866120353677"
+        },
+        "outputToken": {
+          "id": "0xd7394428536f63d5659cc869ef69d10f9e66314b",
+          "name": "Cream Paxos Standard",
+          "symbol": "crPAX",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xd692ac3245bb82319a31068d6b8412796ee85d2c",
+        "name": "Cream HUSD",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xdf574c24545e5ffecb9a659c229253d4111d87e1",
+          "name": "HUSD",
+          "symbol": "HUSD",
+          "decimals": 8,
+          "lastPriceUSD": "1.00219027347332068519488"
+        },
+        "outputToken": {
+          "id": "0xd692ac3245bb82319a31068d6b8412796ee85d2c",
+          "name": "Cream HUSD",
+          "symbol": "crHUSD",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xd532944df6dfd5dd629e8772f03d4fc861873abf",
+        "name": "Cream SushiSwap LP Token YFI-ETH",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "60",
+        "liquidationThreshold": "60",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x088ee5007c98a9677165d78dd2109ae4a3d04d0c",
+          "name": "SushiSwap LP Token",
+          "symbol": "SLP",
+          "decimals": 18,
+          "lastPriceUSD": "41984.024227946114792253"
+        },
+        "outputToken": {
+          "id": "0xd532944df6dfd5dd629e8772f03d4fc861873abf",
+          "name": "Cream SushiSwap LP Token YFI-ETH",
+          "symbol": "crSLP-YFI-ETH",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xd5103afcd0b3fa865997ef2984c66742c51b2a8b",
+        "name": "Cream Huobi FIL",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x9afb950948c2370975fb91a441f36fdc02737cd4",
+          "name": "Huobi FIL",
+          "symbol": "HFIL",
+          "decimals": 18,
+          "lastPriceUSD": "48.84109668026725906"
+        },
+        "outputToken": {
+          "id": "0xd5103afcd0b3fa865997ef2984c66742c51b2a8b",
+          "name": "Cream Huobi FIL",
+          "symbol": "crHFIL",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xd37295796c8b885783bd0a4a6c890e3ddeae6705",
+        "name": "Cream Magic Internet Money",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "75",
+        "liquidationThreshold": "75",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3",
+          "name": "Magic Internet Money",
+          "symbol": "MIM",
+          "decimals": 18,
+          "lastPriceUSD": "1.009015269739313442"
+        },
+        "outputToken": {
+          "id": "0xd37295796c8b885783bd0a4a6c890e3ddeae6705",
+          "name": "Cream Magic Internet Money",
+          "symbol": "crMIM",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xd06527d5e56a3495252a528c4987003b712860ee",
+        "name": "Cream Ether",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "75",
+        "liquidationThreshold": "75",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+          "name": "Ether",
+          "symbol": "ETH",
+          "decimals": 18,
+          "lastPriceUSD": "4183.141974"
+        },
+        "outputToken": {
+          "id": "0xd06527d5e56a3495252a528c4987003b712860ee",
+          "name": "Cream Ether",
+          "symbol": "crETH",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xce4fe9b4b8ff61949dcfeb7e03bc9faca59d2eb3",
+        "name": "Cream Balancer",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "60",
+        "liquidationThreshold": "60",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xba100000625a3754423978a60c9317c58a424e3d",
+          "name": "Balancer",
+          "symbol": "BAL",
+          "decimals": 18,
+          "lastPriceUSD": "22.982643013521"
+        },
+        "outputToken": {
+          "id": "0xce4fe9b4b8ff61949dcfeb7e03bc9faca59d2eb3",
+          "name": "Cream Balancer",
+          "symbol": "crBAL",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xcd22c4110c12ac41acefa0091c432ef44efaafa0",
+        "name": "Cream Uniswap V2 DAI-ETH",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "75",
+        "liquidationThreshold": "75",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xa478c2975ab1ea89e8196811f51a7b7ade33eb11",
+          "name": "Uniswap V2",
+          "symbol": "UNI-V2",
+          "decimals": 18,
+          "lastPriceUSD": "181.364471886883345592"
+        },
+        "outputToken": {
+          "id": "0xcd22c4110c12ac41acefa0091c432ef44efaafa0",
+          "name": "Cream Uniswap V2 DAI-ETH",
+          "symbol": "crUNI-V2-DAI-ETH",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xcbae0a83f4f9926997c8339545fb8ee32edc6b76",
+        "name": "Cream YFI",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "75",
+        "liquidationThreshold": "75",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e",
+          "name": "yearn.finance",
+          "symbol": "YFI",
+          "decimals": 18,
+          "lastPriceUSD": "34611.040454237325"
+        },
+        "outputToken": {
+          "id": "0xcbae0a83f4f9926997c8339545fb8ee32edc6b76",
+          "name": "Cream YFI",
+          "symbol": "crYFI",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xc7fd8dcee4697ceef5a2fd4608a7bd6a94c77480",
+        "name": "Cream CRV",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "60",
+        "liquidationThreshold": "60",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+          "name": "Curve DAO Token",
+          "symbol": "CRV",
+          "decimals": 18,
+          "lastPriceUSD": "4.866539164884594106"
+        },
+        "outputToken": {
+          "id": "0xc7fd8dcee4697ceef5a2fd4608a7bd6a94c77480",
+          "name": "Cream CRV",
+          "symbol": "crCRV",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xc68251421edda00a10815e273fa4b1191fac651b",
+        "name": "Cream PickleToken",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "45",
+        "liquidationThreshold": "45",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x429881672b9ae42b8eba0e26cd9c73711b891ca5",
+          "name": "PickleToken",
+          "symbol": "PICKLE",
+          "decimals": 18,
+          "lastPriceUSD": "10.82278402002171"
+        },
+        "outputToken": {
+          "id": "0xc68251421edda00a10815e273fa4b1191fac651b",
+          "name": "Cream PickleToken",
+          "symbol": "crPICKLE",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xc36080892c64821fa8e396bc1bd8678fa3b82b17",
+        "name": "Cream Fantom Token",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "25",
+        "liquidationThreshold": "25",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x4e15361fd6b4bb609fa63c81a2be19d873717870",
+          "name": "Fantom Token",
+          "symbol": "FTM",
+          "decimals": 18,
+          "lastPriceUSD": "3.3906279"
+        },
+        "outputToken": {
+          "id": "0xc36080892c64821fa8e396bc1bd8678fa3b82b17",
+          "name": "Cream Fantom Token",
+          "symbol": "crFTM",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xc25eae724f189ba9030b2556a1533e7c8a732e14",
+        "name": "Cream Synthetix Network Token",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "45",
+        "liquidationThreshold": "45",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f",
+          "name": "Synthetix Network Token",
+          "symbol": "SNX",
+          "decimals": 18,
+          "lastPriceUSD": "10.181172039412509"
+        },
+        "outputToken": {
+          "id": "0xc25eae724f189ba9030b2556a1533e7c8a732e14",
+          "name": "Cream Synthetix Network Token",
+          "symbol": "crSNX",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xb092b4601850e23903a42eacbc9d8a0eec26a4d5",
+        "name": "Cream Frax",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "60",
+        "liquidationThreshold": "60",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x853d955acef822db058eb8505911ed77f175b99e",
+          "name": "Frax",
+          "symbol": "FRAX",
+          "decimals": 18,
+          "lastPriceUSD": "0.99083972778806888"
+        },
+        "outputToken": {
+          "id": "0xb092b4601850e23903a42eacbc9d8a0eec26a4d5",
+          "name": "Cream Frax",
+          "symbol": "crFRAX",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xab10586c918612ba440482db77549d26b7abf8f7",
+        "name": "Cream Armor",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x1337def16f9b486faed0293eb623dc8395dfe46a",
+          "name": "Armor",
+          "symbol": "ARMOR",
+          "decimals": 18,
+          "lastPriceUSD": "0.1171685339106"
+        },
+        "outputToken": {
+          "id": "0xab10586c918612ba440482db77549d26b7abf8f7",
+          "name": "Cream Armor",
+          "symbol": "crARMOR",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0xa87e8e61dfac8af5944d353cd26b96b20d5f4d01",
+        "name": "Cream eCRV yVault",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x986b4aff588a109c09b50a03f42e4110e29d353f",
+          "name": "Curve sETH Pool yVault",
+          "symbol": "yvCurve-sETH",
+          "decimals": 18,
+          "lastPriceUSD": "7343.534795886126950413"
+        },
+        "outputToken": {
+          "id": "0xa87e8e61dfac8af5944d353cd26b96b20d5f4d01",
+          "name": "Cream eCRV yVault",
+          "symbol": "crYVECRV",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x9baf8a5236d44ac410c0186fe39178d5aad0bb87",
+        "name": "Cream yCRV",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "75",
+        "liquidationThreshold": "75",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xdf5e0e81dff6faf3a7e52ba697820c5e32d806a8",
+          "name": "Curve.fi yDAI/yUSDC/yUSDT/yTUSD",
+          "symbol": "yDAI+yUSDC+yUSDT+yTUSD",
+          "decimals": 18,
+          "lastPriceUSD": "1.119702590205900513"
+        },
+        "outputToken": {
+          "id": "0x9baf8a5236d44ac410c0186fe39178d5aad0bb87",
+          "name": "Cream yCRV",
+          "symbol": "crYCRV",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x98e329eb5aae2125af273102f3440de19094b77c",
+        "name": "Cream TrustSwap Token",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "25",
+        "liquidationThreshold": "25",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xcc4304a31d09258b0029ea7fe63d032f52e44efe",
+          "name": "TrustSwap Token",
+          "symbol": "SWAP",
+          "decimals": 18,
+          "lastPriceUSD": "1.157688773484958"
+        },
+        "outputToken": {
+          "id": "0x98e329eb5aae2125af273102f3440de19094b77c",
+          "name": "Cream TrustSwap Token",
+          "symbol": "crSWAP",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x92b767185fb3b04f881e3ac8e5b0662a027a1d9f",
+        "name": "Cream Dai Stablecoin",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "75",
+        "liquidationThreshold": "75",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x6b175474e89094c44da98b954eedeac495271d0f",
+          "name": "Dai Stablecoin",
+          "symbol": "DAI",
+          "decimals": 18,
+          "lastPriceUSD": "1.002883154295129381"
+        },
+        "outputToken": {
+          "id": "0x92b767185fb3b04f881e3ac8e5b0662a027a1d9f",
+          "name": "Cream Dai Stablecoin",
+          "symbol": "crDAI",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x903560b1cce601794c584f58898da8a8b789fc5d",
+        "name": "Cream Keep3rV1",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "45",
+        "liquidationThreshold": "45",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x1ceb5cb57c4d4e2b2433641b95dd330a33185a44",
+          "name": "Keep3rV1",
+          "symbol": "KP3R",
+          "decimals": 18,
+          "lastPriceUSD": "422.97973767550445"
+        },
+        "outputToken": {
+          "id": "0x903560b1cce601794c584f58898da8a8b789fc5d",
+          "name": "Cream Keep3rV1",
+          "symbol": "crKP3R",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x8c3b7a4320ba70f8239f83770c4015b5bc4e6f91",
+        "name": "Cream Fei USD",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "25",
+        "liquidationThreshold": "25",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x956f47f50a910163d8bf957cf5846d573e7f87ca",
+          "name": "Fei USD",
+          "symbol": "FEI",
+          "decimals": 18,
+          "lastPriceUSD": "0.989916801354208438"
+        },
+        "outputToken": {
+          "id": "0x8c3b7a4320ba70f8239f83770c4015b5bc4e6f91",
+          "name": "Cream Fei USD",
+          "symbol": "crFEI",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x8b950f43fcac4931d408f1fcda55c6cb6cbf3096",
+        "name": "Cream Badger Sett Badger",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "60",
+        "liquidationThreshold": "60",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "name": "Badger Sett Badger",
+          "symbol": "bBADGER",
+          "decimals": 18,
+          "lastPriceUSD": "37.62546575027298179"
+        },
+        "outputToken": {
+          "id": "0x8b950f43fcac4931d408f1fcda55c6cb6cbf3096",
+          "name": "Cream Badger Sett Badger",
+          "symbol": "crBBADGER",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x8b86e0598616a8d4f1fdae8b59e55fb5bc33d0d6",
+        "name": "Cream EthLend Token",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x80fb784b7ed66730e8b1dbd9820afd29931aab03",
+          "name": "EthLend Token",
+          "symbol": "LEND",
+          "decimals": 18,
+          "lastPriceUSD": "3.132403789625361675"
+        },
+        "outputToken": {
+          "id": "0x8b86e0598616a8d4f1fdae8b59e55fb5bc33d0d6",
+          "name": "Cream EthLend Token",
+          "symbol": "crLEND",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x8b3ff1ed4f36c2c2be675afb13cc3aa5d73685a5",
+        "name": "Cream Celsius",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "45",
+        "liquidationThreshold": "45",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xaaaebe6fe48e54f431b0c390cfaf0b017d09d42d",
+          "name": "Celsius",
+          "symbol": "CEL",
+          "decimals": 4,
+          "lastPriceUSD": "4.9327448126241432"
+        },
+        "outputToken": {
+          "id": "0x8b3ff1ed4f36c2c2be675afb13cc3aa5d73685a5",
+          "name": "Cream Celsius",
+          "symbol": "crCEL",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x89e42987c39f72e2ead95a8a5bc92114323d5828",
+        "name": "Cream SAND",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "45",
+        "liquidationThreshold": "45",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x3845badade8e6dff049820680d1f14bd3903a5d0",
+          "name": "SAND",
+          "symbol": "SAND",
+          "decimals": 18,
+          "lastPriceUSD": "0.803015303051781275"
+        },
+        "outputToken": {
+          "id": "0x89e42987c39f72e2ead95a8a5bc92114323d5828",
+          "name": "Cream SAND",
+          "symbol": "crSAND",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x892b14321a4fcba80669ae30bd0cd99a7ecf6ac0",
+        "name": "Cream Cream",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "75",
+        "liquidationThreshold": "75",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x2ba592f78db6436527729929aaf6c908497cb200",
+          "name": "Cream",
+          "symbol": "CREAM",
+          "decimals": 18,
+          "lastPriceUSD": "155.512798250155706805"
+        },
+        "outputToken": {
+          "id": "0x892b14321a4fcba80669ae30bd0cd99a7ecf6ac0",
+          "name": "Cream Cream",
+          "symbol": "crCREAM",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x85759961b116f1d36fd697855c57a6ae40793d9b",
+        "name": "Cream 1INCH Token",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "45",
+        "liquidationThreshold": "45",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x111111111117dc0aa78b770fa6a738034120c302",
+          "name": "1INCH Token",
+          "symbol": "1INCH",
+          "decimals": 18,
+          "lastPriceUSD": "6.040708424176505684"
+        },
+        "outputToken": {
+          "id": "0x85759961b116f1d36fd697855c57a6ae40793d9b",
+          "name": "Cream 1INCH Token",
+          "symbol": "cr1INCH",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x8379baa817c5c5ab929b03ee8e3c48e45018ae41",
+        "name": "Cream THORChain ETH.RUNE",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "60",
+        "liquidationThreshold": "60",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x3155ba85d5f96b2d030a4966af206230e46849cb",
+          "name": "THORChain ETH.RUNE",
+          "symbol": "RUNE",
+          "decimals": 18,
+          "lastPriceUSD": "12.754213207211696"
+        },
+        "outputToken": {
+          "id": "0x8379baa817c5c5ab929b03ee8e3c48e45018ae41",
+          "name": "Cream THORChain ETH.RUNE",
+          "symbol": "crRUNE",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x81e346729723c4d15d0fb1c5679b9f2926ff13c6",
+        "name": "Cream Bancor Network Token",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "40",
+        "liquidationThreshold": "40",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c",
+          "name": "Bancor Network Token",
+          "symbol": "BNT",
+          "decimals": 18,
+          "lastPriceUSD": "4.312912110742068605"
+        },
+        "outputToken": {
+          "id": "0x81e346729723c4d15d0fb1c5679b9f2926ff13c6",
+          "name": "Cream Bancor Network Token",
+          "symbol": "crBNT",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x7ea9c63e216d5565c3940a2b3d150e59c2907db3",
+        "name": "Cream Binance Wrapped BTC",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "45",
+        "liquidationThreshold": "45",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x9be89d2a4cd102d8fecc6bf9da793be995c22541",
+          "name": "Binance Wrapped BTC",
+          "symbol": "BBTC",
+          "decimals": 8,
+          "lastPriceUSD": "32655.03652448384838305598"
+        },
+        "outputToken": {
+          "id": "0x7ea9c63e216d5565c3940a2b3d150e59c2907db3",
+          "name": "Cream Binance Wrapped BTC",
+          "symbol": "crBBTC",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x7c3297cfb4c4bbd5f44b450c0872e0ada5203112",
+        "name": "Cream Ocean Token",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "45",
+        "liquidationThreshold": "45",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x967da4048cd07ab37855c090aaf366e4ce1b9f48",
+          "name": "Ocean Token",
+          "symbol": "OCEAN",
+          "decimals": 18,
+          "lastPriceUSD": "0.8963896080316896"
+        },
+        "outputToken": {
+          "id": "0x7c3297cfb4c4bbd5f44b450c0872e0ada5203112",
+          "name": "Cream Ocean Token",
+          "symbol": "crOCEAN",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x7aaa323d7e398be4128c7042d197a2545f0f1fea",
+        "name": "Cream OMGToken",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "45",
+        "liquidationThreshold": "45",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xd26114cd6ee289accf82350c8d8487fedb8a0c07",
+          "name": "OMGToken",
+          "symbol": "OMG",
+          "decimals": 18,
+          "lastPriceUSD": "12.87914502530985"
+        },
+        "outputToken": {
+          "id": "0x7aaa323d7e398be4128c7042d197a2545f0f1fea",
+          "name": "Cream OMGToken",
+          "symbol": "crOMG",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x797aab1ce7c01eb727ab980762ba88e7133d2157",
+        "name": "Cream USDT",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "75",
+        "liquidationThreshold": "75",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+          "name": "Tether USD",
+          "symbol": "USDT",
+          "decimals": 6,
+          "lastPriceUSD": "1.00345794483254174454573"
+        },
+        "outputToken": {
+          "id": "0x797aab1ce7c01eb727ab980762ba88e7133d2157",
+          "name": "Cream USDT",
+          "symbol": "crUSDT",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x766175eac1a99c969ddd1ebdbe7e270d508d8fff",
+        "name": "Cream Euro Tether",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "60",
+        "liquidationThreshold": "60",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xc581b735a1688071a1746c968e0798d642ede491",
+          "name": "Euro Tether",
+          "symbol": "EURT",
+          "decimals": 6,
+          "lastPriceUSD": "1.1543638151143412551468"
+        },
+        "outputToken": {
+          "id": "0x766175eac1a99c969ddd1ebdbe7e270d508d8fff",
+          "name": "Cream Euro Tether",
+          "symbol": "crEURT",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x73f6cba38922960b7092175c0add22ab8d0e81fc",
+        "name": "Cream SushiSwap LP Token WBTC-ETH",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "75",
+        "liquidationThreshold": "75",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xceff51756c56ceffca006cd410b03ffc46dd3a58",
+          "name": "SushiSwap LP Token",
+          "symbol": "SLP",
+          "decimals": 18,
+          "lastPriceUSD": "38614973191.618185537789513168"
+        },
+        "outputToken": {
+          "id": "0x73f6cba38922960b7092175c0add22ab8d0e81fc",
+          "name": "Cream SushiSwap LP Token WBTC-ETH",
+          "symbol": "crSLP-WBTC-ETH",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x71cefcd324b732d4e058afacba040d908c441847",
+        "name": "Cream VesperToken",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "25",
+        "liquidationThreshold": "25",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x1b40183efb4dd766f11bda7a7c3ad8982e998421",
+          "name": "VesperToken",
+          "symbol": "VSP",
+          "decimals": 18,
+          "lastPriceUSD": "6.82705429421"
+        },
+        "outputToken": {
+          "id": "0x71cefcd324b732d4e058afacba040d908c441847",
+          "name": "Cream VesperToken",
+          "symbol": "crVSP",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x6d1b9e01af17dd08d6dec08e210dfd5984ff1c20",
+        "name": "Cream yvCurve-sETH",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "60",
+        "liquidationThreshold": "60",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x986b4aff588a109c09b50a03f42e4110e29d353f",
+          "name": "Curve sETH Pool yVault",
+          "symbol": "yvCurve-sETH",
+          "decimals": 18,
+          "lastPriceUSD": "7343.534795886126950413"
+        },
+        "outputToken": {
+          "id": "0x6d1b9e01af17dd08d6dec08e210dfd5984ff1c20",
+          "name": "Cream yvCurve-sETH",
+          "symbol": "crYVCurve-sETH",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x6ba0c66c48641e220cf78177c144323b3838d375",
+        "name": "Cream SushiSwap LP Token SUSHI-ETH",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "75",
+        "liquidationThreshold": "75",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x795065dcc9f64b5614c407a6efdc400da6221fb0",
+          "name": "SushiSwap LP Token",
+          "symbol": "SLP",
+          "decimals": 18,
+          "lastPriceUSD": "496.37524795511119013"
+        },
+        "outputToken": {
+          "id": "0x6ba0c66c48641e220cf78177c144323b3838d375",
+          "name": "Cream SushiSwap LP Token SUSHI-ETH",
+          "symbol": "crSLP-SUSHI-ETH",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x697256caa3ccafd62bb6d3aa1c7c5671786a5fd9",
+        "name": "Cream ChainLink Token",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "60",
+        "liquidationThreshold": "60",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x514910771af9ca656af840dff83e8264ecf986ca",
+          "name": "ChainLink Token",
+          "symbol": "LINK",
+          "decimals": 18,
+          "lastPriceUSD": "31.166680710342260255"
+        },
+        "outputToken": {
+          "id": "0x697256caa3ccafd62bb6d3aa1c7c5671786a5fd9",
+          "name": "Cream ChainLink Token",
+          "symbol": "crLINK",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x65883978ada0e707c3b2be2a6825b1c4bdf76a90",
+        "name": "Cream Akropolis",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "25",
+        "liquidationThreshold": "25",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x8ab7404063ec4dbcfd4598215992dc3f8ec853d7",
+          "name": "Akropolis",
+          "symbol": "AKRO",
+          "decimals": 18,
+          "lastPriceUSD": "0.023742817492435618"
+        },
+        "outputToken": {
+          "id": "0x65883978ada0e707c3b2be2a6825b1c4bdf76a90",
+          "name": "Cream Akropolis",
+          "symbol": "crAKRO",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x5ecad8a75216cea7dff978525b2d523a251eea92",
+        "name": "Cream SushiSwap LP Token USDC-ETH",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "75",
+        "liquidationThreshold": "75",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x397ff1542f962076d0bfe58ea045ffa2d347aca0",
+          "name": "SushiSwap LP Token",
+          "symbol": "SLP",
+          "decimals": 18,
+          "lastPriceUSD": "120074153.234177485255563716"
+        },
+        "outputToken": {
+          "id": "0x5ecad8a75216cea7dff978525b2d523a251eea92",
+          "name": "Cream SushiSwap LP Token USDC-ETH",
+          "symbol": "crSLP-USDC-ETH",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x5c291bc83d15f71fb37805878161718ea4b6aee9",
+        "name": "Cream SushiSwap LP Token ETH-USDT",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "70",
+        "liquidationThreshold": "70",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x06da0fd433c1a5d7a4faa01111c044910a184553",
+          "name": "SushiSwap LP Token",
+          "symbol": "SLP",
+          "decimals": 18,
+          "lastPriceUSD": "171722818.67700867823691069"
+        },
+        "outputToken": {
+          "id": "0x5c291bc83d15f71fb37805878161718ea4b6aee9",
+          "name": "Cream SushiSwap LP Token ETH-USDT",
+          "symbol": "crSLP-ETH-USDT",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x59089279987dd76fc65bf94cb40e186b96e03cb3",
+        "name": "Cream OriginToken",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "45",
+        "liquidationThreshold": "45",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x8207c1ffc5b6804f6024322ccf34f29c3541ae26",
+          "name": "OriginToken",
+          "symbol": "OGN",
+          "decimals": 18,
+          "lastPriceUSD": "0.8126486541745"
+        },
+        "outputToken": {
+          "id": "0x59089279987dd76fc65bf94cb40e186b96e03cb3",
+          "name": "Cream OriginToken",
+          "symbol": "crOGN",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x58da9c9fc3eb30abbcbbab5ddabb1e6e2ef3d2ef",
+        "name": "Cream Decentraland MANA",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "45",
+        "liquidationThreshold": "45",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x0f5d2fb29fb7d3cfee444a200298f468908cc942",
+          "name": "Decentraland MANA",
+          "symbol": "MANA",
+          "decimals": 18,
+          "lastPriceUSD": "0.673859809175861086"
+        },
+        "outputToken": {
+          "id": "0x58da9c9fc3eb30abbcbbab5ddabb1e6e2ef3d2ef",
+          "name": "Cream Decentraland MANA",
+          "symbol": "crMANA",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x523effc8bfefc2948211a05a905f761cba5e8e9e",
+        "name": "Cream Gnosis Token",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "25",
+        "liquidationThreshold": "25",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x6810e776880c02933d47db1b9fc05908e5386b96",
+          "name": "Gnosis Token",
+          "symbol": "GNO",
+          "decimals": 18,
+          "lastPriceUSD": "399.96626474025"
+        },
+        "outputToken": {
+          "id": "0x523effc8bfefc2948211a05a905f761cba5e8e9e",
+          "name": "Cream Gnosis Token",
+          "symbol": "crGNO",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x51f48b638f82e8765f7a26373a2cb4ccb10c07af",
+        "name": "Cream Wrapped UST Token",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "45",
+        "liquidationThreshold": "45",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xa47c8bf37f92abed4a126bda807a7b7498661acd",
+          "name": "Wrapped UST Token",
+          "symbol": "UST",
+          "decimals": 18,
+          "lastPriceUSD": "1.00568093621626572"
+        },
+        "outputToken": {
+          "id": "0x51f48b638f82e8765f7a26373a2cb4ccb10c07af",
+          "name": "Cream Wrapped UST Token",
+          "symbol": "crUST",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x4fe11bc316b6d7a345493127fbe298b95adaad85",
+        "name": "Cream Uniswap V2 USDC-ETH",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "75",
+        "liquidationThreshold": "75",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xb4e16d0168e52d35cacd2c6185b44281ec28c9dc",
+          "name": "Uniswap V2",
+          "symbol": "UNI-V2",
+          "decimals": 18,
+          "lastPriceUSD": "217991213.127830354839444201"
+        },
+        "outputToken": {
+          "id": "0x4fe11bc316b6d7a345493127fbe298b95adaad85",
+          "name": "Cream Uniswap V2 USDC-ETH",
+          "symbol": "crUNI-V2-USDC-ETH",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x4ee15f44c6f0d8d1136c83efd2e8e4ac768954c6",
+        "name": "Cream yyCRV",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "75",
+        "liquidationThreshold": "75",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x5dbcf33d8c2e976c6b560249878e6f1491bca25c",
+          "name": "yearn Curve.fi yDAI/yUSDC/yUSDT/yTUSD",
+          "symbol": "yyDAI+yUSDC+yUSDT+yTUSD",
+          "decimals": 18,
+          "lastPriceUSD": "1.311887227996036691"
+        },
+        "outputToken": {
+          "id": "0x4ee15f44c6f0d8d1136c83efd2e8e4ac768954c6",
+          "name": "Cream yyCRV",
+          "symbol": "crYYCRV",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x4baa77013ccd6705ab0522853cb0e9d453579dd4",
+        "name": "Cream yUSD",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "75",
+        "liquidationThreshold": "75",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x4b5bfd52124784745c1071dcb244c6688d2533d3",
+          "name": "Curve Y Pool yVault",
+          "symbol": "yUSD",
+          "decimals": 18,
+          "lastPriceUSD": "1.113087199779541369"
+        },
+        "outputToken": {
+          "id": "0x4baa77013ccd6705ab0522853cb0e9d453579dd4",
+          "name": "Cream yUSD",
+          "symbol": "crYUSD",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x460ea730d204c822ce709f00a8e5959921715adc",
+        "name": "Cream Basis Cash",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x3449fc1cd036255ba1eb19d65ff4ba2b8903a69a",
+          "name": "BAC",
+          "symbol": "BAC",
+          "decimals": 18,
+          "lastPriceUSD": "0.46849780131462"
+        },
+        "outputToken": {
+          "id": "0x460ea730d204c822ce709f00a8e5959921715adc",
+          "name": "Cream Basis Cash",
+          "symbol": "crBAC",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x45406ba53bb84cd32a58e7098a2d4d1b11b107f6",
+        "name": "Cream yvCurve-IronBank",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "75",
+        "liquidationThreshold": "75",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x27b7b1ad7288079a66d12350c828d3c00a6f07d7",
+          "name": "Curve Iron Bank Pool yVault",
+          "symbol": "yvCurve-IronBank",
+          "decimals": 18,
+          "lastPriceUSD": "1.106555251863712286"
+        },
+        "outputToken": {
+          "id": "0x45406ba53bb84cd32a58e7098a2d4d1b11b107f6",
+          "name": "Cream yvCurve-IronBank",
+          "symbol": "crYVCurve-IronBank",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x44fbebd2f576670a6c33f6fc0b00aa8c5753b322",
+        "name": "Cream USD Coin",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "75",
+        "liquidationThreshold": "75",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD//C",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": "1.0046618618638658864748"
+        },
+        "outputToken": {
+          "id": "0x44fbebd2f576670a6c33f6fc0b00aa8c5753b322",
+          "name": "Cream USD Coin",
+          "symbol": "crUSDC",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x4202d97e00b9189936edf37f8d01cff88bdd81d4",
+        "name": "Cream yvWETH",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "75",
+        "liquidationThreshold": "75",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xa9fe4601811213c340e850ea305481aff02f5b28",
+          "name": "WETH yVault",
+          "symbol": "yvWETH",
+          "decimals": 18,
+          "lastPriceUSD": "2013.982637410238207438"
+        },
+        "outputToken": {
+          "id": "0x4202d97e00b9189936edf37f8d01cff88bdd81d4",
+          "name": "Cream yvWETH",
+          "symbol": "crYVWETH",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x4112a717edd051f77d834a6703a1ef5e3d73387f",
+        "name": "Cream Yield Guild Games Token",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "45",
+        "liquidationThreshold": "45",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x25f8087ead173b73d6e8b84329989a8eea16cf73",
+          "name": "Yield Guild Games Token",
+          "symbol": "YGG",
+          "decimals": 18,
+          "lastPriceUSD": "6.662879912702608673"
+        },
+        "outputToken": {
+          "id": "0x4112a717edd051f77d834a6703a1ef5e3d73387f",
+          "name": "Cream Yield Guild Games Token",
+          "symbol": "crYGG",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x3c6c553a95910f9fc81c98784736bd628636d296",
+        "name": "Cream Empty Set Dollar",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "60",
+        "liquidationThreshold": "60",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x36f3fd68e7325a35eb768f1aedaae9ea0689d723",
+          "name": "Empty Set Dollar",
+          "symbol": "ESD",
+          "decimals": 18,
+          "lastPriceUSD": "0.025368753450826891"
+        },
+        "outputToken": {
+          "id": "0x3c6c553a95910f9fc81c98784736bd628636d296",
+          "name": "Cream Empty Set Dollar",
+          "symbol": "crESD",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x38f27c03d6609a86ff7716ad03038881320be4ad",
+        "name": "Cream SushiSwap LP Token DAI-ETH",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "75",
+        "liquidationThreshold": "75",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xc3d03e4f041fd4cd388c549ee2a29a9e5075882f",
+          "name": "SushiSwap LP Token",
+          "symbol": "SLP",
+          "decimals": 18,
+          "lastPriceUSD": "141.989373370885429379"
+        },
+        "outputToken": {
+          "id": "0x38f27c03d6609a86ff7716ad03038881320be4ad",
+          "name": "Cream SushiSwap LP Token DAI-ETH",
+          "symbol": "crSLP-DAI-ETH",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x3623387773010d9214b10c551d6e7fc375d31f58",
+        "name": "Cream Meta",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "45",
+        "liquidationThreshold": "45",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xa3bed4e1c75d00fa6f4e5e6922db7261b5e9acd2",
+          "name": "Meta",
+          "symbol": "MTA",
+          "decimals": 18,
+          "lastPriceUSD": "0.858330746509736484"
+        },
+        "outputToken": {
+          "id": "0x3623387773010d9214b10c551d6e7fc375d31f58",
+          "name": "Cream Meta",
+          "symbol": "crMTA",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x338286c0bc081891a4bda39c7667ae150bf5d206",
+        "name": "Cream SushiToken",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "65",
+        "liquidationThreshold": "65",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x6b3595068778dd592e39a122f4f5a5cf09c90fe2",
+          "name": "SushiToken",
+          "symbol": "SUSHI",
+          "decimals": 18,
+          "lastPriceUSD": "10.61368600733639236"
+        },
+        "outputToken": {
+          "id": "0x338286c0bc081891a4bda39c7667ae150bf5d206",
+          "name": "Cream SushiToken",
+          "symbol": "crSUSHI",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x3225e3c669b39c7c8b3e204a8614bb218c5e31bc",
+        "name": "Cream AAVE Token",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "60",
+        "liquidationThreshold": "60",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+          "name": "Aave Token",
+          "symbol": "AAVE",
+          "decimals": 18,
+          "lastPriceUSD": "369.81743874"
+        },
+        "outputToken": {
+          "id": "0x3225e3c669b39c7c8b3e204a8614bb218c5e31bc",
+          "name": "Cream AAVE Token",
+          "symbol": "crAAVE",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x2db6c82ce72c8d7d770ba1b5f5ed0b6e075066d6",
+        "name": "Cream Amp",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "45",
+        "liquidationThreshold": "45",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xff20817765cb7f73d4bde2e66e067e58d11095c2",
+          "name": "Amp",
+          "symbol": "AMP",
+          "decimals": 18,
+          "lastPriceUSD": "0.049680438233225355"
+        },
+        "outputToken": {
+          "id": "0x2db6c82ce72c8d7d770ba1b5f5ed0b6e075066d6",
+          "name": "Cream Amp",
+          "symbol": "crAMP",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x2a867fd776b83e1bd4e13c6611afd2f6af07ea6d",
+        "name": "Cream Interest-Bearing BTC",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "45",
+        "liquidationThreshold": "45",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xc4e15973e6ff2a35cc804c2cf9d2a1b817a8b40f",
+          "name": "Interest-Bearing BTC",
+          "symbol": "ibBTC",
+          "decimals": 18,
+          "lastPriceUSD": "49849.066694647138829517"
+        },
+        "outputToken": {
+          "id": "0x2a867fd776b83e1bd4e13c6611afd2f6af07ea6d",
+          "name": "Cream Interest-Bearing BTC",
+          "symbol": "crIBBTC",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x2a537fa9ffaea8c1a41d3c2b68a9cb791529366d",
+        "name": "Cream DefiPulse Index",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "60",
+        "liquidationThreshold": "60",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x1494ca1f11d487c2bbe4543e90080aeba4ba3c2b",
+          "name": "DefiPulse Index",
+          "symbol": "DPI",
+          "decimals": 18,
+          "lastPriceUSD": "342.556023296203153423"
+        },
+        "outputToken": {
+          "id": "0x2a537fa9ffaea8c1a41d3c2b68a9cb791529366d",
+          "name": "Cream DefiPulse Index",
+          "symbol": "crDPI",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x299e254a8a165bbeb76d9d69305013329eea3a3b",
+        "name": "Cream Perpetual",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "45",
+        "liquidationThreshold": "45",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xbc396689893d065f41bc2c6ecbee5e0085233447",
+          "name": "Perpetual",
+          "symbol": "PERP",
+          "decimals": 18,
+          "lastPriceUSD": "16.277849947832382273"
+        },
+        "outputToken": {
+          "id": "0x299e254a8a165bbeb76d9d69305013329eea3a3b",
+          "name": "Cream Perpetual",
+          "symbol": "crPERP",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x28526bb33d7230e65e735db64296413731c5402e",
+        "name": "Cream Spice",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "25",
+        "liquidationThreshold": "25",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xb753428af26e81097e7fd17f40c88aaa3e04902c",
+          "name": "Spice",
+          "symbol": "SFI",
+          "decimals": 18,
+          "lastPriceUSD": "559.484803469246572569"
+        },
+        "outputToken": {
+          "id": "0x28526bb33d7230e65e735db64296413731c5402e",
+          "name": "Cream Spice",
+          "symbol": "crSFI",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x25555933a8246ab67cbf907ce3d1949884e82b55",
+        "name": "Cream Synth sUSD",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "45",
+        "liquidationThreshold": "45",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x57ab1ec28d129707052df4df418d58a2d46d5f51",
+          "name": "Synth sUSD",
+          "symbol": "sUSD",
+          "decimals": 18,
+          "lastPriceUSD": "0.99989697353637455"
+        },
+        "outputToken": {
+          "id": "0x25555933a8246ab67cbf907ce3d1949884e82b55",
+          "name": "Cream Synth sUSD",
+          "symbol": "crSUSD",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x250fb308199fe8c5220509c1bf83d21d60b7f74a",
+        "name": "Cream Tokenlon",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "45",
+        "liquidationThreshold": "45",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x0000000000095413afc295d19edeb1ad7b71c952",
+          "name": "Tokenlon",
+          "symbol": "LON",
+          "decimals": 18,
+          "lastPriceUSD": "2.43787884794902037"
+        },
+        "outputToken": {
+          "id": "0x250fb308199fe8c5220509c1bf83d21d60b7f74a",
+          "name": "Cream Tokenlon",
+          "symbol": "crLON",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x22b243b96495c547598d9042b6f94b01c22b2e9e",
+        "name": "Cream Swag Token",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x87edffde3e14c7a66c9b9724747a1c5696b742e6",
+          "name": "Swag Token",
+          "symbol": "SWAG",
+          "decimals": 18,
+          "lastPriceUSD": "0.03147911152707233"
+        },
+        "outputToken": {
+          "id": "0x22b243b96495c547598d9042b6f94b01c22b2e9e",
+          "name": "Cream Swag Token",
+          "symbol": "crSWAG",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x228619cca194fbe3ebeb2f835ec1ea5080dafbb2",
+        "name": "Cream SushiBar",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "60",
+        "liquidationThreshold": "60",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x8798249c2e607446efb7ad49ec89dd1865ff4272",
+          "name": "SushiBar",
+          "symbol": "xSUSHI",
+          "decimals": 18,
+          "lastPriceUSD": "13.856577374724987771"
+        },
+        "outputToken": {
+          "id": "0x228619cca194fbe3ebeb2f835ec1ea5080dafbb2",
+          "name": "Cream SushiBar",
+          "symbol": "crXSUSHI",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x21011bc93d9e515b9511a817a1ed1d6d468f49fc",
+        "name": "Cream Cover Protocol Governance Token",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x4688a8b1f292fdab17e9a90c8bc379dc1dbd8713",
+          "name": "Cover Protocol Governance Token",
+          "symbol": "COVER",
+          "decimals": 18,
+          "lastPriceUSD": "54.80194544735225"
+        },
+        "outputToken": {
+          "id": "0x21011bc93d9e515b9511a817a1ed1d6d468f49fc",
+          "name": "Cream Cover Protocol Governance Token",
+          "symbol": "crCOVER",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x1ff8cdb51219a8838b52e9cac09b71e591bc998e",
+        "name": "Cream Binance USD",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "75",
+        "liquidationThreshold": "75",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x4fabb145d64652a948d72533023f6e7a623c7c53",
+          "name": "Binance USD",
+          "symbol": "BUSD",
+          "decimals": 18,
+          "lastPriceUSD": "1.00070352197881136"
+        },
+        "outputToken": {
+          "id": "0x1ff8cdb51219a8838b52e9cac09b71e591bc998e",
+          "name": "Cream Binance USD",
+          "symbol": "crBUSD",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x1f9b4756b008106c806c7e64322d7ed3b72cb284",
+        "name": "Cream yvCurve-stETH",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "60",
+        "liquidationThreshold": "60",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xdcd90c7f6324cfa40d7169ef80b12031770b4325",
+          "name": "Curve stETH Pool yVault",
+          "symbol": "yvCurve-stETH",
+          "decimals": 18,
+          "lastPriceUSD": "4518.093169781019117133"
+        },
+        "outputToken": {
+          "id": "0x1f9b4756b008106c806c7e64322d7ed3b72cb284",
+          "name": "Cream yvCurve-stETH",
+          "symbol": "crYVCurve-stETH",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x1d0986fb43985c88ffa9ad959cc24e6a087c7e35",
+        "name": "Cream AlphaToken",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "60",
+        "liquidationThreshold": "60",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xa1faa113cbe53436df28ff0aee54275c13b40975",
+          "name": "AlphaToken",
+          "symbol": "ALPHA",
+          "decimals": 18,
+          "lastPriceUSD": "1.038141584458331883"
+        },
+        "outputToken": {
+          "id": "0x1d0986fb43985c88ffa9ad959cc24e6a087c7e35",
+          "name": "Cream AlphaToken",
+          "symbol": "crALPHA",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x1bcafa2c1b3a522e41baa60c2e318981ea8d1eb5",
+        "name": "Cream steCRV yVault",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xdcd90c7f6324cfa40d7169ef80b12031770b4325",
+          "name": "Curve stETH Pool yVault",
+          "symbol": "yvCurve-stETH",
+          "decimals": 18,
+          "lastPriceUSD": "4518.093169781019117133"
+        },
+        "outputToken": {
+          "id": "0x1bcafa2c1b3a522e41baa60c2e318981ea8d1eb5",
+          "name": "Cream steCRV yVault",
+          "symbol": "crYVSTECRV",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x1a122348b73b58ea39f822a89e6ec67950c2bbd0",
+        "name": "Cream vVSP pool",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "25",
+        "liquidationThreshold": "25",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xba4cfe5741b357fa371b506e5db0774abfecf8fc",
+          "name": "vVSP pool",
+          "symbol": "vVSP",
+          "decimals": 18,
+          "lastPriceUSD": "10.445748798980198127"
+        },
+        "outputToken": {
+          "id": "0x1a122348b73b58ea39f822a89e6ec67950c2bbd0",
+          "name": "Cream vVSP pool",
+          "symbol": "crVVSP",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x19d1666f543d42ef17f66e376944a22aea1a8e46",
+        "name": "Cream Compound",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "75",
+        "liquidationThreshold": "75",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xc00e94cb662c3520282e6f5717214004a7f26888",
+          "name": "Compound",
+          "symbol": "COMP",
+          "decimals": 18,
+          "lastPriceUSD": "311.63278636283094"
+        },
+        "outputToken": {
+          "id": "0x19d1666f543d42ef17f66e376944a22aea1a8e46",
+          "name": "Cream Compound",
+          "symbol": "crCOMP",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x197070723ce0d3810a0e47f06e935c30a480d4fc",
+        "name": "Cream Wrapped BTC",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "75",
+        "liquidationThreshold": "75",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+          "name": "Wrapped BTC",
+          "symbol": "WBTC",
+          "decimals": 8,
+          "lastPriceUSD": "58847.51616720795"
+        },
+        "outputToken": {
+          "id": "0x197070723ce0d3810a0e47f06e935c30a480d4fc",
+          "name": "Cream Wrapped BTC",
+          "symbol": "crWBTC",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x17107f40d70f4470d20cb3f138a052cae8ebd4be",
+        "name": "Cream renBTC",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "65",
+        "liquidationThreshold": "65",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xeb4c2781e4eba804ce9a9803c67d0893436bb27d",
+          "name": "renBTC",
+          "symbol": "renBTC",
+          "decimals": 8,
+          "lastPriceUSD": "60836.420674364815"
+        },
+        "outputToken": {
+          "id": "0x17107f40d70f4470d20cb3f138a052cae8ebd4be",
+          "name": "Cream renBTC",
+          "symbol": "crRENBTC",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x1241b10e7ea55b22f5b2d007e8fecdf73dcff999",
+        "name": "Cream Paxos Gold",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "60",
+        "liquidationThreshold": "60",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x45804880de22913dafe09f4980848ece6ecbaf78",
+          "name": "Paxos Gold",
+          "symbol": "PAXG",
+          "decimals": 18,
+          "lastPriceUSD": "1809.2445075235132822"
+        },
+        "outputToken": {
+          "id": "0x1241b10e7ea55b22f5b2d007e8fecdf73dcff999",
+          "name": "Cream Paxos Gold",
+          "symbol": "crPAXG",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x10fdbd1e48ee2fd9336a482d746138ae19e649db",
+        "name": "Cream FTX Token",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "45",
+        "liquidationThreshold": "45",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x50d1c9771902476076ecfc8b2a83ad6b9355a4c9",
+          "name": "FTT",
+          "symbol": "FTX Token",
+          "decimals": 18,
+          "lastPriceUSD": "58.232117214452629862"
+        },
+        "outputToken": {
+          "id": "0x10fdbd1e48ee2fd9336a482d746138ae19e649db",
+          "name": "Cream FTX Token",
+          "symbol": "crFTT",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x10a3da2bb0fae4d591476fd97d6636fd172923a8",
+        "name": "Cream Hegic",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "25",
+        "liquidationThreshold": "25",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x584bc13c7d411c00c01a62e8019472de68768430",
+          "name": "Hegic",
+          "symbol": "HEGIC",
+          "decimals": 18,
+          "lastPriceUSD": "0.151806499539860056"
+        },
+        "outputToken": {
+          "id": "0x10a3da2bb0fae4d591476fd97d6636fd172923a8",
+          "name": "Cream Hegic",
+          "symbol": "crHEGIC",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x081fe64df6dc6fc70043aedf3713a3ce6f190a21",
+        "name": "Cream Rarible",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "25",
+        "liquidationThreshold": "25",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xfca59cd816ab1ead66534d82bc21e7515ce441cf",
+          "name": "Rarible",
+          "symbol": "RARI",
+          "decimals": 18,
+          "lastPriceUSD": "20.356683856356213753"
+        },
+        "outputToken": {
+          "id": "0x081fe64df6dc6fc70043aedf3713a3ce6f190a21",
+          "name": "Cream Rarible",
+          "symbol": "crRARI",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x054b7ed3f45714d3091e82aad64a1588dc4096ed",
+        "name": "Cream Huobi BTC",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "45",
+        "liquidationThreshold": "45",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x0316eb71485b0ab14103307bf65a021042c6d380",
+          "name": "Huobi BTC",
+          "symbol": "HBTC",
+          "decimals": 18,
+          "lastPriceUSD": "49314.586136272425138064"
+        },
+        "outputToken": {
+          "id": "0x054b7ed3f45714d3091e82aad64a1588dc4096ed",
+          "name": "Cream Huobi BTC",
+          "symbol": "crHBTC",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x01da76dea59703578040012357b81ffe62015c2d",
+        "name": "Cream yETH",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "75",
+        "liquidationThreshold": "75",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xe1237aa7f535b0cc33fd973d66cbf830354d16c7",
+          "name": "yearn Wrapped Ether",
+          "symbol": "yWETH",
+          "decimals": 18,
+          "lastPriceUSD": "3453.961069316678852912"
+        },
+        "outputToken": {
+          "id": "0x01da76dea59703578040012357b81ffe62015c2d",
+          "name": "Cream yETH",
+          "symbol": "crYETH",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      },
+      {
+        "id": "0x011a014d5e8eb4771e575bb1000318d509230afa",
+        "name": "Cream Uniswap V2 WBTC-ETH",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "75",
+        "liquidationThreshold": "75",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xbb2b8038a1640196fbe3e38816f3e67cba72d940",
+          "name": "Uniswap V2",
+          "symbol": "UNI-V2",
+          "decimals": 18,
+          "lastPriceUSD": "3341535201.53361545164554063"
+        },
+        "outputToken": {
+          "id": "0x011a014d5e8eb4771e575bb1000318d509230afa",
+          "name": "Cream Uniswap V2 WBTC-ETH",
+          "symbol": "crUNI-V2-WBTC-ETH",
+          "decimals": 8
+        },
+        "rates": [],
+        "protocol": {
+          "id": "0x3d5bc3c8d13dcb8bf317092d84783c2697ae9258",
+          "name": "CREAM Finance",
+          "slug": "cream-finance",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "2.0.1"
+        }
+      }
+    ],
+    "_meta": {
+      "block": {
+        "number": 25903086,
+        "timestamp": null
+      },
+      "deployment": "QmTHjj9Tdy5zCtJn3KvGQam8RaQ3ZncMAgDZL8y9BFxBqY",
+      "hasIndexingErrors": false
+    }
+  }
+}

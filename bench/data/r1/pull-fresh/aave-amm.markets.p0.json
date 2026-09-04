@@ -1,0 +1,1151 @@
+{
+  "_ainize": {
+    "deployment_id": "41ooPWnDYKwckqyG1mvg7ZEndy5zMemXinx6uQxscrBS",
+    "protocol": "aave-amm",
+    "query": "markets",
+    "query_hash": "5e7d8fe99101c576f17619117775c62006580f52977a7699da5f47be51268fc4",
+    "block": 25903086,
+    "skip": 0,
+    "first": 1000,
+    "gateway_ms": 374
+  },
+  "data": {
+    "markets": [
+      {
+        "id": "0xf9fb4ad91812b704ba883b11d2b576e890a6730a",
+        "name": "Aave AMM Market WETH",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "459418.4858520302843925468270708153",
+        "totalDepositBalanceUSD": "459418.4858520302843925468270708153",
+        "totalBorrowBalanceUSD": "2888.925699648695346155633474145627",
+        "inputToken": {
+          "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+          "name": "Wrapped Ether",
+          "symbol": "WETH",
+          "decimals": 18,
+          "lastPriceUSD": "1880.207080431260695291430827867967"
+        },
+        "outputToken": {
+          "id": "0xf9fb4ad91812b704ba883b11d2b576e890a6730a",
+          "name": "Aave AMM Market WETH",
+          "symbol": "aAmmWETH",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "3.0968356687188306",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "6.0774685349750645",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0.0003825352243063",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xacc030ef66f9dfeae9cbb0cd1b25654b82cfa8d5",
+          "name": "Aave AMM",
+          "slug": "aave-amm",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "3.1.0"
+        }
+      },
+      {
+        "id": "0xb8db81b84d30e2387de0ff330420a4aaa6688134",
+        "name": "Aave AMM Market UniLINKWETH",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "36718.93949931290738555618297820575",
+        "totalDepositBalanceUSD": "36718.93949931290738555618297820575",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xa2107fa5b38d9bbd2c461d6edf11b11a50f6b974",
+          "name": "Uniswap V2",
+          "symbol": "UNI-V2",
+          "decimals": 18,
+          "lastPriceUSD": "457.9198914144751012231359002426764"
+        },
+        "outputToken": {
+          "id": "0xb8db81b84d30e2387de0ff330420a4aaa6688134",
+          "name": "Aave AMM Market UniLINKWETH",
+          "symbol": "aAmmUniLINKWETH",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "3",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xacc030ef66f9dfeae9cbb0cd1b25654b82cfa8d5",
+          "name": "Aave AMM",
+          "slug": "aave-amm",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "3.1.0"
+        }
+      },
+      {
+        "id": "0xd24946147829deaa935be2ad85a3291dbf109c80",
+        "name": "Aave AMM Market USDC",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "31198.945429",
+        "totalDepositBalanceUSD": "31198.945429",
+        "totalBorrowBalanceUSD": "20722.16407",
+        "inputToken": {
+          "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "decimals": 6,
+          "lastPriceUSD": "1"
+        },
+        "outputToken": {
+          "id": "0xd24946147829deaa935be2ad85a3291dbf109c80",
+          "name": "Aave AMM Market USDC",
+          "symbol": "aAmmUSDC",
+          "decimals": 6
+        },
+        "rates": [
+          {
+            "rate": "10.6538155670694399",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "12.2690778353471993",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0.0811631676707353",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xacc030ef66f9dfeae9cbb0cd1b25654b82cfa8d5",
+          "name": "Aave AMM",
+          "slug": "aave-amm",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "3.1.0"
+        }
+      },
+      {
+        "id": "0x79be75ffc64dd58e66787e4eae470c8a1fd08ba4",
+        "name": "Aave AMM Market DAI",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "23764.11804418805485457380522902311",
+        "totalDepositBalanceUSD": "23764.11804418805485457380522902311",
+        "totalBorrowBalanceUSD": "12653.68196230659421423438866011304",
+        "inputToken": {
+          "id": "0x6b175474e89094c44da98b954eedeac495271d0f",
+          "name": "Dai Stablecoin",
+          "symbol": "DAI",
+          "decimals": 18,
+          "lastPriceUSD": "0.9999286223847138800747210889950081"
+        },
+        "outputToken": {
+          "id": "0x79be75ffc64dd58e66787e4eae470c8a1fd08ba4",
+          "name": "Aave AMM Market DAI",
+          "symbol": "aAmmDAI",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "11.3320895302869188",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "10.6604476514345942",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0.0568026828185912",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xacc030ef66f9dfeae9cbb0cd1b25654b82cfa8d5",
+          "name": "Aave AMM",
+          "slug": "aave-amm",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "3.1.0"
+        }
+      },
+      {
+        "id": "0x17a79792fe6fe5c95dfe95fe3fcee3caf4fe4cb7",
+        "name": "Aave AMM Market USDT",
+        "isActive": false,
+        "canBorrowFrom": true,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "20116.75085740573724631657996275962",
+        "totalDepositBalanceUSD": "20116.75085740573724631657996275962",
+        "totalBorrowBalanceUSD": "6069.719382408431929657907102599988",
+        "inputToken": {
+          "id": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+          "name": "Tether USD",
+          "symbol": "USDT",
+          "decimals": 6,
+          "lastPriceUSD": "0.9991970995196390600828409504683082"
+        },
+        "outputToken": {
+          "id": "0x17a79792fe6fe5c95dfe95fe3fcee3caf4fe4cb7",
+          "name": "Aave AMM Market USDT",
+          "symbol": "aAmmUSDT",
+          "decimals": 6
+        },
+        "rates": [
+          {
+            "rate": "10.7537241334993703",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "9.7686206674968515",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0.0294513805923724",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xacc030ef66f9dfeae9cbb0cd1b25654b82cfa8d5",
+          "name": "Aave AMM",
+          "slug": "aave-amm",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "3.1.0"
+        }
+      },
+      {
+        "id": "0x13b2f6928d7204328b0e8e4bcd0379aa06ea21fa",
+        "name": "Aave AMM Market WBTC",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "16426.46356455129616751049613089216",
+        "totalDepositBalanceUSD": "16426.46356455129616751049613089216",
+        "totalBorrowBalanceUSD": "5824.397660082151835951247298665378",
+        "inputToken": {
+          "id": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+          "name": "Wrapped BTC",
+          "symbol": "WBTC",
+          "decimals": 8,
+          "lastPriceUSD": "74203.71069767813071333699356196018"
+        },
+        "outputToken": {
+          "id": "0x13b2f6928d7204328b0e8e4bcd0379aa06ea21fa",
+          "name": "Aave AMM Market WBTC",
+          "symbol": "aAmmWBTC",
+          "decimals": 8
+        },
+        "rates": [
+          {
+            "rate": "8.4747512860812724",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "9.3798010288650179",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0.0333788505348774",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xacc030ef66f9dfeae9cbb0cd1b25654b82cfa8d5",
+          "name": "Aave AMM",
+          "slug": "aave-amm",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "3.1.0"
+        }
+      },
+      {
+        "id": "0x358bd0d980e031e23eba9aa793926857703783bd",
+        "name": "Aave AMM Market BptWBTCWETH",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "371.2107439548627535107001441894405",
+        "totalDepositBalanceUSD": "371.2107439548627535107001441894405",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x1eff8af5d577060ba4ac8a29a13525bb0ee2a3d5",
+          "name": "Balancer Pool Token",
+          "symbol": "BPT",
+          "decimals": 18,
+          "lastPriceUSD": "347333.4689265308451518801174755743"
+        },
+        "outputToken": {
+          "id": "0x358bd0d980e031e23eba9aa793926857703783bd",
+          "name": "Aave AMM Market BptWBTCWETH",
+          "symbol": "aAmmBptWBTCWETH",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "3",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xacc030ef66f9dfeae9cbb0cd1b25654b82cfa8d5",
+          "name": "Aave AMM",
+          "slug": "aave-amm",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "3.1.0"
+        }
+      },
+      {
+        "id": "0xc58f53a8adff2fb4eb16ed56635772075e2ee123",
+        "name": "Aave AMM Market UniWBTCWETH",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "213.5712602783874119929460686483203",
+        "totalDepositBalanceUSD": "213.5712602783874119929460686483203",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xbb2b8038a1640196fbe3e38816f3e67cba72d940",
+          "name": "Uniswap V2",
+          "symbol": "UNI-V2",
+          "decimals": 18,
+          "lastPriceUSD": "1131337583.238026346507852845324643"
+        },
+        "outputToken": {
+          "id": "0xc58f53a8adff2fb4eb16ed56635772075e2ee123",
+          "name": "Aave AMM Market UniWBTCWETH",
+          "symbol": "aAmmUniWBTCWETH",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "3",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xacc030ef66f9dfeae9cbb0cd1b25654b82cfa8d5",
+          "name": "Aave AMM",
+          "slug": "aave-amm",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "3.1.0"
+        }
+      },
+      {
+        "id": "0xe59d2ff6995a926a574390824a657eed36801e55",
+        "name": "Aave AMM Market UniAAVEWETH",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "133.0677541660144968866079389943475",
+        "totalDepositBalanceUSD": "133.0677541660144968866079389943475",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xdfc14d2af169b0d36c4eff567ada9b2e0cae044f",
+          "name": "Uniswap V2",
+          "symbol": "UNI-V2",
+          "decimals": 18,
+          "lastPriceUSD": "988.206487818882590360108623935429"
+        },
+        "outputToken": {
+          "id": "0xe59d2ff6995a926a574390824a657eed36801e55",
+          "name": "Aave AMM Market UniAAVEWETH",
+          "symbol": "aAmmUniAAVEWETH",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "3",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xacc030ef66f9dfeae9cbb0cd1b25654b82cfa8d5",
+          "name": "Aave AMM",
+          "slug": "aave-amm",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "3.1.0"
+        }
+      },
+      {
+        "id": "0x3d26dcd840fcc8e4b2193ace8a092e4a65832f9f",
+        "name": "Aave AMM Market UniUNIWETH",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "81.78218485769928484971065615407806",
+        "totalDepositBalanceUSD": "81.78218485769928484971065615407806",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xd3d2e2692501a5c9ca623199d38826e513033a17",
+          "name": "Uniswap V2",
+          "symbol": "UNI-V2",
+          "decimals": 18,
+          "lastPriceUSD": "322.4890445094521413811232993841735"
+        },
+        "outputToken": {
+          "id": "0x3d26dcd840fcc8e4b2193ace8a092e4a65832f9f",
+          "name": "Aave AMM Market UniUNIWETH",
+          "symbol": "aAmmUniUNIWETH",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "3",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xacc030ef66f9dfeae9cbb0cd1b25654b82cfa8d5",
+          "name": "Aave AMM",
+          "slug": "aave-amm",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "3.1.0"
+        }
+      },
+      {
+        "id": "0x391e86e2c002c70dee155eaceb88f7a3c38f5976",
+        "name": "Aave AMM Market UniUSDCWETH",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "55.6273748863093331531009786104989",
+        "totalDepositBalanceUSD": "55.6273748863093331531009786104989",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xb4e16d0168e52d35cacd2c6185b44281ec28c9dc",
+          "name": "Uniswap V2",
+          "symbol": "UNI-V2",
+          "decimals": 18,
+          "lastPriceUSD": "225225148.1811444206423056045962014"
+        },
+        "outputToken": {
+          "id": "0x391e86e2c002c70dee155eaceb88f7a3c38f5976",
+          "name": "Aave AMM Market UniUSDCWETH",
+          "symbol": "aAmmUniUSDCWETH",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "3",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xacc030ef66f9dfeae9cbb0cd1b25654b82cfa8d5",
+          "name": "Aave AMM",
+          "slug": "aave-amm",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "3.1.0"
+        }
+      },
+      {
+        "id": "0xd109b2a304587569c84308c55465cd9ff0317bfb",
+        "name": "Aave AMM Market BptBALWETH",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "45.49869177703340008489203066615547",
+        "totalDepositBalanceUSD": "45.49869177703340008489203066615547",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x59a19d8c652fa0284f44113d0ff9aba70bd46fb4",
+          "name": "Balancer Pool Token",
+          "symbol": "BPT",
+          "decimals": 18,
+          "lastPriceUSD": "92.03156018133690201009312360004161"
+        },
+        "outputToken": {
+          "id": "0xd109b2a304587569c84308c55465cd9ff0317bfb",
+          "name": "Aave AMM Market BptBALWETH",
+          "symbol": "aAmmBptBALWETH",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "3",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xacc030ef66f9dfeae9cbb0cd1b25654b82cfa8d5",
+          "name": "Aave AMM",
+          "slug": "aave-amm",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "3.1.0"
+        }
+      },
+      {
+        "id": "0xd145c6ae8931ed5bca9b5f5b7da5991f5ab63b5c",
+        "name": "Aave AMM Market GUniDAIUSDC",
+        "isActive": true,
+        "canBorrowFrom": false,
+        "maximumLTV": "60",
+        "liquidationThreshold": "70",
+        "totalValueLockedUSD": "20.15891793877111348137111445309473",
+        "totalDepositBalanceUSD": "20.15891793877111348137111445309473",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x50379f632ca68d36e50cfbc8f78fe16bd1499d1e",
+          "name": "Gelato Uniswap DAI/USDC LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "201.5896736770108505174062065869038"
+        },
+        "outputToken": {
+          "id": "0xd145c6ae8931ed5bca9b5f5b7da5991f5ab63b5c",
+          "name": "Aave AMM Market GUniDAIUSDC",
+          "symbol": "aAmmGUniDAIUSDC",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "3",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xacc030ef66f9dfeae9cbb0cd1b25654b82cfa8d5",
+          "name": "Aave AMM",
+          "slug": "aave-amm",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "3.1.0"
+        }
+      },
+      {
+        "id": "0xe340b25fe32b1011616bb8ec495a4d503e322177",
+        "name": "Aave AMM Market UniDAIUSDC",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "20.11633662916098709286205131732827",
+        "totalDepositBalanceUSD": "20.11633662916098709286205131732827",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xae461ca67b15dc8dc81ce7615e0320da1a9ab8d5",
+          "name": "Uniswap V2",
+          "symbol": "UNI-V2",
+          "decimals": 18,
+          "lastPriceUSD": "2213251.271135046569497263141099671"
+        },
+        "outputToken": {
+          "id": "0xe340b25fe32b1011616bb8ec495a4d503e322177",
+          "name": "Aave AMM Market UniDAIUSDC",
+          "symbol": "aAmmUniDAIUSDC",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "3",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xacc030ef66f9dfeae9cbb0cd1b25654b82cfa8d5",
+          "name": "Aave AMM",
+          "slug": "aave-amm",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "3.1.0"
+        }
+      },
+      {
+        "id": "0xca5dfdabbffd58cfd49a9f78ca52ec8e0591a3c5",
+        "name": "Aave AMM Market GUniUSDCUSDT",
+        "isActive": true,
+        "canBorrowFrom": false,
+        "maximumLTV": "60",
+        "liquidationThreshold": "70",
+        "totalValueLockedUSD": "4.74497130348856919274100846942468",
+        "totalDepositBalanceUSD": "4.74497130348856919274100846942468",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xd2eec91055f07fe24c9ccb25828ecfefd4be0c41",
+          "name": "Gelato Uniswap USDC/USDT LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "564034170750.4694400683036399650855"
+        },
+        "outputToken": {
+          "id": "0xca5dfdabbffd58cfd49a9f78ca52ec8e0591a3c5",
+          "name": "Aave AMM Market GUniUSDCUSDT",
+          "symbol": "aAmmGUniUSDCUSDT",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "3",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xacc030ef66f9dfeae9cbb0cd1b25654b82cfa8d5",
+          "name": "Aave AMM",
+          "slug": "aave-amm",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "3.1.0"
+        }
+      },
+      {
+        "id": "0x0ea20e7ffb006d4cfe84df2f72d8c7bd89247db0",
+        "name": "Aave AMM Market UniCRVWETH",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0.0427590883276149732221735980008188",
+        "totalDepositBalanceUSD": "0.0427590883276149732221735980008188",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x3da1313ae46132a397d90d95b1424a9a7e3e0fce",
+          "name": "Uniswap V2",
+          "symbol": "UNI-V2",
+          "decimals": 18,
+          "lastPriceUSD": "1033.758777367784540403548104103714"
+        },
+        "outputToken": {
+          "id": "0x0ea20e7ffb006d4cfe84df2f72d8c7bd89247db0",
+          "name": "Aave AMM Market UniCRVWETH",
+          "symbol": "aAmmUniCRVWETH",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "3",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xacc030ef66f9dfeae9cbb0cd1b25654b82cfa8d5",
+          "name": "Aave AMM",
+          "slug": "aave-amm",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "3.1.0"
+        }
+      },
+      {
+        "id": "0xa9e201a4e269d6cd5e9f0fcbcb78520cf815878b",
+        "name": "Aave AMM Market UniRENWETH",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x8bd1661da98ebdd3bd080f0be4e6d9be8ce9858c",
+          "name": "Uniswap V2",
+          "symbol": "UNI-V2",
+          "decimals": 18,
+          "lastPriceUSD": "213.9589356904240659029267700279318"
+        },
+        "outputToken": {
+          "id": "0xa9e201a4e269d6cd5e9f0fcbcb78520cf815878b",
+          "name": "Aave AMM Market UniRENWETH",
+          "symbol": "aAmmUniRENWETH",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "3",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xacc030ef66f9dfeae9cbb0cd1b25654b82cfa8d5",
+          "name": "Aave AMM",
+          "slug": "aave-amm",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "3.1.0"
+        }
+      },
+      {
+        "id": "0xa1b0edf4460cc4d8bfaa18ed871bff15e5b57eb4",
+        "name": "Aave AMM Market UniBATWETH",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xb6909b960dbbe7392d405429eb2b3649752b4838",
+          "name": "Uniswap V2",
+          "symbol": "UNI-V2",
+          "decimals": 18,
+          "lastPriceUSD": "108.2346149678286972799143757400084"
+        },
+        "outputToken": {
+          "id": "0xa1b0edf4460cc4d8bfaa18ed871bff15e5b57eb4",
+          "name": "Aave AMM Market UniBATWETH",
+          "symbol": "aAmmUniBATWETH",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "3",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xacc030ef66f9dfeae9cbb0cd1b25654b82cfa8d5",
+          "name": "Aave AMM",
+          "slug": "aave-amm",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "3.1.0"
+        }
+      },
+      {
+        "id": "0x9303eabc860a743aabcc3a1629014cabcc3f8d36",
+        "name": "Aave AMM Market UniDAIWETH",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xa478c2975ab1ea89e8196811f51a7b7ade33eb11",
+          "name": "Uniswap V2",
+          "symbol": "UNI-V2",
+          "decimals": 18,
+          "lastPriceUSD": "226.850840250493248039302516710702"
+        },
+        "outputToken": {
+          "id": "0x9303eabc860a743aabcc3a1629014cabcc3f8d36",
+          "name": "Aave AMM Market UniDAIWETH",
+          "symbol": "aAmmUniDAIWETH",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "3",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xacc030ef66f9dfeae9cbb0cd1b25654b82cfa8d5",
+          "name": "Aave AMM",
+          "slug": "aave-amm",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "3.1.0"
+        }
+      },
+      {
+        "id": "0x5394794be8b6ed5572fcd6b27103f46b5f390e8f",
+        "name": "Aave AMM Market UniYFIWETH",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x2fdbadf3c4d5a8666bc06645b8358ab803996e28",
+          "name": "Uniswap V2",
+          "symbol": "UNI-V2",
+          "decimals": 18,
+          "lastPriceUSD": "29566.83227582684865848791338565544"
+        },
+        "outputToken": {
+          "id": "0x5394794be8b6ed5572fcd6b27103f46b5f390e8f",
+          "name": "Aave AMM Market UniYFIWETH",
+          "symbol": "aAmmUniYFIWETH",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "3",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xacc030ef66f9dfeae9cbb0cd1b25654b82cfa8d5",
+          "name": "Aave AMM",
+          "slug": "aave-amm",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "3.1.0"
+        }
+      },
+      {
+        "id": "0x38e491a71291cd43e8de63b7253e482622184894",
+        "name": "Aave AMM Market UniSNXWETH",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x43ae24960e5534731fc831386c07755a2dc33d47",
+          "name": "Uniswap V2",
+          "symbol": "UNI-V2",
+          "decimals": 18,
+          "lastPriceUSD": "467.0981447172085684956364622823721"
+        },
+        "outputToken": {
+          "id": "0x38e491a71291cd43e8de63b7253e482622184894",
+          "name": "Aave AMM Market UniSNXWETH",
+          "symbol": "aAmmUniSNXWETH",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "3",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xacc030ef66f9dfeae9cbb0cd1b25654b82cfa8d5",
+          "name": "Aave AMM",
+          "slug": "aave-amm",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "3.1.0"
+        }
+      },
+      {
+        "id": "0x370adc71f67f581158dc56f539df5f399128ddf9",
+        "name": "Aave AMM Market UniMKRWETH",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0xc2adda861f89bbb333c90c492cb837741916a225",
+          "name": "Uniswap V2",
+          "symbol": "UNI-V2",
+          "decimals": 18,
+          "lastPriceUSD": "8350.533128154327096356266018973751"
+        },
+        "outputToken": {
+          "id": "0x370adc71f67f581158dc56f539df5f399128ddf9",
+          "name": "Aave AMM Market UniMKRWETH",
+          "symbol": "aAmmUniMKRWETH",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "3",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xacc030ef66f9dfeae9cbb0cd1b25654b82cfa8d5",
+          "name": "Aave AMM",
+          "slug": "aave-amm",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "3.1.0"
+        }
+      },
+      {
+        "id": "0x2365a4890ed8965e564b7e2d27c38ba67fec4c6f",
+        "name": "Aave AMM Market UniWBTCUSDC",
+        "isActive": false,
+        "canBorrowFrom": false,
+        "maximumLTV": "0",
+        "liquidationThreshold": "0",
+        "totalValueLockedUSD": "0",
+        "totalDepositBalanceUSD": "0",
+        "totalBorrowBalanceUSD": "0",
+        "inputToken": {
+          "id": "0x004375dff511095cc5a197a54140a24efef3a416",
+          "name": "Uniswap V2",
+          "symbol": "UNI-V2",
+          "decimals": 18,
+          "lastPriceUSD": "88489348074628.64977783803103342599"
+        },
+        "outputToken": {
+          "id": "0x2365a4890ed8965e564b7e2d27c38ba67fec4c6f",
+          "name": "Aave AMM Market UniWBTCUSDC",
+          "symbol": "aAmmUniWBTCUSDC",
+          "decimals": 18
+        },
+        "rates": [
+          {
+            "rate": "0",
+            "side": "BORROWER",
+            "type": "STABLE"
+          },
+          {
+            "rate": "3",
+            "side": "BORROWER",
+            "type": "VARIABLE"
+          },
+          {
+            "rate": "0",
+            "side": "LENDER",
+            "type": "VARIABLE"
+          }
+        ],
+        "protocol": {
+          "id": "0xacc030ef66f9dfeae9cbb0cd1b25654b82cfa8d5",
+          "name": "Aave AMM",
+          "slug": "aave-amm",
+          "network": "MAINNET",
+          "type": "LENDING",
+          "schemaVersion": "3.1.0"
+        }
+      }
+    ],
+    "_meta": {
+      "block": {
+        "number": 25903086,
+        "timestamp": null
+      },
+      "deployment": "QmP2GnFgjLvB4RBX6eZMicfaJ9uUvY4iTe2eMM1padTsPt",
+      "hasIndexingErrors": false
+    }
+  }
+}

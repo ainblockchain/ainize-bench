@@ -1,0 +1,1228 @@
+{
+  "_ainize": {
+    "deployment_id": "GnroBYmeLLtKuHNyTNS38hzKki5n4CWaHeaMRqZpU4cr",
+    "protocol": "arrakis-finance",
+    "query": "identity",
+    "query_hash": "83680f3eaa380ba4b5cd75ee9b340689efd2a7ae37fa7be9105e2d4ee64b07dd",
+    "block": 25903086,
+    "skip": 0,
+    "first": 1000,
+    "gateway_ms": 334
+  },
+  "data": {
+    "tokens": [
+      {
+        "id": "0x00608b2230fbcd2b85cf8506006979a3a888ebdf",
+        "name": "Gelato Uniswap USDC/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x0100546f2cd4c9d97f798ffc9755e47865ff7ee6",
+        "name": "Alchemix ETH",
+        "symbol": "alETH",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x01ba67aac7f75f647d94220cc98fb30fcc5105bf",
+        "name": "Lyra Token",
+        "symbol": "LYRA",
+        "decimals": 18,
+        "lastPriceUSD": "0.000159"
+      },
+      {
+        "id": "0x02e7ac540409d32c90bfb51114003a9e1ff0249c",
+        "name": "JPG NFT Index",
+        "symbol": "JPG",
+        "decimals": 18,
+        "lastPriceUSD": "10.737947"
+      },
+      {
+        "id": "0x02f88164060912ee44ba9480d05d462d20cff3bc",
+        "name": "Gelato Uniswap USDC/USDT LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x03ab458634910aad20ef5f1c8ee96f1d6ac54919",
+        "name": "Rai Reflex Index",
+        "symbol": "RAI",
+        "decimals": 18,
+        "lastPriceUSD": "2.940115"
+      },
+      {
+        "id": "0x04448cbcd12e133d0c4a68c28077b92cab7d9ac7",
+        "name": "Gelato Uniswap WETH/BTRFLY LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x045da4bfe02b320f4403674b3b7d121737727a36",
+        "name": "Defi Franc",
+        "symbol": "DCHF",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x07baa98c5cdec970a3a4654f0fbb066404ff5fe0",
+        "name": "Gelato Uniswap FEI/USDC LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x086d0328254f7f91d7e8af00583cbb72de8a0ce0",
+        "name": "Gelato Uniswap USDC/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x092a51b356930d907570efec1fc94f3c591b7239",
+        "name": "Gelato Uniswap PAR/USDC LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x0954906da0bf32d5479e25f46056d22f08464cab",
+        "name": "Index",
+        "symbol": "INDEX",
+        "decimals": 18,
+        "lastPriceUSD": "0.252984"
+      },
+      {
+        "id": "0x0a2022f517ad22330069049972f26763a7f0f7a3",
+        "name": "Gelato Uniswap JPG/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x0ab87046fbb341d058f17cbc4c1133f25a20a52f",
+        "name": "Governance OHM",
+        "symbol": "gOHM",
+        "decimals": 18,
+        "lastPriceUSD": "4840.524744"
+      },
+      {
+        "id": "0x0d2a2df39436b5c5f986552869124ba29b7df1ac",
+        "name": "Gelato Uniswap icETH/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x0d97fee619d955509e54b046c9992b6e9f5b0630",
+        "name": "PONY Index",
+        "symbol": "PONY",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x0eed1f07d68d1576902f3303c0e2bbb03c1eb1f5",
+        "name": "Arrakis Vault V1 wstETH/WETH",
+        "symbol": "RAKIS-9",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x0f644658510c95cb46955e55d7ba9dda9e9fbec6",
+        "name": "Ubiquity Algorithmic Dollar",
+        "symbol": "uAD",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x0fe20e0fa9c78278702b05c333cc000034bb69e2",
+        "name": "ETH Max Yield Index",
+        "symbol": "ETHMAXY",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x104201f139aee36bc7ecd133c2a275c3ee6705f6",
+        "name": "Gelato Uniswap USDC/oSQTH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x1494ca1f11d487c2bbe4543e90080aeba4ba3c2b",
+        "name": "DefiPulse Index",
+        "symbol": "DPI",
+        "decimals": 18,
+        "lastPriceUSD": "49.984205"
+      },
+      {
+        "id": "0x15b7c0c907e4c6b9adaaaabc300c08991d6cea05",
+        "name": "Gelato Network Token",
+        "symbol": "GEL",
+        "decimals": 18,
+        "lastPriceUSD": "0.000599"
+      },
+      {
+        "id": "0x18d53f4953ad14236602da05efafc0df4f5d064d",
+        "name": "Gelato Uniswap ETHMAXY/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x1a3496c18d558bd9c6c8f609e1b129f67ab08163",
+        "name": "DEAPCOIN",
+        "symbol": "DEP",
+        "decimals": 18,
+        "lastPriceUSD": "0.001144"
+      },
+      {
+        "id": "0x1a7e4e63778b4f12a199c062f3efdd288afcbce8",
+        "name": "agEUR",
+        "symbol": "agEUR",
+        "decimals": 18,
+        "lastPriceUSD": "1.161363"
+      },
+      {
+        "id": "0x1ceb5cb57c4d4e2b2433641b95dd330a33185a44",
+        "name": "Keep3rV1",
+        "symbol": "KP3R",
+        "decimals": 18,
+        "lastPriceUSD": "0.998304"
+      },
+      {
+        "id": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+        "name": "Uniswap",
+        "symbol": "UNI",
+        "decimals": 18,
+        "lastPriceUSD": "4.559107"
+      },
+      {
+        "id": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+        "name": "Wrapped BTC",
+        "symbol": "WBTC",
+        "decimals": 8,
+        "lastPriceUSD": "79292.91"
+      },
+      {
+        "id": "0x239a7f8d0d29c6ca971414dc5b720b08cba66c60",
+        "name": "Gelato Uniswap USDC/oSQTH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x24416cba1772c283de3b41eb99e850e8321322bc",
+        "name": "Gelato Uniswap USDC/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x256a607549910be8f51b53392583e075ee4511cb",
+        "name": "Gelato Uniswap 🌐/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x26576c483466e339af9fed4fcc469420d82ef6c5",
+        "name": "Gelato Uniswap SOS/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x26c2251801d2cfb5461751c984dc3eaa358bdf0f",
+        "name": "Gelato Uniswap agEUR/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x29a8e99c2593816133ce46a23fe8626983dace95",
+        "name": "Gelato Uniswap OHM/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x2a2cd905141f1cdf3620db6a1ed0abc4f7e8635c",
+        "name": "Gelato Uniswap DAI/OPIUM LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x2a8e1e676ec238d8a992307b495b45b3feaa5e86",
+        "name": "Origin Dollar",
+        "symbol": "OUSD",
+        "decimals": 18,
+        "lastPriceUSD": "0.000002"
+      },
+      {
+        "id": "0x2bd9f7974bc0e4cb19b8813f8be6034f3e772add",
+        "name": "Gelato Uniswap agEUR/USDC LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x2d94aa3e47d9d5024503ca8491fce9a2fb4da198",
+        "name": "Bankless Token",
+        "symbol": "BANK",
+        "decimals": 18,
+        "lastPriceUSD": "0.000108"
+      },
+      {
+        "id": "0x301a201efc66c5b8025d0cc907f8e545ea33494e",
+        "name": "Arrakis Vault V1 TRANCHE-AMPL-Z/WAMPL",
+        "symbol": "RAKIS-34",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x30b2de4a95f397545c6509402f235b1be0fa9a14",
+        "name": "Prelude of the Night",
+        "symbol": "FAITH",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x3402e15b3ea0f1aec2679c4be4c6d051cef93953",
+        "name": "QAO",
+        "symbol": "🌐",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x383518188c0c6d7730d91b2c03a03c837814a899",
+        "name": "Olympus",
+        "symbol": "OHM",
+        "decimals": 9,
+        "lastPriceUSD": "53.335483"
+      },
+      {
+        "id": "0x3876341af90400a11ea7a75e1c38d4a04499928e",
+        "name": "Arrakis Vault V1 wstETH/aETHc",
+        "symbol": "RAKIS-16",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x394b0e6f4d8d51f51a251f60322a27599f8031a5",
+        "name": "Arrakis Vault V1 USDC/USDT",
+        "symbol": "RAKIS-25",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x39703b0b92463c3fb3a0e9ea90926aa4f6c3283e",
+        "name": "Arrakis Vault V1 FAITH/USDC",
+        "symbol": "RAKIS-5",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x39ae52f197e7fc9fc481ca03cfaf661a26845ec3",
+        "name": "Gelato Uniswap KP3R/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x3a226284a0203ed16426f885d8596ae244b169a9",
+        "name": "Gelato Uniswap iETHV/USDC LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x3a707d56d538e85b783e8ce12b346e7fb6511f90",
+        "name": "Inverse ETH Volatility Index",
+        "symbol": "iETHV",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x3b484b82567a09e2588a13d54d032153f0c0aee0",
+        "name": "SOS",
+        "symbol": "SOS",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x3d1556e84783672f2a3bd187a592520291442539",
+        "name": "Gelato Uniswap DAI/FEI LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x41a049ae0d45a0d4b687525ba0f99afad427ff9a",
+        "name": "Arrakis Vault V1 FAITH/MILAREPA",
+        "symbol": "RAKIS-3",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x47110d43175f7f2c2425e7d15792acc5817eb44f",
+        "name": "Bankless DeFi Innovation Index",
+        "symbol": "GMI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x472d0b0ddfe0bc02c27928b8bcbd67e65d07d48a",
+        "name": "Gelato Uniswap BANK/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x47ed8d441016967f8f885382e44234efe3b5893b",
+        "name": "Gelato Uniswap WETH/ENS LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x48ac93d10e963a9f99682f53b62c257451e02940",
+        "name": "Gelato Uniswap UDT/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x4cbcecdc744ad72fe8695fedf705c860ac210fa4",
+        "name": "Arrakis Vault V1 BUSD/USDC",
+        "symbol": "RAKIS-21",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x4cf66acaf7341e6fcc06ce50f2e314f82ae28ce5",
+        "name": "Arrakis Vault V1 UNIDX/WETH",
+        "symbol": "RAKIS-13",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x4ddc2d193948926d02f9b1fe9e1daa0718270ed5",
+        "name": "Compound Ether",
+        "symbol": "cETH",
+        "decimals": 8,
+        "lastPriceUSD": "49.036623"
+      },
+      {
+        "id": "0x4e807e056354de33b619699f8491ca8dbd67920d",
+        "name": "Gelato Uniswap DAI/USDP LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x4f38892c16bfbb4f4f7424eefaa9767f4e922073",
+        "name": "Gelato Uniswap USDC/FLOAT LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x4f93825a4d7f58899693c64f9b2cbbac3b5b04ab",
+        "name": "Gelato Uniswap INDEX/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x4fabb145d64652a948d72533023f6e7a623c7c53",
+        "name": "Binance USD",
+        "symbol": "BUSD",
+        "decimals": 18,
+        "lastPriceUSD": "1.008941"
+      },
+      {
+        "id": "0x4fd9ad3758cc0a3719b066e6ff796a9ccf702ac6",
+        "name": "Gelato Uniswap WBTC/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x502acb1f9da925af5021b7fe7242a4faa22358e0",
+        "name": "Arrakis Vault V1 DAI/USDC",
+        "symbol": "RAKIS-24",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x50379f632ca68d36e50cfbc8f78fe16bd1499d1e",
+        "name": "Gelato Uniswap DAI/USDC LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x50dcc017db93f02da4c36c0870dce4da9af6430a",
+        "name": "Gelato Uniswap RAI/DAI LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x5a77aacdaad084b778245482ff268e60cd0f309b",
+        "name": "Gelato Uniswap INDEX/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x5bcbf85a032b8580564c2234327ee3c6ef9ce50b",
+        "name": "Arrakis Vault V1 PONY/USDC",
+        "symbol": "RAKIS-11",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x5c56c86ae42ddee99c3b46cc1d78ba4761080d86",
+        "name": "A Yogis Joy",
+        "symbol": "MILAREPA",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x5f98805a4e8be255a32880fdec7f6728c6568ba0",
+        "name": "LUSD Stablecoin",
+        "symbol": "LUSD",
+        "decimals": 18,
+        "lastPriceUSD": "0.998101"
+      },
+      {
+        "id": "0x61a0c8d4945a61bf26c13e07c30af1f1ca67b473",
+        "name": "Gelato Uniswap OHM/FRAX LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x62cedf37b209142131a55a73534875f32094c992",
+        "name": "Arrakis Vault V1 DCHF/USDC",
+        "symbol": "RAKIS-32",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x64aa3364f17a4d01c6f1751fd97c2bd3d7e7f1d5",
+        "name": "Olympus",
+        "symbol": "OHM",
+        "decimals": 9,
+        "lastPriceUSD": "18.003319"
+      },
+      {
+        "id": "0x68037790a0229e9ce6eaa8a99ea92964106c4703",
+        "name": "PAR Stablecoin",
+        "symbol": "PAR",
+        "decimals": 18,
+        "lastPriceUSD": "1.243612"
+      },
+      {
+        "id": "0x68bdc39005cf15f1817a13449442bd61dfd4fb0e",
+        "name": "Arrakis Vault V1 WAMPL/TRANCHE-AMPL-Z",
+        "symbol": "RAKIS-33",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x6b175474e89094c44da98b954eedeac495271d0f",
+        "name": "Dai Stablecoin",
+        "symbol": "DAI",
+        "decimals": 18,
+        "lastPriceUSD": "0.999633"
+      },
+      {
+        "id": "0x6ee6d77fe61c1136e9e90cc450dc5251da0ace39",
+        "name": "Gelato Uniswap gOHM/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x6f80310ca7f2c654691d1383149fa1a57d8ab1f8",
+        "name": "Silo Governance Token",
+        "symbol": "Silo",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x741f3e1f10a66af9b198a8f5974d83fcf03f9842",
+        "name": "Gelato Uniswap UNI/DAI LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x74e8df0a1a06f3b90d25af2536e605d7dfefbcc7",
+        "name": "Gelato Uniswap USDC/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x75f969b6ccaee82bddfc46cf6b0f894f8b3bf600",
+        "name": "Gelato Uniswap OHM/DAI LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x77a56c01b83d48be9142be30299d4656d24b560e",
+        "name": "Gelato Uniswap OHM/FRAX LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x77cdd9e097f34c1fa861daeb6823de741fab2321",
+        "name": "Gelato Uniswap ETH2x-FLI/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x7c07f7abe10ce8e33dc6c5ad68fe033085256a84",
+        "name": "Interest Compounding ETH Index",
+        "symbol": "icETH",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x7c687f775a3b73bbab0e15832f24caab5d53bdde",
+        "name": "Gelato Uniswap WETH/ENS LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0",
+        "name": "Matic Token",
+        "symbol": "MATIC",
+        "decimals": 18,
+        "lastPriceUSD": "0.106876"
+      },
+      {
+        "id": "0x7d29a64504629172a429e64183d6673b9dacbfce",
+        "name": "VectorspaceAI",
+        "symbol": "VXV",
+        "decimals": 18,
+        "lastPriceUSD": "0.003704"
+      },
+      {
+        "id": "0x7e77dcb127f99ece88230a64db8d595f31f1b068",
+        "name": "Escrowed Illuvium 2",
+        "symbol": "sILV2",
+        "decimals": 18,
+        "lastPriceUSD": "36.606383"
+      },
+      {
+        "id": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
+        "name": "Wrapped liquid staked Ether 2.0",
+        "symbol": "wstETH",
+        "decimals": 18,
+        "lastPriceUSD": "3093.321775"
+      },
+      {
+        "id": "0x8207c1ffc5b6804f6024322ccf34f29c3541ae26",
+        "name": "OriginToken",
+        "symbol": "OGN",
+        "decimals": 18,
+        "lastPriceUSD": "0.025799"
+      },
+      {
+        "id": "0x853d955acef822db058eb8505911ed77f175b99e",
+        "name": "Frax",
+        "symbol": "FRAX",
+        "decimals": 18,
+        "lastPriceUSD": "0.987383"
+      },
+      {
+        "id": "0x857e0b2ed0e82d5cdeb015e77ebb873c47f99575",
+        "name": "Gelato Uniswap agEUR/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x8824e0cd99f5c1eef50c8602987af364096625db",
+        "name": "Arrakis Vault V1 uAD/LUSD",
+        "symbol": "RAKIS-1",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x888888888889c00c67689029d7856aac1065ec11",
+        "name": "Opium Governance Token",
+        "symbol": "OPIUM",
+        "decimals": 18,
+        "lastPriceUSD": "1.616848"
+      },
+      {
+        "id": "0x8aef042508ede1801b8729580132a2c47e1abf40",
+        "name": "Gelato Uniswap WBTC/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x8e870d67f660d95d5be530380d0ec0bd388289e1",
+        "name": "Pax Dollar",
+        "symbol": "USDP",
+        "decimals": 18,
+        "lastPriceUSD": "0.99910323"
+      },
+      {
+        "id": "0x8ee2246b11d24827069f9fb3a9c17eb0277afb3d",
+        "name": "Gelato Uniswap RAI/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x90de74265a416e1393a450752175aed98fe11517",
+        "name": "Unlock Discount Token",
+        "symbol": "UDT",
+        "decimals": 18,
+        "lastPriceUSD": "1.267546"
+      },
+      {
+        "id": "0x956f47f50a910163d8bf957cf5846d573e7f87ca",
+        "name": "Fei USD",
+        "symbol": "FEI",
+        "decimals": 18,
+        "lastPriceUSD": "0.96095571"
+      },
+      {
+        "id": "0x95b3497bbcccc46a8f45f5cf54b0878b39f8d96c",
+        "name": "UniDex",
+        "symbol": "UNIDX",
+        "decimals": 18,
+        "lastPriceUSD": "0.000002"
+      },
+      {
+        "id": "0x98a8e81bd4f79f1827711cbbb1e9f31de2945cae",
+        "name": "Arrakis Vault V1 wstETH/USDC",
+        "symbol": "RAKIS-31",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x990f341946a3fdb507ae7e52d17851b87168017c",
+        "name": "Strong",
+        "symbol": "STRONG",
+        "decimals": 18,
+        "lastPriceUSD": "0.525332"
+      },
+      {
+        "id": "0x9bcb681250e97e922e63cc83f3218de5243b227c",
+        "name": "Gelato Uniswap Silo/USDC LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x9c354503c38481a7a7a51629142963f98ecc12d0",
+        "name": "Origin Dollar Governance",
+        "symbol": "OGV",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x9c60cc8a61abca87aa50ee894d6efc6ed2f15ddd",
+        "name": "Arrakis Vault V1 LUSD/DAI",
+        "symbol": "RAKIS-29",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "name": "USD Coin",
+        "symbol": "USDC",
+        "decimals": 6,
+        "lastPriceUSD": "0.998101"
+      },
+      {
+        "id": "0xa295923db12dfac1915427b98b3fe1c4089d201c",
+        "name": "Gelato Uniswap OHM/DAI LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xa4ba1d7bab167de658122fdf99f98f7b6b74b6e4",
+        "name": "Arrakis Vault V1 cbETH/WETH",
+        "symbol": "RAKIS-20",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xa5e577a6ebd9c2f16b3b6377484505f539d190f1",
+        "name": "ButtonTranche AMPL Z",
+        "symbol": "TRANCHE-AMPL-Z",
+        "decimals": 9,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xa6c49fd13e50a30c65e6c8480aada132011d0613",
+        "name": "Gelato Uniswap USDC/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xa7edd9580dec40b985d3167dfafb76b32816df3b",
+        "name": "Gelato Uniswap WETH/ENS LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xa879dc95609824127c91efb6eac2270b4546d29f",
+        "name": "Arrakis Vault V1 MILAREPA/USDC",
+        "symbol": "RAKIS-6",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xa9514190cbbad624c313ea387a18fd1dea576cbd",
+        "name": "Gelato Uniswap uAD/USDC LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xaa6e8127831c9de45ae56bb1b0d4d4da6e5665bd",
+        "name": "ETH 2x Flexible Leverage Index",
+        "symbol": "ETH2x-FLI",
+        "decimals": 18,
+        "lastPriceUSD": "3.849854"
+      },
+      {
+        "id": "0xab43e3ddaab096e34fa99aa364e9071631db50f0",
+        "name": "Gelato Uniswap STRONG/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xabddafb225e10b90d798bb8a886238fb835e2053",
+        "name": "Gelato Uniswap DAI/USDC LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xacc33801ae00a342a2fbb34b220264cc4a028634",
+        "name": "Gelato Uniswap VXV/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xae18bda76efd772a988cf5c2fd38648d8b0c6c3c",
+        "name": "Gelato Uniswap USDC/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xae666f497e3b03415503785df36f795e6d91d4b3",
+        "name": "Gelato Uniswap GEL/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xb05097849bca421a3f51b249ba6cca4af4b97cb9",
+        "name": "Float Protocol: FLOAT",
+        "symbol": "FLOAT",
+        "decimals": 18,
+        "lastPriceUSD": "0.660818"
+      },
+      {
+        "id": "0xb06a77021a0041527a998ce4d6c95b256a906bca",
+        "name": "Arrakis Vault V1 alETH/alUSD",
+        "symbol": "RAKIS-27",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xb1cfdc7370550f5e421e1bf0bf3cadfadf3c4141",
+        "name": "Gelato Uniswap DAI/FRAX LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xbba11b41407df8793a89b44ee4b50afad4508555",
+        "name": "Gelato Uniswap USDC/POP LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xbc6da0fe9ad5f3b0d58160288917aa56653660e9",
+        "name": "Alchemix USD",
+        "symbol": "alUSD",
+        "decimals": 18,
+        "lastPriceUSD": "0.951361"
+      },
+      {
+        "id": "0xbe9895146f7af43049ca1c1ae358b0541ea49704",
+        "name": "Coinbase Wrapped Staked ETH",
+        "symbol": "cbETH",
+        "decimals": 18,
+        "lastPriceUSD": "2831.622705"
+      },
+      {
+        "id": "0xbf7a1e5d4b080df199fde2f2f35003954e1e9dc0",
+        "name": "Gelato Uniswap 🌐/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        "name": "Wrapped Ether",
+        "symbol": "WETH",
+        "decimals": 18,
+        "lastPriceUSD": "2490.35"
+      },
+      {
+        "id": "0xc08512927d12348f6620a698105e1baac6ecd911",
+        "name": "GMO JPY",
+        "symbol": "GYEN",
+        "decimals": 6,
+        "lastPriceUSD": "0.000069"
+      },
+      {
+        "id": "0xc090a8a0712c05a63e4c375ec54c76f6fc1270d6",
+        "name": "Arrakis Vault V1 OGV/WETH",
+        "symbol": "RAKIS-18",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xc0d4ceb216b3ba9c3701b291766fdcba977cec3a",
+        "name": "BTRFLY",
+        "symbol": "BTRFLY",
+        "decimals": 9,
+        "lastPriceUSD": "0.000093"
+      },
+      {
+        "id": "0xc11efd085154d8500c61fa988f72ad7c789d5c38",
+        "name": "Gelato Uniswap USDC/ETHV LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+        "name": "Ethereum Name Service",
+        "symbol": "ENS",
+        "decimals": 18,
+        "lastPriceUSD": "5.8206213"
+      },
+      {
+        "id": "0xc1f33e0cf7e40a67375007104b929e49a581bafe",
+        "name": "SPOT",
+        "symbol": "SPOT",
+        "decimals": 9,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xc48bfd82ebc3c438076ae067be5df122002cd3ef",
+        "name": "Arrakis Vault V1 WETH/aETHc",
+        "symbol": "RAKIS-14",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xc53342fd7575f572b0ff4569e31941a5b821ac76",
+        "name": "ETH Volatility Index",
+        "symbol": "ETHV",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xc5af80662f967603df2ac17b37edbbf9c4868b85",
+        "name": "Gelato Uniswap DAI/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xc798e1856bec2aa84be124471309106f573ac744",
+        "name": "Arrakis Vault V1 BUSD/DAI",
+        "symbol": "RAKIS-12",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xc9e5172717243ab28299c153232587d390e34dd1",
+        "name": "Arrakis Vault V1 MATIC/WETH",
+        "symbol": "RAKIS-28",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xcf84a3dc12319531e3debd48c86e68eaeaff224a",
+        "name": "Gelato Uniswap FEI/USDC LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xd0cd466b34a24fcb2f87676278af2005ca8a78c4",
+        "name": "Popcorn",
+        "symbol": "POP",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xd103caf4ff1e9ad5df92ce49f2e9a8890791dcdd",
+        "name": "Arrakis Vault V1 BUSD/USDC",
+        "symbol": "RAKIS-30",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xd14c67985f88368f66e71ad73ce97890f6636cdd",
+        "name": "Arrakis Vault V1 wstETH/WETH",
+        "symbol": "RAKIS-8",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xd2eec91055f07fe24c9ccb25828ecfefd4be0c41",
+        "name": "Gelato Uniswap USDC/USDT LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xd33669d0a6eb343b8d7643dc270b99116e900e64",
+        "name": "Gelato Uniswap GEL/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xd494efe072cb55a4d7f2cf589bd2f718555af9f4",
+        "name": "Gelato Uniswap SOS/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xd58c89181360dd9166881fce2bc7c9baae2d5f31",
+        "name": "Gelato Uniswap DAI/USDT LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xda3dbe84f22cca044b65af6612c266f7c760d6ae",
+        "name": "Gelato Uniswap DPI/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "name": "Tether USD",
+        "symbol": "USDT",
+        "decimals": 6,
+        "lastPriceUSD": "0.997902"
+      },
+      {
+        "id": "0xdb32f2920b4463f30e12040d171db5e2ea73c84c",
+        "name": "Gelato Uniswap DEP/USDT LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xdcf0cb36e8e9d0607242e2e7babea5ba3395628f",
+        "name": "Arrakis Vault V1 OGN/WETH",
+        "symbol": "RAKIS-17",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xdf367477c5e596af88e8797c3cde8e28854cb79c",
+        "name": "Arrakis Vault V1 USDC/SPOT",
+        "symbol": "RAKIS-35",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xe0a34a39c694ffc1bececf5bd948e534931c1105",
+        "name": "Arrakis Vault V1 alETH/alUSD",
+        "symbol": "RAKIS-23",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xe0abce449a0e368eaf657f6f1c0ed5711174c46f",
+        "name": "Gelato Uniswap WETH/JPEG LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xe668fe99123b3e901872a8c310ec2fa076e49fc1",
+        "name": "Gelato Uniswap FRAX/USDC LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xe6f375a29cdd3b40fa7aa0932ff510d304d95fa6",
+        "name": "Arrakis Vault V1 LYRA/WETH",
+        "symbol": "RAKIS-36",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xe790f2359cb615b6f30edd377b7f3656a92192f2",
+        "name": "Arrakis Vault V1 DAI/USDT",
+        "symbol": "RAKIS-26",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xe80c0cd204d654cebe8dd64a4857cab6be8345a3",
+        "name": "JPEG’d Governance Token",
+        "symbol": "JPEG",
+        "decimals": 18,
+        "lastPriceUSD": "0.000006"
+      },
+      {
+        "id": "0xe85bd1ed4fc14689f4f51d9549beea0d9a8b19c8",
+        "name": "Arrakis Vault V1 cETH/WETH",
+        "symbol": "RAKIS-15",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xe8c94b3c4ec695f811328a5c3cf9afd477e1294b",
+        "name": "Arrakis Vault V1 uAD/DAI",
+        "symbol": "RAKIS-2",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xe95a203b1a91a908f9b9ce46459d101078c2c3cb",
+        "name": "Ankr ETH2 Reward Bearing Certificate",
+        "symbol": "aETHc",
+        "decimals": 18,
+        "lastPriceUSD": "3059.789328"
+      },
+      {
+        "id": "0xea26d116a125385ad4f1e75b70ebcd135e59301e",
+        "name": "Gelato Uniswap GMI/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xedb171c18ce90b633db442f2a6f72874093b49ef",
+        "name": "Wrapped Ampleforth",
+        "symbol": "WAMPL",
+        "decimals": 18,
+        "lastPriceUSD": "0.48352"
+      },
+      {
+        "id": "0xedecb43233549c51cc3268b5de840239787ad56c",
+        "name": "Gelato Uniswap agEUR/USDC LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xef4c2568be52ddb79a4afa7147f15ee600b7e335",
+        "name": "Arrakis Vault V1 FAITH/MILAREPA",
+        "symbol": "RAKIS-4",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xf1b99e3e573a1a9c5e6b2ce818b617f0e664e86b",
+        "name": "Opyn Squeeth",
+        "symbol": "oSQTH",
+        "decimals": 18,
+        "lastPriceUSD": "81.156779"
+      },
+      {
+        "id": "0xf331e8ff24ff56544c11ca680f84a2db75acf917",
+        "name": "Gelato Uniswap sILV2/WETH LP",
+        "symbol": "G-UNI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xf3b9569f82b18aef890de263b84189bd33ebe452",
+        "name": "A Hunters Dream",
+        "symbol": "CAW",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xf3f826edbb9781151c0cf98230a5f3f035fbb377",
+        "name": "Arrakis Vault V1 OUSD/USDT",
+        "symbol": "RAKIS-19",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xf62fab0b5a8255eb1976ca9771db23d55978d311",
+        "name": "Arrakis Vault V1 USDC/GYEN",
+        "symbol": "RAKIS-22",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xf8b735e990b32a985801e5f56ef353de9cf696e9",
+        "name": "Arrakis Vault V1 wstETH/WETH",
+        "symbol": "RAKIS-10",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xf920baf4ff3e803244c680ffdd468677f50c07b7",
+        "name": "Arrakis Vault V1 USDC/CAW",
+        "symbol": "RAKIS-7",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xfd41cffa2e00ae7fc92cf3419b62ec3136e4f2b7",
+        "name": "ButtonTranche AMPL Z",
+        "symbol": "TRANCHE-AMPL-Z",
+        "decimals": 9,
+        "lastPriceUSD": "0"
+      }
+    ],
+    "_meta": {
+      "block": {
+        "number": 25903086,
+        "timestamp": null
+      },
+      "deployment": "QmbmeihANx6cyZB7UxWkzTGeMg7XpdW5DVnjtvuJZj6Hnx",
+      "hasIndexingErrors": false
+    }
+  }
+}

@@ -42,6 +42,15 @@ const HELD_OUT_FRACTION = 0.20;
  * is a bucket whose ratio nobody agreed to.
  */
 const BUCKETS = { headline: 120, korean: 40, ceiling: 40, tripwire: 30, multihop: 20 };
+
+/**
+ * The share of the study's facts any single relation may occupy (README §1). Declared here, before any model
+ * runs, for the same reason the bucket sizes are: whoever decides the relation mix decides what the
+ * pre-registered ordering is a claim ABOUT, and that is a pre-registration question rather than a sampling
+ * detail. 0.30 of 120 is a ceiling of 36 facts; the round-robin below usually lands well under it and the cap
+ * exists to bound the worst case when only a few relations have depth.
+ */
+const RELATION_CAP = 0.30;
 /** Two TVLs must differ by at least this much before a "which is bigger" item is emitted, so the ordering
  *  cannot flip on the noise the plus/minus 1% scorer tolerance already admits. */
 const COMPARE_MARGIN = 0.20;
@@ -212,7 +221,46 @@ export function generate(runid) {
   const taughtHop1 = clean.filter((it) => it.taught && it.hop === 1);
   const factsWithAllForms = [...new Set(taughtHop1.filter((it) => it.form === 'E1').map(byFact))]
     .filter((fid) => ['E1', 'E2', 'P'].every((form) => taughtHop1.some((it) => byFact(it) === fid && it.form === form)));
-  const studyFacts = pick(factsWithAllForms.map((id) => ({ id })), BUCKETS.headline, 'study').map((x) => x.id);
+  // RELATION STRATIFICATION. Bucket-stratification cannot see relation skew, because the dominant relation
+  // saturates every bucket equally. The fact universe is ~85% pool_tokens ("which tokens are in this pool"),
+  // so an unconstrained seeded pick of 120 study facts reproduces that skew: the first run of this sampler
+  // produced a 250-item study that was 200 pool_tokens items, all with 2-element list answers. The headline
+  // ordering would then have been a claim about ONE relation wearing the clothes of a claim about compiled
+  // memory, and the address-hallucination diagnostic would have rested on 12 items (Wilson +/-25 points).
+  // So the study facts are drawn round-robin across relations, which is as even as the pool allows, with a
+  // declared ceiling no relation may exceed. A relation that cannot fill its turn is skipped and the achieved
+  // mix is written to split.json — the study covers the relations it actually covers, at the counts it
+  // actually reached, rather than letting the largest family stand in for the domain.
+  const relOf = (fid) => String(fid).split(':')[0];
+  const capPerRelation = Math.floor(RELATION_CAP * BUCKETS.headline);
+  const byRelation = new Map();
+  for (const fid of factsWithAllForms) {
+    const r = relOf(fid);
+    if (!byRelation.has(r)) byRelation.set(r, []);
+    byRelation.get(r).push(fid);
+  }
+  // Sorted by relation name, and each relation's own order seeded — so the mix is a pure function of the seed.
+  const relOrder = [...byRelation.keys()].sort();
+  for (const r of relOrder) byRelation.get(r).sort((a, b) => rand01('study', a) - rand01('study', b));
+  const studyFacts = [];
+  const taken = new Map(relOrder.map((r) => [r, 0]));
+  for (let round = 0; studyFacts.length < BUCKETS.headline; round++) {
+    let progressed = false;
+    for (const r of relOrder) {
+      if (studyFacts.length >= BUCKETS.headline) break;
+      const avail = byRelation.get(r);
+      const t = taken.get(r);
+      if (t >= avail.length || t >= capPerRelation) continue;
+      studyFacts.push(avail[t]);
+      taken.set(r, t + 1);
+      progressed = true;
+    }
+    if (!progressed) break;   // every relation is exhausted or at its ceiling; report the shortfall
+  }
+  const relationsSampled = Object.fromEntries(relOrder.map((r) => [r, taken.get(r)]).filter(([, n]) => n > 0));
+  if (studyFacts.length < BUCKETS.headline) {
+    console.log(`WARNING: study facts ${studyFacts.length}/${BUCKETS.headline} — every relation is exhausted or at the ${capPerRelation}-fact ceiling. Report the shortfall; do not raise the cap to reach a round number.`);
+  }
   const studySet = new Set(studyFacts);
   const fromStudy = (form, n, salt) => pick(taughtHop1.filter((it) => it.form === form && studySet.has(byFact(it))), n, salt);
 
@@ -244,6 +292,10 @@ export function generate(runid) {
     facts: facts.length, held_out_facts: heldOut.size, items: items.length, train_rows: train.length,
     buckets_declared: BUCKETS,
     buckets_sampled: Object.fromEntries(Object.entries(buckets).map(([k, v]) => [k, v.length])),
+    relation_cap: RELATION_CAP,
+    relation_cap_facts: Math.floor(RELATION_CAP * BUCKETS.headline),
+    relations_sampled: relationsSampled,
+    relations_available: Object.fromEntries([...byRelation.entries()].map(([r, v]) => [r, v.length]).sort()),
     pool_size: pool.length, pool_clean: clean.length, dropped_answer_in_question: leaky.length,
     pool_by_bucket: {
       headline: pool.filter((it) => it.form === 'E1' && it.taught && it.hop === 1).length,
