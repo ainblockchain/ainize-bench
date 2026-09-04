@@ -143,3 +143,50 @@ test('the trainer contrast set is disjoint from the shipped publish gate', { ski
   }
   assert.deepEqual(bad, [], 'a patch trained with this contrast set is optimised to pass part of its own publish gate');
 });
+
+/**
+ * THE STUDY'S OWN REVERSAL CHECK — the validity-critical one, and the reason it lives beside the locality
+ * assertions rather than in the runner: it is the same defect class, and it was found by pointing the
+ * locality set's check at the study.
+ *
+ * §1 makes arm C FAILING the held-out facts the experiment's own validity condition ("if it does not, the run
+ * is void"). A tripwire item whose inverse is taught could be answered by reversal rather than by knowledge,
+ * and it would fail in the direction we expect — so a void would look like leakage, or leakage like a pass,
+ * with nothing in the output to distinguish them. Measured zero, not assumed zero.
+ *
+ * The universe is every fact the STUDY touches (186), not the 120 trained ones. A check walking only the
+ * trainset cannot see a pair whose second member is a held-out fact or a hop-2 operand, which is exactly how
+ * this was under-counted at 3 before it was reconciled to 5.
+ *
+ * The bidirectional pairs that DO exist are declared, not removed. Both members of a pair are legitimately
+ * taught and legitimately asked, so arm C answering them earns no unearned credit; what is overstated is the
+ * corpus's INDEPENDENCE — 186 study facts span 184 distinct pairs — and that is a sentence a reader can check
+ * against the data rather than a caveat they have to trust.
+ */
+const questions = rd(join(BENCH, 'data', 'r1', 'questions.jsonl'));
+const factById = new Map(facts.map((f) => [f.fact_id, f]));
+const studyUniverse = [...new Set(questions.flatMap((x) => x.fact_ids ?? []))];
+const pairKey = (f) => [N(f.subject), N(f.object)].sort().join(' | ');
+const bucketOf = (x) => (x.hop === 2 ? 'multihop' : !x.taught ? 'tripwire' : x.form === 'E1' ? 'headline' : x.form === 'E2' ? 'korean' : 'ceiling');
+
+test('every fact the study references resolves, so the pair check cannot pass vacuously', () => {
+  assert.deepEqual(studyUniverse.filter((id) => !factById.has(id)), [], 'unresolved fact ids would make the reversal check partial while still reporting a number');
+  assert.ok(studyUniverse.length > 150, `expected the study to touch ~186 facts; got ${studyUniverse.length}`);
+});
+
+test('no TRIPWIRE item can be answered by reversing a fact the study teaches', () => {
+  const byPair = new Map();
+  for (const id of studyUniverse) { const f = factById.get(id); const k = pairKey(f); if (!byPair.has(k)) byPair.set(k, []); byPair.get(k).push(f); }
+  const bidirectional = new Set([...byPair.values()].filter((v) => v.length > 1).flatMap((v) => v.map((f) => f.fact_id)));
+  const tripwireHits = questions.filter((x) => bucketOf(x) === 'tripwire' && (x.fact_ids ?? []).some((fid) => bidirectional.has(fid)));
+  assert.deepEqual(tripwireHits.map((x) => x.id), [], 'a held-out item answerable by reversal makes the void condition unreadable: a void would look like leakage and leakage like a pass');
+});
+
+test('the declared bidirectional pair count still matches the data', () => {
+  const byPair = new Map();
+  for (const id of studyUniverse) { const f = factById.get(id); const k = pairKey(f); if (!byPair.has(k)) byPair.set(k, []); byPair.get(k).push(f); }
+  // A Map keyed by pair would OVERWRITE here, blinding the detector to the thing it detects. List per pair.
+  const bidirectional = [...byPair.values()].filter((v) => v.length > 1);
+  assert.equal(bidirectional.length, 2, 'the number of both-direction pairs changed - update §1 rather than this assertion');
+  assert.equal(byPair.size, studyUniverse.length - 2, 'distinct pairs should be the fact count less one per bidirectional pair');
+});
