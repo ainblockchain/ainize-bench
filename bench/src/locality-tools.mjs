@@ -260,6 +260,11 @@ export async function askOne({ vllm, mcp, runToolLoop, cell, system, item }) {
       final: r.error ? '' : (r.content ?? ''), error: r.error ?? null,
       latency_ms: Date.now() - t0, model_ms: r.ms ?? null,
       usage: r.usage ?? null,
+      // finish_reason decides how a short answer reads. "The" at 2 completion tokens is a degenerate answer
+      // if the model chose to stop, and a truncation artefact if something else ended the generation - the
+      // first is damage, the second is formatting, and they call for opposite write-ups. One field, and
+      // without it the unit cannot be interpreted at all.
+      finish_reason: r.finishReason ?? null,
       evidence: { tool_calls: 0, tool_targets: [], tool_errors: 0, context_exhausted: false, forced_final: false },
     };
   }
@@ -268,6 +273,7 @@ export async function askOne({ vllm, mcp, runToolLoop, cell, system, item }) {
     final: r.final ?? '', error: r.error ?? null,
     latency_ms: Date.now() - t0, model_ms: r.ev?.model_ms ?? null,
     usage: r.turns?.map((t) => t.usage).filter(Boolean).at(-1) ?? null,
+    finish_reason: r.turns?.at(-1)?.finish_reason ?? r.turns?.at(-1)?.finishReason ?? null,
     evidence: r.ev ?? {},
     turns: r.turns?.length ?? 0,
   };
