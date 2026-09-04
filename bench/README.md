@@ -246,6 +246,36 @@ whole thesis dies if a judge can say "you strawmanned The Graph".
 - **Budget: 8 tool calls / 10 assistant turns / 90 s wall clock per item**, then one final turn forced to
   answer with what it has. Actual usage is recorded — if the median item uses 2 calls, the budget was not the
   binding constraint and the summary states that.
+
+  **Measured 2026-09-04, with the rule for changing it fixed here before the re-measurement.** On the first
+  16 completions the call distribution was {6:1, 8:13, 9:2} against a cap of 8, the final turn was forced on
+  15 of 16, and only 4 of 16 committed to an answer while 8 of 16 had already received real rows. A tool arm
+  cut off mid-investigation on 94% of items measures our budget, not whether tool loops lose facts — the same
+  structural objection that took down the 8 192-token window, and one this section's own standard forbids.
+
+  That measurement is kept as a RESULT rather than discarded: *at 8 calls and 90 s a tool arm is cut off
+  mid-investigation on 94% of items, holding data it had no budget left to filter.* It is a real cost of the
+  tool path, it belongs beside the latency numbers, and it is the honest provenance for changing the budget.
+
+  But part of that spend was ours. The prompt told the model it need not read schemas because the deployments
+  share one Messari schema, and handed it a `vaults`-shaped worked example — while the study spans Vault
+  (117 items), Market (47) and LiquidityPool (45), whose fields differ. `Type Market has no field symbol` is
+  not exploration; it is a model paying tool calls to discover that a claim in our own prompt was untrue.
+  Sizing a pre-registered parameter around our own defect would buy room for the defect and hide it, so the
+  prompt is corrected first and the budget re-measured against the corrected one.
+
+  **The decision rule, fixed now:**
+  1. Re-measure one chunk on the corrected prompt. If it still pins at the cap — median 8, or the final turn
+     forced on ≥ 50% of items — the budget rises to **20 calls / 240 s**. The wall clock rises WITH the call
+     count: at 20 calls a 90 s cap becomes the new binding constraint, which would move the strawman rather
+     than remove it.
+  2. **One raise only.** If 20 also binds, the summary reports "arm B is budget-limited at 20 calls" as a
+     finding and the budget is not raised again. Otherwise every raise is justified by the argument that
+     justified the last one, and there is no principled stopping point.
+  3. **"Not binding" is defined now, not afterwards:** median ≤ 12 of 20 AND the final turn forced on fewer
+     than 25% of items. Both, so neither statistic can be chosen for reading well.
+  4. **Arm D takes the same budget.** D carries the tools too, and raising only B would confound the D-vs-B
+     comparison with a parameter difference.
 - **Retries.** One retry on a transport error (5xx, timeout, connection reset). Never a retry because the
   answer was wrong. Retries are counted.
 - **Running out of window is a MISS, never an `error`.** Measured while building the runner: three tool calls
