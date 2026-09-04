@@ -229,8 +229,8 @@ export function verdictFor(t) {
   const turns = t.turns ?? [];
   const completed = turns.some((x) => x && x.response && !x.error);
 
-  if (t.error) return { verdict: 'error', partial: 0, reason: `transport: ${String(t.error).slice(0, 200)}`, empty: true };
   if (!final.trim()) {
+    if (t.error) return { verdict: 'error', partial: 0, reason: `transport: ${String(t.error).slice(0, 200)}`, empty: true };
     if (t.evidence?.context_exhausted) {
       return { verdict: 'wrong', partial: 0, empty: true, forced_miss: 'context_exhausted',
         reason: 'context_exhausted with an empty final — §3: running out of window is a MISS, never an error' };
@@ -239,8 +239,14 @@ export function verdictFor(t) {
     return { verdict: 'wrong', partial: 0, empty: true, forced_miss: 'empty_final',
       reason: 'an answering turn completed and returned an empty answer — a miss, not a transport error' };
   }
+  // There IS an answer. It is scored even if the runner also recorded a transport error somewhere in the
+  // item — `error` deletes a unit from the accuracy denominator (§5), and a unit that produced an answer is
+  // not a unit we get to delete. The flag travels on the row so the condition stays visible.
   const r = scoreOne(final, item);
-  return { ...r, partial: r.partial ?? (r.verdict === 'hit' ? 1 : 0), empty: false };
+  return {
+    ...r, partial: r.partial ?? (r.verdict === 'hit' ? 1 : 0), empty: false,
+    ...(t.error ? { transport_error_but_answered: String(t.error).slice(0, 200) } : {}),
+  };
 }
 
 /**
@@ -269,14 +275,27 @@ export function missChannel(t) {
 
   if ((ev.tool_calls ?? 0) === 0) return { channel: 'skipped', note };
 
-  const onTarget = executed.filter((r) => wanted.includes(r.target));
-  if (!onTarget.length) {
-    note.executed_queries = executed.length;
-    note.targets = [...new Set(executed.map((r) => r.target))];
-    note.wanted = wanted;
-    if (!executed.length) note.detail = 'tool calls were made but no query was ever executed';
-    if (!wanted.length) note.detail = 'the item carries neither source_ids nor source.deployment_id';
+  if (!executed.length) {
+    note.executed_queries = 0;
+    note.detail = 'tool calls were made but no query was ever executed';
     return { channel: 'wrong_subgraph', note };
+  }
+  // The targeting rung needs the item to say where its answer lives. When it does not — a row that carries
+  // neither `source_ids` nor `source.deployment_id` — the miss is NOT charged to `wrong_subgraph`: that
+  // channel blames the agent for aiming badly, and an item with no declared deployment gives it nothing to
+  // aim at. That is our metadata defect, not arm B's, so the item falls through to the channels that can
+  // still be decided from the transcript and the defect is counted at the top of the summary.
+  if (!wanted.length) {
+    note.no_source_ids = true;
+    note.detail = 'the item carries neither source_ids nor source.deployment_id — targeting could not be judged';
+  } else {
+    const onTarget = executed.filter((r) => wanted.includes(r.target));
+    if (!onTarget.length) {
+      note.executed_queries = executed.length;
+      note.targets = [...new Set(executed.map((r) => r.target))];
+      note.wanted = wanted;
+      return { channel: 'wrong_subgraph', note };
+    }
   }
   if (executed.every(queryFailed)) {
     note.executed_queries = executed.length;
@@ -308,6 +327,28 @@ export function missChannel(t) {
 }
 
 export const CHANNELS = ['skipped', 'wrong_subgraph', 'query_error', 'budget_exhausted', 'context_exhausted', 'truncated', 'had_it_and_still_wrong', 'ignored_result'];
+
+/**
+ * §6.3's x-axis: "N* is a curve in the number of buyers, not a scalar. Cumulative cost against question
+ * count for one buyer, ten, a hundred." These are buyer counts, not prices — no cost number lives here.
+ */
+export const BUYERS = [1, 10, 100];
+
+/**
+ * §4 discards a chunk "unwritten" when the table state was lost, so a stale transcript from a re-run is a
+ * real possibility — and it would be read as an extra unit, double-counting the item into every table that
+ * touches it. The identity of a unit is (arm, item, repeat), never the filename, so a second file claiming
+ * the same identity stops the scoring rather than being averaged in.
+ */
+export function assertNoDuplicateUnits(units) {
+  const seen = new Map();
+  for (const u of units) {
+    const k = `${u.arm}|${u.id}|${u.repeat}`;
+    if (seen.has(k)) throw new Error(`two transcripts claim (arm ${u.arm}, item ${u.id}, repeat ${u.repeat}): ${seen.get(k)} and ${u.file} — one of them is stale; remove it before scoring`);
+    seen.set(k, u.file);
+  }
+  return units.length;
+}
 
 /** A miss is any scored (non-error) unit that is not a hit: wrong + ambiguous + abstain. It is the gap. */
 export const isMiss = (verdict) => verdict === 'wrong' || verdict === 'ambiguous' || verdict === 'abstain';
@@ -421,8 +462,14 @@ export function offlineComparison(runDir) {
  * detected condition rather than a thing a reader has to take on trust.
  */
 export function checkIntegrity(transcripts, runId) {
+  // Counted whether or not the committed question set is on disk: an item that declares no deployment is a
+  // defect in the question set that the miss decomposition can SEE (it cannot judge targeting for that item,
+  // §6's `wrong_subgraph` rule), so it is reported rather than silently absorbed.
+  const orphans = [...new Set(transcripts
+    .filter((t) => !sourceIdsOf(t.question ?? {}).length)
+    .map((t) => t.question?.id ?? t._file))];
   const qf = join(BENCH, 'data', String(runId), 'questions.jsonl');
-  if (!existsSync(qf)) return { checked: false, questions_file: qf, note: 'no committed question set for this run id — the embedded rows could not be cross-checked' };
+  if (!existsSync(qf)) return { checked: false, questions_file: qf, items_without_source_ids: orphans.length, ids_without_source_ids: orphans, note: 'no committed question set for this run id — the embedded rows could not be cross-checked' };
   const want = new Map();
   for (const line of readFileSync(qf, 'utf8').split('\n').filter(Boolean)) { const r = JSON.parse(line); want.set(r.id, r); }
   const mismatches = [], unknown = [];
@@ -431,7 +478,7 @@ export function checkIntegrity(transcripts, runId) {
     if (!w) { unknown.push(q?.id ?? t._file); continue; }
     if (JSON.stringify(w.truth) !== JSON.stringify(q.truth) || w.answer_type !== q.answer_type || w.question !== q.question) mismatches.push({ id: q.id, file: t._file });
   }
-  return { checked: true, questions_file: qf, mismatches, unknown_ids: [...new Set(unknown)], ok: !mismatches.length && !unknown.length };
+  return { checked: true, questions_file: qf, mismatches, unknown_ids: [...new Set(unknown)], items_without_source_ids: orphans.length, ids_without_source_ids: orphans, ok: !mismatches.length && !unknown.length };
 }
 
 /**
@@ -451,6 +498,7 @@ export function provenanceStamps(provenance) {
 }
 
 export function summarize({ units, transcripts, provenance, pricing, pricingPath, runDir, runId }) {
+  assertNoDuplicateUnits(units);
   const arms = [...new Set(units.map((u) => u.arm))].sort((a, b) => ARM_ORDER.indexOf(a) - ARM_ORDER.indexOf(b));
   const byArm = groupBy(units, (u) => u.arm);
 
@@ -500,6 +548,12 @@ export function summarize({ units, transcripts, provenance, pricing, pricingPath
     const sum = (f) => rows.reduce((a, r) => a + (f(r) ?? 0), 0);
     const priced = rows.filter((r) => r.cost_usd != null);
     const mean = (f, src = rows) => (src.length ? src.reduce((a, r) => a + (f(r) ?? 0), 0) / src.length : null);
+    // A quantity that was never recorded is NOT a zero. Averaging a missing wall clock as 0 ms makes the arm
+    // that failed look faster than the arm that did not, and src/chart.mjs has always filtered non-finite
+    // values out of its own mean — so the two files would print different numbers for the same run with
+    // nothing to catch it. Counts are different: a unit that made no tool call really made zero.
+    const meanOf = (f) => { const xs = rows.map(f).filter((x) => typeof x === 'number' && Number.isFinite(x)); return xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : null; };
+    const missing = (f) => rows.filter((r) => !Number.isFinite(f(r))).length;
     perArm[arm] = {
       units: rows.length,
       overall: { stable_subset: accuracyBlock(stableOnly(all)), all_items: accuracyBlock(all) },
@@ -526,7 +580,12 @@ export function summarize({ units, transcripts, provenance, pricing, pricingPath
         forced_final_units: rows.filter((r) => r.forced_final).length,
         retries_total: sum((r) => r.retries), tool_errors_total: sum((r) => r.tool_errors),
       },
-      timing: { latency_ms_mean: mean((r) => r.latency_ms), model_ms_mean: mean((r) => r.model_ms), latency_ms_median: median(rows.map((r) => r.latency_ms ?? 0)) },
+      timing: {
+        latency_ms_mean: meanOf((r) => r.latency_ms), model_ms_mean: meanOf((r) => r.model_ms),
+        latency_ms_median: median(rows.map((r) => r.latency_ms)),
+        units_without_latency: missing((r) => r.latency_ms), units_without_model_ms: missing((r) => r.model_ms),
+        basis: 'mean and median over the units that recorded the quantity; a unit that recorded none is excluded and counted beside it, never averaged in as zero',
+      },
       cost: {
         priced_units: priced.length, unpriced_units: rows.length - priced.length,
         unpriced_reason: rows.find((r) => r.cost_usd == null)?.cost_reason ?? null,
@@ -542,7 +601,12 @@ export function summarize({ units, transcripts, provenance, pricing, pricingPath
     if (!TOOL_ARMS.has(arm)) continue;
     const rows = (byArm.get(arm) ?? []).filter((r) => r.miss);
     const counts = Object.fromEntries(CHANNELS.map((c) => [c, 0]));
-    for (const r of rows) counts[r.miss_channel] = (counts[r.miss_channel] ?? 0) + 1;
+    for (const r of rows) {
+      // An invented channel would still make the totals agree while vanishing from the eight printed rows —
+      // a table that silently does not add up. Rule 3 is exhaustive AND exclusive over §6's eight.
+      if (!CHANNELS.includes(r.miss_channel)) throw new Error(`arm ${arm}: miss ${r.id}.${r.repeat} is assigned to "${r.miss_channel}", which is not one of §6's eight channels`);
+      counts[r.miss_channel] = (counts[r.miss_channel] ?? 0) + 1;
+    }
     const total = Object.values(counts).reduce((a, b) => a + b, 0);
     missChannels[arm] = {
       unit: '(item, repeat)',
@@ -627,25 +691,92 @@ export function summarize({ units, transcripts, provenance, pricing, pricingPath
     return { claim: 'A ≪ B < C < D', measured_on: 'E1+E2, stable subset', steps, holds: steps.every((s) => s.holds === true) };
   })();
 
-  // §6's break-even. The price is read from pricing.json; when it is not set, N* is NOT invented.
+  // §6's break-even, in the form §6 actually asks for: "N* is a curve in the number of buyers, not a
+  // scalar. Cumulative cost against question count for one buyer, ten, a hundred — with the single-buyer
+  // line shown even where it never crosses." The scalar alone is the flattering half of that sentence: it
+  // silently assumes the one-time price is shared, and §6.2 requires the UNSHARED number to be reported
+  // first and plainly. Every price still comes from pricing.json; BUYERS is an axis, not a cost.
   const cpq = (arm) => perArm[arm]?.cost?.per_question_usd ?? null;
   const kprice = pricing?.knowledge?.price;
   const breakEven = (() => {
     const b = cpq('B'), c = cpq('C');
-    const base = { formula: 'N* = knowledge_price / (cost_per_question_B − cost_per_question_C)', cost_per_question_B: b, cost_per_question_C: c, knowledge_price: kprice ?? null, currency: pricing?.knowledge?.currency ?? null, pricing_file: pricingPath };
-    if (b == null || c == null) return { ...base, n_star: null, reason: 'arms B and C must both be scored and priced' };
+    const training = pricing?.knowledge?.training_usd ?? null;
+    const base = {
+      formula: 'N*(k buyers) = (knowledge_price / k) / (cost_per_question_B − cost_per_question_C)',
+      cost_per_question_B: b, cost_per_question_C: c, knowledge_price: kprice ?? null,
+      currency: pricing?.knowledge?.currency ?? null, pricing_file: pricingPath, buyers_axis: BUYERS,
+      training_cost_usd: training,
+      training_note: training == null
+        ? 'pricing.json declares no knowledge.training_usd, so the fixed cost of PRODUCING the knowledge (§6.1: the measured cold load, the baseline generations and the contrast probes, not the step time) is not priced into N* here. N* prices the catalog anchor only.'
+        : 'the fixed cost of producing the knowledge, read from pricing.json (§6.1: the measured one, not the step time)',
+      amortisation_note: 'Two different claims, and only one of them is ours (§6.2). For a SINGLE user training their own patch the fixed cost is not amortised at all and the break-even is genuinely poor; for a marketplace the patch is trained once and applied by every node that buys it, so the one-time price divides by the number of buyers while the per-question saving does not. The single-buyer row is printed first for that reason, and it is printed even where it never crosses.',
+    };
+    if (b == null || c == null) return { ...base, n_star: null, per_buyer: [], reason: 'arms B and C must both be scored and priced' };
     const delta = b - c;
-    if (delta <= 0) return { ...base, delta_usd_per_question: delta, n_star: null, reason: 'arm B is not more expensive per question than arm C — there is no break-even to compute' };
-    if (typeof kprice !== 'number') return { ...base, delta_usd_per_question: delta, n_star: null, reason: 'pricing.json carries no knowledge.price' };
-    return { ...base, delta_usd_per_question: delta, n_star: kprice / delta, reason: null };
+    if (delta <= 0) return { ...base, delta_usd_per_question: delta, n_star: null, per_buyer: BUYERS.map((k) => ({ buyers: k, price_per_buyer: typeof kprice === 'number' ? kprice / k : null, n_star: null })), reason: 'arm B is not more expensive per question than arm C — there is no break-even to compute' };
+    if (typeof kprice !== 'number') return { ...base, delta_usd_per_question: delta, n_star: null, per_buyer: BUYERS.map((k) => ({ buyers: k, price_per_buyer: null, n_star: null })), reason: 'pricing.json carries no knowledge.price' };
+    return {
+      ...base, delta_usd_per_question: delta, n_star: kprice / delta, reason: null,
+      per_buyer: BUYERS.map((k) => ({ buyers: k, price_per_buyer: kprice / k, n_star: (kprice / k) / delta })),
+    };
   })();
+
+  // §6: "Setup is separated from inference, like every other cost here. Applying a patch takes seconds and
+  // happens once per node, so arm C's apply time is recorded separately from its per-item latency." It is
+  // read, never estimated: an unmeasured load says it is unmeasured. src/chart.mjs resolves it in the same
+  // order, and draws an ESTIMATE band with a stamp when nothing here answers.
+  const setup = (() => {
+    const f = join(runDir, 'knowledge-load.json');
+    const rule = 'runs/<id>/knowledge-load.json → provenance.knowledge_load_ms → provenance.patch.load_ms / apply_ms';
+    if (existsSync(f)) {
+      const j = JSON.parse(readFileSync(f, 'utf8'));
+      const ms = j.knowledge_load_ms ?? j.ms ?? null;
+      if (typeof ms === 'number') return { knowledge_load_ms: ms, source: f, rule, note: 'measured once per node, excluded from every per-item latency' };
+    }
+    const ms = provenance?.knowledge_load_ms ?? provenance?.patch?.load_ms ?? provenance?.patch?.apply_ms ?? null;
+    if (typeof ms === 'number') return { knowledge_load_ms: ms, source: 'provenance.json', rule, note: 'measured once per node, excluded from every per-item latency' };
+    return { knowledge_load_ms: null, source: null, rule, note: 'not recorded by this run — the one-time knowledge load was not measured, and no number is invented in its place' };
+  })();
+
+  // §3: "Actual usage is recorded — if the median item uses 2 calls, the budget was not the binding
+  // constraint and the summary states that." Stated, not gestured at, and the cap is read from the run's
+  // own provenance rather than typed in here.
+  const cap = provenance?.budget ?? null;
+  const budgetAnswer = arms.filter((a) => TOOL_ARMS.has(a)).map((arm) => {
+    const rows = byArm.get(arm) ?? [];
+    const med = median(rows.map((r) => r.tool_calls));
+    const hit = rows.filter((r) => r.budget_exhausted).length;
+    const binding = cap?.toolCalls != null && med != null ? med >= cap.toolCalls : null;
+    return {
+      arm, median_tool_calls: med, cap_tool_calls: cap?.toolCalls ?? null, cap_turns: cap?.turns ?? null, cap_wall_ms: cap?.wallMs ?? null,
+      units_that_hit_a_cap: hit, units: rows.length,
+      verdict: binding == null ? 'the run recorded no budget in provenance.json, so the cap cannot be compared to the usage'
+        : binding ? 'the cap WAS the binding constraint for the median item' : 'the cap was NOT the binding constraint for the median item',
+    };
+  });
 
   const stamps = provenanceStamps(provenance);
   const integrity = checkIntegrity(transcripts, runId);
   if (integrity.checked && !integrity.ok) stamps.push(`INTEGRITY: ${integrity.mismatches.length} transcript(s) carry a question row that does not match data/${runId}/questions.jsonl, and ${integrity.unknown_ids.length} id(s) are not in it`);
+  if (integrity.items_without_source_ids) stamps.push(`${integrity.items_without_source_ids} item(s) declare neither \`source_ids\` nor \`source.deployment_id\`: targeting cannot be judged for them, so their misses are NOT charged to \`wrong_subgraph\` (${integrity.ids_without_source_ids.slice(0, 5).join(', ')})`);
   if (VOID) stamps.unshift('RUN VOID — see the leakage tripwire');
 
   const bucketCounts = Object.fromEntries(BUCKETS.map((b) => [b, [...itemMeta.values()].filter((i) => i.bucket === b).length]));
+  // An item in no declared bucket would be inside `overall` and inside no bucket row, so the bucket rows
+  // would quietly stop adding up to the item count. Counted, named and stamped instead.
+  const unclassified = [...itemMeta.values()].filter((i) => !BUCKETS.includes(i.bucket)).map((i) => i.id).sort();
+  if (unclassified.length) stamps.push(`${unclassified.length} item(s) fall in no bucket §1 declares, so the bucket rows do not add up to the item count: ${unclassified.slice(0, 5).join(', ')}`);
+  // §1's comparison is PAIRED — "all arms answer the same items". An arm missing items is otherwise averaged
+  // into the same table beside arms that answered everything.
+  const allIds = [...items.keys()];
+  const itemSetMismatch = {};
+  for (const arm of arms) {
+    const missing = allIds.filter((id) => !items.get(id)[arm]);
+    if (missing.length) itemSetMismatch[arm] = { n_missing: missing.length, missing: missing.sort() };
+  }
+  if (Object.keys(itemSetMismatch).length) {
+    stamps.push(`the arms did not answer the same item set — ${Object.entries(itemSetMismatch).map(([a, x]) => `${a} is missing ${x.n_missing}`).join(', ')}; §1's paired comparison holds only over the items both arms answered`);
+  }
 
   return {
     VOID, void_reasons,
@@ -656,8 +787,14 @@ export function summarize({ units, transcripts, provenance, pricing, pricingPath
     falsifiers,
     unit_note: 'The unit of every accuracy, interval and paired test is the ITEM (§1 sizes the Wilson interval at n = 120 items). An item counts as a hit only if every non-error repeat of it was a hit. `unit_accuracy_all_repeats` and `split_items` are the (item, repeat)-level view beside it. The miss decomposition is (item, repeat)-level and says so in its own block.',
     fact_coherence_note: 'The headline (E1), Korean (E2) and ceiling (P) buckets ask about the SAME 120 facts. Those three buckets are within-fact comparisons of PHRASING, not three independent fact sets — the P-to-E1 gap is the generalisation cost on one fact set, and reading it as a comparison across fact sets is wrong.',
-    counts: { transcripts: transcripts.length, units: units.length, items: items.size, arms, by_bucket: bucketCounts },
+    counts: {
+      transcripts: transcripts.length, units: units.length, items: items.size, arms, by_bucket: bucketCounts,
+      unclassified_items: unclassified.length, unclassified_ids: unclassified,
+      item_set_mismatch: Object.keys(itemSetMismatch).length ? itemSetMismatch : null,
+    },
     integrity,
+    setup,
+    budget: { cap: cap, per_arm: budgetAnswer },
     offline: offlineComparison(runDir),
     stability: { unstable_items: unstable.size, unstable_ids: [...unstable].sort(), basis: 'the two arm-A repeats of the item produced different normalised answers (§2)' },
     arms: perArm,
@@ -835,7 +972,23 @@ export function renderMarkdown(s) {
   p(table(['Arm', 'truncated units', 'context_exhausted units', 'budget_exhausted units', 'forced finals', 'retries', 'tool errors'],
     arms.map((a) => { const t = s.arms[a].tools; return [a, t.truncated_units, t.context_exhausted_units, t.budget_exhausted_units, t.forced_final_units, t.retries_total, t.tool_errors_total]; })));
   p();
-  p('§3 asks for the budget question to be answered rather than assumed: if the median item used far fewer than 8 calls, the budget was not the binding constraint, and the median column above says so either way.');
+  p('**Setup is separated from inference (§6)** — applying a patch happens once per node, so it is never folded into a per-item latency.');
+  p();
+  p(table(['', 'value', 'source'], [
+    ['one-time knowledge load (arms C and D)', s.setup.knowledge_load_ms == null ? '**not recorded**' : `${fmtNum(s.setup.knowledge_load_ms, 0)} ms`, s.setup.source ?? s.setup.note],
+    ['resolution order', s.setup.rule, 'the same order `src/chart.mjs` uses'],
+  ]));
+  p();
+  p('**The budget question, answered (§3)** — "if the median item uses 2 calls, the budget was not the binding constraint and the summary states that". The cap is read from this run\'s own `provenance.json`.');
+  p();
+  if (!s.budget.per_arm.length) p('No tool arm was scored in this run, so no budget was in force.');
+  else {
+    p(table(['Arm', 'median tool calls', 'cap (calls / turns / wall)', 'units that hit a cap', 'verdict'], s.budget.per_arm.map((b) => [
+      b.arm, fmtNum(b.median_tool_calls, 1),
+      b.cap_tool_calls == null ? '—' : `${b.cap_tool_calls} / ${b.cap_turns} / ${fmtNum((b.cap_wall_ms ?? 0) / 1000, 0)} s`,
+      `${b.units_that_hit_a_cap} / ${b.units}`, `**${b.verdict}**`,
+    ])));
+  }
   p();
 
   p('## 5. Break-even — how many questions before buying the knowledge is cheaper');
@@ -852,7 +1005,19 @@ export function renderMarkdown(s) {
   ]));
   p();
   if (be.n_star == null) p(`N\\* is left uncomputed because ${be.reason}. Nothing is assumed in its place: §6 allows no cost number that was not read from \`${be.pricing_file}\`.`);
-  else p(`After **${Math.ceil(be.n_star)} questions**, buying the knowledge once is cheaper than querying every time at these list prices. Change a price in \`${be.pricing_file}\` and re-run \`node src/score.mjs\`: this number and every cost cell above move with it.`);
+  else p(`After **${Math.ceil(be.n_star)} questions**, one buyer paying the whole price once is cheaper than querying every time at these list prices. Change a price in \`${be.pricing_file}\` and re-run \`node src/score.mjs\`: this number and every cost cell above move with it.`);
+  p();
+  p('### N\\* is a curve in the number of buyers, not a scalar (§6.3)');
+  p();
+  p(be.amortisation_note);
+  p();
+  p(table(['buyers sharing the one-time price', 'price each pays', 'N\\* — questions before buying beats querying'], (be.per_buyer ?? []).map((x) => [
+    x.buyers === 1 ? '**1 — a single user training their own patch**' : `${x.buyers}`,
+    x.price_per_buyer == null ? '**not set**' : `${x.price_per_buyer} ${be.currency ?? ''}`,
+    x.n_star == null ? '**not computed**' : `${Math.ceil(x.n_star)}`,
+  ])));
+  p();
+  p(`The single-buyer row is printed first and is printed even where it never crosses, because §6.2 requires the unflattering claim to carry the flattering one: for one user training their own patch, the GPU hours §6.1 measures are not a trade anyone makes to answer this many questions faster, and the marketplace number is only credible standing next to that. ${be.training_note}`);
   p();
   p(`Prices used: input ${s.pricing.model?.usd_per_1m_input_tokens ?? '—'} / 1M, output ${s.pricing.model?.usd_per_1m_output_tokens ?? '—'} / 1M, gateway ${s.pricing.graph?.usd_per_query ?? '—'} per query. ${s.pricing.model?.source ?? ''}`);
   p();
@@ -872,6 +1037,9 @@ export function renderMarkdown(s) {
     ['max_model_len', s.provenance?.max_model_len ?? '—'],
     ['patch backend / real training', s.provenance ? `${s.provenance.patch?.backend ?? '—'} / ${s.provenance.patch?.real_training ?? '—'}` : '—'],
     ['git commit', s.provenance?.git_commit ?? '—'],
+    ['the 50-prompt side-effect table (§6), all four cells', existsSync(join(s.run_dir, 'locality.json')) ? `present at \`runs/${s.run}/locality.json\`` : `**absent** — produced by \`src/locality.mjs\` and \`src/locality-tools.mjs\`, not by this scorer, and not present for this run`],
+    ['items in no declared bucket', s.counts.unclassified_items ? `**${s.counts.unclassified_items}** — ${s.counts.unclassified_ids.slice(0, 5).join(', ')}` : '0'],
+    ['arms answering different item sets (§1 is paired)', s.counts.item_set_mismatch ? `**${Object.entries(s.counts.item_set_mismatch).map(([a, x]) => `${a}: ${x.n_missing} missing`).join(', ')}**` : 'no — every arm answered every item'],
     ['embedded question rows checked against the committed set', s.integrity.checked ? (s.integrity.ok ? 'yes — all match' : `**${s.integrity.mismatches.length} mismatch(es), ${s.integrity.unknown_ids.length} unknown id(s)**`) : 'not checked (no committed question set for this run id)'],
   ]));
   p();
@@ -890,6 +1058,10 @@ export function renderMarkdown(s) {
   p('- **`wrong_subgraph` is judged over `source_ids[]`**, every deployment a fair query could have targeted, falling back to `[source.deployment_id]` for rows that predate that field. For a hop-2 join, querying either operand\'s subgraph is legitimate work.');
   p('- **The item, not the repeat, is the statistical unit**, and an item counts as a hit only if every non-error repeat was a hit. §1 sizes its intervals at n = 120 items.');
   p('- **`ambiguous` is a miss** in every accuracy cell and appears separately in §2.');
+  p('- **An answer that exists is scored, even when the runner also recorded a transport error.** `error` deletes a unit from the accuracy denominator (§5), and a unit that produced an answer is not a unit the scorer gets to delete; the condition travels on the row instead.');
+  p('- **A missing wall clock is not a zero.** Latency and model time are averaged over the units that recorded them, and the units that did not are counted beside the mean (§4) rather than pulling it down.');
+  p('- **An item that declares no deployment is not charged to `wrong_subgraph`.** That channel blames the agent for aiming badly, and an item carrying neither `source_ids` nor `source.deployment_id` gives it nothing to aim at; the count is stamped at the top of this file instead.');
+  p('- **`guard_verdict` is listed in §6\'s per-unit field list and no transcript carries one.** The runner declares `sampling.guard: false` (`provenance.json`), so no guard ran and there is no verdict to report; the field is absent rather than filled with a default. If a guard is ever enabled, this scorer must be extended before the column can be quoted.');
   p();
   return L.join('\n');
 }
