@@ -198,7 +198,16 @@ ok('cost chart: arm B’s measured cost per question is on the chart', cost.incl
 ok('cost chart: arm C’s measured cost per question is on the chart', cost.includes(fmtUsd(cC)));
 ok('cost chart: the difference the break-even divides by is printed', cost.includes(fmtUsd(cB - cC)));
 ok('cost chart: the one-time price is read from pricing.json and shown as such', cost.includes('5 USD') && cost.includes('knowledge.price'));
-ok('cost chart: N* is drawn where the two lines cross, and it is the price ÷ the measured difference', cost.includes(`N* = ${fmtQ(nstar)} questions`));
+ok('cost chart: N* is drawn where the two lines cross, and it is the price ÷ the measured difference', cost.includes(`N*(1) = ${fmtQ(nstar)}`));
+// §6.3: "N* is a curve in the number of buyers, not a scalar ... one buyer, ten, a hundred — with the
+// single-buyer line shown even where it never crosses." One arm-C line per buyer count, each starting from
+// the price that buyer pays, and each crossing marked.
+ok('cost chart: §6.3 — a line and a crossing per buyer count, not one scalar',
+  [1, 10, 100].every((k) => cost.includes(`N*(${k}) = ${fmtQ((5 / k) / (cB - cC))}`)));
+ok('cost chart: …and ten buyers divide the one-time price, never the per-question saving',
+  cost.includes('arm C · 10 buyers') && cost.includes('arm C · 1 buyer') && cost.includes('arm C · 100 buyers'));
+ok('cost chart: …the single-buyer line is the solid one and is named as the unflattering number (§6.2)',
+  /one buyer paying the whole price/.test(cost) && /single user training their own patch/.test(cost));
 ok('cost chart: two lines, one per arm, in the arm colours', (cost.match(/class="s-arm-B"/g) ?? []).length >= 1 && (cost.match(/class="s-arm-C"/g) ?? []).length >= 1);
 ok('cost chart: arm C’s zero gateway queries are stated, not left to be inferred', /arm C 0/.test(cost) || /arm C makes no network call/.test(cost));
 
@@ -209,12 +218,12 @@ const cost20 = render()['cost-break-even.svg'];
 const nstar20 = 20 / (cpq20('B') - cpq20('C'));
 function cpq20(arm) { const r = rowsOf().filter((x) => x.arm === arm && x.cost_usd != null); return r.reduce((a, x) => a + x.cost_usd, 0) / r.length; }
 ok('cost chart: raise the knowledge price in pricing.json and N* moves with it — nothing is hard-coded',
-  cost20.includes(`N* = ${fmtQ(nstar20)} questions`) && !cost20.includes(`N* = ${fmtQ(nstar)} questions`) && nstar20 > nstar);
+  cost20.includes(`N*(1) = ${fmtQ(nstar20)}`) && !cost20.includes(`N*(1) = ${fmtQ(nstar)}`) && nstar20 > nstar);
 writePricing({ price: null, currency: null });
 scoreRun(runDir, { pricingPath });
 const costNull = render()['cost-break-even.svg'];
 ok('cost chart: with no knowledge price set, no crossing is drawn and none is guessed',
-  /not computed/.test(costNull) && /no crossing is marked/.test(costNull) && !/N\* = [\d,.]+ questions/.test(costNull));
+  /not computed/.test(costNull) && /no crossing is marked/.test(costNull) && !/N\*\(\d+\) = /.test(costNull));
 ok('…and the per-question costs are still plotted, because those ARE measured', costNull.includes(fmtUsd(cB)) && costNull.includes(fmtUsd(cC)));
 writePricing({ price: 5, currency: 'USD' });
 scoreRun(runDir, { pricingPath });

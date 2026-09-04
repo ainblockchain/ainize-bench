@@ -757,6 +757,28 @@ const readSrc = (f) => readFileSync(join(HERE, f), 'utf8');
   t('6.27 every table in summary.md is rectangular — no row can be read off the wrong column', ragged, []);
 }
 
+{
+  // §6's four-cell table compares this run's arms against the same arms with the MCP transport failing. It
+  // is only a comparison if the two runs answered the same items under the same rules; a sibling scored over
+  // a different question set would produce four cells that look like a result and are not one.
+  const off = join(tmp, 'PLANTED-offline');
+  mkdirSync(off, { recursive: true });
+  buildRun(off);
+  rmSync(join(off, 'transcripts', 'A', 'm2.E1.0.json'));
+  rmSync(join(off, 'transcripts', 'A', 'm2.E1.1.json'));
+  for (const arm of ['B', 'C', 'D']) for (const rep of [0, 1]) rmSync(join(off, 'transcripts', arm, `m2.E1.${rep}.json`));
+  const prov = JSON.parse(readFileSync(join(off, 'provenance.json'), 'utf8'));
+  prov.offline = true;
+  writeFileSync(join(off, 'provenance.json'), JSON.stringify(prov, null, 2));
+  scoreRun(off, { pricingPath });
+  const s = scoreRun(runDir, { pricingPath }).summary;
+  ok('6.28 §6: an offline sibling scored over a different item set is stamped NOT comparable, not printed as four cells',
+    s.offline.available && s.offline.comparable === false && /NOT comparable/.test(s.stamps.join(' ')));
+  rmSync(off, { recursive: true, force: true });
+  const s2 = scoreRun(runDir, { pricingPath }).summary;
+  ok('6.29 …and with no offline run at all, the table says so rather than inventing a cell', s2.offline.available === false);
+}
+
 // ── ATTACK 4: a clean checkout, no GPU, no key, no network ───────────────────────────────────────────────
 
 {

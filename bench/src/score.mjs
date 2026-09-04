@@ -452,7 +452,8 @@ export function offlineComparison(runDir) {
   const o = JSON.parse(readFileSync(p, 'utf8'));
   const by_arm = {};
   for (const [arm, blk] of Object.entries(o.arms ?? {})) by_arm[arm] = blk.headline_E1_E2?.stable_subset?.accuracy ?? null;
-  return { available: true, path: p, scored_at: o.scored_at, by_arm };
+  // The four cells are only a comparison if both runs answered the same questions with the same rules.
+  return { available: true, path: p, scored_at: o.scored_at, by_arm, items: o.counts?.items ?? null, by_bucket: o.counts?.by_bucket ?? null, scorer_version: o.scorer_version ?? null };
 }
 
 /**
@@ -761,6 +762,15 @@ export function summarize({ units, transcripts, provenance, pricing, pricingPath
   if (integrity.items_without_source_ids) stamps.push(`${integrity.items_without_source_ids} item(s) declare neither \`source_ids\` nor \`source.deployment_id\`: targeting cannot be judged for them, so their misses are NOT charged to \`wrong_subgraph\` (${integrity.ids_without_source_ids.slice(0, 5).join(', ')})`);
   if (VOID) stamps.unshift('RUN VOID — see the leakage tripwire');
 
+  const offline = offlineComparison(runDir);
+  if (offline.available) {
+    const why = [];
+    if (offline.items != null && offline.items !== items.size) why.push(`it scored ${offline.items} items against this run's ${items.size}`);
+    if (offline.scorer_version && offline.scorer_version !== SCORER_VERSION) why.push(`it was scored by scorer v${offline.scorer_version} and this run by v${SCORER_VERSION}`);
+    if (why.length) stamps.push(`the tools-unavailable run at ${offline.path} is NOT comparable cell for cell: ${why.join('; ')}`);
+    offline.comparable = !why.length;
+    offline.not_comparable_because = why.length ? why : null;
+  }
   const bucketCounts = Object.fromEntries(BUCKETS.map((b) => [b, [...itemMeta.values()].filter((i) => i.bucket === b).length]));
   // An item in no declared bucket would be inside `overall` and inside no bucket row, so the bucket rows
   // would quietly stop adding up to the item count. Counted, named and stamped instead.
@@ -795,7 +805,7 @@ export function summarize({ units, transcripts, provenance, pricing, pricingPath
     integrity,
     setup,
     budget: { cap: cap, per_arm: budgetAnswer },
-    offline: offlineComparison(runDir),
+    offline,
     stability: { unstable_items: unstable.size, unstable_ids: [...unstable].sort(), basis: 'the two arm-A repeats of the item produced different normalised answers (§2)' },
     arms: perArm,
     miss_channels: missChannels,
@@ -891,6 +901,10 @@ export function renderMarkdown(s) {
     p(`Not available: ${s.offline.role ?? s.offline.note}${s.offline.expected_at ? ` (expected at \`${s.offline.expected_at}\`)` : ''}. Arm C issues no network request of any kind by construction; the cell below is the measured version of that, and it is empty until the fault-injected run is scored.`);
   } else {
     p(`Arms B and D re-run with the MCP transport returning 503 for every call — an injected outage, nothing fabricated. Read from \`${s.offline.path}\` (scored ${s.offline.scored_at}). E1+E2, stable subset.`);
+    if (s.offline.comparable === false) {
+      p();
+      p(`> **These four cells are NOT comparable cell for cell:** ${s.offline.not_comparable_because.join('; ')}. The table below is printed because hiding it would be worse, but nothing in it may be quoted as a change until the two runs answer the same items under the same scorer.`);
+    }
     p();
     p(table(['Arm', 'tools available', 'tools unavailable', 'change'], arms.map((a) => {
       const on = s.arms[a].headline_E1_E2.stable_subset.accuracy, off = s.offline.by_arm[a] ?? null;

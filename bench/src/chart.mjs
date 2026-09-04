@@ -51,7 +51,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { wilson } from './normalize.mjs';
-import { BUCKETS, CHANNELS, ARM_ORDER, TOOL_ARMS, PREREG, itemOutcome, isMiss, provenanceStamps, loadPricing } from './score.mjs';
+import { BUCKETS, CHANNELS, ARM_ORDER, TOOL_ARMS, PREREG, BUYERS, itemOutcome, isMiss, provenanceStamps, loadPricing } from './score.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 export const CHART_VERSION = '1.0.0';
@@ -526,6 +526,12 @@ export const fmtDur = (ms) => {
  * scorer computed as tokens × the list prices in pricing.json), the one-time price from pricing.json itself.
  * When that price is null — which is how the file stands today — the chart draws the two MARGINAL lines and
  * refuses to mark a crossing, because the honest answer to "where do they cross?" is "set the price first".
+ *
+ * And §6.3 asks for the harder version: "N* is a curve in the number of buyers, not a scalar. Cumulative
+ * cost against question count for one buyer, ten, a hundred — with the single-buyer line shown even where
+ * it never crosses." One arm-C line per buyer count, therefore, all starting from the price THAT buyer pays;
+ * the single-buyer line is drawn solid and first because §6.2 requires the unflattering claim to carry the
+ * flattering one. The buyer counts come from `BUYERS` in the scorer — an axis, not a price.
  */
 export function chartCostBreakEven(model) {
   const K = model.pricing?.knowledge?.price ?? null;
@@ -534,6 +540,11 @@ export function chartCostBreakEven(model) {
   const cC = model.cost.byArm.C?.per_question ?? null;
   const nstar = typeof K === 'number' ? crossover(K, cB, cC) : null;
   const delta = cB != null && cC != null ? cB - cC : null;
+  // §6.3's curve. Dashes only distinguish the buyer counts; the hue stays arm C's, because it is arm C.
+  const DASH = { 1: '', 10: '7 4', 100: '2 4' };
+  const curves = typeof K === 'number' && cC != null
+    ? BUYERS.map((k) => ({ k, price: K / k, nstar: crossover(K / k, cB, cC), dash: DASH[k] ?? '3 3' }))
+    : [];
 
   const xMax = niceCeil(nstar ? nstar * 2 : Math.max(model.items, 100));
   const yMaxRaw = Math.max((cB ?? 0) * xMax, (K ?? 0) + (cC ?? 0) * xMax);
@@ -564,23 +575,50 @@ export function chartCostBreakEven(model) {
     p.push(text(R + 12, y(cB * xMax) + 4, `arm B  ${fmtUsdShort(cB * xMax)}`, { cls: 't-small t-b', role: 'ink' }));
     p.push(text(R + 12, y(cB * xMax) + 19, `${fmtUsd(cB)} / question`, { cls: 't-tiny', role: 'muted' }));
   }
-  if (cC != null) {
-    const c0 = K ?? 0;
-    p.push(path(`M${n(x(0))},${n(y(c0))} L${n(x(xMax))},${n(y(c0 + cC * xMax))}`, 'arm-C'));
-    p.push(text(R + 12, y(c0 + cC * xMax) + 4, `arm C  ${fmtUsdShort(c0 + cC * xMax)}`, { cls: 't-small t-b', role: 'ink' }));
-    p.push(text(R + 12, y(c0 + cC * xMax) + 19, `${fmtUsd(cC)} / question`, { cls: 't-tiny', role: 'muted' }));
-    if (typeof K === 'number' && K > 0) {
-      p.push(line(L - 6, y(K), L + 6, y(K), 'arm-C', 2));
-      p.push(text(L + 12, y(K) - 8, `one-time knowledge price ${fmtUsdShort(K)}`, { cls: 't-tiny t-b', role: 'ink2' }));
+  if (cC != null && !curves.length) {
+    // No price to share, so there is one line and it is arm C's MARGINAL cost.
+    p.push(path(`M${n(x(0))},${n(y(0))} L${n(x(xMax))},${n(y(cC * xMax))}`, 'arm-C'));
+    p.push(text(R + 12, y(cC * xMax) + 4, `arm C  ${fmtUsdShort(cC * xMax)}`, { cls: 't-small t-b', role: 'ink' }));
+    p.push(text(R + 12, y(cC * xMax) + 19, `${fmtUsd(cC)} / question`, { cls: 't-tiny', role: 'muted' }));
+  }
+  if (curves.length) {
+    // One line per buyer count, each starting at the price THAT buyer pays. Same hue, because it is the same
+    // arm; the dash tells the buyer counts apart, and every value is also in the table below.
+    const ends = [];
+    for (const c of curves) {
+      p.push(path(`M${n(x(0))},${n(y(c.price))} L${n(x(xMax))},${n(y(c.price + cC * xMax))}`, 'arm-C',
+        { w: c.k === 1 ? 2.5 : 1.8, extra: c.dash ? `stroke-dasharray="${c.dash}"` : '' }));
+      p.push(line(L - 6, y(c.price), L + 6, y(c.price), 'arm-C', 2));
+      ends.push({ yTrue: y(c.price + cC * xMax), label: `arm C · ${c.k} buyer${c.k === 1 ? '' : 's'}`, sub: `${fmtUsdShort(c.price)} once, then ${fmtUsd(cC)}/q` });
+    }
+    p.push(text(L + 12, y(curves[0].price) - 8, `one-time price ${fmtUsdShort(K)}`, { cls: 't-tiny t-b', role: 'ink2' }));
+    // End labels pushed apart to a readable spacing and reconnected with a leader, as elsewhere in this file.
+    ends.sort((u, v) => u.yTrue - v.yTrue);
+    let prev = -Infinity;
+    for (const e of ends) { e.y = Math.max(e.yTrue, prev + 32); prev = e.y; }
+    const over = Math.max(0, prev - (base - 4));          // the stack must not spill onto the axis row
+    if (over) for (const e of ends) e.y -= over;
+    for (const e of ends) {
+      if (Math.abs(e.y - e.yTrue) > 1) p.push(path(`M${n(R)},${n(e.yTrue)} L${n(R + 6)},${n(e.yTrue)} L${n(R + 10)},${n(e.y - 4)}`, 'muted', { w: 1 }));
+      p.push(text(R + 14, e.y, e.label, { cls: 't-small t-b', role: 'ink' }));
+      p.push(text(R + 14, e.y + 15, e.sub, { cls: 't-tiny', role: 'muted' }));
     }
   }
   if (nstar != null && nstar <= xMax) {
-    const yx = y(nstar * cB);
-    p.push(line(x(nstar), base, x(nstar), yx, 'ink2', 1));
-    p.push(dot(x(nstar), yx, 5, 'ink'));
-    const lx = Math.min(x(nstar) + 14, R - 300);
-    p.push(text(lx, yx - 34, `N* = ${fmtQ(nstar)} questions`, { cls: 't-small t-b', role: 'ink' }));
-    p.push(text(lx, yx - 20, 'after this many questions, buying is cheaper than querying', { cls: 't-tiny', role: 'muted' }));
+    // The crossings for the larger buyer counts sit near the origin, a few pixels apart, so their labels are
+    // pushed upward to a readable spacing instead of being stacked on top of each other above the axis.
+    const marks = curves.filter((c) => c.nstar != null && c.nstar <= xMax)
+      .map((c) => ({ c, yx: y(c.nstar * cB), lx: Math.min(x(c.nstar) + 12, R - 320) }));
+    for (const m of marks) {
+      p.push(line(x(m.c.nstar), base, x(m.c.nstar), m.yx, 'ink2', 1, m.c.k === 1 ? '' : 'stroke-opacity="0.5"'));
+      p.push(dot(x(m.c.nstar), m.yx, m.c.k === 1 ? 5 : 3.5, 'ink'));
+    }
+    let lastY = Infinity;
+    for (const m of [...marks].sort((a, b) => b.yx - a.yx)) { m.ly = Math.min(m.yx - 10, lastY - 18); lastY = m.ly; }
+    for (const m of marks) {
+      p.push(text(m.lx, m.ly, `N*(${m.c.k}) = ${fmtQ(m.c.nstar)}`, { cls: 't-small t-b', role: 'ink' }));
+      if (m.c.k === 1) p.push(text(m.lx, m.yx + 16, 'one buyer paying the whole price — the unflattering number, drawn first (§6.2)', { cls: 't-tiny', role: 'muted' }));
+    }
   } else {
     const why = typeof K !== 'number' ? `${model.pricingPath.replace(/^.*\/bench\//, '')} carries no knowledge.price, so N* is NOT computed and no crossing is drawn — arm C's line is its MARGINAL cost only`
       : delta != null && delta <= 0 ? 'arm B is not more expensive per question than arm C, so there is no break-even to draw'
@@ -603,11 +641,14 @@ export function chartCostBreakEven(model) {
       ['cost per question, arm C', fmtUsd(cC), 'measured tokens × list price, zero gateway queries'],
       ['difference (B − C)', delta == null ? '—' : fmtUsd(delta), 'per question'],
       ['knowledge price (one-time)', typeof K === 'number' ? `${K} ${CUR}` : 'not set', `${model.pricingPath.replace(/^.*\/bench\//, '')} → knowledge.price`],
-      ['N* = price ÷ difference', nstar == null ? 'not computed' : `${fmtQ(nstar)} questions`, nstar == null ? 'left uncomputed rather than invented' : 'the crossing marked above'],
+      ['N* = price ÷ difference, one buyer', nstar == null ? 'not computed' : `${fmtQ(nstar)} questions`, nstar == null ? 'left uncomputed rather than invented' : 'the crossing marked above'],
+      ...curves.filter((c) => c.k !== 1).map((c) => [`N* with ${c.k} buyers sharing the price`, c.nstar == null ? 'not computed' : `${fmtQ(c.nstar)} questions`, `each pays ${fmtUsdShort(c.price)}; the per-question saving does not divide`]),
     ], HEAD_PAD, tblY, [0, 470, 500], { align: ['start', 'end', 'start'] });
 
   const foot = [
-    'N* = knowledge_price / (cost_per_question_B − cost_per_question_C). Modelled costs, not invoices (§7.4): every price is a published list price recorded with its source URL in pricing.json, and nothing here was billed to us.',
+    'N*(k buyers) = (knowledge_price / k) / (cost_per_question_B − cost_per_question_C). Modelled costs, not invoices (§7.4): every price is a published list price recorded with its source URL in pricing.json, and nothing here was billed to us.',
+    '§6.2: two different claims, and only one of them is ours. For a single user training their own patch the fixed cost is not amortised at all and the break-even is genuinely poor — that line is drawn first, and it is drawn even where it never crosses. For a marketplace the patch is trained once and applied by every node that buys it, so the one-time price divides by the number of buyers while the per-question saving does not.',
+    ...(curves.length ? [`Arm C is drawn once per buyer count — solid = 1 buyer, dashed = 10, dotted = 100 — because the one-time price each of them pays is different while the per-question cost is not.`] : []),
     `Gateway queries counted: arm B ${fmtInt(model.cost.byArm.B?.gateway_queries ?? 0)}, arm C ${fmtInt(model.cost.byArm.C?.gateway_queries ?? 0)} — arm C makes no network call of any kind by construction, which is why its line has no per-query term at all.`,
   ];
   const fY = tblY + tbl.height + 22;
