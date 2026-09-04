@@ -1,0 +1,61 @@
+{
+  "key_mode": "scored",
+  "items_total": 4,
+  "unstable_in_reference": [],
+  "denominator": 4,
+  "per_cell": {
+    "A": {
+      "cell": "A",
+      "label": "base, no tools (the reference)",
+      "tools_declared": false,
+      "patch_applied": false,
+      "n": 4,
+      "same": 4,
+      "changed": 0,
+      "agreement": 1,
+      "agreement_ci95": [
+        0.5100999795960008,
+        1
+      ],
+      "items_that_called_a_tool": 0,
+      "unstable_inside_this_cell": [],
+      "per_stratum": {
+        "far-domain": {
+          "n": 4,
+          "same": 4
+        }
+      },
+      "changed_items": []
+    },
+    "B": {
+      "cell": "B",
+      "label": "base, tools declared and never needed",
+      "tools_declared": true,
+      "patch_applied": false,
+      "n": 4,
+      "same": 3,
+      "changed": 1,
+      "agreement": 0.75,
+      "agreement_ci95": [
+        0.30063605244263664,
+        0.9544139373553638
+      ],
+      "items_that_called_a_tool": 0,
+      "unstable_inside_this_cell": [],
+      "per_stratum": {
+        "far-domain": {
+          "n": 4,
+          "same": 3
+        }
+      },
+      "changed_items": [
+        {
+          "item_id": "ctl.far.04",
+          "stratum": "far-domain",
+          "reference": "Nile",
+          "answer": "The"
+        }
+      ]
+    }
+  }
+}

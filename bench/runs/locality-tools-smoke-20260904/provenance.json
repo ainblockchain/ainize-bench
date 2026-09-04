@@ -1,0 +1,79 @@
+{
+  "started_at": "2026-09-04T11:20:29.441Z",
+  "finished_at": "2026-09-04T11:20:47.024Z",
+  "model": "Qwen3.8-Flash-Next",
+  "max_model_len": 32768,
+  "api": "http://localhost:8002",
+  "prompt_set": {
+    "from": "locality/prompts.jsonl",
+    "sha256": "475ce1d72e400c28932c4c9552afa541bda3725338e8eb09b77f1aa3aae43417",
+    "items_in_file": 50,
+    "items_captured": 4,
+    "filter": {
+      "stratum": "far-domain",
+      "limit": "4"
+    }
+  },
+  "repeats": 2,
+  "key_mode": "scored",
+  "cells": [
+    "A",
+    "B"
+  ],
+  "patch": null,
+  "engine_at_start": {
+    "container": "flashnext-e2e",
+    "read": true,
+    "cmd": "--model /model --served-model-name Qwen3.8-Flash-Next --tensor-parallel-size 2 --enable-expert-parallel --disable-custom-all-reduce --gpu-memory-utilization 0.96 --max-model-len 32768 --max-num-seqs 1 --compilation-config {\"mode\": 0, \"cudagraph_mode\": \"FULL_DECODE_ONLY\"} --reasoning-parser qwen3 --tool-call-parser qwen3_coder --enable-auto-tool-choice --trust-remote-code",
+    "restart_count": 0,
+    "started_at": "2026-09-04T10:43:00.811772642Z"
+  },
+  "engine_between": [
+    {
+      "after_cell": "A",
+      "container": "flashnext-e2e",
+      "read": true,
+      "cmd": "--model /model --served-model-name Qwen3.8-Flash-Next --tensor-parallel-size 2 --enable-expert-parallel --disable-custom-all-reduce --gpu-memory-utilization 0.96 --max-model-len 32768 --max-num-seqs 1 --compilation-config {\"mode\": 0, \"cudagraph_mode\": \"FULL_DECODE_ONLY\"} --reasoning-parser qwen3 --tool-call-parser qwen3_coder --enable-auto-tool-choice --trust-remote-code",
+      "restart_count": 0,
+      "started_at": "2026-09-04T10:43:00.811772642Z"
+    },
+    {
+      "after_cell": "B",
+      "container": "flashnext-e2e",
+      "read": true,
+      "cmd": "--model /model --served-model-name Qwen3.8-Flash-Next --tensor-parallel-size 2 --enable-expert-parallel --disable-custom-all-reduce --gpu-memory-utilization 0.96 --max-model-len 32768 --max-num-seqs 1 --compilation-config {\"mode\": 0, \"cudagraph_mode\": \"FULL_DECODE_ONLY\"} --reasoning-parser qwen3 --tool-call-parser qwen3_coder --enable-auto-tool-choice --trust-remote-code",
+      "restart_count": 0,
+      "started_at": "2026-09-04T10:43:00.811772642Z"
+    }
+  ],
+  "engine_at_end": {
+    "container": "flashnext-e2e",
+    "read": true,
+    "cmd": "--model /model --served-model-name Qwen3.8-Flash-Next --tensor-parallel-size 2 --enable-expert-parallel --disable-custom-all-reduce --gpu-memory-utilization 0.96 --max-model-len 32768 --max-num-seqs 1 --compilation-config {\"mode\": 0, \"cudagraph_mode\": \"FULL_DECODE_ONLY\"} --reasoning-parser qwen3 --tool-call-parser qwen3_coder --enable-auto-tool-choice --trust-remote-code",
+    "restart_count": 0,
+    "started_at": "2026-09-04T10:43:00.811772642Z"
+  },
+  "engine_changed": [],
+  "mcp": {
+    "server": {
+      "name": "subgraph-mcp",
+      "version": "0.1.1"
+    },
+    "tools": [
+      "get_deployment_30day_query_counts",
+      "search_subgraphs_by_keyword",
+      "get_schema_by_subgraph_id",
+      "get_schema_by_ipfs_hash",
+      "execute_query_by_deployment_id",
+      "execute_query_by_ipfs_hash",
+      "get_schema_by_deployment_id",
+      "execute_query_by_subgraph_id",
+      "get_top_subgraph_deployments"
+    ]
+  },
+  "table_restored": null,
+  "stamps": [
+    "PARTIAL SET — 4 of 50 prompts; this is a smoke run, not the 50-prompt measurement",
+    "CELLS C and D NOT CAPTURED — this is a partial table; run with --patch <id> for C and D"
+  ]
+}

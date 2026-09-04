@@ -1,0 +1,498 @@
+[
+  {
+    "cell": "A",
+    "item_id": "ctl.far.01",
+    "repeat": 0,
+    "system_sha256": "ffe54a72bc41",
+    "final": "1912",
+    "error": null,
+    "latency_ms": 3165,
+    "model_ms": 3165,
+    "usage": {
+      "prompt_tokens": 122,
+      "total_tokens": 127,
+      "completion_tokens": 5,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "evidence": {
+      "tool_calls": 0,
+      "tool_targets": [],
+      "tool_errors": 0,
+      "context_exhausted": false,
+      "forced_final": false
+    }
+  },
+  {
+    "cell": "A",
+    "item_id": "ctl.far.01",
+    "repeat": 1,
+    "system_sha256": "ffe54a72bc41",
+    "final": "1912",
+    "error": null,
+    "latency_ms": 946,
+    "model_ms": 946,
+    "usage": {
+      "prompt_tokens": 122,
+      "total_tokens": 127,
+      "completion_tokens": 5,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "evidence": {
+      "tool_calls": 0,
+      "tool_targets": [],
+      "tool_errors": 0,
+      "context_exhausted": false,
+      "forced_final": false
+    }
+  },
+  {
+    "cell": "A",
+    "item_id": "ctl.far.02",
+    "repeat": 0,
+    "system_sha256": "ffe54a72bc41",
+    "final": "George Washington",
+    "error": null,
+    "latency_ms": 755,
+    "model_ms": 755,
+    "usage": {
+      "prompt_tokens": 127,
+      "total_tokens": 130,
+      "completion_tokens": 3,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "evidence": {
+      "tool_calls": 0,
+      "tool_targets": [],
+      "tool_errors": 0,
+      "context_exhausted": false,
+      "forced_final": false
+    }
+  },
+  {
+    "cell": "A",
+    "item_id": "ctl.far.02",
+    "repeat": 1,
+    "system_sha256": "ffe54a72bc41",
+    "final": "George Washington",
+    "error": null,
+    "latency_ms": 1684,
+    "model_ms": 1684,
+    "usage": {
+      "prompt_tokens": 127,
+      "total_tokens": 130,
+      "completion_tokens": 3,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "evidence": {
+      "tool_calls": 0,
+      "tool_targets": [],
+      "tool_errors": 0,
+      "context_exhausted": false,
+      "forced_final": false
+    }
+  },
+  {
+    "cell": "A",
+    "item_id": "ctl.far.03",
+    "repeat": 0,
+    "system_sha256": "ffe54a72bc41",
+    "final": "Pacific Ocean",
+    "error": null,
+    "latency_ms": 1846,
+    "model_ms": 1846,
+    "usage": {
+      "prompt_tokens": 122,
+      "total_tokens": 125,
+      "completion_tokens": 3,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "evidence": {
+      "tool_calls": 0,
+      "tool_targets": [],
+      "tool_errors": 0,
+      "context_exhausted": false,
+      "forced_final": false
+    }
+  },
+  {
+    "cell": "A",
+    "item_id": "ctl.far.03",
+    "repeat": 1,
+    "system_sha256": "ffe54a72bc41",
+    "final": "Pacific Ocean",
+    "error": null,
+    "latency_ms": 2803,
+    "model_ms": 2803,
+    "usage": {
+      "prompt_tokens": 122,
+      "total_tokens": 125,
+      "completion_tokens": 3,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "evidence": {
+      "tool_calls": 0,
+      "tool_targets": [],
+      "tool_errors": 0,
+      "context_exhausted": false,
+      "forced_final": false
+    }
+  },
+  {
+    "cell": "A",
+    "item_id": "ctl.far.04",
+    "repeat": 0,
+    "system_sha256": "ffe54a72bc41",
+    "final": "Nile",
+    "error": null,
+    "latency_ms": 923,
+    "model_ms": 923,
+    "usage": {
+      "prompt_tokens": 122,
+      "total_tokens": 125,
+      "completion_tokens": 3,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "evidence": {
+      "tool_calls": 0,
+      "tool_targets": [],
+      "tool_errors": 0,
+      "context_exhausted": false,
+      "forced_final": false
+    }
+  },
+  {
+    "cell": "A",
+    "item_id": "ctl.far.04",
+    "repeat": 1,
+    "system_sha256": "ffe54a72bc41",
+    "final": "Nile",
+    "error": null,
+    "latency_ms": 809,
+    "model_ms": 809,
+    "usage": {
+      "prompt_tokens": 122,
+      "total_tokens": 125,
+      "completion_tokens": 3,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "evidence": {
+      "tool_calls": 0,
+      "tool_targets": [],
+      "tool_errors": 0,
+      "context_exhausted": false,
+      "forced_final": false
+    }
+  },
+  {
+    "cell": "B",
+    "item_id": "ctl.far.01",
+    "repeat": 0,
+    "system_sha256": "56d49b215498",
+    "final": "1912",
+    "error": null,
+    "latency_ms": 583,
+    "model_ms": 571,
+    "usage": {
+      "prompt_tokens": 2795,
+      "total_tokens": 2800,
+      "completion_tokens": 5,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "evidence": {
+      "tool_calls": 0,
+      "tool_bytes_in": 0,
+      "retries": 0,
+      "context_truncated": false,
+      "budget_exhausted": false,
+      "tool_targets": [],
+      "tool_results": [],
+      "tool_errors": 0,
+      "model_ms": 571,
+      "forced_final": false,
+      "offline": false,
+      "context_exhausted": false,
+      "context_evictions": 0,
+      "prompt_tokens_peak": 1274
+    },
+    "turns": 1
+  },
+  {
+    "cell": "B",
+    "item_id": "ctl.far.01",
+    "repeat": 1,
+    "system_sha256": "56d49b215498",
+    "final": "1912",
+    "error": null,
+    "latency_ms": 582,
+    "model_ms": 575,
+    "usage": {
+      "prompt_tokens": 2795,
+      "total_tokens": 2800,
+      "completion_tokens": 5,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "evidence": {
+      "tool_calls": 0,
+      "tool_bytes_in": 0,
+      "retries": 0,
+      "context_truncated": false,
+      "budget_exhausted": false,
+      "tool_targets": [],
+      "tool_results": [],
+      "tool_errors": 0,
+      "model_ms": 575,
+      "forced_final": false,
+      "offline": false,
+      "context_exhausted": false,
+      "context_evictions": 0,
+      "prompt_tokens_peak": 1274
+    },
+    "turns": 1
+  },
+  {
+    "cell": "B",
+    "item_id": "ctl.far.02",
+    "repeat": 0,
+    "system_sha256": "56d49b215498",
+    "final": "George Washington",
+    "error": null,
+    "latency_ms": 398,
+    "model_ms": 391,
+    "usage": {
+      "prompt_tokens": 2800,
+      "total_tokens": 2803,
+      "completion_tokens": 3,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "evidence": {
+      "tool_calls": 0,
+      "tool_bytes_in": 0,
+      "retries": 0,
+      "context_truncated": false,
+      "budget_exhausted": false,
+      "tool_targets": [],
+      "tool_results": [],
+      "tool_errors": 0,
+      "model_ms": 391,
+      "forced_final": false,
+      "offline": false,
+      "context_exhausted": false,
+      "context_evictions": 0,
+      "prompt_tokens_peak": 1279
+    },
+    "turns": 1
+  },
+  {
+    "cell": "B",
+    "item_id": "ctl.far.02",
+    "repeat": 1,
+    "system_sha256": "56d49b215498",
+    "final": "George Washington",
+    "error": null,
+    "latency_ms": 395,
+    "model_ms": 388,
+    "usage": {
+      "prompt_tokens": 2800,
+      "total_tokens": 2803,
+      "completion_tokens": 3,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "evidence": {
+      "tool_calls": 0,
+      "tool_bytes_in": 0,
+      "retries": 0,
+      "context_truncated": false,
+      "budget_exhausted": false,
+      "tool_targets": [],
+      "tool_results": [],
+      "tool_errors": 0,
+      "model_ms": 388,
+      "forced_final": false,
+      "offline": false,
+      "context_exhausted": false,
+      "context_evictions": 0,
+      "prompt_tokens_peak": 1279
+    },
+    "turns": 1
+  },
+  {
+    "cell": "B",
+    "item_id": "ctl.far.03",
+    "repeat": 0,
+    "system_sha256": "56d49b215498",
+    "final": "Pacific Ocean",
+    "error": null,
+    "latency_ms": 574,
+    "model_ms": 566,
+    "usage": {
+      "prompt_tokens": 2795,
+      "total_tokens": 2798,
+      "completion_tokens": 3,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "evidence": {
+      "tool_calls": 0,
+      "tool_bytes_in": 0,
+      "retries": 0,
+      "context_truncated": false,
+      "budget_exhausted": false,
+      "tool_targets": [],
+      "tool_results": [],
+      "tool_errors": 0,
+      "model_ms": 566,
+      "forced_final": false,
+      "offline": false,
+      "context_exhausted": false,
+      "context_evictions": 0,
+      "prompt_tokens_peak": 1274
+    },
+    "turns": 1
+  },
+  {
+    "cell": "B",
+    "item_id": "ctl.far.03",
+    "repeat": 1,
+    "system_sha256": "56d49b215498",
+    "final": "Pacific Ocean",
+    "error": null,
+    "latency_ms": 582,
+    "model_ms": 559,
+    "usage": {
+      "prompt_tokens": 2795,
+      "total_tokens": 2798,
+      "completion_tokens": 3,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "evidence": {
+      "tool_calls": 0,
+      "tool_bytes_in": 0,
+      "retries": 0,
+      "context_truncated": false,
+      "budget_exhausted": false,
+      "tool_targets": [],
+      "tool_results": [],
+      "tool_errors": 0,
+      "model_ms": 559,
+      "forced_final": false,
+      "offline": false,
+      "context_exhausted": false,
+      "context_evictions": 0,
+      "prompt_tokens_peak": 1274
+    },
+    "turns": 1
+  },
+  {
+    "cell": "B",
+    "item_id": "ctl.far.04",
+    "repeat": 0,
+    "system_sha256": "56d49b215498",
+    "final": "The",
+    "error": null,
+    "latency_ms": 537,
+    "model_ms": 530,
+    "usage": {
+      "prompt_tokens": 2795,
+      "total_tokens": 2797,
+      "completion_tokens": 2,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "evidence": {
+      "tool_calls": 0,
+      "tool_bytes_in": 0,
+      "retries": 0,
+      "context_truncated": false,
+      "budget_exhausted": false,
+      "tool_targets": [],
+      "tool_results": [],
+      "tool_errors": 0,
+      "model_ms": 530,
+      "forced_final": false,
+      "offline": false,
+      "context_exhausted": false,
+      "context_evictions": 0,
+      "prompt_tokens_peak": 1274
+    },
+    "turns": 1
+  },
+  {
+    "cell": "B",
+    "item_id": "ctl.far.04",
+    "repeat": 1,
+    "system_sha256": "56d49b215498",
+    "final": "The",
+    "error": null,
+    "latency_ms": 561,
+    "model_ms": 553,
+    "usage": {
+      "prompt_tokens": 2795,
+      "total_tokens": 2797,
+      "completion_tokens": 2,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "evidence": {
+      "tool_calls": 0,
+      "tool_bytes_in": 0,
+      "retries": 0,
+      "context_truncated": false,
+      "budget_exhausted": false,
+      "tool_targets": [],
+      "tool_results": [],
+      "tool_errors": 0,
+      "model_ms": 553,
+      "forced_final": false,
+      "offline": false,
+      "context_exhausted": false,
+      "context_evictions": 0,
+      "prompt_tokens_peak": 1274
+    },
+    "turns": 1
+  }
+]
