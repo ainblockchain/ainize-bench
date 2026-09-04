@@ -105,6 +105,7 @@ export const fmtUsdShort = (x) => (x == null ? '—' : x === 0 ? '$0' : Math.abs
 export const fmtPct = (x) => (x == null ? '—' : `${(x * 100).toFixed(1)}%`);
 export const fmtInt = (x) => (x == null ? '—' : Math.round(x).toLocaleString('en-US'));
 export const fmtMs = (ms) => (ms == null ? '—' : ms >= 10_000 ? `${(ms / 1000).toFixed(0)} s` : ms >= 1000 ? `${(ms / 1000).toFixed(1)} s` : `${Math.round(ms)} ms`);
+export const fmtNumber = (x, d = 2) => (x == null ? '—' : Number(x).toFixed(d));
 export const fmtQ = (n) => (n == null ? '—' : n < 1 ? n.toFixed(2) : fmtInt(Math.ceil(n)));
 
 // ── the SVG kit: no library, and small enough to read in one sitting ──────────────────────────────────────
@@ -338,6 +339,8 @@ export function loadRun(runDir, { pricingPath = null, knowledgeLoadMs = null } =
   model.accuracy = accuracyTable(rows);
   model.cost = costTable(rows);
   model.latency = latencyTable(rows);
+  model.tokens = tokenTable(rows);
+  model.cdf = latencyCdf(rows);
   model.channels = channelTable(rows);
   // A chart that disagrees with the table it illustrates is worse than no chart: check, and stamp it.
   for (const m of crossCheck(model)) model.stamps.push(m);
@@ -428,6 +431,31 @@ export function quantileRow(armRows, q) {
   if (!a.length) return null;
   const i = Math.min(a.length - 1, Math.max(0, Math.ceil(q * a.length) - 1)); // nearest-rank
   return a[i];
+}
+
+export function tokenTable(rows) {
+  const out = { byArm: {} };
+  for (const [arm, armRows] of groupBy(rows, (r) => r.arm)) {
+    out.byArm[arm] = {
+      units: armRows.length,
+      prompt_per_question: mean(armRows.map((r) => r.prompt_tokens)),
+      completion_per_question: mean(armRows.map((r) => r.completion_tokens)),
+      turns_per_question: mean(armRows.map((r) => r.turns)),
+      peak_prompt: armRows.reduce((a, r) => Math.max(a, r.prompt_tokens_peak ?? 0), 0),
+      tool_bytes_in: armRows.reduce((a, r) => a + (r.tool_bytes_in ?? 0), 0),
+    };
+  }
+  return out;
+}
+
+/** The empirical CDF of one arm's end-to-end latency: every unit is a step, nothing is smoothed or binned. */
+export function latencyCdf(rows) {
+  const out = {};
+  for (const [arm, armRows] of groupBy(rows, (r) => r.arm)) {
+    const xs = armRows.map((r) => r.latency_ms).filter((x) => Number.isFinite(x)).sort((a, b) => a - b);
+    out[arm] = { xs, n: xs.length, at: (q) => (xs.length ? xs[Math.min(xs.length - 1, Math.max(0, Math.ceil(q * xs.length) - 1))] : null) };
+  }
+  return out;
 }
 
 export function latencyTable(rows) {
@@ -1010,6 +1038,124 @@ export function chartMissChannels(model) {
   });
 }
 
+// ── 6. the latency CDF §8 asks for ──────────────────────────────────────────────────────────────────────
+
+/**
+ * §8 lists a latency CDF among the charts, and it answers a question the p50/p95 bars cannot: not "how slow
+ * is the median item" but "how long is the tail, and how much of the arm lives in it". Every unit is a step —
+ * nothing is binned, nothing is smoothed — so a reader can count the items in the tail off the picture.
+ */
+export function chartLatencyCdf(model) {
+  const arms = model.arms;
+  const head = header({
+    title: 'How long items take, end to end — the full distribution',
+    subtitle: 'The empirical CDF of every scored unit\'s wall clock, one step per unit: read across at 50% or 95% to get that arm\'s p50 or p95, and read the flat right-hand tail to see how many items ran long. Tool arms carry a tail the knowledge arms do not have, because a tail is what a retry, an extra turn or a slow round trip produces.',
+    stamps: model.stamps,
+  });
+  const xMax = Math.max(1, ...arms.map((a) => model.cdf[a]?.at(1) ?? 0)) * 1.04;
+  const L = 92, R = WIDTH - 170, top = head.height + 20, H = 300, base = top + H;
+  const x = linScale(0, xMax, L, R), y = linScale(0, 1, base, top);
+  const p = [];
+  for (const t of [0, 0.25, 0.5, 0.75, 1]) {
+    p.push(line(L, y(t), R, y(t), 'grid'));
+    p.push(text(L - 10, y(t) + 4, `${Math.round(t * 100)}%`, { cls: 't-tiny', role: 'muted', anchor: 'end' }));
+  }
+  for (const tk of durTicks(xMax, 6)) p.push(text(x(tk.v), base + 18, tk.label, { cls: 't-tiny', role: 'muted', anchor: 'middle' }));
+  p.push(line(L, base, R, base, 'axis'));
+  p.push(text((L + R) / 2, base + 40, 'end-to-end latency for one item', { cls: 't-small', role: 'ink2', anchor: 'middle' }));
+  p.push(text(L - 10, top - 14, 'share of units at or below that latency', { cls: 't-small', role: 'ink2', anchor: 'start' }));
+  p.push(line(L, y(0.95), R, y(0.95), 'axis'));
+  p.push(text(R + 6, y(0.95) - 6, 'p95', { cls: 't-tiny', role: 'muted' }));
+
+  const ends = [];
+  for (const a of arms) {
+    const c = model.cdf[a];
+    if (!c?.n) continue;
+    let d = `M${n(x(0))},${n(y(0))}`;
+    c.xs.forEach((v, i) => { d += ` L${n(x(v))},${n(y(i / c.n))} L${n(x(v))},${n(y((i + 1) / c.n))}`; });
+    d += ` L${n(x(xMax))},${n(y(1))}`;
+    p.push(path(d, armKey(a)));
+    ends.push({ arm: a, yTrue: y(1), x: x(c.at(1)) });
+  }
+  const lg = legend(arms.map((a) => ({ role: armKey(a), label: `arm ${a}`, value: model.cdf[a]?.n ? `p50 ${fmtMs(model.cdf[a].at(0.5))} · p95 ${fmtMs(model.cdf[a].at(0.95))}` : '—' })),
+    HEAD_PAD, base + 62, { columns: 2, colWidth: 440 });
+  const tblY = base + 62 + lg.height + 26;
+  const tbl = valueTable(['arm', 'units', 'p50', 'p90', 'p95', 'slowest unit'],
+    arms.map((a) => { const c = model.cdf[a]; return [`arm ${a}`, fmtInt(c?.n ?? 0), fmtMs(c?.at(0.5)), fmtMs(c?.at(0.9)), fmtMs(c?.at(0.95)), fmtMs(c?.at(1))]; }),
+    HEAD_PAD, tblY, [0, 430, 560, 680, 800, 928]);
+  const f = footer([
+    'Latency is host-dependent (§7.2): it moves with the GPU, the network and whatever else was on the box. The token chart beside this one is the host-independent version of the same comparison, which is why both are printed.',
+    'Every unit is drawn. An arm whose curve reaches 100% far to the right of its p50 is an arm whose cost is set by its tail, not by its median — the case for reporting both.',
+  ], tblY + tbl.height + 22);
+  return doc({
+    width: WIDTH, height: tblY + tbl.height + 22 + f.height,
+    title: `Latency CDF — run ${model.runId}`,
+    desc: arms.map((a) => `arm ${a} p50 ${fmtMs(model.cdf[a]?.at(0.5))} p95 ${fmtMs(model.cdf[a]?.at(0.95))}`).join('; '),
+    body: [head.svg, ...p, lg.svg, tbl.svg, f.svg].join('\n  '),
+  });
+}
+
+// ── 7. tokens per question, the host-independent comparison ─────────────────────────────────────────────
+
+/**
+ * §6: prompt and completion tokens "summed over all turns, from vLLM's usage. This is the number that
+ * separates the arms most sharply and it is host-independent." It is also the structural claim in §3 — arm
+ * B's context grows with the data it reads and is capped by the window; arm C's marginal context is zero
+ * tokens — so the peak prompt against the serving window is printed beside the means rather than left out.
+ */
+export function chartTokens(model) {
+  const arms = model.arms;
+  const win = model.provenance?.max_model_len ?? null;
+  const head = header({
+    title: 'Tokens per question, summed over every turn',
+    subtitle: `Prompt and completion tokens from vLLM's own usage, summed over all turns of an item and averaged over the arm's units. This is the comparison that does not depend on the host: a faster GPU changes the latency chart and changes nothing here. The tool arms pay for every byte of subgraph JSON they read${win ? `, inside a ${fmtInt(win)}-token window` : ''}.`,
+    stamps: model.stamps,
+  });
+  const L = 92, R = WIDTH - 40, top = head.height + 22, H = 280, base = top + H;
+  const yMax = niceCeil(Math.max(1, ...arms.map((a) => (model.tokens.byArm[a].prompt_per_question ?? 0) + (model.tokens.byArm[a].completion_per_question ?? 0))));
+  const y = linScale(0, yMax, base, top);
+  const p = [];
+  for (const t of niceTicks(0, yMax, 5)) {
+    p.push(line(L, y(t), R, y(t), 'grid'));
+    p.push(text(L - 10, y(t) + 4, fmtInt(t), { cls: 't-tiny', role: 'muted', anchor: 'end' }));
+  }
+  p.push(line(L, base, R, base, 'axis'));
+  p.push(text(L - 10, top - 14, 'tokens per question', { cls: 't-small', role: 'ink2', anchor: 'start' }));
+  const gw = (R - L) / arms.length, bw = Math.min(24, gw / 3);
+  arms.forEach((a, i) => {
+    const tk = model.tokens.byArm[a];
+    const bx = L + i * gw + gw / 2 - bw / 2;
+    const pr = tk.prompt_per_question ?? 0, co = tk.completion_per_question ?? 0;
+    p.push(columnUp(bx, bw, y(pr), base, 'ord-0', { round: false, title: `arm ${a} — prompt tokens per question: ${fmtInt(pr)}` }));
+    p.push(columnUp(bx, bw, y(pr + co), y(pr) - 2, 'ord-2', { title: `arm ${a} — completion tokens per question: ${fmtInt(co)}` }));
+    p.push(text(bx + bw / 2, y(pr + co) - 8, fmtInt(pr + co), { cls: 't-small t-b t-num', role: 'ink', anchor: 'middle' }));
+    p.push(text(bx + bw / 2, base + 20, `arm ${a}`, { cls: 't-small t-b', role: 'ink', anchor: 'middle' }));
+    p.push(text(bx + bw / 2, base + 35, `${fmtNumber(tk.turns_per_question)} turns/q`, { cls: 't-tiny', role: 'muted', anchor: 'middle' }));
+  });
+  const lg = legend([
+    { role: 'ord-0', label: 'prompt tokens per question (summed over every turn)' },
+    { role: 'ord-2', label: 'completion tokens per question' },
+  ], HEAD_PAD, base + 62, { columns: 2, colWidth: 440 });
+  const tblY = base + 62 + lg.height + 26;
+  const tbl = valueTable(['arm', 'prompt tok/q', 'completion tok/q', 'total tok/q', 'peak prompt', win ? `share of the ${fmtInt(win)} window` : 'share of window', 'tool bytes in'],
+    arms.map((a) => {
+      const tk = model.tokens.byArm[a];
+      return [`arm ${a}`, fmtInt(tk.prompt_per_question), fmtInt(tk.completion_per_question), fmtInt((tk.prompt_per_question ?? 0) + (tk.completion_per_question ?? 0)),
+        fmtInt(tk.peak_prompt), win ? fmtPct(tk.peak_prompt / win) : '—', fmtInt(tk.tool_bytes_in)];
+    }), HEAD_PAD, tblY, [0, 330, 470, 590, 700, 830, 928]);
+  const f = footer([
+    'Peak prompt is the largest single request an arm made, which is the number the context window actually caps — not the per-question total above it, which is a sum over turns and may exceed the window without any turn doing so.',
+    'This is the structural point behind §3: a tool arm\'s context grows with the data it reads and is capped by the window, while the knowledge arm\'s marginal context is zero tokens. A larger host relieves the cap and does not change the token count.',
+    'Cost follows from this chart and the list prices in pricing.json; the break-even chart is the same numbers with a one-time price added.',
+  ], tblY + tbl.height + 22);
+  return doc({
+    width: WIDTH, height: tblY + tbl.height + 22 + f.height,
+    title: `Tokens per question — run ${model.runId}`,
+    desc: arms.map((a) => `arm ${a}: ${fmtInt(model.tokens.byArm[a].prompt_per_question)} prompt + ${fmtInt(model.tokens.byArm[a].completion_per_question)} completion tokens per question, peak prompt ${fmtInt(model.tokens.byArm[a].peak_prompt)}`).join('; '),
+    body: [head.svg, ...p, lg.svg, tbl.svg, f.svg].join('\n  '),
+  });
+}
+
 // ── entry point ──────────────────────────────────────────────────────────────────────────────────────────
 
 export const CHARTS = [
@@ -1018,6 +1164,8 @@ export const CHARTS = [
   ['latency-cumulative.svg', chartLatencyCumulative],
   ['accuracy-by-bucket.svg', chartAccuracy],
   ['miss-channels.svg', chartMissChannels],
+  ['latency-cdf.svg', chartLatencyCdf],
+  ['tokens-per-question.svg', chartTokens],
 ];
 
 export function chartRun(runDir, { pricingPath = null, outDir = null, knowledgeLoadMs = null } = {}) {

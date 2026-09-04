@@ -258,6 +258,29 @@ t('the load is looked for in a fixed order, and a declared one is never called m
 t('provenance can carry it too', knowledgeLoad({ runDir: dir, provenance: { knowledge_load_ms: 2100 } }), { ms_lo: 2100, ms_hi: 2100, measured: true, source: 'measured — provenance.json' });
 unlinkSync(join(runDir, 'knowledge-load.json'));
 
+// ── 3b. the two charts §8 names that the brief's list left out ──────────────────────────────────────────
+
+const cdf = svg['latency-cdf.svg'];
+const quant = (arm, q) => { const xs = rows.filter((r) => r.arm === arm).map((r) => r.latency_ms).sort((a, b) => a - b); return xs[Math.min(xs.length - 1, Math.ceil(q * xs.length) - 1)]; };
+for (const arm of ['A', 'B', 'C', 'D']) {
+  ok(`latency CDF: arm ${arm}'s p50 and p95 are read off the same rows the curve is drawn from`,
+    cdf.includes(`p50 ${fmtMs(quant(arm, 0.5))} · p95 ${fmtMs(quant(arm, 0.95))}`));
+}
+ok('latency CDF: every unit is a step — the curve is not binned or smoothed',
+  (cdf.match(/class="s-arm-B"/g) ?? []).length >= 1 && cdf.includes(fmtMs(quant('B', 1))));
+ok('latency CDF: the p95 reference line is drawn, not left to be estimated', /p95<\/text>/.test(cdf));
+
+const tok = svg['tokens-per-question.svg'];
+const meanOf = (arm, f) => mean(rows.filter((r) => r.arm === arm).map(f));
+for (const arm of ['A', 'B', 'C', 'D']) {
+  const pr = meanOf(arm, (r) => r.prompt_tokens), co = meanOf(arm, (r) => r.completion_tokens);
+  ok(`tokens: arm ${arm}'s prompt and completion means are on the chart`, tok.includes(fmtInt(pr)) && tok.includes(fmtInt(co)));
+  ok(`tokens: arm ${arm}'s peak prompt — the number the window actually caps — is printed`,
+    tok.includes(fmtInt(rows.filter((r) => r.arm === arm).reduce((a, r) => Math.max(a, r.prompt_tokens_peak ?? 0), 0))));
+}
+ok('tokens: the serving window is read from provenance.json rather than assumed', /share of the 32,768 window/.test(tok));
+ok('tokens: the chart says why it exists — this comparison does not depend on the host', /does not depend on the host/.test(tok));
+
 // ── 4. accuracy by arm × bucket, tripwire held apart ─────────────────────────────────────────────────────
 
 const acc = svg['accuracy-by-bucket.svg'];
