@@ -267,6 +267,18 @@ whole thesis dies if a judge can say "you strawmanned The Graph".
   Sizing a pre-registered parameter around our own defect would buy room for the defect and hide it, so the
   prompt is corrected first and the budget re-measured against the corrected one.
 
+  **What the three 8-call measurements support, and what they do not.** One measurement exists per prompt
+  version (`runs/r1-budget8/`), which is closer to per-fix attribution than the design intended. Each is 16
+  items. They carry DIRECTION and not magnitude: the first correction moved nothing measurable, the frozen
+  prompt moved the distribution the predicted way, and the budget still binds. "This fix was worth one call"
+  is 8.0 against 7.0 at n=16 with no interval, and it must not be written as an estimate — a reader who sees
+  per-fix numbers will reasonably assume they are ones.
+
+  The sharpest of those observations is the tail: nothing finished under six calls on the original prompt,
+  and two of sixteen items answer in **two** on the corrected one. When the model does not have to unlearn a
+  false claim, the task is genuinely short — which is the strongest available evidence that the earlier
+  distribution was measuring our defects rather than the tool loop.
+
   **The decision rule, fixed now:**
   1. Re-measure one chunk on the corrected prompt. If it still pins at the cap — median 8, or the final turn
      forced on ≥ 50% of items — the budget rises to **20 calls / 240 s**. The wall clock rises WITH the call

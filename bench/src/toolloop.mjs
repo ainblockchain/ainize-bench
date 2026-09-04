@@ -21,7 +21,16 @@
  * as a finding and the budget is not raised again. "Not binding" was defined before this measurement existed:
  * median <= 12 of 20 AND forced final on fewer than 25% of items, both.
  */
-export const BUDGET = { toolCalls: 20, turns: 25, wallMs: 240_000, toolResultTokens: 4000 };
+const TOOL_CALLS = 20;
+/**
+ * Turns are DERIVED, not chosen. A call and its reply each consume a turn, so a cap below the call budget
+ * makes the call budget unreachable and we would measure the turn cap while believing we measured calls —
+ * the wall-clock argument again. Stating it as a formula keeps it from becoming a third knob: as a literal
+ * 25 the next person to touch it has no principle to consult; as `calls + TURN_MARGIN` it moves only when
+ * calls move, so §3's one-raise rule governs both and turns are not independently raisable.
+ */
+const TURN_MARGIN = 5;
+export const BUDGET = { toolCalls: TOOL_CALLS, turns: TOOL_CALLS + TURN_MARGIN, wallMs: 240_000, toolResultTokens: 4000 };
 
 /** vLLM's own words when the request no longer fits. Not a transport failure and never retried as one. */
 export const isContextOverflow = (err) => /maximum context length/i.test(String(err ?? ''));
@@ -77,7 +86,7 @@ export async function runToolLoop({ vllm, mcp, systemPrompt, question, offline =
     tool_calls: 0, tool_bytes_in: 0, retries: 0, context_truncated: false,
     budget_exhausted: false, tool_targets: [], tool_results: [], tool_errors: 0,
     model_ms: 0, forced_final: false, offline,
-    context_exhausted: false, context_evictions: 0, prompt_tokens_peak: 0,
+    context_exhausted: false, context_evictions: 0, prompt_tokens_peak: 0, turns_used: 0,
   };
   const t0 = Date.now();
   let final = null;
@@ -149,5 +158,6 @@ export async function runToolLoop({ vllm, mcp, systemPrompt, question, offline =
       messages.push({ role: 'tool', tool_call_id: call.id, content: t.text });
     }
   }
+  ev.turns_used = turns.length;   // reported beside call usage: raising calls must not hide a turn cap
   return { final, error: null, turns, ev, wall_ms: Date.now() - t0 };
 }
