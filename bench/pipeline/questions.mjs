@@ -61,9 +61,18 @@ function itemsForFact(fact, tpl, taught, extra = {}) {
     hop: fam.hop,
     fact_ids: [fact.fact_id],
     source: { deployment_id: fact.source.deployment_id, query_hash: fact.source.query_hash, block: fact.source.block, json_path: fact.source.json_path },
+    source_ids: [fact.source.deployment_id],
     ...extra,
   }));
 }
+
+/**
+ * Every deployment a fair query could have targeted for this item. For a join or a comparison, reaching for
+ * EITHER operand's subgraph is legitimate work, so `wrong_subgraph` must be scored against all of them — scoring
+ * a hop-2 item against the answer fact's deployment alone would manufacture misses on the very bucket where a
+ * tool-using arm is weakest, and flatter our own thesis by accident.
+ */
+const dedup = (facts) => [...new Set(facts.map((f) => f.source.deployment_id))];
 
 /** Joins over two facts. The generator computes the answer; no model and no single training row holds it. */
 function hopItems(facts, tpl, isTaught) {
@@ -83,7 +92,7 @@ function hopItems(facts, tpl, isTaught) {
       out.push({
         id: `${fid}.${form}`, question: fam[form].replaceAll('{subject}', String(sf.object)),
         answer_type: fam.answer_type, truth: af.object, form, taught: isTaught(sf) && isTaught(af), hop: 2,
-        fact_ids: [sf.fact_id, af.fact_id], source: af.source,
+        fact_ids: [sf.fact_id, af.fact_id], source: af.source, source_ids: dedup([sf, af]),
       });
     }
   }
@@ -102,7 +111,7 @@ function hopItems(facts, tpl, isTaught) {
       out.push({
         id: `${fid}.${form}`, question: fam[form].replaceAll('{subject}', subject),
         answer_type: fam.answer_type, truth: (t1.object >= t2.object ? s1 : s2).object, form,
-        taught: isTaught(t1) && isTaught(t2), hop: 2, fact_ids: [t1.fact_id, t2.fact_id], source: t1.source,
+        taught: isTaught(t1) && isTaught(t2), hop: 2, fact_ids: [t1.fact_id, t2.fact_id], source: t1.source, source_ids: dedup([t1, t2]),
       });
     }
   }
@@ -129,7 +138,7 @@ function hopItems(facts, tpl, isTaught) {
         id: `${fid}.${form}`, question: fam[form].replaceAll('{subject}', asset),
         answer_type: fam.answer_type, truth: top.map((t) => t.sym), form,
         taught: top.every((t) => isTaught(t.tf)), hop: 2,
-        fact_ids: top.map((t) => t.tf.fact_id), source: top[0].tf.source,
+        fact_ids: top.map((t) => t.tf.fact_id), source: top[0].tf.source, source_ids: dedup(top.flatMap((t) => [t.tf, t.sy])),
         n_candidates: group.length,
       });
     }
