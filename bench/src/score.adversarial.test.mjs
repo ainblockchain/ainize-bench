@@ -854,6 +854,12 @@ const readSrc = (f) => readFileSync(join(HERE, f), 'utf8');
 {
   const md = readFileSync(join(runDir, 'summary.md'), 'utf8');
   ok('5.11 §6: latency and tokens are reported as results, with model time separable from network time', /model_ms|model ms/.test(md) && /latency/i.test(md));
+  ok('5.11b §6: "it is reported first" — the cost of retrieval is printed BEFORE the accuracy tables',
+    md.indexOf('What retrieval cost') > 0 && md.indexOf('What retrieval cost') < md.indexOf('## 1. Accuracy'));
+  const asserted = summary.falsifiers.filter((f) => /≥|≤|within/.test(f.name) && f.verdict !== 'NOT EVALUABLE');
+  t('5.11c §1: no comparison is asserted without its exact-McNemar p and both Wilson intervals beside it',
+    asserted.filter((f) => !(/McNemar/.test(f.detail) && (f.detail.match(/\[\d+–\d+\]/g) ?? []).length === 2)).map((f) => f.name), []);
+  ok('5.11d …and there is at least one such comparison to check', asserted.length >= 4);
   ok('5.12 §6: the break-even is printed with its formula and its source file', /N\*/.test(md) && /pricing\.json/.test(md));
   ok('5.13 §1: every bucket is printed separately with its own McNemar', BUCKETS.every((b) => md.includes(b)) && /McNemar/.test(md));
   ok('5.14 §1: the pre-registered per-bucket expectation is printed beside the result', /pre-registered/.test(md));

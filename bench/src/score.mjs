@@ -664,22 +664,26 @@ export function summarize({ units, transcripts, provenance, pricing, pricingPath
   // The named falsifiers, evaluated rather than described (§"What would falsify this").
   const falsifiers = [];
   const push = (name, verdict, detail) => falsifiers.push({ name, verdict, detail });
+  const withP = (detail, key, bucket = 'headline_E1_E2') => {
+    const m = comparisons[key]?.[bucket];
+    return m == null ? detail : `${detail} · exact McNemar ${fmtP(m)}`;
+  };
   const hB = perArm.B?.headline_E1_E2?.stable_subset?.accuracy, hC = perArm.C?.headline_E1_E2?.stable_subset?.accuracy;
   const e1B = acc('B', 'headline'), e1C = acc('C', 'headline'), hD = perArm.D?.headline_E1_E2?.stable_subset?.accuracy;
-  if (hB != null && hC != null) push('B ≥ C on the headline bucket ⇒ the compiled-memory claim fails on this domain', hB >= hC ? 'TRIGGERED' : 'not triggered', `E1+E2 stable subset: B ${fmtPct(hB)} vs C ${fmtPct(hC)}`);
+  if (hB != null && hC != null) push('B ≥ C on the headline bucket ⇒ the compiled-memory claim fails on this domain', hB >= hC ? 'TRIGGERED' : 'not triggered', withP(`E1+E2 stable subset: B ${fmtCi(perArm.B.headline_E1_E2.stable_subset)} vs C ${fmtCi(perArm.C.headline_E1_E2.stable_subset)}`, 'B_vs_C'));
   else push('B ≥ C on the headline bucket', 'NOT EVALUABLE', 'both arms B and C must be scored');
-  if (e1B != null && e1C != null) push('B ≥ C on E1 alone (§1\'s size table names E1 the headline bucket)', e1B >= e1C ? 'TRIGGERED' : 'not triggered', `E1, all items: B ${fmtPct(e1B)} vs C ${fmtPct(e1C)}`);
+  if (e1B != null && e1C != null) push('B ≥ C on E1 alone (§1\'s size table names E1 the headline bucket)', e1B >= e1C ? 'TRIGGERED' : 'not triggered', withP(`E1, all items: B ${fmtCi(perArm.B.buckets.headline.all_items)} vs C ${fmtCi(perArm.C.buckets.headline.all_items)}`, 'B_vs_C', 'headline'));
   if (hB != null && hC != null && hC > hB) {
     const m = missChannels.B;
     push('B < C but the loss channels do not account for it ⇒ a defect in arm B, to be fixed and re-run',
       m && m.sums && m.misses > 0 ? 'not triggered' : 'TRIGGERED',
       m ? `every one of arm B's ${m.misses} misses is assigned to exactly one of §6's channels (${m.assigned} assignments)` : 'no miss decomposition was produced for arm B');
   }
-  if (hD != null && hC != null) push('D ≤ C ⇒ "hot path + tail" is wrong; adding the tool bought nothing', hD <= hC ? 'TRIGGERED' : 'not triggered', `E1+E2 stable subset: D ${fmtPct(hD)} vs C ${fmtPct(hC)}`);
+  if (hD != null && hC != null) push('D ≤ C ⇒ "hot path + tail" is wrong; adding the tool bought nothing', hD <= hC ? 'TRIGGERED' : 'not triggered', withP(`E1+E2 stable subset: D ${fmtCi(perArm.D.headline_E1_E2.stable_subset)} vs C ${fmtCi(perArm.C.headline_E1_E2.stable_subset)}`, 'C_vs_D'));
   else push('D ≤ C', 'NOT EVALUABLE', 'both arms C and D must be scored');
-  push('C ≥ B on held-out facts ⇒ leakage, the run is VOID', leakage.verdict === 'VOID — LEAKAGE' ? 'TRIGGERED' : leakage.evaluable ? 'not triggered' : 'NOT EVALUABLE', `tripwire: C ${fmtPct(leakage.arm_C)} vs B ${fmtPct(leakage.arm_B)}`);
+  push('C ≥ B on held-out facts ⇒ leakage, the run is VOID', leakage.verdict === 'VOID — LEAKAGE' ? 'TRIGGERED' : leakage.evaluable ? 'not triggered' : 'NOT EVALUABLE', withP(`tripwire, all items: C ${perArm.C ? fmtCi(perArm.C.buckets.tripwire.all_items) : '—'} vs B ${perArm.B ? fmtCi(perArm.B.buckets.tripwire.all_items) : '—'}`, 'B_vs_C', 'tripwire'));
   const aAcc = perArm.A?.overall?.stable_subset?.accuracy, bAcc = perArm.B?.overall?.stable_subset?.accuracy;
-  if (aAcc != null && bAcc != null) push('A close to B ⇒ the questions are too easy and the item set is regenerated (§"The four arms")', bAcc - aAcc < 0.05 ? 'TRIGGERED' : 'not triggered', `overall stable subset: A ${fmtPct(aAcc)} vs B ${fmtPct(bAcc)}`);
+  if (aAcc != null && bAcc != null) push('A within 5 points of B ⇒ the questions are too easy and the item set is regenerated (§"The four arms")', bAcc - aAcc < 0.05 ? 'TRIGGERED' : 'not triggered', withP(`overall stable subset: A ${fmtCi(perArm.A.overall.stable_subset)} vs B ${fmtCi(perArm.B.overall.stable_subset)}`, 'A_vs_B', 'overall'));
 
   // The pre-registered ordering, checked cell by cell.
   const ordering = (() => {
@@ -871,6 +875,26 @@ export function renderMarkdown(s) {
   p('`A ≪ B` is read as a margin of at least 5 points; the other two steps are strict inequalities. A difference is never called a difference without its p-value and both intervals (below).');
   p();
 
+  p('## 0.5 What retrieval cost — the result §6 asks to be reported first');
+  p();
+  p('§6: "Latency and tokens are headline results, not context for accuracy. The thesis was never *the model got smarter* — it is *at comparable accuracy, what does retrieval cost*. Treating time and tokens as columns beside accuracy inverts the study … it is reported first." So it is, before the accuracy tables. Tokens are host-independent; latency is not, and the host is in §6 below.');
+  p();
+  p(table(['Arm', 'E1+E2 accuracy', 'tokens / question', 'wall clock / question', 'gateway queries', 'cost / question'], arms.map((a) => {
+    const x = s.arms[a];
+    const tok = (x.tokens.prompt_per_question ?? 0) + (x.tokens.completion_per_question ?? 0);
+    return [a, fmtCi(x.headline_E1_E2.stable_subset), fmtNum(tok, 0), x.timing.latency_ms_mean == null ? '—' : `${fmtNum(x.timing.latency_ms_mean / 1000, 1)} s`, x.tools.gateway_queries_total, fmtUsd(x.cost.per_question_usd)];
+  })));
+  p();
+  {
+    const B = s.arms.B, C = s.arms.C;
+    if (B && C) {
+      const tokB = (B.tokens.prompt_per_question ?? 0) + (B.tokens.completion_per_question ?? 0);
+      const tokC = (C.tokens.prompt_per_question ?? 0) + (C.tokens.completion_per_question ?? 0);
+      const ratio = (x, y) => (x == null || y == null || !y ? '—' : `${(x / y).toFixed(1)}×`);
+      p(`Arm B against arm C, on the same items and the same host: **${ratio(tokB, tokC)}** the tokens, **${ratio(B.timing.latency_ms_mean, C.timing.latency_ms_mean)}** the wall clock, **${ratio(B.cost.per_question_usd, C.cost.per_question_usd)}** the modelled cost, and ${B.tools.gateway_queries_total} gateway queries against ${C.tools.gateway_queries_total}. Arm C's marginal context is zero tokens and its network use is zero by construction (§6); every one of those numbers is measured, not asserted.`);
+      p();
+    }
+  }
   p('## 1. Accuracy per arm × bucket');
   p();
   p(`Unit: the item. ${s.unit_note}`);
