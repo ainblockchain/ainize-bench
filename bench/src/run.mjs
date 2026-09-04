@@ -73,7 +73,13 @@ async function serverLoad(apiBase) {
     const r = await fetch(`${apiBase}/metrics`, { signal: AbortSignal.timeout(8000) });
     if (!r.ok) return null;
     const text = await r.text();
-    const num = (k) => { const m = text.match(new RegExp(`^vllm:${k}\\{[^}]*\\}\\s+([0-9.]+)$`, 'm')); return m ? Number(m[1]) : null; };
+    // Prometheus prints large counters in SCIENTIFIC NOTATION — `1.1081195e+07`. A `[0-9.]+` pattern
+    // captures "1.1081195" and stops at the exponent, so once prompt_tokens_total passed ten million the
+    // idle check began comparing rounded mantissas: real growth of thousands of tokens showed as no change
+    // at all, and the guard reported `+null` or `+0` while the engine was busy. The counter check was the
+    // EXACT instrument that replaced the sampled gauge, and it degraded silently the moment a number got
+    // large — same failure shape, one level deeper.
+    const num = (k) => { const m = text.match(new RegExp(`^vllm:${k}\\{[^}]*\\}\\s+([0-9.eE+-]+)$`, 'm')); const v = m ? Number(m[1]) : null; return Number.isFinite(v) ? v : null; };
     const running = num('num_requests_running'), waiting = num('num_requests_waiting');
     if (running === null && waiting === null) return null;
     // The CUMULATIVE counters are what make an idle check exact. The gauges above are instantaneous and miss
