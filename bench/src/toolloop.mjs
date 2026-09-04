@@ -7,7 +7,21 @@
 // ceiling, and every fact the scorer needs to assign a miss to a named channel (§6) is written into the
 // transcript here rather than re-derived later from prose.
 
-export const BUDGET = { toolCalls: 8, turns: 10, wallMs: 90_000, toolResultTokens: 4000 };
+/**
+ * Raised from {8 calls, 10 turns, 90 s} on 2026-09-04 under §3's pre-registered rule, after the corrected
+ * prompt still pinned: distribution {2:2, 5:1, 6:1, 7:1, 8:9, 9:2}, median 8, forced final 11 of 16. The
+ * prompt fixes moved the mean from 8.0 to 7.0 and forced-final from ~94% to 69%, which is real and is not
+ * enough — the rule fires on median >= 8 OR forced-final >= 50%, and both held.
+ *
+ * TURNS RISE WITH CALLS. The rule named calls and wall clock; 10 turns against 20 calls would simply become
+ * the new binding constraint, which is moving the strawman rather than removing it — the same reasoning that
+ * put the wall clock in the rule. 25 turns leaves room for a tool call plus its reply plus the forced final.
+ *
+ * THIS IS THE ONE RAISE. If 20 also binds, §3 says the summary reports "arm B is budget-limited at 20 calls"
+ * as a finding and the budget is not raised again. "Not binding" was defined before this measurement existed:
+ * median <= 12 of 20 AND forced final on fewer than 25% of items, both.
+ */
+export const BUDGET = { toolCalls: 20, turns: 25, wallMs: 240_000, toolResultTokens: 4000 };
 
 /** vLLM's own words when the request no longer fits. Not a transport failure and never retried as one. */
 export const isContextOverflow = (err) => /maximum context length/i.test(String(err ?? ''));

@@ -36,7 +36,9 @@ t('the target is found under every argument name the server uses', () => {
 });
 
 t('the budget is the one §3 declares', () => {
-  assert.deepEqual(BUDGET, { toolCalls: 8, turns: 10, wallMs: 90_000, toolResultTokens: 4000 });
+  // Raised once, under the rule fixed before the measurement that triggered it. If this assertion fails,
+  // the fix is §3 and this line together — never this line alone, and never a second raise.
+  assert.deepEqual(BUDGET, { toolCalls: 20, turns: 25, wallMs: 240_000, toolResultTokens: 4000 });
 });
 
 t('vLLM context overflow is recognised and is not a transport error', () => {
