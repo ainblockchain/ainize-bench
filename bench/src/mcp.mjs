@@ -92,6 +92,13 @@ export class SubgraphMCP {
         if (this.#pending.delete(id)) reject(new Error(`MCP ${method} timed out after ${timeoutMs} ms`));
       }, timeoutMs).unref?.();
     });
+    // The reply can arrive on the SSE stream BEFORE the POST's own HTTP response returns — the server answers
+    // one connection while acknowledging another. Attaching the caller's handler only after #post resolves
+    // therefore leaves `done` momentarily unhandled, and a JSON-RPC error in that window (a tool called with a
+    // missing argument, which is ordinary arm-B behaviour) crashes the process as an unhandled rejection
+    // instead of being caught by callTool. Observed on the second smoke run. A no-op handler makes `done`
+    // handled from the instant it exists; the returned promise still rejects for the caller.
+    done.catch(() => {});
     return this.#post({ jsonrpc: '2.0', id, method, params }).then(() => done);
   }
 

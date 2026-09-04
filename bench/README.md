@@ -222,6 +222,22 @@ whole thesis dies if a judge can say "you strawmanned The Graph".
   model can read), and if it still does not fit, withdraws the tool schemas and forces one final answering
   turn. Either path sets `context_exhausted`, which is a miss channel above. A 400 is never retried — it would
   fail identically and spend 90 s doing it. The eviction count and the peak prompt size are recorded per item.
+- **MEASURED 2026-09-04, and it is currently a blocker, not a caveat: at `--max-model-len 8192` arm B runs
+  out of context on 100% of items.** Four smoke items, all four `context_exhausted`, all four missed. The
+  arithmetic is not subtle: the tool schemas are ~1 184 tokens and the B-assisted system prompt ~912, so the
+  first request already costs ~2 800 and the usable budget for tool output across the whole item is roughly
+  5 000 tokens — while a single Messari pool response measured 13 600–22 100 characters (~3 400–5 500
+  tokens). One generous query fills the window. Observed peaks were 6 400–7 700 tokens against a 7 680
+  ceiling.
+
+  This has to be fixed before the headline run, not written up. §3 exists to stop us shipping a strawman arm
+  B, and "it ran out of room on every single item" is a strawman whoever caused it: a reviewer would say the
+  comparison was against a hobbled tool arm, and they would be right. The fix is a larger window on the
+  serving deployment — this model supports far more than 8 192; the flag was chosen for KV-cache memory, not
+  by the model — which means relaunching `:8002`, which is shared with the live cluster and belongs to the
+  same GPU window as arm C's real training. **The headline run is therefore blocked on that window.** Both
+  numbers get published either way: the window the run used, and arm B's peak context per item, so a reader
+  can see how much room the arm actually had.
 - **The 8 192-token window is a real constraint, declared not exploited.** Subgraph JSON is large. Tool results
   are passed through verbatim up to 4 000 tokens; beyond that they are truncated at a JSON array boundary with
   an explicit `… truncated, N of M rows` marker, and the turn is flagged `context_truncated`. The truncation
