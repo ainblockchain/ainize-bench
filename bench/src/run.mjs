@@ -67,20 +67,51 @@ function loadQuestions() {
   return rows;
 }
 
+/**
+ * The deployment ids arm B-assisted is handed, and the pinned block they were live at.
+ *
+ * Only LIVE deployments are listed. Padding the headline prompt with dead ids would manufacture
+ * `wrong_subgraph` misses out of our own curation and make "the generous configuration" a lie — of the 23 in
+ * sources.json, 8 were dropped at the r1 pull (six stale or erroring, one unreachable, one reporting a head
+ * 475 million blocks ahead of the median, i.e. not this chain). Preference order: the `live` field the pull
+ * writes back into sources.json; failing that, the run's own manifest (answered AND not dropped). If neither
+ * exists the runner stops rather than guessing — an unaudited deployment list is not a fair arm B.
+ */
+function liveDeployments() {
+  const sources = JSON.parse(readFileSync(join(BENCH, 'pipeline', 'sources.json'), 'utf8')).sources ?? [];
+  if (sources.some((s) => typeof s.live === 'boolean')) {
+    return { list: sources.filter((s) => s.live), basis: 'sources.json live field', block: null };
+  }
+  const mp = join(BENCH, 'data', runId, 'pull', 'manifest.json');
+  if (!existsSync(mp)) die(`neither sources.json carries a \`live\` field nor ${mp} exists — cannot tell arm B which deployments are real`);
+  const m = JSON.parse(readFileSync(mp, 'utf8'));
+  const droppedIds = new Set((m.dropped ?? []).map((d) => d.deployment_id ?? d.deployment ?? d.protocol));
+  const answered = new Set((m.responses ?? []).map((r) => r.deployment_id ?? r.deployment ?? r.protocol));
+  const live = sources.filter((s) => {
+    const keys = [s.deployment_id, s.deployment, s.protocol];
+    return keys.some((k) => answered.has(k)) && !keys.some((k) => droppedIds.has(k));
+  });
+  return { list: live, basis: `data/${runId}/pull/manifest.json`, block: m.block ?? null };
+}
+
 function systemPrompts() {
   const read = (f) => readFileSync(join(BENCH, 'system-prompts', f), 'utf8');
   const plain = read('plain.txt');
   const toolsTemplate = read('tools.txt');
-  const sources = JSON.parse(readFileSync(join(BENCH, 'pipeline', 'sources.json'), 'utf8')).sources ?? [];
-  const list = sources.map((s) => `- ${s.protocol} (${s.schema}, ${s.network}): ${s.deployment_id}`).join('\n');
+  const { list: live, basis, block } = liveDeployments();
+  if (!live.length) die(`no live deployments (basis: ${basis}) — arm B has nothing to be told about`);
+  // The count and the pin are stated so a reviewer can check the curation against the committed manifest
+  // instead of taking it on trust.
+  const header = `The following ${live.length} subgraph deployments were live${block ? ` at block ${block}` : ''} when this run started.`;
+  const listText = `${header}\n` + live.map((s) => `- ${s.protocol} (${s.schema}, ${s.network}): ${s.deployment_id}`).join('\n');
   // B-assisted (headline, §3): the deployment ids and the worked example a competent engineer would ship.
-  const assisted = toolsTemplate.replace('{{DEPLOYMENTS}}', list);
+  const assisted = toolsTemplate.replace('{{DEPLOYMENTS}}', listText);
   // B-cold: the same file with the domain paragraph, the id list and the worked example removed. Derived by
   // truncation at a marker rather than maintained as a second file, so the two can never drift apart.
   const coldCut = toolsTemplate.indexOf('The domain of these questions');
   if (coldCut < 0) die('system-prompts/tools.txt no longer contains the domain paragraph B-cold is cut at');
   const cold = toolsTemplate.slice(0, coldCut).trimEnd() + '\n';
-  return { plain, assisted, cold };
+  return { plain, assisted, cold, live, basis };
 }
 
 const armUsesTools = (arm) => arm === 'B' || arm === 'D';
@@ -90,6 +121,7 @@ async function main() {
   mkdirSync(outDir, { recursive: true });
   const questions = shuffle(loadQuestions()).slice(0, argv.limit ? Number(argv.limit) : undefined);
   const prompts = systemPrompts();
+  console.error(`arm B-assisted is handed ${prompts.live.length} live deployments (basis: ${prompts.basis})`);
 
   const vllm = new VLLM();
   const { model, maxModelLen } = await vllm.ready();
@@ -127,6 +159,7 @@ async function main() {
     patch: provenancePatch,
     mcp: offline ? { mode: 'fault-injection 503' } : { server: mcp?.serverInfo ?? null, protocol: mcp?.protocolVersion ?? null, authenticated: mcp?.authenticated ?? null, tools: mcp?.toolSchemas?.map((t) => t.function.name) ?? [] },
     graph_api_key_present: !!process.env.GRAPH_API_KEY,
+    deployments_offered: { count: prompts.live.length, basis: prompts.basis, ids: prompts.live.map((s) => s.deployment_id) },
     git_commit: (() => { try { return execSync('git rev-parse HEAD', { cwd: BENCH }).toString().trim(); } catch { return null; } })(),
     restarts_detected: 0, chunks_rerun: 0,
   };
@@ -160,7 +193,11 @@ async function main() {
               let r = await vllm.turn({ messages: [{ role: 'system', content: system }, { role: 'user', content: q.question }] });
               let retries = 0;
               if (r.error) { retries = 1; r = await vllm.turn({ messages: [{ role: 'system', content: system }, { role: 'user', content: q.question }] }); }
-              payload = { arm, repeat: rep, question: q, system, final: r.error ? null : r.content, error: r.error ?? null, latency_ms: Date.now() - t0, model_ms: r.ms, turns: r.error ? [] : [{ turn: 0, request: r.request, response: r.response, ms: r.ms, usage: r.usage, finish_reason: r.finishReason }], evidence: { tool_calls: 0, retries, offline } };
+              // The evidence object has the SAME shape in every arm, with the tool fields at their zero values.
+              // A scorer that reads `context_exhausted` must get `false` for a tool-less arm, never `undefined`
+              // — an absent flag and a false one are the same to `if (e.context_exhausted)` but not to a
+              // table that counts them, and arms A and C would silently drop out of the channel totals.
+              payload = { arm, repeat: rep, question: q, system, final: r.error ? null : r.content, error: r.error ?? null, latency_ms: Date.now() - t0, model_ms: r.ms, turns: r.error ? [] : [{ turn: 0, request: r.request, response: r.response, ms: r.ms, usage: r.usage, finish_reason: r.finishReason }], evidence: { tool_calls: 0, tool_bytes_in: 0, retries, context_truncated: false, context_exhausted: false, context_evictions: 0, prompt_tokens_peak: r.usage?.prompt_tokens ?? 0, budget_exhausted: false, forced_final: false, tool_errors: 0, tool_targets: [], tool_results: [], model_ms: r.ms, offline } };
             }
             results.push({ q, rep, payload });
           }
