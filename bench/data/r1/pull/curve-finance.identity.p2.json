@@ -1,0 +1,465 @@
+{
+  "_ainize": {
+    "deployment_id": "3fy93eAT56UJsRCEht8iFhfi6wjHWXtZ9dnnbQmvFopF",
+    "protocol": "curve-finance",
+    "query": "identity",
+    "query_hash": "83680f3eaa380ba4b5cd75ee9b340689efd2a7ae37fa7be9105e2d4ee64b07dd",
+    "block": 25902879,
+    "skip": 2000,
+    "first": 1000,
+    "gateway_ms": 257
+  },
+  "data": {
+    "tokens": [
+      {
+        "id": "0xf91688378fb67af510cee0f5d830af3e41398a59",
+        "name": "Curve.fi Factory Crypto Pool: aaa1",
+        "symbol": "aaa2-f",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xf9228a8449356240f6c6f5730e8092cf0f7eb047",
+        "name": "Curve.fi Factory Crypto Pool: liq_ETH_UNISWAP",
+        "symbol": "ETH UNI-f",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xf939e0a03fb07f59a73314e73794be0e57ac1b4e",
+        "name": "Curve.Fi USD Stablecoin",
+        "symbol": "crvUSD",
+        "decimals": 18,
+        "lastPriceUSD": "1.0183792767794333210136"
+      },
+      {
+        "id": "0xf951e335afb289353dc249e82926178eac7ded78",
+        "name": "swETH",
+        "symbol": "swETH",
+        "decimals": 18,
+        "lastPriceUSD": "2123.072517"
+      },
+      {
+        "id": "0xf95aaa7ebb1620e46221b73588502960ef63dba0",
+        "name": "Curve.fi Factory USD Metapool: tBTC/wBTC/sBTC",
+        "symbol": "TBTCSBTC23CRV-f",
+        "decimals": 18,
+        "lastPriceUSD": "69367.087928"
+      },
+      {
+        "id": "0xf980b4a4194694913af231de69ab4593f5e0fcdc",
+        "name": "mkUSD-USDC",
+        "symbol": "mkUSDUSDC",
+        "decimals": 18,
+        "lastPriceUSD": "0.997921"
+      },
+      {
+        "id": "0xf9835375f6b268743ea0a54d742aa156947f8c06",
+        "name": "Curve.fi Factory Crypto Pool: CNC/ETH",
+        "symbol": "CNCETH-f",
+        "decimals": 18,
+        "lastPriceUSD": "0.001364"
+      },
+      {
+        "id": "0xf985005a3793dba4cce241b3c19ddcd3fe069ff4",
+        "name": "Curve.fi Factory Crypto Pool: ALCX/FraxBP",
+        "symbol": "ALCXFRAXBP-f",
+        "decimals": 18,
+        "lastPriceUSD": "1.446341"
+      },
+      {
+        "id": "0xf9d82660828d8f5d121b14a9dc9c677d91f60065",
+        "name": "STBL_USST - USST Token",
+        "symbol": "USST",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xfa0bbb0a5815f6648241c9221027b70914dd8949",
+        "name": "Curve.fi Factory Plain Pool: frxETH/OETH",
+        "symbol": "frxETHOETH-f",
+        "decimals": 18,
+        "lastPriceUSD": "3108.308424"
+      },
+      {
+        "id": "0xfa2b947eec368f42195f24f36d2af29f7c24cec2",
+        "name": "Falcon USD",
+        "symbol": "USDf",
+        "decimals": 18,
+        "lastPriceUSD": "0.95437836434177583082259"
+      },
+      {
+        "id": "0xfa65aa60a9d45623c57d383fb4cf8fb8b854cc4d",
+        "name": "Curve.fi Factory BTC Metapool: tbtc2",
+        "symbol": "tbtc2/sbtcCRV-f",
+        "decimals": 18,
+        "lastPriceUSD": "46942.803369"
+      },
+      {
+        "id": "0xfae103dc9cf190ed75350761e95403b7b8afa6c0",
+        "name": "rswETH",
+        "symbol": "rswETH",
+        "decimals": 18,
+        "lastPriceUSD": "2663.265512"
+      },
+      {
+        "id": "0xfae49305b3336fdfb5ada4812123cc8577853408",
+        "name": "trUSD/frxUSD",
+        "symbol": "tr-frxUSD",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xfafdf0c4c1cb09d430bf88c75d88bb46dae09967",
+        "name": "Iron Bank AUD",
+        "symbol": "ibAUD",
+        "decimals": 18,
+        "lastPriceUSD": "0.70223"
+      },
+      {
+        "id": "0xfb14241e85791bd327d8dcff149ef0085f28f03e",
+        "name": "Curve.fi Factory Crypto Pool: liq_CRV_FANTOM",
+        "symbol": "CRV FTM-f",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xfb4e1d25fb6b39af675f01cc512ba13a2282c4f1",
+        "name": "Unilend Interest Bearing USDT",
+        "symbol": "uUSDT",
+        "decimals": 6,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xfb588886715a263f69c1edd4e84e0ac1855e928a",
+        "name": "Conic Debt Token",
+        "symbol": "cncDT",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xfb8b95fb2296a0ad4b6b1419fdaa5aa5f13e4009",
+        "name": "FXS/crvUSD",
+        "symbol": "FXScrvUSD",
+        "decimals": 18,
+        "lastPriceUSD": "2.570753"
+      },
+      {
+        "id": "0xfb9a265b5a1f52d97838ec7274a0b1442efacc87",
+        "name": "Curve.fi Factory Pool: Ankr Reward-Earning Staked ETH",
+        "symbol": "aETHb-f",
+        "decimals": 18,
+        "lastPriceUSD": "168688.015397"
+      },
+      {
+        "id": "0xfbb481a443382416357fa81f16db5a725dc6cec8",
+        "name": "Curve.fi Factory Plain Pool: cvxFpis/Fpis",
+        "symbol": "cvxFpis-f",
+        "decimals": 18,
+        "lastPriceUSD": "0.730093621139845672165340131090793"
+      },
+      {
+        "id": "0xfbdca68601f835b27790d98bbb8ec7f05fdeaa9b",
+        "name": "Curve.fi Factory BTC Metapool: ibBTC",
+        "symbol": "ibbtc/sbtcCRV-f",
+        "decimals": 18,
+        "lastPriceUSD": "79869.584966"
+      },
+      {
+        "id": "0xfbe8925bdee1c5dd778b3e2ac3ffaeaac462f3c9",
+        "name": "Curve.fi Factory Crypto Pool: VNXAU/USDC",
+        "symbol": "VNXAUSDC-f",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xfc05ee9dec7275a273b1e1a8a821da3cdf752f9b",
+        "name": "Curve Vault for crvUSD",
+        "symbol": "cvcrvUSD",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xfc0b1eef20e4c68b3dcf36c4537cfa7ce46ca70b",
+        "name": "USDC Plus",
+        "symbol": "USDC+",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xfc2838a17d8e8b1d5456e0a351b0708a09211147",
+        "name": "Curve.fi FRAX/USDP",
+        "symbol": "crvfraxUSDP",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xfc636d819d1a98433402ec9dec633d864014f28c",
+        "name": "Curve.fi Factory Plain Pool: crvUSD/UZD",
+        "symbol": "crvUSDUZD-f",
+        "decimals": 18,
+        "lastPriceUSD": "1.08170116605755535599958884"
+      },
+      {
+        "id": "0xfc89b519658967fcbe1f525f1b8f4bf62d9b9018",
+        "name": "Curve.fi Factory Plain Pool: Zunami zETH/frxETH",
+        "symbol": "z-frxETH-f-f",
+        "decimals": 18,
+        "lastPriceUSD": "2890.325409"
+      },
+      {
+        "id": "0xfc8c34a3b3cfe1f1dd6dbccec4bc5d3103b80ff0",
+        "name": "Curve.fi Factory Plain Pool: FLR/EURS",
+        "symbol": "FLREURS-f",
+        "decimals": 18,
+        "lastPriceUSD": "1.10192"
+      },
+      {
+        "id": "0xfcc067efb7be2eebd32615f14fc22195abb68e9b",
+        "name": "Curve.fi Factory Plain Pool: rETH/frxETH",
+        "symbol": "rETHfrxETH-f",
+        "decimals": 18,
+        "lastPriceUSD": "2516.223429"
+      },
+      {
+        "id": "0xfcc5c47be19d06bf83eb04298b026f81069ff65b",
+        "name": "Yearn CRV",
+        "symbol": "yCRV",
+        "decimals": 18,
+        "lastPriceUSD": "0.369447"
+      },
+      {
+        "id": "0xfcca47ddd4336f08835005d912124b472ed29448",
+        "name": "ynUSDx/USD",
+        "symbol": "ynUSDx/USD",
+        "decimals": 18,
+        "lastPriceUSD": "0.999773"
+      },
+      {
+        "id": "0xfd03723a9a3abe0562451496a9a394d2c4bad4ab",
+        "name": "DYAD Stable",
+        "symbol": "DYAD",
+        "decimals": 18,
+        "lastPriceUSD": "1.00868725876939424917"
+      },
+      {
+        "id": "0xfd05d3c7fe2924020620a8be4961bbaa747e6305",
+        "name": "Badger Vested Escrow Convex Token",
+        "symbol": "bveCVX",
+        "decimals": 18,
+        "lastPriceUSD": "1.351597"
+      },
+      {
+        "id": "0xfd1627e3f3469c8392c8c3a261d8f0677586e5e1",
+        "name": "Curvykin Skysaver",
+        "symbol": "SkySaver",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xfd2a8fa60abd58efe3eee34dd494cd491dc14900",
+        "name": "Curve.fi aDAI/aUSDC/aUSDT",
+        "symbol": "a3CRV",
+        "decimals": 18,
+        "lastPriceUSD": "1"
+      },
+      {
+        "id": "0xfd37356c1a62288b32fa58188c77ab0d694a0f4e",
+        "name": "Yearn PRISMA",
+        "symbol": "yPRISMA",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xfd46b54fcff753ba058a5e9bbb45dcedc9a71fab",
+        "name": "Curve.fi Factory USD Metapool: FREE/USDC",
+        "symbol": "FREEUSDC3CRV-f",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xfd56a3dcfc0690881a466ae432d71bb2db588083",
+        "name": "Fleet Token",
+        "symbol": "FLEET",
+        "decimals": 6,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xfd5db7463a3ab53fd211b4af195c5bccc1a03890",
+        "name": "Curve.fi Factory Plain Pool: Euro Tether",
+        "symbol": "EURT-f",
+        "decimals": 18,
+        "lastPriceUSD": "1.093027"
+      },
+      {
+        "id": "0xfd8e70e83e399307db3978d3f34b060a06792c36",
+        "name": "Wasabi BTC",
+        "symbol": "waBTC",
+        "decimals": 8,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xfe0c30065b384f05761f15d0cc899d4f9f9cc0eb",
+        "name": "ether.fi governance token",
+        "symbol": "ETHFI",
+        "decimals": 18,
+        "lastPriceUSD": "0.533409"
+      },
+      {
+        "id": "0xfe18ae03741a5b84e39c295ac9c856ed7991c38e",
+        "name": "Crypto.com Wrapped Staked ETH",
+        "symbol": "CDCETH",
+        "decimals": 18,
+        "lastPriceUSD": "2711.6359"
+      },
+      {
+        "id": "0xfe18be6b3bd88a2d2a7f928d00292e7a9963cfc6",
+        "name": "Synth sBTC",
+        "symbol": "sBTC",
+        "decimals": 18,
+        "lastPriceUSD": "80709.293081"
+      },
+      {
+        "id": "0xfe2e637202056d30016725477c5da089ab0a043a",
+        "name": "StakeWise Staked ETH2",
+        "symbol": "sETH2",
+        "decimals": 18,
+        "lastPriceUSD": "1830.102113"
+      },
+      {
+        "id": "0xfe32747d0251ba92bcb80b6d16c8257ecf25ab1c",
+        "name": "dfxCADC",
+        "symbol": "DFXCADC",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xfe469c17898082dbdc1e969fb36fe4e7c56b5014",
+        "name": "Curve.fi Factory Crypto Pool: Spectra-PT/IBT",
+        "symbol": "SPT-PT/IBT-f",
+        "decimals": 18,
+        "lastPriceUSD": "1.989304"
+      },
+      {
+        "id": "0xfe8ab51fd37ea5cebe203510160303dad4ad11ad",
+        "name": "Curve.fi Factory Crypto Pool: Spectra-PT/IBT",
+        "symbol": "SPT-PT/IBT-f",
+        "decimals": 18,
+        "lastPriceUSD": "1.98631"
+      },
+      {
+        "id": "0xfed2b54453f75634bcdaea5e5b11a3f99b9c28fa",
+        "name": "Curve.fi Factory Crypto Pool: USDC+",
+        "symbol": "USDC+LP-f",
+        "decimals": 18,
+        "lastPriceUSD": "2.138971"
+      },
+      {
+        "id": "0xfed5571dc0fef305c68b663709ac06d41e571f1f",
+        "name": "Curve.fi Factory Crypto Pool: ARTH/3pool",
+        "symbol": "ARTH3pool-f",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xfeef77d3f69374f66429c91d732a244f074bdf74",
+        "name": "Convex FXS",
+        "symbol": "cvxFXS",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xfef45c3f537f623ce9a301f55140e4bb8490efa4",
+        "name": "sjUSD/USDC",
+        "symbol": "sjUSDUSDC",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xfef79304c80a694dfd9e603d624567d470e1a0e7",
+        "name": "Curve.fi Factory Plain Pool: crvUSD-sFRAX",
+        "symbol": "crvsFRAX-f",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xff17dab22f1e61078aba2623c89ce6110e878b3c",
+        "name": "DOLA+scrvUSD",
+        "symbol": "dola-save",
+        "decimals": 18,
+        "lastPriceUSD": "1.211396194380209098295701489938754"
+      },
+      {
+        "id": "0xff467c6e827ebbea64da1ab0425021e6c89fbe0d",
+        "name": "Curve Vault for crvUSD",
+        "symbol": "cvcrvUSD",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xff709449528b6fb6b88f557f7d93dece33bca78d",
+        "name": "ApeUSD",
+        "symbol": "ApeUSD",
+        "decimals": 18,
+        "lastPriceUSD": "1"
+      },
+      {
+        "id": "0xff71841eefca78a64421db28060855036765c248",
+        "name": "Cove YFI",
+        "symbol": "coveYFI",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xff771e92dd2400b4f2d3e0ac3afae3ae1885877e",
+        "name": "Curve Vault for crvUSD",
+        "symbol": "cvcrvUSD",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xffa66f6985215fdd2907b21145d1f9c91ac62f80",
+        "name": "Curve.fi Factory Plain Pool: bentCVX/CVX",
+        "symbol": "bentCVXlp-f",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xffc78332f0da6fbaabdacfe8054ccbc501eed432",
+        "name": "Curve.fi Factory USD Metapool: USDANT/USDT",
+        "symbol": "USDANTUSDT3CRV-f",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xffd3b4d343a8964a5c3c1caac20f319c41a97bff",
+        "name": "ynRWAx/ynUSDx",
+        "symbol": "yn-RWA/USD",
+        "decimals": 18,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0xfff8634de89271b6075c55fa89b4e9a087fdb9fe",
+        "name": "tacBTC/cb/f",
+        "symbol": "tacBTCpool",
+        "decimals": 18,
+        "lastPriceUSD": "100491.6173773650873779607978456479"
+      },
+      {
+        "id": "0xfffae954601cff1195a8e20342db7ee66d56436b",
+        "name": "Curve.fi Factory Crypto Pool: ETHx-wstETH",
+        "symbol": "ETHxwstETH-f",
+        "decimals": 18,
+        "lastPriceUSD": "1.884253"
+      }
+    ],
+    "_meta": {
+      "block": {
+        "number": 25902879,
+        "timestamp": null
+      },
+      "deployment": "QmRpHzsesvv7VTrKjEuutiZ7xEfDfd6jH4mgSeDDbUDVRN",
+      "hasIndexingErrors": false
+    }
+  }
+}

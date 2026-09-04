@@ -1,0 +1,16 @@
+# yield-aggregator vertical. Every root field carries `block: $block` so the whole run is frozen at B*.
+query AinizeVaults($skip: Int!, $first: Int!, $block: Block_height) {
+  vaults(first: $first, skip: $skip, orderBy: totalValueLockedUSD, orderDirection: desc, block: $block) {
+    id
+    name
+    symbol
+    depositLimit
+    totalValueLockedUSD
+    pricePerShare
+    inputToken { id name symbol decimals lastPriceUSD }
+    outputToken { id name symbol decimals }
+    fees { feeType feePercentage }
+    protocol { id name slug network type schemaVersion }
+  }
+  _meta(block: $block) { block { number timestamp } deployment hasIndexingErrors }
+}

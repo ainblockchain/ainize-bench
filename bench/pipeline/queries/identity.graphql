@@ -1,0 +1,17 @@
+# THE COMPOSABILITY CLAIM, in one file.
+#
+# This query text is byte-identical for every deployment in sources.json — yield-aggregator, lending and
+# dex-amm alike — because `Token` and `Protocol` are Messari-standardized entities that all three verticals
+# share. One query pattern spanning many protocols, which is exactly what the "Composable or Standardized
+# Graph Products" track asks for, and it is verified offline: tools/validate-query.mjs type-checks this same
+# file against schema-yield.graphql, schema-lending.graphql and schema-dex-amm.graphql without editing it.
+query AinizeIdentity($skip: Int!, $first: Int!, $block: Block_height) {
+  tokens(first: $first, skip: $skip, orderBy: id, orderDirection: asc, block: $block) {
+    id
+    name
+    symbol
+    decimals
+    lastPriceUSD
+  }
+  _meta(block: $block) { block { number timestamp } deployment hasIndexingErrors }
+}

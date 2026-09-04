@@ -1,0 +1,875 @@
+{
+  "block": 25902883,
+  "chain": "ethereum-mainnet",
+  "generatedAt": "2026-09-04T08:55:31.409Z",
+  "model": "Qwen3.8-Flash-Next",
+  "thinking": false,
+  "arm": "A — base model, no tools, no knowledge patch",
+  "groundTruth": "public RPC eth_call, see evidence/crossvertical-onchain-block25902883.json",
+  "families": [
+    {
+      "id": "G1",
+      "family": "DEX  pool ADDRESS -> token pair (Messari dex-amm: LiquidityPool.inputTokens)",
+      "n": 12,
+      "correct": 1,
+      "accuracy": 8.3,
+      "refused": 0,
+      "confidentlyWrong": 11,
+      "confidentlyWrongPct": 91.7,
+      "distinctTruths": 10,
+      "modalAnswer": "WETH/USDC",
+      "modalAnswerCount": 8,
+      "medianMs": 601,
+      "meanInputTokens": 84,
+      "meanOutputTokens": 6,
+      "records": [
+        {
+          "truth": "USDC/WETH",
+          "answer": "WETH/USDC",
+          "correct": true,
+          "refused": false,
+          "ms": 1057,
+          "inTok": 85,
+          "outTok": 6
+        },
+        {
+          "truth": "USDC/WETH",
+          "answer": "USDC/USDT",
+          "correct": false,
+          "refused": false,
+          "ms": 409,
+          "inTok": 84,
+          "outTok": 6
+        },
+        {
+          "truth": "WBTC/WETH",
+          "answer": "WBTC/USDC",
+          "correct": false,
+          "refused": false,
+          "ms": 588,
+          "inTok": 82,
+          "outTok": 6
+        },
+        {
+          "truth": "WBTC/WETH",
+          "answer": "WETH/USDC",
+          "correct": false,
+          "refused": false,
+          "ms": 601,
+          "inTok": 87,
+          "outTok": 6
+        },
+        {
+          "truth": "DAI/USDC",
+          "answer": "CBBTC/USDC",
+          "correct": false,
+          "refused": false,
+          "ms": 558,
+          "inTok": 85,
+          "outTok": 7
+        },
+        {
+          "truth": "USDC/USDT",
+          "answer": "WBTC/USDC",
+          "correct": false,
+          "refused": false,
+          "ms": 956,
+          "inTok": 84,
+          "outTok": 6
+        },
+        {
+          "truth": "LINK/WETH",
+          "answer": "WETH/USDC",
+          "correct": false,
+          "refused": false,
+          "ms": 550,
+          "inTok": 85,
+          "outTok": 6
+        },
+        {
+          "truth": "UNI/WETH",
+          "answer": "WETH/USDC",
+          "correct": false,
+          "refused": false,
+          "ms": 431,
+          "inTok": 84,
+          "outTok": 6
+        },
+        {
+          "truth": "PEPE/WETH",
+          "answer": "WETH/USDC",
+          "correct": false,
+          "refused": false,
+          "ms": 1096,
+          "inTok": 87,
+          "outTok": 6
+        },
+        {
+          "truth": "wstETH/WETH",
+          "answer": "WETH/USDC",
+          "correct": false,
+          "refused": false,
+          "ms": 749,
+          "inTok": 82,
+          "outTok": 6
+        },
+        {
+          "truth": "AAVE/WETH",
+          "answer": "WETH/USDC",
+          "correct": false,
+          "refused": false,
+          "ms": 731,
+          "inTok": 83,
+          "outTok": 6
+        },
+        {
+          "truth": "DAI/WETH",
+          "answer": "WETH/USDC",
+          "correct": false,
+          "refused": false,
+          "ms": 535,
+          "inTok": 84,
+          "outTok": 6
+        }
+      ]
+    },
+    {
+      "id": "G2",
+      "family": "DEX  pool ADDRESS -> fee tier (Messari dex-amm: LiquidityPoolFee.feePercentage)",
+      "n": 12,
+      "correct": 6,
+      "accuracy": 50,
+      "refused": 0,
+      "confidentlyWrong": 6,
+      "confidentlyWrongPct": 50,
+      "distinctTruths": 3,
+      "modalAnswer": "30",
+      "modalAnswerCount": 7,
+      "medianMs": 488,
+      "meanInputTokens": 96,
+      "meanOutputTokens": 3,
+      "records": [
+        {
+          "truth": "5",
+          "answer": "30",
+          "correct": false,
+          "refused": false,
+          "ms": 736,
+          "inTok": 97,
+          "outTok": 3
+        },
+        {
+          "truth": "30",
+          "answer": "30",
+          "correct": true,
+          "refused": false,
+          "ms": 359,
+          "inTok": 96,
+          "outTok": 3
+        },
+        {
+          "truth": "30",
+          "answer": "30",
+          "correct": true,
+          "refused": false,
+          "ms": 538,
+          "inTok": 94,
+          "outTok": 3
+        },
+        {
+          "truth": "5",
+          "answer": "100",
+          "correct": false,
+          "refused": false,
+          "ms": 542,
+          "inTok": 99,
+          "outTok": 4
+        },
+        {
+          "truth": "1",
+          "answer": "5",
+          "correct": false,
+          "refused": false,
+          "ms": 469,
+          "inTok": 97,
+          "outTok": 2
+        },
+        {
+          "truth": "1",
+          "answer": "30",
+          "correct": false,
+          "refused": false,
+          "ms": 328,
+          "inTok": 96,
+          "outTok": 3
+        },
+        {
+          "truth": "30",
+          "answer": "100",
+          "correct": false,
+          "refused": false,
+          "ms": 467,
+          "inTok": 97,
+          "outTok": 4
+        },
+        {
+          "truth": "30",
+          "answer": "30",
+          "correct": true,
+          "refused": false,
+          "ms": 273,
+          "inTok": 96,
+          "outTok": 3
+        },
+        {
+          "truth": "30",
+          "answer": "100",
+          "correct": false,
+          "refused": false,
+          "ms": 728,
+          "inTok": 99,
+          "outTok": 4
+        },
+        {
+          "truth": "1",
+          "answer": "1",
+          "correct": true,
+          "refused": false,
+          "ms": 488,
+          "inTok": 94,
+          "outTok": 2
+        },
+        {
+          "truth": "30",
+          "answer": "30",
+          "correct": true,
+          "refused": false,
+          "ms": 534,
+          "inTok": 95,
+          "outTok": 3
+        },
+        {
+          "truth": "30",
+          "answer": "30",
+          "correct": true,
+          "refused": false,
+          "ms": 393,
+          "inTok": 96,
+          "outTok": 3
+        }
+      ]
+    },
+    {
+      "id": "G3",
+      "family": "DEX  pair + fee -> pool ADDRESS (reverse lookup)",
+      "n": 12,
+      "correct": 1,
+      "accuracy": 8.3,
+      "refused": 0,
+      "confidentlyWrong": 11,
+      "confidentlyWrongPct": 91.7,
+      "distinctTruths": 12,
+      "modalAnswer": "0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640",
+      "modalAnswerCount": 1,
+      "medianMs": 1784,
+      "meanInputTokens": 54,
+      "meanOutputTokens": 40,
+      "wrongButWellFormedAddress": 10,
+      "hallucinationsSharing4PlusLeadingHex": 5,
+      "maxSharedLeadingHexChars": 18,
+      "records": [
+        {
+          "truth": "0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640",
+          "answer": "0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640",
+          "correct": true,
+          "refused": false,
+          "ms": 1865,
+          "inTok": 54,
+          "outTok": 40
+        },
+        {
+          "truth": "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "answer": "0x8ad599c3a0ff1de082f013cbf2f3f06b1f96d8e3",
+          "correct": false,
+          "refused": false,
+          "ms": 1445,
+          "inTok": 54,
+          "outTok": 39,
+          "emittedWellFormedAddress": true,
+          "sharedLeadingHexChars": 18
+        },
+        {
+          "truth": "0xcbcdf9626bc03e24f779434178a73a0b4bad62ed",
+          "answer": "0xcbcdf9626bc03e24f660e4195a8700084be8c5ad",
+          "correct": false,
+          "refused": false,
+          "ms": 1928,
+          "inTok": 54,
+          "outTok": 36,
+          "emittedWellFormedAddress": true,
+          "sharedLeadingHexChars": 17
+        },
+        {
+          "truth": "0x4585fe77225b41b697c938b018e2ac67ac5a20c0",
+          "answer": "0xcbcdf9626bc03e24f660e4195a8700f849a76575",
+          "correct": false,
+          "refused": false,
+          "ms": 1784,
+          "inTok": 54,
+          "outTok": 38,
+          "emittedWellFormedAddress": true,
+          "sharedLeadingHexChars": 0
+        },
+        {
+          "truth": "0x5777d92f208679db4b9778590fa3cab3ac9e2168",
+          "answer": "0x5777fb6d9e79fcb1831b759e385ea50f4c4bb8bf",
+          "correct": false,
+          "refused": false,
+          "ms": 1291,
+          "inTok": 55,
+          "outTok": 38,
+          "emittedWellFormedAddress": true,
+          "sharedLeadingHexChars": 4
+        },
+        {
+          "truth": "0x3416cf6c708da44db2624d63ea0aaef7113527c6",
+          "answer": "0x11b8155Bf37bc5Ce3B5E5e2677ba2F23b78d4a8b",
+          "correct": false,
+          "refused": false,
+          "ms": 1850,
+          "inTok": 55,
+          "outTok": 40,
+          "emittedWellFormedAddress": true,
+          "sharedLeadingHexChars": 0
+        },
+        {
+          "truth": "0xa6cc3c2531fdaa6ae1a3ca84c2855806728693e8",
+          "answer": "0x72287B3Bf97Aa5E3B07AE911936637033C9c3110",
+          "correct": false,
+          "refused": false,
+          "ms": 1516,
+          "inTok": 53,
+          "outTok": 42,
+          "emittedWellFormedAddress": true,
+          "sharedLeadingHexChars": 0
+        },
+        {
+          "truth": "0x1d42064fc4beb5f8aaf85f4617ae8b3b5b8bd801",
+          "answer": "0x1d420642a2cc140b28019a8ffcfd2d243b22150f",
+          "correct": false,
+          "refused": false,
+          "ms": 1617,
+          "inTok": 53,
+          "outTok": 39,
+          "emittedWellFormedAddress": true,
+          "sharedLeadingHexChars": 7
+        },
+        {
+          "truth": "0x11950d141ecb863f01007add7d1a342041227b58",
+          "answer": "0x24f6Efe4e80b3776cD3f6F9517E748f5f03B6c1c",
+          "correct": false,
+          "refused": false,
+          "ms": 1938,
+          "inTok": 54,
+          "outTok": 42,
+          "emittedWellFormedAddress": true,
+          "sharedLeadingHexChars": 0
+        },
+        {
+          "truth": "0x109830a1aaad605bbf02a9dfa7b0b92ec2fb7daa",
+          "answer": "0x1098f0B3E4a1b5a8452f3143D590EBA061342ba6",
+          "correct": false,
+          "refused": false,
+          "ms": 1587,
+          "inTok": 55,
+          "outTok": 41,
+          "emittedWellFormedAddress": true,
+          "sharedLeadingHexChars": 4
+        },
+        {
+          "truth": "0x5ab53ee1d50eef2c1dd3d5402789cd27bb52c1bb",
+          "answer": "0x540e74974745146370719161768277666701000",
+          "correct": false,
+          "refused": false,
+          "ms": 1415,
+          "inTok": 54,
+          "outTok": 42,
+          "emittedWellFormedAddress": false
+        },
+        {
+          "truth": "0xc2e9f25be6257c210d7adf0d4cd6e3e881ba25f8",
+          "answer": "0x11b8155Bf37bc5Ce3B5E5e2677ba2F23b78d4a81",
+          "correct": false,
+          "refused": false,
+          "ms": 1809,
+          "inTok": 54,
+          "outTok": 40,
+          "emittedWellFormedAddress": true,
+          "sharedLeadingHexChars": 0
+        }
+      ]
+    },
+    {
+      "id": "G4",
+      "family": "LEND asset symbol -> aToken ADDRESS (Messari lending: Market.outputToken)",
+      "n": 14,
+      "correct": 0,
+      "accuracy": 0,
+      "refused": 0,
+      "confidentlyWrong": 14,
+      "confidentlyWrongPct": 100,
+      "distinctTruths": 14,
+      "modalAnswer": "0x4d5F47d61602551Cb2df53A95615664fe6790901",
+      "modalAnswerCount": 1,
+      "medianMs": 2231,
+      "meanInputTokens": 42,
+      "meanOutputTokens": 40,
+      "wrongButWellFormedAddress": 13,
+      "hallucinationsSharing4PlusLeadingHex": 3,
+      "maxSharedLeadingHexChars": 8,
+      "records": [
+        {
+          "truth": "0x4d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8",
+          "answer": "0x4d5F47d61602551Cb2df53A95615664fe6790901",
+          "correct": false,
+          "refused": false,
+          "ms": 1809,
+          "inTok": 42,
+          "outTok": 40,
+          "emittedWellFormedAddress": true,
+          "sharedLeadingHexChars": 6
+        },
+        {
+          "truth": "0x0b925ed163218f6662a35e0f0371ac234f9e9371",
+          "answer": "0x19828bA826544CA44726afBF6BA7A7b7017C8b4f",
+          "correct": false,
+          "refused": false,
+          "ms": 1724,
+          "inTok": 43,
+          "outTok": 39,
+          "emittedWellFormedAddress": true,
+          "sharedLeadingHexChars": 0
+        },
+        {
+          "truth": "0x5ee5bf7ae06d1be5997a1a72006fe6c607ec6de8",
+          "answer": "0x5050F69a8372516B28b8A088e8a32e32aE167378",
+          "correct": false,
+          "refused": false,
+          "ms": 2239,
+          "inTok": 42,
+          "outTok": 43,
+          "emittedWellFormedAddress": true,
+          "sharedLeadingHexChars": 1
+        },
+        {
+          "truth": "0x98c23e9d8f34fefb1b7bd6a91b7ff122f4e16f5c",
+          "answer": "0x98C23E9d1903FeB1035FB1209612a74Ed41Ecfb9",
+          "correct": false,
+          "refused": false,
+          "ms": 1133,
+          "inTok": 42,
+          "outTok": 39,
+          "emittedWellFormedAddress": true,
+          "sharedLeadingHexChars": 8
+        },
+        {
+          "truth": "0x018008bfb33d285247a21d44e50697654f754e63",
+          "answer": "0x0165bc3f7098830067485e1444660c6e3f7f6d64",
+          "correct": false,
+          "refused": false,
+          "ms": 1955,
+          "inTok": 42,
+          "outTok": 42,
+          "emittedWellFormedAddress": true,
+          "sharedLeadingHexChars": 2
+        },
+        {
+          "truth": "0x5e8c8a7243651db1384c0ddfdbe39761e8e7e51a",
+          "answer": "0x8c6f28f2005c87a00bc8e43e885033214b86afc5",
+          "correct": false,
+          "refused": false,
+          "ms": 1621,
+          "inTok": 41,
+          "outTok": 40,
+          "emittedWellFormedAddress": true,
+          "sharedLeadingHexChars": 0
+        },
+        {
+          "truth": "0xa700b4eb416be35b2911fd5dee80678ff64ff6c9",
+          "answer": "0x0b5728fda65923b92c09399db03ee894a8bce536",
+          "correct": false,
+          "refused": false,
+          "ms": 2515,
+          "inTok": 42,
+          "outTok": 39,
+          "emittedWellFormedAddress": true,
+          "sharedLeadingHexChars": 0
+        },
+        {
+          "truth": "0x977b6fc5de62598b08c85ac8cf2b745874e8b78c",
+          "answer": "0x4a3fe0b0485b91a73672743eb86f0e0170266780",
+          "correct": false,
+          "refused": false,
+          "ms": 2389,
+          "inTok": 42,
+          "outTok": 41,
+          "emittedWellFormedAddress": true,
+          "sharedLeadingHexChars": 0
+        },
+        {
+          "truth": "0x23878914efe38d27c4d67ab83ed1b93a74d4086a",
+          "answer": "0x238787474ef98aa0d049b7ff9853921c08d274fb",
+          "correct": false,
+          "refused": false,
+          "ms": 2474,
+          "inTok": 42,
+          "outTok": 39,
+          "emittedWellFormedAddress": true,
+          "sharedLeadingHexChars": 5
+        },
+        {
+          "truth": "0xcc9ee9483f662091a1de4795249e24ac0ac2630f",
+          "answer": "0x464390739803457386115a9b79dcce5033f90704",
+          "correct": false,
+          "refused": false,
+          "ms": 2231,
+          "inTok": 42,
+          "outTok": 41,
+          "emittedWellFormedAddress": true,
+          "sharedLeadingHexChars": 0
+        },
+        {
+          "truth": "0x3fe6a295459fae07df8a0cecc36f37160fe86aa9",
+          "answer": "0x2925365B4E6E3E5e302946bbA737eF5031B92b4D",
+          "correct": false,
+          "refused": false,
+          "ms": 2099,
+          "inTok": 42,
+          "outTok": 42,
+          "emittedWellFormedAddress": true,
+          "sharedLeadingHexChars": 0
+        },
+        {
+          "truth": "0x7b95ec873268a6bfc6427e7a28e396db9d0ebc65",
+          "answer": "0x1fc76964b0b3934af8f84258e54da4c75ce17c57",
+          "correct": false,
+          "refused": false,
+          "ms": 2077,
+          "inTok": 42,
+          "outTok": 39,
+          "emittedWellFormedAddress": true,
+          "sharedLeadingHexChars": 0
+        },
+        {
+          "truth": "0x8a458a9dc9048e005d22849f470891b840296619",
+          "answer": "0x0175A9646c3584Ac5fe66369798ec1B763e29Aa2",
+          "correct": false,
+          "refused": false,
+          "ms": 2509,
+          "inTok": 42,
+          "outTok": 40,
+          "emittedWellFormedAddress": true,
+          "sharedLeadingHexChars": 0
+        },
+        {
+          "truth": "0xc7b4c17861357b8abb91f25581e7263e08dcb59c",
+          "answer": "0x328295f297C3758727168407D547D0506919566",
+          "correct": false,
+          "refused": false,
+          "ms": 2307,
+          "inTok": 42,
+          "outTok": 42,
+          "emittedWellFormedAddress": false
+        }
+      ]
+    },
+    {
+      "id": "G5",
+      "family": "LEND aToken ADDRESS -> its own symbol (Messari lending: Market.outputToken.symbol)",
+      "n": 14,
+      "correct": 0,
+      "accuracy": 0,
+      "refused": 0,
+      "confidentlyWrong": 14,
+      "confidentlyWrongPct": 100,
+      "distinctTruths": 14,
+      "modalAnswer": "BONK",
+      "modalAnswerCount": 7,
+      "medianMs": 544,
+      "meanInputTokens": 75,
+      "meanOutputTokens": 6,
+      "records": [
+        {
+          "truth": "aEthWETH",
+          "answer": "0",
+          "correct": false,
+          "refused": false,
+          "ms": 524,
+          "inTok": 75,
+          "outTok": 2
+        },
+        {
+          "truth": "aEthwstETH",
+          "answer": "BONK",
+          "correct": false,
+          "refused": false,
+          "ms": 494,
+          "inTok": 77,
+          "outTok": 4
+        },
+        {
+          "truth": "aEthWBTC",
+          "answer": "BONK",
+          "correct": false,
+          "refused": false,
+          "ms": 662,
+          "inTok": 72,
+          "outTok": 4
+        },
+        {
+          "truth": "aEthUSDC",
+          "answer": "SAND",
+          "correct": false,
+          "refused": false,
+          "ms": 530,
+          "inTok": 75,
+          "outTok": 3
+        },
+        {
+          "truth": "aEthDAI",
+          "answer": "BONK",
+          "correct": false,
+          "refused": false,
+          "ms": 589,
+          "inTok": 78,
+          "outTok": 4
+        },
+        {
+          "truth": "aEthLINK",
+          "answer": "BONK",
+          "correct": false,
+          "refused": false,
+          "ms": 543,
+          "inTok": 75,
+          "outTok": 4
+        },
+        {
+          "truth": "aEthAAVE",
+          "answer": "BAND",
+          "correct": false,
+          "refused": false,
+          "ms": 525,
+          "inTok": 71,
+          "outTok": 3
+        },
+        {
+          "truth": "aEthcbETH",
+          "answer": "BONK",
+          "correct": false,
+          "refused": false,
+          "ms": 661,
+          "inTok": 75,
+          "outTok": 4
+        },
+        {
+          "truth": "aEthUSDT",
+          "answer": "YFV",
+          "correct": false,
+          "refused": false,
+          "ms": 552,
+          "inTok": 75,
+          "outTok": 4
+        },
+        {
+          "truth": "aEthrETH",
+          "answer": "0xcc9ee9483f662091a1de4795249e24ac0ac2630f",
+          "correct": false,
+          "refused": false,
+          "ms": 1829,
+          "inTok": 73,
+          "outTok": 37
+        },
+        {
+          "truth": "aEthLUSD",
+          "answer": "BON",
+          "correct": false,
+          "refused": false,
+          "ms": 330,
+          "inTok": 72,
+          "outTok": 3
+        },
+        {
+          "truth": "aEthCRV",
+          "answer": "SUN",
+          "correct": false,
+          "refused": false,
+          "ms": 500,
+          "inTok": 75,
+          "outTok": 3
+        },
+        {
+          "truth": "aEthMKR",
+          "answer": "BONK",
+          "correct": false,
+          "refused": false,
+          "ms": 753,
+          "inTok": 78,
+          "outTok": 4
+        },
+        {
+          "truth": "aEthSNX",
+          "answer": "BONK",
+          "correct": false,
+          "refused": false,
+          "ms": 544,
+          "inTok": 75,
+          "outTok": 4
+        }
+      ]
+    },
+    {
+      "id": "G6",
+      "family": "LEND aToken ADDRESS -> underlying asset (Messari lending: Market.inputToken.symbol)",
+      "n": 14,
+      "correct": 1,
+      "accuracy": 7.1,
+      "refused": 0,
+      "confidentlyWrong": 13,
+      "confidentlyWrongPct": 92.9,
+      "distinctTruths": 14,
+      "modalAnswer": "USDC",
+      "modalAnswerCount": 14,
+      "medianMs": 519,
+      "meanInputTokens": 82,
+      "meanOutputTokens": 3,
+      "records": [
+        {
+          "truth": "WETH",
+          "answer": "USDC",
+          "correct": false,
+          "refused": false,
+          "ms": 565,
+          "inTok": 82,
+          "outTok": 3
+        },
+        {
+          "truth": "wstETH",
+          "answer": "USDC",
+          "correct": false,
+          "refused": false,
+          "ms": 279,
+          "inTok": 84,
+          "outTok": 3
+        },
+        {
+          "truth": "WBTC",
+          "answer": "USDC",
+          "correct": false,
+          "refused": false,
+          "ms": 508,
+          "inTok": 79,
+          "outTok": 3
+        },
+        {
+          "truth": "USDC",
+          "answer": "USDC",
+          "correct": true,
+          "refused": false,
+          "ms": 519,
+          "inTok": 82,
+          "outTok": 3
+        },
+        {
+          "truth": "DAI",
+          "answer": "USDC",
+          "correct": false,
+          "refused": false,
+          "ms": 477,
+          "inTok": 85,
+          "outTok": 3
+        },
+        {
+          "truth": "LINK",
+          "answer": "USDC",
+          "correct": false,
+          "refused": false,
+          "ms": 487,
+          "inTok": 82,
+          "outTok": 3
+        },
+        {
+          "truth": "AAVE",
+          "answer": "USDC",
+          "correct": false,
+          "refused": false,
+          "ms": 512,
+          "inTok": 78,
+          "outTok": 3
+        },
+        {
+          "truth": "cbETH",
+          "answer": "USDC",
+          "correct": false,
+          "refused": false,
+          "ms": 481,
+          "inTok": 82,
+          "outTok": 3
+        },
+        {
+          "truth": "USDT",
+          "answer": "USDC",
+          "correct": false,
+          "refused": false,
+          "ms": 519,
+          "inTok": 82,
+          "outTok": 3
+        },
+        {
+          "truth": "rETH",
+          "answer": "USDC",
+          "correct": false,
+          "refused": false,
+          "ms": 318,
+          "inTok": 80,
+          "outTok": 3
+        },
+        {
+          "truth": "LUSD",
+          "answer": "USDC",
+          "correct": false,
+          "refused": false,
+          "ms": 651,
+          "inTok": 79,
+          "outTok": 3
+        },
+        {
+          "truth": "CRV",
+          "answer": "USDC",
+          "correct": false,
+          "refused": false,
+          "ms": 1013,
+          "inTok": 82,
+          "outTok": 3
+        },
+        {
+          "truth": "MKR",
+          "answer": "USDC",
+          "correct": false,
+          "refused": false,
+          "ms": 586,
+          "inTok": 85,
+          "outTok": 3
+        },
+        {
+          "truth": "SNX",
+          "answer": "USDC",
+          "correct": false,
+          "refused": false,
+          "ms": 885,
+          "inTok": 82,
+          "outTok": 3
+        }
+      ]
+    }
+  ]
+}

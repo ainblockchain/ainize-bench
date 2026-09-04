@@ -1,0 +1,45 @@
+{
+  "_ainize": {
+    "deployment_id": "GRwpFCPYyQPdz84sCnKemzrNvgFPuKkFLcRLR6jsRxHr",
+    "protocol": "goldfinch",
+    "query": "identity",
+    "query_hash": "83680f3eaa380ba4b5cd75ee9b340689efd2a7ae37fa7be9105e2d4ee64b07dd",
+    "block": 25902879,
+    "skip": 0,
+    "first": 1000,
+    "gateway_ms": 323
+  },
+  "data": {
+    "tokens": [
+      {
+        "id": "0x6a445e9f40e0b97c92d0b8a3366cef1d67f700bf",
+        "name": "Fidu",
+        "symbol": "FIDU",
+        "decimals": 18,
+        "lastPriceUSD": "0.944448022368126119"
+      },
+      {
+        "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "name": "USD Coin",
+        "symbol": "USDC",
+        "decimals": 6,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0xdab396ccf3d84cf2d07c4454e10c8a6f5b008d2b",
+        "name": "Goldfinch",
+        "symbol": "GFI",
+        "decimals": 18,
+        "lastPriceUSD": null
+      }
+    ],
+    "_meta": {
+      "block": {
+        "number": 25902879,
+        "timestamp": null
+      },
+      "deployment": "Qma4UYCL7S7cLq3yqGNWzWWDHjZM49mtiTMT1TzMMPMJo2",
+      "hasIndexingErrors": false
+    }
+  }
+}

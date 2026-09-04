@@ -1,0 +1,3699 @@
+{
+  "_ainize": {
+    "deployment_id": "GnroBYmeLLtKuHNyTNS38hzKki5n4CWaHeaMRqZpU4cr",
+    "protocol": "arrakis-finance",
+    "query": "vaults",
+    "query_hash": "37635f0bcd8b32452a9ecc630219df2b8a995ff83c50a2cd0cd9be8519342898",
+    "block": 25902879,
+    "skip": 0,
+    "first": 1000,
+    "gateway_ms": 1170
+  },
+  "data": {
+    "vaults": [
+      {
+        "id": "0x50379f632ca68d36e50cfbc8f78fe16bd1499d1e",
+        "name": "Gelato Uniswap DAI/USDC LP-0.01%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "476032.9887411058280845970212",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x50379f632ca68d36e50cfbc8f78fe16bd1499d1e",
+          "name": "Gelato Uniswap DAI/USDC LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x50379f632ca68d36e50cfbc8f78fe16bd1499d1e",
+          "name": "Gelato Uniswap DAI/USDC LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xabddafb225e10b90d798bb8a886238fb835e2053",
+        "name": "Gelato Uniswap DAI/USDC LP-0.05%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "306333.658410268932883326733458",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xabddafb225e10b90d798bb8a886238fb835e2053",
+          "name": "Gelato Uniswap DAI/USDC LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xabddafb225e10b90d798bb8a886238fb835e2053",
+          "name": "Gelato Uniswap DAI/USDC LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x77cdd9e097f34c1fa861daeb6823de741fab2321",
+        "name": "Gelato Uniswap ETH2x-FLI/WETH LP-0.3%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "203733.680986636122245070420154",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x77cdd9e097f34c1fa861daeb6823de741fab2321",
+          "name": "Gelato Uniswap ETH2x-FLI/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x77cdd9e097f34c1fa861daeb6823de741fab2321",
+          "name": "Gelato Uniswap ETH2x-FLI/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "4.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x4f38892c16bfbb4f4f7424eefaa9767f4e922073",
+        "name": "Gelato Uniswap USDC/FLOAT LP-0.05%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "67462.565809786659411897050522",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x4f38892c16bfbb4f4f7424eefaa9767f4e922073",
+          "name": "Gelato Uniswap USDC/FLOAT LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x4f38892c16bfbb4f4f7424eefaa9767f4e922073",
+          "name": "Gelato Uniswap USDC/FLOAT LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x7c687f775a3b73bbab0e15832f24caab5d53bdde",
+        "name": "Gelato Uniswap WETH/ENS LP-1.0%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "59380.2468216183871530044503852",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x7c687f775a3b73bbab0e15832f24caab5d53bdde",
+          "name": "Gelato Uniswap WETH/ENS LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x7c687f775a3b73bbab0e15832f24caab5d53bdde",
+          "name": "Gelato Uniswap WETH/ENS LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xedecb43233549c51cc3268b5de840239787ad56c",
+        "name": "Gelato Uniswap agEUR/USDC LP-0.01%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "30768.090989681856278146053384",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xedecb43233549c51cc3268b5de840239787ad56c",
+          "name": "Gelato Uniswap agEUR/USDC LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xedecb43233549c51cc3268b5de840239787ad56c",
+          "name": "Gelato Uniswap agEUR/USDC LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x0d2a2df39436b5c5f986552869124ba29b7df1ac",
+        "name": "Gelato Uniswap icETH/WETH LP-0.05%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "23741.9614342863867571055",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x0d2a2df39436b5c5f986552869124ba29b7df1ac",
+          "name": "Gelato Uniswap icETH/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x0d2a2df39436b5c5f986552869124ba29b7df1ac",
+          "name": "Gelato Uniswap icETH/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xa6c49fd13e50a30c65e6c8480aada132011d0613",
+        "name": "Gelato Uniswap USDC/WETH LP-0.05%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "7006.67672092321006705535",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xa6c49fd13e50a30c65e6c8480aada132011d0613",
+          "name": "Gelato Uniswap USDC/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xa6c49fd13e50a30c65e6c8480aada132011d0613",
+          "name": "Gelato Uniswap USDC/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x2bd9f7974bc0e4cb19b8813f8be6034f3e772add",
+        "name": "Gelato Uniswap agEUR/USDC LP-0.05%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "5630.074013063479912474775709",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x2bd9f7974bc0e4cb19b8813f8be6034f3e772add",
+          "name": "Gelato Uniswap agEUR/USDC LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x2bd9f7974bc0e4cb19b8813f8be6034f3e772add",
+          "name": "Gelato Uniswap agEUR/USDC LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x092a51b356930d907570efec1fc94f3c591b7239",
+        "name": "Gelato Uniswap PAR/USDC LP-0.05%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "5589.268054324990249822458172",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x092a51b356930d907570efec1fc94f3c591b7239",
+          "name": "Gelato Uniswap PAR/USDC LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x092a51b356930d907570efec1fc94f3c591b7239",
+          "name": "Gelato Uniswap PAR/USDC LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xae666f497e3b03415503785df36f795e6d91d4b3",
+        "name": "Gelato Uniswap GEL/WETH LP-1.0%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "5146.052325779059752599096821",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xae666f497e3b03415503785df36f795e6d91d4b3",
+          "name": "Gelato Uniswap GEL/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xae666f497e3b03415503785df36f795e6d91d4b3",
+          "name": "Gelato Uniswap GEL/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xcf84a3dc12319531e3debd48c86e68eaeaff224a",
+        "name": "Gelato Uniswap FEI/USDC LP-0.01%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "4520.47589196525798981099691369",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xcf84a3dc12319531e3debd48c86e68eaeaff224a",
+          "name": "Gelato Uniswap FEI/USDC LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xcf84a3dc12319531e3debd48c86e68eaeaff224a",
+          "name": "Gelato Uniswap FEI/USDC LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x3d1556e84783672f2a3bd187a592520291442539",
+        "name": "Gelato Uniswap DAI/FEI LP-0.05%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "3364.47347166444387692554424979",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x3d1556e84783672f2a3bd187a592520291442539",
+          "name": "Gelato Uniswap DAI/FEI LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x3d1556e84783672f2a3bd187a592520291442539",
+          "name": "Gelato Uniswap DAI/FEI LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x0a2022f517ad22330069049972f26763a7f0f7a3",
+        "name": "Gelato Uniswap JPG/WETH LP-1.0%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "3135.2346130619200358422887",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x0a2022f517ad22330069049972f26763a7f0f7a3",
+          "name": "Gelato Uniswap JPG/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x0a2022f517ad22330069049972f26763a7f0f7a3",
+          "name": "Gelato Uniswap JPG/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x26c2251801d2cfb5461751c984dc3eaa358bdf0f",
+        "name": "Gelato Uniswap agEUR/WETH LP-0.3%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "3127.492713186023727494341152",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x26c2251801d2cfb5461751c984dc3eaa358bdf0f",
+          "name": "Gelato Uniswap agEUR/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x26c2251801d2cfb5461751c984dc3eaa358bdf0f",
+          "name": "Gelato Uniswap agEUR/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x39ae52f197e7fc9fc481ca03cfaf661a26845ec3",
+        "name": "Gelato Uniswap KP3R/WETH LP-1.0%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "2477.607481655230123901724448",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x39ae52f197e7fc9fc481ca03cfaf661a26845ec3",
+          "name": "Gelato Uniswap KP3R/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x39ae52f197e7fc9fc481ca03cfaf661a26845ec3",
+          "name": "Gelato Uniswap KP3R/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xb1cfdc7370550f5e421e1bf0bf3cadfadf3c4141",
+        "name": "Gelato Uniswap DAI/FRAX LP-0.05%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "2465.081061513994097423696285",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xb1cfdc7370550f5e421e1bf0bf3cadfadf3c4141",
+          "name": "Gelato Uniswap DAI/FRAX LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xb1cfdc7370550f5e421e1bf0bf3cadfadf3c4141",
+          "name": "Gelato Uniswap DAI/FRAX LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x857e0b2ed0e82d5cdeb015e77ebb873c47f99575",
+        "name": "Gelato Uniswap agEUR/WETH LP-0.05%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "2058.292334233428227532248876",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x857e0b2ed0e82d5cdeb015e77ebb873c47f99575",
+          "name": "Gelato Uniswap agEUR/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x857e0b2ed0e82d5cdeb015e77ebb873c47f99575",
+          "name": "Gelato Uniswap agEUR/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x2a2cd905141f1cdf3620db6a1ed0abc4f7e8635c",
+        "name": "Gelato Uniswap DAI/OPIUM LP-1.0%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "2001.125601144964615749102968",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x2a2cd905141f1cdf3620db6a1ed0abc4f7e8635c",
+          "name": "Gelato Uniswap DAI/OPIUM LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x2a2cd905141f1cdf3620db6a1ed0abc4f7e8635c",
+          "name": "Gelato Uniswap DAI/OPIUM LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xd2eec91055f07fe24c9ccb25828ecfefd4be0c41",
+        "name": "Gelato Uniswap USDC/USDT LP-0.01%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "1767.853975569334",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xd2eec91055f07fe24c9ccb25828ecfefd4be0c41",
+          "name": "Gelato Uniswap USDC/USDT LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xd2eec91055f07fe24c9ccb25828ecfefd4be0c41",
+          "name": "Gelato Uniswap USDC/USDT LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x472d0b0ddfe0bc02c27928b8bcbd67e65d07d48a",
+        "name": "Gelato Uniswap BANK/WETH LP-1.0%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "789.266532322840166747884816",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x472d0b0ddfe0bc02c27928b8bcbd67e65d07d48a",
+          "name": "Gelato Uniswap BANK/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x472d0b0ddfe0bc02c27928b8bcbd67e65d07d48a",
+          "name": "Gelato Uniswap BANK/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xdf367477c5e596af88e8797c3cde8e28854cb79c",
+        "name": "Arrakis Vault V1 USDC/SPOT-0.3%",
+        "symbol": "RAKIS-35",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "586.429057415305",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xdf367477c5e596af88e8797c3cde8e28854cb79c",
+          "name": "Arrakis Vault V1 USDC/SPOT",
+          "symbol": "RAKIS-35",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xdf367477c5e596af88e8797c3cde8e28854cb79c",
+          "name": "Arrakis Vault V1 USDC/SPOT",
+          "symbol": "RAKIS-35",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xdb32f2920b4463f30e12040d171db5e2ea73c84c",
+        "name": "Gelato Uniswap DEP/USDT LP-0.3%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "489.238670892246478814331632",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xdb32f2920b4463f30e12040d171db5e2ea73c84c",
+          "name": "Gelato Uniswap DEP/USDT LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xdb32f2920b4463f30e12040d171db5e2ea73c84c",
+          "name": "Gelato Uniswap DEP/USDT LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x24416cba1772c283de3b41eb99e850e8321322bc",
+        "name": "Gelato Uniswap USDC/WETH LP-0.3%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "483.73034711026098359625",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x24416cba1772c283de3b41eb99e850e8321322bc",
+          "name": "Gelato Uniswap USDC/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x24416cba1772c283de3b41eb99e850e8321322bc",
+          "name": "Gelato Uniswap USDC/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xae18bda76efd772a988cf5c2fd38648d8b0c6c3c",
+        "name": "Gelato Uniswap USDC/WETH LP-1.0%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "419.5819679819423936514",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xae18bda76efd772a988cf5c2fd38648d8b0c6c3c",
+          "name": "Gelato Uniswap USDC/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xae18bda76efd772a988cf5c2fd38648d8b0c6c3c",
+          "name": "Gelato Uniswap USDC/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xb06a77021a0041527a998ce4d6c95b256a906bca",
+        "name": "Arrakis Vault V1 alETH/alUSD-0.05%",
+        "symbol": "RAKIS-27",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "396.884798140904706022355214",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xb06a77021a0041527a998ce4d6c95b256a906bca",
+          "name": "Arrakis Vault V1 alETH/alUSD",
+          "symbol": "RAKIS-27",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xb06a77021a0041527a998ce4d6c95b256a906bca",
+          "name": "Arrakis Vault V1 alETH/alUSD",
+          "symbol": "RAKIS-27",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xd58c89181360dd9166881fce2bc7c9baae2d5f31",
+        "name": "Gelato Uniswap DAI/USDT LP-0.05%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "237.701219989571839739203293",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xd58c89181360dd9166881fce2bc7c9baae2d5f31",
+          "name": "Gelato Uniswap DAI/USDT LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xd58c89181360dd9166881fce2bc7c9baae2d5f31",
+          "name": "Gelato Uniswap DAI/USDT LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x8ee2246b11d24827069f9fb3a9c17eb0277afb3d",
+        "name": "Gelato Uniswap RAI/WETH LP-0.3%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "175.00793036378255389676993",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x8ee2246b11d24827069f9fb3a9c17eb0277afb3d",
+          "name": "Gelato Uniswap RAI/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x8ee2246b11d24827069f9fb3a9c17eb0277afb3d",
+          "name": "Gelato Uniswap RAI/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x02f88164060912ee44ba9480d05d462d20cff3bc",
+        "name": "Gelato Uniswap USDC/USDT LP-0.05%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "158.017765274107",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x02f88164060912ee44ba9480d05d462d20cff3bc",
+          "name": "Gelato Uniswap USDC/USDT LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x02f88164060912ee44ba9480d05d462d20cff3bc",
+          "name": "Gelato Uniswap USDC/USDT LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x256a607549910be8f51b53392583e075ee4511cb",
+        "name": "Gelato Uniswap 🌐/WETH LP-0.3%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "144.2667499573410304859",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x256a607549910be8f51b53392583e075ee4511cb",
+          "name": "Gelato Uniswap 🌐/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x256a607549910be8f51b53392583e075ee4511cb",
+          "name": "Gelato Uniswap 🌐/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xe668fe99123b3e901872a8c310ec2fa076e49fc1",
+        "name": "Gelato Uniswap FRAX/USDC LP-0.05%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "115.998784486364261183229095",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xe668fe99123b3e901872a8c310ec2fa076e49fc1",
+          "name": "Gelato Uniswap FRAX/USDC LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xe668fe99123b3e901872a8c310ec2fa076e49fc1",
+          "name": "Gelato Uniswap FRAX/USDC LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x61a0c8d4945a61bf26c13e07c30af1f1ca67b473",
+        "name": "Gelato Uniswap OHM/FRAX LP-0.3%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "107.207074095988859061759637",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x61a0c8d4945a61bf26c13e07c30af1f1ca67b473",
+          "name": "Gelato Uniswap OHM/FRAX LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x61a0c8d4945a61bf26c13e07c30af1f1ca67b473",
+          "name": "Gelato Uniswap OHM/FRAX LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "99.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x50dcc017db93f02da4c36c0870dce4da9af6430a",
+        "name": "Gelato Uniswap RAI/DAI LP-0.05%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "101.575137630158231673174599",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x50dcc017db93f02da4c36c0870dce4da9af6430a",
+          "name": "Gelato Uniswap RAI/DAI LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x50dcc017db93f02da4c36c0870dce4da9af6430a",
+          "name": "Gelato Uniswap RAI/DAI LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x4fd9ad3758cc0a3719b066e6ff796a9ccf702ac6",
+        "name": "Gelato Uniswap WBTC/WETH LP-0.05%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "92.5929208110589681492",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x4fd9ad3758cc0a3719b066e6ff796a9ccf702ac6",
+          "name": "Gelato Uniswap WBTC/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x4fd9ad3758cc0a3719b066e6ff796a9ccf702ac6",
+          "name": "Gelato Uniswap WBTC/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xe6f375a29cdd3b40fa7aa0932ff510d304d95fa6",
+        "name": "Arrakis Vault V1 LYRA/WETH-1.0%",
+        "symbol": "RAKIS-36",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "84.059318634000295297423421",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xe6f375a29cdd3b40fa7aa0932ff510d304d95fa6",
+          "name": "Arrakis Vault V1 LYRA/WETH",
+          "symbol": "RAKIS-36",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xe6f375a29cdd3b40fa7aa0932ff510d304d95fa6",
+          "name": "Arrakis Vault V1 LYRA/WETH",
+          "symbol": "RAKIS-36",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x98a8e81bd4f79f1827711cbbb1e9f31de2945cae",
+        "name": "Arrakis Vault V1 wstETH/USDC-0.05%",
+        "symbol": "RAKIS-31",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "54.20397489434876960606675",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x98a8e81bd4f79f1827711cbbb1e9f31de2945cae",
+          "name": "Arrakis Vault V1 wstETH/USDC",
+          "symbol": "RAKIS-31",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x98a8e81bd4f79f1827711cbbb1e9f31de2945cae",
+          "name": "Arrakis Vault V1 wstETH/USDC",
+          "symbol": "RAKIS-31",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xe85bd1ed4fc14689f4f51d9549beea0d9a8b19c8",
+        "name": "Arrakis Vault V1 cETH/WETH-0.3%",
+        "symbol": "RAKIS-15",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "46.10685594088150457705",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xe85bd1ed4fc14689f4f51d9549beea0d9a8b19c8",
+          "name": "Arrakis Vault V1 cETH/WETH",
+          "symbol": "RAKIS-15",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xe85bd1ed4fc14689f4f51d9549beea0d9a8b19c8",
+          "name": "Arrakis Vault V1 cETH/WETH",
+          "symbol": "RAKIS-15",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "12.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xbba11b41407df8793a89b44ee4b50afad4508555",
+        "name": "Gelato Uniswap USDC/POP LP-0.3%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "38.485769472293",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xbba11b41407df8793a89b44ee4b50afad4508555",
+          "name": "Gelato Uniswap USDC/POP LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xbba11b41407df8793a89b44ee4b50afad4508555",
+          "name": "Gelato Uniswap USDC/POP LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x74e8df0a1a06f3b90d25af2536e605d7dfefbcc7",
+        "name": "Gelato Uniswap USDC/WETH LP-0.05%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "21.29173087749243697165",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x74e8df0a1a06f3b90d25af2536e605d7dfefbcc7",
+          "name": "Gelato Uniswap USDC/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x74e8df0a1a06f3b90d25af2536e605d7dfefbcc7",
+          "name": "Gelato Uniswap USDC/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xf8b735e990b32a985801e5f56ef353de9cf696e9",
+        "name": "Arrakis Vault V1 wstETH/WETH-0.3%",
+        "symbol": "RAKIS-10",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "14.675586435582410108280725",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xf8b735e990b32a985801e5f56ef353de9cf696e9",
+          "name": "Arrakis Vault V1 wstETH/WETH",
+          "symbol": "RAKIS-10",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xf8b735e990b32a985801e5f56ef353de9cf696e9",
+          "name": "Arrakis Vault V1 wstETH/WETH",
+          "symbol": "RAKIS-10",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x301a201efc66c5b8025d0cc907f8e545ea33494e",
+        "name": "Arrakis Vault V1 TRANCHE-AMPL-Z/WAMPL-1.0%",
+        "symbol": "RAKIS-34",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "11.06936097231574234618048",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x301a201efc66c5b8025d0cc907f8e545ea33494e",
+          "name": "Arrakis Vault V1 TRANCHE-AMPL-Z/WAMPL",
+          "symbol": "RAKIS-34",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x301a201efc66c5b8025d0cc907f8e545ea33494e",
+          "name": "Arrakis Vault V1 TRANCHE-AMPL-Z/WAMPL",
+          "symbol": "RAKIS-34",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xd494efe072cb55a4d7f2cf589bd2f718555af9f4",
+        "name": "Gelato Uniswap SOS/WETH LP-1.0%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "9.168286464038610658",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xd494efe072cb55a4d7f2cf589bd2f718555af9f4",
+          "name": "Gelato Uniswap SOS/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xd494efe072cb55a4d7f2cf589bd2f718555af9f4",
+          "name": "Gelato Uniswap SOS/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xf3f826edbb9781151c0cf98230a5f3f035fbb377",
+        "name": "Arrakis Vault V1 OUSD/USDT-0.05%",
+        "symbol": "RAKIS-19",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "8.773622527218831595816556",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xf3f826edbb9781151c0cf98230a5f3f035fbb377",
+          "name": "Arrakis Vault V1 OUSD/USDT",
+          "symbol": "RAKIS-19",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xf3f826edbb9781151c0cf98230a5f3f035fbb377",
+          "name": "Arrakis Vault V1 OUSD/USDT",
+          "symbol": "RAKIS-19",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x3a226284a0203ed16426f885d8596ae244b169a9",
+        "name": "Gelato Uniswap iETHV/USDC LP-1.0%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "4.519804560804",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x3a226284a0203ed16426f885d8596ae244b169a9",
+          "name": "Gelato Uniswap iETHV/USDC LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x3a226284a0203ed16426f885d8596ae244b169a9",
+          "name": "Gelato Uniswap iETHV/USDC LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xc11efd085154d8500c61fa988f72ad7c789d5c38",
+        "name": "Gelato Uniswap USDC/ETHV LP-1.0%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "2.685148201957",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xc11efd085154d8500c61fa988f72ad7c789d5c38",
+          "name": "Gelato Uniswap USDC/ETHV LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xc11efd085154d8500c61fa988f72ad7c789d5c38",
+          "name": "Gelato Uniswap USDC/ETHV LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xe0abce449a0e368eaf657f6f1c0ed5711174c46f",
+        "name": "Gelato Uniswap WETH/JPEG LP-1.0%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "1.79072228338610215634563",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xe0abce449a0e368eaf657f6f1c0ed5711174c46f",
+          "name": "Gelato Uniswap WETH/JPEG LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xe0abce449a0e368eaf657f6f1c0ed5711174c46f",
+          "name": "Gelato Uniswap WETH/JPEG LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xf920baf4ff3e803244c680ffdd468677f50c07b7",
+        "name": "Arrakis Vault V1 USDC/CAW-1.0%",
+        "symbol": "RAKIS-7",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "1.364418040414",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xf920baf4ff3e803244c680ffdd468677f50c07b7",
+          "name": "Arrakis Vault V1 USDC/CAW",
+          "symbol": "RAKIS-7",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xf920baf4ff3e803244c680ffdd468677f50c07b7",
+          "name": "Arrakis Vault V1 USDC/CAW",
+          "symbol": "RAKIS-7",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xa9514190cbbad624c313ea387a18fd1dea576cbd",
+        "name": "Gelato Uniswap uAD/USDC LP-0.01%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0.072563938902",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xa9514190cbbad624c313ea387a18fd1dea576cbd",
+          "name": "Gelato Uniswap uAD/USDC LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xa9514190cbbad624c313ea387a18fd1dea576cbd",
+          "name": "Gelato Uniswap uAD/USDC LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x00608b2230fbcd2b85cf8506006979a3a888ebdf",
+        "name": "Gelato Uniswap USDC/WETH LP-0.3%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0.0012520405341700765",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x00608b2230fbcd2b85cf8506006979a3a888ebdf",
+          "name": "Gelato Uniswap USDC/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x00608b2230fbcd2b85cf8506006979a3a888ebdf",
+          "name": "Gelato Uniswap USDC/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xacc33801ae00a342a2fbb34b220264cc4a028634",
+        "name": "Gelato Uniswap VXV/WETH LP-1.0%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0.000020827658464943673856",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xacc33801ae00a342a2fbb34b220264cc4a028634",
+          "name": "Gelato Uniswap VXV/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xacc33801ae00a342a2fbb34b220264cc4a028634",
+          "name": "Gelato Uniswap VXV/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xf62fab0b5a8255eb1976ca9771db23d55978d311",
+        "name": "Arrakis Vault V1 USDC/GYEN-0.05%",
+        "symbol": "RAKIS-22",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xf62fab0b5a8255eb1976ca9771db23d55978d311",
+          "name": "Arrakis Vault V1 USDC/GYEN",
+          "symbol": "RAKIS-22",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xf62fab0b5a8255eb1976ca9771db23d55978d311",
+          "name": "Arrakis Vault V1 USDC/GYEN",
+          "symbol": "RAKIS-22",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xf331e8ff24ff56544c11ca680f84a2db75acf917",
+        "name": "Gelato Uniswap sILV2/WETH LP-1.0%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xf331e8ff24ff56544c11ca680f84a2db75acf917",
+          "name": "Gelato Uniswap sILV2/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xf331e8ff24ff56544c11ca680f84a2db75acf917",
+          "name": "Gelato Uniswap sILV2/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xef4c2568be52ddb79a4afa7147f15ee600b7e335",
+        "name": "Arrakis Vault V1 FAITH/MILAREPA-1.0%",
+        "symbol": "RAKIS-4",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xef4c2568be52ddb79a4afa7147f15ee600b7e335",
+          "name": "Arrakis Vault V1 FAITH/MILAREPA",
+          "symbol": "RAKIS-4",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xef4c2568be52ddb79a4afa7147f15ee600b7e335",
+          "name": "Arrakis Vault V1 FAITH/MILAREPA",
+          "symbol": "RAKIS-4",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xea26d116a125385ad4f1e75b70ebcd135e59301e",
+        "name": "Gelato Uniswap GMI/WETH LP-0.3%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xea26d116a125385ad4f1e75b70ebcd135e59301e",
+          "name": "Gelato Uniswap GMI/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xea26d116a125385ad4f1e75b70ebcd135e59301e",
+          "name": "Gelato Uniswap GMI/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xe8c94b3c4ec695f811328a5c3cf9afd477e1294b",
+        "name": "Arrakis Vault V1 uAD/DAI-0.01%",
+        "symbol": "RAKIS-2",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xe8c94b3c4ec695f811328a5c3cf9afd477e1294b",
+          "name": "Arrakis Vault V1 uAD/DAI",
+          "symbol": "RAKIS-2",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xe8c94b3c4ec695f811328a5c3cf9afd477e1294b",
+          "name": "Arrakis Vault V1 uAD/DAI",
+          "symbol": "RAKIS-2",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xe790f2359cb615b6f30edd377b7f3656a92192f2",
+        "name": "Arrakis Vault V1 DAI/USDT-0.01%",
+        "symbol": "RAKIS-26",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xe790f2359cb615b6f30edd377b7f3656a92192f2",
+          "name": "Arrakis Vault V1 DAI/USDT",
+          "symbol": "RAKIS-26",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xe790f2359cb615b6f30edd377b7f3656a92192f2",
+          "name": "Arrakis Vault V1 DAI/USDT",
+          "symbol": "RAKIS-26",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xe0a34a39c694ffc1bececf5bd948e534931c1105",
+        "name": "Arrakis Vault V1 alETH/alUSD-0.3%",
+        "symbol": "RAKIS-23",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xe0a34a39c694ffc1bececf5bd948e534931c1105",
+          "name": "Arrakis Vault V1 alETH/alUSD",
+          "symbol": "RAKIS-23",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xe0a34a39c694ffc1bececf5bd948e534931c1105",
+          "name": "Arrakis Vault V1 alETH/alUSD",
+          "symbol": "RAKIS-23",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xdcf0cb36e8e9d0607242e2e7babea5ba3395628f",
+        "name": "Arrakis Vault V1 OGN/WETH-0.3%",
+        "symbol": "RAKIS-17",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xdcf0cb36e8e9d0607242e2e7babea5ba3395628f",
+          "name": "Arrakis Vault V1 OGN/WETH",
+          "symbol": "RAKIS-17",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xdcf0cb36e8e9d0607242e2e7babea5ba3395628f",
+          "name": "Arrakis Vault V1 OGN/WETH",
+          "symbol": "RAKIS-17",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xda3dbe84f22cca044b65af6612c266f7c760d6ae",
+        "name": "Gelato Uniswap DPI/WETH LP-0.3%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xda3dbe84f22cca044b65af6612c266f7c760d6ae",
+          "name": "Gelato Uniswap DPI/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xda3dbe84f22cca044b65af6612c266f7c760d6ae",
+          "name": "Gelato Uniswap DPI/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xd33669d0a6eb343b8d7643dc270b99116e900e64",
+        "name": "Gelato Uniswap GEL/WETH LP-0.3%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xd33669d0a6eb343b8d7643dc270b99116e900e64",
+          "name": "Gelato Uniswap GEL/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xd33669d0a6eb343b8d7643dc270b99116e900e64",
+          "name": "Gelato Uniswap GEL/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xd14c67985f88368f66e71ad73ce97890f6636cdd",
+        "name": "Arrakis Vault V1 wstETH/WETH-0.05%",
+        "symbol": "RAKIS-8",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xd14c67985f88368f66e71ad73ce97890f6636cdd",
+          "name": "Arrakis Vault V1 wstETH/WETH",
+          "symbol": "RAKIS-8",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xd14c67985f88368f66e71ad73ce97890f6636cdd",
+          "name": "Arrakis Vault V1 wstETH/WETH",
+          "symbol": "RAKIS-8",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "7.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xd103caf4ff1e9ad5df92ce49f2e9a8890791dcdd",
+        "name": "Arrakis Vault V1 BUSD/USDC-0.01%",
+        "symbol": "RAKIS-30",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xd103caf4ff1e9ad5df92ce49f2e9a8890791dcdd",
+          "name": "Arrakis Vault V1 BUSD/USDC",
+          "symbol": "RAKIS-30",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xd103caf4ff1e9ad5df92ce49f2e9a8890791dcdd",
+          "name": "Arrakis Vault V1 BUSD/USDC",
+          "symbol": "RAKIS-30",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xc9e5172717243ab28299c153232587d390e34dd1",
+        "name": "Arrakis Vault V1 MATIC/WETH-0.3%",
+        "symbol": "RAKIS-28",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xc9e5172717243ab28299c153232587d390e34dd1",
+          "name": "Arrakis Vault V1 MATIC/WETH",
+          "symbol": "RAKIS-28",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xc9e5172717243ab28299c153232587d390e34dd1",
+          "name": "Arrakis Vault V1 MATIC/WETH",
+          "symbol": "RAKIS-28",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "3.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xc798e1856bec2aa84be124471309106f573ac744",
+        "name": "Arrakis Vault V1 BUSD/DAI-0.01%",
+        "symbol": "RAKIS-12",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xc798e1856bec2aa84be124471309106f573ac744",
+          "name": "Arrakis Vault V1 BUSD/DAI",
+          "symbol": "RAKIS-12",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xc798e1856bec2aa84be124471309106f573ac744",
+          "name": "Arrakis Vault V1 BUSD/DAI",
+          "symbol": "RAKIS-12",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xc5af80662f967603df2ac17b37edbbf9c4868b85",
+        "name": "Gelato Uniswap DAI/WETH LP-0.3%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xc5af80662f967603df2ac17b37edbbf9c4868b85",
+          "name": "Gelato Uniswap DAI/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xc5af80662f967603df2ac17b37edbbf9c4868b85",
+          "name": "Gelato Uniswap DAI/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xc48bfd82ebc3c438076ae067be5df122002cd3ef",
+        "name": "Arrakis Vault V1 WETH/aETHc-0.3%",
+        "symbol": "RAKIS-14",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xc48bfd82ebc3c438076ae067be5df122002cd3ef",
+          "name": "Arrakis Vault V1 WETH/aETHc",
+          "symbol": "RAKIS-14",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xc48bfd82ebc3c438076ae067be5df122002cd3ef",
+          "name": "Arrakis Vault V1 WETH/aETHc",
+          "symbol": "RAKIS-14",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xc090a8a0712c05a63e4c375ec54c76f6fc1270d6",
+        "name": "Arrakis Vault V1 OGV/WETH-0.3%",
+        "symbol": "RAKIS-18",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xc090a8a0712c05a63e4c375ec54c76f6fc1270d6",
+          "name": "Arrakis Vault V1 OGV/WETH",
+          "symbol": "RAKIS-18",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xc090a8a0712c05a63e4c375ec54c76f6fc1270d6",
+          "name": "Arrakis Vault V1 OGV/WETH",
+          "symbol": "RAKIS-18",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xbf7a1e5d4b080df199fde2f2f35003954e1e9dc0",
+        "name": "Gelato Uniswap 🌐/WETH LP-0.3%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xbf7a1e5d4b080df199fde2f2f35003954e1e9dc0",
+          "name": "Gelato Uniswap 🌐/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xbf7a1e5d4b080df199fde2f2f35003954e1e9dc0",
+          "name": "Gelato Uniswap 🌐/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xab43e3ddaab096e34fa99aa364e9071631db50f0",
+        "name": "Gelato Uniswap STRONG/WETH LP-0.3%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xab43e3ddaab096e34fa99aa364e9071631db50f0",
+          "name": "Gelato Uniswap STRONG/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xab43e3ddaab096e34fa99aa364e9071631db50f0",
+          "name": "Gelato Uniswap STRONG/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xa879dc95609824127c91efb6eac2270b4546d29f",
+        "name": "Arrakis Vault V1 MILAREPA/USDC-1.0%",
+        "symbol": "RAKIS-6",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xa879dc95609824127c91efb6eac2270b4546d29f",
+          "name": "Arrakis Vault V1 MILAREPA/USDC",
+          "symbol": "RAKIS-6",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xa879dc95609824127c91efb6eac2270b4546d29f",
+          "name": "Arrakis Vault V1 MILAREPA/USDC",
+          "symbol": "RAKIS-6",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xa7edd9580dec40b985d3167dfafb76b32816df3b",
+        "name": "Gelato Uniswap WETH/ENS LP-0.3%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xa7edd9580dec40b985d3167dfafb76b32816df3b",
+          "name": "Gelato Uniswap WETH/ENS LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xa7edd9580dec40b985d3167dfafb76b32816df3b",
+          "name": "Gelato Uniswap WETH/ENS LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xa4ba1d7bab167de658122fdf99f98f7b6b74b6e4",
+        "name": "Arrakis Vault V1 cbETH/WETH-0.05%",
+        "symbol": "RAKIS-20",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xa4ba1d7bab167de658122fdf99f98f7b6b74b6e4",
+          "name": "Arrakis Vault V1 cbETH/WETH",
+          "symbol": "RAKIS-20",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xa4ba1d7bab167de658122fdf99f98f7b6b74b6e4",
+          "name": "Arrakis Vault V1 cbETH/WETH",
+          "symbol": "RAKIS-20",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "12.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0xa295923db12dfac1915427b98b3fe1c4089d201c",
+        "name": "Gelato Uniswap OHM/DAI LP-0.3%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0xa295923db12dfac1915427b98b3fe1c4089d201c",
+          "name": "Gelato Uniswap OHM/DAI LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0xa295923db12dfac1915427b98b3fe1c4089d201c",
+          "name": "Gelato Uniswap OHM/DAI LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "99.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x9c60cc8a61abca87aa50ee894d6efc6ed2f15ddd",
+        "name": "Arrakis Vault V1 LUSD/DAI-0.05%",
+        "symbol": "RAKIS-29",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x9c60cc8a61abca87aa50ee894d6efc6ed2f15ddd",
+          "name": "Arrakis Vault V1 LUSD/DAI",
+          "symbol": "RAKIS-29",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x9c60cc8a61abca87aa50ee894d6efc6ed2f15ddd",
+          "name": "Arrakis Vault V1 LUSD/DAI",
+          "symbol": "RAKIS-29",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x9bcb681250e97e922e63cc83f3218de5243b227c",
+        "name": "Gelato Uniswap Silo/USDC LP-1.0%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x9bcb681250e97e922e63cc83f3218de5243b227c",
+          "name": "Gelato Uniswap Silo/USDC LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x9bcb681250e97e922e63cc83f3218de5243b227c",
+          "name": "Gelato Uniswap Silo/USDC LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x8aef042508ede1801b8729580132a2c47e1abf40",
+        "name": "Gelato Uniswap WBTC/WETH LP-0.3%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x8aef042508ede1801b8729580132a2c47e1abf40",
+          "name": "Gelato Uniswap WBTC/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x8aef042508ede1801b8729580132a2c47e1abf40",
+          "name": "Gelato Uniswap WBTC/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x8824e0cd99f5c1eef50c8602987af364096625db",
+        "name": "Arrakis Vault V1 uAD/LUSD-0.01%",
+        "symbol": "RAKIS-1",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x8824e0cd99f5c1eef50c8602987af364096625db",
+          "name": "Arrakis Vault V1 uAD/LUSD",
+          "symbol": "RAKIS-1",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x8824e0cd99f5c1eef50c8602987af364096625db",
+          "name": "Arrakis Vault V1 uAD/LUSD",
+          "symbol": "RAKIS-1",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x77a56c01b83d48be9142be30299d4656d24b560e",
+        "name": "Gelato Uniswap OHM/FRAX LP-0.3%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x77a56c01b83d48be9142be30299d4656d24b560e",
+          "name": "Gelato Uniswap OHM/FRAX LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x77a56c01b83d48be9142be30299d4656d24b560e",
+          "name": "Gelato Uniswap OHM/FRAX LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x75f969b6ccaee82bddfc46cf6b0f894f8b3bf600",
+        "name": "Gelato Uniswap OHM/DAI LP-0.3%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x75f969b6ccaee82bddfc46cf6b0f894f8b3bf600",
+          "name": "Gelato Uniswap OHM/DAI LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x75f969b6ccaee82bddfc46cf6b0f894f8b3bf600",
+          "name": "Gelato Uniswap OHM/DAI LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "99.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x741f3e1f10a66af9b198a8f5974d83fcf03f9842",
+        "name": "Gelato Uniswap UNI/DAI LP-0.3%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x741f3e1f10a66af9b198a8f5974d83fcf03f9842",
+          "name": "Gelato Uniswap UNI/DAI LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x741f3e1f10a66af9b198a8f5974d83fcf03f9842",
+          "name": "Gelato Uniswap UNI/DAI LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x6ee6d77fe61c1136e9e90cc450dc5251da0ace39",
+        "name": "Gelato Uniswap gOHM/WETH LP-1.0%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x6ee6d77fe61c1136e9e90cc450dc5251da0ace39",
+          "name": "Gelato Uniswap gOHM/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x6ee6d77fe61c1136e9e90cc450dc5251da0ace39",
+          "name": "Gelato Uniswap gOHM/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x68bdc39005cf15f1817a13449442bd61dfd4fb0e",
+        "name": "Arrakis Vault V1 WAMPL/TRANCHE-AMPL-Z-1.0%",
+        "symbol": "RAKIS-33",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x68bdc39005cf15f1817a13449442bd61dfd4fb0e",
+          "name": "Arrakis Vault V1 WAMPL/TRANCHE-AMPL-Z",
+          "symbol": "RAKIS-33",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x68bdc39005cf15f1817a13449442bd61dfd4fb0e",
+          "name": "Arrakis Vault V1 WAMPL/TRANCHE-AMPL-Z",
+          "symbol": "RAKIS-33",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x62cedf37b209142131a55a73534875f32094c992",
+        "name": "Arrakis Vault V1 DCHF/USDC-0.05%",
+        "symbol": "RAKIS-32",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x62cedf37b209142131a55a73534875f32094c992",
+          "name": "Arrakis Vault V1 DCHF/USDC",
+          "symbol": "RAKIS-32",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x62cedf37b209142131a55a73534875f32094c992",
+          "name": "Arrakis Vault V1 DCHF/USDC",
+          "symbol": "RAKIS-32",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "4.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x5bcbf85a032b8580564c2234327ee3c6ef9ce50b",
+        "name": "Arrakis Vault V1 PONY/USDC-0.05%",
+        "symbol": "RAKIS-11",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x5bcbf85a032b8580564c2234327ee3c6ef9ce50b",
+          "name": "Arrakis Vault V1 PONY/USDC",
+          "symbol": "RAKIS-11",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x5bcbf85a032b8580564c2234327ee3c6ef9ce50b",
+          "name": "Arrakis Vault V1 PONY/USDC",
+          "symbol": "RAKIS-11",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x5a77aacdaad084b778245482ff268e60cd0f309b",
+        "name": "Gelato Uniswap INDEX/WETH LP-1.0%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x5a77aacdaad084b778245482ff268e60cd0f309b",
+          "name": "Gelato Uniswap INDEX/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x5a77aacdaad084b778245482ff268e60cd0f309b",
+          "name": "Gelato Uniswap INDEX/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x502acb1f9da925af5021b7fe7242a4faa22358e0",
+        "name": "Arrakis Vault V1 DAI/USDC-0.01%",
+        "symbol": "RAKIS-24",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x502acb1f9da925af5021b7fe7242a4faa22358e0",
+          "name": "Arrakis Vault V1 DAI/USDC",
+          "symbol": "RAKIS-24",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x502acb1f9da925af5021b7fe7242a4faa22358e0",
+          "name": "Arrakis Vault V1 DAI/USDC",
+          "symbol": "RAKIS-24",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x4f93825a4d7f58899693c64f9b2cbbac3b5b04ab",
+        "name": "Gelato Uniswap INDEX/WETH LP-1.0%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x4f93825a4d7f58899693c64f9b2cbbac3b5b04ab",
+          "name": "Gelato Uniswap INDEX/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x4f93825a4d7f58899693c64f9b2cbbac3b5b04ab",
+          "name": "Gelato Uniswap INDEX/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x4e807e056354de33b619699f8491ca8dbd67920d",
+        "name": "Gelato Uniswap DAI/USDP LP-0.05%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x4e807e056354de33b619699f8491ca8dbd67920d",
+          "name": "Gelato Uniswap DAI/USDP LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x4e807e056354de33b619699f8491ca8dbd67920d",
+          "name": "Gelato Uniswap DAI/USDP LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x4cf66acaf7341e6fcc06ce50f2e314f82ae28ce5",
+        "name": "Arrakis Vault V1 UNIDX/WETH-1.0%",
+        "symbol": "RAKIS-13",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x4cf66acaf7341e6fcc06ce50f2e314f82ae28ce5",
+          "name": "Arrakis Vault V1 UNIDX/WETH",
+          "symbol": "RAKIS-13",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x4cf66acaf7341e6fcc06ce50f2e314f82ae28ce5",
+          "name": "Arrakis Vault V1 UNIDX/WETH",
+          "symbol": "RAKIS-13",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "99.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x4cbcecdc744ad72fe8695fedf705c860ac210fa4",
+        "name": "Arrakis Vault V1 BUSD/USDC-0.01%",
+        "symbol": "RAKIS-21",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x4cbcecdc744ad72fe8695fedf705c860ac210fa4",
+          "name": "Arrakis Vault V1 BUSD/USDC",
+          "symbol": "RAKIS-21",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x4cbcecdc744ad72fe8695fedf705c860ac210fa4",
+          "name": "Arrakis Vault V1 BUSD/USDC",
+          "symbol": "RAKIS-21",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "9.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x48ac93d10e963a9f99682f53b62c257451e02940",
+        "name": "Gelato Uniswap UDT/WETH LP-0.3%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x48ac93d10e963a9f99682f53b62c257451e02940",
+          "name": "Gelato Uniswap UDT/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x48ac93d10e963a9f99682f53b62c257451e02940",
+          "name": "Gelato Uniswap UDT/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x47ed8d441016967f8f885382e44234efe3b5893b",
+        "name": "Gelato Uniswap WETH/ENS LP-0.3%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x47ed8d441016967f8f885382e44234efe3b5893b",
+          "name": "Gelato Uniswap WETH/ENS LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x47ed8d441016967f8f885382e44234efe3b5893b",
+          "name": "Gelato Uniswap WETH/ENS LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x41a049ae0d45a0d4b687525ba0f99afad427ff9a",
+        "name": "Arrakis Vault V1 FAITH/MILAREPA-1.0%",
+        "symbol": "RAKIS-3",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x41a049ae0d45a0d4b687525ba0f99afad427ff9a",
+          "name": "Arrakis Vault V1 FAITH/MILAREPA",
+          "symbol": "RAKIS-3",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x41a049ae0d45a0d4b687525ba0f99afad427ff9a",
+          "name": "Arrakis Vault V1 FAITH/MILAREPA",
+          "symbol": "RAKIS-3",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x39703b0b92463c3fb3a0e9ea90926aa4f6c3283e",
+        "name": "Arrakis Vault V1 FAITH/USDC-1.0%",
+        "symbol": "RAKIS-5",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x39703b0b92463c3fb3a0e9ea90926aa4f6c3283e",
+          "name": "Arrakis Vault V1 FAITH/USDC",
+          "symbol": "RAKIS-5",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x39703b0b92463c3fb3a0e9ea90926aa4f6c3283e",
+          "name": "Arrakis Vault V1 FAITH/USDC",
+          "symbol": "RAKIS-5",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x394b0e6f4d8d51f51a251f60322a27599f8031a5",
+        "name": "Arrakis Vault V1 USDC/USDT-0.01%",
+        "symbol": "RAKIS-25",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x394b0e6f4d8d51f51a251f60322a27599f8031a5",
+          "name": "Arrakis Vault V1 USDC/USDT",
+          "symbol": "RAKIS-25",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x394b0e6f4d8d51f51a251f60322a27599f8031a5",
+          "name": "Arrakis Vault V1 USDC/USDT",
+          "symbol": "RAKIS-25",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x3876341af90400a11ea7a75e1c38d4a04499928e",
+        "name": "Arrakis Vault V1 wstETH/aETHc-0.3%",
+        "symbol": "RAKIS-16",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x3876341af90400a11ea7a75e1c38d4a04499928e",
+          "name": "Arrakis Vault V1 wstETH/aETHc",
+          "symbol": "RAKIS-16",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x3876341af90400a11ea7a75e1c38d4a04499928e",
+          "name": "Arrakis Vault V1 wstETH/aETHc",
+          "symbol": "RAKIS-16",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x29a8e99c2593816133ce46a23fe8626983dace95",
+        "name": "Gelato Uniswap OHM/WETH LP-0.3%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x29a8e99c2593816133ce46a23fe8626983dace95",
+          "name": "Gelato Uniswap OHM/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x29a8e99c2593816133ce46a23fe8626983dace95",
+          "name": "Gelato Uniswap OHM/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "99.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x26576c483466e339af9fed4fcc469420d82ef6c5",
+        "name": "Gelato Uniswap SOS/WETH LP-1.0%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x26576c483466e339af9fed4fcc469420d82ef6c5",
+          "name": "Gelato Uniswap SOS/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x26576c483466e339af9fed4fcc469420d82ef6c5",
+          "name": "Gelato Uniswap SOS/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x239a7f8d0d29c6ca971414dc5b720b08cba66c60",
+        "name": "Gelato Uniswap USDC/oSQTH LP-0.3%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x239a7f8d0d29c6ca971414dc5b720b08cba66c60",
+          "name": "Gelato Uniswap USDC/oSQTH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x239a7f8d0d29c6ca971414dc5b720b08cba66c60",
+          "name": "Gelato Uniswap USDC/oSQTH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x18d53f4953ad14236602da05efafc0df4f5d064d",
+        "name": "Gelato Uniswap ETHMAXY/WETH LP-0.05%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x18d53f4953ad14236602da05efafc0df4f5d064d",
+          "name": "Gelato Uniswap ETHMAXY/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x18d53f4953ad14236602da05efafc0df4f5d064d",
+          "name": "Gelato Uniswap ETHMAXY/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x104201f139aee36bc7ecd133c2a275c3ee6705f6",
+        "name": "Gelato Uniswap USDC/oSQTH LP-0.3%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x104201f139aee36bc7ecd133c2a275c3ee6705f6",
+          "name": "Gelato Uniswap USDC/oSQTH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x104201f139aee36bc7ecd133c2a275c3ee6705f6",
+          "name": "Gelato Uniswap USDC/oSQTH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x0eed1f07d68d1576902f3303c0e2bbb03c1eb1f5",
+        "name": "Arrakis Vault V1 wstETH/WETH-0.05%",
+        "symbol": "RAKIS-9",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x0eed1f07d68d1576902f3303c0e2bbb03c1eb1f5",
+          "name": "Arrakis Vault V1 wstETH/WETH",
+          "symbol": "RAKIS-9",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x0eed1f07d68d1576902f3303c0e2bbb03c1eb1f5",
+          "name": "Arrakis Vault V1 wstETH/WETH",
+          "symbol": "RAKIS-9",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x086d0328254f7f91d7e8af00583cbb72de8a0ce0",
+        "name": "Gelato Uniswap USDC/WETH LP-0.3%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x086d0328254f7f91d7e8af00583cbb72de8a0ce0",
+          "name": "Gelato Uniswap USDC/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x086d0328254f7f91d7e8af00583cbb72de8a0ce0",
+          "name": "Gelato Uniswap USDC/WETH LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x07baa98c5cdec970a3a4654f0fbb066404ff5fe0",
+        "name": "Gelato Uniswap FEI/USDC LP-0.05%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x07baa98c5cdec970a3a4654f0fbb066404ff5fe0",
+          "name": "Gelato Uniswap FEI/USDC LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x07baa98c5cdec970a3a4654f0fbb066404ff5fe0",
+          "name": "Gelato Uniswap FEI/USDC LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      },
+      {
+        "id": "0x04448cbcd12e133d0c4a68c28077b92cab7d9ac7",
+        "name": "Gelato Uniswap WETH/BTRFLY LP-1.0%",
+        "symbol": "G-UNI",
+        "depositLimit": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "totalValueLockedUSD": "0",
+        "pricePerShare": null,
+        "inputToken": {
+          "id": "0x04448cbcd12e133d0c4a68c28077b92cab7d9ac7",
+          "name": "Gelato Uniswap WETH/BTRFLY LP",
+          "symbol": "G-UNI",
+          "decimals": 18,
+          "lastPriceUSD": "0"
+        },
+        "outputToken": {
+          "id": "0x04448cbcd12e133d0c4a68c28077b92cab7d9ac7",
+          "name": "Gelato Uniswap WETH/BTRFLY LP",
+          "symbol": "G-UNI",
+          "decimals": 18
+        },
+        "fees": [
+          {
+            "feeType": "PERFORMANCE_FEE",
+            "feePercentage": "2.5"
+          }
+        ],
+        "protocol": {
+          "id": "0xea1aff9dbffd1580f6b81a3ad3589e66652db7d9",
+          "name": "Arrakis Finance",
+          "slug": "arrakis-finance",
+          "network": "MAINNET",
+          "type": "YIELD",
+          "schemaVersion": "1.3.0"
+        }
+      }
+    ],
+    "_meta": {
+      "block": {
+        "number": 25902879,
+        "timestamp": null
+      },
+      "deployment": "QmbmeihANx6cyZB7UxWkzTGeMg7XpdW5DVnjtvuJZj6Hnx",
+      "hasIndexingErrors": false
+    }
+  }
+}

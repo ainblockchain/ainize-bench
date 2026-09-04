@@ -1,0 +1,444 @@
+{
+  "_ainize": {
+    "deployment_id": "6PaB6tKFqrL6YoAELEhFGU6Gc39cEynLbo6ETZMF3sCy",
+    "protocol": "dforce",
+    "query": "identity",
+    "query_hash": "83680f3eaa380ba4b5cd75ee9b340689efd2a7ae37fa7be9105e2d4ee64b07dd",
+    "block": 25902879,
+    "skip": 0,
+    "first": 1000,
+    "gateway_ms": 246
+  },
+  "data": {
+    "tokens": [
+      {
+        "id": "0x0000000000000000000000000000000000000000",
+        "name": "Ether",
+        "symbol": "ETH",
+        "decimals": 18,
+        "lastPriceUSD": "2408.5218"
+      },
+      {
+        "id": "0x0000000000085d4780b73119b644ae5ecd22b376",
+        "name": "TrueUSD",
+        "symbol": "TUSD",
+        "decimals": 18,
+        "lastPriceUSD": "0.99878845"
+      },
+      {
+        "id": "0x028db7a9d133301bd49f27b5e41f83f56ab0faa6",
+        "name": "dForce ETH",
+        "symbol": "iMxETH",
+        "decimals": 8,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0x0316eb71485b0ab14103307bf65a021042c6d380",
+        "name": "Huobi BTC",
+        "symbol": "HBTC",
+        "decimals": 18,
+        "lastPriceUSD": "77742.9738473"
+      },
+      {
+        "id": "0x039e7ef6a674f3ec1d88829b8215ed45385c24bc",
+        "name": "dForce MKR",
+        "symbol": "iMKR",
+        "decimals": 8,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0x041d2c9250dc0ca2962be94cf7c4d05abb1d5820",
+        "name": "dForce sUSX",
+        "symbol": "isUSX",
+        "decimals": 8,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0x0a5e677a6a24b2f1a2bf4f3bffc443231d2fdec8",
+        "name": "dForce USD",
+        "symbol": "USX",
+        "decimals": 18,
+        "lastPriceUSD": "1"
+      },
+      {
+        "id": "0x1180c114f7fadcb6957670432a3cf8ef08ab5354",
+        "name": "dForce USDT",
+        "symbol": "iUSDT",
+        "decimals": 8,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0x164315ea59169d46359baa4bcc6479bb421764b6",
+        "name": "dForce GOLDx",
+        "symbol": "iGOLDx",
+        "decimals": 8,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0x1adc34af68e970a93062b67344269fd341979eb0",
+        "name": "dForce USD",
+        "symbol": "iUSX",
+        "decimals": 8,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+        "name": "Uniswap",
+        "symbol": "UNI",
+        "decimals": 18,
+        "lastPriceUSD": "5.71646803"
+      },
+      {
+        "id": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+        "name": "Wrapped BTC",
+        "symbol": "WBTC",
+        "decimals": 8,
+        "lastPriceUSD": "77742.9738473"
+      },
+      {
+        "id": "0x237c69e082a94d37ebdc92a84b58455872e425d6",
+        "name": "dForce ETH",
+        "symbol": "ixETH",
+        "decimals": 8,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0x24677e213dec0ea53a430404cf4a11a6dc889fce",
+        "name": "dForce BUSD",
+        "symbol": "iBUSD",
+        "decimals": 8,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0x298f243ad592b6027d4717fbe9decda668e3c3a8",
+        "name": "dForce DAI",
+        "symbol": "iDAI",
+        "decimals": 8,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0x2f956b2f801c6dad74e87e7f45c94f6283bf0f45",
+        "name": "dForce USDC",
+        "symbol": "iUSDC",
+        "decimals": 8,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0x33b5edc15e05d3dac27fccad77cf550c5f3f02aa",
+        "name": "dForce rETH",
+        "symbol": "irETH",
+        "decimals": 8,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0x355c665e101b9da58704a8fddb5feef210ef20c0",
+        "name": "dForce",
+        "symbol": "GOLDx",
+        "decimals": 18,
+        "lastPriceUSD": "81.38"
+      },
+      {
+        "id": "0x3e5cb932d7a1c0ca096b71cc486b2ad7e0dc3d0e",
+        "name": "dForce AAVE",
+        "symbol": "iAAVE",
+        "decimals": 8,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0x4013e6754634ca99af31b5717fa803714fa07b35",
+        "name": "dForce BTC",
+        "symbol": "ixBTC",
+        "decimals": 8,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0x431ad2ff6a9c365805ebad47ee021148d6f7dbe0",
+        "name": "dForce",
+        "symbol": "DF",
+        "decimals": 18,
+        "lastPriceUSD": "0.0001"
+      },
+      {
+        "id": "0x44c324970e5cbc5d4c3f3b7604cbc6640c2dcfbf",
+        "name": "dForce EUR",
+        "symbol": "iEUX",
+        "decimals": 8,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0x47566acd7af49d2a192132314826ed3c3c5f3698",
+        "name": "dForce HBTC",
+        "symbol": "iHBTC",
+        "decimals": 8,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0x47c19a2ab52da26551a22e2b2aeed5d19ef4022f",
+        "name": "dForce FEI",
+        "symbol": "iFEI",
+        "decimals": 8,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0x4fabb145d64652a948d72533023f6e7a623c7c53",
+        "name": "Binance USD",
+        "symbol": "BUSD",
+        "decimals": 18,
+        "lastPriceUSD": "1"
+      },
+      {
+        "id": "0x514910771af9ca656af840dff83e8264ecf986ca",
+        "name": "ChainLink Token",
+        "symbol": "LINK",
+        "decimals": 18,
+        "lastPriceUSD": "11.18457775"
+      },
+      {
+        "id": "0x527ec46ac094b399265d1d71eff7b31700aa655d",
+        "name": "dForce BTC",
+        "symbol": "xBTC",
+        "decimals": 18,
+        "lastPriceUSD": "77742.9738473"
+      },
+      {
+        "id": "0x5812fcf91adc502a765e5707ebb3f36a07f63c02",
+        "name": "dForce WBTC",
+        "symbol": "iWBTC",
+        "decimals": 8,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0x59055220e00da46c891283ea1d79363c769158b9",
+        "name": "dForce renFIL",
+        "symbol": "irenFIL",
+        "decimals": 8,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0x591595bfae3f5d51a820ecd20a1e3fbb6638f34b",
+        "name": "dForce EUR",
+        "symbol": "iMEUX",
+        "decimals": 8,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0x5acd75f21659a59ffab9aebaf350351a8bfaabc0",
+        "name": "dForce ETH",
+        "symbol": "iETH",
+        "decimals": 8,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0x5f02fb5f1203a502c701a12fd409548993f795ba",
+        "name": "dForce sDAI",
+        "symbol": "isDAI",
+        "decimals": 8,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0x68749665ff8d2d112fa859aa293f07a622782f38",
+        "name": "Tether Gold",
+        "symbol": "XAUt",
+        "decimals": 6,
+        "lastPriceUSD": "4425.79"
+      },
+      {
+        "id": "0x6b175474e89094c44da98b954eedeac495271d0f",
+        "name": "Dai Stablecoin",
+        "symbol": "DAI",
+        "decimals": 18,
+        "lastPriceUSD": "0.99969698"
+      },
+      {
+        "id": "0x6d9ce334c2cc6b80a4cddf9aea6d3f4683cf4a50",
+        "name": "dForce cbBTC",
+        "symbol": "icbBTC",
+        "decimals": 8,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0x6e6a689a5964083dff9fd7a0f788baf620ea2dbe",
+        "name": "dForce TUSD",
+        "symbol": "iTUSD",
+        "decimals": 8,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0x71173e3c6999c2c72ccf363f4ae7b67bcc7e8f63",
+        "name": "dForce FRAX",
+        "symbol": "iFRAX",
+        "decimals": 8,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0x7b37231059358931ee81df1f26291270c93f13b2",
+        "name": "dForce XAUt",
+        "symbol": "iXAUt",
+        "decimals": 8,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
+        "name": "Wrapped liquid staked Ether 2.0",
+        "symbol": "wstETH",
+        "decimals": 18,
+        "lastPriceUSD": "2992.293770515166604951"
+      },
+      {
+        "id": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+        "name": "Aave Token",
+        "symbol": "AAVE",
+        "decimals": 18,
+        "lastPriceUSD": "127.05258768"
+      },
+      {
+        "id": "0x83f20f44975d03b1b09e64809b757c47f942beea",
+        "name": "Savings Dai",
+        "symbol": "sDAI",
+        "decimals": 18,
+        "lastPriceUSD": "1.17970288"
+      },
+      {
+        "id": "0x853d955acef822db058eb8505911ed77f175b99e",
+        "name": "Frax",
+        "symbol": "FRAX",
+        "decimals": 18,
+        "lastPriceUSD": "0.99130829"
+      },
+      {
+        "id": "0x8d2cb35893c01fa8b564c84bd540c5109d9d278e",
+        "name": "dForce ETH",
+        "symbol": "xETH",
+        "decimals": 18,
+        "lastPriceUSD": "2408.5218"
+      },
+      {
+        "id": "0x956f47f50a910163d8bf957cf5846d573e7f87ca",
+        "name": "Fei USD",
+        "symbol": "FEI",
+        "decimals": 18,
+        "lastPriceUSD": "1"
+      },
+      {
+        "id": "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2",
+        "name": "Maker",
+        "symbol": "MKR",
+        "decimals": 18,
+        "lastPriceUSD": "1576.46392856"
+      },
+      {
+        "id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "name": "USD Coin",
+        "symbol": "USDC",
+        "decimals": 6,
+        "lastPriceUSD": "0.9998192"
+      },
+      {
+        "id": "0xa3068aa78611ed29d381e640bb2c02abcf3ca7de",
+        "name": "dForce LINK",
+        "symbol": "iLINK",
+        "decimals": 8,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0xae78736cd615f374d3085123a210448e74fc6393",
+        "name": "Rocket Pool ETH",
+        "symbol": "rETH",
+        "decimals": 18,
+        "lastPriceUSD": "2811.790196441210195369"
+      },
+      {
+        "id": "0xb3dc7425e63e1855eb41107134d471dd34d7b239",
+        "name": "dForce DF",
+        "symbol": "iDF",
+        "decimals": 8,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0xb986f3a2d91d3704dc974a24fb735dcc5e3c1e70",
+        "name": "dForce EUR",
+        "symbol": "EUX",
+        "decimals": 18,
+        "lastPriceUSD": "1.15989"
+      },
+      {
+        "id": "0xbc404429558292ee2d769e57d57d6e74bbd2792d",
+        "name": "Saving USX",
+        "symbol": "sUSX",
+        "decimals": 18,
+        "lastPriceUSD": "1.139924100069988705"
+      },
+      {
+        "id": "0xbec9a824d6da8d0f923fd9fbec4faa949d396320",
+        "name": "dForce UNI",
+        "symbol": "iUNI",
+        "decimals": 8,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0xbfd291da8a403daaf7e5e9dc1ec0aceacd4848b9",
+        "name": "dForce wstETH",
+        "symbol": "iwstETH",
+        "decimals": 8,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf",
+        "name": "Coinbase Wrapped BTC",
+        "symbol": "cbBTC",
+        "decimals": 8,
+        "lastPriceUSD": "77742.9738473"
+      },
+      {
+        "id": "0xd1254d280e7504836e1b0e36535ebff248483cee",
+        "name": "dForce USD",
+        "symbol": "iMUSX",
+        "decimals": 8,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0xd5147bc8e386d91cc5dbe72099dac6c9b99276f5",
+        "name": "renFIL",
+        "symbol": "renFIL",
+        "decimals": 18,
+        "lastPriceUSD": "0.820715508765948"
+      },
+      {
+        "id": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+        "name": "Curve DAO Token",
+        "symbol": "CRV",
+        "decimals": 18,
+        "lastPriceUSD": "0.36188582"
+      },
+      {
+        "id": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "name": "Tether USD",
+        "symbol": "USDT",
+        "decimals": 6,
+        "lastPriceUSD": "0.9996"
+      },
+      {
+        "id": "0xe39672dfa87c824bcb3b38aa480ef684687cbc09",
+        "name": "dForce CRV",
+        "symbol": "iCRV",
+        "decimals": 8,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0xfa2e831c674b61475c175b2206e81a5938b298dd",
+        "name": "dForce BTC",
+        "symbol": "iMxBTC",
+        "decimals": 8,
+        "lastPriceUSD": null
+      }
+    ],
+    "_meta": {
+      "block": {
+        "number": 25902879,
+        "timestamp": null
+      },
+      "deployment": "QmP6bTNozTjdcv9nXvRRzoCV1f3bMh4cuWBDfafARHrQqC",
+      "hasIndexingErrors": false
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "_ainize": {
+    "deployment_id": "Dy1yVPfbS27HTrqEq3nLGFGi3TMYxPzSfY7Zxxj5ZJhf",
+    "protocol": "rari-vaults",
+    "query": "identity",
+    "query_hash": "83680f3eaa380ba4b5cd75ee9b340689efd2a7ae37fa7be9105e2d4ee64b07dd",
+    "block": 25902879,
+    "skip": 0,
+    "first": 1000,
+    "gateway_ms": 239
+  },
+  "data": {
+    "tokens": [
+      {
+        "id": "0x0000000000000000000000000000000000000000",
+        "name": "UNKNOWN",
+        "symbol": "UNKNOWN",
+        "decimals": -1,
+        "lastPriceUSD": "0"
+      },
+      {
+        "id": "0x016bf078ABcaCB987f0589a6d3BEAdD4316922B0",
+        "name": "Rari Stable Pool Token",
+        "symbol": "RSPT",
+        "decimals": 18,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0x0833cfcb11A5ba89FbAF73a407831c98aD2D7648",
+        "name": "Rari DAI Pool Token",
+        "symbol": "RDPT",
+        "decimals": 18,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0x3baa6B7Af0D72006d3ea770ca29100Eb848559ae",
+        "name": "Rari Yield Pool Token",
+        "symbol": "RYPT",
+        "decimals": 18,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+        "name": "Dai Stablecoin",
+        "symbol": "DAI",
+        "decimals": 18,
+        "lastPriceUSD": "0.999779"
+      },
+      {
+        "id": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        "name": "USD Coin",
+        "symbol": "USDC",
+        "decimals": 6,
+        "lastPriceUSD": "0.9999"
+      },
+      {
+        "id": "0xCda4770d65B4211364Cb870aD6bE19E7Ef1D65f4",
+        "name": "Rari Ethereum Pool Token",
+        "symbol": "REPT",
+        "decimals": 18,
+        "lastPriceUSD": null
+      },
+      {
+        "id": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
+        "name": "Ether",
+        "symbol": "ETH",
+        "decimals": 18,
+        "lastPriceUSD": "1921.845537"
+      },
+      {
+        "id": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+        "name": "Tether USD",
+        "symbol": "USDT",
+        "decimals": 6,
+        "lastPriceUSD": "0.9996"
+      },
+      {
+        "id": "0xe2f2a5C287993345a840Db3B0845fbC70f5935a5",
+        "name": "mStable USD",
+        "symbol": "mUSD",
+        "decimals": 18,
+        "lastPriceUSD": "0.9999"
+      }
+    ],
+    "_meta": {
+      "block": {
+        "number": 25902879,
+        "timestamp": null
+      },
+      "deployment": "QmPorvah322jyTLZdwAGcXyr3FXhLr4oZUYjEkwtfuBitL",
+      "hasIndexingErrors": false
+    }
+  }
+}

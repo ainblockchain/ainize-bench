@@ -1,0 +1,373 @@
+{
+  "generatedAt": "2026-09-04T08:57:39.430Z",
+  "sources": {
+    "messari": "https://raw.githubusercontent.com/messari/subgraphs/master",
+    "chainModules": "https://github.com/streamingfast/substreams-chain-modules",
+    "pinaxEvm": "https://github.com/pinax-network/substreams-evm"
+  },
+  "messariRegistry": {
+    "projects": 256,
+    "deployments": 480,
+    "decentralized": 384,
+    "networks": 29,
+    "networkList": [
+      "arbitrum",
+      "aurora",
+      "avalanche",
+      "base",
+      "blast-mainnet",
+      "boba",
+      "bsc",
+      "celo",
+      "cronos",
+      "ethereum",
+      "etherlink-mainnet",
+      "fantom",
+      "fuse",
+      "gnosis",
+      "harmony",
+      "linea",
+      "mainnet",
+      "metis",
+      "mode-mainnet",
+      "moonbeam",
+      "moonriver",
+      "near-mainnet",
+      "optimism",
+      "osmosis",
+      "polygon",
+      "polygon-zkevm",
+      "scroll",
+      "xlayer-mainnet",
+      "zksync-era"
+    ],
+    "bySchema": {
+      "lending": {
+        "projects": 51,
+        "deployments": 103,
+        "decentralized": 95,
+        "networks": 22
+      },
+      "yield-aggregator": {
+        "projects": 15,
+        "deployments": 37,
+        "decentralized": 15,
+        "networks": 14
+      },
+      "dex-amm": {
+        "projects": 42,
+        "deployments": 89,
+        "decentralized": 56,
+        "networks": 18
+      },
+      "bridge": {
+        "projects": 11,
+        "deployments": 65,
+        "decentralized": 55,
+        "networks": 16
+      },
+      "erc721": {
+        "projects": 2,
+        "deployments": 2,
+        "decentralized": 0,
+        "networks": 1
+      },
+      "generic": {
+        "projects": 83,
+        "deployments": 114,
+        "decentralized": 114,
+        "networks": 15
+      },
+      "derivatives-perpfutures": {
+        "projects": 8,
+        "deployments": 17,
+        "decentralized": 15,
+        "networks": 6
+      },
+      "governance": {
+        "projects": 35,
+        "deployments": 35,
+        "decentralized": 22,
+        "networks": 3
+      },
+      "erc20": {
+        "projects": 1,
+        "deployments": 6,
+        "decentralized": 0,
+        "networks": 1
+      },
+      "nft-marketplace": {
+        "projects": 6,
+        "deployments": 6,
+        "decentralized": 6,
+        "networks": 1
+      },
+      "derivatives-options": {
+        "projects": 2,
+        "deployments": 6,
+        "decentralized": 6,
+        "networks": 4
+      }
+    }
+  },
+  "sharedEntities": {
+    "Token": {
+      "presentIn": [
+        "yield",
+        "lending",
+        "dex-amm",
+        "bridge",
+        "generic",
+        "dex-agg",
+        "derivatives-options",
+        "derivatives-perpfutures"
+      ],
+      "identicalFields": [
+        "decimals: Int!",
+        "lastPriceBlockNumber: BigInt",
+        "lastPriceUSD: BigDecimal",
+        "name: String!",
+        "symbol: String!"
+      ]
+    },
+    "Protocol": {
+      "presentIn": [
+        "yield",
+        "lending",
+        "dex-amm",
+        "bridge",
+        "generic",
+        "dex-agg",
+        "derivatives-options",
+        "derivatives-perpfutures"
+      ],
+      "identicalFields": [
+        "@derivedFrom(field: \"protocol\")",
+        "@derivedFrom(field: \"protocol\")",
+        "cumulativeProtocolSideRevenueUSD: BigDecimal!",
+        "cumulativeSupplySideRevenueUSD: BigDecimal!",
+        "cumulativeTotalRevenueUSD: BigDecimal!",
+        "cumulativeUniqueUsers: Int!",
+        "dailyUsageMetrics: [UsageMetricsDailySnapshot!]!",
+        "financialMetrics: [FinancialsDailySnapshot!]! @derivedFrom(field: \"protocol\")",
+        "methodologyVersion: String!",
+        "name: String!",
+        "network: Network!",
+        "schemaVersion: String!",
+        "slug: String!",
+        "subgraphVersion: String!",
+        "type: ProtocolType!"
+      ]
+    },
+    "RewardToken": {
+      "presentIn": [
+        "yield",
+        "lending",
+        "dex-amm",
+        "bridge",
+        "dex-agg",
+        "derivatives-options",
+        "derivatives-perpfutures"
+      ],
+      "identicalFields": [
+        "token: Token!",
+        "type: RewardTokenType!"
+      ]
+    }
+  },
+  "queryPortability": {
+    "identity": {
+      "yield": {
+        "valid": true,
+        "sdlNeededDedupe": false
+      },
+      "lending": {
+        "valid": true,
+        "sdlNeededDedupe": false
+      },
+      "dex-amm": {
+        "valid": true,
+        "sdlNeededDedupe": false
+      },
+      "bridge": {
+        "valid": true,
+        "sdlNeededDedupe": true
+      },
+      "generic": {
+        "valid": true,
+        "sdlNeededDedupe": false
+      },
+      "dex-agg": {
+        "valid": true,
+        "sdlNeededDedupe": false
+      },
+      "derivatives-options": {
+        "valid": true,
+        "sdlNeededDedupe": false
+      },
+      "derivatives-perpfutures": {
+        "valid": true,
+        "sdlNeededDedupe": false
+      },
+      "nft-marketplace": {
+        "valid": false,
+        "errors": [
+          "Cannot query field \"protocols\" on type \"Query\".",
+          "Cannot query field \"tokens\" on type \"Query\"."
+        ],
+        "sdlNeededDedupe": false
+      }
+    },
+    "poolCore": {
+      "yield": {
+        "root": "vaults",
+        "valid": true,
+        "sdlNeededDedupe": false
+      },
+      "lending": {
+        "root": "markets",
+        "valid": true,
+        "sdlNeededDedupe": false
+      },
+      "dex-amm": {
+        "root": "liquidityPools",
+        "valid": true,
+        "sdlNeededDedupe": false
+      },
+      "generic": {
+        "root": "pools",
+        "valid": true,
+        "sdlNeededDedupe": false
+      },
+      "derivatives-perpfutures": {
+        "root": "liquidityPools",
+        "valid": true,
+        "sdlNeededDedupe": false
+      },
+      "derivatives-options": {
+        "root": "liquidityPools",
+        "valid": true,
+        "sdlNeededDedupe": false
+      }
+    },
+    "identityReach": {
+      "schemas": [
+        "yield",
+        "lending",
+        "dex-amm",
+        "bridge",
+        "generic",
+        "dex-agg",
+        "derivatives-options",
+        "derivatives-perpfutures"
+      ],
+      "decentralizedDeployments": 356,
+      "projects": 182,
+      "networks": 26
+    },
+    "poolCoreReach": {
+      "schemas": [
+        "yield",
+        "lending",
+        "dex-amm",
+        "generic",
+        "derivatives-perpfutures",
+        "derivatives-options"
+      ],
+      "distinctRootFieldNames": 4,
+      "decentralizedDeployments": 301,
+      "projects": 172,
+      "networks": 24
+    }
+  },
+  "bespokeCounterfactual": {
+    "repo": "streamingfast/substreams-chain-modules",
+    "substreamsPackages": 69,
+    "distinctProtoPackages": 69,
+    "modulesRestatingErc4626AssetsSharesPair": 6,
+    "restated": [
+      {
+        "module": "lending/morpho-blue-substreams",
+        "package": "morpho_blue.types.v1",
+        "messages": [
+          "Supply",
+          "Borrow",
+          "Repay",
+          "Withdraw"
+        ]
+      },
+      {
+        "module": "staking/amphor-substreams",
+        "package": "amphor.types.v1",
+        "messages": [
+          "LrtVaultDeposit",
+          "LrtVaultWithdraw"
+        ]
+      },
+      {
+        "module": "staking/frax-ether-staking-substreams",
+        "package": "frax.types.v1",
+        "messages": [
+          "Deposit",
+          "Withdraw"
+        ]
+      },
+      {
+        "module": "staking/gogopool-substreams",
+        "package": "gogopool.types.v1",
+        "messages": [
+          "GgavaxDeposit",
+          "GgavaxWithdraw"
+        ]
+      },
+      {
+        "module": "staking/mev-protocol-substreams",
+        "package": "mev_protocol.types.v1",
+        "messages": [
+          "MevethDeposit",
+          "MevethWithdraw"
+        ]
+      },
+      {
+        "module": "staking/stader-substreams",
+        "package": "stader.types.v1",
+        "messages": [
+          "Deposit"
+        ]
+      }
+    ]
+  },
+  "pinaxErc4626": {
+    "exists": true,
+    "files": [
+      "erc4626/Cargo.toml",
+      "erc4626/Makefile",
+      "erc4626/README.md",
+      "erc4626/src",
+      "erc4626/src/lib.rs",
+      "erc4626/substreams.yaml"
+    ],
+    "protoFile": "proto/v1/erc4626.proto",
+    "emits": [
+      "Deposit(sender,owner,assets,shares)",
+      "Withdraw(sender,receiver,owner,assets,shares)"
+    ],
+    "matchedBy": "topic0 event signature — every ERC-4626 vault on the chain, no address list",
+    "doesNotEmit": [
+      "vault name",
+      "vault symbol",
+      "vault decimals",
+      "underlying asset() address",
+      "underlying symbol/decimals",
+      "per-vault cumulative state"
+    ],
+    "siblingModulesUsefulToAinize": [
+      "contracts",
+      "erc20",
+      "erc4626",
+      "evm-contracts",
+      "evm-x402",
+      "x402"
+    ]
+  }
+}

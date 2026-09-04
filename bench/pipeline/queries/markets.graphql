@@ -1,0 +1,19 @@
+# lending vertical.
+query AinizeMarkets($skip: Int!, $first: Int!, $block: Block_height) {
+  markets(first: $first, skip: $skip, orderBy: totalValueLockedUSD, orderDirection: desc, block: $block) {
+    id
+    name
+    isActive
+    canBorrowFrom
+    maximumLTV
+    liquidationThreshold
+    totalValueLockedUSD
+    totalDepositBalanceUSD
+    totalBorrowBalanceUSD
+    inputToken { id name symbol decimals lastPriceUSD }
+    outputToken { id name symbol decimals }
+    rates { rate side type }
+    protocol { id name slug network type schemaVersion }
+  }
+  _meta(block: $block) { block { number timestamp } deployment hasIndexingErrors }
+}

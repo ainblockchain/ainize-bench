@@ -1,0 +1,135 @@
+{
+  "_comment": [
+    "One template family per RELATION, never per fact. A fact is rendered into questions only by substituting",
+    "its subject into these strings — no question is ever hand-written or hand-tuned for a particular fact,",
+    "which is what stops the question set from being quietly shaped around what the patch happens to know.",
+    "",
+    "Each family has exactly three surface forms:",
+    "  P  the canonical, terse phrasing. This form — and ONLY this form — becomes a {prompt, answer} training",
+    "     row. Scored and reported as the memorisation ceiling, never as the headline.",
+    "  E1 a different English wording of the same question. Never trained on. THE HEADLINE BUCKET.",
+    "  E2 the same question in Korean. Never trained on. Measures cross-lingual transfer of the compiled fact.",
+    "",
+    "`answer_type` is fixed here, per relation, before any model sees any question (bench/questions/schema.json).",
+    "`direction` documents which way the lookup runs: 'forward' is subject -> attribute, 'reverse' is",
+    "attribute -> subject. Reverse and partial lookups are cheap to remember and awkward to query, so the",
+    "summary reports them as their own cut."
+  ],
+  "families": {
+    "vault_symbol": {
+      "answer_type": "symbol",
+      "hop": 1,
+      "direction": "forward",
+      "P": "What is the token symbol of the ERC-4626 vault at {subject}?",
+      "E1": "A vault is deployed at {subject} on Ethereum. Which ticker does its share token trade under?",
+      "E2": "이더리움의 {subject} 주소에 있는 ERC-4626 볼트의 토큰 심볼은 무엇입니까?"
+    },
+    "vault_name": {
+      "answer_type": "symbol",
+      "hop": 1,
+      "direction": "forward",
+      "P": "What is the name of the ERC-4626 vault at {subject}?",
+      "E1": "The contract {subject} is a tokenized vault. What is it called?",
+      "E2": "{subject} 주소의 ERC-4626 볼트 이름은 무엇입니까?"
+    },
+    "vault_address": {
+      "answer_type": "address",
+      "hop": 1,
+      "direction": "reverse",
+      "P": "What is the contract address of the ERC-4626 vault {subject}?",
+      "E1": "Where is the {subject} vault deployed on Ethereum mainnet?",
+      "E2": "{subject} 볼트의 이더리움 메인넷 컨트랙트 주소는 무엇입니까?"
+    },
+    "vault_asset": {
+      "answer_type": "address",
+      "hop": 1,
+      "direction": "forward",
+      "P": "What is the underlying asset address of the ERC-4626 vault at {subject}?",
+      "E1": "Which token does the vault at {subject} accept as its deposit asset? Give the token address.",
+      "E2": "{subject} 볼트가 예치 자산으로 받는 토큰의 주소는 무엇입니까?"
+    },
+    "vault_asset_symbol": {
+      "answer_type": "symbol",
+      "hop": 1,
+      "direction": "forward",
+      "P": "What is the underlying asset symbol of the ERC-4626 vault at {subject}?",
+      "E1": "Depositors into the vault at {subject} deposit which token? Give the ticker.",
+      "E2": "{subject} 볼트의 기초 자산 티커는 무엇입니까?"
+    },
+    "vault_tvl_usd": {
+      "answer_type": "decimal",
+      "hop": 1,
+      "direction": "forward",
+      "P": "What is the total value locked in USD of the ERC-4626 vault at {subject}?",
+      "E1": "How many US dollars of assets does the vault at {subject} hold?",
+      "E2": "{subject} 볼트에 예치된 총 자산은 미국 달러로 얼마입니까?"
+    },
+    "market_asset_symbol": {
+      "answer_type": "symbol",
+      "hop": 1,
+      "direction": "forward",
+      "P": "What is the input token symbol of the lending market at {subject}?",
+      "E1": "Which asset is borrowed and supplied in the lending market at {subject}? Give the ticker.",
+      "E2": "{subject} 대출 마켓의 기초 자산 티커는 무엇입니까?"
+    },
+    "market_address": {
+      "answer_type": "address",
+      "hop": 1,
+      "direction": "reverse",
+      "P": "What is the address of the {subject} lending market?",
+      "E1": "Where is the lending market for {subject} deployed?",
+      "E2": "{subject} 대출 마켓의 컨트랙트 주소는 무엇입니까?"
+    },
+    "pool_tokens": {
+      "answer_type": "list<symbol>",
+      "hop": 1,
+      "direction": "forward",
+      "P": "Which tokens are in the liquidity pool at {subject}?",
+      "E1": "Name the assets paired in the pool deployed at {subject}.",
+      "E2": "{subject} 주소의 유동성 풀에 들어 있는 토큰들은 무엇입니까?"
+    },
+    "vault_asset_via_symbol": {
+      "answer_type": "symbol",
+      "hop": 2,
+      "direction": "reverse",
+      "_hop": "symbol -> vault address -> underlying asset symbol. The join is computed by the generator from two facts; neither the join nor its answer is ever a training row.",
+      "P": "What is the underlying asset symbol of the vault whose share token is {subject}?",
+      "E1": "Someone holds {subject}. Which token did they deposit to get it? Give the ticker.",
+      "E2": "{subject} 토큰을 받으려면 어떤 토큰을 예치해야 합니까? 티커로 답하십시오."
+    },
+    "vault_larger_tvl": {
+      "answer_type": "symbol",
+      "hop": 2,
+      "direction": "forward",
+      "_hop": "two TVL facts compared by the generator. {subject} is 'X or Y' — a comparison, not a lookup.",
+      "P": "Which has more total value locked, {subject}? Answer with the symbol.",
+      "E1": "Between {subject}, which vault is bigger by assets under management? Give its ticker only.",
+      "E2": "{subject} 중 예치 자산이 더 많은 볼트는 무엇입니까? 티커로만 답하십시오."
+    },
+    "vault_top_by_tvl": {
+      "answer_type": "list<symbol>",
+      "hop": 2,
+      "direction": "forward",
+      "_hop": "the generator sorts the pinned-block TVL facts for the {subject} asset and takes the top 3. This is the many-entity item: arm B must read and rank a set, arm C answers from memory.",
+      "P": "Which three {subject} vaults have the highest total value locked? Answer with symbols only.",
+      "E1": "List the top 3 vaults holding {subject} by size, largest first. Tickers only.",
+      "E2": "{subject}를 보유한 볼트 중 예치 자산 상위 3개는 무엇입니까? 티커로만 답하십시오."
+    },
+    "vault_fee_pct": {
+      "answer_type": "decimal",
+      "hop": 1,
+      "direction": "forward",
+      "P": "What is the performance fee percentage of the ERC-4626 vault at {subject}?",
+      "E1": "What cut does the vault at {subject} take from the yield it earns? Give the percentage.",
+      "E2": "{subject} 볼트의 성과 보수는 몇 퍼센트입니까?"
+    },
+    "market_supply_apy": {
+      "answer_type": "decimal",
+      "hop": 1,
+      "direction": "forward",
+      "P": "What is the lender supply APY of the lending market at {subject}?",
+      "E1": "Someone supplies into the market at {subject}. What annual percentage rate do they earn?",
+      "E2": "{subject} 대출 마켓에 공급하는 사람이 받는 연이율은 몇 퍼센트입니까?"
+    }
+  }
+}
