@@ -94,11 +94,28 @@ const noContrastFile = existsSync(CONTRAST) ? false : 'trainer contrast file is 
 
 const near = rd(join(BENCH, 'locality', 'near.jsonl'));
 const control = rd(join(BENCH, 'locality', 'control.jsonl'));
-const all = [...near, ...control];
+/**
+ * prompts.jsonl is THE FILE THE RUNNER READS (src/locality-tools.mjs prefers it, falling back to the two
+ * halves only if it is absent), and it is not merely their concatenation: src/locality.mjs RESELECTED
+ * declares overrides, because regenerating the trainset at 911ccf3 made two near items' ground truth into
+ * trained answers. So it holds items that exist in neither half, and asserting only over near+control would
+ * check 48 of the 50 prompts that actually run - a suite that is green about a file nobody executes.
+ * Assert over the union, so the canonical artifact is covered no matter which way the build drifts.
+ */
+const prompts = rd(join(BENCH, 'locality', 'prompts.jsonl'));
+const all = [...near, ...control, ...prompts];
 const facts = rd(join(BENCH, 'data', 'r1', 'facts.jsonl'));
 const split = JSON.parse(readFileSync(join(BENCH, 'data', 'r1', 'split.json'), 'utf8'));
 const trainset = rd(join(BENCH, 'data', 'r1', 'trainset.jsonl'));
 const study = new Set(split.study_fact_ids);
+
+test('the canonical prompt set is the one being asserted over', () => {
+  assert.equal(prompts.length, 50, 'locality/prompts.jsonl should hold the declared 50');
+  const halves = new Set([...near, ...control].map((x) => norm(x.question ?? x.prompt)));
+  const onlyInCanonical = prompts.filter((x) => !halves.has(norm(x.question ?? x.prompt)));
+  // Not an error - RESELECTED overrides are meant to differ. The point is that they are COVERED below.
+  assert.ok(onlyInCanonical.length <= 4, `${onlyInCanonical.length} canonical prompts exist in neither half - if the build has forked, fix the build, not this bound`);
+});
 
 test('no locality item asks a trainset question', () => {
   const q = new Set(trainset.map((r) => norm(r.prompt)));
