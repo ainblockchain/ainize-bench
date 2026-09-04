@@ -1,0 +1,43 @@
+{
+  "arm_a": {
+    "n": 250,
+    "incomplete": 0,
+    "verdict_disagreements": 7,
+    "d": 0.028,
+    "wilson": {
+      "lo": 0.013627884857773494,
+      "hi": 0.056658466945870976
+    },
+    "string_disagreement_rate": 0.136,
+    "examples": [
+      {
+        "id": "pool_tokens:c0119e2d81a3.E1",
+        "a": "abstain",
+        "b": "wrong"
+      },
+      {
+        "id": "vault_address:be9b65eabc8f.P",
+        "a": "wrong",
+        "b": "abstain"
+      },
+      {
+        "id": "vault_asset:407420492426.E1",
+        "a": "wrong",
+        "b": "abstain"
+      },
+      {
+        "id": "vault_fee_pct:33454ce9bbe7.E1",
+        "a": "abstain",
+        "b": "hit"
+      },
+      {
+        "id": "vault_fee_pct:6608ec4961ed.E1",
+        "a": "wrong",
+        "b": "abstain"
+      }
+    ]
+  },
+  "threshold": 0.056658466945870976,
+  "computed_at": "2026-09-04T11:08:29.921Z",
+  "bridge": null
+}
