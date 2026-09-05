@@ -70,7 +70,7 @@ export class NodeClient {
    * Field names below are the ACTUAL keys recipe.json writes. The previous version guessed with `??` chains
    * across several spellings, which is the same optimistic guessing the rule exists to prevent.
    */
-  async provenance(id, { recipePath = null, trainsetPath = null } = {}) {
+  async provenance(id, { recipePath = null, trainsetPath = null, npzPath = null } = {}) {
     const p = await this.patch(id).catch(() => null);
     const entry = p?.entry ?? p ?? {};
     const anchor = entry.anchor ?? {};
@@ -88,13 +88,24 @@ export class NodeClient {
     for (const k of ['facts', 'hyper_params', 'model', 'kernel', 'rows', 'step', 'npz', 'trainer'])
       if (r[k] === undefined || r[k] === null) out.why.push(`recipe has no \`${k}\``);
 
-    // The artefact: the npz the recipe names must hash to what the anchor says the patch is.
+    // The artefact. The recipe records the path the TRAINER saw, which for a containerised run is a path
+    // inside the container (`/work/...`) and does not resolve on the host. So the host path may be supplied
+    // explicitly — but its BASENAME must match the one the recipe names, otherwise `--npz` would be a way to
+    // point the check at an unrelated file and have it pass. The recipe still binds the name; the operator
+    // only supplies where it lives.
     if (r.npz) {
-      if (!existsSync(r.npz)) out.why.push(`recipe names an npz that is not readable here (${r.npz}) — the artefact binding cannot be checked`);
-      else if (anchorSha) {
-        const npzSha = createHash('sha256').update(readFileSync(r.npz)).digest('hex');
-        if (npzSha.toLowerCase() !== String(anchorSha).toLowerCase())
-          out.why.push(`the npz the recipe names hashes to ${npzSha.slice(0, 12)}, the anchor says ${String(anchorSha).slice(0, 12)}`);
+      const recipeBase = String(r.npz).split('/').pop();
+      let resolved = existsSync(r.npz) ? r.npz : null;
+      if (!resolved && npzPath) {
+        if (!existsSync(npzPath)) out.why.push(`--npz ${npzPath} does not exist`);
+        else if (npzPath.split('/').pop() !== recipeBase) out.why.push(`--npz names ${npzPath.split('/').pop()} but the recipe was written about ${recipeBase}`);
+        else resolved = npzPath;
+      }
+      if (!resolved) out.why.push(`the recipe's npz (${r.npz}) is not readable here and no matching --npz was given — the artefact binding cannot be checked`);
+      else {
+        out.npz_sha256 = createHash('sha256').update(readFileSync(resolved)).digest('hex');
+        if (anchorSha && out.npz_sha256.toLowerCase() !== String(anchorSha).toLowerCase())
+          out.why.push(`the npz hashes to ${out.npz_sha256.slice(0, 12)}, the anchor says ${String(anchorSha).slice(0, 12)}`);
       }
     }
 

@@ -296,6 +296,7 @@ async function main() {
     provenancePatch = await node.provenance(patchId, {
       recipePath: argv.recipe ? (argv.recipe.startsWith('/') ? argv.recipe : join(BENCH, '..', argv.recipe)) : null,
       trainsetPath: join(BENCH, 'data', runId, 'trainset.jsonl'),
+      npzPath: argv.npz ?? null,
     });
     if (!provenancePatch.real_training) for (const w of provenancePatch.why) console.error(`  !! provenance: ${w}`);
   }
