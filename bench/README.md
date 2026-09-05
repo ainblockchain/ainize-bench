@@ -353,14 +353,24 @@ whole thesis dies if a judge can say "you strawmanned The Graph".
 
 Arms C and D are executed against the running node, not against a script that re-implements patching.
 
-- **Arms A + C are paired per CHUNK, not per call.** The original design ran them as one `POST /api/chat`
-  with `mode: "compare"`, which pairs them perfectly under a single lock — but that route cannot carry the
-  uniform sampling §2 requires (see above), so the pairing is reconstructed in the runner instead: for each
-  chunk of 8 items the table is put into one state, the chunk is asked, the table is moved to the other state,
-  and the same chunk is asked again. The gap between an item's two arms is minutes, which is what the paired
-  design was defending against; the overnight A-in-the-morning / C-at-night design it replaces is still ruled
-  out. The state is asserted against the node before and after every chunk, so "the patch was resident" is a
-  checked fact per chunk rather than an assumption over the whole run.
+- **Arms A, C and D run in ONE PROCESS on ONE ENGINE INSTANCE — and that is weaker than the per-chunk
+  pairing this section used to claim.** The original design ran A and C as a single `POST /api/chat` with
+  `mode: "compare"`, pairing them under one lock; that route cannot carry §2's uniform sampling, so the
+  pairing had to be reconstructed. This section described the reconstruction as per-chunk interleaving. **The
+  runner does not do that.** It is arm-major: arm A completes, then C, then D, with the patch state asserted
+  against the node before and after every chunk within an arm. So an item's A and C answers are up to one
+  arm-length apart — about fifteen minutes — rather than about one.
+
+  The claim is corrected rather than the code, because the property that mattered is preserved and the extra
+  precision is small: fifteen minutes inside one process on one engine instance is bounded by arm A's own
+  two-repeat disagreement rate, and the overnight A-in-the-morning / C-at-night design remains ruled out. What
+  the bridge control measured is a restart, not fifteen minutes.
+
+  **This is not optional bookkeeping.** Measured 2026-09-04→05: stopping and starting the container with an
+  unchanged Cmd moved arm A's abstain rate from 74% to 86% on a fixed 40-item set, and every one of the ten
+  disagreements crossed the wrong/abstain seam — the seam §5's hallucination metric is measured on. A study
+  that compares an arm from before a restart with an arm from after it carries that shift invisibly. Hence:
+  one process, one instance, and any measurement spanning a restart is two measurements.
 - **Arm D needs a multi-turn tool loop with the patch resident**, which `chat()` cannot express (it takes no
   tools). The runner therefore pins the patch with the operator route `POST /api/patches/:id/apply`
   (`api.ts:418`), runs the tool loop directly against `:8002`, and unpins with
