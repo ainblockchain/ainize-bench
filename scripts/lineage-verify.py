@@ -161,8 +161,17 @@ def main():
             missing = [ad for ad in under_addr if ad not in set(addrs.tolist())]
             r.add("squash: every parent address is carried", not missing, f"{len(missing)} missing")
             moved = [i for i in idx if not np.array_equal(bf16(after[i]), bf16(under_after[int(addrs[i])]))]
-            r.add("squash: untouched parent rows keep the parent value (bf16)", True,
-                  f"{len(idx) - len(moved)} of {len(idx)} parent rows carried through unchanged, {len(moved)} retrained")
+            # A squash that CARRIED its parent's rows and one that OVERWROTE them have the same address list, so the
+            # count is the only thing that separates them: no more parent rows may have moved than the run touched.
+            # `touched_rows` is the trainer's own count of the rows it wrote through (recipe.json); without it this
+            # can only be reported, and a report that cannot fail is not a check.
+            touched = (recipe or {}).get("touched_rows")
+            if isinstance(touched, int):
+                r.add("squash: no more parent rows moved than the run actually touched", len(moved) <= touched,
+                      f"{len(moved)} moved, {touched} touched, {len(idx) - len(moved)} carried through unchanged")
+            else:
+                r.skip("squash: parent rows carried through",
+                       f"recipe has no touched_rows; {len(idx) - len(moved)} of {len(idx)} unchanged, {len(moved)} moved")
 
     if a.model_dir:
         repo = os.path.dirname(os.path.dirname(os.path.abspath(a.model_dir)))
@@ -197,6 +206,12 @@ def main():
                   recipe.get("pre_state_sha256") == pre_state_sha256(addrs, before), str(recipe.get("pre_state_sha256"))[:16] + "…")
             r.add("recipe.known_used is reported", isinstance(recipe.get("known_used"), int), str(recipe.get("known_used")))
         r.add("recipe rows match the file", recipe.get("rows") == len(addrs), f"{recipe.get('rows')} vs {len(addrs)}")
+        t = recipe.get("touched_rows")
+        if isinstance(t, int):
+            # a delta is exactly the rows the run wrote through; a squash is those plus the parent rows it carried
+            r.add("recipe.touched_rows agrees with the export mode",
+                  t == len(addrs) if export == "delta" else (len(addrs) >= t and len(addrs) <= t + len(under_addr)),
+                  f"touched {t}, exported {len(addrs)}, parent rows {len(under_addr)}")
         keep = [s for s in recipe.get("sentences") or [] if s.get("role") == "known"]
         bench = {s.get("prompt") for s in recipe.get("benchmark_samples") or []}
         r.add("keep-set rows are not published as this lesson's benchmark",

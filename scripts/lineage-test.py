@@ -97,6 +97,39 @@ teach = load(TEACH_PY, "teach_under_test")
 verify = load(os.path.join(HERE, "lineage-verify.py"), "lineage_verify")
 
 
+# ---------------------------------------------------------------- the shape of main() itself
+@test
+def test_main_never_shadows_a_module_level_helper():
+    """A regression guard for the defect that shipped in the first L3 commit, and for its whole class.
+
+    `main()` had `probe = None` inside the `--dry-run` branch. `probe` is also the module-level generation helper
+    that main() calls at the baseline and at every eval — so one assignment in a branch that exits made `probe` a
+    LOCAL of the entire function, and the real run died at its first probe with UnboundLocalError. Every gradient
+    job would have failed, with a base or without one, after paying the model load.
+
+    Nothing caught it: --dry-run returns before that line, the unit tests here call the module-level functions
+    directly, and the node's stub backend never runs teach.py at all. It is a compile-time property of the file,
+    so it is checked as one — `scripts/lineage-cpu-run.py` catches it by running the path, and this catches it in
+    a millisecond without a container.
+    """
+    import ast, symtable
+    src = open(TEACH_PY, encoding="utf-8").read()
+    top = {n.name for n in ast.parse(src).body if isinstance(n, (ast.FunctionDef, ast.ClassDef))}
+    bad = []
+
+    def walk(tbl, path=""):
+        for c in tbl.get_children():
+            here = f"{path}/{c.get_name()}"
+            if c.get_type() == "function":
+                local = {s.get_name() for s in c.get_symbols() if s.is_local() and not s.is_parameter()}
+                for name in sorted(local & top):
+                    bad.append(f"{here} shadows the module-level `{name}`")
+            walk(c, here)
+
+    walk(symtable.symtable(src, TEACH_PY, "exec"))
+    assert not bad, "a local hides a function the same scope calls:\n  " + "\n  ".join(bad)
+
+
 # ---------------------------------------------------------------- bf16 / pre-state
 @test
 def test_bf16_matches_the_typescript_rule():
@@ -460,6 +493,25 @@ def test_lineage_verify_checks_a_squash_carries_the_parent_rows():
         code, j, _ = run_verify(["--child", child2, "--parent", f"b={parent}", "--export", "squash"])
         eq(code, 1)
         assert any("every parent address is carried" in c["check"] and c["ok"] is False for c in j["checks"])
+        # and a squash that OVERWROTE the parent rows it was meant to carry: same addresses, same shapes, and only
+        # `touched_rows` separates it from the honest file above
+        rec = os.path.join(tmp, "recipe.json")
+        bad_after = np.array([[2.0] * 4, [9.0] * 4, [3.0] * 4], dtype=np.float32)   # row 11 moved, and it was not touched
+        child3 = os.path.join(tmp, "c3.npz")
+        npz_bytes(child3, addrs, before, bad_after, {"meta": np.frombuffer(meta.encode("utf-8"), dtype=np.uint8)})
+        json.dump(dict(rows=3, touched_rows=1, parents=[dict(patch_id="b", sha256=psha, rows=2, loaded=True)],
+                       export="squash", pre_state_sha256=pre, known_used=0),
+                  open(rec, "w", encoding="utf-8"))
+        code, j, _ = run_verify(["--child", child3, "--recipe", rec, "--parent", f"b={parent}", "--export", "squash"])
+        eq(code, 1)
+        assert any("no more parent rows moved than the run actually touched" in c["check"] and c["ok"] is False
+                   for c in j["checks"]), json.dumps(j["checks"])
+        # the same file with an honest touched_rows passes: the check bounds movement, it does not forbid it
+        json.dump(dict(rows=3, touched_rows=3, parents=[dict(patch_id="b", sha256=psha, rows=2, loaded=True)],
+                       export="squash", pre_state_sha256=pre, known_used=0),
+                  open(rec, "w", encoding="utf-8"))
+        code, j, err = run_verify(["--child", child3, "--recipe", rec, "--parent", f"b={parent}", "--export", "squash"])
+        eq(code, 0, err)
 
 
 # ---------------------------------------------------------------- the addresser (checkpoint on disk, still no GPU)
