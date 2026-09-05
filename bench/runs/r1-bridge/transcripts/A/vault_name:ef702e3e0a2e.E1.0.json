@@ -1,0 +1,130 @@
+{
+  "arm": "A",
+  "repeat": 0,
+  "question": {
+    "id": "vault_name:ef702e3e0a2e.E1",
+    "question": "The contract 0x46e4ddb5b87152dda90afe75daedfddab1c16513 is a tokenized vault. What is it called?",
+    "answer_type": "symbol",
+    "truth": "rETH-ETH05",
+    "form": "E1",
+    "taught": true,
+    "hop": 1,
+    "fact_ids": [
+      "vault_name:ef702e3e0a2e"
+    ],
+    "source": {
+      "deployment_id": "ANz3TpZdY2syZGQvGA85ANNG7KiSWdPmv55kP4H4sRPJ",
+      "query_hash": "37635f0bcd8b32452a9ecc630219df2b8a995ff83c50a2cd0cd9be8519342898",
+      "block": 25902936,
+      "json_path": "gamma-strategies.vaults.p0.json#$.data.vaults[88].name"
+    },
+    "source_ids": [
+      "ANz3TpZdY2syZGQvGA85ANNG7KiSWdPmv55kP4H4sRPJ"
+    ]
+  },
+  "system": "You answer questions about on-chain data.\n\nAnswer with the value and nothing else. No preamble, no explanation, no units unless the question asks for\nunits. If the answer is an address, give the full 0x address. If it is a token symbol, give the symbol\nexactly. If it is a number, give the number.\n\nIf you do not know the answer, say exactly: I do not know.\n",
+  "final": "I do not know.",
+  "error": null,
+  "latency_ms": 353,
+  "model_ms": 353,
+  "turns": [
+    {
+      "turn": 0,
+      "request": {
+        "model": "Qwen3.8-Flash-Next",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You answer questions about on-chain data.\n\nAnswer with the value and nothing else. No preamble, no explanation, no units unless the question asks for\nunits. If the answer is an address, give the full 0x address. If it is a token symbol, give the symbol\nexactly. If it is a number, give the number.\n\nIf you do not know the answer, say exactly: I do not know.\n"
+          },
+          {
+            "role": "user",
+            "content": "The contract 0x46e4ddb5b87152dda90afe75daedfddab1c16513 is a tokenized vault. What is it called?"
+          }
+        ],
+        "max_tokens": 256,
+        "temperature": 0,
+        "top_p": 1,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "id": "chatcmpl-ad53c17bb1d5ef13",
+        "object": "chat.completion",
+        "created": 1788604120,
+        "model": "Qwen3.8-Flash-Next",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "I do not know.",
+              "refusal": null,
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "reasoning": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        ],
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.1.dev20073+g8e685d198-tp2-ep-5af82574",
+        "usage": {
+          "prompt_tokens": 152,
+          "total_tokens": 158,
+          "completion_tokens": 6,
+          "prompt_tokens_details": null,
+          "completion_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        },
+        "prompt_logprobs": null,
+        "prompt_token_ids": null,
+        "prompt_text": null,
+        "kv_transfer_params": null,
+        "ec_transfer_params": null,
+        "metrics": null
+      },
+      "ms": 353,
+      "usage": {
+        "prompt_tokens": 152,
+        "total_tokens": 158,
+        "completion_tokens": 6,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "evidence": {
+    "tool_calls": 0,
+    "tool_bytes_in": 0,
+    "retries": 0,
+    "context_truncated": false,
+    "context_exhausted": false,
+    "context_evictions": 0,
+    "prompt_tokens_peak": 152,
+    "budget_exhausted": false,
+    "forced_final": false,
+    "tool_errors": 0,
+    "tool_targets": [],
+    "tool_results": [],
+    "model_ms": 353,
+    "offline": false
+  },
+  "engine": {
+    "waiting_before": 0,
+    "waiting_after": 0,
+    "running_before": 0,
+    "running_after": 0,
+    "contended": false
+  }
+}

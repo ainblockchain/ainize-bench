@@ -1,0 +1,177 @@
+{
+  "run_id": "r1",
+  "offline": false,
+  "bridge": {
+    "items": [
+      "vault_name:69a811b8adb1.E1",
+      "vault_asset_symbol:0e75e312774a.E1",
+      "vault_asset_symbol:4787c89b0ee0.E1",
+      "vault_asset:d18f8f46abb1.E1",
+      "vault_address:90b0726b9b82.E1",
+      "vault_asset_symbol:301e25fac95c.E1",
+      "pool_tokens:414b559d74d7.E1",
+      "vault_address:7b0138428ca9.E1",
+      "vault_asset:68264a8f3117.E1",
+      "vault_symbol:7400b4194d81.E1",
+      "pool_tokens:6afb10048213.E1",
+      "vault_fee_pct:77bfb79e9fca.E1",
+      "vault_symbol:50ef799b3312.E1",
+      "vault_name:c786fef3f286.E1",
+      "vault_symbol:4787c89b0ee0.E1",
+      "vault_fee_pct:c5218250c139.E1",
+      "vault_name:ef702e3e0a2e.E1",
+      "vault_asset:8f0df881d197.E1",
+      "vault_asset_symbol:801f285d5097.E1",
+      "market_asset_symbol:585f275c8839.E1",
+      "pool_tokens:75c99de040d6.E2",
+      "pool_tokens:4c2c27228a2a.E2",
+      "pool_tokens:91d1d433bdff.E2",
+      "pool_tokens:d114acbd1a37.E1",
+      "market_asset_symbol:b6c8871c64db.P",
+      "market_asset_symbol:d16defcb7557.P",
+      "vault_name:de4ec71fde2b.P",
+      "market_asset_symbol:5b557fd2f244.P",
+      "vault_name:9a3adb214ac3.P",
+      "vault_asset_symbol:d4af303ac5c7.P",
+      "vault_name:69a811b8adb1.P",
+      "vault_asset_symbol:40ef501480a7.E2",
+      "vault_fee_pct:77bfb79e9fca.E2",
+      "vault_asset:86648095ecb5.E2",
+      "vault_name:964f1c6a64e1.E2",
+      "market_address:a7e3a2293100.E2",
+      "vault_address:90b0726b9b82.E2",
+      "join:vault_symbol:1795ae09e972+vault_fee_pct:1795ae09e972.E1",
+      "join:vault_symbol:737d45a32fa4+vault_asset_symbol:737d45a32fa4.E1",
+      "join:vault_symbol:45ce5f2a37ce+vault_fee_pct:45ce5f2a37ce.E1"
+    ],
+    "allocation": {
+      "headline": 19,
+      "tripwire": 5,
+      "ceiling": 7,
+      "korean": 6,
+      "multihop": 3
+    },
+    "seed": 20260904,
+    "questions_sha256": "d2ae792582faeed9ecf11c76e40637eebd56bdba104eb1acc89079cf7f2794ad"
+  },
+  "started_at": "2026-09-05T10:28:23.798Z",
+  "finished_at": "2026-09-05T10:29:04.128Z",
+  "model": "Qwen3.8-Flash-Next",
+  "max_model_len": 32768,
+  "model_api": "http://localhost:8002",
+  "sampling": {
+    "temperature": 0,
+    "top_p": 1,
+    "max_tokens": 256,
+    "thinking": false,
+    "stop": null,
+    "guard": false,
+    "note": "uniform in every arm; run.mjs drives the model directly because POST /api/chat cannot forward sampling"
+  },
+  "budget": {
+    "toolCalls": 20,
+    "turns": 25,
+    "wallMs": 240000,
+    "toolResultTokens": 4000
+  },
+  "chunk": 8,
+  "repeats": 2,
+  "arms": [
+    "A"
+  ],
+  "questions": 40,
+  "patch": {
+    "backend": "none",
+    "real_training": false,
+    "patch_id": null,
+    "patch_sha256": null
+  },
+  "mcp": {
+    "server": null,
+    "protocol": null,
+    "authenticated": null,
+    "tools": []
+  },
+  "graph_api_key_present": true,
+  "deployments_offered": {
+    "count": 15,
+    "basis": "data/r1/pull/manifest.json",
+    "ids": [
+      "GnroBYmeLLtKuHNyTNS38hzKki5n4CWaHeaMRqZpU4cr",
+      "BchjnXAXXV5coiCBMQH4A8yCHXEFX9S88JFF6G3mfem4",
+      "ANz3TpZdY2syZGQvGA85ANNG7KiSWdPmv55kP4H4sRPJ",
+      "Dy1yVPfbS27HTrqEq3nLGFGi3TMYxPzSfY7Zxxj5ZJhf",
+      "Crag42fFb8PrXnbTjHe1UG5KjgzoiUJbqwzJxZ1W8XNJ",
+      "41ooPWnDYKwckqyG1mvg7ZEndy5zMemXinx6uQxscrBS",
+      "4TbqVA8p2DoBd5qDbPMwmDZv3CsJjWtxo8nVSqF2tA9a",
+      "43NeT7UTACLUkohKBaG7auvkhsj4Kwux9kNTJr6sFdNe",
+      "6PaB6tKFqrL6YoAELEhFGU6Gc39cEynLbo6ETZMF3sCy",
+      "95nyAWFFaiz6gykko3HtBCyhRuP5vZzuKYsZiLxHxLhr",
+      "GRwpFCPYyQPdz84sCnKemzrNvgFPuKkFLcRLR6jsRxHr",
+      "4Q4eEMDBjYM8JGsvnWCafFB5wCu6XntmsgxsxwYSnMib",
+      "3fy93eAT56UJsRCEht8iFhfi6wjHWXtZ9dnnbQmvFopF",
+      "77jZ9KWeyi3CJ96zkkj5s1CojKPHt6XJKjLFzsDCd8Fd",
+      "3onEbd9MLfXTTWAfP91yqsKr7C68VCT2ZiF7EoQiQAFj"
+    ]
+  },
+  "tools_prompt_sha256": "7684c0dc9d10f0b416ad4489e19f2741bbda259e8555dfbf26c1d7a0723ce918",
+  "git_commit": "1fd3ad1e6ffadb575f1f2d057a2e5be7db35eed2",
+  "restarts_detected": 0,
+  "chunks_rerun": 0,
+  "engine_at_start": {
+    "container": "flashnext-e2e",
+    "cmd": "--model /model --served-model-name Qwen3.8-Flash-Next --tensor-parallel-size 2 --enable-expert-parallel --disable-custom-all-reduce --gpu-memory-utilization 0.96 --max-model-len 32768 --max-num-seqs 1 --compilation-config {\"mode\": 0, \"cudagraph_mode\": \"FULL_DECODE_ONLY\"} --reasoning-parser qwen3 --tool-call-parser qwen3_coder --enable-auto-tool-choice --trust-remote-code",
+    "restart_count": 0,
+    "started_at": "2026-09-05T10:20:12.538557313Z"
+  },
+  "engine_at_end": {
+    "container": "flashnext-e2e",
+    "cmd": "--model /model --served-model-name Qwen3.8-Flash-Next --tensor-parallel-size 2 --enable-expert-parallel --disable-custom-all-reduce --gpu-memory-utilization 0.96 --max-model-len 32768 --max-num-seqs 1 --compilation-config {\"mode\": 0, \"cudagraph_mode\": \"FULL_DECODE_ONLY\"} --reasoning-parser qwen3 --tool-call-parser qwen3_coder --enable-auto-tool-choice --trust-remote-code",
+    "restart_count": 0,
+    "started_at": "2026-09-05T10:20:12.538557313Z"
+  },
+  "engine_changed": false,
+  "patch_state_changes": [],
+  "engine_idle_check": {
+    "checked": true,
+    "window_ms": 12000,
+    "gauge_busy_samples": 0,
+    "counters_grew": false,
+    "prompt_tokens_delta": 0,
+    "generation_tokens_delta": 0,
+    "samples": [
+      {
+        "running": 0,
+        "waiting": 0,
+        "prompt_tokens_total": 0,
+        "generation_tokens_total": 0
+      },
+      {
+        "running": 0,
+        "waiting": 0,
+        "prompt_tokens_total": 0,
+        "generation_tokens_total": 0
+      },
+      {
+        "running": 0,
+        "waiting": 0,
+        "prompt_tokens_total": 0,
+        "generation_tokens_total": 0
+      },
+      {
+        "running": 0,
+        "waiting": 0,
+        "prompt_tokens_total": 0,
+        "generation_tokens_total": 0
+      },
+      {
+        "running": 0,
+        "waiting": 0,
+        "prompt_tokens_total": 0,
+        "generation_tokens_total": 0
+      }
+    ],
+    "contaminated_at_start": false
+  },
+  "competing_load": []
+}

@@ -79,6 +79,75 @@
     }
   },
   "threshold": 0.06699114756028864,
-  "computed_at": "2026-09-04T16:38:23.305Z",
-  "bridge": null
+  "computed_at": "2026-09-05T10:29:12.782Z",
+  "bridge": {
+    "n": 80,
+    "disagreements": 10,
+    "rate": 0.125,
+    "threshold": 0.06699114756028864,
+    "pass": false,
+    "missing": 0,
+    "diffs": [
+      {
+        "id": "join:vault_symbol:1795ae09e972+vault_fee_pct:1795ae09e972.E1",
+        "repeat": 0,
+        "pre": "hit",
+        "post": "abstain"
+      },
+      {
+        "id": "join:vault_symbol:1795ae09e972+vault_fee_pct:1795ae09e972.E1",
+        "repeat": 1,
+        "pre": "hit",
+        "post": "abstain"
+      },
+      {
+        "id": "vault_address:90b0726b9b82.E1",
+        "repeat": 0,
+        "pre": "wrong",
+        "post": "abstain"
+      },
+      {
+        "id": "vault_address:90b0726b9b82.E1",
+        "repeat": 1,
+        "pre": "wrong",
+        "post": "abstain"
+      },
+      {
+        "id": "vault_address:90b0726b9b82.E2",
+        "repeat": 0,
+        "pre": "wrong",
+        "post": "abstain"
+      },
+      {
+        "id": "vault_address:90b0726b9b82.E2",
+        "repeat": 1,
+        "pre": "wrong",
+        "post": "abstain"
+      },
+      {
+        "id": "vault_asset:86648095ecb5.E2",
+        "repeat": 0,
+        "pre": "wrong",
+        "post": "abstain"
+      },
+      {
+        "id": "vault_asset:86648095ecb5.E2",
+        "repeat": 1,
+        "pre": "wrong",
+        "post": "abstain"
+      },
+      {
+        "id": "vault_asset:8f0df881d197.E1",
+        "repeat": 0,
+        "pre": "wrong",
+        "post": "abstain"
+      },
+      {
+        "id": "vault_fee_pct:77bfb79e9fca.E1",
+        "repeat": 1,
+        "pre": "wrong",
+        "post": "abstain"
+      }
+    ]
+  }
 }
