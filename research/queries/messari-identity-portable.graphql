@@ -1,0 +1,35 @@
+# The identity core of the Messari Standardized Subgraph schemas.
+#
+# Every field selected here exists, with the same name and the same type, in 8 of the 9
+# Messari schemas (all but nft-marketplace, which has no Protocol or Token entity).
+# Sending this ONE document to a deployment tells you what protocol it is, on what
+# network, at what block, and gives you the full token dictionary that every other
+# entity in that subgraph points at.
+#
+# It is deliberately narrower than queries/messari-identity-any-vertical.graphql:
+# `totalValueLockedUSD` is dropped from the protocol selection because the dex-agg
+# Protocol interface does not declare it. Dropping one number buys two more verticals.
+#
+# Endpoint: https://gateway.thegraph.com/api/$GRAPH_API_KEY/subgraphs/id/<SUBGRAPH_ID>
+# Page with $skip in steps of 1000 until `tokens` comes back short.
+query AinizeIdentityFacts($skip: Int!) {
+  protocolMeta: protocols(first: 1) {
+    id
+    name
+    slug
+    network
+    type
+    schemaVersion
+  }
+  tokens(first: 1000, skip: $skip, orderBy: id, orderDirection: asc) {
+    id
+    name
+    symbol
+    decimals
+    lastPriceUSD
+  }
+  _meta {
+    block { number timestamp }
+    deployment
+  }
+}

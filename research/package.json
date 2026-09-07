@@ -1,0 +1,16 @@
+{
+  "name": "@ainize/graph-research",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Standards survey: offline query validation, on-chain ground truth, base-model probes",
+  "type": "module",
+  "scripts": {
+    "validate": "node tools/validate-query.mjs",
+    "verify-vaults": "node tools/verify-vaults-onchain.mjs",
+    "probe": "node tools/probe-base-model.mjs",
+    "probe-erc8004": "node tools/probe-erc8004.mjs"
+  },
+  "dependencies": {
+    "graphql": "^16.9.0"
+  }
+}

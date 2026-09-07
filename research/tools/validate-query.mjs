@@ -20,7 +20,7 @@ type _Block_ { number: Int! hash: Bytes timestamp: Int }
 type _Meta_ { block: _Block_! deployment: String! hasIndexingErrors: Boolean! }
 `;
 // graph-node auto-generates a root Query with plural/singular fields per entity.
-function autoQuery(sdl) {
+export function autoQuery(sdl) {
   const names = [...sdl.matchAll(/^type\s+([A-Za-z0-9_]+)\s+(?:implements\s+[A-Za-z0-9_\s&]+\s+)?@entity/gm)].map(m=>m[1]);
   const ifaces = [...sdl.matchAll(/^interface\s+([A-Za-z0-9_]+)/gm)].map(m=>m[1]);
   const all=[...new Set([...names,...ifaces])];
@@ -38,11 +38,16 @@ function autoQuery(sdl) {
   const filters = all.map(n=>`input ${n}_filter { id: ID }\nenum ${n}_orderBy { ${fieldsOf(n).join(" ")} }`).join("\n");
   return `${sdl}\n${SDL_PRELUDE}\ninput Block_height { number: Int hash: Bytes }\nenum OrderDirection { asc desc }\n${filters}\ntype Query {\n${f}\n  _meta(block: Block_height): _Meta_\n}\n`;
 }
-const target = process.argv[2], qfile = process.argv[3];
-let sdl = fs.readFileSync(target,"utf8");
-const schema = buildSchema(autoQuery(sdl));
-const doc = parse(fs.readFileSync(qfile,"utf8"));
-const errs = validate(schema, doc, specifiedRules);
-console.log(`${target.padEnd(26)} vs ${qfile}:`);
-if (!errs.length) console.log("  VALID — query type-checks against this schema\n");
-else { for (const e of errs) console.log("  ERROR:", e.message); console.log(); }
+// Validate a query document against an SDL. Returns [] when the query type-checks.
+export function validateAgainstSdl(sdl, query) {
+  return validate(buildSchema(autoQuery(sdl)), parse(query), specifiedRules).map(e => e.message);
+}
+
+// CLI — importable as a module without running this.
+if (process.argv[1] && process.argv[1].endsWith("validate-query.mjs")) {
+  const target = process.argv[2], qfile = process.argv[3];
+  const errs = validateAgainstSdl(fs.readFileSync(target, "utf8"), fs.readFileSync(qfile, "utf8"));
+  console.log(`${target.padEnd(26)} vs ${qfile}:`);
+  if (!errs.length) console.log("  VALID — query type-checks against this schema\n");
+  else { for (const e of errs) console.log("  ERROR:", e); console.log(); }
+}
