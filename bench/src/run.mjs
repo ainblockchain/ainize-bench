@@ -118,6 +118,33 @@ async function requireQuiet(apiBase, { windowMs = 12_000, samples = 5, allowBusy
   return result;
 }
 
+/** The serving model's stack, or null when it cannot be read. */
+async function stackMatches(node, expected) {
+  const got = await node.stack().catch(() => null);
+  if (got === null) return null;
+  return got.length === expected.length && got.every((id, i) => id === expected[i]);
+}
+
+/**
+ * Refuse to measure an arm against a table that is not what the arm requires.
+ *
+ * It corrects the state it OWNS — the patch this run was given — and refuses when anything else is loaded,
+ * because removing another process's patch from a shared runtime is not this runner's decision to make. The
+ * failure it exists for is silent: a leftover patch produces a complete, plausible arm whose every item is
+ * wrong, with no error anywhere.
+ */
+async function assertStack(node, arm, expected) {
+  let got = await node.stack().catch(() => null);
+  if (got === null) die(`cannot read the serving model's stack from ${node.base} — refusing to measure arm ${arm} against a table whose contents are unknown`);
+  const same = got.length === expected.length && got.every((id, i) => id === expected[i]);
+  if (same) return;
+  const foreign = got.filter((id) => !expected.includes(id));
+  if (foreign.length) {
+    die(`arm ${arm} needs the table to be [${expected.join(', ') || 'empty'}] and the serving model is carrying [${got.join(', ')}].\n` +
+        `  ${foreign.join(', ')} is not this run's to unload — another process put it there. Unload it deliberately, then re-run.`);
+  }
+}
+
 const argv = (() => {
   const a = {}; const v = process.argv.slice(2);
   for (let i = 0; i < v.length; i++) {
@@ -288,10 +315,15 @@ async function main() {
 
   const patchId = argv.patch ?? null;
   const needPatch = arms.some(armUsesPatch);
-  let node = null, provenancePatch = { backend: 'none', real_training: false, patch_id: null, patch_sha256: null };
+  // A node client is built for EVERY run, not only when a patch is needed. An arm that requires an empty
+  // table has to be able to check that the table is empty, and the run that taught us this had none: arm B
+  // measured 40 items against a model still carrying arm C's patch, because the previous run applied it and
+  // never put it back, and arm B created no client to notice.
+  let node = new NodeClient();
+  let provenancePatch = { backend: 'none', real_training: false, patch_id: null, patch_sha256: null };
+  try { await node.login(); } catch { /* the stack route is public; login only matters for apply/remove */ }
   if (needPatch) {
     if (!patchId) die('--patch <knowledge-id> is required for arms C and D');
-    node = new NodeClient();
     await node.login();
     provenancePatch = await node.provenance(patchId, {
       recipePath: argv.recipe ? (argv.recipe.startsWith('/') ? argv.recipe : join(BENCH, '..', argv.recipe)) : null,
@@ -350,7 +382,11 @@ async function main() {
 
     for (let start = 0; start < questions.length; start += CHUNK) {
       const chunk = questions.slice(start, start + CHUNK);
-      if (node) {
+      // What the table MUST hold for this arm — checked against the runtime, not inferred from what we last
+      // asked for. Anything else loaded is refused rather than removed: silently editing a shared table is
+      // how the previous run left a patch behind, and measuring on top of an unknown one is worse still.
+      await assertStack(node, arm, wantApplied ? [patchId] : []);
+      if (node && patchId) {
         // Applying a patch is a per-NODE cost paid once, not a per-question cost. Timed and recorded apart
         // from item latency so a reader can tell whether arm C's per-item advantage is inference or
         // amortised setup — every other cost in this study is separated that way (§6).
@@ -402,7 +438,7 @@ async function main() {
         }
         // §4: a vLLM restart silently reverts the table. If the state we asked for is no longer true, the whole
         // chunk is void — nothing from it is written — and it is re-run once against a re-established table.
-        const stillRight = node ? (await node.isApplied(patchId)) === wantApplied : true;
+        const stillRight = await stackMatches(node, wantApplied ? [patchId] : []);
         if (stillRight) { for (const r of results) write(arm, r.q, r.rep, r.payload); break; }
         provenance.restarts_detected++; provenance.chunks_rerun++;
         console.error(`  !! table state lost during items ${start}..${start + chunk.length - 1} — re-applying and re-running the chunk`);
@@ -420,6 +456,10 @@ async function main() {
   }
 
   await mcp?.close?.();
+  // Leave the shared table the way an empty one was found. The previous run ended with arm D's patch still
+  // loaded, and the next run — a different arm, in a different process — inherited it.
+  if (patchId) await node.setApplied(patchId, false).catch((e) => console.error(`  !! could not unload ${patchId}: ${e.message}`));
+  provenance.final_stack = await node.stack().catch(() => null);
   provenance.finished_at = new Date().toISOString();
   provenance.engine_at_end = engineSnapshot(vllm.base);
   {

@@ -37,6 +37,19 @@ export class NodeClient {
 
   async isApplied(id) { return (await this.patch(id)).applied === true; }
 
+  /**
+   * What is loaded in the SERVING MODEL, in order — the state that actually decides what an arm measures.
+   *
+   * `isApplied(id)` answers a question about one patch and says nothing about the table. Arm B was run for
+   * seventy minutes against a model carrying arm C's patch because the runner only managed the patch it knew
+   * about, and for an arm that needs NO patch it created no client and asked nothing at all. The table is the
+   * thing under test; ask about the table.
+   */
+  async stack() {
+    const r = await this.#req('/api/runtime/stack');
+    return (r.stack ?? []).map((l) => l.patch_id);
+  }
+
   async setApplied(id, want) {
     if ((await this.isApplied(id)) === want) return { changed: false };
     await this.#req(`/api/patches/${encodeURIComponent(id)}/${want ? 'apply' : 'remove'}`, { method: 'POST', body: {} });
