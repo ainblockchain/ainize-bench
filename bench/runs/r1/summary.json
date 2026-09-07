@@ -1,0 +1,564 @@
+{
+  "VOID": false,
+  "void_reasons": [],
+  "run": "r1",
+  "run_dir": "/mnt/newdata/ainize/knowledge-marketplace/graph/bench/runs/r1",
+  "scored_at": "2026-09-04T11:54:57.932Z",
+  "scorer_version": "1.0.0",
+  "stamps": [],
+  "leakage": {
+    "rule": "README §1 + §\"What would falsify this\": arm C must FAIL the held-out facts. C ≥ B on that bucket is leakage and the run is VOID.",
+    "evaluable": false,
+    "verdict": "NOT EVALUABLE",
+    "detail": "the tripwire bucket needs both arm B and arm C scored",
+    "arm_A": 0,
+    "arm_B": null,
+    "arm_C": null
+  },
+  "ordering": {
+    "claim": "A < B < C < D",
+    "measured_on": "E1 (headline bucket) alone, stable subset",
+    "decided_by": "exact McNemar on discordant pairs, alpha 0.05; margin reported, not a criterion",
+    "steps": [
+      {
+        "step": "A < B",
+        "x": 0.010869565217391304,
+        "y": null,
+        "margin": null,
+        "mcnemar": null,
+        "holds": null,
+        "why": "not evaluable"
+      },
+      {
+        "step": "B < C",
+        "x": null,
+        "y": null,
+        "margin": null,
+        "mcnemar": null,
+        "holds": null,
+        "why": "not evaluable"
+      },
+      {
+        "step": "C < D",
+        "x": null,
+        "y": null,
+        "margin": null,
+        "mcnemar": null,
+        "holds": null,
+        "why": "not evaluable"
+      }
+    ],
+    "holds": false
+  },
+  "falsifiers": [
+    {
+      "name": "B ≥ C on the headline bucket",
+      "verdict": "NOT EVALUABLE",
+      "detail": "both arms B and C must be scored"
+    },
+    {
+      "name": "D ≤ C",
+      "verdict": "NOT EVALUABLE",
+      "detail": "both arms C and D must be scored"
+    },
+    {
+      "name": "C ≥ B on held-out facts ⇒ leakage, the run is VOID",
+      "verdict": "NOT EVALUABLE",
+      "detail": "tripwire, all items: C — vs B —"
+    }
+  ],
+  "unit_note": "The unit of every accuracy, interval and paired test is the ITEM (§1 sizes the Wilson interval at n = 120 items), and §2 governs which items count: an item whose two answers disagree in arm A is UNSTABLE, the headline is the stable subset, and an all-items sensitivity row is printed beneath with the unstable count quoted. An earlier draft added a third rule — a hit only if every non-error repeat was a hit — which is stricter than §2 and interacts badly with what arm A measured: all seven of its disagreements were abstain flips, so the strict rule would turn every hit-then-abstain item into a miss and move the headline by pure instrument noise. `unit_accuracy_all_repeats` and `split_items` are the (item, repeat)-level view beside it. The miss decomposition is (item, repeat)-level and says so in its own block.",
+  "fact_coherence_note": "The headline (E1), Korean (E2) and ceiling (P) buckets ask about the SAME 120 facts. Those three buckets are within-fact comparisons of PHRASING, not three independent fact sets — the P-to-E1 gap is the generalisation cost on one fact set, and reading it as a comparison across fact sets is wrong.",
+  "counts": {
+    "transcripts": 500,
+    "units": 500,
+    "items": 250,
+    "arms": [
+      "A"
+    ],
+    "by_bucket": {
+      "headline": 120,
+      "korean": 40,
+      "ceiling": 40,
+      "tripwire": 30,
+      "multihop": 20
+    },
+    "unclassified_items": 0,
+    "unclassified_ids": [],
+    "item_set_mismatch": null
+  },
+  "integrity": {
+    "checked": true,
+    "questions_file": "/mnt/newdata/ainize/knowledge-marketplace/graph/bench/data/r1/questions.jsonl",
+    "mismatches": [],
+    "unknown_ids": [],
+    "items_without_source_ids": 0,
+    "ids_without_source_ids": [],
+    "ok": true
+  },
+  "setup": {
+    "knowledge_load_ms": null,
+    "source": null,
+    "rule": "runs/<id>/knowledge-load.json → provenance.knowledge_load_ms → provenance.patch.load_ms / apply_ms",
+    "note": "not recorded by this run — the one-time knowledge load was not measured, and no number is invented in its place"
+  },
+  "budget": {
+    "cap": {
+      "toolCalls": 8,
+      "turns": 10,
+      "wallMs": 90000,
+      "toolResultTokens": 4000
+    },
+    "per_arm": []
+  },
+  "offline": {
+    "available": false,
+    "expected_at": "/mnt/newdata/ainize/knowledge-marketplace/graph/bench/runs/r1-offline/summary.json",
+    "note": "the tools-unavailable run (§6) has not been scored yet — `node src/run.mjs --run <id> --offline` then re-score it"
+  },
+  "stability": {
+    "unstable_items": 40,
+    "unstable_ids": [
+      "market_address:079e8dc63676.E1",
+      "market_address:34e6c3ad89ce.E1",
+      "market_address:34e6c3ad89ce.E2",
+      "market_address:3568e1ec94f7.E1",
+      "market_address:4203d7f495e3.E1",
+      "market_address:4203d7f495e3.P",
+      "market_address:4dd715cf30e5.E2",
+      "market_address:6c60cff7c09b.E2",
+      "market_address:a7e3a2293100.E1",
+      "market_address:a7e3a2293100.E2",
+      "market_address:c8e405e75af3.E1",
+      "market_address:c8e405e75af3.P",
+      "market_address:e1adac8d8638.P",
+      "pool_tokens:897dd2b92f5b.E1",
+      "pool_tokens:c0119e2d81a3.E1",
+      "vault_address:02121a913f6b.E1",
+      "vault_address:078d240f7b6a.E1",
+      "vault_address:202202087115.E1",
+      "vault_address:2fa9edbd9a49.E1",
+      "vault_address:2fa9edbd9a49.P",
+      "vault_address:7b0138428ca9.E1",
+      "vault_address:89264da52923.E1",
+      "vault_address:89264da52923.P",
+      "vault_address:90b0726b9b82.E1",
+      "vault_address:ad9902589a9d.E1",
+      "vault_address:ad9902589a9d.P",
+      "vault_address:d80fcc5d7e37.E1",
+      "vault_asset:1fc904520a12.E1",
+      "vault_asset:301e25fac95c.E1",
+      "vault_asset:68264a8f3117.E2",
+      "vault_asset:8f0df881d197.E1",
+      "vault_asset:bfb01982db5b.E1",
+      "vault_asset:bfb01982db5b.E2",
+      "vault_asset:d18f8f46abb1.E1",
+      "vault_fee_pct:1580713be3f5.E1",
+      "vault_fee_pct:6608ec4961ed.E1",
+      "vault_fee_pct:68264a8f3117.E1",
+      "vault_fee_pct:77bfb79e9fca.E1",
+      "vault_fee_pct:ab05eada7e65.E1",
+      "vault_fee_pct:db761d545e28.E1"
+    ],
+    "basis": "the two arm-A repeats of the item produced different normalised answers (§2)"
+  },
+  "arms": {
+    "A": {
+      "units": 500,
+      "overall": {
+        "stable_subset": {
+          "n_items": 210,
+          "n_scored": 210,
+          "hits": 2,
+          "accuracy": 0.009523809523809525,
+          "ci95": [
+            0.002615614602923094,
+            0.03405451880423435
+          ],
+          "errors": 0
+        },
+        "all_items": {
+          "n_items": 250,
+          "n_scored": 250,
+          "hits": 2,
+          "accuracy": 0.008,
+          "ci95": [
+            0.00219659111683783,
+            0.028695114576791584
+          ],
+          "errors": 0
+        }
+      },
+      "headline_E1_E2": {
+        "stable_subset": {
+          "n_items": 126,
+          "n_scored": 126,
+          "hits": 1,
+          "accuracy": 0.007936507936507936,
+          "ci95": [
+            0.0014023289659406463,
+            0.04358787448195279
+          ],
+          "errors": 0
+        },
+        "all_items": {
+          "n_items": 160,
+          "n_scored": 160,
+          "hits": 1,
+          "accuracy": 0.00625,
+          "ci95": [
+            0.001104103354391482,
+            0.034549845337515823
+          ],
+          "errors": 0
+        }
+      },
+      "buckets": {
+        "headline": {
+          "stable_subset": {
+            "n_items": 92,
+            "n_scored": 92,
+            "hits": 1,
+            "accuracy": 0.010869565217391304,
+            "ci95": [
+              0.0019212795763616508,
+              0.05902928886156092
+            ],
+            "errors": 0
+          },
+          "all_items": {
+            "n_items": 120,
+            "n_scored": 120,
+            "hits": 1,
+            "accuracy": 0.008333333333333333,
+            "ci95": [
+              0.001472517830674953,
+              0.045697415374322405
+            ],
+            "errors": 0
+          }
+        },
+        "korean": {
+          "stable_subset": {
+            "n_items": 34,
+            "n_scored": 34,
+            "hits": 0,
+            "accuracy": 0,
+            "ci95": [
+              0,
+              0.10151790621961015
+            ],
+            "errors": 0
+          },
+          "all_items": {
+            "n_items": 40,
+            "n_scored": 40,
+            "hits": 0,
+            "accuracy": 0,
+            "ci95": [
+              0,
+              0.08762453925039232
+            ],
+            "errors": 0
+          }
+        },
+        "ceiling": {
+          "stable_subset": {
+            "n_items": 34,
+            "n_scored": 34,
+            "hits": 0,
+            "accuracy": 0,
+            "ci95": [
+              0,
+              0.10151790621961015
+            ],
+            "errors": 0
+          },
+          "all_items": {
+            "n_items": 40,
+            "n_scored": 40,
+            "hits": 0,
+            "accuracy": 0,
+            "ci95": [
+              0,
+              0.08762453925039232
+            ],
+            "errors": 0
+          }
+        },
+        "tripwire": {
+          "stable_subset": {
+            "n_items": 30,
+            "n_scored": 30,
+            "hits": 0,
+            "accuracy": 0,
+            "ci95": [
+              0,
+              0.11351709139047801
+            ],
+            "errors": 0
+          },
+          "all_items": {
+            "n_items": 30,
+            "n_scored": 30,
+            "hits": 0,
+            "accuracy": 0,
+            "ci95": [
+              0,
+              0.11351709139047801
+            ],
+            "errors": 0
+          }
+        },
+        "multihop": {
+          "stable_subset": {
+            "n_items": 20,
+            "n_scored": 20,
+            "hits": 1,
+            "accuracy": 0.05,
+            "ci95": [
+              0.008881219432873143,
+              0.23613589351256678
+            ],
+            "errors": 0
+          },
+          "all_items": {
+            "n_items": 20,
+            "n_scored": 20,
+            "hits": 1,
+            "accuracy": 0.05,
+            "ci95": [
+              0.008881219432873143,
+              0.23613589351256678
+            ],
+            "errors": 0
+          }
+        }
+      },
+      "verdicts": {
+        "hit": 5,
+        "wrong": 132,
+        "ambiguous": 0,
+        "abstain": 363,
+        "error": 0
+      },
+      "unit_accuracy_all_repeats": 0.01,
+      "split_items": 1,
+      "partial_mean_lists": 0.014814814814814814,
+      "tokens": {
+        "prompt_total": 74808,
+        "completion_total": 6503,
+        "prompt_per_question": 149.616,
+        "completion_per_question": 13.006,
+        "prompt_tokens_peak_max": 170,
+        "turns_per_question": 1
+      },
+      "tools": {
+        "tool_calls_total": 0,
+        "tool_calls_per_question": 0,
+        "tool_calls_median": 0,
+        "gateway_queries_total": 0,
+        "tool_bytes_in_total": 0,
+        "truncated_units": 0,
+        "context_exhausted_units": 0,
+        "budget_exhausted_units": 0,
+        "forced_final_units": 0,
+        "retries_total": 0,
+        "tool_errors_total": 0
+      },
+      "timing": {
+        "latency_ms_mean": 558.75,
+        "model_ms_mean": 558.724,
+        "latency_ms_median": 485,
+        "units_without_latency": 0,
+        "units_without_model_ms": 0,
+        "basis": "mean and median over the units that recorded the quantity; a unit that recorded none is excluded and counted beside it, never averaged in as zero"
+      },
+      "cost": {
+        "priced_units": 500,
+        "unpriced_units": 0,
+        "unpriced_reason": null,
+        "total_usd": 0.018863400000000058,
+        "per_question_usd": 0.000037726800000000115
+      }
+    }
+  },
+  "miss_channels": {},
+  "comparisons": {},
+  "break_even": {
+    "formula": "N*(k buyers) = (knowledge_price / k) / (cost_per_question_B − cost_per_question_C)",
+    "cost_per_question_B": null,
+    "cost_per_question_C": null,
+    "knowledge_price": null,
+    "currency": null,
+    "pricing_file": "/mnt/newdata/ainize/knowledge-marketplace/graph/bench/pricing.json",
+    "buyers_axis": [
+      1,
+      10,
+      100
+    ],
+    "training_cost_usd": null,
+    "training_note": "pricing.json declares no knowledge.training_usd, so the fixed cost of PRODUCING the knowledge (§6.1: the measured cold load, the baseline generations and the contrast probes, not the step time) is not priced into N* here. N* prices the catalog anchor only.",
+    "amortisation_note": "Two different claims, and only one of them is ours (§6.2). For a SINGLE user training their own patch the fixed cost is not amortised at all and the break-even is genuinely poor; for a marketplace the patch is trained once and applied by every node that buys it, so the one-time price divides by the number of buyers while the per-question saving does not. The single-buyer row is printed first for that reason, and it is printed even where it never crosses.",
+    "n_star": null,
+    "per_buyer": [],
+    "reason": "arms B and C must both be scored and priced"
+  },
+  "pricing": {
+    "file": "/mnt/newdata/ainize/knowledge-marketplace/graph/bench/pricing.json",
+    "model": {
+      "id": "Qwen3.8-Flash-Next",
+      "_note": "Served locally on :8002, so our marginal cost is electricity. For a comparable-cost table we price it at a public hosted rate for an open model of this size. Whoever re-runs may substitute their own provider; the ratio between arms is unaffected because all arms use the same model.",
+      "usd_per_1m_input_tokens": 0.2,
+      "usd_per_1m_output_tokens": 0.6,
+      "source": "PLACEHOLDER — set to the list price of the hosted provider you cite, and put the URL here before publishing."
+    },
+    "graph": {
+      "_note": "The Graph gateway bills per query against a query budget. Record the ACTUAL number of gateway queries the arm made (the MCP server issues one per executeQuery) and multiply.",
+      "usd_per_query": 0.00004,
+      "source": "PLACEHOLDER — set from thegraph.com pricing before publishing; the runner records the query count either way."
+    },
+    "knowledge": {
+      "_note": "What arm C's knowledge costs once, from the anchor being tested. Filled in by the runner from the catalog entry (anchor.price + anchor.currency); a CREDIT price must be converted at a declared rate or the break-even chart is drawn in CREDIT.",
+      "price": null,
+      "currency": null
+    }
+  },
+  "provenance": {
+    "run_id": "r1",
+    "offline": false,
+    "bridge": null,
+    "started_at": "2026-09-04T11:46:59.480Z",
+    "finished_at": "2026-09-04T11:53:06.335Z",
+    "model": "Qwen3.8-Flash-Next",
+    "max_model_len": 32768,
+    "model_api": "http://localhost:8002",
+    "sampling": {
+      "temperature": 0,
+      "top_p": 1,
+      "max_tokens": 256,
+      "thinking": false,
+      "stop": null,
+      "guard": false,
+      "note": "uniform in every arm; run.mjs drives the model directly because POST /api/chat cannot forward sampling"
+    },
+    "budget": {
+      "toolCalls": 8,
+      "turns": 10,
+      "wallMs": 90000,
+      "toolResultTokens": 4000
+    },
+    "chunk": 8,
+    "repeats": 2,
+    "arms": [
+      "B"
+    ],
+    "questions": 8,
+    "patch": {
+      "backend": "none",
+      "real_training": false,
+      "patch_id": null,
+      "patch_sha256": null
+    },
+    "mcp": {
+      "server": {
+        "name": "subgraph-mcp",
+        "version": "0.1.1"
+      },
+      "protocol": "2024-11-05",
+      "authenticated": true,
+      "tools": [
+        "get_deployment_30day_query_counts",
+        "search_subgraphs_by_keyword",
+        "get_schema_by_subgraph_id",
+        "get_schema_by_ipfs_hash",
+        "execute_query_by_deployment_id",
+        "execute_query_by_ipfs_hash",
+        "get_schema_by_deployment_id",
+        "execute_query_by_subgraph_id",
+        "get_top_subgraph_deployments"
+      ]
+    },
+    "graph_api_key_present": true,
+    "deployments_offered": {
+      "count": 15,
+      "basis": "data/r1/pull/manifest.json",
+      "ids": [
+        "GnroBYmeLLtKuHNyTNS38hzKki5n4CWaHeaMRqZpU4cr",
+        "BchjnXAXXV5coiCBMQH4A8yCHXEFX9S88JFF6G3mfem4",
+        "ANz3TpZdY2syZGQvGA85ANNG7KiSWdPmv55kP4H4sRPJ",
+        "Dy1yVPfbS27HTrqEq3nLGFGi3TMYxPzSfY7Zxxj5ZJhf",
+        "Crag42fFb8PrXnbTjHe1UG5KjgzoiUJbqwzJxZ1W8XNJ",
+        "41ooPWnDYKwckqyG1mvg7ZEndy5zMemXinx6uQxscrBS",
+        "4TbqVA8p2DoBd5qDbPMwmDZv3CsJjWtxo8nVSqF2tA9a",
+        "43NeT7UTACLUkohKBaG7auvkhsj4Kwux9kNTJr6sFdNe",
+        "6PaB6tKFqrL6YoAELEhFGU6Gc39cEynLbo6ETZMF3sCy",
+        "95nyAWFFaiz6gykko3HtBCyhRuP5vZzuKYsZiLxHxLhr",
+        "GRwpFCPYyQPdz84sCnKemzrNvgFPuKkFLcRLR6jsRxHr",
+        "4Q4eEMDBjYM8JGsvnWCafFB5wCu6XntmsgxsxwYSnMib",
+        "3fy93eAT56UJsRCEht8iFhfi6wjHWXtZ9dnnbQmvFopF",
+        "77jZ9KWeyi3CJ96zkkj5s1CojKPHt6XJKjLFzsDCd8Fd",
+        "3onEbd9MLfXTTWAfP91yqsKr7C68VCT2ZiF7EoQiQAFj"
+      ]
+    },
+    "git_commit": "df1da8b7d803e9d672e8e62897e940bfc6153ae9",
+    "restarts_detected": 0,
+    "chunks_rerun": 0,
+    "engine_at_start": {
+      "container": "flashnext-e2e",
+      "cmd": "--model /model --served-model-name Qwen3.8-Flash-Next --tensor-parallel-size 2 --enable-expert-parallel --disable-custom-all-reduce --gpu-memory-utilization 0.96 --max-model-len 32768 --max-num-seqs 1 --compilation-config {\"mode\": 0, \"cudagraph_mode\": \"FULL_DECODE_ONLY\"} --reasoning-parser qwen3 --tool-call-parser qwen3_coder --enable-auto-tool-choice --trust-remote-code",
+      "restart_count": 0,
+      "started_at": "2026-09-04T10:43:00.811772642Z"
+    },
+    "engine_at_end": {
+      "container": "flashnext-e2e",
+      "cmd": "--model /model --served-model-name Qwen3.8-Flash-Next --tensor-parallel-size 2 --enable-expert-parallel --disable-custom-all-reduce --gpu-memory-utilization 0.96 --max-model-len 32768 --max-num-seqs 1 --compilation-config {\"mode\": 0, \"cudagraph_mode\": \"FULL_DECODE_ONLY\"} --reasoning-parser qwen3 --tool-call-parser qwen3_coder --enable-auto-tool-choice --trust-remote-code",
+      "restart_count": 0,
+      "started_at": "2026-09-04T10:43:00.811772642Z"
+    },
+    "engine_changed": false,
+    "patch_state_changes": [],
+    "engine_idle_check": {
+      "checked": true,
+      "window_ms": 12000,
+      "gauge_busy_samples": 0,
+      "counters_grew": false,
+      "prompt_tokens_delta": null,
+      "generation_tokens_delta": 0,
+      "samples": [
+        {
+          "running": 0,
+          "waiting": 0,
+          "prompt_tokens_total": null,
+          "generation_tokens_total": 61465
+        },
+        {
+          "running": 0,
+          "waiting": 0,
+          "prompt_tokens_total": null,
+          "generation_tokens_total": 61465
+        },
+        {
+          "running": 0,
+          "waiting": 0,
+          "prompt_tokens_total": null,
+          "generation_tokens_total": 61465
+        },
+        {
+          "running": 0,
+          "waiting": 0,
+          "prompt_tokens_total": null,
+          "generation_tokens_total": 61465
+        },
+        {
+          "running": 0,
+          "waiting": 0,
+          "prompt_tokens_total": null,
+          "generation_tokens_total": 61465
+        }
+      ],
+      "contaminated_at_start": false
+    },
+    "competing_load": []
+  }
+}

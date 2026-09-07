@@ -1,0 +1,226 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "get_deployment_30day_query_counts",
+      "description": "Get the aggregate query count over the last 30 days for multiple subgraph deployments, sorted by query count in descending order.",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "properties": {
+          "ipfs_hashes": {
+            "description": "List of IPFS hashes (Qm...) to get query counts for the last 30 days",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "ipfs_hashes"
+        ],
+        "title": "GetDeployment30DayQueryCountsRequest",
+        "type": "object"
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "search_subgraphs_by_keyword",
+      "description": "Search for subgraphs by keyword in their display names, ordered by signal. Returns top 10 results if total results ≤ 100, or square root of total otherwise.",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "properties": {
+          "keyword": {
+            "description": "Keyword to search for in subgraph names",
+            "type": "string"
+          }
+        },
+        "required": [
+          "keyword"
+        ],
+        "title": "SearchSubgraphsByKeywordRequest",
+        "type": "object"
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_schema_by_subgraph_id",
+      "description": "Get the schema for the current version of a subgraph using its subgraph ID (e.g., 5zvR82...).",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "properties": {
+          "subgraph_id": {
+            "description": "The subgraph ID (e.g., 5zvR82...) to get the current schema for",
+            "type": "string"
+          }
+        },
+        "required": [
+          "subgraph_id"
+        ],
+        "title": "GetSchemaBySubgraphIdRequest",
+        "type": "object"
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_schema_by_ipfs_hash",
+      "description": "Get schema for a specific subgraph deployment using its IPFS hash (Qm...).",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "properties": {
+          "ipfs_hash": {
+            "description": "The IPFS hash (e.g., Qm...) of the specific deployment",
+            "type": "string"
+          }
+        },
+        "required": [
+          "ipfs_hash"
+        ],
+        "title": "GetSchemaByIpfsHashRequest",
+        "type": "object"
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "execute_query_by_deployment_id",
+      "description": "Execute a GraphQL query against a specific deployment ID.",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "properties": {
+          "deployment_id": {
+            "description": "The deployment ID (e.g., 0x...) of the specific subgraph deployment",
+            "type": "string"
+          },
+          "query": {
+            "description": "The GraphQL query string",
+            "type": "string"
+          },
+          "variables": {
+            "description": "Optional JSON value for GraphQL variables",
+            "nullable": true
+          }
+        },
+        "required": [
+          "deployment_id",
+          "query"
+        ],
+        "title": "ExecuteQueryByDeploymentIdRequest",
+        "type": "object"
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "execute_query_by_ipfs_hash",
+      "description": "Execute a GraphQL query against a specific IPFS hash.",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "properties": {
+          "ipfs_hash": {
+            "description": "The IPFS hash (e.g., Qm...) of the specific deployment",
+            "type": "string"
+          },
+          "query": {
+            "description": "The GraphQL query string",
+            "type": "string"
+          },
+          "variables": {
+            "description": "Optional JSON value for GraphQL variables",
+            "nullable": true
+          }
+        },
+        "required": [
+          "ipfs_hash",
+          "query"
+        ],
+        "title": "ExecuteQueryByIpfsHashRequest",
+        "type": "object"
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_schema_by_deployment_id",
+      "description": "Get schema for a specific subgraph deployment using its deployment ID (0x...).",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "properties": {
+          "deployment_id": {
+            "description": "The deployment ID (e.g., 0x...) of the specific deployment",
+            "type": "string"
+          }
+        },
+        "required": [
+          "deployment_id"
+        ],
+        "title": "GetSchemaByDeploymentIdRequest",
+        "type": "object"
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "execute_query_by_subgraph_id",
+      "description": "Execute a GraphQL query against the latest deployment of a subgraph ID.",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "properties": {
+          "query": {
+            "description": "The GraphQL query string",
+            "type": "string"
+          },
+          "subgraph_id": {
+            "description": "The ID of the subgraph (resolves to the latest deployment)",
+            "type": "string"
+          },
+          "variables": {
+            "description": "Optional JSON value for GraphQL variables",
+            "nullable": true
+          }
+        },
+        "required": [
+          "query",
+          "subgraph_id"
+        ],
+        "title": "ExecuteQueryBySubgraphIdRequest",
+        "type": "object"
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_top_subgraph_deployments",
+      "description": "Get the top 3 subgraph deployments for a given contract address and chain, ordered by query fees. For chain, use 'mainnet' for Ethereum mainnet, NEVER use 'ethereum'.",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "properties": {
+          "chain": {
+            "description": "The chain name (e.g., 'mainnet', 'arbitrum-one')",
+            "type": "string"
+          },
+          "contract_address": {
+            "description": "The contract address to find subgraph deployments for",
+            "type": "string"
+          }
+        },
+        "required": [
+          "chain",
+          "contract_address"
+        ],
+        "title": "GetTopSubgraphDeploymentsRequest",
+        "type": "object"
+      }
+    }
+  }
+]

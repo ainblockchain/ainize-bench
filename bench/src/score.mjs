@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-// Re-score a completed run from its committed transcripts.
+// Re-score a completed run from its committed transcripts (runs/<id>/transcripts.tar.zst, unpacked on
+// first use — see ensureTranscripts).
 //
 //   node src/score.mjs runs/<id> [--pricing pricing.json] [--out runs/<id>]
 //
@@ -42,6 +43,7 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { execFileSync } from 'node:child_process';
 import { scoreOne, wilson, mcnemar, normalize, DECIMAL_REL_TOL } from './normalize.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
@@ -355,9 +357,29 @@ export const isMiss = (verdict) => verdict === 'wrong' || verdict === 'ambiguous
 
 // ── reading a run ────────────────────────────────────────────────────────────────────────────────────────
 
-export function readTranscripts(runDir) {
+/**
+ * Transcripts are committed as one zstd archive per run, not as 2,600 loose files: the same bytes cost
+ * ~120 MB expanded in the pack and ~2 MB compressed, and a public clone should not pay the difference to
+ * hold evidence it may never re-score. The archive IS the committed record — this unpacks it next to
+ * itself the first time something needs it, and every later run finds the directory and skips the work.
+ */
+function ensureTranscripts(runDir) {
   const tdir = join(runDir, 'transcripts');
-  if (!existsSync(tdir)) throw new Error(`${tdir} does not exist — nothing to score`);
+  if (existsSync(tdir)) return tdir;
+  const tar = join(runDir, 'transcripts.tar.zst');
+  if (!existsSync(tar)) throw new Error(`${tdir} does not exist and neither does ${tar} — nothing to score`);
+  try {
+    execFileSync('zstd', ['--version'], { stdio: 'ignore' });
+  } catch {
+    throw new Error(`unpacking ${tar} needs the \`zstd\` command on PATH — install it (apt install zstd) and re-run`);
+  }
+  execFileSync('bash', ['-c', 'zstd -dc -- "$1" | tar -x -C "$2"', '_', tar, runDir], { stdio: ['ignore', 'ignore', 'inherit'] });
+  if (!existsSync(tdir)) throw new Error(`${tar} unpacked but produced no ${tdir} — the archive is not shaped like a run`);
+  return tdir;
+}
+
+export function readTranscripts(runDir) {
+  const tdir = ensureTranscripts(runDir);
   const out = [];
   for (const arm of readdirSync(tdir, { withFileTypes: true }).filter((d) => d.isDirectory()).map((d) => d.name)) {
     for (const f of readdirSync(join(tdir, arm)).filter((f) => f.endsWith('.json')).sort()) {

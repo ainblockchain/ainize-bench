@@ -1,0 +1,139 @@
+{
+  "run_id": "r1",
+  "offline": false,
+  "bridge": null,
+  "started_at": "2026-09-07T02:52:10.602Z",
+  "finished_at": "2026-09-07T02:52:38.350Z",
+  "model": "Qwen3.8-Flash-Next",
+  "max_model_len": 32768,
+  "model_api": "http://localhost:8002",
+  "sampling": {
+    "temperature": 0,
+    "top_p": 1,
+    "max_tokens": 256,
+    "thinking": false,
+    "stop": null,
+    "guard": false,
+    "note": "uniform in every arm; run.mjs drives the model directly because POST /api/chat cannot forward sampling"
+  },
+  "budget": {
+    "toolCalls": 20,
+    "turns": 25,
+    "wallMs": 240000,
+    "toolResultTokens": 4000
+  },
+  "chunk": 8,
+  "repeats": 1,
+  "arms": [
+    "B"
+  ],
+  "questions": 1,
+  "patch": {
+    "backend": "none",
+    "real_training": false,
+    "patch_id": null,
+    "patch_sha256": null
+  },
+  "mcp": {
+    "server": {
+      "name": "subgraph-mcp",
+      "version": "0.1.1"
+    },
+    "protocol": "2024-11-05",
+    "authenticated": false,
+    "tools": [
+      "get_deployment_30day_query_counts",
+      "search_subgraphs_by_keyword",
+      "get_schema_by_subgraph_id",
+      "get_schema_by_ipfs_hash",
+      "execute_query_by_deployment_id",
+      "execute_query_by_ipfs_hash",
+      "get_schema_by_deployment_id",
+      "execute_query_by_subgraph_id",
+      "get_top_subgraph_deployments"
+    ]
+  },
+  "graph_api_key_present": false,
+  "deployments_offered": {
+    "count": 15,
+    "basis": "data/r1/pull/manifest.json",
+    "ids": [
+      "GnroBYmeLLtKuHNyTNS38hzKki5n4CWaHeaMRqZpU4cr",
+      "BchjnXAXXV5coiCBMQH4A8yCHXEFX9S88JFF6G3mfem4",
+      "ANz3TpZdY2syZGQvGA85ANNG7KiSWdPmv55kP4H4sRPJ",
+      "Dy1yVPfbS27HTrqEq3nLGFGi3TMYxPzSfY7Zxxj5ZJhf",
+      "Crag42fFb8PrXnbTjHe1UG5KjgzoiUJbqwzJxZ1W8XNJ",
+      "41ooPWnDYKwckqyG1mvg7ZEndy5zMemXinx6uQxscrBS",
+      "4TbqVA8p2DoBd5qDbPMwmDZv3CsJjWtxo8nVSqF2tA9a",
+      "43NeT7UTACLUkohKBaG7auvkhsj4Kwux9kNTJr6sFdNe",
+      "6PaB6tKFqrL6YoAELEhFGU6Gc39cEynLbo6ETZMF3sCy",
+      "95nyAWFFaiz6gykko3HtBCyhRuP5vZzuKYsZiLxHxLhr",
+      "GRwpFCPYyQPdz84sCnKemzrNvgFPuKkFLcRLR6jsRxHr",
+      "4Q4eEMDBjYM8JGsvnWCafFB5wCu6XntmsgxsxwYSnMib",
+      "3fy93eAT56UJsRCEht8iFhfi6wjHWXtZ9dnnbQmvFopF",
+      "77jZ9KWeyi3CJ96zkkj5s1CojKPHt6XJKjLFzsDCd8Fd",
+      "3onEbd9MLfXTTWAfP91yqsKr7C68VCT2ZiF7EoQiQAFj"
+    ]
+  },
+  "tools_prompt_sha256": "7684c0dc9d10f0b416ad4489e19f2741bbda259e8555dfbf26c1d7a0723ce918",
+  "git_commit": "b6bf5c9bf6a982524e2fb0bf41c18e84f7d2d431",
+  "restarts_detected": 0,
+  "chunks_rerun": 0,
+  "engine_at_start": {
+    "container": "flashnext-e2e",
+    "cmd": "--model /model --served-model-name Qwen3.8-Flash-Next --tensor-parallel-size 2 --enable-expert-parallel --disable-custom-all-reduce --gpu-memory-utilization 0.96 --max-model-len 32768 --max-num-seqs 1 --compilation-config {\"mode\": 0, \"cudagraph_mode\": \"FULL_DECODE_ONLY\"} --reasoning-parser qwen3 --tool-call-parser qwen3_coder --enable-auto-tool-choice --trust-remote-code",
+    "restart_count": 0,
+    "started_at": "2026-09-05T10:20:12.538557313Z"
+  },
+  "engine_at_end": {
+    "container": "flashnext-e2e",
+    "cmd": "--model /model --served-model-name Qwen3.8-Flash-Next --tensor-parallel-size 2 --enable-expert-parallel --disable-custom-all-reduce --gpu-memory-utilization 0.96 --max-model-len 32768 --max-num-seqs 1 --compilation-config {\"mode\": 0, \"cudagraph_mode\": \"FULL_DECODE_ONLY\"} --reasoning-parser qwen3 --tool-call-parser qwen3_coder --enable-auto-tool-choice --trust-remote-code",
+    "restart_count": 0,
+    "started_at": "2026-09-05T10:20:12.538557313Z"
+  },
+  "engine_changed": false,
+  "patch_state_changes": [],
+  "engine_idle_check": {
+    "checked": true,
+    "window_ms": 12000,
+    "gauge_busy_samples": 0,
+    "counters_grew": false,
+    "prompt_tokens_delta": 0,
+    "generation_tokens_delta": 0,
+    "samples": [
+      {
+        "running": 0,
+        "waiting": 0,
+        "prompt_tokens_total": 87271618,
+        "generation_tokens_total": 1045453
+      },
+      {
+        "running": 0,
+        "waiting": 0,
+        "prompt_tokens_total": 87271618,
+        "generation_tokens_total": 1045453
+      },
+      {
+        "running": 0,
+        "waiting": 0,
+        "prompt_tokens_total": 87271618,
+        "generation_tokens_total": 1045453
+      },
+      {
+        "running": 0,
+        "waiting": 0,
+        "prompt_tokens_total": 87271618,
+        "generation_tokens_total": 1045453
+      },
+      {
+        "running": 0,
+        "waiting": 0,
+        "prompt_tokens_total": 87271618,
+        "generation_tokens_total": 1045453
+      }
+    ],
+    "contaminated_at_start": false
+  },
+  "competing_load": [],
+  "final_stack": []
+}
