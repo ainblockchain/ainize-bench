@@ -1,0 +1,4 @@
+work/
+node_modules/
+.env.dart
+dart-datasets/
