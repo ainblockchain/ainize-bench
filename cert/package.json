@@ -1,0 +1,16 @@
+{
+  "name": "ainize-cert-kpi-harness",
+  "version": "1.0.0",
+  "private": true,
+  "description": "성능지표 5·6 (오픈소스 ML 도구 모델/데이터셋 지원 100종) 공인기관 시험 재현 하네스 — Ainize teach/dataset 경로 + 부록 G(HF 허브 100모델 / lm-eval 100태스크)",
+  "license": "MIT",
+  "scripts": {
+    "datasets": "python3 dart-build-datasets.py 8",
+    "m5m6": "node m5-ainize.js",
+    "m5m6:stack": "node m5-ainize.js --stack"
+  },
+  "dependencies": {
+    "@ainblockchain/ain-js": "^1.15.0",
+    "@ainize/cli": "^0.1.0"
+  }
+}
