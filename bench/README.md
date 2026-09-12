@@ -351,6 +351,31 @@ whole thesis dies if a judge can say "you strawmanned The Graph".
 
 ## 4. Running arms C and D
 
+**Where the patch comes from, and why that took three attempts.** Arms C and D need a trained patch, and until
+2026-09-12 there was none: every run recorded `patch: {backend: "none", real_training: false}`, so the
+ordering this protocol exists to test had never had a C arm at all. Training it on the node — `ainize teach
+dataset upload data/r1/trainset.jsonl` then `ainize teach train` — turned up three separate faults, each of
+which had the same shape: a check that was performed and then not enforced.
+
+1. **The trainer container had lost its GPUs.** `nvidia-smi` inside it answered "Failed to initialize NVML",
+   which the node reported verbatim as `model load failed: No CUDA GPUs are available`. The driver had been
+   changed under a container that had been up seven days; a restart of the container fixed it. Nothing else
+   on the machine noticed, because every other container had been started after the change.
+2. **`teach.trainer.gpus` was a guard that guarded nothing.** The pre-flight measured free memory on the
+   named GPUs and then launched the trainer with no device restriction, whose own default is
+   `cuda:0,cuda:1,cuda:2` — on this cluster the very GPUs serving the model. Fixed in ainize-node by pinning
+   `CUDA_VISIBLE_DEVICES` to those GPUs' UUIDs (host indices and container indices differ; a UUID does not).
+3. **One 40 GB A100 is not enough for this model.** With the pin working, training OOM'd on a single card.
+   The serving instance on `:8002` had answered zero requests since it started, so it was stopped for the
+   training window and the node pointed at `:8000`, whose patch mailbox it was already writing to.
+
+That last one exposed the fault worth recording here, because it invalidates any live test taken before it:
+**the node was asking `:8002` and writing patches into `:8000`'s mailbox.** `runtime.patchDir` was unset, so
+the mailbox defaulted to `runtime.repo/ple_patch`, which belongs to a different vLLM instance than
+`runtime.api` named. Patches loaded into a model that was never asked anything, and answers came from a model
+that never saw a patch. `ainize status` prints the mailbox with a warning when it has to guess it; that
+warning was the only sign.
+
 Arms C and D are executed against the running node, not against a script that re-implements patching.
 
 - **Arms A, C and D run in ONE PROCESS on ONE ENGINE INSTANCE — and that is weaker than the per-chunk
