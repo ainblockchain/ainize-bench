@@ -40,7 +40,7 @@
 // has its own 22-case self-test; this file decides only what to feed it and what to do with a transcript
 // that never produced an answer to feed.
 
-import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync, rmSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
@@ -363,10 +363,40 @@ export const isMiss = (verdict) => verdict === 'wrong' || verdict === 'ambiguous
  * hold evidence it may never re-score. The archive IS the committed record — this unpacks it next to
  * itself the first time something needs it, and every later run finds the directory and skips the work.
  */
+/** How many .json files a directory holds, at any depth. */
+function countJson(dir) {
+  let n = 0;
+  for (const e of readdirSync(dir, { withFileTypes: true })) {
+    if (e.isDirectory()) n += countJson(join(dir, e.name));
+    else if (e.name.endsWith('.json')) n += 1;
+  }
+  return n;
+}
+
 function ensureTranscripts(runDir) {
   const tdir = join(runDir, 'transcripts');
-  if (existsSync(tdir)) return tdir;
   const tar = join(runDir, 'transcripts.tar.zst');
+  /**
+   * An unpacked directory is a CACHE of the archive, and it was trusted blindly.
+   *
+   * `transcripts/` is gitignored, so a stale copy left by an older archive survives a `git pull` that brings a
+   * new one — and this returned it without a glance, because it existed. That is exactly what happened when the
+   * r1 run was migrated: 1,932 transcripts from the previous archive sat in the directory, the new archive held
+   * 2,000, and the re-score silently read the old ones. It did not error; it produced a DIFFERENT RESULT (arm B
+   * 83/122 instead of 97/142) with a warning that the arms had not answered the same item set — which reads as
+   * a finding about the benchmark rather than a stale directory.
+   *
+   * So the cache is checked against the archive it claims to be, and replaced when they disagree.
+   */
+  if (existsSync(tdir) && existsSync(tar)) {
+    const onDisk = countJson(tdir);
+    const inTar = Number(execFileSync('bash', ['-c', 'zstd -dc -- "$1" | tar -tf - | grep -c "\\.json$"', '_', tar], { encoding: 'utf8' }).trim());
+    if (onDisk === inTar) return tdir;
+    console.error(`${tdir} holds ${onDisk} transcripts and ${tar} holds ${inTar} — the unpacked copy is stale, replacing it`);
+    rmSync(tdir, { recursive: true, force: true });
+  } else if (existsSync(tdir)) {
+    return tdir;   // no archive to check against: an in-progress run writing its own transcripts
+  }
   if (!existsSync(tar)) throw new Error(`${tdir} does not exist and neither does ${tar} — nothing to score`);
   try {
     execFileSync('zstd', ['--version'], { stdio: 'ignore' });

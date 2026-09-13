@@ -515,10 +515,14 @@ B,join:vault_symbol:1795ae09e972+vault_fee_pct:1795ae09e972.E1,0,multihop,E1,tru
 B,join:vault_symbol:1795ae09e972+vault_fee_pct:1795ae09e972.E1,1,multihop,E1,true,2,decimal,ambiguous,0,false,true,20476,17516,3340,2770,50493,858,6,5,5,24554,1,0,true,false,0,10127,false,false,0.0108134,had_it_and_still_wrong,,"The vLQTY-ETH30 vault takes a 10% performance fee.
 
 10",10
+B,join:vault_symbol:1e5c4eca12dd+vault_fee_pct:1e5c4eca12dd.P,0,multihop,P,true,2,decimal,hit,1,true,true,19926,16583,1196,2993,67126,648,8,7,5,69809,0,0,true,false,0,13506,false,false,0.014014,,,2.5,2.5
+B,join:vault_symbol:1e5c4eca12dd+vault_fee_pct:1e5c4eca12dd.P,1,multihop,P,true,2,decimal,hit,1,true,true,50880,43467,2951,6481,262895,1714,15,14,14,129272,3,0,true,true,0,29355,false,true,0.0541674,,,2.5,2.5
 B,join:vault_symbol:1fc904520a12+vault_fee_pct:1fc904520a12.E2,0,multihop,E2,true,2,decimal,wrong,0,false,true,63476,54856,3282,7860,219247,2565,21,20,17,149093,0,0,true,false,0,15138,true,true,0.0460684,budget_exhausted,,10,0
 B,join:vault_symbol:1fc904520a12+vault_fee_pct:1fc904520a12.E2,1,multihop,E2,true,2,decimal,hit,1,true,true,68068,58817,3377,8574,206104,2918,21,20,17,61969,0,0,true,false,0,13649,true,true,0.0436516,,,0,0
 B,join:vault_symbol:2ab135606ce9+vault_fee_pct:2ab135606ce9.P,0,multihop,P,true,2,decimal,hit,1,true,true,25768,21448,1117,3988,90800,1018,11,10,8,49727,2,0,true,false,0,8202,false,false,0.0190908,,,2.5,2.5
 B,join:vault_symbol:2ab135606ce9+vault_fee_pct:2ab135606ce9.P,1,multihop,P,true,2,decimal,hit,1,true,true,3002,2588,2319,380,7341,122,2,1,1,1468,0,0,false,false,0,2402,false,false,0.0015814000000000002,,,2.5,2.5
+B,join:vault_symbol:356f24ea1db0+vault_fee_pct:356f24ea1db0.E2,0,multihop,E2,true,2,decimal,wrong,0,false,true,59569,48368,1296,9272,424667,1758,20,19,16,128130,5,0,true,true,2,30517,false,true,0.0866282,context_exhausted,"context_exhausted with an empty final — §3: running out of window is a MISS, never an error",,0
+B,join:vault_symbol:356f24ea1db0+vault_fee_pct:356f24ea1db0.E2,1,multihop,E2,true,2,decimal,hit,1,true,true,55924,46628,1470,7609,424700,1661,19,18,15,147324,5,0,true,true,2,30503,false,true,0.0865366,,,0,0
 B,join:vault_symbol:45ce5f2a37ce+vault_fee_pct:45ce5f2a37ce.E1,0,multihop,E1,true,2,decimal,hit,1,true,true,56445,47386,1935,8152,316057,2024,21,20,17,70907,2,0,true,false,0,21997,true,true,0.0651058,,,2.5,2.5
 B,join:vault_symbol:45ce5f2a37ce+vault_fee_pct:45ce5f2a37ce.E1,1,multihop,E1,true,2,decimal,hit,1,true,true,49687,41697,2349,7078,316238,1759,19,18,15,107332,2,0,true,false,0,28790,false,false,0.064903,,,2.5,2.5
 B,join:vault_symbol:537bf97f43cd+vault_fee_pct:537bf97f43cd.P,0,multihop,P,true,2,decimal,hit,1,true,true,4107,3707,2978,369,7095,156,2,1,1,723,0,0,false,false,0,2118,false,false,0.0015526,,,10,10
@@ -548,6 +552,8 @@ B,join:vault_symbol:c352835d1e90+vault_fee_pct:c352835d1e90.P,0,multihop,P,true,
 B,join:vault_symbol:c352835d1e90+vault_fee_pct:c352835d1e90.P,1,multihop,P,true,2,decimal,hit,1,true,true,20542,17442,1575,2852,66246,695,9,8,5,41039,1,0,true,false,0,10750,false,false,0.013866200000000002,,,2.5,2.5
 B,join:vault_symbol:d4af303ac5c7+vault_fee_pct:d4af303ac5c7.E2,0,multihop,E2,true,2,decimal,abstain,0,false,true,61102,51019,2905,9321,221758,2247,17,21,18,111232,1,0,true,false,0,24260,true,true,0.046419800000000004,wrong_subgraph,,I do not know.,0
 B,join:vault_symbol:d4af303ac5c7+vault_fee_pct:d4af303ac5c7.E2,1,multihop,E2,true,2,decimal,hit,1,true,true,57290,48081,2505,8421,250387,2038,21,20,14,60409,0,0,true,false,0,20051,true,true,0.0518602,,,0,0
+B,market_address:079e8dc63676.E1,0,headline,E1,true,1,address,wrong,0,false,true,51181,43053,1323,7514,192021,2013,21,20,15,37625,13,0,true,false,0,7662,true,true,0.04021200000000001,budget_exhausted,no address in answer,Ethereum,0xfdd2af9e6dc3607b10fc93f0ebe7926a94de501b
+B,market_address:079e8dc63676.E1,1,headline,E1,true,1,address,wrong,0,false,true,63036,52052,1371,10296,203076,2435,21,20,7,41893,7,0,true,false,0,9668,true,true,0.042356200000000004,budget_exhausted,no address in answer,Ethereum,0xfdd2af9e6dc3607b10fc93f0ebe7926a94de501b
 B,market_address:079e8dc63676.E2,0,korean,E2,true,1,address,hit,1,true,true,4214,3822,2814,363,6928,153,2,1,1,407,0,0,false,false,0,1984,false,false,0.0015174000000000001,,,0xfdd2af9e6dc3607b10fc93f0ebe7926a94de501b,0xfdd2af9e6dc3607b10fc93f0ebe7926a94de501b
 B,market_address:079e8dc63676.E2,1,korean,E2,true,1,address,hit,1,true,true,7083,6223,1860,778,17993,313,3,2,1,33448,0,0,true,false,0,5814,false,false,0.0038264000000000006,,,"Euler Finance 서브그래프의 Market 구조상 컨트랙트 주소는 `outputToken`의 `id`에 저장됩니다.
 
@@ -574,6 +580,10 @@ B,market_address:3568e1ec94f7.E1,0,headline,E1,true,1,address,hit,1,true,true,45
 B,market_address:3568e1ec94f7.E1,1,headline,E1,true,1,address,hit,1,true,true,24034,20671,1531,3083,72977,1014,8,7,5,34972,3,0,true,false,0,10298,false,false,0.015403800000000002,,,"The ""Cream yETH"" lending market is deployed on **Ethereum mainnet** (network: MAINNET).
 
 The market itself is the contract `0x01da76dea59703578040012357b81ffe62015c2d`, part of the CREAM Finance protocol (a LENDING protocol on Ethereum mainnet), with input token yETH and output token crYETH.",0x01da76dea59703578040012357b81ffe62015c2d
+B,market_address:4203d7f495e3.E1,0,headline,E1,true,1,address,wrong,0,false,true,26799,22339,1105,4116,100173,1056,10,9,7,61496,2,0,true,false,0,11180,false,false,0.020948200000000004,had_it_and_still_wrong,no address in answer,"The ""Cream CRV"" market is deployed on **Ethereum mainnet** (network: MAINNET).",0xc7fd8dcee4697ceef5a2fd4608a7bd6a94c77480
+B,market_address:4203d7f495e3.E1,1,headline,E1,true,1,address,wrong,0,false,true,18022,15042,1166,2738,55627,673,7,6,4,60906,2,0,true,false,0,10858,false,false,0.011689200000000002,ignored_result,no address in answer,"The CRV market's data (and the whole Cream Finance subgraph) is on Ethereum mainnet.
+
+MAINNET",0xc7fd8dcee4697ceef5a2fd4608a7bd6a94c77480
 B,market_address:4203d7f495e3.P,0,ceiling,P,true,1,address,hit,1,true,true,22933,18936,2865,3781,56574,885,7,6,5,59517,2,0,true,false,0,10358,false,false,0.012045800000000002,,,"The ""Cream CRV"" market (with the CRV token) is the one with the CRV input token. Its address (the market id / cToken address) is:
 
 0xc7fd8dcee4697ceef5a2fd4608a7bd6a94c77480",0xc7fd8dcee4697ceef5a2fd4608a7bd6a94c77480
@@ -584,6 +594,12 @@ B,market_address:4dd715cf30e5.E2,0,korean,E2,true,1,address,hit,1,true,true,5300
 B,market_address:4dd715cf30e5.E2,1,korean,E2,true,1,address,hit,1,true,true,4073,3678,2675,362,6980,179,2,1,1,473,0,0,false,false,0,2021,false,false,0.0015434000000000001,,,0x4dc4b210fad381c0e24ee689a689cbe956cd6b9b,0x4dc4b210fad381c0e24ee689a689cbe956cd6b9b
 B,market_address:6c60cff7c09b.E1,0,headline,E1,true,1,address,wrong,0,false,true,66300,55690,1021,9756,236172,2595,21,20,2,50952,8,0,true,false,0,11629,true,true,0.0488714,budget_exhausted,no address in answer,Ethereum,0xabcaeddc4d7bdeba94ae0c24f55f161a7d1dbfc4
 B,market_address:6c60cff7c09b.E1,1,headline,E1,true,1,address,wrong,0,false,true,11759,10049,3324,1571,30150,427,5,4,3,33809,1,0,true,false,0,5918,false,false,0.0064062,had_it_and_still_wrong,no address in answer,The lending market for Euler Pool: StakeWise is deployed on **mainnet** (Ethereum mainnet).,0xabcaeddc4d7bdeba94ae0c24f55f161a7d1dbfc4
+B,market_address:6c60cff7c09b.E2,0,korean,E2,true,1,address,hit,1,true,true,4952,4456,3285,466,7197,206,2,1,1,895,0,0,false,false,0,2249,false,false,0.0016030000000000003,,,"Euler Pool: StakeWise의 컨트랙트 주소는 다음과 같습니다.
+
+0xabcaeddc4d7bdeba94ae0c24f55f161a7d1dbfc4",0xabcaeddc4d7bdeba94ae0c24f55f161a7d1dbfc4
+B,market_address:6c60cff7c09b.E2,1,korean,E2,true,1,address,hit,1,true,true,4712,3929,2693,752,7195,204,2,1,1,895,0,0,false,false,0,2247,false,false,0.0016014,,,"Euler Pool: StakeWise의 컨트랙트 주소는 다음과 같습니다:
+
+0xabcaeddc4d7bdeba94ae0c24f55f161a7d1dbfc4",0xabcaeddc4d7bdeba94ae0c24f55f161a7d1dbfc4
 B,market_address:7a184bee06b4.E1,0,headline,E1,true,1,address,wrong,0,false,true,60282,51209,1484,8288,210449,2230,21,20,17,128260,8,0,true,false,0,16246,true,true,0.0441078,budget_exhausted,no address in answer,Ethereum,0xe955f59a6ed314bc52b10a783c6607dc4069b7d6
 B,market_address:7a184bee06b4.E1,1,headline,E1,true,1,address,wrong,0,false,true,57199,48283,1156,8066,280350,2004,21,20,8,99122,5,0,true,false,0,16472,true,true,0.0575924,budget_exhausted,no address in answer,Ethereum,0xe955f59a6ed314bc52b10a783c6607dc4069b7d6
 B,market_address:7a184bee06b4.E2,0,korean,E2,true,1,address,hit,1,true,true,4009,3573,2481,403,6962,163,2,1,1,471,0,0,false,false,0,2012,false,false,0.0015302000000000002,,,0xe955f59a6ed314bc52b10a783c6607dc4069b7d6,0xe955f59a6ed314bc52b10a783c6607dc4069b7d6
@@ -594,6 +610,10 @@ B,market_address:a2224813bb53.E1,1,headline,E1,true,1,address,hit,1,true,true,16
 - Market ID: `0xa3068aa78611ed29d381e640bb2c02abcf3ca7de`
 - Protocol: dForce v2 (slug: `dforce-v2`)
 - Input token: LINK (`0x514910771af9ca656af840dff83e8264ecf986ca`)",0xa3068aa78611ed29d381e640bb2c02abcf3ca7de
+B,market_address:a5b222488ff3.E1,0,headline,E1,true,1,address,wrong,0,false,true,49305,40459,2190,7904,295487,1643,21,20,10,123472,6,0,true,false,0,19925,true,true,0.0604832,budget_exhausted,no address in answer,MAINNET,0xf5375ab059ebe8bbd3a11e7be3f3abc20be533bd
+B,market_address:a5b222488ff3.E1,1,headline,E1,true,1,address,wrong,0,false,true,57503,40234,2354,16626,196958,1694,21,20,11,43844,6,0,true,false,0,10477,true,true,0.04084800000000001,budget_exhausted,no address in answer,Ethereum,0xf5375ab059ebe8bbd3a11e7be3f3abc20be533bd
+B,market_address:a7e3a2293100.E1,0,headline,E1,true,1,address,wrong,0,false,true,61664,46368,1164,14164,252340,1705,21,20,3,93096,0,0,true,false,0,14365,true,true,0.051611000000000004,budget_exhausted,no address in answer,Ethereum,0xcd22c4110c12ac41acefa0091c432ef44efaafa0
+B,market_address:a7e3a2293100.E1,1,headline,E1,true,1,address,wrong,0,false,true,17658,14290,1660,3163,31241,448,5,4,2,44812,0,0,true,false,0,7262,false,false,0.006597,had_it_and_still_wrong,no address in answer,"The lending market for ""Cream Uniswap V2 DAI-ETH"" is deployed on **Ethereum mainnet** (network: MAINNET), under the CREAM Finance protocol.",0xcd22c4110c12ac41acefa0091c432ef44efaafa0
 B,market_address:a7e3a2293100.E2,0,korean,E2,true,1,address,hit,1,true,true,12595,10392,1593,2012,40091,466,5,4,3,60016,0,0,true,false,0,9748,false,false,0.008417800000000001,,,0xcd22c4110c12ac41acefa0091c432ef44efaafa0,0xcd22c4110c12ac41acefa0091c432ef44efaafa0
 B,market_address:a7e3a2293100.E2,1,korean,E2,true,1,address,hit,1,true,true,11833,9668,1625,1967,38352,419,5,4,2,83673,0,0,true,false,0,9931,false,false,0.008001800000000002,,,0xcd22c4110c12ac41acefa0091c432ef44efaafa0,0xcd22c4110c12ac41acefa0091c432ef44efaafa0
 B,market_address:c8e405e75af3.E1,0,headline,E1,true,1,address,hit,1,true,true,21416,18276,1614,2852,58530,848,7,6,4,79962,1,0,true,false,0,11243,false,false,0.0123748,,,"The lending market for ""Cream SushiSwap LP Token WBTC-ETH"" is deployed at the following addresses:
@@ -605,6 +625,12 @@ B,market_address:c8e405e75af3.E1,1,headline,E1,true,1,address,hit,1,true,true,13
 - Market ID: `0x73f6cba38922960b7092175c0add22ab8d0e81fc`
 - Input token: SLP (`0xceff51756c56ceffca006cd410b03ffc46dd3a58`)
 - Output token: crSLP-WBTC-ETH (`0x73f6cba38922960b7092175c0add22ab8d0e81fc`)",0x73f6cba38922960b7092175c0add22ab8d0e81fc
+B,market_address:c8e405e75af3.P,0,ceiling,P,true,1,address,wrong,0,false,true,13458,11480,2005,1833,28598,520,5,4,2,41608,1,0,true,false,0,5817,false,false,0.0061116,had_it_and_still_wrong,,"The ""SushiSwap LP Token WBTC-ETH"" market's input token (the SushiSwap LP token address) is:
+
+0xceff51756c56ceffca006cd410b03ffc46dd3a58",0x73f6cba38922960b7092175c0add22ab8d0e81fc
+B,market_address:c8e405e75af3.P,1,ceiling,P,true,1,address,hit,1,true,true,17299,14745,1677,2373,40284,722,6,5,4,42019,1,0,true,false,0,6009,false,false,0.00865,,,"The question asks for the address of the ""Cream SushiSwap LP Token WBTC-ETH"" lending market. The market's `id` (which is the cToken/market contract address) is:
+
+0x73f6cba38922960b7092175c0add22ab8d0e81fc",0x73f6cba38922960b7092175c0add22ab8d0e81fc
 B,market_address:e0c52910782b.E1,0,headline,E1,true,1,address,wrong,0,false,true,46558,37843,830,7929,246509,1608,21,20,7,74426,4,0,true,false,0,13240,true,true,0.050546600000000004,budget_exhausted,no address in answer,Ethereum,0x64ad6d2472de5ddd3801fb4027c96c3ee7a7ee82
 B,market_address:e0c52910782b.E1,1,headline,E1,true,1,address,wrong,0,false,true,13087,10934,3234,2018,25816,527,4,3,2,33747,1,0,true,false,0,6037,false,false,0.005559400000000001,had_it_and_still_wrong,no address in answer,"The ""Euler Pool: agEUR"" market is deployed on the Ethereum mainnet (network: MAINNET).
 
@@ -646,6 +672,8 @@ B,market_asset_symbol:373e6c2be593.E2,0,korean,E2,true,1,symbol,hit,1,true,true,
 B,market_asset_symbol:373e6c2be593.E2,1,korean,E2,true,1,symbol,hit,1,true,true,70236,61947,2010,7692,180051,3053,21,20,19,41899,5,0,true,false,0,5969,true,true,0.038602000000000004,,,COMP,COMP
 B,market_asset_symbol:585f275c8839.E1,0,tripwire,E1,false,1,symbol,abstain,0,false,true,59383,50735,1524,7957,197952,2352,21,20,14,55850,1,0,true,false,0,12277,true,true,0.041561600000000004,wrong_subgraph,,I do not know.,USX
 B,market_asset_symbol:585f275c8839.E1,1,tripwire,E1,false,1,symbol,hit,1,true,true,28708,24234,2253,4259,45960,1178,7,9,8,66601,3,0,true,false,0,5398,false,false,0.010218800000000002,,,USX,USX
+B,market_asset_symbol:5b557fd2f244.E1,0,headline,E1,true,1,symbol,hit,1,true,true,26475,20062,3522,6272,27956,989,6,8,7,33751,3,0,true,false,0,5918,false,false,0.006464600000000001,,,DPX,DPX
+B,market_asset_symbol:5b557fd2f244.E1,1,headline,E1,true,1,symbol,hit,1,true,true,21688,18751,2955,2813,27956,989,6,8,7,33751,3,0,true,false,0,5918,false,false,0.006464600000000001,,,DPX,DPX
 B,market_asset_symbol:5b557fd2f244.P,0,ceiling,P,true,1,symbol,hit,1,true,true,29003,25061,2007,3716,49006,1281,7,10,9,41377,4,0,true,false,0,5701,false,false,0.0109298,,,DPX,DPX
 B,market_asset_symbol:5b557fd2f244.P,1,ceiling,P,true,1,symbol,hit,1,true,true,12079,10366,1747,1571,24852,502,4,4,3,41083,1,0,true,false,0,5525,false,false,0.005391600000000001,,,DPX,DPX
 B,market_asset_symbol:77422e6d2fe3.E1,0,headline,E1,true,1,symbol,hit,1,true,true,70152,61074,3475,8513,169509,2962,21,20,19,34204,8,0,true,false,0,6218,true,true,0.036439,,,GTC,GTC
@@ -654,10 +682,14 @@ B,market_asset_symbol:7c1f01cf0436.E1,0,headline,E1,true,1,symbol,hit,1,true,tru
 B,market_asset_symbol:7c1f01cf0436.E1,1,headline,E1,true,1,symbol,wrong,0,false,true,36255,31011,1753,4934,60948,1606,9,12,11,66524,4,0,true,false,0,5343,false,false,0.0135932,had_it_and_still_wrong,,"The market's input token (the asset supplied and borrowed) is USDC.
 
 USDC",USDC
+B,market_asset_symbol:80be5bdb4667.E1,0,headline,E1,true,1,symbol,hit,1,true,true,64219,51100,2943,12649,133332,2588,16,20,18,64181,6,0,true,false,0,9722,true,true,0.028939199999999998,,,rETH,rETH
+B,market_asset_symbol:80be5bdb4667.E1,1,headline,E1,true,1,symbol,hit,1,true,true,63558,55091,3443,8015,135087,2747,18,20,19,42159,12,0,true,false,0,5999,true,true,0.0294256,,,rETH,rETH
 B,market_asset_symbol:80be5bdb4667.P,0,ceiling,P,true,1,symbol,hit,1,true,true,61101,53187,2861,7506,107810,2719,15,21,20,41869,7,0,true,false,0,5865,true,true,0.0239934,,,rETH,rETH
 B,market_asset_symbol:80be5bdb4667.P,1,ceiling,P,true,1,symbol,hit,1,true,true,28463,24597,2120,3611,62559,1212,8,10,8,44428,3,0,true,false,0,7034,false,false,0.013559000000000002,,,rETH,rETH
 B,market_asset_symbol:88050c1155c9.E1,0,tripwire,E1,false,1,symbol,hit,1,true,true,3998,3480,3048,494,7055,159,2,1,1,450,0,0,false,false,0,2040,false,false,0.0015464,,,REP,REP
 B,market_asset_symbol:88050c1155c9.E1,1,tripwire,E1,false,1,symbol,hit,1,true,true,3753,3289,2862,434,7055,159,2,1,1,450,0,0,false,false,0,2040,false,false,0.0015464,,,REP,REP
+B,market_asset_symbol:b23cd9d00c33.E1,0,headline,E1,true,1,symbol,hit,1,true,true,59660,50885,2954,8090,195298,2521,21,20,18,108085,1,0,true,false,0,9348,true,true,0.0412922,,,TUSD,TUSD
+B,market_asset_symbol:b23cd9d00c33.E1,1,headline,E1,true,1,symbol,abstain,0,false,true,61886,49660,3303,11735,143225,2454,15,20,18,53646,6,0,true,false,0,11355,true,true,0.030837399999999997,wrong_subgraph,,I do not know.,TUSD
 B,market_asset_symbol:b23cd9d00c33.E2,0,korean,E2,true,1,symbol,abstain,0,false,true,50335,41391,1825,8048,275540,1732,21,20,11,108299,1,0,true,false,0,15228,true,true,0.0565872,wrong_subgraph,,I do not know.,TUSD
 B,market_asset_symbol:b23cd9d00c33.E2,1,korean,E2,true,1,symbol,hit,1,true,true,28973,23965,1892,4731,71780,1181,10,9,8,41399,0,0,true,false,0,5685,false,false,0.015384600000000002,,,TUSD,TUSD
 B,market_asset_symbol:b6c8871c64db.E1,0,headline,E1,true,1,symbol,hit,1,true,true,57860,50104,3050,7294,112750,2558,15,20,19,36443,7,0,true,false,0,7325,true,true,0.0248448,,,INDEX,INDEX
@@ -672,6 +704,8 @@ B,market_asset_symbol:d16defcb7557.E1,0,headline,E1,true,1,symbol,wrong,0,false,
 
 QNT",QNT
 B,market_asset_symbol:d16defcb7557.E1,1,headline,E1,true,1,symbol,hit,1,true,true,36922,32030,2083,4581,73752,1633,9,13,11,31944,5,0,true,false,0,7281,false,false,0.016170200000000003,,,QNT,QNT
+B,market_asset_symbol:d16defcb7557.P,0,ceiling,P,true,1,symbol,abstain,0,false,true,55847,46379,1642,8541,265775,2053,21,20,14,95134,2,0,true,false,0,15676,true,true,0.0549468,budget_exhausted,,I do not know.,QNT
+B,market_asset_symbol:d16defcb7557.P,1,ceiling,P,true,1,symbol,hit,1,true,true,30761,24982,1872,5522,64274,1205,8,10,8,61439,1,0,true,false,0,9432,false,false,0.013897800000000002,,,QNT,QNT
 B,pool_tokens:0008ccc73c09.E2,0,tripwire,E2,false,1,list<symbol>,hit,1,true,true,57257,48111,3211,8391,211985,2270,18,20,13,78559,9,0,true,false,0,13298,true,true,0.044279,,,"WALLY, WETH","[""WALLY"",""WETH""]"
 B,pool_tokens:0008ccc73c09.E2,1,tripwire,E2,false,1,list<symbol>,hit,1,true,true,73463,64211,3821,8466,244602,3055,21,20,16,92137,4,0,true,false,0,13520,true,true,0.051393400000000006,,,"WALLY, WETH","[""WALLY"",""WETH""]"
 B,pool_tokens:0d65565089b3.E1,0,tripwire,E1,false,1,list<symbol>,hit,1,true,true,60135,48719,2124,10813,160342,2347,16,20,16,113365,11,0,true,false,0,14167,true,true,0.034116600000000004,,,"alUSD, USDC","[""USDC"",""alUSD""]"
@@ -679,6 +713,8 @@ B,pool_tokens:0d65565089b3.E1,1,tripwire,E1,false,1,list<symbol>,wrong,0,false,t
 
 - USDC — USD//C — `0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48`
 - alUSD — Alchemix USD — `0xbc6da0fe9ad5f3b0d58160288917aa56653660e9`","[""USDC"",""alUSD""]"
+B,pool_tokens:1afe8fc4d3c0.E2,0,tripwire,E2,false,1,list<symbol>,hit,1,true,true,18703,15080,1841,3450,32075,725,5,6,5,28434,2,0,true,false,0,5527,false,false,0.007049999999999999,,,"DOLA, scrvUSD","[""scrvUSD"",""DOLA""]"
+B,pool_tokens:1afe8fc4d3c0.E2,1,tripwire,E2,false,1,list<symbol>,hit,1,true,true,12476,10660,1456,1686,31706,516,5,4,3,28312,0,0,true,false,0,5497,false,false,0.006770800000000001,,,"DOLA, scrvUSD","[""scrvUSD"",""DOLA""]"
 B,pool_tokens:1ed526e97831.E2,0,tripwire,E2,false,1,list<symbol>,hit,1,true,true,70218,61754,1859,7875,175466,3181,21,20,19,29280,11,0,true,false,0,5912,true,true,0.0377618,,,"WETH, UNSP","[""WETH"",""UNSP""]"
 B,pool_tokens:1ed526e97831.E2,1,tripwire,E2,false,1,list<symbol>,hit,1,true,true,12410,9695,1769,2600,24498,454,4,4,3,28489,1,0,true,false,0,5526,false,false,0.005292000000000001,,,"WETH, UNSP","[""WETH"",""UNSP""]"
 B,pool_tokens:2a727c07fde6.E1,0,tripwire,E1,false,1,list<symbol>,wrong,0,false,true,64109,51895,1405,11513,246944,2377,21,20,17,44436,3,0,true,false,0,12811,true,true,0.051495000000000006,budget_exhausted,,"SushiswapV2 IL Protection, Wrapped Ether","[""sil"",""WETH""]"
@@ -781,6 +817,10 @@ B,pool_tokens:f7fd908a1d88.P,1,ceiling,P,true,1,list<symbol>,wrong,0,false,true,
 
 - **BADGER** (Badger) — 0x3472a5a71965499acd81997a54bba8d852c6e53d
 - **USDC** (USD Coin) — 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48","[""BADGER"",""USDC""]"
+B,pool_tokens:fa5a9332b329.E1,0,tripwire,E1,false,1,list<symbol>,wrong,0,false,true,9525,8037,1586,1366,24405,359,4,3,2,28434,0,0,true,false,0,5526,false,false,0.0051764,had_it_and_still_wrong,,Keanu Inu (KEANU) and Wrapped Ether (WETH),"[""KEANU"",""WETH""]"
+B,pool_tokens:fa5a9332b329.E1,1,tripwire,E1,false,1,list<symbol>,wrong,0,false,true,25723,21076,1644,4347,69098,919,9,9,6,35362,1,0,true,false,0,8675,false,false,0.014611,had_it_and_still_wrong,,The pool pairs **Keanu Inu (KEANU)** and **Wrapped Ether (WETH)**.,"[""KEANU"",""WETH""]"
+B,vault_address:02121a913f6b.E1,0,headline,E1,true,1,address,hit,1,true,true,57231,49069,990,7503,196988,2231,21,20,17,27226,1,0,true,false,0,8636,true,true,0.04141620000000001,,,0x53a4512bbe5083695d8e890789fe1cf6f5686d52,0x53a4512bbe5083695d8e890789fe1cf6f5686d52
+B,vault_address:02121a913f6b.E1,1,headline,E1,true,1,address,hit,1,true,true,60939,52104,1391,8232,195035,2412,21,20,17,27373,5,0,true,false,0,8868,true,true,0.0411342,,,0x53a4512bbe5083695d8e890789fe1cf6f5686d52,0x53a4512bbe5083695d8e890789fe1cf6f5686d52
 B,vault_address:0372f8945190.E1,0,headline,E1,true,1,address,hit,1,true,true,61581,52564,2561,8263,234939,2408,21,20,16,73929,4,0,true,false,0,17048,true,true,0.04907260000000001,,,0xf62fab0b5a8255eb1976ca9771db23d55978d311,0xf62fab0b5a8255eb1976ca9771db23d55978d311
 B,vault_address:0372f8945190.E1,1,headline,E1,true,1,address,abstain,0,false,true,63739,55176,2809,7931,189616,2740,21,20,19,62049,3,0,true,false,0,6936,true,true,0.0403272,budget_exhausted,,I do not know.,0xf62fab0b5a8255eb1976ca9771db23d55978d311
 B,vault_address:078d240f7b6a.E1,0,headline,E1,true,1,address,hit,1,true,true,51634,42338,1424,8416,277945,1761,21,20,14,59345,3,0,true,false,0,17232,true,true,0.057205599999999995,,,0xbe08ef12e4a553666291e9ffc24fccfd354f2dd2,0xbe08ef12e4a553666291e9ffc24fccfd354f2dd2
@@ -799,6 +839,8 @@ B,vault_address:2fa9edbd9a49.E2,0,korean,E2,true,1,address,hit,1,true,true,63260
 B,vault_address:2fa9edbd9a49.E2,1,korean,E2,true,1,address,abstain,0,false,true,51596,43272,2839,7490,283325,1714,21,20,9,90512,1,0,true,false,0,20474,true,true,0.0580534,wrong_subgraph,,I do not know.,0x19e4d89e0cb807ea21b8cef02df5eaa99a110da5
 B,vault_address:2fa9edbd9a49.P,0,ceiling,P,true,1,address,abstain,0,false,true,40199,30974,2924,8221,354381,952,21,20,4,65070,0,0,true,false,0,26548,true,true,0.07160739999999999,wrong_subgraph,,I do not know.,0x19e4d89e0cb807ea21b8cef02df5eaa99a110da5
 B,vault_address:2fa9edbd9a49.P,1,ceiling,P,true,1,address,hit,1,true,true,57187,47676,2694,8582,320131,1970,21,20,16,54000,1,0,true,false,0,17993,true,true,0.06584820000000001,,,0x19e4d89e0cb807ea21b8cef02df5eaa99a110da5,0x19e4d89e0cb807ea21b8cef02df5eaa99a110da5
+B,vault_address:46b58a954fdc.E1,0,tripwire,E1,false,1,address,wrong,0,false,true,73350,46756,2448,25389,335632,2163,21,20,18,191899,7,0,true,true,0,31131,true,true,0.0691442,budget_exhausted,"context_exhausted with an empty final — §3: running out of window is a MISS, never an error",,0x4cbcecdc744ad72fe8695fedf705c860ac210fa4
+B,vault_address:46b58a954fdc.E1,1,tripwire,E1,false,1,address,hit,1,true,true,64014,55483,2997,7518,335041,2451,21,20,16,58353,0,0,true,false,0,20625,true,true,0.06911880000000001,,,0x4cbcecdc744ad72fe8695fedf705c860ac210fa4,0x4cbcecdc744ad72fe8695fedf705c860ac210fa4
 B,vault_address:7b0138428ca9.E1,0,headline,E1,true,1,address,wrong,0,false,true,56800,47296,3287,8585,273782,2036,21,20,11,60900,3,0,true,false,0,17305,true,true,0.05641800000000001,budget_exhausted,,0x071c661b4deefb59e2a3ddb20db036821eee8f4b,0x5dce29e92b1b939f8e8c60dcf15bde82a85be4a9
 B,vault_address:7b0138428ca9.E1,1,headline,E1,true,1,address,wrong,0,false,true,59609,49287,1077,9718,181039,2314,17,21,15,56235,6,0,true,false,0,16948,true,true,0.03819620000000001,budget_exhausted,,0x410e3e86ef427e30b9235497143881f717d93c2a,0x5dce29e92b1b939f8e8c60dcf15bde82a85be4a9
 B,vault_address:87d41db944aa.E1,0,headline,E1,true,1,address,hit,1,true,true,71372,61625,3191,8920,304094,2890,21,20,18,47806,6,0,true,false,0,15257,true,true,0.0632728,,,0xd14c67985f88368f66e71ad73ce97890f6636cdd,0xd14c67985f88368f66e71ad73ce97890f6636cdd
@@ -843,8 +885,12 @@ B,vault_asset:1fc904520a12.E1,0,headline,E1,true,1,address,hit,1,true,true,23334
 B,vault_asset:1fc904520a12.E1,1,headline,E1,true,1,address,hit,1,true,true,28562,24061,1779,4256,51925,1250,7,9,8,22412,3,0,true,false,0,6279,false,false,0.011455000000000002,,,"The vault is Ribbon's rETH Theta Vault, and its deposit (input) token is rETH.
 
 0xae78736cd615f374d3085123a210448e74fc6393",0xae78736cd615f374d3085123a210448e74fc6393
+B,vault_asset:1fc904520a12.E2,0,korean,E2,true,1,address,hit,1,true,true,29016,24985,4046,3788,40441,1035,8,8,7,22471,1,0,true,false,0,6306,false,false,0.008989200000000001,,,0xae78736cd615f374d3085123a210448e74fc6393,0xae78736cd615f374d3085123a210448e74fc6393
+B,vault_asset:1fc904520a12.E2,1,korean,E2,true,1,address,hit,1,true,true,21458,18632,3831,2725,22674,716,6,5,5,486,0,0,false,false,0,2082,false,false,0.0051643999999999995,,,0xae78736cd615f374d3085123a210448e74fc6393,0xae78736cd615f374d3085123a210448e74fc6393
 B,vault_asset:301e25fac95c.E1,0,headline,E1,true,1,address,hit,1,true,true,65295,56959,3193,7706,183111,2756,21,20,17,47571,8,0,true,false,0,10857,true,true,0.038955800000000006,,,0x410e3e86ef427e30b9235497143881f717d93c2a,0x410e3e86ef427e30b9235497143881f717d93c2a
 B,vault_asset:301e25fac95c.E1,1,headline,E1,true,1,address,hit,1,true,true,65504,56098,3104,9077,98597,2837,18,20,20,1925,12,0,false,false,0,2805,true,true,0.0222216,,,0x410e3e86ef427e30b9235497143881f717d93c2a,0x410e3e86ef427e30b9235497143881f717d93c2a
+B,vault_asset:407420492426.E1,0,headline,E1,true,1,address,hit,1,true,true,25266,20053,2363,5018,43315,943,6,7,6,22312,2,0,true,false,0,6223,false,false,0.009468800000000001,,,0x2260fac5e5542a773aa44fbcfedf7c193bc2c599,0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
+B,vault_asset:407420492426.E1,1,headline,E1,true,1,address,hit,1,true,true,29727,25343,1805,4129,65310,1348,8,10,8,44045,3,0,true,false,0,10370,false,false,0.014190800000000002,,,0x2260fac5e5542a773aa44fbcfedf7c193bc2c599,0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
 B,vault_asset:407420492426.E2,0,korean,E2,true,1,address,hit,1,true,true,62583,53939,3212,8295,95582,2711,18,21,20,6387,15,0,false,false,0,4641,true,true,0.021543,,,0x2260fac5e5542a773aa44fbcfedf7c193bc2c599,0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
 B,vault_asset:407420492426.E2,1,korean,E2,true,1,address,hit,1,true,true,23524,19626,3261,3754,27985,1016,6,8,7,22234,3,0,true,false,0,6139,false,false,0.0064866,,,0x2260fac5e5542a773aa44fbcfedf7c193bc2c599,0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
 B,vault_asset:4ccad9d55098.E1,0,headline,E1,true,1,address,hit,1,true,true,70512,61504,3247,8339,185008,2900,21,20,19,24996,7,0,true,false,0,7059,true,true,0.03950159999999999,,,0x48c59199da51b7e30ea200a74ea07974e62c4ba7,0x48c59199da51b7e30ea200a74ea07974e62c4ba7
@@ -869,6 +915,8 @@ B,vault_asset:86648095ecb5.E1,1,headline,E1,true,1,address,hit,1,true,true,11625
 0x3472a5a71965499acd81997a54bba8d852c6e53d",0x3472a5a71965499acd81997a54bba8d852c6e53d
 B,vault_asset:86648095ecb5.E2,0,korean,E2,true,1,address,hit,1,true,true,18908,16350,3288,2476,19447,844,5,6,6,788,2,0,false,false,0,2210,false,false,0.0046358,,,0x3472a5a71965499acd81997a54bba8d852c6e53d,0x3472a5a71965499acd81997a54bba8d852c6e53d
 B,vault_asset:86648095ecb5.E2,1,korean,E2,true,1,address,hit,1,true,true,55940,48134,2557,7484,91626,2518,15,20,19,6351,14,0,false,false,0,4610,true,true,0.020596,,,0x3472a5a71965499acd81997a54bba8d852c6e53d,0x3472a5a71965499acd81997a54bba8d852c6e53d
+B,vault_asset:8f0df881d197.E1,0,headline,E1,true,1,address,hit,1,true,true,68664,60591,3034,7655,112469,3045,20,20,20,2029,1,0,false,false,0,2952,true,true,0.0251208,,,0xc4ad29ba4b3c580e6d59105fff484999997675ff,0xc4ad29ba4b3c580e6d59105fff484999997675ff
+B,vault_asset:8f0df881d197.E1,1,headline,E1,true,1,address,hit,1,true,true,12895,11353,3104,1482,14702,592,4,4,4,490,1,0,false,false,0,2079,false,false,0.0034556,,,0xc4ad29ba4b3c580e6d59105fff484999997675ff,0xc4ad29ba4b3c580e6d59105fff484999997675ff
 B,vault_asset:8f421b959984.E1,0,headline,E1,true,1,address,hit,1,true,true,27365,21833,1838,5354,43336,1116,6,8,7,22375,3,0,true,false,0,6230,false,false,0.0096168,,,"The vault is found in badgerdao. The input token address is `0x9a13867048e01c663ce8ce2fe0cdae69ff9f35e3`.
 
 0x9a13867048e01c663ce8ce2fe0cdae69ff9f35e3",0x9a13867048e01c663ce8ce2fe0cdae69ff9f35e3
@@ -911,6 +959,8 @@ B,vault_asset_symbol:301e25fac95c.E1,0,headline,E1,true,1,symbol,hit,1,true,true
 B,vault_asset_symbol:301e25fac95c.E1,1,headline,E1,true,1,symbol,hit,1,true,true,66965,57529,3274,8864,180852,2893,21,20,19,24194,8,0,true,false,0,6608,true,true,0.0386662,,,bBTC/sbtcCRV,bBTC/sbtcCRV
 B,vault_asset_symbol:301e25fac95c.P,0,ceiling,P,true,1,symbol,hit,1,true,true,20770,17737,1520,2845,43450,889,6,7,6,21710,2,0,true,false,0,6289,false,false,0.0094634,,,bBTC/sbtcCRV,bBTC/sbtcCRV
 B,vault_asset_symbol:301e25fac95c.P,1,ceiling,P,true,1,symbol,hit,1,true,true,20452,17399,1584,2875,43457,896,6,7,6,21710,2,0,true,false,0,6296,false,false,0.009469000000000002,,,bBTC/sbtcCRV,bBTC/sbtcCRV
+B,vault_asset_symbol:3e9bf610a839.E1,0,headline,E1,true,1,symbol,hit,1,true,true,66077,57692,2684,7796,178476,2890,21,20,19,24610,9,0,true,false,0,6773,true,true,0.0381892,,,crvRenWSBTC,crvRenWSBTC
+B,vault_asset_symbol:3e9bf610a839.E1,1,headline,E1,true,1,symbol,hit,1,true,true,68209,57492,2994,9907,236747,2425,21,20,17,68509,7,0,true,false,0,11748,true,true,0.0494844,,,crvRenWSBTC,crvRenWSBTC
 B,vault_asset_symbol:40ef501480a7.E1,0,headline,E1,true,1,symbol,hit,1,true,true,69128,60671,3157,7865,178881,2969,21,20,19,25441,4,0,true,false,0,7220,true,true,0.0383176,,,B-stETH-STABLE,B-stETH-STABLE
 B,vault_asset_symbol:40ef501480a7.E1,1,headline,E1,true,1,symbol,hit,1,true,true,66456,57821,3259,8080,179253,2837,21,20,19,24400,1,0,true,false,0,6716,true,true,0.038312799999999994,,,B-stETH-STABLE,B-stETH-STABLE
 B,vault_asset_symbol:40ef501480a7.E2,0,korean,E2,true,1,symbol,hit,1,true,true,25551,22237,3055,3100,51317,1028,9,8,7,22714,2,0,true,false,0,5797,false,false,0.011160200000000002,,,B-stETH-STABLE,B-stETH-STABLE
@@ -923,6 +973,8 @@ B,vault_asset_symbol:65c4b017e70c.E1,0,headline,E1,true,1,symbol,hit,1,true,true
 B,vault_asset_symbol:65c4b017e70c.E1,1,headline,E1,true,1,symbol,hit,1,true,true,59547,50741,2789,8431,106045,2486,16,20,19,6346,14,0,false,false,0,4611,true,true,0.023460599999999998,,,BADGER,BADGER
 B,vault_asset_symbol:7f8ad4df74b7.E1,0,headline,E1,true,1,symbol,hit,1,true,true,17114,14114,3043,2929,19252,721,5,5,5,775,1,0,false,false,0,2226,false,false,0.004482999999999999,,,DIGG,DIGG
 B,vault_asset_symbol:7f8ad4df74b7.E1,1,headline,E1,true,1,symbol,hit,1,true,true,28035,24419,3343,3453,42090,1199,10,9,8,1031,3,0,false,false,0,2378,false,false,0.009457400000000001,,,DIGG,DIGG
+B,vault_asset_symbol:7f8ad4df74b7.E2,0,korean,E2,true,1,symbol,hit,1,true,true,32252,27719,2587,4314,53919,1377,12,11,9,2374,2,0,false,false,0,3030,false,false,0.01197,,,DIGG,DIGG
+B,vault_asset_symbol:7f8ad4df74b7.E2,1,korean,E2,true,1,symbol,hit,1,true,true,29647,25539,2803,3904,48573,1231,11,10,8,2251,3,0,false,false,0,2957,false,false,0.010773200000000002,,,DIGG,DIGG
 B,vault_asset_symbol:801f285d5097.E1,0,headline,E1,true,1,symbol,hit,1,true,true,46391,38801,3262,7081,157377,1890,14,14,10,52658,4,0,true,false,0,15232,false,false,0.0330094,,,bveCVX-CVX-f,bveCVX-CVX-f
 B,vault_asset_symbol:801f285d5097.E1,1,headline,E1,true,1,symbol,wrong,0,false,true,20403,17559,3388,2696,32243,885,6,7,6,5779,3,0,false,false,0,4477,false,false,0.0072196000000000005,had_it_and_still_wrong,,"The token symbol is returned directly in the vault record.
 
@@ -935,8 +987,12 @@ cvxCRV",cvxCRV
 B,vault_asset_symbol:9e37ab89132e.E1,1,headline,E1,true,1,symbol,hit,1,true,true,20041,16720,3347,3148,35024,808,6,6,4,44836,1,0,true,false,0,9575,false,false,0.0076496,,,cvxCRV,cvxCRV
 B,vault_asset_symbol:9e37ab89132e.E2,0,korean,E2,true,1,symbol,hit,1,true,true,30680,26144,3155,4401,33765,1270,8,9,9,995,3,0,false,false,0,2316,false,false,0.007875,,,cvxCRV,cvxCRV
 B,vault_asset_symbol:9e37ab89132e.E2,1,korean,E2,true,1,symbol,hit,1,true,true,15640,13169,2852,2344,25246,687,5,6,5,5654,2,0,false,false,0,4331,false,false,0.0056614000000000005,,,cvxCRV,cvxCRV
+B,vault_asset_symbol:d4af303ac5c7.E1,0,headline,E1,true,1,symbol,hit,1,true,true,16831,14423,2759,2300,22624,669,6,5,5,483,0,0,false,false,0,2071,false,false,0.005126199999999999,,,APE,APE
+B,vault_asset_symbol:d4af303ac5c7.E1,1,headline,E1,true,1,symbol,hit,1,true,true,15474,13439,2745,1938,22624,669,6,5,5,483,0,0,false,false,0,2071,false,false,0.005126199999999999,,,APE,APE
 B,vault_asset_symbol:d4af303ac5c7.P,0,ceiling,P,true,1,symbol,hit,1,true,true,34486,25600,2267,8639,51811,1118,7,9,8,21605,3,0,true,false,0,6193,false,false,0.011353,,,APE,APE
 B,vault_asset_symbol:d4af303ac5c7.P,1,ceiling,P,true,1,symbol,hit,1,true,true,30425,26524,1674,3682,51811,1118,7,9,8,21605,3,0,true,false,0,6193,false,false,0.011353,,,APE,APE
+B,vault_asset_symbol:de76c5f7ef97.E1,0,headline,E1,true,1,symbol,hit,1,true,true,67762,58838,3014,8047,303981,2700,21,20,16,72717,7,0,true,false,0,15799,true,true,0.0630562,,,SLP,SLP
+B,vault_asset_symbol:de76c5f7ef97.E1,1,headline,E1,true,1,symbol,wrong,0,false,true,40599,32762,3164,6749,202082,1378,15,14,6,165471,0,0,true,true,0,32183,false,true,0.0414832,context_exhausted,"context_exhausted with an empty final — §3: running out of window is a MISS, never an error",,SLP
 B,vault_fee_pct:10a5158bb054.E1,0,headline,E1,true,1,decimal,hit,1,true,true,75410,66916,3366,7562,218834,2867,21,20,18,45517,10,0,true,false,0,9857,true,true,0.046207,,,2.5,2.5
 B,vault_fee_pct:10a5158bb054.E1,1,headline,E1,true,1,decimal,hit,1,true,true,78570,68077,4116,9524,225265,2838,21,20,18,47765,7,0,true,false,0,10894,true,true,0.0474758,,,2.5,2.5
 B,vault_fee_pct:10a5158bb054.P,0,ceiling,P,true,1,decimal,hit,1,true,true,62910,54586,1652,7868,139100,2729,16,20,19,22957,14,0,true,false,0,6392,true,true,0.030217400000000002,,,2.5,2.5
@@ -947,6 +1003,8 @@ The 0x47ed... vault is found in the arrakis-finance subgraph (G-UNI, ""Gelato Un
 2.5",2.5
 B,vault_fee_pct:1580713be3f5.E1,0,headline,E1,true,1,decimal,hit,1,true,true,65883,56977,3309,8160,218394,2779,21,20,18,45676,2,0,true,false,0,9982,true,true,0.0460662,,,2.5,2.5
 B,vault_fee_pct:1580713be3f5.E1,1,headline,E1,true,1,decimal,hit,1,true,true,63855,53671,2061,9743,119051,2703,14,21,20,23273,12,0,true,false,0,6528,true,true,0.026232,,,2.5,2.5
+B,vault_fee_pct:1580713be3f5.E2,0,korean,E2,true,1,decimal,hit,1,true,true,23235,20263,3234,2860,23549,1040,6,8,8,652,3,0,false,false,0,2091,false,false,0.0056538,,,2.5,2.5
+B,vault_fee_pct:1580713be3f5.E2,1,korean,E2,true,1,decimal,hit,1,true,true,13499,11877,2740,1524,18551,593,5,4,4,433,0,0,false,false,0,2021,false,false,0.004226000000000001,,,2.5,2.5
 B,vault_fee_pct:159c2f95e199.E1,0,headline,E1,true,1,decimal,hit,1,true,true,62665,54877,2837,7392,106477,2806,19,20,19,23172,11,0,true,false,0,6524,true,true,0.023739000000000003,,,2.5,2.5
 B,vault_fee_pct:159c2f95e199.E1,1,headline,E1,true,1,decimal,hit,1,true,true,64701,56398,3283,7715,146609,2739,19,20,19,23592,10,0,true,false,0,6203,true,true,0.0317252,,,2.5,2.5
 B,vault_fee_pct:159c2f95e199.E2,0,korean,E2,true,1,decimal,hit,1,true,true,25298,22124,2947,3016,41985,1104,9,8,7,3606,1,0,false,false,0,3458,false,false,0.009339400000000001,,,2.5,2.5
@@ -967,6 +1025,8 @@ B,vault_fee_pct:68264a8f3117.E1,0,headline,E1,true,1,decimal,hit,1,true,true,591
 B,vault_fee_pct:68264a8f3117.E1,1,headline,E1,true,1,decimal,hit,1,true,true,64331,55374,3499,8109,240299,2497,21,20,16,59615,3,0,true,false,0,16686,true,true,0.050198,,,0,0
 B,vault_fee_pct:77bfb79e9fca.E1,0,headline,E1,true,1,decimal,hit,1,true,true,65177,56468,2951,7997,217435,2789,21,20,18,45464,10,0,true,false,0,9813,true,true,0.045880399999999995,,,2.5,2.5
 B,vault_fee_pct:77bfb79e9fca.E1,1,headline,E1,true,1,decimal,hit,1,true,true,58986,49247,3250,9193,155629,2422,16,20,17,50664,10,0,true,false,0,12064,true,true,0.033259000000000004,,,2.5,2.5
+B,vault_fee_pct:77bfb79e9fca.E2,0,korean,E2,true,1,decimal,hit,1,true,true,24743,20972,3190,3660,23889,1067,6,8,8,652,3,0,false,false,0,2093,false,false,0.005738,,,2.5,2.5
+B,vault_fee_pct:77bfb79e9fca.E2,1,korean,E2,true,1,decimal,hit,1,true,true,60168,52212,2988,7483,140549,2681,18,20,19,23203,11,0,true,false,0,6531,true,true,0.030478400000000006,,,2.5,2.5
 B,vault_fee_pct:77bfb79e9fca.P,0,ceiling,P,true,1,decimal,hit,1,true,true,26023,22563,1795,3257,51593,1165,7,9,8,21671,3,0,true,false,0,6221,false,false,0.011337600000000001,,,2.5,2.5
 B,vault_fee_pct:77bfb79e9fca.P,1,ceiling,P,true,1,decimal,hit,1,true,true,27069,22566,1722,4292,51593,1165,7,9,8,21671,3,0,true,false,0,6221,false,false,0.011337600000000001,,,2.5,2.5
 B,vault_fee_pct:7844f4193732.E1,0,headline,E1,true,1,decimal,hit,1,true,true,68924,60647,2959,7513,227184,2897,21,20,18,46297,3,0,true,false,0,10793,true,true,0.04789500000000001,,,2.5,2.5
@@ -979,6 +1039,8 @@ B,vault_fee_pct:ab05eada7e65.E2,0,korean,E2,true,1,decimal,hit,1,true,true,28669
 B,vault_fee_pct:ab05eada7e65.E2,1,korean,E2,true,1,decimal,hit,1,true,true,57648,50908,3064,6435,86751,2660,17,17,17,1521,12,0,false,false,0,2510,false,false,0.0196262,,,10,10
 B,vault_fee_pct:ab05eada7e65.P,0,ceiling,P,true,1,decimal,hit,1,true,true,6673,5813,2064,775,18572,233,3,2,1,22054,0,0,true,false,0,6016,false,false,0.0038942,,,10,10
 B,vault_fee_pct:ab05eada7e65.P,1,ceiling,P,true,1,decimal,hit,1,true,true,4140,3766,3348,336,7098,171,2,1,1,529,0,0,false,false,0,2086,false,false,0.0015622000000000001,,,10,10
+B,vault_fee_pct:b34d8ea1e411.E1,0,headline,E1,true,1,decimal,hit,1,true,true,3667,3302,2809,338,6979,156,2,1,1,319,0,0,false,false,0,1972,false,false,0.0015294000000000002,,,10,10
+B,vault_fee_pct:b34d8ea1e411.E1,1,headline,E1,true,1,decimal,hit,1,true,true,3260,2890,2605,343,6968,145,2,1,1,319,0,0,false,false,0,1962,false,false,0.0015206000000000002,,,10,10
 B,vault_fee_pct:c5218250c139.E1,0,headline,E1,true,1,decimal,hit,1,true,true,72027,63771,3426,7600,210192,3182,18,20,17,51357,6,0,true,false,0,13976,true,true,0.0446276,,,0,0
 B,vault_fee_pct:c5218250c139.E1,1,headline,E1,true,1,decimal,hit,1,true,true,62224,54088,3144,7634,153337,2766,18,20,19,25004,13,0,true,false,0,7174,true,true,0.033087,,,0,0
 B,vault_fee_pct:d18f8f46abb1.E2,0,tripwire,E2,false,1,decimal,hit,1,true,true,61152,50977,3305,9459,213295,2366,18,20,16,83305,4,0,true,false,0,20068,true,true,0.044718600000000004,,,0,0
@@ -995,6 +1057,8 @@ B,vault_name:1268de986806.E1,0,headline,E1,true,1,symbol,hit,1,true,true,63902,5
 B,vault_name:1268de986806.E1,1,headline,E1,true,1,symbol,hit,1,true,true,58226,50486,3306,7291,126188,2510,17,20,19,23677,14,0,true,false,0,6214,true,true,0.027503600000000003,,,Arrakis Vault V1 USDC/SPOT-0.3%,Arrakis Vault V1 USDC/SPOT-0.3%
 B,vault_name:1580713be3f5.E2,0,tripwire,E2,false,1,symbol,hit,1,true,true,24764,20765,2845,3858,24027,1081,6,8,8,897,3,0,false,false,0,2214,false,false,0.0057740000000000005,,,Gelato Uniswap DAI/USDT LP-0.05%,Gelato Uniswap DAI/USDT LP-0.05%
 B,vault_name:1580713be3f5.E2,1,tripwire,E2,false,1,symbol,hit,1,true,true,24698,20825,3149,3754,23472,1109,6,8,8,866,3,0,false,false,0,2205,false,false,0.0056798000000000005,,,Gelato Uniswap DAI/USDT LP-0.05%,Gelato Uniswap DAI/USDT LP-0.05%
+B,vault_name:29e5c6ef1256.E1,0,headline,E1,true,1,symbol,hit,1,true,true,31755,28121,3295,3452,46016,1345,10,9,8,2522,2,0,false,false,0,2997,false,false,0.010330200000000001,,,Visor APW-ETH Uni 3%,Visor APW-ETH Uni 3%
+B,vault_name:29e5c6ef1256.E1,1,headline,E1,true,1,symbol,hit,1,true,true,63723,55675,2780,7638,113511,2863,21,20,19,3123,13,0,false,false,0,3248,true,true,0.02518,,,Visor APW-ETH Uni 3%,Visor APW-ETH Uni 3%
 B,vault_name:29e5c6ef1256.E2,0,korean,E2,true,1,symbol,hit,1,true,true,20102,17618,3131,2388,24048,947,6,6,6,735,1,0,false,false,0,2172,false,false,0.0056178,,,Visor APW-ETH Uni 3%,Visor APW-ETH Uni 3%
 B,vault_name:29e5c6ef1256.E2,1,korean,E2,true,1,symbol,hit,1,true,true,21031,18131,2759,2770,27991,964,7,7,7,579,1,0,false,false,0,2130,false,false,0.006456600000000001,,,Visor APW-ETH Uni 3%,Visor APW-ETH Uni 3%
 B,vault_name:29e5c6ef1256.P,0,ceiling,P,true,1,symbol,wrong,0,false,true,49415,40152,3214,8980,76468,1983,15,14,13,2802,3,0,false,false,0,3142,false,false,0.017003400000000002,ignored_result,,Vis,Visor APW-ETH Uni 3%
@@ -1023,6 +1087,8 @@ B,vault_name:9a3adb214ac3.P,0,ceiling,P,true,1,symbol,hit,1,true,true,4414,3995,
 B,vault_name:9a3adb214ac3.P,1,ceiling,P,true,1,symbol,wrong,0,false,true,13149,11283,4570,1787,15366,597,4,4,4,661,1,0,false,false,0,2193,false,false,0.0035914000000000002,had_it_and_still_wrong,,"The vault is unambiguously in the gamma-strategies subgraph.
 
 xWBTC-ETH05",xWBTC-ETH05
+B,vault_name:c786fef3f286.E1,0,headline,E1,true,1,symbol,hit,1,true,true,64432,55835,3352,7963,198563,2667,21,20,19,37287,6,0,true,false,0,10861,true,true,0.04207280000000001,,,ETH-WRLD Uni 1%,ETH-WRLD Uni 1%
+B,vault_name:c786fef3f286.E1,1,headline,E1,true,1,symbol,hit,1,true,true,60043,52170,3209,7578,68650,2729,14,20,20,1442,7,0,false,false,0,2497,true,true,0.0161674,,,ETH-WRLD Uni 1%,ETH-WRLD Uni 1%
 B,vault_name:c786fef3f286.E2,0,korean,E2,true,1,symbol,wrong,0,false,true,20906,18651,3506,2150,24206,955,6,6,6,735,1,0,false,false,0,2207,false,false,0.005654199999999999,ignored_result,,"gamma-strategies 서브그래프에서找到了 이 ERC-4626 볼트입니다.
 
 ETH-WRLD Uni 1%",ETH-WRLD Uni 1%
@@ -1043,6 +1109,12 @@ B,vault_symbol:14c1d641755d.E1,0,headline,E1,true,1,symbol,hit,1,true,true,60689
 B,vault_symbol:14c1d641755d.E1,1,headline,E1,true,1,symbol,hit,1,true,true,52461,44590,3314,7334,161369,2087,17,20,14,35958,5,0,true,false,0,11782,true,true,0.034086000000000005,,,G-UNI,G-UNI
 B,vault_symbol:2ab135606ce9.E1,0,headline,E1,true,1,symbol,abstain,0,false,true,55266,44890,1809,9581,241935,2040,15,21,11,92409,2,0,true,false,0,24271,true,true,0.050051000000000005,budget_exhausted,,I do not know.,G-UNI
 B,vault_symbol:2ab135606ce9.E1,1,headline,E1,true,1,symbol,hit,1,true,true,64586,56322,3285,7619,194197,2675,21,20,18,30890,9,0,true,false,0,9676,true,true,0.041164400000000004,,,G-UNI,G-UNI
+B,vault_symbol:2ab135606ce9.P,0,ceiling,P,true,1,symbol,wrong,0,false,true,18226,16037,3039,2107,19247,845,5,6,6,576,2,0,false,false,0,2168,false,false,0.0045964,had_it_and_still_wrong,,"The vault is found in the arrakis-finance subgraph. The input token symbol is:
+
+G-UNI",G-UNI
+B,vault_symbol:2ab135606ce9.P,1,ceiling,P,true,1,symbol,hit,1,true,true,61185,52898,1755,7744,159426,2687,16,21,19,30260,7,0,true,false,0,10340,true,true,0.0342574,,,G-UNI,G-UNI
+B,vault_symbol:40ef501480a7.E1,0,headline,E1,true,1,symbol,hit,1,true,true,20316,16888,3834,3344,19825,867,5,6,6,1553,2,0,false,false,0,2598,false,false,0.0047252,,,bB-stETH-STABLE,bB-stETH-STABLE
+B,vault_symbol:40ef501480a7.E1,1,headline,E1,true,1,symbol,hit,1,true,true,67030,58536,3332,7778,219778,2890,21,20,18,46587,2,0,true,false,0,10392,true,true,0.0464096,,,bB-stETH-STABLE,bB-stETH-STABLE
 B,vault_symbol:44a5a5fe5ffd.E1,0,headline,E1,true,1,symbol,wrong,0,false,true,44426,35687,3327,8219,140952,1669,14,13,9,51199,1,0,true,false,0,12975,false,false,0.0295518,had_it_and_still_wrong,,"The vault's share token (outputToken) is the token with the same address, and its ticker is:
 
 GAMMA-ETH-3",GAMMA-ETH-3
@@ -1055,8 +1127,12 @@ B,vault_symbol:71831756d99a.E1,0,headline,E1,true,1,symbol,hit,1,true,true,26102
 B,vault_symbol:71831756d99a.E1,1,headline,E1,true,1,symbol,hit,1,true,true,14944,12483,4660,2386,15343,661,4,5,5,1011,2,0,false,false,0,2299,false,false,0.0036652000000000004,,,TRIBE-ETH3,TRIBE-ETH3
 B,vault_symbol:7400b4194d81.E1,0,headline,E1,true,1,symbol,hit,1,true,true,59890,50628,3289,8695,156587,2473,15,21,18,46488,13,0,true,false,0,10718,true,true,0.0335212,,,vETH-GTCV3-1,vETH-GTCV3-1
 B,vault_symbol:7400b4194d81.E1,1,headline,E1,true,1,symbol,hit,1,true,true,66273,56313,3786,9522,132181,2896,17,20,19,23322,14,0,true,false,0,6576,true,true,0.0289338,,,vETH-GTCV3-1,vETH-GTCV3-1
+B,vault_symbol:7400b4194d81.P,0,ceiling,P,true,1,symbol,hit,1,true,true,20413,17604,3226,2673,32093,894,6,7,6,5893,2,0,false,false,0,4514,false,false,0.007195,,,vETH-GTCV3-1,vETH-GTCV3-1
+B,vault_symbol:7400b4194d81.P,1,ceiling,P,true,1,symbol,hit,1,true,true,10862,9203,1341,1581,21582,471,4,4,3,5878,1,0,false,false,0,4522,false,false,0.004719000000000001,,,vETH-GTCV3-1,vETH-GTCV3-1
 B,vault_symbol:b58c90fd6ee4.E1,0,headline,E1,true,1,symbol,hit,1,true,true,15084,12241,3138,2754,25857,632,5,5,4,6336,1,0,false,false,0,4721,false,false,0.005710600000000001,,,G-UNI,G-UNI
 B,vault_symbol:b58c90fd6ee4.E1,1,headline,E1,true,1,symbol,hit,1,true,true,69886,61376,3367,7901,203104,3054,21,20,17,29836,10,0,true,false,0,8681,true,true,0.043133200000000003,,,G-UNI,G-UNI
+B,vault_symbol:b58c90fd6ee4.P,0,ceiling,P,true,1,symbol,hit,1,true,true,54870,45836,1693,8495,151937,2241,14,20,16,54983,7,0,true,false,0,12112,true,true,0.032372000000000005,,,G-UNI,G-UNI
+B,vault_symbol:b58c90fd6ee4.P,1,ceiling,P,true,1,symbol,hit,1,true,true,61159,52376,3320,8016,224753,2403,16,20,18,65192,4,0,true,false,0,21161,true,true,0.047112400000000006,,,G-UNI,G-UNI
 B,vault_symbol:b5f3855e4bb9.E1,0,headline,E1,true,1,symbol,hit,1,true,true,60344,50564,4911,9300,137034,2454,16,20,18,28990,8,0,true,false,0,8738,true,true,0.0295992,,,RAKIS-1,RAKIS-1
 B,vault_symbol:b5f3855e4bb9.E1,1,headline,E1,true,1,symbol,hit,1,true,true,69548,60752,3675,8156,186329,2984,21,20,18,26737,10,0,true,false,0,7642,true,true,0.0397762,,,RAKIS-1,RAKIS-1
 B,vault_symbol:d5c7c97fcc2c.E1,0,headline,E1,true,1,symbol,hit,1,true,true,21481,18547,3350,2666,58207,851,6,7,5,33009,1,0,true,false,0,11941,false,false,0.012352000000000002,,,G-UNI,G-UNI
@@ -1068,6 +1144,10 @@ B,vault_symbol:d82bb90102fa.E1,0,headline,E1,true,1,symbol,hit,1,true,true,70072
 B,vault_symbol:d82bb90102fa.E1,1,headline,E1,true,1,symbol,hit,1,true,true,69147,59952,3567,8694,172137,2985,21,20,19,23771,11,0,true,false,0,6318,true,true,0.0369784,,,RAKIS-20,RAKIS-20
 B,vault_symbol:d82bb90102fa.E2,0,korean,E2,true,1,symbol,hit,1,true,true,23612,20912,2567,2465,51847,994,7,6,5,22562,0,0,true,false,0,6337,false,false,0.011165800000000002,,,RAKIS-20,RAKIS-20
 B,vault_symbol:d82bb90102fa.E2,1,korean,E2,true,1,symbol,hit,1,true,true,18073,15626,3038,2360,19470,823,5,6,6,905,2,0,false,false,0,2230,false,false,0.0046278,,,RAKIS-20,RAKIS-20
+B,vault_symbol:d82bb90102fa.P,0,ceiling,P,true,1,symbol,hit,1,true,true,25148,20979,1777,3942,52224,1081,7,8,7,21713,2,0,true,false,0,6348,false,false,0.0113734,,,RAKIS-20,RAKIS-20
+B,vault_symbol:d82bb90102fa.P,1,ceiling,P,true,1,symbol,hit,1,true,true,53413,44802,2794,8102,124293,2218,13,20,18,79359,8,0,true,false,0,11562,true,true,0.0269094,,,RAKIS-20,RAKIS-20
+B,vault_symbol:dec8835e14b0.E1,0,headline,E1,true,1,symbol,hit,1,true,true,27425,22734,4113,4540,24208,1109,6,8,8,1551,3,0,false,false,0,2623,false,false,0.005827000000000001,,,G-UNI,G-UNI
+B,vault_symbol:dec8835e14b0.E1,1,headline,E1,true,1,symbol,hit,1,true,true,15920,13786,3433,2021,25980,656,5,5,4,6361,1,0,false,false,0,4776,false,false,0.0057496000000000005,,,G-UNI,G-UNI
 B,vault_symbol:dec8835e14b0.E2,0,korean,E2,true,1,symbol,hit,1,true,true,19767,17446,1749,2166,43588,903,6,5,4,21742,0,0,true,false,0,6424,false,false,0.009419400000000001,,,G-UNI,G-UNI
 B,vault_symbol:dec8835e14b0.E2,1,korean,E2,true,1,symbol,hit,1,true,true,20086,18000,4301,1972,23927,964,6,5,5,839,0,0,false,false,0,2344,false,false,0.0055638,,,G-UNI,G-UNI
 B,vault_symbol:dec8835e14b0.P,0,ceiling,P,true,1,symbol,hit,1,true,true,35319,20362,3133,14848,23735,1059,6,8,8,675,3,0,false,false,0,2148,false,false,0.005702400000000001,,,G-UNI,G-UNI
