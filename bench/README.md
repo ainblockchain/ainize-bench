@@ -376,6 +376,34 @@ the mailbox defaulted to `runtime.repo/ple_patch`, which belongs to a different 
 that never saw a patch. `ainize status` prints the mailbox with a warning when it has to guess it; that
 warning was the only sign.
 
+**And when it finally ran, it did not produce an arm C.** 2026-09-13, after a 12-hour run that timed out at pass
+12 of 20 and a 5-hour one that completed: the lesson was refused by the product's own publish gate.
+
+```
+taught    6 of 24 questions re-asked on the serving model
+locality  3 of 10 unrelated answers unchanged   (2 more were not repeatable and left out)
+=> NEEDS_MORE
+```
+
+The trainer's own final probe was 66 % — and evenly so across all four prompt forms it trains
+(`qa` 79/119, `chat` 77, `nl` 79, `space` 78, from a baseline of 4/1/1/0). So this is not the trained-form /
+asked-form mismatch it would be easy to assume: the node re-asks in the same `Q: …\nA:` form the trainer used.
+
+**The locality number is the result, and it is about this dataset rather than about settings.** 119 facts touched
+**49,825 memory rows** — 419 rows per fact. The answers are short (`G-UNI`, `2.5`) and the questions are dominated
+by 42-character hex addresses, which tokenise into long sequences and give every fact a very large n-gram
+footprint. A patch that rewrites fifty thousand rows moves answers nobody asked about, and the gate says so.
+
+Two knobs were tried and neither is the cause: the micro-batch (8 — 64 ran out of memory on a 40 GB A100) and the
+contrast set (24). Raising the pass count raises accuracy and the footprint together, so the two gates move in
+opposite directions.
+
+**What this is evidence for.** The protocol's §"The claim under test" asks whether compiled memory beats a tool
+loop on the facts it holds. This run says something narrower and earlier: **an address→symbol lookup is not a
+fact this method can compile at all on this model.** That is a result about which knowledge belongs in memory and
+which belongs behind a query — which is what the four arms exist to separate — and it belongs in the write-up
+rather than in a retry loop.
+
 Arms C and D are executed against the running node, not against a script that re-implements patching.
 
 - **Arms A, C and D run in ONE PROCESS on ONE ENGINE INSTANCE — and that is weaker than the per-chunk
