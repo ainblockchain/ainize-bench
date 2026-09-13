@@ -10,4 +10,4 @@ packages/web/dist/
 *.tsbuildinfo
 
 # Bench transcripts live in the run's transcripts.tar.zst; score.mjs unpacks it here on first use.
-graph/bench/runs/*/transcripts/
+bench/runs/*/transcripts/
