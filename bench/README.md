@@ -389,10 +389,20 @@ The trainer's own final probe was 66 % — and evenly so across all four prompt 
 (`qa` 79/119, `chat` 77, `nl` 79, `space` 78, from a baseline of 4/1/1/0). So this is not the trained-form /
 asked-form mismatch it would be easy to assume: the node re-asks in the same `Q: …\nA:` form the trainer used.
 
-**The locality number is the result, and it is about this dataset rather than about settings.** 119 facts touched
-**49,825 memory rows** — 419 rows per fact. The answers are short (`G-UNI`, `2.5`) and the questions are dominated
-by 42-character hex addresses, which tokenise into long sequences and give every fact a very large n-gram
-footprint. A patch that rewrites fifty thousand rows moves answers nobody asked about, and the gate says so.
+**The locality number is the result, and a second run showed it is about the METHOD, not this dataset.** 119 facts
+touched **49,825 memory rows** — 419 per fact — and the first reading of that was that 42-character hex addresses
+tokenise long and give each fact an unusually large n-gram footprint.
+
+That explanation was wrong, and a five-fact lesson refuted it. Five short vocabulary facts with no addresses in
+them (`In the Fields of Lending Market, what is the meaning for Field 'id'?` → `the market contract address,
+lowercase`) touched **4,848 rows — 970 per fact**, more than twice the address dataset's rate, and scored
+**locality 2 of 11**: worse than the 119-fact run, from a lesson that `converged: true` and answered 10 of 10 of
+its own questions when re-asked on the serving model.
+
+So the footprint per fact does not come from the length of the question, and teaching less does not disturb less.
+On this model, compiling a fact into the memory table costs several hundred rows whatever the fact is, and those
+rows move answers nobody asked about. That is a property of the method at this scale, and it is the finding —
+not a dataset to be swapped or a setting to be tuned.
 
 Two knobs were tried and neither is the cause: the micro-batch (8 — 64 ran out of memory on a 40 GB A100) and the
 contrast set (24). Raising the pass count raises accuracy and the footprint together, so the two gates move in
