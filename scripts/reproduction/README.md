@@ -1,5 +1,9 @@
 # Training record inclusion latency
 
+To start one real HF teaching job on an existing idle gradient-capable node, use
+[HF training](M6-HF-TRAINING.md) and `run-m6-huggingface-training.sh`. It retains
+admission evidence before waiting and never retries or cancels an admitted job.
+
 For metric 6's existing HF import files → dataset/job → native READY transaction
 binding, see [HF training record verification](M6-HF-TRAINING-RECORD.md) and
 `run-m6-verify-huggingface-training-record.sh`. It is read-only and reports binding

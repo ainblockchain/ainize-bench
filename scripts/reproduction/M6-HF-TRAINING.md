@@ -60,3 +60,15 @@ gate. If the existing node uses a local ledger, its run does not provide an AIN
 transaction; do not invent a path or treat that run as explorer evidence. On a
 properly configured AIN-ledger node, continue with
 [HF training record verification](M6-HF-TRAINING-RECORD.md) and actual inference.
+
+## Launcher regression checks
+
+```sh
+node --test scripts/reproduction/test/hf-training-preflight.test.js
+```
+
+The controlled HTTP/Docker fixture checks that stub, queued, applied-patch and
+active-runtime states fail after read-only requests, before creating a client,
+teaching key or training job. On 2026-09-14 this check and the existing JavaScript
+reproduction suite passed (47 tests total). These are launcher safety checks,
+not evidence of a finished real training job or metric completion.
