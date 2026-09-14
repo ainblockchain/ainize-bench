@@ -1,0 +1,22 @@
+{
+  "kind": "image-and-unit-test-validation",
+  "date": "2026-09-14",
+  "image": "ainize-locust:ubuntu22.04-2.46.0",
+  "imageId": "sha256:719422870894863760cbea792105359b65a0669bfb9721f90b06459dd34f4176",
+  "os": "Ubuntu 22.04.5 LTS",
+  "python": "3.10.12",
+  "locust": "2.46.0",
+  "validationContainer": {
+    "cpus": 2,
+    "memory": "1g",
+    "memorySwap": "1g",
+    "network": "none",
+    "repositoryMount": "read-only",
+    "user": "host UID/GID"
+  },
+  "pythonUnitTestsPassed": 9,
+  "warnings": ["Locust --version emitted ignored Python/gevent logging-finalization warnings; command exited zero."],
+  "distributedLoadVerified": false,
+  "realInferenceVerified": false,
+  "note": "This proves image startup and unit tests, not 240-user/60-worker throughput or infrastructure-wide Ubuntu conformance."
+}

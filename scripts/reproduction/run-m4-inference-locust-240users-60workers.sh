@@ -6,10 +6,12 @@ SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 : "${M4_EVIDENCE_DIR:?New evidence directory required}"
 LOCUST_BIN=${LOCUST_BIN:-locust}
 DUR=${DUR:-60}
+M4_STABLE_SECONDS=${M4_STABLE_SECONDS:-30}
 [[ "$DUR" =~ ^[1-9][0-9]*$ ]] || { echo 'DUR must be positive seconds' >&2; exit 1; }
+[[ "$M4_STABLE_SECONDS" =~ ^[1-9][0-9]*$ && "$M4_STABLE_SECONDS" -le "$DUR" ]] || { echo 'Stable duration must be positive and no longer than DUR' >&2; exit 1; }
 umask 077
 mkdir "$M4_EVIDENCE_DIR"
-export AINIZE_TARGETS M4_EVIDENCE_DIR
+export AINIZE_TARGETS M4_EVIDENCE_DIR M4_STABLE_SECONDS
 "$LOCUST_BIN" --version > "$M4_EVIDENCE_DIR/locust-version.txt"
 PIDS=()
 cleanup() {

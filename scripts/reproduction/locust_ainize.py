@@ -11,8 +11,11 @@ from locust import User, task, events, constant
 from locust.runners import MasterRunner
 
 from ainize_sse import consume_chat
+from m4_membership import stable_window
 
 
+MIN_STABLE_SECONDS = float(os.environ.get("M4_STABLE_SECONDS", "30"))
+stable_window([], MIN_STABLE_SECONDS)
 TARGETS = json.loads(Path(os.environ["AINIZE_TARGETS"]).read_text())
 if not isinstance(TARGETS, list) or len(TARGETS) != 5:
     raise ValueError("AINIZE_TARGETS must contain five node assignments")
@@ -45,7 +48,8 @@ SAMPLER = None
 def sample_membership(environment):
     while True:
         runner = environment.runner
-        MEMBERSHIP.append({"at": time.time(), "workers": runner.worker_count, "users": runner.user_count})
+        MEMBERSHIP.append({"at": time.time(), "workers": runner.worker_count, "users": runner.user_count,
+            "members": {worker.id: {"users": worker.user_count, "state": worker.state} for worker in runner.clients.values()}})
         gevent.sleep(1)
 
 
@@ -61,7 +65,9 @@ def quitting(environment, **kwargs):
     if SAMPLER is not None:
         SAMPLER.kill()
         (OUTPUT / "membership.json").write_text(json.dumps(MEMBERSHIP))
-        if not any(sample["workers"] == 60 and sample["users"] == 240 for sample in MEMBERSHIP):
+        geometry = stable_window(MEMBERSHIP, MIN_STABLE_SECONDS)
+        (OUTPUT / "geometry.json").write_text(json.dumps(geometry))
+        if not geometry["complete"]:
             environment.process_exit_code = 1
 
 
