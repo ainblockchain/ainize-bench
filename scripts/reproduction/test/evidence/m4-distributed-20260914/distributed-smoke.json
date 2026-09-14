@@ -1,0 +1,15 @@
+{
+  "synthetic_only": true,
+  "workers": 60,
+  "successful_requests": 3113,
+  "failed_requests": 1307,
+  "geometry": {
+    "start": null,
+    "end": null,
+    "seconds": 0,
+    "minimum_seconds": 30.0,
+    "complete": false
+  },
+  "runner_exit": 1,
+  "scope": "Actual Locust process geometry and evidence bindings against synthetic SSE; not GPU throughput or chain verification"
+}

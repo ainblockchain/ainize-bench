@@ -1,0 +1,10 @@
+{
+  "image": "sha256:719422870894863760cbea792105359b65a0669bfb9721f90b06459dd34f4176",
+  "startedAt": "2026-09-14T02:58:14.172045782Z",
+  "nanoCpus": 4000000000,
+  "memory": 17179869184,
+  "memorySwap": 17179869184,
+  "pidsLimit": 1024,
+  "networkMode": "none",
+  "user": "1001:1002"
+}
