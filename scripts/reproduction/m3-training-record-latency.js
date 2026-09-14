@@ -20,6 +20,9 @@ async function measure(manifest, rpc) {
     try {
       const info = await rpc('ain_getTransactionByHash', { hash: job.txHash });
       if (!Number.isSafeInteger(info?.number) || info.number < 0) throw new Error('Transaction not included');
+      if (info.is_executed !== true || info.is_finalized !== true || info.receipt?.code !== 0) {
+        throw new Error('Successful finalized execution not confirmed');
+      }
       const block = await rpc('ain_getBlockByNumber', { number: info.number, getFullTransactions: true });
       if (block?.number !== info.number || typeof block.hash !== 'string' || !block.hash) throw new Error('Containing block identity mismatch');
       const transaction = block?.transactions?.find(item => item.hash === job.txHash);
@@ -32,6 +35,22 @@ async function measure(manifest, rpc) {
       records.push({ ...job, includedAt: block.timestamp, blockNumber: block.number, blockHash: block.hash, latencyMs: block.timestamp - job.submittedAt });
     } catch (error) {
       records.push({ ...job, error: error.message });
+    }
+  }
+  const blocks = new Map();
+  for (const record of records) {
+    if (record.error) continue;
+    try {
+      if (!blocks.has(record.blockNumber)) {
+        blocks.set(record.blockNumber, await rpc('ain_getBlockByNumber', { number: record.blockNumber }));
+      }
+      const current = blocks.get(record.blockNumber);
+      if (current?.number !== record.blockNumber || current.hash !== record.blockHash) {
+        throw new Error('Containing block changed before measurement completed');
+      }
+    } catch (error) {
+      record.error = error.message;
+      delete record.latencyMs;
     }
   }
   const included = records.filter(record => record.latencyMs !== undefined);

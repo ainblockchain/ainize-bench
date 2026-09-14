@@ -22,7 +22,8 @@ test('collects 70 original training receipts without exporting questions or key 
   assert.ok(!JSON.stringify(manifest).includes('private'));
   assert.deepEqual(statusArgs(input.targets[0]), ['--node', 'http://localhost:3400', 'teach', 'status', 'job-0', '--key-file', '/private/teacher.json', '--json']);
   const rpc = async (method, params) => {
-    if (method === 'ain_getTransactionByHash') return { number: Number(params.hash.split('-').at(-1)) + 1 };
+    if (method === 'ain_getTransactionByHash') return { number: Number(params.hash.split('-').at(-1)) + 1,
+      is_executed: true, is_finalized: true, receipt: { code: 0 } };
     if (params.number === 0) return { hash: 'genesis' };
     const job = manifest.jobs[params.number - 1];
     return { number: params.number, hash: `block-${params.number}`, timestamp: 1020, transactions: [

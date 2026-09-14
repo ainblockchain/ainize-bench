@@ -7,7 +7,8 @@ function fixture(change = () => {}) {
     path: `/apps/knowledge/market/lessons/node/job-${index}`, txHash: `tx-${index}`, submittedAt: 1000 }));
   const manifest = { version: 1, runId: 'fixture', genesisHash: 'genesis', jobs };
   const rpc = async (method, params) => {
-    if (method === 'ain_getTransactionByHash') return { number: Number(params.hash.slice(3)) + 1 };
+    if (method === 'ain_getTransactionByHash') return { number: Number(params.hash.slice(3)) + 1,
+      is_executed: true, is_finalized: true, receipt: { code: 0 } };
     if (params.number === 0) return { number: 0, hash: 'genesis' };
     const job = jobs[params.number - 1];
     const block = { number: params.number, hash: `block-${params.number}`, timestamp: 1025,
@@ -58,5 +59,40 @@ test('rejects malformed, duplicate, wrong-chain and wrong-job manifests', async 
     const { manifest, rpc } = fixture();
     change(manifest);
     await assert.rejects(measure(manifest, rpc));
+  }
+});
+
+test('failed, unexecuted, pending and missing execution receipts prevent an average', async () => {
+  for (const override of [
+    { receipt: { code: 12103 } }, { receipt: undefined }, { receipt: { code: '0' } },
+    { is_executed: false }, { is_executed: undefined }, { is_finalized: false }, { is_finalized: undefined },
+  ]) {
+    const { manifest, rpc } = fixture();
+    const result = await measure(manifest, async (method, params) => {
+      const value = await rpc(method, params);
+      return method === 'ain_getTransactionByHash' && params.hash === 'tx-0' ? { ...value, ...override } : value;
+    });
+    assert.equal(result.included, 69);
+    assert.equal(result.complete, false);
+    assert.equal(result.averageMs, null);
+    assert.match(result.records[0].error, /Successful finalized execution/);
+  }
+});
+
+test('changed or unavailable containing blocks invalidate the original measurement', async () => {
+  for (const unavailable of [false, true]) {
+    const { manifest, rpc } = fixture();
+    const result = await measure(manifest, async (method, params) => {
+      if (method === 'ain_getBlockByNumber' && params.number === 1 && !params.getFullTransactions) {
+        if (unavailable) throw new Error('RPC unavailable');
+        return { number: 1, hash: 'replacement-block' };
+      }
+      return rpc(method, params);
+    });
+    assert.equal(result.included, 69);
+    assert.equal(result.complete, false);
+    assert.equal(result.averageMs, null);
+    assert.equal(result.records[0].latencyMs, undefined);
+    assert.match(result.records[0].error, /changed|unavailable/);
   }
 });
