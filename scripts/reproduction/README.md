@@ -1,5 +1,10 @@
 # Training record inclusion latency
 
+For metric 6's existing HF import files → dataset/job → native READY transaction
+binding, see [HF training record verification](M6-HF-TRAINING-RECORD.md) and
+`run-m6-verify-huggingface-training-record.sh`. It is read-only and reports binding
+verification separately from real training, patch application and inference.
+
 Requires Node.js 22 or newer and a reachable AIN JSON-RPC endpoint. This external measurement tool does not add experiment APIs or screens to AINSCAN, launch nodes, or submit transactions.
 
 Genesis identity reads explicitly request full transactions. This avoids an older
