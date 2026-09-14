@@ -13,7 +13,7 @@ async function measure(manifest, rpc) {
   }
   if (new Set(manifest.jobs.map(job => `${job.nodeId}/${job.jobId}`)).size !== 70
     || new Set(manifest.jobs.map(job => job.txHash)).size !== 70) throw new Error('Duplicate jobs or transaction hashes');
-  const genesis = await rpc('ain_getBlockByNumber', { number: 0 });
+  const genesis = await rpc('ain_getBlockByNumber', { number: 0, getFullTransactions: true });
   if (genesis?.hash !== manifest.genesisHash) throw new Error('Metric 1 chain identity mismatch');
   const records = [];
   for (const job of manifest.jobs) {
@@ -42,7 +42,7 @@ async function measure(manifest, rpc) {
     if (record.error) continue;
     try {
       if (!blocks.has(record.blockNumber)) {
-        blocks.set(record.blockNumber, await rpc('ain_getBlockByNumber', { number: record.blockNumber }));
+        blocks.set(record.blockNumber, await rpc('ain_getBlockByNumber', { number: record.blockNumber, getFullTransactions: record.blockNumber === 0 }));
       }
       const current = blocks.get(record.blockNumber);
       if (current?.number !== record.blockNumber || current.hash !== record.blockHash) {

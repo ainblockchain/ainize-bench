@@ -2,6 +2,12 @@
 
 Requires Node.js 22 or newer and a reachable AIN JSON-RPC endpoint. This external measurement tool does not add experiment APIs or screens to AINSCAN, launch nodes, or submit transactions.
 
+Genesis identity reads explicitly request full transactions. This avoids an older
+node's hash-only genesis projection that mutated its cached transaction bodies;
+the same safety flag is used if block zero needs a final identity recheck. Upgrade
+affected nodes to the non-mutating block RPC implementation as well. This client
+compatibility measure does not restore an already-corrupted running cache.
+
 ```sh
 bash scripts/reproduction/run-m3-training-record-latency.sh /path/to/m1-latest.json /path/to/m3-result.json
 node --test scripts/reproduction/test/m3-training-record-latency.test.js

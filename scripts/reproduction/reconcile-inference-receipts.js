@@ -44,7 +44,7 @@ async function reconcile(input, rpc) {
     if (clients.has(key)) throw new Error('Duplicate client receipt');
     clients.set(key, { ...record, node_url: node });
   }
-  if ((await rpc('ain_getBlockByNumber', { number: 0 }))?.hash !== input.genesisHash) throw new Error('Chain identity mismatch');
+  if ((await rpc('ain_getBlockByNumber', { number: 0, getFullTransactions: true }))?.hash !== input.genesisHash) throw new Error('Chain identity mismatch');
   const verified = new Map();
   const seenReceipts = new Set();
   const seenTransactions = new Set();
@@ -88,7 +88,7 @@ async function reconcile(input, rpc) {
     } catch (error) { errors.push({ txHash: hex(exported?.tx_hash) ? exported.tx_hash : null, error: error.message }); }
   }
   for (const [number, hash] of blocks) {
-    if ((await rpc('ain_getBlockByNumber', { number }))?.hash !== hash) errors.push({ error: 'Containing block changed before verification completed', blockNumber: number });
+    if ((await rpc('ain_getBlockByNumber', { number, getFullTransactions: number === 0 }))?.hash !== hash) errors.push({ error: 'Containing block changed before verification completed', blockNumber: number });
   }
   const matches = [];
   const missing = [];

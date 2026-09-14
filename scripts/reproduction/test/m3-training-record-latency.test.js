@@ -9,7 +9,10 @@ function fixture(change = () => {}) {
   const rpc = async (method, params) => {
     if (method === 'ain_getTransactionByHash') return { number: Number(params.hash.slice(3)) + 1,
       is_executed: true, is_finalized: true, receipt: { code: 0 } };
-    if (params.number === 0) return { number: 0, hash: 'genesis' };
+    if (params.number === 0) {
+      assert.equal(params.getFullTransactions, true, 'Genesis reads must not invoke the legacy hash-only projection');
+      return { number: 0, hash: 'genesis' };
+    }
     const job = jobs[params.number - 1];
     const block = { number: params.number, hash: `block-${params.number}`, timestamp: 1025,
       transactions: [{ hash: job.txHash, tx_body: { operation: { type: 'SET_VALUE', ref: job.path,
@@ -26,6 +29,24 @@ test('averages exactly 70 matching training-start inclusions', async () => {
   assert.equal(result.complete, true);
   assert.equal(result.included, 70);
   assert.equal(result.averageMs, 25);
+});
+
+test('block-zero inclusion and final recheck also request full transactions', async () => {
+  const { manifest, rpc } = fixture();
+  const block = await rpc('ain_getBlockByNumber', { number: 1 });
+  Object.assign(block, { number: 0, hash: manifest.genesisHash });
+  let genesisReads = 0;
+  const result = await measure(manifest, async (method, params) => {
+    if (method === 'ain_getTransactionByHash' && params.hash === 'tx-0') return { number: 0, is_executed: true, is_finalized: true, receipt: { code: 0 } };
+    if (method === 'ain_getBlockByNumber' && params.number === 0) {
+      assert.equal(params.getFullTransactions, true);
+      genesisReads++;
+      return block;
+    }
+    return rpc(method, params);
+  });
+  assert.equal(result.complete, true);
+  assert.equal(genesisReads, 3);
 });
 
 test('one mismatched record prevents a reduced-denominator average', async () => {

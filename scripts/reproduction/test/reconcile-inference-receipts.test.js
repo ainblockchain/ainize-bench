@@ -27,10 +27,28 @@ function fixture() {
   const rpc = async (method, params) => {
     if (method === 'ain_getTransactionByHash') return info[batches.findIndex(batch => batch.tx_hash === params.hash)];
     if (method !== 'ain_getBlockByNumber') throw new Error('Unexpected RPC method');
+    if (params.number === 0) assert.equal(params.getFullTransactions, true, 'Genesis reads must preserve cached transaction bodies');
     return params.number === 0 ? { number: 0, hash: input.genesisHash } : blocks[params.number - 1];
   };
   return { input, blocks, info, rpc };
 }
+
+test('block-zero batches preserve full genesis reads through final recheck', async () => {
+  const { input, blocks, info, rpc } = fixture();
+  Object.assign(blocks[0], { number: 0, hash: input.genesisHash });
+  info[0].number = 0;
+  let genesisReads = 0;
+  const result = await reconcile(input, async (method, params) => {
+    if (method === 'ain_getBlockByNumber' && params.number === 0) {
+      assert.equal(params.getFullTransactions, true);
+      genesisReads++;
+      return blocks[0];
+    }
+    return rpc(method, params);
+  });
+  assert.equal(result.complete, true);
+  assert.equal(genesisReads, 3);
+});
 
 test('joins five nodes by exact receipts and native successful finalized transactions without a TPS claim', async () => {
   const { input, rpc } = fixture();

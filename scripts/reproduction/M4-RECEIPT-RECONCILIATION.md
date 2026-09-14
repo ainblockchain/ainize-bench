@@ -71,6 +71,10 @@ The output file must not exist; it is created with mode 0600. The command calls
 only `ain_getBlockByNumber` and `ain_getTransactionByHash`. It validates:
 
 - The expected genesis hash and URL-to-signer mapping for all five nodes.
+- Genesis reads use `getFullTransactions: true`, including any block-zero recheck,
+  to avoid the destructive hash-only projection in older node versions. Deploy
+  the blockchain's non-mutating block RPC fix too; this verifier does not repair
+  already-mutated caches or restart nodes.
 - Unique client receipts with valid client observation clocks and exact receipt
   fields; it does not assume synchronized client/server clocks.
 - Submitted batch metadata, unique transaction hashes, receipt uniqueness,
