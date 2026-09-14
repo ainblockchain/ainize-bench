@@ -1,0 +1,3482 @@
+[
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "tether",
+    "symbol": "USDT",
+    "name": "Tether",
+    "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+    "rank": 3,
+    "market_cap": 183471423988
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "binancecoin",
+    "symbol": "BNB",
+    "name": "BNB",
+    "address": "0xb8c77482e45f1f44de1745f52c74426c631bdd52",
+    "rank": 4,
+    "market_cap": 95277303098
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "usd-coin",
+    "symbol": "USDC",
+    "name": "USDC",
+    "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+    "rank": 6,
+    "market_cap": 74214837979
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "usd-coin",
+    "symbol": "USDC",
+    "name": "USDC",
+    "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+    "rank": 6,
+    "market_cap": 74214837979
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "usds",
+    "symbol": "USDS",
+    "name": "USDS",
+    "address": "0xdc035d45d973e3ec169d2276ddab16f1e407384f",
+    "rank": 14,
+    "market_cap": 9846296905
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "usds",
+    "symbol": "USDS",
+    "name": "USDS",
+    "address": "0x820c137fa70c8691f0e44dc420a5e53c168921dc",
+    "rank": 14,
+    "market_cap": 9846296905
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "whitebit",
+    "symbol": "WBT",
+    "name": "WhiteBIT Coin",
+    "address": "0x925206b8a707096ed26ae47c84747fe0bb734f59",
+    "rank": 15,
+    "market_cap": 9369595464
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "chainlink",
+    "symbol": "LINK",
+    "name": "Chainlink",
+    "address": "0x514910771af9ca656af840dff83e8264ecf986ca",
+    "rank": 16,
+    "market_cap": 8404285721
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "chainlink",
+    "symbol": "LINK",
+    "name": "Chainlink",
+    "address": "0x88fb150bdc53a65fe94dea0c9ba0a6daf8c6e196",
+    "rank": 16,
+    "market_cap": 8404285721
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "leo-token",
+    "symbol": "LEO",
+    "name": "LEO Token",
+    "address": "0x2af5d2ad76741191d15dfe7bf6ac92d4bd912ca3",
+    "rank": 17,
+    "market_cap": 8329341672
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "ethena-usde",
+    "symbol": "USDE",
+    "name": "Ethena USDe",
+    "address": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
+    "rank": 20,
+    "market_cap": 4600469067
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "ethena-usde",
+    "symbol": "USDE",
+    "name": "Ethena USDe",
+    "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+    "rank": 20,
+    "market_cap": 4600469067
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "dai",
+    "symbol": "DAI",
+    "name": "Dai",
+    "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
+    "rank": 21,
+    "market_cap": 4572502664
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "usd1-wlfi",
+    "symbol": "USD1",
+    "name": "USD1",
+    "address": "0x8d0d000ee44948fc98c9b98a4fa4921476f08b0d",
+    "rank": 23,
+    "market_cap": 4307343105
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "uniswap",
+    "symbol": "UNI",
+    "name": "Uniswap",
+    "address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+    "rank": 25,
+    "market_cap": 3883322477
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "the-open-network",
+    "symbol": "GRAM",
+    "name": "Gram (prev. Toncoin)",
+    "address": "0x582d872a1b094fc48f5de31d3b73f2d9be47def1",
+    "rank": 27,
+    "market_cap": 3753508986
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "global-dollar",
+    "symbol": "USDG",
+    "name": "Global Dollar",
+    "address": "0xe343167631d89b6ffc58b88d6b7fb0228795491d",
+    "rank": 29,
+    "market_cap": 3299881737
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "shiba-inu",
+    "symbol": "SHIB",
+    "name": "Shiba Inu",
+    "address": "0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce",
+    "rank": 31,
+    "market_cap": 3055035780
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "crypto-com-chain",
+    "symbol": "CRO",
+    "name": "Cronos",
+    "address": "0xa0b73e1ff0b80914ab6fe0444e65848c4c34450b",
+    "rank": 34,
+    "market_cap": 2829744086
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "paypal-usd",
+    "symbol": "PYUSD",
+    "name": "PayPal USD",
+    "address": "0x6c3ea9036406852006290770bedfcaba0e23a0e8",
+    "rank": 35,
+    "market_cap": 2785084503
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "blackrock-usd-institutional-digital-liquidity-fund",
+    "symbol": "BUIDL",
+    "name": "BlackRock USD Institutional Digital Liquidity Fund",
+    "address": "0x7712c34205737192402172409a8f7ccef8aa2aec",
+    "rank": 36,
+    "market_cap": 2750834099
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "tether-gold",
+    "symbol": "XAUT",
+    "name": "Tether Gold",
+    "address": "0x68749665ff8d2d112fa859aa293f07a622782f38",
+    "rank": 37,
+    "market_cap": 2663594634
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "hashnote-usyc",
+    "symbol": "USYC",
+    "name": "Circle USYC",
+    "address": "0x136471a34f6ef19fe571effc1ca711fdb8e49f2b",
+    "rank": 38,
+    "market_cap": 2605383630
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "ripple-usd",
+    "symbol": "RLUSD",
+    "name": "Ripple USD",
+    "address": "0x8292bb45bf1ee4d140127049757c2e0ff06317ed",
+    "rank": 40,
+    "market_cap": 2422700615
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "okb",
+    "symbol": "OKB",
+    "name": "OKB",
+    "address": "0x75231f58b43240c9718dd58b4967c5114342a86c",
+    "rank": 41,
+    "market_cap": 2361577527
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "bittensor",
+    "symbol": "TAO",
+    "name": "Bittensor",
+    "address": "0xf3081494b87e8d5fb7960f066e931d1d0e6e3d67",
+    "rank": 42,
+    "market_cap": 2242941907
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "ondo-us-dollar-yield",
+    "symbol": "USDY",
+    "name": "Ondo US Dollar Yield",
+    "address": "0x96f6ef951840721adbf46ac996b59e0235cb985c",
+    "rank": 43,
+    "market_cap": 2225877274
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "aave",
+    "symbol": "AAVE",
+    "name": "Aave",
+    "address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+    "rank": 44,
+    "market_cap": 1950010990
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "aave",
+    "symbol": "AAVE",
+    "name": "Aave",
+    "address": "0x63706e401c06ac8513145b7687a14804d17f814b",
+    "rank": 44,
+    "market_cap": 1950010990
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "pax-gold",
+    "symbol": "PAXG",
+    "name": "PAX Gold",
+    "address": "0x45804880de22913dafe09f4980848ece6ecbaf78",
+    "rank": 45,
+    "market_cap": 1883334700
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "mantle",
+    "symbol": "MNT",
+    "name": "Mantle",
+    "address": "0x3c3a81e81dc49a522a592e7622a7e711c06bf354",
+    "rank": 47,
+    "market_cap": 1863082178
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "world-liberty-financial",
+    "symbol": "WLFI",
+    "name": "World Liberty Financial",
+    "address": "0xda5e1988097297dcdc1f90d4dfe7909e847cbef6",
+    "rank": 48,
+    "market_cap": 1824298706
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "bitway",
+    "symbol": "BTW",
+    "name": "Bitway",
+    "address": "0x3a63de3572c69a1307ff08394f3ee7702c16d25d",
+    "rank": 49,
+    "market_cap": 1798269116
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "ondo-finance",
+    "symbol": "ONDO",
+    "name": "Ondo",
+    "address": "0xfaba6f8e4a5e8ab82f62fe7c39859fa577269be3",
+    "rank": 51,
+    "market_cap": 1675247674
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "htx-dao",
+    "symbol": "HTX",
+    "name": "HTX DAO",
+    "address": "0x61ec85ab89377db65762e234c946b5c25a56e99e",
+    "rank": 52,
+    "market_cap": 1529878851
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "usdd",
+    "symbol": "USDD",
+    "name": "USDD",
+    "address": "0x4f8e5de400de08b164e7421b3ee387f461becd1a",
+    "rank": 54,
+    "market_cap": 1524277297
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "morpho",
+    "symbol": "MORPHO",
+    "name": "Morpho",
+    "address": "0x58d97b57bb95320f9a05dc918aef65434969c2b2",
+    "rank": 55,
+    "market_cap": 1494085628
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "morpho",
+    "symbol": "MORPHO",
+    "name": "Morpho",
+    "address": "0xbaa5cc21fd487b8fcc2f632f3f4e8d37262a0842",
+    "rank": 55,
+    "market_cap": 1494085628
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "internet-computer",
+    "symbol": "ICP",
+    "name": "Internet Computer",
+    "address": "0x00f3c42833c3170159af4e92dbb451fb3f708917",
+    "rank": 56,
+    "market_cap": 1486815069
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "internet-computer",
+    "symbol": "ICP",
+    "name": "Internet Computer",
+    "address": "0x00f3c42833c3170159af4e92dbb451fb3f708917",
+    "rank": 56,
+    "market_cap": 1486815069
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "sky",
+    "symbol": "SKY",
+    "name": "Sky",
+    "address": "0x56072c95faa701256059aa122697b133aded9279",
+    "rank": 57,
+    "market_cap": 1448913064
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "pepe",
+    "symbol": "PEPE",
+    "name": "Pepe",
+    "address": "0x6982508145454ce325ddbe47a25d4ec3d2311933",
+    "rank": 58,
+    "market_cap": 1430833044
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "ethena",
+    "symbol": "ENA",
+    "name": "Ethena",
+    "address": "0x57e114b691db790c35207b2e685d4a43181e6061",
+    "rank": 59,
+    "market_cap": 1401411451
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "ethena",
+    "symbol": "ENA",
+    "name": "Ethena",
+    "address": "0x58538e6a46e07434d7e7375bc268d3cb839c0133",
+    "rank": 59,
+    "market_cap": 1401411451
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "worldcoin-wld",
+    "symbol": "WLD",
+    "name": "Worldcoin",
+    "address": "0x163f8c2467924be0ae7b5347228cabf260318753",
+    "rank": 60,
+    "market_cap": 1399250362
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "bitget-token",
+    "symbol": "BGB",
+    "name": "Bitget Token",
+    "address": "0x54d2252757e1672eead234d27b1270728ff90581",
+    "rank": 62,
+    "market_cap": 1340953303
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "falcon-finance",
+    "symbol": "USDF",
+    "name": "Falcon USD",
+    "address": "0xfa2b947eec368f42195f24f36d2af29f7c24cec2",
+    "rank": 63,
+    "market_cap": 1339664811
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "spiko-amundi-overnight-swap-fund-eur",
+    "symbol": "EURSAFO",
+    "name": "Spiko Amundi Overnight Swap Fund (EUR)",
+    "address": "0x0990b149e915cb08e2143a5c6f669c907eddc8b0",
+    "rank": 64,
+    "market_cap": 1335525954
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "spiko-amundi-overnight-swap-fund-eur",
+    "symbol": "EURSAFO",
+    "name": "Spiko Amundi Overnight Swap Fund (EUR)",
+    "address": "0xd879846cbe20751bde8a9342a3cca00a3e56ca47",
+    "rank": 64,
+    "market_cap": 1335525954
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "united-stables",
+    "symbol": "U",
+    "name": "United Stables",
+    "address": "0xce24439f2d9c6a2289f741120fe202248b666666",
+    "rank": 66,
+    "market_cap": 1285143550
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "venice-token",
+    "symbol": "VVV",
+    "name": "Venice Token",
+    "address": "0xacfe6019ed1a7dc6f7b508c02d1b04ec88cc21bf",
+    "rank": 69,
+    "market_cap": 1054429322
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "polygon-ecosystem-token",
+    "symbol": "POL",
+    "name": "POL (ex-MATIC)",
+    "address": "0x455e53cbb86018ac2b8092fdcd39d8444affc3f6",
+    "rank": 70,
+    "market_cap": 1031532293
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "lighter",
+    "symbol": "LIT",
+    "name": "Lighter",
+    "address": "0x232ce3bd40fcd6f80f3d55a522d03f25df784ee2",
+    "rank": 71,
+    "market_cap": 1017112751
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "gatechain-token",
+    "symbol": "GT",
+    "name": "Gate",
+    "address": "0xe66747a101bff2dba3697199dcce5b743b454759",
+    "rank": 72,
+    "market_cap": 980916292
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "blockchain-capital",
+    "symbol": "BCAP",
+    "name": "Blockchain Capital",
+    "address": "0x8347fffb3abeb2fae5c21b09e983bdefa1a047dc",
+    "rank": 73,
+    "market_cap": 970348700
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "quant-network",
+    "symbol": "QNT",
+    "name": "Quant",
+    "address": "0x4a220e6096b25eadb88358cb44068a3248254675",
+    "rank": 76,
+    "market_cap": 931817268
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "arbitrum",
+    "symbol": "ARB",
+    "name": "Arbitrum",
+    "address": "0xb50721bcf8d664c30412cfbc6cf7a15145234ad1",
+    "rank": 78,
+    "market_cap": 913464241
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "eutbl",
+    "symbol": "EUTBL",
+    "name": "Spiko EU T-Bills Money Market Fund",
+    "address": "0xa0769f7a8fc65e47de93797b4e21c073c117fc80",
+    "rank": 79,
+    "market_cap": 881204940
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "eutbl",
+    "symbol": "EUTBL",
+    "name": "Spiko EU T-Bills Money Market Fund",
+    "address": "0xa0769f7a8fc65e47de93797b4e21c073c117fc80",
+    "rank": 79,
+    "market_cap": 881204940
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "nexo",
+    "symbol": "NEXO",
+    "name": "NEXO",
+    "address": "0xb62132e35a6c13ee1ee0f84dc5d40bad8d815206",
+    "rank": 82,
+    "market_cap": 823897952
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "superstate-short-duration-us-government-securities-fund-ustb",
+    "symbol": "USTB",
+    "name": "Invesco Short Duration US Government Securities Fund",
+    "address": "0x43415eb6ff9db7e26a15b704e7a3edce97d31c4e",
+    "rank": 83,
+    "market_cap": 805323062
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "janus-henderson-anemoy-treasury-fund",
+    "symbol": "JTRSY",
+    "name": "Janus Henderson Anemoy Treasury Fund",
+    "address": "0x8c213ee79581ff4984583c6a801e5263418c4b86",
+    "rank": 86,
+    "market_cap": 725070974
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "janus-henderson-anemoy-treasury-fund",
+    "symbol": "JTRSY",
+    "name": "Janus Henderson Anemoy Treasury Fund",
+    "address": "0x8c213ee79581ff4984583c6a801e5263418c4b86",
+    "rank": 86,
+    "market_cap": 725070974
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "janus-henderson-anemoy-aaa-clo-fund",
+    "symbol": "JAAA",
+    "name": "Janus Henderson Anemoy AAA CLO Fund",
+    "address": "0x5a0f93d040de44e78f251b03c43be9cf317dcf64",
+    "rank": 87,
+    "market_cap": 713695634
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "janus-henderson-anemoy-aaa-clo-fund",
+    "symbol": "JAAA",
+    "name": "Janus Henderson Anemoy AAA CLO Fund",
+    "address": "0x5a0f93d040de44e78f251b03c43be9cf317dcf64",
+    "rank": 87,
+    "market_cap": 713695634
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "render-token",
+    "symbol": "RENDER",
+    "name": "Render",
+    "address": "0x6de037ef9ad2725eb40118bb1702ebb27e4aeb24",
+    "rank": 88,
+    "market_cap": 712711400
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "pancakeswap-token",
+    "symbol": "CAKE",
+    "name": "PancakeSwap",
+    "address": "0x152649ea73beab28c5b49b26eb48f7ead6d4c898",
+    "rank": 89,
+    "market_cap": 698363821
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "pancakeswap-token",
+    "symbol": "CAKE",
+    "name": "PancakeSwap",
+    "address": "0x3055913c90fcc1a6ce9a358911721eeb942013a1",
+    "rank": 89,
+    "market_cap": 698363821
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "gho",
+    "symbol": "GHO",
+    "name": "GHO",
+    "address": "0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f",
+    "rank": 90,
+    "market_cap": 698078901
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "gho",
+    "symbol": "GHO",
+    "name": "GHO",
+    "address": "0x6bb7a212910682dcfdbd5bcbb3e28fb4e8da10ee",
+    "rank": 90,
+    "market_cap": 698078901
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "ether-fi",
+    "symbol": "ETHFI",
+    "name": "Ether.fi",
+    "address": "0xfe0c30065b384f05761f15d0cc899d4f9f9cc0eb",
+    "rank": 94,
+    "market_cap": 626490668
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "ether-fi",
+    "symbol": "ETHFI",
+    "name": "Ether.fi",
+    "address": "0x6c240dda6b5c336df09a4d011139beaaa1ea2aa2",
+    "rank": 94,
+    "market_cap": 626490668
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "injective-protocol",
+    "symbol": "INJ",
+    "name": "Injective",
+    "address": "0xe28b3b32b6c345a34ff64674606124dd5aceca30",
+    "rank": 96,
+    "market_cap": 595922934
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "aerodrome-finance",
+    "symbol": "AERO",
+    "name": "Aerodrome Finance",
+    "address": "0x940181a94a35a4569e4529a3cdfb74e38fd98631",
+    "rank": 99,
+    "market_cap": 554005816
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "curve-dao-token",
+    "symbol": "CRV",
+    "name": "Curve DAO",
+    "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+    "rank": 100,
+    "market_cap": 548199938
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "curve-dao-token",
+    "symbol": "CRV",
+    "name": "Curve DAO",
+    "address": "0x8ee73c484a26e0a5df2ee2a4960b789967dd0415",
+    "rank": 100,
+    "market_cap": 548199938
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "usual-usd",
+    "symbol": "USD0",
+    "name": "Usual USD",
+    "address": "0x73a15fed60bf67631dc6cd7bc5b6e8da8190acf5",
+    "rank": 101,
+    "market_cap": 547095442
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "usual-usd",
+    "symbol": "USD0",
+    "name": "Usual USD",
+    "address": "0x758a3e0b1f842c9306b783f8a4078c6c8c03a270",
+    "rank": 101,
+    "market_cap": 547095442
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "true-usd",
+    "symbol": "TUSD",
+    "name": "TrueUSD",
+    "address": "0x0000000000085d4780b73119b644ae5ecd22b376",
+    "rank": 106,
+    "market_cap": 494155556
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "usdtb",
+    "symbol": "USDTB",
+    "name": "USDtb",
+    "address": "0xc139190f447e929f090edeb554d95abb8b18ac1c",
+    "rank": 107,
+    "market_cap": 483632367
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "euro-coin",
+    "symbol": "EURC",
+    "name": "EURC",
+    "address": "0x1abaea1f7c830bd89acc67ec4af516284b1bc33c",
+    "rank": 109,
+    "market_cap": 468466177
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "euro-coin",
+    "symbol": "EURC",
+    "name": "EURC",
+    "address": "0x60a3e35cc302bfa44cb288bc5a4f316fdb1adb42",
+    "rank": 109,
+    "market_cap": 468466177
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "falcon-finance-ff",
+    "symbol": "FF",
+    "name": "Falcon Finance",
+    "address": "0xfa1c09fc8b491b6a4d3ff53a10cad29381b3f949",
+    "rank": 110,
+    "market_cap": 457503441
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "a7a5",
+    "symbol": "A7A5",
+    "name": "A7A5",
+    "address": "0x6fa0be17e4bea2fcfa22ef89bf8ac9aab0ab0fc9",
+    "rank": 111,
+    "market_cap": 455313646
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "pudgy-penguins",
+    "symbol": "PENGU",
+    "name": "Pudgy Penguins",
+    "address": "0x6418c0dd099a9fda397c766304cdd918233e8847",
+    "rank": 112,
+    "market_cap": 450109134
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "spx6900",
+    "symbol": "SPX",
+    "name": "SPX6900",
+    "address": "0xe0f63a424a4439cbe457d80e4f4b51ad25b2c56c",
+    "rank": 113,
+    "market_cap": 448907791
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "spx6900",
+    "symbol": "SPX",
+    "name": "SPX6900",
+    "address": "0x50da645f148798f68ef2d7db7c1cb22a6819bb2c",
+    "rank": 113,
+    "market_cap": 448907791
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "virtual-protocol",
+    "symbol": "VIRTUAL",
+    "name": "Virtuals Protocol",
+    "address": "0x44ff8620b8ca30902395a7bd3f2407e1a091bf73",
+    "rank": 116,
+    "market_cap": 404187946
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "virtual-protocol",
+    "symbol": "VIRTUAL",
+    "name": "Virtuals Protocol",
+    "address": "0x0b3e328455c4059eeb9e3f84b5543f74e24e7e1b",
+    "rank": 116,
+    "market_cap": 404187946
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "fetch-ai",
+    "symbol": "FET",
+    "name": "Artificial Superintelligence Alliance",
+    "address": "0xaea46a60368a7bd060eec7df8cba43b7ef41ad85",
+    "rank": 119,
+    "market_cap": 382608356
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "pendle",
+    "symbol": "PENDLE",
+    "name": "Pendle",
+    "address": "0x808507121b80c02388fad14726482e061b8da827",
+    "rank": 120,
+    "market_cap": 369209591
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "pendle",
+    "symbol": "PENDLE",
+    "name": "Pendle",
+    "address": "0xa99f6e6785da0f5d6fb42495fe424bce029eeb3e",
+    "rank": 120,
+    "market_cap": 369209591
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "layerzero",
+    "symbol": "ZRO",
+    "name": "LayerZero",
+    "address": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
+    "rank": 121,
+    "market_cap": 356923129
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "layerzero",
+    "symbol": "ZRO",
+    "name": "LayerZero",
+    "address": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
+    "rank": 121,
+    "market_cap": 356923129
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "ousg",
+    "symbol": "OUSG",
+    "name": "Ondo Short-Term U.S. Government Bond Fund",
+    "address": "0x1b19c19393e2d034d8ff31ff34c81252fcbbee92",
+    "rank": 124,
+    "market_cap": 339173193
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "kinesis-gold",
+    "symbol": "KAU",
+    "name": "Kinesis Gold",
+    "address": "0x14dab79fd7b7b3f748d434812fd6a9aac460ea52",
+    "rank": 127,
+    "market_cap": 334485811
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "first-digital-usd",
+    "symbol": "FDUSD",
+    "name": "First Digital USD",
+    "address": "0xc5f0f7b66764f6ec8c8dff7ba683102295e16409",
+    "rank": 128,
+    "market_cap": 329311262
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "bittorrent",
+    "symbol": "BTT",
+    "name": "BitTorrent",
+    "address": "0xc669928185dbce49d2230cc9b0979be6dc797957",
+    "rank": 130,
+    "market_cap": 326768316
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "pieverse",
+    "symbol": "PIEVERSE",
+    "name": "Pieverse",
+    "address": "0x0e63b9c287e32a05e6b9ab8ee8df88a2760225a9",
+    "rank": 131,
+    "market_cap": 322776870
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "apxusd",
+    "symbol": "APXUSD",
+    "name": "apxUSD",
+    "address": "0x98a878b1cd98131b271883b390f68d2c90674665",
+    "rank": 132,
+    "market_cap": 320243851
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "apxusd",
+    "symbol": "APXUSD",
+    "name": "apxUSD",
+    "address": "0xd993935e13851dd7517af10687ec7e5022127228",
+    "rank": 132,
+    "market_cap": 320243851
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "sofiusd",
+    "symbol": "SOFID",
+    "name": "SoFiUSD",
+    "address": "0x0cb6d03b0ac88a463f67b7ad99f9f3ec4678092e",
+    "rank": 133,
+    "market_cap": 319675182
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "lido-dao",
+    "symbol": "LDO",
+    "name": "Lido DAO",
+    "address": "0x5a98fcbea516cf06857215779fd812ca3bef1b32",
+    "rank": 135,
+    "market_cap": 306665721
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "gnosis",
+    "symbol": "GNO",
+    "name": "Gnosis",
+    "address": "0x6810e776880c02933d47db1b9fc05908e5386b96",
+    "rank": 136,
+    "market_cap": 306383873
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "unibase",
+    "symbol": "UB",
+    "name": "Unibase",
+    "address": "0x6944e1df6bf5972305f9ab25df47ef10de01bcc8",
+    "rank": 138,
+    "market_cap": 300462007
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "olympus",
+    "symbol": "OHM",
+    "name": "Olympus",
+    "address": "0x64aa3364f17a4d01c6f1751fd97c2bd3d7e7f1d5",
+    "rank": 139,
+    "market_cap": 299690465
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "olympus",
+    "symbol": "OHM",
+    "name": "Olympus",
+    "address": "0x060cb087a9730e13aa191f31a6d86bff8dfcdcc0",
+    "rank": 139,
+    "market_cap": 299690465
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "usdai",
+    "symbol": "USDAI",
+    "name": "USDai",
+    "address": "0x0a1a1a107e45b7ced86833863f482bc5f4ed82ef",
+    "rank": 140,
+    "market_cap": 295453685
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "usdai",
+    "symbol": "USDAI",
+    "name": "USDai",
+    "address": "0x0a1a1a107e45b7ced86833863f482bc5f4ed82ef",
+    "rank": 140,
+    "market_cap": 295453685
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "re-protocol-reusd",
+    "symbol": "REUSD",
+    "name": "Re Protocol reUSD",
+    "address": "0x5086bf358635b81d8c47c66d1c8b9e567db70c72",
+    "rank": 145,
+    "market_cap": 261055853
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "re-protocol-reusd",
+    "symbol": "REUSD",
+    "name": "Re Protocol reUSD",
+    "address": "0x7d214438d0f27afccc23b3d1e1a53906ace5cfea",
+    "rank": 145,
+    "market_cap": 261055853
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "kite-2",
+    "symbol": "KITE",
+    "name": "Kite",
+    "address": "0x118b70df4f06fa5678e7d543e6066e028c8ea0c0",
+    "rank": 146,
+    "market_cap": 259448903
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "syrup",
+    "symbol": "SYRUP",
+    "name": "Maple Finance",
+    "address": "0x643c4e15d7d62ad0abec4a9bd4b001aa3ef52d66",
+    "rank": 147,
+    "market_cap": 255347289
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "syrup",
+    "symbol": "SYRUP",
+    "name": "Maple Finance",
+    "address": "0x688aee022aa544f150678b8e5720b6b96a9e9a2f",
+    "rank": 147,
+    "market_cap": 255347289
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "agora-dollar",
+    "symbol": "AUSD",
+    "name": "AUSD",
+    "address": "0x00000000efe302beaa2b3e6e1b18d08d69a9012a",
+    "rank": 151,
+    "market_cap": 245526363
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "agora-dollar",
+    "symbol": "AUSD",
+    "name": "AUSD",
+    "address": "0x00000000efe302beaa2b3e6e1b18d08d69a9012a",
+    "rank": 151,
+    "market_cap": 245526363
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "bonk",
+    "symbol": "BONK",
+    "name": "Bonk",
+    "address": "0x1151cb3d861920e07a38e03eead12c32178567f6",
+    "rank": 152,
+    "market_cap": 242131592
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "kinesis-silver",
+    "symbol": "KAG",
+    "name": "Kinesis Silver",
+    "address": "0x56ba8b58b7d1f6d384a1c4dd553f39ebc8741b8e",
+    "rank": 153,
+    "market_cap": 239516304
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "ethereum-name-service",
+    "symbol": "ENS",
+    "name": "Ethereum Name Service",
+    "address": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+    "rank": 154,
+    "market_cap": 239353418
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "floki",
+    "symbol": "FLOKI",
+    "name": "FLOKI",
+    "address": "0xcf0c122c6b73ff809c693db761e7baebe62b6a2e",
+    "rank": 155,
+    "market_cap": 235516685
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "apenft",
+    "symbol": "NFT",
+    "name": "AINFT",
+    "address": "0x198d14f2ad9ce69e76ea330b374de4957c3f850a",
+    "rank": 158,
+    "market_cap": 230204197
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "lisk",
+    "symbol": "LSK",
+    "name": "Lisk",
+    "address": "0x6033f7f88332b8db6ad452b7c6d5bb643990ae3f",
+    "rank": 159,
+    "market_cap": 229357630
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "lisk",
+    "symbol": "LSK",
+    "name": "Lisk",
+    "address": "0xac485391eb2d7d88253a7f1ef18c37f4242d1a24",
+    "rank": 159,
+    "market_cap": 229357630
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "frax",
+    "symbol": "FRAX",
+    "name": "Legacy Frax Dollar",
+    "address": "0x853d955acef822db058eb8505911ed77f175b99e",
+    "rank": 165,
+    "market_cap": 216647946
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "edgex",
+    "symbol": "EDGE",
+    "name": "edgeX",
+    "address": "0xb0076de78dc50581770bba1d211ddc0ad4f2a241",
+    "rank": 168,
+    "market_cap": 207755043
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "starknet",
+    "symbol": "STRK",
+    "name": "Starknet",
+    "address": "0xca14007eff0db1f8135f4c25b34de49ab0d42766",
+    "rank": 171,
+    "market_cap": 204028105
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "the-graph",
+    "symbol": "GRT",
+    "name": "The Graph",
+    "address": "0xc944e90c64b2c07662a292be6244bdf05cda44a7",
+    "rank": 172,
+    "market_cap": 203913003
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "crvusd",
+    "symbol": "CRVUSD",
+    "name": "crvUSD",
+    "address": "0xf939e0a03fb07f59a73314e73794be0e57ac1b4e",
+    "rank": 174,
+    "market_cap": 202069608
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "crvusd",
+    "symbol": "CRVUSD",
+    "name": "crvUSD",
+    "address": "0x417ac0e078398c154edfadd9ef675d30be60af93",
+    "rank": 174,
+    "market_cap": 202069608
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "compound-governance-token",
+    "symbol": "COMP",
+    "name": "Compound",
+    "address": "0xc00e94cb662c3520282e6f5717214004a7f26888",
+    "rank": 176,
+    "market_cap": 197722530
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "compound-governance-token",
+    "symbol": "COMP",
+    "name": "Compound",
+    "address": "0x9e1028f5f1d5ede59748ffcee5532509976840e0",
+    "rank": 176,
+    "market_cap": 197722530
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "convex-finance",
+    "symbol": "CVX",
+    "name": "Convex Finance",
+    "address": "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b",
+    "rank": 177,
+    "market_cap": 197385019
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "jasmycoin",
+    "symbol": "JASMY",
+    "name": "JasmyCoin",
+    "address": "0x7420b4b9a0110cdc71fb720908340c03f9bc03ec",
+    "rank": 179,
+    "market_cap": 194526690
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "societe-generale-forge-eurcv",
+    "symbol": "EURCV",
+    "name": "EUR CoinVertible",
+    "address": "0x5f7827fdeb7c20b443265fc2f40845b715385ff2",
+    "rank": 180,
+    "market_cap": 191678176
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "eigenlayer",
+    "symbol": "EIGEN",
+    "name": "EigenCloud (prev. EigenLayer)",
+    "address": "0xec53bf9167f50cdeb3ae105f56099aaab9061f83",
+    "rank": 181,
+    "market_cap": 191704324
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "eigenlayer",
+    "symbol": "EIGEN",
+    "name": "EigenCloud (prev. EigenLayer)",
+    "address": "0x2081ab0d9ec9e4303234ab26d86b20b3367946ee",
+    "rank": 181,
+    "market_cap": 191704324
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "ribbita-by-virtuals",
+    "symbol": "TIBBIR",
+    "name": "Ribbita by Virtuals",
+    "address": "0xa4a2e2ca3fbfe21aed83471d28b6f65a233c6e00",
+    "rank": 183,
+    "market_cap": 190717320
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "usa",
+    "symbol": "USAT",
+    "name": "USAT",
+    "address": "0x07041776f5007aca2a54844f50503a18a72a8b68",
+    "rank": 185,
+    "market_cap": 184166463
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "apyusd",
+    "symbol": "APYUSD",
+    "name": "apyUSD",
+    "address": "0x38eeb52f0771140d10c4e9a9a72349a329fe8a6a",
+    "rank": 186,
+    "market_cap": 183428942
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "apyusd",
+    "symbol": "APYUSD",
+    "name": "apyUSD",
+    "address": "0x2c271ddf484ac0386d216eb7eb9ff02d4dc0f6aa",
+    "rank": 186,
+    "market_cap": 183428942
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "humanity",
+    "symbol": "H",
+    "name": "Humanity",
+    "address": "0xe76c5b78f93909d34404e9eb4c1f19e7582a5de1",
+    "rank": 188,
+    "market_cap": 173111868
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "spiko-us-t-bills-money-market-fund",
+    "symbol": "USTBL",
+    "name": "Spiko US T-Bills Money Market Fund",
+    "address": "0xe4880249745eac5f1ed9d8f7df844792d560e750",
+    "rank": 189,
+    "market_cap": 173057080
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "spiko-us-t-bills-money-market-fund",
+    "symbol": "USTBL",
+    "name": "Spiko US T-Bills Money Market Fund",
+    "address": "0xe4880249745eac5f1ed9d8f7df844792d560e750",
+    "rank": 189,
+    "market_cap": 173057080
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "safo",
+    "symbol": "SAFO",
+    "name": "Spiko Amundi Overnight Swap Fund",
+    "address": "0xcbade7d9bdee88411cb6cbcbb29952b742036992",
+    "rank": 191,
+    "market_cap": 168394386
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "safo",
+    "symbol": "SAFO",
+    "name": "Spiko Amundi Overnight Swap Fund",
+    "address": "0x0bb754d8940e283d9ff6855ab5dafbc14165c059",
+    "rank": 191,
+    "market_cap": 168394386
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "axie-infinity",
+    "symbol": "AXS",
+    "name": "Axie Infinity",
+    "address": "0xbb0e17ef65f82ab018d8edd776e8dd940327b28b",
+    "rank": 194,
+    "market_cap": 165917682
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "btse-token",
+    "symbol": "BTSE",
+    "name": "BTSE Token",
+    "address": "0x666d875c600aa06ac1cf15641361dec3b00432ef",
+    "rank": 195,
+    "market_cap": 165115190
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "swissborg",
+    "symbol": "BORG",
+    "name": "SwissBorg",
+    "address": "0x64d0f55cd8c7133a9d7102b13987235f486f2224",
+    "rank": 196,
+    "market_cap": 164786293
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "non-playable-coin",
+    "symbol": "NPC",
+    "name": "Non-Playable Coin",
+    "address": "0x8ed97a637a790be1feff5e888d43629dc05408f6",
+    "rank": 202,
+    "market_cap": 161757594
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "non-playable-coin",
+    "symbol": "NPC",
+    "name": "Non-Playable Coin",
+    "address": "0xb166e8b140d35d9d8226e40c09f757bac5a4d87d",
+    "rank": 202,
+    "market_cap": 161757594
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "mx-token",
+    "symbol": "MX",
+    "name": "MX",
+    "address": "0x11eef04c884e24d9b7b4760e7476d06ddf797f36",
+    "rank": 203,
+    "market_cap": 161638895
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "chiliz",
+    "symbol": "CHZ",
+    "name": "Chiliz",
+    "address": "0x3506424f91fd33084466f402d5d97f05f8e3b4af",
+    "rank": 206,
+    "market_cap": 158502141
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "chiliz",
+    "symbol": "CHZ",
+    "name": "Chiliz",
+    "address": "0x70c8392de9b39a1e48d12a70af6ff4be25d6d0a2",
+    "rank": 206,
+    "market_cap": 158502141
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "chain-2",
+    "symbol": "XCN",
+    "name": "Onyxcoin",
+    "address": "0xa2cd3d43c775978a96bdbf12d733d5a1ed94fb18",
+    "rank": 207,
+    "market_cap": 157666244
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "chain-2",
+    "symbol": "XCN",
+    "name": "Onyxcoin",
+    "address": "0x9c632e6aaa3ea73f91554f8a3cb2ed2f29605e0c",
+    "rank": 207,
+    "market_cap": 157666244
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "telcoin",
+    "symbol": "TEL",
+    "name": "Telcoin",
+    "address": "0x467bccd9d29f223bce8043b84e8c8b282827790f",
+    "rank": 208,
+    "market_cap": 155945000
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "telcoin",
+    "symbol": "TEL",
+    "name": "Telcoin",
+    "address": "0x09be1692ca16e06f536f0038ff11d1da8524adb1",
+    "rank": 208,
+    "market_cap": 155945000
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "vision-3",
+    "symbol": "VSN",
+    "name": "Vision",
+    "address": "0x699ccf919c1dfdfa4c374292f42cadc9899bf753",
+    "rank": 209,
+    "market_cap": 154756458
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "strategy-pp-variable-xstock",
+    "symbol": "STRCX",
+    "name": "Strategy PP Variable xStock",
+    "address": "0x1aad217b8f78dba5e6693460e8470f8b1a3977f3",
+    "rank": 210,
+    "market_cap": 154755717
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "decentraland",
+    "symbol": "MANA",
+    "name": "Decentraland",
+    "address": "0x0f5d2fb29fb7d3cfee444a200298f468908cc942",
+    "rank": 214,
+    "market_cap": 149029983
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "shuffle-2",
+    "symbol": "SHFL",
+    "name": "Shuffle",
+    "address": "0x8881562783028f5c1bcb985d2283d5e170d88888",
+    "rank": 215,
+    "market_cap": 147031868
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "derive",
+    "symbol": "DRV",
+    "name": "Derive",
+    "address": "0xb1d1eae60eea9525032a6dcb4c1ce336a1de71be",
+    "rank": 216,
+    "market_cap": 145392313
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "derive",
+    "symbol": "DRV",
+    "name": "Derive",
+    "address": "0x9d0e8f5b25384c7310cb8c6ae32c8fbeb645d083",
+    "rank": 216,
+    "market_cap": 145392313
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "gmt-token",
+    "symbol": "GOMINING",
+    "name": "GoMining Token",
+    "address": "0x7ddc52c4de30e94be3a6a0a2b259b2850f421989",
+    "rank": 217,
+    "market_cap": 143103380
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "safepal",
+    "symbol": "SFP",
+    "name": "SafePal",
+    "address": "0x12e2b8033420270db2f3b328e32370cb5b2ca134",
+    "rank": 218,
+    "market_cap": 140425825
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "origintrail",
+    "symbol": "TRAC",
+    "name": "OriginTrail",
+    "address": "0xaa7a9ca87d3694b5755f213b5d04094b8d0f0a6f",
+    "rank": 219,
+    "market_cap": 139966594
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "origintrail",
+    "symbol": "TRAC",
+    "name": "OriginTrail",
+    "address": "0xa81a52b4dda010896cdd386c7fbdc5cdc835ba23",
+    "rank": 219,
+    "market_cap": 139966594
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "apecoin",
+    "symbol": "APE",
+    "name": "ApeCoin",
+    "address": "0x4d224452801aced8b2f0aebe155379bb5d594381",
+    "rank": 223,
+    "market_cap": 134517427
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "golem",
+    "symbol": "GLM",
+    "name": "Golem",
+    "address": "0x7dd9c5cba05e151c895fde1cf355c9a1d5da6429",
+    "rank": 227,
+    "market_cap": 132252687
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "jpysc",
+    "symbol": "JPYSC",
+    "name": "JPYSC",
+    "address": "0x6781d5631bfe47432b089e64e3eab3b6edd26177",
+    "rank": 229,
+    "market_cap": 131665817
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "1inch",
+    "symbol": "1INCH",
+    "name": "1INCH",
+    "address": "0x111111111117dc0aa78b770fa6a738034120c302",
+    "rank": 232,
+    "market_cap": 128431219
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "1inch",
+    "symbol": "1INCH",
+    "name": "1INCH",
+    "address": "0xc5fecc3a29fb57b5024eec8a2239d4621e111cbe",
+    "rank": 232,
+    "market_cap": 128431219
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "rollbit-coin",
+    "symbol": "RLB",
+    "name": "Rollbit Coin",
+    "address": "0x046eee2cc3188071c02bfc1745a6b17c656e3f3d",
+    "rank": 234,
+    "market_cap": 126985164
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "havven",
+    "symbol": "SNX",
+    "name": "Synthetix",
+    "address": "0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f",
+    "rank": 235,
+    "market_cap": 125522038
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "havven",
+    "symbol": "SNX",
+    "name": "Synthetix",
+    "address": "0x22e6966b799c4d5b13be962e1d117b56327fda66",
+    "rank": 235,
+    "market_cap": 125522038
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "zama",
+    "symbol": "ZAMA",
+    "name": "Zama",
+    "address": "0xa12cc123ba206d4031d1c7f6223d1c2ec249f4f3",
+    "rank": 241,
+    "market_cap": 121819120
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "railgun",
+    "symbol": "RAIL",
+    "name": "Railgun",
+    "address": "0xe76c6c83af64e4c60245d8c7de953df673a7a33d",
+    "rank": 243,
+    "market_cap": 119879892
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "theo-short-duration-us-treasury-fund",
+    "symbol": "THBILL",
+    "name": "Theo Short Duration US Treasury Fund",
+    "address": "0x5fa487bca6158c64046b2813623e20755091da0b",
+    "rank": 244,
+    "market_cap": 117885864
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "theo-short-duration-us-treasury-fund",
+    "symbol": "THBILL",
+    "name": "Theo Short Duration US Treasury Fund",
+    "address": "0xfdd22ce6d1f66bc0ec89b20bf16ccb6670f55a5a",
+    "rank": 244,
+    "market_cap": 117885864
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "basic-attention-token",
+    "symbol": "BAT",
+    "name": "Basic Attention",
+    "address": "0x0d8775f648430679a709e98d2b0cb6250d2887ef",
+    "rank": 245,
+    "market_cap": 117504314
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "zencash",
+    "symbol": "ZEN",
+    "name": "Horizen",
+    "address": "0xf43eb8de897fbc7f2502483b2bef7bb9ea179229",
+    "rank": 246,
+    "market_cap": 116858576
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "stp-network",
+    "symbol": "AWE",
+    "name": "AWE Network",
+    "address": "0x1b4617734c43f6159f3a70b7e06d883647512778",
+    "rank": 247,
+    "market_cap": 116344765
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "alpha-bulgaria-warrants",
+    "symbol": "ALFW",
+    "name": "Alpha Bulgaria Warrants",
+    "address": "0x19cf86d38ae55d1dc08f50588f11b6acc297f977",
+    "rank": 250,
+    "market_cap": 114330001
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "immutable-x",
+    "symbol": "IMX",
+    "name": "Immutable",
+    "address": "0xf57e7e7c23978c3caec3c3548e3d615c346e79ff",
+    "rank": 253,
+    "market_cap": 109438587
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "circle-internet-group-ondo-tokenized-stock",
+    "symbol": "CRCLON",
+    "name": "Circle Internet Group (Ondo Tokenized Stock)",
+    "address": "0x3632dea96a953c11dac2f00b4a05a32cd1063fae",
+    "rank": 254,
+    "market_cap": 108756393
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "quack-ai",
+    "symbol": "Q",
+    "name": "Quack AI",
+    "address": "0xc07e1300dc138601fa6b0b59f8d0fa477e690589",
+    "rank": 255,
+    "market_cap": 108253357
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "nockchain",
+    "symbol": "NOCK",
+    "name": "Nockchain",
+    "address": "0x9b5e262cf9bb04869ab40b19af91d2dc85761722",
+    "rank": 256,
+    "market_cap": 107332041
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "hunter-biden-s-laptop-3",
+    "symbol": "LAPTOP",
+    "name": "Hunter Biden's Laptop",
+    "address": "0xb095274743941e953c746f9c228da9c18bb6ec29",
+    "rank": 257,
+    "market_cap": 107433430
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "nxm",
+    "symbol": "NXM",
+    "name": "Nexus Mutual",
+    "address": "0xd7c49cee7e9188cca6ad8ff264c1da2e69d4cf3b",
+    "rank": 259,
+    "market_cap": 106488772
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "usda-2",
+    "symbol": "USDA",
+    "name": "USDa",
+    "address": "0x8a60e489004ca22d775c5f2c657598278d17d9c2",
+    "rank": 260,
+    "market_cap": 94542304
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "frax-usd",
+    "symbol": "FRXUSD",
+    "name": "Frax USD",
+    "address": "0xcacd6fd266af91b8aed52accc382b4e165586e29",
+    "rank": 263,
+    "market_cap": 105315307
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "frax-usd",
+    "symbol": "FRXUSD",
+    "name": "Frax USD",
+    "address": "0xe5020a6d073a794b6e7f05678707de47986fb0b6",
+    "rank": 263,
+    "market_cap": 105315307
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "the-sandbox",
+    "symbol": "SAND",
+    "name": "The Sandbox",
+    "address": "0x3845badade8e6dff049820680d1f14bd3903a5d0",
+    "rank": 264,
+    "market_cap": 105205480
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "the-sandbox",
+    "symbol": "SAND",
+    "name": "The Sandbox",
+    "address": "0xac531eb26ca1d21b85126de8fb87e80e09002dcf",
+    "rank": 264,
+    "market_cap": 105205480
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "prometeus",
+    "symbol": "PROM",
+    "name": "Prom",
+    "address": "0xfc82bb4ba86045af6f327323a46e80412b91b27d",
+    "rank": 266,
+    "market_cap": 104678229
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "sentient",
+    "symbol": "SENT",
+    "name": "Sentient",
+    "address": "0x56a3ba04e95d34268a19b2a4474dc979babdaf76",
+    "rank": 267,
+    "market_cap": 103734116
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "securitize-tokenized-aaa-clo-fund",
+    "symbol": "STAC",
+    "name": "Securitize Tokenized AAA CLO Fund",
+    "address": "0x51c2d74017390cbbd30550179a16a1c28f7210fc",
+    "rank": 268,
+    "market_cap": 103492201
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "sosovalue",
+    "symbol": "SOSO",
+    "name": "SoSoValue",
+    "address": "0x76a0e27618462bdac7a29104bdcfff4e6bfcea2d",
+    "rank": 272,
+    "market_cap": 101817412
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "sosovalue",
+    "symbol": "SOSO",
+    "name": "SoSoValue",
+    "address": "0x624e2e7fdc8903165f64891672267ab0fcb98831",
+    "rank": 272,
+    "market_cap": 101817412
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "nest-blackopal-liquidstone-ii-vault",
+    "symbol": "NOPAL",
+    "name": "Nest BlackOpal LiquidStone II Vault",
+    "address": "0x119dd7daff816f29d7ee47596ae5e4bdc4299165",
+    "rank": 279,
+    "market_cap": 99861089
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "zksync",
+    "symbol": "ZK",
+    "name": "ZKsync",
+    "address": "0x66a5cfb2e9c529f14fe6364ad1075df3a649c0a5",
+    "rank": 281,
+    "market_cap": 98905916
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "instadapp",
+    "symbol": "FLUID",
+    "name": "Fluid",
+    "address": "0x6f40d4a6237c257fff2db00fa0510deeecd303eb",
+    "rank": 282,
+    "market_cap": 98841946
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "instadapp",
+    "symbol": "FLUID",
+    "name": "Fluid",
+    "address": "0x61e030a56d33e8260fdd81f03b162a79fe3449cd",
+    "rank": 282,
+    "market_cap": 98841946
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "0x",
+    "symbol": "ZRX",
+    "name": "0x Protocol",
+    "address": "0xe41d2489571d322189246dafa5ebde1f4699f498",
+    "rank": 283,
+    "market_cap": 98016677
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "aethir",
+    "symbol": "ATH",
+    "name": "Aethir",
+    "address": "0xbe0ed4138121ecfc5c0e56b40517da27e6c5226b",
+    "rank": 287,
+    "market_cap": 96876099
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "apollo-diversified-credit-securitize-fund",
+    "symbol": "ACRED",
+    "name": "Apollo Diversified Credit Securitize Fund",
+    "address": "0x17418038ecf73ba4026c4f428547bf099706f27b",
+    "rank": 288,
+    "market_cap": 95465288
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "reserve-rights-token",
+    "symbol": "RSR",
+    "name": "Reserve Rights",
+    "address": "0x320623b8e4ff03373931769a31fc52a4e78b5d70",
+    "rank": 290,
+    "market_cap": 94771475
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "reserve-rights-token",
+    "symbol": "RSR",
+    "name": "Reserve Rights",
+    "address": "0xab36452dbac151be02b16ca17d8919826072f64a",
+    "rank": 290,
+    "market_cap": 94771475
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "aioz-network",
+    "symbol": "AIOZ",
+    "name": "AIOZ Network",
+    "address": "0x626e8036deb333b408be468f951bdb42433cbf18",
+    "rank": 292,
+    "market_cap": 93365730
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "bitget-wrapped-btc",
+    "symbol": "BGBTC",
+    "name": "Bitget Wrapped BTC",
+    "address": "0x0520930f21b14cafac7a27b102487bee7138a017",
+    "rank": 294,
+    "market_cap": 90739934
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "chip-2",
+    "symbol": "CHIP",
+    "name": "USD.AI",
+    "address": "0x0c1c1c109fe34733fca54b82d7b46b75cfb71f6e",
+    "rank": 297,
+    "market_cap": 87556390
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "chip-2",
+    "symbol": "CHIP",
+    "name": "USD.AI",
+    "address": "0x0c1c1c109fe34733fca54b82d7b46b75cfb71f6e",
+    "rank": 297,
+    "market_cap": 87556390
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "mag7-ssi",
+    "symbol": "MAG7.SSI",
+    "name": "MAG7.ssi",
+    "address": "0x9e6a46f294bb67c20f1d1e7afb0bbef614403b55",
+    "rank": 300,
+    "market_cap": 86273881
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "beam-2",
+    "symbol": "BEAM",
+    "name": "Beam",
+    "address": "0x62d0a8458ed7719fdaf978fe5929c6d342b0bfce",
+    "rank": 302,
+    "market_cap": 85877258
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "beam-2",
+    "symbol": "BEAM",
+    "name": "Beam",
+    "address": "0x2a66d51407b84b82b5aff3dec4d49f72cbcd322a",
+    "rank": 302,
+    "market_cap": 85877258
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "cap-usd",
+    "symbol": "CUSD",
+    "name": "Cap USD",
+    "address": "0xcccc62962d17b8914c62d74ffb843d73b2a3cccc",
+    "rank": 305,
+    "market_cap": 84858155
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "gala",
+    "symbol": "GALA",
+    "name": "GALA",
+    "address": "0xd1d2eb1b1e90b638588728b4130137d262c87cae",
+    "rank": 306,
+    "market_cap": 84446658
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "plume",
+    "symbol": "PLUME",
+    "name": "Plume",
+    "address": "0x4c1746a800d224393fe2470c70a35717ed4ea5f1",
+    "rank": 309,
+    "market_cap": 83678089
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "goldfish-gold",
+    "symbol": "GGBR",
+    "name": "Goldfish Gold",
+    "address": "0x7e2ac793f3e692f388e66c7dc28f739d13b0b71a",
+    "rank": 310,
+    "market_cap": 83594341
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "f-x-protocol-fxusd",
+    "symbol": "FXUSD",
+    "name": "f(x) Protocol fxUSD",
+    "address": "0x085780639cc2cacd35e474e71f4d000e2405d8f6",
+    "rank": 311,
+    "market_cap": 83424745
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "f-x-protocol-fxusd",
+    "symbol": "FXUSD",
+    "name": "f(x) Protocol fxUSD",
+    "address": "0x55380fe7a1910dff29a47b622057ab4139da42c5",
+    "rank": 311,
+    "market_cap": 83424745
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "o1-exchange",
+    "symbol": "O",
+    "name": "o1.exchange",
+    "address": "0x182fa643e5f29d5eca75e7b9cf9336a3fe4620b2",
+    "rank": 312,
+    "market_cap": 83354108
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "adi-token",
+    "symbol": "ADI",
+    "name": "ADI",
+    "address": "0x8b1484d57abbe239bb280661377363b03c89caea",
+    "rank": 314,
+    "market_cap": 83195757
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "wrappedm-by-m0",
+    "symbol": "WM",
+    "name": "WrappedM by M0",
+    "address": "0x437cc33344a0b27a429f795ff6b469c72698b291",
+    "rank": 315,
+    "market_cap": 81397828
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "bending-spoons-xstock",
+    "symbol": "BSPX",
+    "name": "Bending Spoons xStock",
+    "address": "0x7796f4e23a62ef3653829c21032a9e24beaf4cf5",
+    "rank": 316,
+    "market_cap": 80951193
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "3jane-usd3",
+    "symbol": "USD3",
+    "name": "3Jane USD3",
+    "address": "0x056b269eb1f75477a8666ae8c7fe01b64dd55ecc",
+    "rank": 317,
+    "market_cap": 80549492
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "rif-token",
+    "symbol": "RIF",
+    "name": "Rootstock Infrastructure Framework",
+    "address": "0x01b603be3d545f096015741e6503440282bf45fb",
+    "rank": 319,
+    "market_cap": 79766457
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "rif-token",
+    "symbol": "RIF",
+    "name": "Rootstock Infrastructure Framework",
+    "address": "0xe5e851b01dd3eda24fde709a407db44555b6d1e0",
+    "rank": 319,
+    "market_cap": 79766457
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "yearn-finance",
+    "symbol": "YFI",
+    "name": "yearn.finance",
+    "address": "0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e",
+    "rank": 320,
+    "market_cap": 79717812
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "yearn-finance",
+    "symbol": "YFI",
+    "name": "yearn.finance",
+    "address": "0x9eaf8c1e34f05a589eda6bafdf391cf6ad3cb239",
+    "rank": 320,
+    "market_cap": 79717812
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "cow-protocol",
+    "symbol": "COW",
+    "name": "CoW Protocol",
+    "address": "0xdef1ca1fb7fbcdc777520aa7f396b4e015f497ab",
+    "rank": 321,
+    "market_cap": 79406489
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "cow-protocol",
+    "symbol": "COW",
+    "name": "CoW Protocol",
+    "address": "0xc694a91e6b071bf030a18bd3053a7fe09b6dae69",
+    "rank": 321,
+    "market_cap": 79406489
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "fx-usd-saving",
+    "symbol": "FXSAVE",
+    "name": "f(x) USD Saving",
+    "address": "0x7743e50f534a7f9f1791dde7dcd89f7783eefc39",
+    "rank": 322,
+    "market_cap": 77613962
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "bedrock-token",
+    "symbol": "BR",
+    "name": "Bedrock",
+    "address": "0x9b61879e91a0b1322f3d61c23aaf936231882096",
+    "rank": 324,
+    "market_cap": 76805177
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "bedrock-token",
+    "symbol": "BR",
+    "name": "Bedrock",
+    "address": "0xd6122ddada244913521f3d62006eaf756c157660",
+    "rank": 324,
+    "market_cap": 76805177
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "safe",
+    "symbol": "SAFE",
+    "name": "Safe",
+    "address": "0x5afe3855358e112b5647b952709e6165e1c1eeee",
+    "rank": 325,
+    "market_cap": 76745048
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "funfair",
+    "symbol": "FUN",
+    "name": "FUNToken",
+    "address": "0x419d0d8bdd9af5e606ae2232ed285aff190e711b",
+    "rank": 327,
+    "market_cap": 76672901
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "superfarm",
+    "symbol": "SUPER",
+    "name": "SuperVerse",
+    "address": "0xe53ec727dbdeb9e2d5456c3be40cff031ab40a55",
+    "rank": 330,
+    "market_cap": 75846247
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "superfarm",
+    "symbol": "SUPER",
+    "name": "SuperVerse",
+    "address": "0x391359ab0ccef572dcac78f74e47d7c06db0b982",
+    "rank": 330,
+    "market_cap": 75846247
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "cygnus-finance-global-usd",
+    "symbol": "CGUSD",
+    "name": "Cygnus Finance Global USD",
+    "address": "0xca72827a3d211cfd8f6b00ac98824872b72cab49",
+    "rank": 331,
+    "market_cap": 75760378
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "proton",
+    "symbol": "XPR",
+    "name": "XPR Network",
+    "address": "0xd7efb00d12c2c13131fd319336fdf952525da2af",
+    "rank": 334,
+    "market_cap": 75150737
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "midas-mtbill",
+    "symbol": "MTBILL",
+    "name": "Midas mTBILL",
+    "address": "0xdd629e5241cbc5919847783e6c96b2de4754e438",
+    "rank": 341,
+    "market_cap": 74127699
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "midas-mtbill",
+    "symbol": "MTBILL",
+    "name": "Midas mTBILL",
+    "address": "0xdd629e5241cbc5919847783e6c96b2de4754e438",
+    "rank": 341,
+    "market_cap": 74127699
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "circle-xstock",
+    "symbol": "CRCLX",
+    "name": "Circle xStock",
+    "address": "0xfebded1b0986a8ee107f5ab1a1c5a813491deceb",
+    "rank": 342,
+    "market_cap": 73832632
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "kaito",
+    "symbol": "KAITO",
+    "name": "KAITO",
+    "address": "0x98d0baa52b2d063e780de12f615f963fe8537553",
+    "rank": 343,
+    "market_cap": 73633972
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "cap-4",
+    "symbol": "CAP",
+    "name": "Cap",
+    "address": "0x99991c6aabba5a096f24f250b73580f5179b9999",
+    "rank": 344,
+    "market_cap": 72984057
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "crown-brlv",
+    "symbol": "BRLV",
+    "name": "Crown BRLV",
+    "address": "0xd7ca0e2c36d647446b782d1b72308e598373e2f5",
+    "rank": 345,
+    "market_cap": 72605541
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "crown-brlv",
+    "symbol": "BRLV",
+    "name": "Crown BRLV",
+    "address": "0xd2047ebdb205ee6862b69ae9fb3501652cc97d36",
+    "rank": 345,
+    "market_cap": 72605541
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "unitas",
+    "symbol": "UP",
+    "name": "Unitas",
+    "address": "0x00007ac313f4f4c1ad809e8a4ca42bc613aa0000",
+    "rank": 347,
+    "market_cap": 72522929
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "royal-euro",
+    "symbol": "REUR",
+    "name": "Royal Euro",
+    "address": "0x3ed0b3c4c0168a560d34e361b8130dcca4677736",
+    "rank": 348,
+    "market_cap": 62008637
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "ondo-u-s-dollar-token",
+    "symbol": "USDON",
+    "name": "Ondo U.S. Dollar Token",
+    "address": "0xace8e719899f6e91831b18ae746c9a965c2119f1",
+    "rank": 349,
+    "market_cap": 71789260
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "arkham",
+    "symbol": "ARKM",
+    "name": "Arkham",
+    "address": "0x6e2a43be0b1d33b726f0ca3b8de60b3482b8b050",
+    "rank": 351,
+    "market_cap": 71328244
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "matrixdock-gold",
+    "symbol": "XAUM",
+    "name": "Matrixdock Gold",
+    "address": "0x2103e845c5e135493bb6c2a4f0b8651956ea8682",
+    "rank": 353,
+    "market_cap": 70936470
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "tesla-xstock",
+    "symbol": "TSLAX",
+    "name": "Tesla xStock",
+    "address": "0x8ad3c73f833d3f9a523ab01476625f269aeb7cf0",
+    "rank": 354,
+    "market_cap": 70815994
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "dola-usd",
+    "symbol": "DOLA",
+    "name": "DOLA",
+    "address": "0x865377367054516e17014ccded1e7d814edc9ce4",
+    "rank": 355,
+    "market_cap": 70081245
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "dola-usd",
+    "symbol": "DOLA",
+    "name": "DOLA",
+    "address": "0x4621b7a9c75199271f773ebd9a499dbd165c3191",
+    "rank": 355,
+    "market_cap": 70081245
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "livepeer",
+    "symbol": "LPT",
+    "name": "Livepeer",
+    "address": "0x58b6a8a3302369daec383334672404ee733ab239",
+    "rank": 356,
+    "market_cap": 69860735
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "microstrategy-xstock",
+    "symbol": "MSTRX",
+    "name": "MicroStrategy xStock",
+    "address": "0xae2f842ef90c0d5213259ab82639d5bbf649b08e",
+    "rank": 358,
+    "market_cap": 69587271
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "baby-doge-coin",
+    "symbol": "BABYDOGE",
+    "name": "Baby Doge Coin",
+    "address": "0xac57de9c1a09fec648e93eb98875b212db0d460b",
+    "rank": 360,
+    "market_cap": 69038148
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "baby-doge-coin",
+    "symbol": "BABYDOGE",
+    "name": "Baby Doge Coin",
+    "address": "0x58ecef26335af7b04a998105a6603b0dc475af33",
+    "rank": 360,
+    "market_cap": 69038148
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "re",
+    "symbol": "RE",
+    "name": "RE",
+    "address": "0x526526528f35ac738177003b8773b402b8df8143",
+    "rank": 361,
+    "market_cap": 68634774
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "holotoken",
+    "symbol": "HOT",
+    "name": "Holo",
+    "address": "0x6c6ee5e31d828de241282b9606c8e98ea48526e2",
+    "rank": 364,
+    "market_cap": 68182396
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "holotoken",
+    "symbol": "HOT",
+    "name": "Holo",
+    "address": "0xf3dd141109dfe8e4c006f88a2a8747a086e7c1f8",
+    "rank": 364,
+    "market_cap": 68182396
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "saturn-dollar",
+    "symbol": "USDAT",
+    "name": "Saturn Dollar",
+    "address": "0x23238f20b894f29041f48d88ee91131c395aaa71",
+    "rank": 365,
+    "market_cap": 67908560
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "tori-trusd",
+    "symbol": "TRUSD",
+    "name": "Tori trUSD",
+    "address": "0xd0580192e98ea6ceb9c7b6191ed2e27560911697",
+    "rank": 366,
+    "market_cap": 67822012
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "redstone-oracles",
+    "symbol": "RED",
+    "name": "RedStone",
+    "address": "0xc43c6bfeda065fe2c4c11765bf838789bd0bb5de",
+    "rank": 368,
+    "market_cap": 67351985
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "redstone-oracles",
+    "symbol": "RED",
+    "name": "RedStone",
+    "address": "0x4eb92702ba4cfbf80561bad64d89c706ac824960",
+    "rank": 368,
+    "market_cap": 67351985
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "midas-fasanara-global",
+    "symbol": "MGLOBAL",
+    "name": "Midas Fasanara Global",
+    "address": "0x7433806912eae67919e66aea853d46fa0aef98a8",
+    "rank": 369,
+    "market_cap": 67337941
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "numeraire",
+    "symbol": "NMR",
+    "name": "Numeraire",
+    "address": "0x1776e1f26f98b1a5df9cd347953a26dd3cb46671",
+    "rank": 372,
+    "market_cap": 66315375
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "stronghold-token",
+    "symbol": "SHX",
+    "name": "Stronghold",
+    "address": "0x516d31321928700c6b4fb0db0c8c6bc5d6799787",
+    "rank": 373,
+    "market_cap": 65895753
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "linea",
+    "symbol": "LINEA",
+    "name": "Linea",
+    "address": "0x1789e0043623282d5dcc7f213d703c6d8bafbb04",
+    "rank": 375,
+    "market_cap": 65441760
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "midas-mf-one",
+    "symbol": "MF-ONE",
+    "name": "Midas mF-ONE",
+    "address": "0x238a700ed6165261cf8b2e544ba797bc11e466ba",
+    "rank": 378,
+    "market_cap": 65200915
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "metal-blockchain",
+    "symbol": "METAL",
+    "name": "Metal Blockchain",
+    "address": "0x294559fa758c88d639fd085751e463fee7806eab",
+    "rank": 380,
+    "market_cap": 64547987
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "dexe",
+    "symbol": "DEXE",
+    "name": "DeXe",
+    "address": "0xde4ee8057785a7e8e800db58f9784845a5c2cbd6",
+    "rank": 381,
+    "market_cap": 64379624
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "diem",
+    "symbol": "DIEM",
+    "name": "Diem",
+    "address": "0xf4d97f2da56e8c3098f3a8d538db630a2606a024",
+    "rank": 382,
+    "market_cap": 64250434
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "wormhole",
+    "symbol": "W",
+    "name": "Wormhole",
+    "address": "0xb0ffa8000886e57f86dd5264b9582b2ad87b2b91",
+    "rank": 383,
+    "market_cap": 63975155
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "wormhole",
+    "symbol": "W",
+    "name": "Wormhole",
+    "address": "0xb0ffa8000886e57f86dd5264b9582b2ad87b2b91",
+    "rank": 383,
+    "market_cap": 63975155
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "sushi",
+    "symbol": "SUSHI",
+    "name": "Sushi",
+    "address": "0x6b3595068778dd592e39a122f4f5a5cf09c90fe2",
+    "rank": 384,
+    "market_cap": 63655102
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "sushi",
+    "symbol": "SUSHI",
+    "name": "Sushi",
+    "address": "0x7d49a065d17d6d4a55dc13649901fdbb98b2afba",
+    "rank": 384,
+    "market_cap": 63655102
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "turbo",
+    "symbol": "TURBO",
+    "name": "Turbo",
+    "address": "0xa35923162c49cf95e6bf26623385eb431ad920d3",
+    "rank": 385,
+    "market_cap": 63697523
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "ishares-core-s-p-500-etf-ondo-tokenized-etf",
+    "symbol": "IVVON",
+    "name": "iShares Core S&P 500 ETF (Ondo Tokenized ETF)",
+    "address": "0x62ca254a363dc3c748e7e955c20447ab5bf06ff7",
+    "rank": 386,
+    "market_cap": 64449277
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "zetachain",
+    "symbol": "ZETA",
+    "name": "ZetaChain",
+    "address": "0xf091867ec603a6628ed83d274e835539d82e9cc8",
+    "rank": 388,
+    "market_cap": 62934948
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "zignaly",
+    "symbol": "ZIG",
+    "name": "ZIGChain",
+    "address": "0xb2617246d0c6c0087f18703d576831899ca94f01",
+    "rank": 389,
+    "market_cap": 62633980
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "spark-2",
+    "symbol": "SPK",
+    "name": "Spark",
+    "address": "0xc20059e0317de91738d13af027dfc4a50781b066",
+    "rank": 390,
+    "market_cap": 62619322
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "anvil",
+    "symbol": "ANVL",
+    "name": "Anvil",
+    "address": "0xaeeaa594e7dc112d67b8547fe9767a02c15b5597",
+    "rank": 392,
+    "market_cap": 61646073
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "peaq-2",
+    "symbol": "PEAQ",
+    "name": "peaq",
+    "address": "0x1eef208926667594e5136e89d0e9dd6907959197",
+    "rank": 393,
+    "market_cap": 61350967
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "peaq-2",
+    "symbol": "PEAQ",
+    "name": "peaq",
+    "address": "0x9b56b112bbd6343a8961a093315a9a60b8cb1f36",
+    "rank": 393,
+    "market_cap": 61350967
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "soon-2",
+    "symbol": "SOON",
+    "name": "SOON",
+    "address": "0xb9e1fd5a02d3a33b25a14d661414e6ed6954a721",
+    "rank": 394,
+    "market_cap": 61153454
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "temple",
+    "symbol": "TEMPLE",
+    "name": "TempleDAO",
+    "address": "0x470ebf5f030ed85fc1ed4c2d36b9dd02e77cf1b7",
+    "rank": 395,
+    "market_cap": 61119545
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "nexus-4",
+    "symbol": "NEX",
+    "name": "Nexus",
+    "address": "0xf57d49646621f563b0b905afc8336923ac569ec5",
+    "rank": 396,
+    "market_cap": 61054758
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "midas-fasanara-global-open",
+    "symbol": "MGLO",
+    "name": "Midas Fasanara Global Open",
+    "address": "0x1dd91a111606382b77a917633ed90feaf25e0f76",
+    "rank": 397,
+    "market_cap": 61003135
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "midas-fasanara-global-open",
+    "symbol": "MGLO",
+    "name": "Midas Fasanara Global Open",
+    "address": "0xfcc9cc1209651ed8867332d6f664cf82743a2584",
+    "rank": 397,
+    "market_cap": 61003135
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "aelf",
+    "symbol": "ELF",
+    "name": "aelf",
+    "address": "0xbf2179859fc6d5bee9bf9158632dc51678a4100e",
+    "rank": 398,
+    "market_cap": 60314041
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "nusd-2",
+    "symbol": "NUSD",
+    "name": "Neutrl USD",
+    "address": "0xe556aba6fe6036275ec1f87eda296be72c811bce",
+    "rank": 400,
+    "market_cap": 53296810
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "goplus-security",
+    "symbol": "GPS",
+    "name": "GoPlus Security",
+    "address": "0x0c1dc73159e30c4b06170f2593d3118968a0dca5",
+    "rank": 401,
+    "market_cap": 60101276
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "sp500-xstock",
+    "symbol": "SPYX",
+    "name": "SP500 xStock",
+    "address": "0x90a2a4c76b5d8c0bc892a69ea28aa775a8f2dd48",
+    "rank": 404,
+    "market_cap": 58668791
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "creditcoin-2",
+    "symbol": "CTC",
+    "name": "Creditcoin",
+    "address": "0xa3ee21c306a700e682abcdfe9baa6a08f3820419",
+    "rank": 406,
+    "market_cap": 58167794
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "vaneck-treasury-fund",
+    "symbol": "VBILL",
+    "name": "VanEck Treasury Fund",
+    "address": "0x2255718832bc9fd3be1caf75084f4803da14ff01",
+    "rank": 408,
+    "market_cap": 57997882
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "ecomi",
+    "symbol": "OMI",
+    "name": "ECOMI",
+    "address": "0xed35af169af46a02ee13b9d79eb57d6d68c1749e",
+    "rank": 409,
+    "market_cap": 57824893
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "ecomi",
+    "symbol": "OMI",
+    "name": "ECOMI",
+    "address": "0x3792dbdd07e87413247df995e692806aa13d3299",
+    "rank": 409,
+    "market_cap": 57824893
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "jpycoin",
+    "symbol": "JPYC",
+    "name": "JPY Coin",
+    "address": "0xe7c3d8c9a439fede00d2600032d5db0be71c3c29",
+    "rank": 414,
+    "market_cap": 56950012
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "keeta",
+    "symbol": "KTA",
+    "name": "Keeta",
+    "address": "0xc0634090f2fe6c6d75e61be2b949464abb498973",
+    "rank": 415,
+    "market_cap": 56715798
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "astar",
+    "symbol": "ASTR",
+    "name": "Astar",
+    "address": "0xf27441230eadeac85b764610325cc9a0d7859689",
+    "rank": 417,
+    "market_cap": 56248663
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "espresso",
+    "symbol": "ESP",
+    "name": "Espresso",
+    "address": "0x031de51f3e8016514bd0963d0b2ab825a591db9a",
+    "rank": 418,
+    "market_cap": 55744264
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "axelar",
+    "symbol": "AXL",
+    "name": "Axelar",
+    "address": "0x467719ad09025fcc6cf6f8311755809d45a5e5f3",
+    "rank": 419,
+    "market_cap": 55647327
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "axelar",
+    "symbol": "AXL",
+    "name": "Axelar",
+    "address": "0x23ee2343b892b1bb63503a4fabc840e0e2c6810f",
+    "rank": 419,
+    "market_cap": 55647327
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "allora",
+    "symbol": "ALLO",
+    "name": "Allora",
+    "address": "0x8408d45b61f5823298f19a09b53b7339c0280489",
+    "rank": 423,
+    "market_cap": 55110045
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "allora",
+    "symbol": "ALLO",
+    "name": "Allora",
+    "address": "0x032d86656db142138ac97d2c5c4e3766e8c0482d",
+    "rank": 423,
+    "market_cap": 55110045
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "enjincoin",
+    "symbol": "ENJ",
+    "name": "Enjin Coin",
+    "address": "0xf629cbd94d3791c9250152bd8dfbdf380e2a3b9c",
+    "rank": 427,
+    "market_cap": 54824335
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "bio-protocol",
+    "symbol": "BIO",
+    "name": "Bio Protocol",
+    "address": "0xcb1592591996765ec0efc1f92599a19767ee5ffa",
+    "rank": 428,
+    "market_cap": 54311580
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "bio-protocol",
+    "symbol": "BIO",
+    "name": "Bio Protocol",
+    "address": "0x226a2fa2556c48245e57cd1cba4c6c9e67077dd2",
+    "rank": 428,
+    "market_cap": 54311580
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "blur",
+    "symbol": "BLUR",
+    "name": "Blur",
+    "address": "0x5283d291dbcf85356a21ba090e6db59121208b44",
+    "rank": 430,
+    "market_cap": 54390908
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "fonq",
+    "symbol": "FONQ",
+    "name": "FONQ",
+    "address": "0x4cff203005b24aa1083b35063d684a76b1080f22",
+    "rank": 432,
+    "market_cap": 53902982
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "pentagon-chain",
+    "symbol": "PC",
+    "name": "Pentagon Chain",
+    "address": "0xa1aa371e450c5aee7fff259cbf5cca9384227272",
+    "rank": 433,
+    "market_cap": 53263301
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "brz",
+    "symbol": "BRZ",
+    "name": "Brazilian Digital",
+    "address": "0x01d33fd36ec67c6ada32cf36b31e88ee190b1839",
+    "rank": 436,
+    "market_cap": 52824000
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "flying-tulip",
+    "symbol": "FT",
+    "name": "Flying Tulip",
+    "address": "0x5dd1a7a369e8273371d2dbf9d83356057088082c",
+    "rank": 437,
+    "market_cap": 52334387
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "flying-tulip",
+    "symbol": "FT",
+    "name": "Flying Tulip",
+    "address": "0x5dd1a7a369e8273371d2dbf9d83356057088082c",
+    "rank": 437,
+    "market_cap": 52334387
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "venus",
+    "symbol": "XVS",
+    "name": "Venus",
+    "address": "0xd3cc9d8f3689b83c91b7b59cab4946b063eb894a",
+    "rank": 439,
+    "market_cap": 51748922
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "venus",
+    "symbol": "XVS",
+    "name": "Venus",
+    "address": "0xebb7873213c8d1d9913d8ea39aa12d74cb107995",
+    "rank": 439,
+    "market_cap": 51748922
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "precious-metals-usd",
+    "symbol": "PMUSD",
+    "name": "Precious Metals USD",
+    "address": "0xc0c17dd08263c16f6b64e772fb9b723bf1344ddf",
+    "rank": 440,
+    "market_cap": 51529167
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "anemoy-tokenized-apollo-diversified-credit-fund",
+    "symbol": "ACRDX",
+    "name": "Anemoy Tokenized Apollo Diversified Credit Fund",
+    "address": "0x9477724bb54ad5417de8baff29e59df3fb4da74f",
+    "rank": 442,
+    "market_cap": 51172760
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "rekt-4",
+    "symbol": "REKT",
+    "name": "Rekt",
+    "address": "0xdd3b11ef34cd511a2da159034a05fcb94d806686",
+    "rank": 445,
+    "market_cap": 50291673
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "rekt-4",
+    "symbol": "REKT",
+    "name": "Rekt",
+    "address": "0xb3e3c89b8d9c88b1fe96856e382959ee6291ebba",
+    "rank": 445,
+    "market_cap": 50291673
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "blackrock-daily-reinvestment-stablecoin-reserve-vehicle",
+    "symbol": "BRSRV",
+    "name": "BlackRock Daily Reinvestment Stablecoin Reserve Vehicle",
+    "address": "0x3078bcf707e457d3af2f938a2a478bbeea50a942",
+    "rank": 446,
+    "market_cap": 50188543
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "space-id",
+    "symbol": "ID",
+    "name": "SPACE ID",
+    "address": "0x2dff88a56767223a5529ea5960da7a3f5f766406",
+    "rank": 447,
+    "market_cap": 50160521
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "alloy-tether",
+    "symbol": "AUSDT",
+    "name": "Alloy Tether",
+    "address": "0x9eead9ce15383caeed975427340b3a369410cfbf",
+    "rank": 448,
+    "market_cap": 50101960
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "usdkg",
+    "symbol": "USDKG",
+    "name": "USDKG",
+    "address": "0xe820c06321e60d36257c666643fa5436643445e3",
+    "rank": 449,
+    "market_cap": 49955270
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "ravedao",
+    "symbol": "RAVE",
+    "name": "RaveDAO",
+    "address": "0x17205fab260a7a6383a81452ce6315a39370db97",
+    "rank": 450,
+    "market_cap": 49952598
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "ravedao",
+    "symbol": "RAVE",
+    "name": "RaveDAO",
+    "address": "0x1aa8fd5bcce2231c6100d55bf8b377cff33acfc3",
+    "rank": 450,
+    "market_cap": 49952598
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "fidelity-digital-dollar",
+    "symbol": "FIDD",
+    "name": "Fidelity Digital Dollar",
+    "address": "0x7c135549504245b5eae64fc0e99fa5ebabb8e35d",
+    "rank": 451,
+    "market_cap": 49853488
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "gekko",
+    "symbol": "GEKKO",
+    "name": "GEKKO",
+    "address": "0xf017d3690346eb8234b85f74cee5e15821fee1f4",
+    "rank": 453,
+    "market_cap": 49545141
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "threshold-network-token",
+    "symbol": "T",
+    "name": "Threshold Network",
+    "address": "0xcdf7028ceab81fa0c6971208e83fa7872994bee5",
+    "rank": 456,
+    "market_cap": 49251681
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "threshold-network-token",
+    "symbol": "T",
+    "name": "Threshold Network",
+    "address": "0x26f3901ac8a79c50fb0d8289c74f0d09adc42e29",
+    "rank": 456,
+    "market_cap": 49251681
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "coti",
+    "symbol": "COTI",
+    "name": "COTI",
+    "address": "0xddb3422497e61e13543bea06989c0789117555c5",
+    "rank": 457,
+    "market_cap": 49092053
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "bim-2",
+    "symbol": "BIM",
+    "name": "BIM",
+    "address": "0x555fff48549c1a25a723bd8e7ed10870d82e8379",
+    "rank": 460,
+    "market_cap": 48589869
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "ankr",
+    "symbol": "ANKR",
+    "name": "Ankr Network",
+    "address": "0x8290333cef9e6d528dd5618fb97a76f268f3edd4",
+    "rank": 462,
+    "market_cap": 48517795
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "based-brett",
+    "symbol": "BRETT",
+    "name": "Brett",
+    "address": "0x532f27101965dd16442e59d40670faf5ebb142e4",
+    "rank": 463,
+    "market_cap": 48448979
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "toshi",
+    "symbol": "TOSHI",
+    "name": "Toshi",
+    "address": "0xac1bd2486aaf3b5c0fc3fd868558b082a531b2b4",
+    "rank": 465,
+    "market_cap": 48305532
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "allunity-chf",
+    "symbol": "CHFAU",
+    "name": "AllUnity CHF",
+    "address": "0xbd4dfc058eb95b8de5ceaf39966a1a70f5556f78",
+    "rank": 467,
+    "market_cap": 47705281
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "allunity-chf",
+    "symbol": "CHFAU",
+    "name": "AllUnity CHF",
+    "address": "0xbd4dfc058eb95b8de5ceaf39966a1a70f5556f78",
+    "rank": 467,
+    "market_cap": 47705281
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "tellor",
+    "symbol": "TRB",
+    "name": "Tellor Tributes",
+    "address": "0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0",
+    "rank": 469,
+    "market_cap": 47597259
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "xyo-network",
+    "symbol": "XYO",
+    "name": "XYO Network",
+    "address": "0x55296f69f40ea6d20e478533c15a6b08b654e758",
+    "rank": 472,
+    "market_cap": 47108936
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "mask-network",
+    "symbol": "MASK",
+    "name": "Mask Network",
+    "address": "0x69af81e73a73b40adf4f3d4223cd9b1ece623074",
+    "rank": 473,
+    "market_cap": 47005372
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "acurast",
+    "symbol": "ACU",
+    "name": "Acurast",
+    "address": "0x216b3643ff8b7bb30d8a48e9f1bd550126202add",
+    "rank": 477,
+    "market_cap": 46865338
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "acurast",
+    "symbol": "ACU",
+    "name": "Acurast",
+    "address": "0xc5fed7c8ccc75d8a72b601a66dffd7a489073f0b",
+    "rank": 477,
+    "market_cap": 46865338
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "resupply-usd",
+    "symbol": "REUSD",
+    "name": "Resupply USD",
+    "address": "0x57ab1e0003f623289cd798b1824be09a793e4bec",
+    "rank": 481,
+    "market_cap": 46608879
+  },
+  {
+    "chain": "ethereum",
+    "chain_label": "Ethereum",
+    "id": "altlayer",
+    "symbol": "ALT",
+    "name": "AltLayer",
+    "address": "0x8457ca5040ad67fdebbcc8edce889a335bc0fbfb",
+    "rank": 485,
+    "market_cap": 46262554
+  },
+  {
+    "chain": "base",
+    "chain_label": "Base",
+    "id": "baby-claw",
+    "symbol": "BABYCLAW",
+    "name": "Baby Claw",
+    "address": "0x583edb23e5149cdad7618ea02e298ada51b6bbd3",
+    "rank": null,
+    "market_cap": 91376294
+  }
+]
