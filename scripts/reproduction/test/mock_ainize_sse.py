@@ -3,6 +3,7 @@ import signal
 import sys
 import threading
 import time
+import uuid
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
@@ -30,6 +31,7 @@ class Handler(BaseHTTPRequestHandler):
             time.sleep(0.05)
             chunk["choices"][0].update({"delta": {}, "finish_reason": "stop"})
             result = {"mode": "patched", "patch_ids": [request["patch_id"]], "patched": {"model": "synthetic-model", "content": "Paris"}}
+            result["inference_receipt"] = {"id": str(uuid.uuid4()), "model_id": "synthetic-model", "completed_at": int(time.time() * 1000)}
             self.wfile.write(("data: " + json.dumps(chunk) + "\n\nevent: ainize.result\ndata: " + json.dumps(result) + "\n\ndata: [DONE]\n\n").encode())
             self.wfile.flush()
         except (BrokenPipeError, ConnectionResetError):

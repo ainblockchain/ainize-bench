@@ -12,6 +12,7 @@ from locust.runners import MasterRunner
 
 from ainize_sse import consume_chat
 from m4_membership import stable_window
+from m4_receipts import ReceiptWriter, completion_evidence
 
 
 MIN_STABLE_SECONDS = float(os.environ.get("M4_STABLE_SECONDS", "30"))
@@ -43,6 +44,7 @@ for offset in range(int(os.environ.get("M4_WORKER_INDEX", "0")) % 5):
 OUTPUT = Path(os.environ["M4_EVIDENCE_DIR"])
 MEMBERSHIP = []
 SAMPLER = None
+RECEIPTS = None
 
 
 def sample_membership(environment):
@@ -55,13 +57,23 @@ def sample_membership(environment):
 
 @events.test_start.add_listener
 def started(environment, **kwargs):
-    global SAMPLER
+    global SAMPLER, RECEIPTS
     if isinstance(environment.runner, MasterRunner):
         SAMPLER = gevent.spawn(sample_membership, environment)
+    else:
+        worker = int(os.environ["M4_WORKER_INDEX"])
+        if not 0 <= worker < 60:
+            raise ValueError("Worker index must be between 0 and 59")
+        RECEIPTS = ReceiptWriter(OUTPUT / ("inference-receipts-worker-" + str(worker) + ".jsonl"))
 
 
 @events.quitting.add_listener
 def quitting(environment, **kwargs):
+    if RECEIPTS is not None:
+        try:
+            RECEIPTS.close()
+        except OSError:
+            environment.process_exit_code = 1
     if SAMPLER is not None:
         SAMPLER.kill()
         (OUTPUT / "membership.json").write_text(json.dumps(MEMBERSHIP))
@@ -100,6 +112,10 @@ class AinizeInferenceUser(User):
                     if "text/event-stream" not in response.headers.get("content-type", ""):
                         raise ValueError("Node did not return SSE")
                     result = consume_chat(response.iter_lines(chunk_size=64), target["patchId"])
+                    evidence = completion_evidence(result, target["nodeUrl"], int(start_time * 1000), int(time.time() * 1000))
+                    if RECEIPTS is None:
+                        raise ValueError("Receipt writer was not initialized")
+                    RECEIPTS.append(evidence)
                     size = len(result["patched"]["content"].encode("utf-8"))
                     error = None
         except (Exception, gevent.Timeout):
