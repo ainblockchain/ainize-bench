@@ -31,6 +31,7 @@ set -e
 cleanup
 python3 - "$OUTPUT" <<'PY'
 import json
+import hashlib
 import sys
 from pathlib import Path
 
@@ -42,6 +43,14 @@ assert records
 assert all(record["receipt"]["model_id"] == "synthetic-model" for record in records)
 assert len({record["receipt"]["id"] for record in records}) == len(records)
 assert all(set(record) == {"version", "node_url", "client_started_at", "client_completed_at", "receipt"} for record in records)
+identity = json.loads((output / "worker-identity-0.json").read_text())
+summary = json.loads((output / "worker-summary-0.json").read_text())
+assert all(summary[key] == value for key, value in identity.items())
+assert summary["successes"] == summary["receipt_count"] == len(records)
+assert summary["requests"] == summary["successes"] + summary["failures"]
+assert summary["receipt_count_matches_successes"] is True
+assert summary["receipt_sha256"] == hashlib.sha256((output / identity["receipt_file"]).read_bytes()).hexdigest()
+assert any(identity["client_id"] in sample["members"] for sample in json.loads((output / "membership.json").read_text()))
 report = {"synthetic_only": True, "workers": 1, "users": 1, "receipt_count": len(records),
     "geometry_pass": False, "scope": "Locust receipt-writing smoke check, not an M4 performance result"}
 (output / "receipt-smoke.json").write_text(json.dumps(report, indent=2) + "\n")

@@ -12,7 +12,7 @@ from locust.runners import MasterRunner
 
 from ainize_sse import consume_chat
 from m4_membership import stable_window
-from m4_receipts import ReceiptWriter, completion_evidence
+from m4_receipts import ReceiptWriter, completion_evidence, write_private_json
 
 
 MIN_STABLE_SECONDS = float(os.environ.get("M4_STABLE_SECONDS", "30"))
@@ -45,6 +45,8 @@ OUTPUT = Path(os.environ["M4_EVIDENCE_DIR"])
 MEMBERSHIP = []
 SAMPLER = None
 RECEIPTS = None
+WORKER_IDENTITY = None
+REQUEST_COUNTS = {"requests": 0, "successes": 0, "failures": 0}
 
 
 def sample_membership(environment):
@@ -57,14 +59,27 @@ def sample_membership(environment):
 
 @events.test_start.add_listener
 def started(environment, **kwargs):
-    global SAMPLER, RECEIPTS
+    global SAMPLER, RECEIPTS, WORKER_IDENTITY
     if isinstance(environment.runner, MasterRunner):
         SAMPLER = gevent.spawn(sample_membership, environment)
     else:
         worker = int(os.environ["M4_WORKER_INDEX"])
         if not 0 <= worker < 60:
             raise ValueError("Worker index must be between 0 and 59")
+        client_id = getattr(environment.runner, "client_id", None)
+        if not isinstance(client_id, str) or not client_id:
+            raise ValueError("A distributed Locust worker identity is required")
+        WORKER_IDENTITY = {"version": 1, "worker_index": worker, "client_id": client_id,
+            "started_at": int(time.time() * 1000), "receipt_file": "inference-receipts-worker-" + str(worker) + ".jsonl"}
+        write_private_json(OUTPUT / ("worker-identity-" + str(worker) + ".json"), WORKER_IDENTITY)
         RECEIPTS = ReceiptWriter(OUTPUT / ("inference-receipts-worker-" + str(worker) + ".jsonl"))
+
+
+@events.request.add_listener
+def counted(request_type, name, exception, **kwargs):
+    if WORKER_IDENTITY is not None and request_type == "POST" and name == "ainize/chat":
+        REQUEST_COUNTS["requests"] += 1
+        REQUEST_COUNTS["successes" if exception is None else "failures"] += 1
 
 
 @events.quitting.add_listener
@@ -72,6 +87,13 @@ def quitting(environment, **kwargs):
     if RECEIPTS is not None:
         try:
             RECEIPTS.close()
+            write_private_json(OUTPUT / ("worker-summary-" + str(WORKER_IDENTITY["worker_index"]) + ".json"), {
+                **WORKER_IDENTITY, "finished_at": int(time.time() * 1000), **REQUEST_COUNTS,
+                "receipt_count": RECEIPTS.count, "receipt_sha256": RECEIPTS.digest.hexdigest(),
+                "receipt_count_matches_successes": RECEIPTS.count == REQUEST_COUNTS["successes"],
+            })
+            if RECEIPTS.count != REQUEST_COUNTS["successes"]:
+                environment.process_exit_code = 1
         except OSError:
             environment.process_exit_code = 1
     if SAMPLER is not None:

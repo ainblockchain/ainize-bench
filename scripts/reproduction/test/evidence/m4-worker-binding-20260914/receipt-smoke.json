@@ -1,0 +1,8 @@
+{
+  "synthetic_only": true,
+  "workers": 1,
+  "users": 1,
+  "receipt_count": 34,
+  "geometry_pass": false,
+  "scope": "Locust receipt-writing smoke check, not an M4 performance result"
+}

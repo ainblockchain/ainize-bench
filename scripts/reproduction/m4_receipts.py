@@ -1,4 +1,5 @@
 import json
+import hashlib
 import os
 import uuid
 from urllib.parse import urlsplit
@@ -27,11 +28,15 @@ def completion_evidence(result, node_url, started_at, finished_at):
 class ReceiptWriter:
     def __init__(self, path):
         self.descriptor = os.open(path, os.O_WRONLY | os.O_CREAT | os.O_EXCL | os.O_APPEND, 0o600)
+        self.count = 0
+        self.digest = hashlib.sha256()
 
     def append(self, record):
         encoded = (json.dumps(record, ensure_ascii=False, separators=(",", ":")) + "\n").encode("utf-8")
         if os.write(self.descriptor, encoded) != len(encoded):
             raise OSError("Incomplete receipt evidence write")
+        self.digest.update(encoded)
+        self.count += 1
 
     def close(self):
         if self.descriptor is not None:
@@ -40,3 +45,12 @@ class ReceiptWriter:
             finally:
                 os.close(self.descriptor)
                 self.descriptor = None
+
+
+def write_private_json(path, value):
+    descriptor = os.open(path, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
+    with os.fdopen(descriptor, "w", encoding="utf-8") as output:
+        json.dump(value, output, ensure_ascii=False)
+        output.write("\n")
+        output.flush()
+        os.fsync(output.fileno())

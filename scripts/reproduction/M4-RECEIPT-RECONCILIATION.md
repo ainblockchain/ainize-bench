@@ -9,6 +9,15 @@ transaction, and does not add an experiment API or run ID to AINSCAN.
 1. Preserve all 60 `inference-receipts-worker-<index>.jsonl` files from the same
    load run. A file must end with a newline if nonempty. Never copy one worker's
    file under another name to fill a missing file.
+   Keep the corresponding `worker-identity-<index>.json` and
+   `worker-summary-<index>.json` files as well. The identity binds the filename
+   index to the actual Locust `client_id` used in `membership.json`. On orderly
+   shutdown, the summary records cumulative local request-event successes and
+   failures, the receipt count and the SHA-256 of the exact JSONL bytes. A missing
+   summary, changed digest, unmatched worker identity or count mismatch leaves
+   worker evidence incomplete; do not reconstruct a missing summary from counts
+   reported by another process. These are local evidence bindings, not signatures
+   or proof that distinct URLs represent independent GPU hardware.
 2. Record the five actual node URLs and their five distinct AIN addresses. Obtain
    the expected genesis hash from the agreed chain configuration, not from an
    arbitrary replacement endpoint after the test.
@@ -87,6 +96,10 @@ alone cannot prove sixty workers ran. Worker statistics, stable membership and
 the selected throughput interval must still be reconciled separately. Server
 batches may contain other clients' receipts; those extra receipts are never added
 to the measured client count. No inference TPS is invented from a batch sequence.
+The chain reconciliation command does not yet verify the worker identity or
+summary files. Their presence is not a performance verdict; stable-window TPS
+must use completed client requests within that window, not all-run successes
+divided by the shorter stable-window duration.
 
 Use each returned transaction hash in the normal transaction search of AINSCAN
 configured for this same chain, or inspect its returned path in the database
