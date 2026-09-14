@@ -100,6 +100,8 @@ The chain reconciliation command does not yet verify the worker identity or
 summary files. Their presence is not a performance verdict; stable-window TPS
 must use completed client requests within that window, not all-run successes
 divided by the shorter stable-window duration.
+Use the separate [throughput calculator](M4-THROUGHPUT.md) to validate worker
+bindings, cumulative master counts and stable membership before computing that rate.
 
 Use each returned transaction hash in the normal transaction search of AINSCAN
 configured for this same chain, or inspect its returned path in the database
