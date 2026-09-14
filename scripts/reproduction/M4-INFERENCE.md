@@ -65,6 +65,20 @@ the grace interval does not guarantee delivery or excuse a mismatch.
 
 Monitor `master.log` and `locust_stats_history.csv`; inspect `locust_stats.csv` and `locust_failures.csv` afterwards. Locust total request count includes failures: successful inference count is requests minus failures. Use the actual measured time window, not the configured duration when ramp-up or shutdown extends it. Token throughput, inference requests and blockchain transactions are different units.
 
+Failures now retain bounded categories in Locust's failure CSV and each worker
+summary's `failure_counts`: HTTP status (`http_401`, `http_409`, `http_429`, etc.),
+connect/read/total timeout, TLS, connection-or-read error, content type, stream,
+receipt validation and receipt persistence. A Requests `ConnectionError` can wrap
+a streaming read failure, so its category deliberately does not assert a failed
+initial connection. Remote exception text, response bodies, tokens and prompts
+are never copied into failure labels. Categories are diagnostic only: they do not
+retry requests, bypass quotas or convert failures to successes. Older summaries
+without categories cannot be retrospectively classified from aggregate counts.
+
+Validate the actual task's classification inside the pinned Locust image with
+`python3 scripts/reproduction/test/check_m4_failure_task.py`. This exercises the
+real task against mocked transport/receipt failures, not a GPU benchmark.
+
 Each worker writes `inference-receipts-worker-<index>.jsonl` (mode 0600, exclusive
 creation). A line contains only its node URL, client start/completion timestamps
 and the returned receipt; prompts, answers and bearer tokens are omitted. It is

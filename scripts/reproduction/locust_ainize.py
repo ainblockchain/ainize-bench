@@ -13,6 +13,7 @@ from locust.runners import MasterRunner
 from ainize_sse import consume_chat
 from m4_membership import stable_window
 from m4_receipts import ReceiptWriter, completion_evidence, write_private_json
+from m4_failures import failure_label, safe_failure_code
 
 
 MIN_STABLE_SECONDS = float(os.environ.get("M4_STABLE_SECONDS", "30"))
@@ -47,6 +48,7 @@ SAMPLER = None
 RECEIPTS = None
 WORKER_IDENTITY = None
 REQUEST_COUNTS = {"requests": 0, "successes": 0, "failures": 0}
+FAILURE_COUNTS = {}
 
 
 def sample_membership(environment):
@@ -80,6 +82,9 @@ def counted(request_type, name, exception, **kwargs):
     if WORKER_IDENTITY is not None and request_type == "POST" and name == "ainize/chat":
         REQUEST_COUNTS["requests"] += 1
         REQUEST_COUNTS["successes" if exception is None else "failures"] += 1
+        if exception is not None:
+            code = safe_failure_code(exception)
+            FAILURE_COUNTS[code] = FAILURE_COUNTS.get(code, 0) + 1
 
 
 @events.quitting.add_listener
@@ -89,6 +94,7 @@ def quitting(environment, **kwargs):
             RECEIPTS.close()
             write_private_json(OUTPUT / ("worker-summary-" + str(WORKER_IDENTITY["worker_index"]) + ".json"), {
                 **WORKER_IDENTITY, "finished_at": int(time.time() * 1000), **REQUEST_COUNTS,
+                "failure_counts": dict(FAILURE_COUNTS),
                 "receipt_count": RECEIPTS.count, "receipt_sha256": RECEIPTS.digest.hexdigest(),
                 "receipt_count_matches_successes": RECEIPTS.count == REQUEST_COUNTS["successes"],
             })
@@ -120,7 +126,9 @@ class AinizeInferenceUser(User):
         target = TARGETS[next(CHOICES)]
         start_time = time.time()
         started_at = time.perf_counter()
-        error = RuntimeError("Inference interrupted before completion")
+        error = RuntimeError("interrupted")
+        stage = "connect"
+        http_status = None
         size = 0
         try:
             with gevent.Timeout(300):
@@ -130,18 +138,38 @@ class AinizeInferenceUser(User):
                     "max_tokens": 200,
                 }, headers=target["headers"], stream=True, timeout=(10, 60), allow_redirects=False) as response:
                     if response.status_code != 200:
+                        stage, http_status = "http", response.status_code
                         raise ValueError("Node chat HTTP " + str(response.status_code))
+                    stage = "content_type"
                     if "text/event-stream" not in response.headers.get("content-type", ""):
                         raise ValueError("Node did not return SSE")
+                    stage = "stream"
                     result = consume_chat(response.iter_lines(chunk_size=64), target["patchId"])
+                    stage = "receipt_validation"
                     evidence = completion_evidence(result, target["nodeUrl"], int(start_time * 1000), int(time.time() * 1000))
+                    stage = "receipt_write"
                     if RECEIPTS is None:
                         raise ValueError("Receipt writer was not initialized")
                     RECEIPTS.append(evidence)
+                    stage = "result"
                     size = len(result["patched"]["content"].encode("utf-8"))
                     error = None
-        except (Exception, gevent.Timeout):
-            error = RuntimeError("Ainize inference failed or its stream was incomplete")
+        except gevent.Timeout:
+            error = RuntimeError("total_timeout")
+        except requests.exceptions.ConnectTimeout:
+            error = RuntimeError("connect_timeout")
+        except requests.exceptions.ReadTimeout:
+            error = RuntimeError("read_timeout")
+        except requests.exceptions.Timeout:
+            error = RuntimeError("request_timeout")
+        except requests.exceptions.SSLError:
+            error = RuntimeError("tls_error")
+        except requests.exceptions.ConnectionError:
+            error = RuntimeError("connection_or_read_error")
+        except requests.exceptions.RequestException:
+            error = RuntimeError("request_error")
+        except Exception:
+            error = RuntimeError(failure_label(stage, http_status))
         finally:
             self.environment.events.request.fire(request_type="POST", name="ainize/chat", start_time=start_time,
                 response_time=(time.perf_counter() - started_at) * 1000, response_length=size,
