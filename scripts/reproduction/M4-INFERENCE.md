@@ -65,9 +65,12 @@ partial line, missing worker file or count mismatch must fail reconciliation.
 Client and node clocks are separate observations; no assumed clock equality is
 used to claim latency. Use receipt IDs to join with `ainize ledger inference
 <local-batch-id> --receipts --json`, then verify the returned transaction and
-commitment against the chain. Automated full-window reconciliation remains pending.
+commitment against the chain. The read-only
+[receipt-to-chain reconciler](M4-RECEIPT-RECONCILIATION.md) now performs this join
+for five node identities and sixty worker files. Stable-window throughput and
+worker request-statistics reconciliation still remain separate unfinished gates.
 
-`membership.json` samples each worker identity, state and reported user count once per second. `geometry.json` requires the same 60 workers, each reporting four users and a running state, for at least 30 seconds by default. Replacement, loss, misdistribution, backward clocks and observation gaps over 2.5 seconds break the window. `M4_STABLE_SECONDS` explicitly selects a different minimum for a separately specified test; do not lower it afterwards just to turn a failed run into a pass. The selected window measures observed stability, not unseen activity between samples. A missing valid window produces nonzero master exit. Worker request-statistics reconciliation, final sustained-window TPS calculation and native on-chain usage/anchor reconciliation are not yet connected in this new scenario. No 240-user/60-worker performance claim is made until those checks and a real run succeed. The old vLLM-only runner is not evidence for this scenario.
+`membership.json` samples each worker identity, state and reported user count once per second. `geometry.json` requires the same 60 workers, each reporting four users and a running state, for at least 30 seconds by default. Replacement, loss, misdistribution, backward clocks and observation gaps over 2.5 seconds break the window. `M4_STABLE_SECONDS` explicitly selects a different minimum for a separately specified test; do not lower it afterwards just to turn a failed run into a pass. The selected window measures observed stability, not unseen activity between samples. A missing valid window produces nonzero master exit. The receipt-to-chain verifier is now available as a separate read-only script; worker request-statistics reconciliation and final sustained-window TPS calculation are not yet connected. The complete real-load-to-chain workflow has not been validated. No 240-user/60-worker performance claim is made until those checks and a real run succeed. The old vLLM-only runner is not evidence for this scenario.
 
 Parser regressions run without GPUs: `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s scripts/reproduction/test -p 'test_*.py'`.
 
