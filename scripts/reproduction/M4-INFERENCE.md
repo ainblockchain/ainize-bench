@@ -51,6 +51,16 @@ Replace host mount paths, ensure the output mount is writable by the chosen UID,
 
 The output directory must not already exist. The launcher starts 60 worker processes and one master with 240 users total, not per worker, following [Locust distributed execution](https://docs.locust.io/en/stable/running-distributed.html). Only its own child processes are cleaned up. `-r 240` is the user spawn rate, not a TPS target. Streams have a 300-second total deadline; shutdown permits active requests to finish. Do not run concurrent launchers sharing master port 5557.
 
+The master uses `--autostart --autoquit 5`, rather than headless immediate quit.
+In the pinned Locust 2.46.0 implementation, headless quit waits only 0.5 seconds
+for final worker reports. Normal stop first drains users with the configured
+310-second stop timeout (Locust allows another 60 seconds for workers to stop),
+then leaves five seconds for final reports before quitting. Its required web
+listener is bound to an ephemeral port on container loopback only, with no Docker
+port publication. This is load-generator internals, not an Ainize/AINSCAN API.
+Missing final worker reports still fail the separate counter reconciliation;
+the grace interval does not guarantee delivery or excuse a mismatch.
+
 ## Evidence and current limits
 
 Monitor `master.log` and `locust_stats_history.csv`; inspect `locust_stats.csv` and `locust_failures.csv` afterwards. Locust total request count includes failures: successful inference count is requests minus failures. Use the actual measured time window, not the configured duration when ramp-up or shutdown extends it. Token throughput, inference requests and blockchain transactions are different units.
@@ -70,7 +80,7 @@ commitment against the chain. The read-only
 for five node identities and sixty worker files. Stable-window throughput and
 worker request-statistics reconciliation still remain separate unfinished gates.
 
-`membership.json` samples each worker identity, state and reported user count once per second. `geometry.json` requires the same 60 workers, each reporting four users and a running state, for at least 30 seconds by default. Replacement, loss, misdistribution, backward clocks and observation gaps over 2.5 seconds break the window. `M4_STABLE_SECONDS` explicitly selects a different minimum for a separately specified test; do not lower it afterwards just to turn a failed run into a pass. The selected window measures observed stability, not unseen activity between samples. A missing valid window produces nonzero master exit. The receipt-to-chain verifier is now available as a separate read-only script; worker request-statistics reconciliation and final sustained-window TPS calculation are not yet connected. The complete real-load-to-chain workflow has not been validated. No 240-user/60-worker performance claim is made until those checks and a real run succeed. The old vLLM-only runner is not evidence for this scenario.
+`membership.json` samples each worker identity, state and reported user count once per second. `geometry.json` requires the same 60 workers, each reporting four users and a running state, for at least 30 seconds by default. Replacement, loss, misdistribution, backward clocks and observation gaps over 2.5 seconds break the window. `M4_STABLE_SECONDS` explicitly selects a different minimum for a separately specified test; do not lower it afterwards just to turn a failed run into a pass. The selected window measures observed stability, not unseen activity between samples. A missing valid window produces nonzero master exit. Use the separate [receipt-to-chain verifier](M4-RECEIPT-RECONCILIATION.md), then the [stable-window throughput calculator](M4-THROUGHPUT.md) to join worker identities, file hashes, master counts and the exact completed-client set. The complete real-load-to-chain workflow has not been validated. No 240-user/60-worker performance claim is made until those checks and a real run succeed. The old vLLM-only runner is not evidence for this scenario.
 
 Parser regressions run without GPUs: `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s scripts/reproduction/test -p 'test_*.py'`.
 

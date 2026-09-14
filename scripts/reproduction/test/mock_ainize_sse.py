@@ -1,4 +1,6 @@
 import json
+import math
+import os
 import signal
 import sys
 import threading
@@ -6,6 +8,11 @@ import time
 import uuid
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
+
+
+DELAY_SECONDS = float(os.environ.get("M4_SYNTHETIC_DELAY_SECONDS", "0.05"))
+if not math.isfinite(DELAY_SECONDS) or not 0 <= DELAY_SECONDS <= 60:
+    raise ValueError("Synthetic response delay must be between zero and sixty seconds")
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -28,7 +35,7 @@ class Handler(BaseHTTPRequestHandler):
         try:
             self.wfile.write(("data: " + json.dumps(chunk) + "\n\n").encode())
             self.wfile.flush()
-            time.sleep(0.05)
+            time.sleep(DELAY_SECONDS)
             chunk["choices"][0].update({"delta": {}, "finish_reason": "stop"})
             result = {"mode": "patched", "patch_ids": [request["patch_id"]], "patched": {"model": "synthetic-model", "content": "Paris"}}
             result["inference_receipt"] = {"id": str(uuid.uuid4()), "model_id": "synthetic-model", "completed_at": int(time.time() * 1000)}

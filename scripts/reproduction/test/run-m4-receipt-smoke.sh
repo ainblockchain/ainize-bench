@@ -23,7 +23,8 @@ M4_WORKER_INDEX=0 locust -f "$ROOT/locust_ainize.py" --worker --master-host 127.
 PIDS+=("$!")
 set +e
 locust -f "$ROOT/locust_ainize.py" --master --master-bind-host 127.0.0.1 --master-bind-port 5557 \
-  --expect-workers 1 --expect-workers-max-wait 30 --headless -u 1 -r 1 -t 3s --stop-timeout 10 \
+  --expect-workers 1 --expect-workers-max-wait 30 --autostart --autoquit 5 --web-host 127.0.0.1 --web-port 0 \
+  -u 1 -r 1 -t 3s --stop-timeout 10 \
   --csv "$OUTPUT/locust" --only-summary > "$OUTPUT/master.log" 2>&1
 STATUS=$?
 set -e
@@ -32,6 +33,7 @@ cleanup
 python3 - "$OUTPUT" <<'PY'
 import json
 import hashlib
+import csv
 import sys
 from pathlib import Path
 
@@ -50,6 +52,10 @@ assert summary["successes"] == summary["receipt_count"] == len(records)
 assert summary["requests"] == summary["successes"] + summary["failures"]
 assert summary["receipt_count_matches_successes"] is True
 assert summary["receipt_sha256"] == hashlib.sha256((output / identity["receipt_file"]).read_bytes()).hexdigest()
+with (output / "locust_stats.csv").open() as source:
+    stats = list(csv.DictReader(source))
+assert len(stats) == 2
+assert all(int(row["Request Count"]) == summary["requests"] and int(row["Failure Count"]) == summary["failures"] for row in stats)
 assert any(identity["client_id"] in sample["members"] for sample in json.loads((output / "membership.json").read_text()))
 report = {"synthetic_only": True, "workers": 1, "users": 1, "receipt_count": len(records),
     "geometry_pass": False, "scope": "Locust receipt-writing smoke check, not an M4 performance result"}

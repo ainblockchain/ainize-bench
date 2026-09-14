@@ -27,7 +27,8 @@ for worker in $(seq 0 59); do
   PIDS+=("$!")
 done
 "$LOCUST_BIN" -f "$SCRIPT_DIR/locust_ainize.py" --master --master-bind-host 127.0.0.1 --master-bind-port 5557 \
-  --expect-workers 60 --expect-workers-max-wait 120 --headless -u 240 -r 240 -t "${DUR}s" --stop-timeout 310 \
+  --expect-workers 60 --expect-workers-max-wait 120 --autostart --autoquit 5 --web-host 127.0.0.1 --web-port 0 \
+  -u 240 -r 240 -t "${DUR}s" --stop-timeout 310 \
   --csv "$M4_EVIDENCE_DIR/locust" --csv-full-history --only-summary \
   > "$M4_EVIDENCE_DIR/master.log" 2>&1 &
 MASTER=$!
