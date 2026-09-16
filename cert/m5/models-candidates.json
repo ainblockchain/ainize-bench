@@ -1,0 +1,474 @@
+[
+ {
+  "id": "deepseek-ai/deepseek-coder-1.3b-base",
+  "gb": 3
+ },
+ {
+  "id": "Qwen/Qwen2-1.5B",
+  "gb": 3
+ },
+ {
+  "id": "Qwen/Qwen2-1.5B-Instruct",
+  "gb": 3
+ },
+ {
+  "id": "gpt2",
+  "gb": 1
+ },
+ {
+  "id": "gpt2-medium",
+  "gb": 2
+ },
+ {
+  "id": "gpt2-large",
+  "gb": 3
+ },
+ {
+  "id": "distilbert/distilgpt2",
+  "gb": 1
+ },
+ {
+  "id": "facebook/opt-125m",
+  "gb": 1
+ },
+ {
+  "id": "facebook/opt-350m",
+  "gb": 1
+ },
+ {
+  "id": "facebook/opt-1.3b",
+  "gb": 3
+ },
+ {
+  "id": "EleutherAI/pythia-70m",
+  "gb": 1
+ },
+ {
+  "id": "EleutherAI/pythia-160m",
+  "gb": 1
+ },
+ {
+  "id": "EleutherAI/pythia-410m",
+  "gb": 1
+ },
+ {
+  "id": "EleutherAI/pythia-1b",
+  "gb": 2
+ },
+ {
+  "id": "EleutherAI/pythia-1.4b",
+  "gb": 3
+ },
+ {
+  "id": "bigscience/bloom-560m",
+  "gb": 2
+ },
+ {
+  "id": "bigscience/bloom-1b1",
+  "gb": 3
+ },
+ {
+  "id": "bigscience/bloom-1b7",
+  "gb": 4
+ },
+ {
+  "id": "bigscience/bloomz-560m",
+  "gb": 2
+ },
+ {
+  "id": "Qwen/Qwen1.5-0.5B",
+  "gb": 1
+ },
+ {
+  "id": "Qwen/Qwen1.5-0.5B-Chat",
+  "gb": 1
+ },
+ {
+  "id": "Qwen/Qwen1.5-1.8B",
+  "gb": 4
+ },
+ {
+  "id": "Qwen/Qwen1.5-1.8B-Chat",
+  "gb": 4
+ },
+ {
+  "id": "Qwen/Qwen2-0.5B",
+  "gb": 1
+ },
+ {
+  "id": "Qwen/Qwen2-0.5B-Instruct",
+  "gb": 1
+ },
+ {
+  "id": "Qwen/Qwen2.5-0.5B",
+  "gb": 1
+ },
+ {
+  "id": "Qwen/Qwen2.5-0.5B-Instruct",
+  "gb": 1
+ },
+ {
+  "id": "Qwen/Qwen2.5-1.5B",
+  "gb": 3
+ },
+ {
+  "id": "Qwen/Qwen2.5-1.5B-Instruct",
+  "gb": 3
+ },
+ {
+  "id": "Qwen/Qwen2.5-Coder-1.5B",
+  "gb": 3
+ },
+ {
+  "id": "Qwen/Qwen2.5-Math-1.5B",
+  "gb": 3
+ },
+ {
+  "id": "Qwen/Qwen3-0.6B",
+  "gb": 2
+ },
+ {
+  "id": "Qwen/Qwen3-1.7B",
+  "gb": 4
+ },
+ {
+  "id": "deepseek-ai/deepseek-coder-1.3b-instruct",
+  "gb": 3
+ },
+ {
+  "id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+  "gb": 4
+ },
+ {
+  "id": "microsoft/phi-1",
+  "gb": 3
+ },
+ {
+  "id": "microsoft/phi-1_5",
+  "gb": 3
+ },
+ {
+  "id": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+  "gb": 3
+ },
+ {
+  "id": "TinyLlama/TinyLlama_v1.1",
+  "gb": 3
+ },
+ {
+  "id": "HuggingFaceTB/SmolLM-135M",
+  "gb": 1
+ },
+ {
+  "id": "HuggingFaceTB/SmolLM-360M",
+  "gb": 1
+ },
+ {
+  "id": "HuggingFaceTB/SmolLM-1.7B",
+  "gb": 4
+ },
+ {
+  "id": "HuggingFaceTB/SmolLM2-135M-Instruct",
+  "gb": 1
+ },
+ {
+  "id": "HuggingFaceTB/SmolLM2-360M-Instruct",
+  "gb": 1
+ },
+ {
+  "id": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+  "gb": 4
+ },
+ {
+  "id": "tiiuae/falcon-rw-1b",
+  "gb": 3
+ },
+ {
+  "id": "allenai/OLMo-1B-hf",
+  "gb": 3
+ },
+ {
+  "id": "skt/kogpt2-base-v2",
+  "gb": 1
+ },
+ {
+  "id": "EleutherAI/polyglot-ko-1.3b",
+  "gb": 3
+ },
+ {
+  "id": "Salesforce/codegen-350M-mono",
+  "gb": 1
+ },
+ {
+  "id": "stabilityai/stablelm-2-1_6b",
+  "gb": 4
+ },
+ {
+  "id": "stabilityai/stablelm-2-zephyr-1_6b",
+  "gb": 4
+ },
+ {
+  "id": "Qwen/Qwen2.5-Coder-0.5B",
+  "gb": 1
+ },
+ {
+  "id": "Qwen/Qwen3-1.7B-Base",
+  "gb": 4
+ },
+ {
+  "id": "bigscience/bloomz-1b1",
+  "gb": 3
+ },
+ {
+  "id": "bigscience/bloomz-1b7",
+  "gb": 4
+ },
+ {
+  "id": "tiiuae/Falcon3-1B-Base",
+  "gb": 3
+ },
+ {
+  "id": "allenai/OLMo-2-0425-1B",
+  "gb": 3
+ },
+ {
+  "id": "HuggingFaceTB/SmolLM2-135M",
+  "gb": 1
+ },
+ {
+  "id": "HuggingFaceTB/SmolLM2-360M",
+  "gb": 1
+ },
+ {
+  "id": "HuggingFaceTB/SmolLM-135M-Instruct",
+  "gb": 1
+ },
+ {
+  "id": "HuggingFaceTB/SmolLM-360M-Instruct",
+  "gb": 1
+ },
+ {
+  "id": "HuggingFaceTB/SmolLM-1.7B-Instruct",
+  "gb": 1
+ },
+ {
+  "id": "EleutherAI/gpt-neo-125m",
+  "gb": 1
+ },
+ {
+  "id": "EleutherAI/gpt-neo-1.3B",
+  "gb": 1
+ },
+ {
+  "id": "EleutherAI/pythia-31m",
+  "gb": 1
+ },
+ {
+  "id": "EleutherAI/pythia-14m",
+  "gb": 1
+ },
+ {
+  "id": "EleutherAI/pythia-160m-deduped",
+  "gb": 1
+ },
+ {
+  "id": "EleutherAI/pythia-410m-deduped",
+  "gb": 1
+ },
+ {
+  "id": "EleutherAI/pythia-1b-deduped",
+  "gb": 1
+ },
+ {
+  "id": "facebook/xglm-564M",
+  "gb": 1
+ },
+ {
+  "id": "Qwen/Qwen2.5-Coder-0.5B-Instruct",
+  "gb": 1
+ },
+ {
+  "id": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+  "gb": 1
+ },
+ {
+  "id": "Qwen/Qwen2.5-Math-1.5B-Instruct",
+  "gb": 1
+ },
+ {
+  "id": "Qwen/Qwen3-0.6B-Base",
+  "gb": 1
+ },
+ {
+  "id": "microsoft/DialoGPT-small",
+  "gb": 1
+ },
+ {
+  "id": "microsoft/DialoGPT-medium",
+  "gb": 1
+ },
+ {
+  "id": "microsoft/DialoGPT-large",
+  "gb": 1
+ },
+ {
+  "id": "openai-community/gpt2",
+  "gb": 1
+ },
+ {
+  "id": "openai-community/gpt2-medium",
+  "gb": 1
+ },
+ {
+  "id": "cerebras/Cerebras-GPT-111M",
+  "gb": 1
+ },
+ {
+  "id": "cerebras/Cerebras-GPT-256M",
+  "gb": 1
+ },
+ {
+  "id": "cerebras/Cerebras-GPT-590M",
+  "gb": 1
+ },
+ {
+  "id": "cerebras/Cerebras-GPT-1.3B",
+  "gb": 1
+ },
+ {
+  "id": "bigcode/tiny_starcoder_py",
+  "gb": 1
+ },
+ {
+  "id": "bigcode/santacoder",
+  "gb": 1
+ },
+ {
+  "id": "Salesforce/codegen-350M-multi",
+  "gb": 1
+ },
+ {
+  "id": "Salesforce/codegen-350M-nl",
+  "gb": 1
+ },
+ {
+  "id": "stabilityai/stablelm-2-1_6b-chat",
+  "gb": 1
+ },
+ {
+  "id": "ai-forever/rugpt3small_based_on_gpt2",
+  "gb": 1
+ },
+ {
+  "id": "kakaobrain/kogpt",
+  "gb": 1
+ },
+ {
+  "id": "rinna/japanese-gpt2-small",
+  "gb": 1
+ },
+ {
+  "id": "TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T",
+  "gb": 1
+ },
+ {
+  "id": "PY007/TinyLlama-1.1B-Chat-v0.3",
+  "gb": 1
+ },
+ {
+  "id": "JackFram/llama-160m",
+  "gb": 1
+ },
+ {
+  "id": "JackFram/llama-68m",
+  "gb": 1
+ },
+ {
+  "id": "princeton-nlp/Sheared-LLaMA-1.3B",
+  "gb": 1
+ },
+ {
+  "id": "princeton-nlp/Sheared-LLaMA-2.7B",
+  "gb": 1
+ },
+ {
+  "id": "state-spaces/mamba-130m-hf",
+  "gb": 1
+ },
+ {
+  "id": "state-spaces/mamba-370m-hf",
+  "gb": 1
+ },
+ {
+  "id": "state-spaces/mamba-790m-hf",
+  "gb": 1
+ },
+ {
+  "id": "RWKV/rwkv-4-169m-pile",
+  "gb": 1
+ },
+ {
+  "id": "RWKV/rwkv-4-430m-pile",
+  "gb": 1
+ },
+ {
+  "id": "google/flan-t5-small",
+  "gb": 1
+ },
+ {
+  "id": "google/flan-t5-base",
+  "gb": 1
+ },
+ {
+  "id": "google/flan-t5-large",
+  "gb": 1
+ },
+ {
+  "id": "google/gemma-3-270m",
+  "gb": 1
+ },
+ {
+  "id": "google/gemma-3-270m-it",
+  "gb": 1
+ },
+ {
+  "id": "allenai/OLMoE-1B-7B-0924",
+  "gb": 1
+ },
+ {
+  "id": "HuggingFaceTB/SmolLM3-3B",
+  "gb": 1
+ },
+ {
+  "id": "ibm-granite/granite-3.1-1b-a400m-instruct",
+  "gb": 1
+ },
+ {
+  "id": "ibm-granite/granite-3.0-2b-instruct",
+  "gb": 1
+ },
+ {
+  "id": "LiquidAI/LFM2-350M",
+  "gb": 1
+ },
+ {
+  "id": "LiquidAI/LFM2-700M",
+  "gb": 1
+ },
+ {
+  "id": "LiquidAI/LFM2-1.2B",
+  "gb": 1
+ },
+ {
+  "id": "arnir0/Tiny-LLM",
+  "gb": 1
+ },
+ {
+  "id": "sshleifer/tiny-gpt2",
+  "gb": 1
+ },
+ {
+  "id": "hf-internal-testing/tiny-random-gpt2",
+  "gb": 1
+ }
+]
