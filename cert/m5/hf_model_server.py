@@ -108,7 +108,7 @@ def turn_stops(tok):
     return tuple(dict.fromkeys(m for m in marks if m))
 
 
-def to_prompt(messages):
+def to_prompt(messages, template_kwargs=None):
     """대화를 이 모델이 실제로 읽는 형식으로 바꾼다.
 
     채팅 템플릿이 있는 모델은 그 템플릿을 쓴다. 템플릿이 없는 모델은 대화형이 아니라
@@ -119,9 +119,18 @@ def to_prompt(messages):
     tok = MODEL['tok']
     if getattr(tok, 'chat_template', None):
         try:
-            return tok.apply_chat_template(messages, tokenize=False, add_generation_prompt=True), turn_stops(tok)
+            # 템플릿이 받는 추가 인자를 그대로 넘긴다. Qwen3 계열은 `enable_thinking` 으로
+            # 추론 구간을 켜고 끄는데, 이것을 무시하면 짧은 답 예산이 <think> 로 다 차서
+            # 답이 비어 돌아온다. 모델이 아니라 요청 형식의 문제다.
+            return tok.apply_chat_template(messages, tokenize=False, add_generation_prompt=True,
+                                           **(template_kwargs or {})), turn_stops(tok)
         except Exception:
-            pass
+            # 추가 인자를 받지 않는 템플릿이 있다. 템플릿 자체는 쓸 수 있으므로 인자만 빼고 다시 한다.
+            if template_kwargs:
+                try:
+                    return tok.apply_chat_template(messages, tokenize=False, add_generation_prompt=True), turn_stops(tok)
+                except Exception:
+                    pass
     turns = []
     for msg in messages:
         role, content = msg.get('role', 'user'), (msg.get('content') or '').strip()
@@ -192,7 +201,8 @@ class Handler(BaseHTTPRequestHandler):
             # 요청한 모델이 실려 있지 않다. 다른 모델의 답으로 대체하지 않는다.
             return self._send(404, {'error': {'message': 'model %r is not served; loaded=%r' % (want, loaded),
                                               'type': 'model_not_found'}})
-        prompt, stop = to_prompt(body['messages']) if chat else (body.get('prompt', ''), ())
+        template_kwargs = body.get('chat_template_kwargs') if isinstance(body.get('chat_template_kwargs'), dict) else None
+        prompt, stop = to_prompt(body['messages'], template_kwargs) if chat else (body.get('prompt', ''), ())
         stop = tuple(body.get('stop') or stop)
         want_tokens = int(body.get('max_tokens') or MAX_NEW)
         with LOCK:

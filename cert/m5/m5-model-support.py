@@ -81,7 +81,7 @@ for mid in models:
     row['command'] = 'ainize --node %s chat https://huggingface.co/%s "%s" --max-tokens %d' % (
         NODE, mid, QUESTION, MAX_TOKENS)
     try:
-        p = subprocess.run(cmd, capture_output=True, text=True, timeout=900)
+        p = subprocess.run(cmd, capture_output=True, encoding='utf-8', errors='replace', timeout=900)
         # `--json` puts the document on stdout when the command worked and on stderr when it failed.
         # Reading only stdout turned every real CLI error into a parser error and hid what went wrong.
         doc = None

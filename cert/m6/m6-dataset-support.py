@@ -11,7 +11,7 @@ RESULT = os.path.join(OUT, 'm6-dataset-support.json')
 def cli(args, timeout):
     """CLI 를 한 번 실행하고 --json 문서를 돌려준다. 성공은 stdout, 실패는 stderr 로 온다."""
     cmd = ['node', CLI, '--home', CLI_HOME, '--node', NODE] + args + ['--json']
-    p = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
+    p = subprocess.run(cmd, capture_output=True, encoding='utf-8', errors='replace', timeout=timeout)
     for stream in (p.stdout, p.stderr):
         i = stream.find('{')
         if i >= 0:
