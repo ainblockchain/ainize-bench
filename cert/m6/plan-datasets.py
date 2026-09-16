@@ -48,10 +48,30 @@ def substantive(values):
     return sum(len(v) for v in vals) / len(vals) >= 3
 
 
+def scalar_everywhere(rows, column):
+    """그 컬럼의 값이 행마다 스칼라인가.
+
+    `answers: {"text": [...], "answer_start": [...]}` 처럼 객체나 배열이 들어 있는 컬럼은
+    가져오기 단계에서 노드가 거절한다 (`must be a scalar, not an object or array`).
+    계획에서 걸러야 실행 시간을 버리지 않는다.
+    """
+    seen = False
+    for r in rows:
+        v = r.get(column)
+        if v is None:
+            continue
+        if isinstance(v, (dict, list)):
+            return False
+        seen = True
+    return seen
+
+
 def pick(columns, rows, keys, require_substantive=False):
     ranked = [c for k in keys for c in columns if c.lower() == k] + \
              [c for k in keys for c in columns if k in c.lower() and c.lower() != k]
     for c in ranked:
+        if not scalar_everywhere(rows, c):
+            continue
         values = [flat(r.get(c)) for r in rows]
         if not any(values):
             continue

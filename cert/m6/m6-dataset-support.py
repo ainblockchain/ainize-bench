@@ -54,10 +54,12 @@ for d in plan:
            'dataset_id': None, 'job_id': None, 'job_status': None, 'patch_id': None,
            'inference_complete': False, 'answers': [], 'errors': []}
 
+    # `--wait` 를 걸고 시간이 지나면 CLI 는 포기하지만 서버의 작업은 계속된다. 노드는 한 번에
+    # 한 건만 학습하므로, 앞 작업이 끝나기를 기다리는 동안 --wait 가 먼저 끝나 결과를 잃는다.
+    # 제출과 관측을 나눈다: 제출만 하고, 작업 ID 로 종료 상태까지 따로 본다.
     rc, doc, cmd = cli(['dataset', 'import', d['url'], '--config', d['config'], '--split', d['split'],
                         '--columns', json.dumps(d['columns']), '--limit', str(LIMIT),
-                        '--train', '--wait', '--timeout', str(WAIT_MIN), '--effort', EFFORT],
-                       timeout=WAIT_MIN * 60 + 300)
+                        '--train', '--effort', EFFORT], timeout=1800)
     row['import_command'] = cmd
     if doc.get('error'):
         row['errors'].append({'stage': 'import', 'error': doc['error']})
@@ -65,17 +67,30 @@ for d in plan:
         row['dataset_id'] = doc.get('dataset_id') or doc.get('id') or (doc.get('dataset') or {}).get('id')
         row['rows_imported'] = doc.get('rows') or (doc.get('dataset') or {}).get('rows')
         row['revision'] = doc.get('revision') or (doc.get('source') or {}).get('revision')
+        # `--train` 의 결과는 `job` 안에 다시 `job` 이 들어 있는 모양이다 (facts·dataset·training 과 함께).
+        # 바깥만 보면 작업 ID 가 없다고 판단해 학습을 놓친다.
         job = doc.get('job') or {}
-        row['job_id'] = doc.get('job_id') or job.get('id')
-        row['job_status'] = doc.get('status') or job.get('status')
+        inner = job.get('job') if isinstance(job.get('job'), dict) else {}
+        row['job_id'] = doc.get('job_id') or inner.get('id') or job.get('id')
+        row['job_status'] = doc.get('status') or inner.get('status') or job.get('status')
         row['import_result'] = {k: v for k, v in doc.items() if k not in ('rows_preview',)}
 
     if row['job_id']:
-        rc, doc, _ = cli(['teach', 'status', row['job_id']], timeout=300)
-        if not doc.get('error'):
+        # 종료 상태까지 관측한다. QUEUED 는 아직 차례가 아니라는 뜻이지 실패가 아니다.
+        terminal = {'READY', 'FAILED', 'REJECTED', 'CANCELLED', 'NEEDS_MORE'}
+        deadline = time.time() + WAIT_MIN * 60
+        while True:
+            rc, doc, _ = cli(['teach', 'status', row['job_id']], timeout=300)
+            if doc.get('error'):
+                row['errors'].append({'stage': 'status', 'error': doc['error']})
+                break
             row['job_status'] = doc.get('status') or row['job_status']
             row['job'] = doc
             row['patch_id'] = doc.get('patch_id') or doc.get('draft_id')
+            if row['job_status'] in terminal or time.time() > deadline:
+                break
+            time.sleep(60)
+        row['waited_seconds'] = int(WAIT_MIN * 60 - max(0, deadline - time.time()))
 
     if row['job_status'] == 'READY' and row['job_id']:
         rc, doc, _ = cli(['teach', 'publish', row['job_id'], '--name',

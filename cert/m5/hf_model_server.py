@@ -128,7 +128,9 @@ def to_prompt(messages):
         if not content:
             continue
         turns.append(('Q: ' + content) if role != 'assistant' else ('A: ' + content))
-    return '\n'.join(turns) + '\nA:', ('\n',)
+    # 이어쓰기 모델은 답 뒤에 다음 문답을 그대로 이어 쓴다. 우리가 준 형식의 표시를
+    # 정지 문자열로 준다: 줄이 끝나거나 다음 질문이 시작되면 그 답은 끝난 것이다.
+    return '\n'.join(turns) + '\nA:', ('\n', 'Q:')
 
 
 class Handler(BaseHTTPRequestHandler):
